@@ -12,6 +12,9 @@ urlpatterns = patterns('',
     # for login
     url(r'^login/$', views.login, name='login'),
 
+    # profile view
+    url(r'^profile/$', views.profile, name='profile'),
+
     # django-allauth
     url(r'^accounts/', include('allauth.urls')),
 )
