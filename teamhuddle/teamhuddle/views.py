@@ -27,7 +27,9 @@ def login(request):
 
 @login_required
 def profile(request):
-    return render(request, 'profile.html')
+    data = {}
+    data['user'] = request.user
+    return render(request, 'profile.html', data)
 
 @login_required
 def logout(request):
