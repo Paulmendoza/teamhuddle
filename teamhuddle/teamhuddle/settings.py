@@ -1,11 +1,15 @@
 # Django settings for teamhuddle project.
-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
+
+
 
 MANAGERS = ADMINS
 
@@ -70,6 +74,9 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+
+    # relative
+    BASE_DIR + '/templates/static/',
 )
 
 # List of finder classes that know how to find static files in
@@ -109,6 +116,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    BASE_DIR + '/templates/',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -144,6 +152,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'teamhuddle',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
