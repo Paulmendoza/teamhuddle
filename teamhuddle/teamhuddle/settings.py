@@ -146,6 +146,8 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
+AUTH_PROFILE_MODULE = "teamhuddle.UserProfile"
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
