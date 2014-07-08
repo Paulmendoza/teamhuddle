@@ -1,33 +1,37 @@
 from django.http import request, HttpResponseRedirect
 from django.shortcuts import render
-from django.contrib.auth import authenticate
+from django.contrib.auth import login as auth_login, logout as auth_logout
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.decorators import login_required
 
 # renders login page (home page)
 def index(request):
-    return render(request, 'login.html')
+    if request.user.is_authenticated():
+        return HttpResponseRedirect('/profile/')
+    else:
+        return render(request, 'login.html')
 
 def login(request):
     data = {}
-    # TODO make secure(use forms?)
-    user = authenticate(username=request.POST.__getitem__('username'), password=request.POST.__getitem__('password'))
-    if user is not None:
-        if user.is_active:
-            # success
-            # redirect
-            
-            return HttpResponseRedirect('/profile')
-        else:
-            # failure
-            # disabled account message
-            data['error'] = "Your account has been disabled"
-            return render(request, 'login.html', data)
-    else:
-        # incorrect username and pass
-        # reload with error message
-        data['error'] = "Email and password combination incorrect"
-        return render(request, 'login.html', data)
+    if request.method == "POST":
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            auth_login(request, form.get_user())
 
+            return HttpResponseRedirect('/profile/')
+        else:
+            # incorrect username and pass
+            # reload with error message
+            data['error'] = "Email and password combination incorrect"
+            return render(request, 'login.html', data)
+
+@login_required
 def profile(request):
     return render(request, 'profile.html')
+
+@login_required
+def logout(request):
+    auth_logout(request)
+    return HttpResponseRedirect('/') 
     
     

@@ -11,6 +11,7 @@ urlpatterns = patterns('',
 
     # for login
     url(r'^login/$', views.login, name='login'),
+    url(r'^logout/$', views.logout, name='logout'),
 
     # profile view
     url(r'^profile/$', views.profile, name='profile'),
