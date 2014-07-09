@@ -1,0 +1,76 @@
+# compiled source #
+###################
+*.pyc
+*.com
+*.class
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.cache
+*.css
+*.min.*
+
+# Windows Crap #
+################
+*.suo
+*.pyproj*
+*.sln
+*.bat
+
+# VS Upgrade stuff #
+####################
+UpgradeLog.XML
+_UpgradeReport_Files/
+
+# Coverage Files #
+####################
+.coverage
+cover/
+
+# Directories #
+###############
+*bin/
+*obj/
+TestResults/
+__pycache__/
+.idea/
+
+# Web publish log #
+###################
+*.Publish.xml
+
+# Resharper #
+#############
+/_ReSharper.*
+*.ReSharper.*
+
+# Packages #
+############
+# it’s better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+*.sqlite3
+
+# Linux stuff #
+###############
+*.pid
+
+# OS generated files #
+######################
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
