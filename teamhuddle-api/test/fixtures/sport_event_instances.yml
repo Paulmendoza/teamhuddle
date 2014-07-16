@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sport_event_id: MyString
+  datetime_start: 1
+  datetime_end: 1
+
+two:
+  sport_event_id: MyString
+  datetime_start: 1
+  datetime_end: 1
