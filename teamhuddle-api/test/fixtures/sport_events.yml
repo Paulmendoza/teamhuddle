@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_id: MyString
+  sport: MyString
+  type: 
+  skill_level: MyString
+  price_per_one: 9.99
+  price_per_group: 9.99
+  spots: 1
+  spots_filled: 1
+  gender: MyString
+  notes: MyText
+  format: MyString
+
+two:
+  event_id: MyString
+  sport: MyString
+  type: 
+  skill_level: MyString
+  price_per_one: 9.99
+  price_per_group: 9.99
+  spots: 1
+  spots_filled: 1
+  gender: MyString
+  notes: MyText
+  format: MyString

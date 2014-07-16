@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_id: MyString
+  date_start: 1
+  date_end: 1
+  time_start: 1
+  time_end: 1
+  ical_string: MyText
+  integer_type: MyString
+
+two:
+  event_id: MyString
+  date_start: 1
+  date_end: 1
+  time_start: 1
+  time_end: 1
+  ical_string: MyText
+  integer_type: MyString
