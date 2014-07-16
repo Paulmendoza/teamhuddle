@@ -5,6 +5,8 @@ from allauth.socialaccount.models import SocialAccount
 from django.db.models.signals import post_save
 import hashlib
 
+
+
 # This will create a userprofile each time a user is saved if it is created. You can then use
 # user.get_profile().whatever
 
