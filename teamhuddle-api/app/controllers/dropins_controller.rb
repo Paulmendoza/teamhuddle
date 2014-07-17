@@ -1,0 +1,2 @@
+class DropinsController < ApplicationController
+end

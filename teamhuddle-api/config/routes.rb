@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'leagues/tournaments'
+
+  get 'leagues/locations'
+
+  get 'leagues/event_instances'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +59,16 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+    # aliases of sport_event
+    resources :dropins, :leagues, :tournaments do
+      resources :event_instances, only: [:index]
+    end
+
+    #
+    resources :locations
+
+    # aliases sport_event_instance and archived_sport_event_instance
+    resources :event_instances
+
 end
