@@ -1,12 +1,21 @@
 class Organization < ActiveRecord::Base
-  
+  #
   after_initialize :init
 
-  has_one :location
-
+  #
   validates :name, :presence => true, :uniqueness => true
-  validates :email, :uniqueness => true
+  validates :email, :uniqueness => true, allow_nil: true
   
+  # exposes associated objects
+  def location
+    Location.where( id: self.location_id )
+  end
+
+  def user
+    User.where( id: self.user_id )
+  end
+
+  #
   private
   def init
   end

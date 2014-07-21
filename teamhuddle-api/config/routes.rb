@@ -71,4 +71,7 @@ Rails.application.routes.draw do
     # aliases sport_event_instance and archived_sport_event_instance
     resources :event_instances
 
+    #
+    resources :organizations 
+
 end

@@ -5,3 +5,17 @@ class Location < ActiveRecord::Base
 
   validates :name, :presence => true, :uniqueness => true
 end
+
+<<-DOC
+
+_table: locations
+  _columns:
+    address
+    lat
+    long
+    name
+
+created by: paul
+last edit: paul
+
+DOC

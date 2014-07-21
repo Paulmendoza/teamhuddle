@@ -24,7 +24,7 @@ class LocationsController < ApplicationController
     if @location.save
       render json: @location
     else
-      render json: @location.errors , :status => 422
+      render json: { error: @location.errors }, :status => :unprocessable_entity
     end
   end
 
