@@ -4,7 +4,7 @@ class LocationsController < ApplicationController
   # GET /locations.xml
   # GET /locations
   def index
-    @locations = Location.all.select("id, name, lat, long, address")
+    @locations = Location.all
 
     respond_to do |format|
       format.html { render json: @locations }
