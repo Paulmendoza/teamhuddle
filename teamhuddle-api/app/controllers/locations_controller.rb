@@ -17,6 +17,8 @@ class LocationsController < ApplicationController
   # POST /locations
   # example:
   # { "location": { "lat": 1, "long": 2, "name": "my house2" } }
+  # validations:
+  # :name NOT NULL, UNIQUE
   def create
     @location = Location.new(location_params)
     if @location.save
