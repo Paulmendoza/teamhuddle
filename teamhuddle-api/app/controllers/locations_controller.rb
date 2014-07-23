@@ -1,8 +1,5 @@
 class LocationsController < ApplicationController
 
-  # GET /locations.json
-  # GET /locations.xml
-  # GET /locations
   def index
     @locations = Location.all
 
@@ -11,14 +8,8 @@ class LocationsController < ApplicationController
       format.json { render json: @locations }
       format.xml { render xml: @locations }
     end
-
   end
 
-  # POST /locations
-  # example:
-  # { "location": { "lat": 1, "long": 2, "name": "my house2" } }
-  # validations:
-  # :name NOT NULL, UNIQUE
   def create
     @location = Location.new(location_params)
     if @location.save
@@ -28,10 +19,47 @@ class LocationsController < ApplicationController
     end
   end
 
+  def new
+    @response = {}
+    location = {}
+    location["lat"] = 0
+    location["long"] = 0
+    location["address"] = ""
+    location["name"] = ""
+    @response["location"] = location
+    respond_to do |format|
+      format.json { render json: @response }
+    end
+  end
+
+  def edit
+  end
+
+  def show
+    @location = Location.find(params[:id])
+
+    respond_to do |format|
+      format.html { render json: @locations }
+      format.json { render json: @locations }
+      format.xml { render xml: @locations }
+    end
+  end
+
+  def update
+  end
+
+  def destroy
+    if Location.find(params[:id]).destroy
+      render :nothing => true, status => :no_conent
+    end
+  end
+
+
+  # strong paramaters
   private
-  # strong parameters
   def location_params
     params.require(:location).permit(:name, :lat, :long, :address)
   end
 
 end
+
