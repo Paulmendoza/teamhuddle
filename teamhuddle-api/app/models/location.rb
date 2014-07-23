@@ -1,8 +1,9 @@
 class Location < ActiveRecord::Base
   
-  has_many :organizations
-  has_many :events
+  has_many :organizations, dependent: :nullify
+  has_many :events, dependent: :nullify
 
+  validates_associated :organizations
   validates :name, :presence => true, :uniqueness => true
 end
 
