@@ -61,17 +61,24 @@ Rails.application.routes.draw do
   #   end
   
     # aliases of sport_event
-    resources :dropins, :leagues, :tournaments do
-      resources :event_instances, only: [:index]
+    scope :api, defaults: { format: 'json' } do
+      scope :v1 do
+
+        resources :dropins, :leagues, :tournaments do
+          resources :event_instances, only: [:index]
+        end
+
+        #
+        resources :locations
+
+        # aliases sport_event_instance and archived_sport_event_instance
+        resources :event_instances
+
+        #
+        resources :organizations
+
     end
+  end
 
-    #
-    resources :locations
-
-    # aliases sport_event_instance and archived_sport_event_instance
-    resources :event_instances
-
-    #
-    resources :organizations 
 
 end
