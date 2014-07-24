@@ -4,7 +4,7 @@ class Event < ActiveRecord::Base
   has_one :organization
 
   validates :name, :presence => true, :uniqueness => true
-  validates :location, :presence => true
-  validates :organization, :presence => true
+  validates :location_id, :presence => true
+  validates :organization_id, :presence => true
 
 end
