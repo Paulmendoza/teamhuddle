@@ -1,8 +1,5 @@
 class OrganizationsController < ApplicationController
 
-  # GET /organizations.json
-  # GET /organizations.xml
-  # GET /organizations
   def index
     @organizations = Organization.all
 
@@ -11,17 +8,11 @@ class OrganizationsController < ApplicationController
       format.json { render json: @organizations }
       format.xml { render xml: @organizations }
     end
-
   end
 
-  # POST /organizations
-  # example:
-  # { "organization": { "name": UrbanRec, "location": 1, "phone": 6047635464 } }
-  # validations:
-  # :name NOT NULL, UNIQUE
-  # :email UNIQUE
   def create
     @organization = Organization.new(organization_params)
+
     if @organization.save
       render json: @organization
     else
@@ -29,9 +20,41 @@ class OrganizationsController < ApplicationController
     end
   end
 
+  def new
+    @response = {}
+    organization = {}
+    organization["name"] = ""
+    organization["location_id"] = 0
+    organization["user_id"] = 0
+    organization["phone"] = 0
+    organization["email"] = ""
+    @response["organization"] = organization
+    respond_to do |format|
+      format.json { render json: @response }
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    @organization = Location.find(params[:id])
+    if @organization.update(organization_params)
+      render json: @organization, :status => :ok
+    else
+      render json: { error: @organization.errors }, :status => :unprocessable_entity
+    end
+  end
+
+  def destroy
+    if Organization.find(params[:id]).destroy
+      render :nothing => true, status => :no_conent
+    end
+  end
+
   private
   def organization_params
-    params.require(:organization).permit(:name, :location, :user, :phone, :email)
+    params.require(:organization).permit(:name, :location_id, :user_id, :phone, :email)
   end
 
 end

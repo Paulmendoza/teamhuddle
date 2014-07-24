@@ -39,13 +39,19 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
 
     respond_to do |format|
-      format.html { render json: @locations }
-      format.json { render json: @locations }
-      format.xml { render xml: @locations }
+      format.html { render json: @location }
+      format.json { render json: @location }
+      format.xml { render xml: @location }
     end
   end
 
   def update
+    @location = Location.find(params[:id])
+    if @location.update(location_params)
+      render json: @location, :status => :ok
+    else
+      render json: { error: @location.errors }, :status => :unprocessable_entity
+    end
   end
 
   def destroy
@@ -53,8 +59,7 @@ class LocationsController < ApplicationController
       render :nothing => true, status => :no_conent
     end
   end
-
-
+  
   # strong paramaters
   private
   def location_params
