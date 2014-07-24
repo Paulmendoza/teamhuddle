@@ -8,7 +8,7 @@ class Organization < ActiveRecord::Base
   validates :email, :uniqueness => true, :allow_nil => true
   validates :location_id, :inclusion => { :in => Location.pluck(:id),
     :message => "not a valid location" }, :allow_nil => true
-  validates :user_id, :inclusion => { in: User.pluck(:id),
+  validates :user_id, :inclusion => { :in => User.pluck(:id),
     :message => "not a valid user" }, :allow_nil => true
   
   # exposes associated objects
