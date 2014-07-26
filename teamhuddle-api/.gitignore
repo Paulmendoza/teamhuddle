@@ -17,3 +17,6 @@
 
 # Ignore netbeans project folder
 /nbproject/
+
+# Ignore the gemfile.lock for now
+gemfile.lock
