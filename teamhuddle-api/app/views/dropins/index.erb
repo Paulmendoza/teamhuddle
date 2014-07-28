@@ -1,5 +1,19 @@
-<%= debug @post %>
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
+<h1>All Dropins</h1>
+<a href="/dropins/new" class="btn btn-default">Create new location</a>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>location_id</th>
+    <th>organization_id</th>
+  </tr>
+  
+  <% @dropins.each do |dropins| %>
+  <tr>
+    <td><a href="/dropins/<%= dropins.id %>"><%= dropins.name %></a></td>
+    <td><%= dropins.location_id %></td>
+    <td><%= dropins.organization_id %></td>
+  </tr>
+  <% end %>
+</table>
+

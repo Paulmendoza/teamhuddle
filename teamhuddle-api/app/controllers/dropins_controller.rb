@@ -4,7 +4,7 @@ class DropinsController < ApplicationController
     @dropins = SportEvent.joins(:event).where( sport_events: { type: "dropin"}).select("*")
 
     respond_to do |format|
-      format.html { render json: @dropins, except: [:event_id]  }
+      format.html
       format.json { render json: @dropins, :except => [:event_id] }
       format.xml { render xml: @dropins, except: [:event_id] }
     end

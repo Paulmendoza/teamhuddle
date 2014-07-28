@@ -1,0 +1,19 @@
+<h1>All Organizations</h1>
+<a href="/organizations/new" class="btn btn-default">Create new organization</a>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Email</th>
+  </tr>
+  
+  <% @organizations.each do |organization| %>
+  <tr>
+    <td><a href="/locations/<%= organization.id %>"><%= organization.name %></a></td>
+    <td><%= organization.phone %></td>
+    <td><%= organization.email %></td>
+  </tr>
+  <% end %>
+</table>
+

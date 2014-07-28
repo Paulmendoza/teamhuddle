@@ -4,7 +4,7 @@ class OrganizationsController < ApplicationController
     @organizations = Organization.all
 
     respond_to do |format|
-      format.html { render json: @organizations }
+      format.html
       format.json { render json: @organizations }
       format.xml { render xml: @organizations }
     end
