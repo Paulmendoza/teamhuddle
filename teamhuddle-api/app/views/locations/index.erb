@@ -1,2 +1,19 @@
+<h1>All Locations</h1>
+<a href="locations/new" class="btn btn-default">Create new post</a>
 
-<%= "index" %>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Latitude</th>
+    <th>Longtitude</th>
+  </tr>
+  
+  <% @locations.each do |location| %>
+  <tr>
+    <td><%= location.name %></td>
+    <td><%= location.lat %></td>
+    <td><%= location.long %></td>
+  </tr>
+  <% end %>
+</table>
+
