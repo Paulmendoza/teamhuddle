@@ -1,5 +1,5 @@
 <h1>All Locations</h1>
-<a href="locations/new" class="btn btn-default">Create new post</a>
+<a href="/locations/new" class="btn btn-default">Create new location</a>
 
 <table class="table">
   <tr>
@@ -10,7 +10,7 @@
   
   <% @locations.each do |location| %>
   <tr>
-    <td><%= location.name %></td>
+    <td><a href="/locations/<%= location.id %>"><%= location.name %></a></td>
     <td><%= location.lat %></td>
     <td><%= location.long %></td>
   </tr>
