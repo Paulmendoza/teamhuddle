@@ -39,6 +39,7 @@ GEM
     erubis (2.7.0)
     hike (1.2.3)
     i18n (0.6.11)
+    ice_cube (0.12.1)
     json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -97,6 +98,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers!
+  ice_cube
   rack-cors
   rails (= 4.1.1)
   rails-api

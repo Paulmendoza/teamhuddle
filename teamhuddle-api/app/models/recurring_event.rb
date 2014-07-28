@@ -5,7 +5,7 @@ class RecurringEvent < ActiveRecord::Base
   validates :date_start, 
     :presence => true,
     numericality:
-        { only_integer: true, :greater_than: 0, :less_than: self.date_end }
+        { only_integer: true, greater_than: 0, less_than: self.date_end }
   validates :date_end,
     :presence => true,
     numericality:

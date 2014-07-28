@@ -16,7 +16,7 @@ class LocationsController < ApplicationController
     if @location.save 
       respond_to do |format|
         format.json { render json: @location }
-        format.html { render action: 'index' }
+        format.html { redirect_to action: 'index' }
       end
     else
       render json: { error: @location.errors }, :status => :unprocessable_entity
