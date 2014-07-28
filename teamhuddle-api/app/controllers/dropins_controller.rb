@@ -12,16 +12,21 @@ class DropinsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-
+    
     if @event.save
-      @dropin = SportEvent.new(dropin_params)
+      @dropin = SportEvent.new
+      @dropin.sport = 'volleyball'
       @dropin.event_id = @event.id
-      @dropin.type = "dropin"
+      @dropin.type = 'dropin'
       @dropin.price_per_group = -1
       @dropin.spots_filled = -1
-      @dropin.gender = "n/a"
+      @dropin.gender = 'n/a'
+      
       if @dropin.save
-        render json: @dropin
+        respond_to do |format|
+          format.json { render json: @dropin }
+          format.html { redirect_to action: 'index' }
+        end
       else
         @event.destroy
         render json: { error: @dropin.errors }, :status => :unprocessable_entity
@@ -32,6 +37,7 @@ class DropinsController < ApplicationController
   end
 
   def new
+    @locations = Location.all
   end
 
   def edit

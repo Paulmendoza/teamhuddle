@@ -21,17 +21,6 @@ class OrganizationsController < ApplicationController
   end
 
   def new
-    @response = {}
-    organization = {}
-    organization["name"] = ""
-    organization["location_id"] = 0
-    organization["user_id"] = 0
-    organization["phone"] = 0
-    organization["email"] = ""
-    @response["organization"] = organization
-    respond_to do |format|
-      format.json { render json: @response }
-    end
   end
 
   def edit

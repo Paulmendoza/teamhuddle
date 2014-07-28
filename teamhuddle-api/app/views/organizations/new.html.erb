@@ -1,0 +1,10 @@
+<h1>Add new organization</h1>
+<%= form_for :organization, url: organizations_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
