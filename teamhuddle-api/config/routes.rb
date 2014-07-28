@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   get 'leagues/tournaments'
 
   get 'leagues/locations'
@@ -9,11 +11,13 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
+  
+  resources :locations
+  
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
@@ -60,23 +64,22 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   
-    # aliases of sport_event
-    scope :api, defaults: { format: 'json' } do
-      scope :v1 do
+  # aliases of sport_event
+  scope :api, defaults: { format: 'json' } do
+    scope :v1 do
 
-        resources :dropins, :leagues, :tournaments do
-          resources :event_instances, only: [:index]
-        end
+      resources :dropins, :leagues, :tournaments do
+        resources :event_instances, only: [:index]
+      end
 
-        #
-        resources :locations
+      #
+      resources :locations
 
-        # aliases sport_event_instance and archived_sport_event_instance
-        resources :event_instances
+      # aliases sport_event_instance and archived_sport_event_instance
+      resources :event_instances
 
-        #
-        resources :organizations
-
+      #
+      resources :organizations
     end
   end
 

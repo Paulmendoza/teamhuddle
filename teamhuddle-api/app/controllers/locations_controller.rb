@@ -4,7 +4,7 @@ class LocationsController < ApplicationController
     @locations = Location.all
 
     respond_to do |format|
-      format.html { render json: @locations }
+      format.html
       format.json { render json: @locations }
       format.xml { render xml: @locations }
     end
@@ -12,26 +12,22 @@ class LocationsController < ApplicationController
 
   def create
     @location = Location.new(location_params)
-    if @location.save
-      render json: @location
+    
+    if @location.save 
+      respond_to do |format|
+        format.json { render json: @location }
+        format.html { render action: 'index' }
+      end
     else
       render json: { error: @location.errors }, :status => :unprocessable_entity
     end
+    
   end
 
-  def new
-    @response = {}
-    location = {}
-    location["lat"] = 0
-    location["long"] = 0
-    location["address"] = ""
-    location["name"] = ""
-    @response["location"] = location
-    respond_to do |format|
-      format.json { render json: @response }
-    end
+  def new 
+    # default behavior
   end
-
+  
   def edit
   end
 
@@ -39,7 +35,7 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
 
     respond_to do |format|
-      format.html { render json: @location }
+      format.html
       format.json { render json: @location }
       format.xml { render xml: @location }
     end

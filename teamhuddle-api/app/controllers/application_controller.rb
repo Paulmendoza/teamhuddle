@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::API
+class ApplicationController < ActionController::Base
   include ActionController::MimeResponds
 
   rescue_from(ActionController::ParameterMissing) do |parameter_missing_exception|
