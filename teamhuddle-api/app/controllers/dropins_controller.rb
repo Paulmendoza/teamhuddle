@@ -1,4 +1,5 @@
 class DropinsController < ApplicationController
+  include IceCube
 
   def index
     @dropins = SportEvent.joins(:event).where( sport_events: { type: "dropin"}).select("*")
@@ -8,6 +9,16 @@ class DropinsController < ApplicationController
       format.json { render json: @dropins, :except => [:event_id] }
       format.xml { render xml: @dropins, except: [:event_id] }
     end
+  end
+  
+  def show
+    @dropin = SportEvent.find(params[:id])
+    respond_to do |format|
+      format.html { render json: @dropin }
+      format.json { render json: @dropin, :except => [:event_id] }
+      format.xml { render xml: @dropin, except: [:event_id] }
+    end
+    
   end
 
   def create
@@ -21,6 +32,18 @@ class DropinsController < ApplicationController
       @dropin.price_per_group = -1
       @dropin.spots_filled = -1
       @dropin.gender = 'n/a'
+      
+      # get the start date and end date NOTE: adds time as well to startime
+      start_date = Time.new(params[:start_date][:year], params[:start_date][:month], params[:start_date][:day], 
+                            params[:start_time][:hour], params[:start_time][:minute])
+      end_date = Time.new(params[:end_date][:year], params[:end_date][:month], params[:end_date][:day])
+      
+      # create a new schedule setting the duration NOTE: duration isnt working
+      schedule = Schedule.new(start_date, :end_time => start_date.to_date.change(hour: params[:end_time][:hour].to_i, minute: params[:end_time][:minute].to_i)) do |s|
+        s.add_recurrence_rule(Rule.weekly.day(:monday).until(end_date))
+      end
+      
+      @dropin.schedule = schedule
       
       if @dropin.save
         respond_to do |format|
@@ -63,7 +86,7 @@ class DropinsController < ApplicationController
 
   private
   def event_params
-    params.require(:dropin).permit(:name, :location_id, :organization_id)
+    params.require(:dropin).permit(:name, :location_id, :organization_id, :comments)
   end
 
 end

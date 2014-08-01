@@ -4,7 +4,7 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </p>
- 
+  
   <p>
     <%= f.label :organization_id %><br>
     <%= f.select(:organization_id, options_from_collection_for_select(Organization.all, :id, :name)) %> 
@@ -17,6 +17,32 @@
     <small>Location not on the list? <a href="/locations/new">Add it here!</a> (Note: Form will reset)</small>
   </p>
   
+  <p>
+    <%= label_tag(:day, "Day of the week") %><br>
+    <%= select_tag(:day, options_for_select([['Monday', 'mo'], 
+                                             ['Tuesday', 'tu'],
+                                             ['Wednesday', 'we'],
+                                             ['Thursday', 'th'],
+                                             ['Friday', 'fr'],
+                                             ['Saturday', 'sa'],
+                                             ['Sunday', 'su']])) %>
+  </p>
+  
+  <p>
+    <%= label_tag(:date, "Start Date") %><br>
+    <%= select_date Date.today, prefix: :start_date %>
+  </p>
+  
+  <p>
+    <%= label_tag(:date, "End Date") %><br>
+    <%= select_date Date.today, prefix: :end_date %>
+  </p>
+  
+  <p>
+    <%= label_tag(:time, "Time") %><br>
+    <%= select_time Time.now, prefix: :start_time %> - <%= select_time Time.now, prefix: :end_time  %>
+  </p>
+ 
   <p>
     <%= f.label :comments %><br>
     <%= f.text_area :comments %>

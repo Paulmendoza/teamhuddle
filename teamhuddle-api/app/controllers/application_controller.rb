@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
     error[0] = ['record not found']
     response = { errors: error }
     respond_to do |format|
+      format.html { render json: response, status: :not_found }
       format.json { render json: response, status: :not_found }
     end
   end

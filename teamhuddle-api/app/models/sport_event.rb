@@ -1,7 +1,7 @@
 class SportEvent < ActiveRecord::Base
   self.inheritance_column = 'zoink'
   after_initialize :init
-
+  
   belongs_to :event
   has_many :archived_sport_events
   has_many :sport_events
@@ -9,11 +9,13 @@ class SportEvent < ActiveRecord::Base
   validates :sport, :presence => true
   validates :type, :presence => true, inclusion: { in: ["dropin", "league", "tournament"] }
   
+  serialize :schedule, IceCube::Schedule
+  
   def as_json(options={})
    options[:except] ||= [:event_id]
    super(options)
   end
-
+  
   # exposes event fields and associated objects
   delegate :name, :to => :event
   delegate :comments, :to => :event
