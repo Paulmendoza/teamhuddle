@@ -38,12 +38,17 @@ class OrganizationsController < ApplicationController
   end
 
   def edit
+    @organization = Organization.find(params[:id])
   end
 
   def update
-    @organization = Location.find(params[:id])
+    @organization = Organization.find(params[:id])
     if @organization.update(organization_params)
-      render json: @organization, :status => :ok
+      respond_to do |format|
+        format.html { redirect_to :action => 'index'}
+        format.json { render json: @organization, :status => :ok }
+        format.xml { render json: @organization, :status => :ok }
+      end
     else
       render json: { error: @organization.errors }, :status => :unprocessable_entity
     end
@@ -51,7 +56,11 @@ class OrganizationsController < ApplicationController
 
   def destroy
     if Organization.find(params[:id]).destroy
-      render :nothing => true, status => :no_conent
+      respond_to do |format|
+        format.html { redirect_to :action => 'index'}
+        format.json { render :nothing => true, status => :no_conent }
+        format.xml { render :nothing => true, status => :no_conent }
+      end
     end
   end
 

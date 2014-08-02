@@ -1,0 +1,33 @@
+<%= form_for @organization do |f| %>
+
+  <% if @organization.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@organization.errors.count, "error") %> prohibited
+      this article from being saved:</h2>
+    <ul>
+    <% @organization.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  
+  <p>
+    <%= f.label :phone %><br>
+    <%= f.phone_field :phone %>
+  </p>
+  
+  <p>
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -46,7 +46,12 @@ class LocationsController < ApplicationController
   def update
     @location = Location.find(params[:id])
     if @location.update(location_params)
-      render json: @location, :status => :ok
+      respond_to do |format|
+        format.html { redirect_to :action => 'index'}
+        format.json { render json: @location, :status => :ok}
+        format.xml { render json: @location, :status => :ok }
+      end
+      
     else
       render json: { error: @location.errors }, :status => :unprocessable_entity
     end
@@ -58,8 +63,8 @@ class LocationsController < ApplicationController
     
     respond_to do |format|
       format.html { redirect_to :action => 'index'}
-      format.json { render json: @location }
-      format.xml { render xml: @location }
+      format.json { render :nothing => true, status => :no_conent }
+      format.xml { render :nothing => true, status => :no_conent }
     end
   end
   

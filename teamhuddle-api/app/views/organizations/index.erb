@@ -6,6 +6,7 @@
     <th>Name</th>
     <th>Phone</th>
     <th>Email</th>
+    <th></th>
   </tr>
   
   <% @organizations.each do |organization| %>
@@ -13,6 +14,10 @@
     <td><a href="/organizations/<%= organization.id %>"><%= organization.name %></a></td>
     <td><%= organization.phone %></td>
     <td><%= organization.email %></td>
+    <td>
+      <%= link_to 'Edit', edit_organization_path(organization), class: 'btn btn-default' %>
+      <%= link_to 'Delete', organization, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+    </td>
   </tr>
   <% end %>
 </table>

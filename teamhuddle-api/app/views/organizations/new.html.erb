@@ -1,21 +1,2 @@
 <h1>Add new organization</h1>
-<%= form_for :organization, url: organizations_path do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
-  
-  <p>
-    <%= f.label :phone %><br>
-    <%= f.phone_field :phone %>
-  </p>
-  
-  <p>
-    <%= f.label :email %><br>
-    <%= f.email_field :email %>
-  </p>
-  
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= render 'form' %>
