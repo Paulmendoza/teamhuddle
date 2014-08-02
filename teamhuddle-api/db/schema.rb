@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801041939) do
+ActiveRecord::Schema.define(version: 20140802042759) do
 
   create_table "archived_sport_event_instances", force: true do |t|
     t.integer  "sport_event_id"
@@ -63,10 +63,10 @@ ActiveRecord::Schema.define(version: 20140801041939) do
 
   create_table "sport_event_instances", force: true do |t|
     t.integer  "sport_event_id"
-    t.integer  "datetime_start"
-    t.integer  "datetime_end"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "datetime_start"
+    t.datetime "datetime_end"
   end
 
   create_table "sport_events", force: true do |t|
