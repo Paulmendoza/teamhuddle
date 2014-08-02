@@ -12,7 +12,7 @@ class SportEvent < ActiveRecord::Base
   
   serialize :schedule, IceCube::Schedule
   
-  validate :non_terminating_schedule, :schedule_has_no_occurrences
+  validate :non_terminating_schedule, :schedule_has_no_occurrences, :start_time_greater_than_or_equal_end_time
   
   # IceCube schedule validations
   def non_terminating_schedule
@@ -20,7 +20,15 @@ class SportEvent < ActiveRecord::Base
   end
   
   def schedule_has_no_occurrences
-    errors.add(:no_occurrences, "The way you configured your schedule, no occurences were made. (Maybe start date was greater than end date?)") if schedule.present? && (schedule.remaining_occurrences.count < 1)
+    if schedule.present? && (schedule.remaining_occurrences.count < 1)
+      errors.add(:no_occurrences, "The way you configured your schedule, no occurences were made. (Maybe start date was greater than end date?)") 
+    end
+  end
+  
+  def start_time_greater_than_or_equal_end_time
+    if schedule.present? && (schedule.start_time >= schedule.end_time)
+      errors.add(:start_time_greater_or_equal, "The start time can't be more than or equal to the end time") 
+    end
   end
   
   def as_json(options={})

@@ -4,15 +4,23 @@
 <table class="table">
   <tr>
     <th>Name</th>
-    <th>location_id</th>
-    <th>organization_id</th>
+    <th>Location</th>
+    <th>Organization</th>
+    <th>Schedule</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th># of Sessions</th>
   </tr>
   
-  <% @dropins.each do |dropins| %>
+  <% @dropins.each do |dropin| %>
   <tr>
-    <td><a href="/dropins/<%= dropins.id %>"><%= dropins.name %></a></td>
-    <td><%= dropins.location_id %></td>
-    <td><%= dropins.organization_id %></td>
+    <td><a href="/dropins/<%= dropin.id %>"><%= dropin.name %></a></td>
+    <td><%= Location.find(dropin.location_id).name %></td>
+    <td><%= Organization.find(dropin.organization_id).name %></td>
+    <td><%= dropin.schedule.to_s %></td>
+    <td><%= dropin.schedule.start_time.strftime('%-d-%b-%y') %></td>
+    <td><%= dropin.schedule.last.strftime('%-d-%b-%y') %></td>
+    <td><%= dropin.schedule.all_occurrences.count %></td>
   </tr>
   <% end %>
 </table>

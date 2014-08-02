@@ -12,7 +12,8 @@ class DropinsController < ApplicationController
   end
   
   def show
-    @dropin = SportEvent.find(params[:id])
+    @dropin = SportEvent.joins(:event).where( events: { id: params[:id]}).select('*')
+    
     respond_to do |format|
       format.html { render json: @dropin }
       format.json { render json: @dropin, :except => [:event_id] }
@@ -33,14 +34,26 @@ class DropinsController < ApplicationController
       @dropin.spots_filled = -1
       @dropin.gender = 'n/a'
       
+      # hash to convert form data to symbols for IceCube
+      days_of_the_week = {
+        'mo' => :monday,
+        'tu' => :tuesday,
+        'we' => :wednesday,
+        'th' => :thursday,
+        'fr' => :friday,
+        'sa' => :saturday,
+        'su' => :sunday
+      }
+      
       # get the start date and end date NOTE: adds time as well to startime
       start_date = Time.new(params[:start_date][:year], params[:start_date][:month], params[:start_date][:day], 
                             params[:start_time][:hour], params[:start_time][:minute])
       end_date = Time.new(params[:end_date][:year], params[:end_date][:month], params[:end_date][:day])
       
-      # create a new schedule setting the duration NOTE: duration isnt working
-      schedule = Schedule.new(start_date, :end_time => start_date.to_date.change(hour: params[:end_time][:hour].to_i, minute: params[:end_time][:minute].to_i)) do |s|
-        s.add_recurrence_rule(Rule.weekly.day(:monday).until(end_date))
+      # create a new schedule setting the duration
+      schedule = Schedule.new(start_date, :end_time => start_date.change(hour: params[:end_time][:hour], min: params[:end_time][:minute])) do |s|
+        # add weekly recurrence ruling based on the day of the week selected
+        s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[params[:day]]).until(end_date))
       end
       
       @dropin.schedule = schedule
@@ -49,13 +62,13 @@ class DropinsController < ApplicationController
         # once dropin is saved, generate sport event instances
         instances = @dropin.schedule.all_occurrences
         
+        duration = @dropin.schedule.end_time - @dropin.schedule.start_time
+        
         instances.each do |i|
           dropin_instance = SportEventInstance.new
           dropin_instance.sport_event_id = @dropin.id
           dropin_instance.datetime_start = i
-          
-          #for testing TODO figure out durations
-          dropin_instance.datetime_end = i + 3600
+          dropin_instance.datetime_end = i + duration
           
           unless dropin_instance.save
             @dropin.destroy
