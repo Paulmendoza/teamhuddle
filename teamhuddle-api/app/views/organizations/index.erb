@@ -10,7 +10,7 @@
   
   <% @organizations.each do |organization| %>
   <tr>
-    <td><a href="/locations/<%= organization.id %>"><%= organization.name %></a></td>
+    <td><a href="/organizations/<%= organization.id %>"><%= organization.name %></a></td>
     <td><%= organization.phone %></td>
     <td><%= organization.email %></td>
   </tr>

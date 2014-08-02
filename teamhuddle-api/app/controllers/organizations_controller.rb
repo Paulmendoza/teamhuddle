@@ -9,6 +9,16 @@ class OrganizationsController < ApplicationController
       format.xml { render xml: @organizations }
     end
   end
+  
+  def show
+    @organization = Organization.find(params[:id])
+    
+    respond_to do |format|
+      format.html
+      format.json { render json: @organization }
+      format.xml { render xml: @organization }
+    end
+  end
 
   def create
     @organization = Organization.new(organization_params)
