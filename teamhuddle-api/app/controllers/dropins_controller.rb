@@ -30,7 +30,6 @@ class DropinsController < ApplicationController
       @dropin.sport = 'volleyball'
       @dropin.event_id = @event.id
       @dropin.type = 'dropin'
-      @dropin.price_per_group = -1
       @dropin.spots_filled = -1
       @dropin.gender = 'n/a'
       
