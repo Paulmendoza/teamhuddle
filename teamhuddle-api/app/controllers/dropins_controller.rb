@@ -46,6 +46,24 @@ class DropinsController < ApplicationController
       @dropin.schedule = schedule
       
       if @dropin.save
+        # once dropin is saved, generate sport event instances
+        instances = @dropin.schedule.all_occurrences
+        
+        instances.each do |i|
+          dropin_instance = SportEventInstance.new
+          dropin_instance.sport_event_id = @dropin.id
+          dropin_instance.datetime_start = i
+          
+          #for testing TODO figure out durations
+          dropin_instance.datetime_end = i + 3600
+          
+          unless dropin_instance.save
+            @dropin.destroy
+            render json: { error: @dropin.errors }, :status => :unprocessable_entity
+          end
+        end
+        
+        
         respond_to do |format|
           format.json { render json: @dropin }
           format.html { redirect_to action: 'index' }
