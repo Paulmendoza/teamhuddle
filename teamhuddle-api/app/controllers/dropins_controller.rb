@@ -59,11 +59,9 @@ class DropinsController < ApplicationController
       
       if @dropin.save
         # once dropin is saved, generate sport event instances
-        instances = @dropin.schedule.all_occurrences
-        
         duration = @dropin.schedule.end_time - @dropin.schedule.start_time
         
-        instances.each do |i|
+        @dropin.schedule.each_occurrence do |i|
           dropin_instance = SportEventInstance.new
           dropin_instance.sport_event_id = @dropin.id
           dropin_instance.datetime_start = i

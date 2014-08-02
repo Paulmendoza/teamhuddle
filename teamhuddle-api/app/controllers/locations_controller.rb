@@ -25,10 +25,12 @@ class LocationsController < ApplicationController
   end
 
   def new 
+    @location = Location.new
     # default behavior
   end
   
   def edit
+    @location = Location.find(params[:id])
   end
 
   def show
@@ -51,8 +53,13 @@ class LocationsController < ApplicationController
   end
 
   def destroy
-    if Location.find(params[:id]).destroy
-      render :nothing => true, status => :no_conent
+    @location = Location.find(params[:id])
+    @location.destroy
+    
+    respond_to do |format|
+      format.html { redirect_to :action => 'index'}
+      format.json { render json: @location }
+      format.xml { render xml: @location }
     end
   end
   

@@ -24,7 +24,11 @@ class OrganizationsController < ApplicationController
     @organization = Organization.new(organization_params)
 
     if @organization.save
-      render json: @organization
+      respond_to do |format|
+        format.html { redirect_to action: 'index'}
+        format.json { render json: @organization }
+        format.xml { render xml: @organization }
+      end
     else
       render json: { error: @organization.errors }, :status => :unprocessable_entity
     end

@@ -6,6 +6,8 @@ gem 'rails-api'
 
 gem 'spring', :group => :development
 
+gem 'jquery-rails'
+
 gem 'sqlite3'
 
 gem 'tzinfo-data'
