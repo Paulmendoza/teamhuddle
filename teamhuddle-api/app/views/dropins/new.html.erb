@@ -40,7 +40,7 @@
   
   <p>
     <%= label_tag(:time, "Time") %><br>
-    <%= select_time Time.now, prefix: :start_time %> - <%= select_time Time.now, prefix: :end_time  %>
+    <%= select_time Time.now.change(hour: 19, min: 0), prefix: :start_time %> - <%= select_time Time.now.change(hour: 22, min: 0), prefix: :end_time  %>
   </p>
  
   <p>
