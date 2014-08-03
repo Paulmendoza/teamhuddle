@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140802042759) do
+ActiveRecord::Schema.define(version: 20140803023605) do
 
   create_table "archived_sport_event_instances", force: true do |t|
     t.integer  "sport_event_id"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20140802042759) do
     t.datetime "updated_at"
     t.datetime "datetime_start"
     t.datetime "datetime_end"
+    t.integer  "event_id"
   end
 
   create_table "sport_events", force: true do |t|

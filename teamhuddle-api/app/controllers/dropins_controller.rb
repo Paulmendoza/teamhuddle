@@ -3,7 +3,7 @@ class DropinsController < ApplicationController
 
   def index
     @dropins = SportEvent.joins(:event).where( sport_events: { type: "dropin"}).select("*")
-
+    
     respond_to do |format|
       format.html
       format.json { render json: @dropins, :except => [:event_id] }
@@ -19,7 +19,6 @@ class DropinsController < ApplicationController
       format.json { render json: @dropin, :except => [:event_id] }
       format.xml { render xml: @dropin, except: [:event_id] }
     end
-    
   end
 
   def create
@@ -66,6 +65,7 @@ class DropinsController < ApplicationController
           dropin_instance.sport_event_id = @dropin.id
           dropin_instance.datetime_start = i
           dropin_instance.datetime_end = i + duration
+          dropin_instance.event_id = @event.id
           
           unless dropin_instance.save
             @dropin.destroy
