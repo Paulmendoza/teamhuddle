@@ -3,10 +3,12 @@ class DropinsController < ApplicationController
 
   def index
     @dropins = SportEvent.joins(:event).where( sport_events: { type: "dropin"}).select("*")
-    
+    @locations = Location.find(@dropins.pluck(:location_id))
+    @organizations = Organization.find(@dropins.pluck(:organization_id))
+
     respond_to do |format|
       format.html
-      format.json { render json: @dropins, :except => [:event_id] }
+      format.json { render :json => { :dropins => @dropins, :location => @locations, :organization => @organizations } }
       format.xml { render xml: @dropins, except: [:event_id] }
     end
   end
