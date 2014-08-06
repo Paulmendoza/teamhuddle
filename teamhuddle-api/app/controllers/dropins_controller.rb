@@ -8,7 +8,14 @@ class DropinsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render :json => { :dropins => @dropins, :location => @locations, :organization => @organizations } }
+      
+      format.json {
+        render :json => {
+        :dropins => @dropins,
+        :location => @locations,
+        :organization => @organizations
+        } }
+
       format.xml { render xml: @dropins, except: [:event_id] }
     end
   end
