@@ -12,8 +12,8 @@ class DropinsController < ApplicationController
       format.json {
         render :json => {
         :dropins => @dropins,
-        :location => @locations,
-        :organization => @organizations
+        :locations => @locations,
+        :organizations => @organizations
         } }
 
       format.xml { render xml: @dropins, except: [:event_id] }
