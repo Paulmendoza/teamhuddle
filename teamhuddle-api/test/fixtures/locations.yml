@@ -1,13 +1,57 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  address: MyString
-  lat: 9.99
-  long: 9.99
-  name: MyString
-
-two:
-  address: MyString
-  lat: 9.99
-  long: 9.99
-  name: MyString
+---
+locations_001:
+  id: 6
+  address: 
+  lat: 49.224338
+  long: -122.99672
+  name: Bonsor Rec
+  created_at: '2014-07-24 04:52:53.309703'
+  updated_at: '2014-07-24 04:52:53.309703'
+locations_002:
+  id: 9
+  address: 
+  lat: 49.27158
+  long: -123.10563
+  name: Creekside
+  created_at: '2014-07-25 01:45:50.582887'
+  updated_at: '2014-07-25 01:45:50.582887'
+locations_003:
+  id: 27
+  address: 
+  lat: 49.260228
+  long: -123.243906
+  name: Robert F. Osborne Centre (UBC)
+  created_at: '2014-07-28 20:53:59.025998'
+  updated_at: '2014-07-28 20:53:59.025998'
+locations_004:
+  id: 28
+  address: 
+  lat: 49.174819
+  long: -123.151905
+  name: Richmond Oval
+  created_at: '2014-07-28 20:57:46.858029'
+  updated_at: '2014-07-28 20:57:46.858029'
+locations_005:
+  id: 29
+  address: 
+  lat: 49.290287
+  long: -123.125423
+  name: Coal Harbour Community Centre
+  created_at: '2014-07-28 20:58:39.305029'
+  updated_at: '2014-07-28 20:58:39.305029'
+locations_006:
+  id: 33
+  address: 
+  lat: 49.273653
+  long: -123.121425
+  name: Roundhouse Community Center
+  created_at: '2014-08-03 05:00:39.319585'
+  updated_at: '2014-08-03 05:00:39.319585'
+locations_007:
+  id: 34
+  address: 
+  lat: 49.248615
+  long: -123.001042
+  name: BCIT Gym
+  created_at: '2014-08-03 05:04:30.751822'
+  updated_at: '2014-08-03 05:04:30.751822'

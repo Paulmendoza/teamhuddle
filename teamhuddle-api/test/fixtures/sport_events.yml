@@ -1,27 +1,91 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  event_id: MyString
-  sport: MyString
-  type: 
-  skill_level: MyString
-  price_per_one: 9.99
-  price_per_group: 9.99
-  spots: 1
-  spots_filled: 1
-  gender: MyString
-  notes: MyText
-  format: MyString
-
-two:
-  event_id: MyString
-  sport: MyString
-  type: 
-  skill_level: MyString
-  price_per_one: 9.99
-  price_per_group: 9.99
-  spots: 1
-  spots_filled: 1
-  gender: MyString
-  notes: MyText
-  format: MyString
+---
+sport_events_001:
+  id: 44
+  event_id: 69
+  sport: volleyball
+  type: dropin
+  skill_level: 
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-08-03 02:38:29.844727'
+  updated_at: '2014-08-03 02:38:29.844727'
+  schedule: |
+    ---
+    :start_time: 2014-04-02 19:00:00.000000000 -07:00
+    :start_date: 2014-04-02 19:00:00.000000000 -07:00
+    :end_time: 2014-04-02 22:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 6
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-09-02 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+sport_events_002:
+  id: 45
+  event_id: 70
+  sport: volleyball
+  type: dropin
+  skill_level: 
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-08-03 05:05:10.496095'
+  updated_at: '2014-08-03 05:05:10.496095'
+  schedule: |
+    ---
+    :start_time: 2014-09-02 20:00:00.000000000 -07:00
+    :start_date: 2014-09-02 20:00:00.000000000 -07:00
+    :end_time: 2014-09-02 22:30:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-06-20 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+sport_events_003:
+  id: 46
+  event_id: 71
+  sport: volleyball
+  type: dropin
+  skill_level: 
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-09-17 05:33:30.883101'
+  updated_at: '2014-09-17 05:33:30.883101'
+  schedule: |
+    ---
+    :start_time: 2014-09-10 19:00:00.000000000 -07:00
+    :start_date: 2014-09-10 19:00:00.000000000 -07:00
+    :end_time: 2014-09-10 22:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-24 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
