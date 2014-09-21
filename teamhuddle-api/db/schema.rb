@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(version: 20140919015653) do
   end
 
   create_table "sport_events", force: true do |t|
-    t.integer  "event_id"
     t.string   "sport"
     t.string   "type"
     t.string   "skill_level"
@@ -73,6 +72,7 @@ ActiveRecord::Schema.define(version: 20140919015653) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "schedule"
+    t.integer  "event_id"
   end
 
   create_table "users", force: true do |t|

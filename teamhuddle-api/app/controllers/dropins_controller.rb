@@ -2,6 +2,7 @@ class DropinsController < ApplicationController
   include IceCube
 
   def index
+    @sport_event_instances = SportEventInstance.all
     @dropins = SportEvent.joins(:event).where( sport_events: { type: "dropin"}).select("*")
     @locations = Location.find(@dropins.pluck(:location_id))
     @organizations = Organization.find(@dropins.pluck(:organization_id))
@@ -11,9 +12,10 @@ class DropinsController < ApplicationController
       
       format.json {
         render :json => {
-        :dropins => @dropins,
+        :events => @dropins,
         :locations => @locations,
-        :organizations => @organizations
+        :organizations => @organizations,
+        :sport_event_instances => @sport_event_instances
         } }
 
       format.xml { render xml: @dropins, except: [:event_id] }
