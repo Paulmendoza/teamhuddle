@@ -2,24 +2,19 @@ class DropinsController < ApplicationController
   include IceCube
 
   def index
-    @sport_event_instances = SportEventInstance.all
-    @dropins = SportEvent.joins(:event).where( sport_events: { type: "dropin"}).select("*")
-    @locations = Location.find(@dropins.pluck(:location_id))
-    @organizations = Organization.find(@dropins.pluck(:organization_id))
-
-    respond_to do |format|
-      format.html
-      
-      format.json {
-        render :json => {
-        :events => @dropins,
-        :locations => @locations,
-        :organizations => @organizations,
-        :sport_event_instances => @sport_event_instances
-        } }
-
-      format.xml { render xml: @dropins, except: [:event_id] }
+    from = DateTime.now.beginning_of_day
+    to = DateTime.now.end_of_day
+    if params[:from].present? and params[:to].present?
+      from = Time.parse(params[:from])
+      to = Time.parse(params[:to])
     end
+    
+    # This is for the API -> see index.json.rabl
+    @sport_event_instances = SportEventInstance.includes(:event, :location, :sport_event).between(from, to) 
+    
+    # This is for the admin page -> see index.erb
+    @dropins = SportEvent.joins(:event).where( sport_events: { type: "dropin"}).select("*")
+    
   end
   
   def show

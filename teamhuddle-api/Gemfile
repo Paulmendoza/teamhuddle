@@ -18,6 +18,10 @@ gem 'active_model_serializers'
 
 gem 'ice_cube'
 
+gem 'rabl'
+# Also add either `oj` or `yajl-ruby` as the JSON parser
+gem 'oj'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
