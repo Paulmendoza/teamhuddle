@@ -23,3 +23,67 @@ events_003:
   comments: ''
   created_at: '2014-09-17 05:33:30.763094'
   updated_at: '2014-09-17 05:33:30.763094'
+events_004:
+  id: 72
+  name: Monday Funday
+  organization_id: 2
+  location_id: 28
+  comments: ''
+  created_at: '2014-09-23 00:53:56.543376'
+  updated_at: '2014-09-23 00:53:56.543376'
+events_005:
+  id: 73
+  name: Wednesday Debug
+  organization_id: 4
+  location_id: 34
+  comments: ''
+  created_at: '2014-09-25 00:36:00.911448'
+  updated_at: '2014-09-25 00:36:00.911448'
+events_006:
+  id: 74
+  name: Thursday's Days Creekside
+  organization_id: 2
+  location_id: 9
+  comments: ''
+  created_at: '2014-09-25 07:15:19.752815'
+  updated_at: '2014-09-25 07:15:19.752815'
+events_007:
+  id: 75
+  name: Thursday BCIT
+  organization_id: 4
+  location_id: 34
+  comments: ''
+  created_at: '2014-09-25 07:15:49.595522'
+  updated_at: '2014-09-25 07:15:49.595522'
+events_008:
+  id: 76
+  name: Saturday Demo
+  organization_id: 1
+  location_id: 6
+  comments: ''
+  created_at: '2014-09-27 20:54:24.173449'
+  updated_at: '2014-09-27 20:54:24.173449'
+events_009:
+  id: 78
+  name: Marc's Complaint Dropin
+  organization_id: 2
+  location_id: 9
+  comments: ''
+  created_at: '2014-09-27 20:55:20.309660'
+  updated_at: '2014-09-27 20:55:20.309660'
+events_010:
+  id: 80
+  name: Jonny Demo
+  organization_id: 2
+  location_id: 9
+  comments: ''
+  created_at: '2014-09-27 20:56:42.453358'
+  updated_at: '2014-09-27 20:56:42.453358'
+events_011:
+  id: 81
+  name: Tuesday Test Run
+  organization_id: 4
+  location_id: 33
+  comments: ''
+  created_at: '2014-10-01 02:16:59.456513'
+  updated_at: '2014-10-01 02:16:59.456513'
