@@ -14,6 +14,9 @@ then running
 ` $ bundle update `
 
 ` $ rake db:migrate `
+
+` $ rake db:fixtures:load `
+
 ` $ rake bower:install `
 
 ` $ rails s -p 9090 ` //Run this server on Port 9090
