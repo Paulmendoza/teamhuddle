@@ -87,3 +87,11 @@ events_011:
   comments: ''
   created_at: '2014-10-01 02:16:59.456513'
   updated_at: '2014-10-01 02:16:59.456513'
+events_012:
+  id: 82
+  name: Marc Eje's Dropin
+  organization_id: 5
+  location_id: 28
+  comments: Expensive Ass Dropin
+  created_at: '2014-10-01 07:48:22.578350'
+  updated_at: '2014-10-01 07:48:22.578350'

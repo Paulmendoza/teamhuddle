@@ -1,6 +1,7 @@
 ---
 sport_events_001:
   id: 44
+  event_id: 69
   sport: volleyball
   type: dropin
   skill_level: 
@@ -28,9 +29,9 @@ sport_events_001:
       :until: 2014-09-02 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  event_id: 69
 sport_events_002:
   id: 45
+  event_id: 70
   sport: volleyball
   type: dropin
   skill_level: 
@@ -58,9 +59,9 @@ sport_events_002:
       :until: 2015-06-20 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  event_id: 70
 sport_events_003:
   id: 46
+  event_id: 71
   sport: volleyball
   type: dropin
   skill_level: 
@@ -88,9 +89,9 @@ sport_events_003:
       :until: 2014-12-24 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
-  event_id: 71
 sport_events_004:
   id: 47
+  event_id: 72
   sport: volleyball
   type: dropin
   skill_level: 
@@ -118,9 +119,9 @@ sport_events_004:
       :until: 2017-10-22 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  event_id: 72
 sport_events_005:
   id: 48
+  event_id: 73
   sport: volleyball
   type: dropin
   skill_level: 
@@ -148,9 +149,9 @@ sport_events_005:
       :until: 2015-01-19 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
-  event_id: 73
 sport_events_006:
   id: 49
+  event_id: 74
   sport: volleyball
   type: dropin
   skill_level: 
@@ -178,9 +179,9 @@ sport_events_006:
       :until: 2014-11-25 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
-  event_id: 74
 sport_events_007:
   id: 50
+  event_id: 75
   sport: volleyball
   type: dropin
   skill_level: 
@@ -208,9 +209,9 @@ sport_events_007:
       :until: 2014-12-25 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
-  event_id: 75
 sport_events_008:
   id: 51
+  event_id: 76
   sport: volleyball
   type: dropin
   skill_level: 
@@ -238,9 +239,9 @@ sport_events_008:
       :until: 2014-11-27 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
-  event_id: 76
 sport_events_009:
   id: 52
+  event_id: 78
   sport: volleyball
   type: dropin
   skill_level: 
@@ -268,9 +269,9 @@ sport_events_009:
       :until: 2014-11-27 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
-  event_id: 78
 sport_events_010:
   id: 53
+  event_id: 80
   sport: volleyball
   type: dropin
   skill_level: 
@@ -298,9 +299,9 @@ sport_events_010:
       :until: 2014-11-27 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
-  event_id: 80
 sport_events_011:
   id: 54
+  event_id: 81
   sport: volleyball
   type: dropin
   skill_level: 
@@ -328,4 +329,33 @@ sport_events_011:
       :until: 2014-11-30 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
-  event_id: 81
+sport_events_012:
+  id: 55
+  event_id: 82
+  sport: volleyball
+  type: dropin
+  skill_level: 
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-10-01 07:48:22.593603'
+  updated_at: '2014-10-01 07:48:22.593603'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-01 13:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-01 15:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-11-01 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []

@@ -35,3 +35,21 @@ organizations_004:
   email: vancouver@vancouver.com
   created_at: '2014-08-02 17:12:19.017706'
   updated_at: '2014-08-02 17:12:19.017706'
+organizations_005:
+  id: 6
+  name: VolleyballBC
+  location_id: 
+  user_id: 
+  phone: 
+  email: ''
+  created_at: '2014-10-06 00:24:03.951532'
+  updated_at: '2014-10-06 00:24:03.951532'
+organizations_006:
+  id: 7
+  name: POCO Volleyball
+  location_id: 
+  user_id: 
+  phone: 6041234566
+  email: vball@poco.ca
+  created_at: '2014-10-06 00:25:35.095117'
+  updated_at: '2014-10-06 00:25:35.095117'
