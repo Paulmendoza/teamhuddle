@@ -8,13 +8,12 @@ Rails 4.1
 I suggest using the RubyInstaller from http://rubyinstaller.org/downloads/
 then running
 
-$gem install rails
+###Setup Instructions:###
 
-from a commande prompt.
 
-After pulling this repo, navigate a command prompt to the app directory (where
-Gemfile is located) and run
+` $ bundle update `
 
-$bundle install
-and
-$bundle update
+` $ rake db:migrate `
+` $ rake bower:install `
+
+` $ rails s -p 9090 ` //Run this server on Port 9090
