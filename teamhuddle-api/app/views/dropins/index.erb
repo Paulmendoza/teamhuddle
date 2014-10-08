@@ -4,8 +4,11 @@
 <table class="table table-hover">
   <tr>
     <th>Name</th>
+    <th>Sport</th>
+    <th>Skill Level</th>
     <th>Location</th>
     <th>Organization</th>
+    <th>Price</th>
     <th>Schedule</th>
     <th>Start Date</th>
     <th>End Date</th>
@@ -16,8 +19,11 @@
   <% @dropins.each do |dropin| %>
   <tr>
     <td><%= dropin.name %></td>
+    <td><%= dropin.sport %></td>
+    <td><%= dropin.skill_level %></td>
     <td><%= Location.find(dropin.location_id).name %></td>
     <td><%= Organization.find(dropin.organization_id).name %></td>
+    <td><%= number_to_currency(dropin.price_per_one, :unit => "$") %></td>
     <td><%= dropin.schedule.to_s %></td>
     <td><%= dropin.schedule.start_time.strftime('%-d-%b-%y') %></td>
     <td><%= dropin.schedule.last.strftime('%-d-%b-%y') %></td>

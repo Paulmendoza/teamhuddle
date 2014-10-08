@@ -32,7 +32,9 @@ class DropinsController < ApplicationController
     
     if @event.save
       @dropin = SportEvent.new
-      @dropin.sport = 'volleyball'
+      @dropin.sport = params[:dropin][:sport]
+      @dropin.price_per_one = params[:dropin][:price_per_one]
+      @dropin.skill_level = params[:skill_level]
       @dropin.event_id = @event.id
       @dropin.type = 'dropin'
       @dropin.spots_filled = -1
@@ -115,7 +117,7 @@ class DropinsController < ApplicationController
   private
   def dropin_params
     params.require(:dropin).permit(:sport, :skill_level, :price_per_one,
-     :price_per_one, :spots, :notes, :format)
+      :spots, :notes, :format)
   end
 
   private

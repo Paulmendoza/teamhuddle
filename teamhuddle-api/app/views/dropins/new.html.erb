@@ -6,6 +6,21 @@
   </p>
   
   <p>
+    <%= f.label :sport %><br>
+    <%= f.text_field :sport %>
+  </p>
+
+  <p>
+    <%= f.label :skill_level %><br>
+    <%= select_tag(:skill_level, options_for_select([
+                                                    ['Beginner', 'beginner'],
+                                                    ['Recreational', 'recreational'],
+                                                    ['Intermediate', 'intermediate'],
+                                                    ['Advanced', 'advanced']
+                                                    ])) %>
+  </p>
+
+  <p>
     <%= f.label :organization_id %><br>
     <%= f.select(:organization_id, options_from_collection_for_select(Organization.all, :id, :name)) %> 
     <small>Organization not on the list? <%= link_to 'Add it here', new_organization_path  %> (Note: Form will reset)</small>
@@ -44,8 +59,8 @@
   </p>
  
   <p>
-    <%= f.label :price_per_group %><br>
-    <%= f.text_field :price_per_group %>
+    <%= label_tag(:price_per_one, "Drop-in Price") %><br>
+    <%= f.number_field :price_per_one, min: 0, step: 0.01 %>
   </p>
   
   <p>
