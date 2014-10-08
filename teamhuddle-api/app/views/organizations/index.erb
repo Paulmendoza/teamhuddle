@@ -1,5 +1,5 @@
 <h1>All Organizations</h1>
-<a href="/organizations/new" class="btn btn-default">Create new organization</a>
+<%= link_to 'Create a new organization', new_organization_path, class: 'btn btn-default'  %>
 
 <table class="table">
   <tr>
@@ -11,7 +11,7 @@
   
   <% @organizations.each do |organization| %>
   <tr>
-    <td><a href="/organizations/<%= organization.id %>"><%= organization.name %></a></td>
+    <td><%= link_to organization.name, organization_path(organization)%></td>
     <td><%= organization.phone %></td>
     <td><%= organization.email %></td>
     <td>

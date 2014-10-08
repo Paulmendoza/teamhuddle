@@ -20,3 +20,6 @@
 
 # Ignore the gemfile.lock for now
 gemfile.lock
+
+# Ignore bower junk
+/lib/assets/bower_components

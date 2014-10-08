@@ -1,5 +1,5 @@
 <h1>All Dropins <small>(volleyball only right now)</small></h1>
-<a href="/dropins/new" class="btn btn-default">Create new dropin</a>
+<%= link_to 'Create a new dropin', new_dropin_path, class: 'btn btn-default' %>
 
 <table class="table table-hover">
   <tr>
@@ -15,7 +15,7 @@
   
   <% @dropins.each do |dropin| %>
   <tr>
-    <td><a href="/dropins/<%= dropin.id %>"><%= dropin.name %></a></td>
+    <td><%= dropin.name %></td>
     <td><%= Location.find(dropin.location_id).name %></td>
     <td><%= Organization.find(dropin.organization_id).name %></td>
     <td><%= dropin.schedule.to_s %></td>

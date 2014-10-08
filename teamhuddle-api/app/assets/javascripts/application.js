@@ -1,3 +1,10 @@
 //= require jquery
-//= require jquery_ujs
-//= require_tree .
+//= require bootstrap-sprockets
+//= require angular
+//= require angular-route
+//= require angular-resource
+//= require angular-animate
+//= require angular-rails-templates
+//= require ngmap
+//= require teamhuddleService
+//= require teamhuddleApp

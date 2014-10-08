@@ -1,0 +1,49 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.table-row{
+    background-color: white;
+    transition: background-color 0.25s linear;
+    transition: 0.5s linear;
+}
+
+.table-row:hover{
+    background-color: lightblue;
+}
+
+.table-row.ng-enter{
+    opacity: 0;
+}
+
+.table-row.ng-enter-active{
+    opacity: 1;
+}
+
+.table-row.ng-leave{
+    opacity: 1;
+}
+
+.table-row.ng-leave-active{
+    opacity: 0;
+}
+
+
+.main-wrapper{
+    transition: 1s linear;
+}
+
+.main-wrapper.ng-enter{
+    opacity: 0;
+}
+
+.main-wrapper.ng-enter-active{
+    opacity: 1;
+}
+
+.main-wrapper.ng-leave{
+    opacity: 1;
+}
+
+.main-wrapper.ng-leave-active{
+    opacity: 0;
+}
