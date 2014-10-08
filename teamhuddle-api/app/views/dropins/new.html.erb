@@ -8,13 +8,13 @@
   <p>
     <%= f.label :organization_id %><br>
     <%= f.select(:organization_id, options_from_collection_for_select(Organization.all, :id, :name)) %> 
-    <small>Organization not on the list? <a href="/organizations/new">Add it here!</a> (Note: Form will reset)</small>
+    <small>Organization not on the list? <%= link_to 'Add it here', new_organization_path  %> (Note: Form will reset)</small>
   </p>
   
   <p>
     <%= f.label :location_id %><br>
     <%= f.select(:location_id, options_from_collection_for_select(Location.all, :id, :name))%>
-    <small>Location not on the list? <a href="/locations/new">Add it here!</a> (Note: Form will reset)</small>
+    <small>Location not on the list? <%= link_to 'Add it here', new_location_path  %> (Note: Form will reset)</small>
   </p>
   
   <p>

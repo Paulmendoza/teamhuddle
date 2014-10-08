@@ -36,3 +36,15 @@ gem 'oj'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+# Bootstrap inclusion
+gem 'bootstrap-sass', '~> 3.2.0'
+
+# Only install on UNIX platforms
+gem "therubyracer", :platform => :ruby
+
+gem 'autoprefixer-rails'
+
+# Bower for front end dependencies
+gem 'bower-rails'
+gem 'angular-rails-templates'

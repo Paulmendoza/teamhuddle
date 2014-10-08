@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Teamhuddle</title>
+    <title>Teamhuddle Admin</title>
     <%= stylesheet_link_tag "style" %>
   </head>
   <body>
-    <%= javascript_include_tag 'application' %>
     <div class="container">
       <div id="wrapper" class="panel panel-default">
         <ul class="nav nav-pills">
-          <li><a href="/">Home</a></li>
-          <li><a href="/locations">Locations</a></li>
-          <li><a href="/organizations">Organizations</a></li> 
-          <li><a href="/dropins">Dropins</a></li>
+          <li><a href="/admin">Home</a></li>
+          <li><%= link_to 'Organizations', organizations_path %></li>
+          <li><%= link_to 'Locations', locations_path %></li>
+          <li><%= link_to 'Dropins', dropins_path %></li>
+          <li><%= link_to 'Client', root_path%> </li>
           <li><a href="#">More to come...</a></li>
         </ul>
         <%= yield %>

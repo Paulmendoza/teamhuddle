@@ -1,5 +1,5 @@
 <h1>All Locations</h1>
-<a href="/locations/new" class="btn btn-default">Create new location</a>
+<%= link_to 'Create a new location', new_location_path, class: 'btn btn-default'  %>
 
 <table class="table">
   <tr>
@@ -11,7 +11,7 @@
   
   <% @locations.each do |location| %>
   <tr>
-    <td><a href="/locations/<%= location.id %>"><%= location.name %></a></td>
+    <td><%= link_to location.name, location_path(location) %></td>
     <td><%= location.lat %></td>
     <td><%= location.long %></td>
     <td>

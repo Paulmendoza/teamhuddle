@@ -1,0 +1,62 @@
+
+
+<div class="container" ng-controller="dropins">
+    <h1>TeamHuddle  <small> dropins for this week</small></h1>
+    <i>try sorting that shit... or removing stuff... or clicking the table rows</i>
+    <div class="row clearfix">
+        <br/> 
+        <div class="col-md-6 main-wrapper container">
+            <div class="col-md-6">
+                <h4>Filters <button class="btn btn-default" ng-click="refresh()">Reset</button></h4>
+            </div>
+            <%#*<div class="col-md-6">%>
+                <%#*<select class="form-control" ng-model="weekdaySelect">%>
+                    <%#*<option value="Monday">Monday</option>%>
+                    <%#*<option value="Tuesday">Tuesday</option>%>
+                    <%#*<option value="Wednesday">Wednesday</option>%>
+                    <%#*<option value="Thursday">Thursday</option>%>
+                    <%#*<option value="Friday">Friday</option>%>
+                    <%#*<option value="Saturday">Saturday</option>%>
+                    <%#*<option value="Sunday">Sunday</option>%>
+                <%#*</select>%>
+            <%#*</div>%>
+            <table class="table">
+                <tr>
+                    <th>Day of the Week 
+                        <span ng-class="reverse && (predicate === 'datetime_start.time') ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'" 
+                              ng-click="reverse =! reverse; predicate = 'datetime_start.time'; order(predicate, reverse)"/>
+                    </th>
+
+                    <th>Dropin Name 
+                        <span ng-class="reverse && (predicate === 'event.name') ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'" 
+                              ng-click="reverse =! reverse; predicate = 'event.name'; order(predicate, reverse)"/>
+                    </th>
+                        <th>
+                      Location Name
+                    </th>
+
+                    <th>Time</th>
+                    <th></th>
+                </tr>
+
+                <tr class="table-row" ng-repeat="dropin in dropins" ng-mouseover="centerDropin(dropin)">
+                    <td>{{dropin.datetime_start.time | date:'EEEE'}}</td>
+                    <td>{{dropin.event.name}}</td>
+                    <td>{{dropin.location.name}}</td>
+                    <td>{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</td>
+                    
+                    <td><span class="button glyphicon glyphicon-remove" ng-click="remove(dropin)" /></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6 pull-right">
+            <map style="display:block;height:450px;width:100%" center="Vancouver, Canada" zoom="10">
+                <marker ng-repeat="dropin in dropins"
+                        position="[{{dropin.location.lat}},{{dropin.location.long}}]"/>
+            </map>
+        </div>
+    </div>
+    <div class="row clearfix">
+
+    </div>
+</div>
