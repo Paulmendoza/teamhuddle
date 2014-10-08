@@ -4,7 +4,15 @@ var map = {};
 
 app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $filter, Dropins) {
         var orderBy = $filter('orderBy');
-        $scope.dropins = [];
+        $scope.dropins = [
+            {
+                datetime_start: { time: ''} ,
+                datetime_end: { time: ''} ,
+                event: { name: ''},
+                location: { name: ''}
+            }
+        ];
+        
         $scope.remove = function (item) {
             var index = $scope.dropins.indexOf(item);
             $scope.dropins.splice(index, 1);
