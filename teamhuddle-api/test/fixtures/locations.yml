@@ -4,17 +4,17 @@ locations_001:
   address: 
   lat: 49.224338
   long: -122.99672
-  name: Bonsor Rec
+  name: Bonsor Recreation Centre
   created_at: '2014-07-24 04:52:53.309703'
-  updated_at: '2014-07-24 04:52:53.309703'
+  updated_at: '2014-10-05 23:33:41.007419'
 locations_002:
   id: 9
   address: 
   lat: 49.27158
   long: -123.10563
-  name: Creekside
+  name: Creekside Community Centre
   created_at: '2014-07-25 01:45:50.582887'
-  updated_at: '2014-07-25 01:45:50.582887'
+  updated_at: '2014-10-05 23:32:44.806648'
 locations_003:
   id: 27
   address: 
@@ -28,9 +28,9 @@ locations_004:
   address: 
   lat: 49.174819
   long: -123.151905
-  name: Richmond Oval
+  name: Richmond Olympic Oval
   created_at: '2014-07-28 20:57:46.858029'
-  updated_at: '2014-07-28 20:57:46.858029'
+  updated_at: '2014-10-05 23:32:56.933560'
 locations_005:
   id: 29
   address: 
@@ -52,6 +52,214 @@ locations_007:
   address: 
   lat: 49.248615
   long: -123.001042
-  name: BCIT Gym
+  name: British Columbia Institute of Technology SAC
   created_at: '2014-08-03 05:04:30.751822'
-  updated_at: '2014-08-03 05:04:30.751822'
+  updated_at: '2014-10-05 22:03:08.229824'
+locations_008:
+  id: 35
+  address: 
+  lat: 49.27479
+  long: -123.071301
+  name: Britannia Community Center
+  created_at: '2014-10-05 23:24:25.025110'
+  updated_at: '2014-10-05 23:24:25.025110'
+locations_009:
+  id: 36
+  address: 
+  lat: 49.221479
+  long: -122.947658
+  name: Edmonds Recreation Centre
+  created_at: '2014-10-05 23:32:17.623619'
+  updated_at: '2014-10-05 23:32:17.623619'
+locations_010:
+  id: 37
+  address: 
+  lat: 49.189109
+  long: -123.078512
+  name: Cambie Community Centre
+  created_at: '2014-10-05 23:35:59.819483'
+  updated_at: '2014-10-05 23:35:59.819483'
+locations_011:
+  id: 38
+  address: 
+  lat: 49.255734
+  long: -123.065289
+  name: Trout Lake Community Centre
+  created_at: '2014-10-05 23:40:41.941781'
+  updated_at: '2014-10-05 23:40:41.941781'
+locations_012:
+  id: 39
+  address: 
+  lat: 49.281594
+  long: -123.099514
+  name: Carnegie Community Centre
+  created_at: '2014-10-05 23:53:47.425427'
+  updated_at: '2014-10-05 23:53:47.425427'
+locations_013:
+  id: 40
+  address: 
+  lat: 49.215158
+  long: -123.031987
+  name: Champlain Heights Community Centre
+  created_at: '2014-10-05 23:55:34.492061'
+  updated_at: '2014-10-05 23:55:34.492061'
+locations_014:
+  id: 41
+  address: 
+  lat: 49.252022
+  long: -123.122195
+  name: Douglas Park Community Centre
+  created_at: '2014-10-05 23:56:47.175572'
+  updated_at: '2014-10-05 23:56:47.175572'
+locations_015:
+  id: 42
+  address: 
+  lat: 49.244248
+  long: -123.186031
+  name: Dunbar Community Centre
+  created_at: '2014-10-05 23:57:57.547398'
+  updated_at: '2014-10-05 23:57:57.547398'
+locations_016:
+  id: 43
+  address: 
+  lat: 49.284394
+  long: -123.096703
+  name: Evelyne Saller Centre
+  created_at: '2014-10-05 23:58:40.416079'
+  updated_at: '2014-10-05 23:58:40.416079'
+locations_017:
+  id: 44
+  address: 
+  lat: 49.284828
+  long: -123.096596
+  name: False Creek Community Centre
+  created_at: '2014-10-06 00:00:47.824925'
+  updated_at: '2014-10-06 00:00:47.824925'
+locations_018:
+  id: 45
+  address: 
+  lat: 49.278025
+  long: -123.123482
+  name: The Gathering Place
+  created_at: '2014-10-06 00:01:53.180894'
+  updated_at: '2014-10-06 00:01:53.180894'
+locations_019:
+  id: 46
+  address: 
+  lat: 49.28326
+  long: -123.038661
+  name: Hastings Community Centre
+  created_at: '2014-10-06 00:06:06.888831'
+  updated_at: '2014-10-06 00:06:06.888831'
+locations_020:
+  id: 47
+  address: 
+  lat: 49.24719
+  long: -123.104948
+  name: Hillcrest Community Centre
+  created_at: '2014-10-06 00:06:33.059405'
+  updated_at: '2014-10-06 00:07:04.900490'
+locations_021:
+  id: 48
+  address: 
+  lat: 49.238378
+  long: -123.074215
+  name: Kensington Community Centre
+  created_at: '2014-10-06 00:07:54.186882'
+  updated_at: '2014-10-06 00:07:54.186882'
+locations_022:
+  id: 49
+  address: 
+  lat: 49.233517
+  long: -123.156355
+  name: Kerrisdale Community Centre
+  created_at: '2014-10-06 00:08:48.684540'
+  updated_at: '2014-10-06 00:13:50.404673'
+locations_023:
+  id: 50
+  address: 
+  lat: 49.26212
+  long: -123.162084
+  name: Kitsilano Community Centre
+  created_at: '2014-10-06 00:09:34.627974'
+  updated_at: '2014-10-06 00:09:34.627974'
+locations_024:
+  id: 51
+  address: 
+  lat: 49.227043
+  long: -123.043488
+  name: Killarney Community Centre
+  created_at: '2014-10-06 00:10:44.714116'
+  updated_at: '2014-10-06 00:10:44.714116'
+locations_025:
+  id: 52
+  address: 
+  lat: 49.217443
+  long: -123.12801
+  name: Marpole Oakridge Community Centre
+  created_at: '2014-10-06 00:11:58.420505'
+  updated_at: '2014-10-06 00:11:58.420505'
+locations_026:
+  id: 53
+  address: 
+  lat: 49.264245
+  long: -123.100182
+  name: Mount Pleasant Community Centre
+  created_at: '2014-10-06 00:13:31.601728'
+  updated_at: '2014-10-06 00:13:31.601728'
+locations_027:
+  id: 54
+  address: 
+  lat: 49.281258
+  long: -123.083056
+  name: Ray Cam Co-Operative Centre
+  created_at: '2014-10-06 00:14:44.808308'
+  updated_at: '2014-10-06 00:14:44.808308'
+locations_028:
+  id: 55
+  address: 
+  lat: 49.251224
+  long: -123.042737
+  name: Renfrew Community Centre
+  created_at: '2014-10-06 00:15:41.596599'
+  updated_at: '2014-10-06 00:15:41.596599'
+locations_029:
+  id: 56
+  address: 
+  lat: 49.279831
+  long: -123.091532
+  name: Strathcona Community Centre
+  created_at: '2014-10-06 00:16:26.470370'
+  updated_at: '2014-10-06 00:16:26.470370'
+locations_030:
+  id: 57
+  address: 
+  lat: 49.22623
+  long: -123.100974
+  name: Sunset Community Centre
+  created_at: '2014-10-06 00:17:28.259297'
+  updated_at: '2014-10-06 00:17:28.259297'
+locations_031:
+  id: 58
+  address: 
+  lat: 49.264066
+  long: -123.031193
+  name: Thunderbird Community Centre
+  created_at: '2014-10-06 00:18:38.778117'
+  updated_at: '2014-10-06 00:18:38.778117'
+locations_032:
+  id: 59
+  address: 
+  lat: 49.290776
+  long: -123.136464
+  name: West End Community Centre
+  created_at: '2014-10-06 00:19:46.565042'
+  updated_at: '2014-10-06 00:19:46.565042'
+locations_033:
+  id: 60
+  address: 
+  lat: 49.271893
+  long: -123.203948
+  name: West Point Grey Community Centre
+  created_at: '2014-10-06 00:21:05.267983'
+  updated_at: '2014-10-06 00:21:05.267983'
