@@ -7,19 +7,21 @@
         <br/> 
         <div class="col-md-6 main-wrapper container">
             <div class="col-md-6">
-                <h4>Filters <button class="btn btn-default" ng-click="refresh()">Reset</button></h4>
+                <h4>Filters <button class="btn btn-default" ng-click="refreshDropins()">Reset</button></h4>
             </div>
-            <%#*<div class="col-md-6">%>
-                <%#*<select class="form-control" ng-model="weekdaySelect">%>
-                    <%#*<option value="Monday">Monday</option>%>
-                    <%#*<option value="Tuesday">Tuesday</option>%>
-                    <%#*<option value="Wednesday">Wednesday</option>%>
-                    <%#*<option value="Thursday">Thursday</option>%>
-                    <%#*<option value="Friday">Friday</option>%>
-                    <%#*<option value="Saturday">Saturday</option>%>
-                    <%#*<option value="Sunday">Sunday</option>%>
-                <%#*</select>%>
-            <%#*</div>%>
+            <div class="col-md-6">
+                <label>Day of the week</label>
+                <select class="form-control" ng-model="weekdaySelect" ng-change="filterDays()">
+                    <option value="All">All</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+            </div>
             <table class="table">
                 <tr>
                     <th>Day of the Week 
