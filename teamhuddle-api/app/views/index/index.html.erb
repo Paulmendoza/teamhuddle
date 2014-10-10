@@ -1,8 +1,23 @@
+<section class="header">
+  <%= image_tag 'logo.png', class: "center-block animated bounceInLeft", width: 100, height: 100, alt: 'teamhuddle_logo'%>
+  <h1 class="text-center animated bounceInRight">teamhuddle</h1>
+  <h2 class="text-center">What are you playing tonight?</h2>
+  <br>
+</section>
 
+<section class="sport_logos text-center">
+  <%= link_to(image_tag("volleyball1.png", :alt => "asdf", class: "sport_logo green_bck col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "#") %>
+  <%= link_to(image_tag("hockey1.png", :alt => "asdf", class: "sport_logo blue_bck col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "#") %>
+  <%= link_to(image_tag("basketball1.png", :alt => "asdf", class: "sport_logo orange_bck col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "#") %>
+  <%= link_to(image_tag("soccer1.png", :alt => "asdf", class: "sport_logo red_bck col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "#") %>
+  <%= link_to(image_tag("dragonboating1.png", :alt => "asdf", class: "sport_logo red_bck col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "#") %>
+  <%= link_to(image_tag("http://placehold.it/280x280", :alt => "asdf", class: "sport_logo test_images col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "#") %>
+  <%= link_to(image_tag("http://placehold.it/280x280", :alt => "asdf", class: "sport_logo test_images col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "#") %>
+  <%= link_to(image_tag("http://placehold.it/280x280", :alt => "asdf", class: "sport_logo test_images col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "#") %>
+</section>
 
 <div class="container" ng-controller="dropins">
-    <h1>TeamHuddle  <small> dropins for this week</small></h1>
-    <i>try sorting that shit... or removing stuff... or clicking the table rows</i>
+    <i>try sorting... or removing stuff... or clicking the table rows</i>
     <div class="row clearfix">
         <br/> 
         <div class="col-md-6 main-wrapper container">
