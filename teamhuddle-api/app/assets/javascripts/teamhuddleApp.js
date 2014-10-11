@@ -12,12 +12,13 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
                 location: {name: ''}
             }
         ];
+        $scope.sport = 'somegarbage';
 
         // use a deferred promise from the Dropins service to populate the scope
         $scope.refreshDropins = function () {
             $scope.weekdaySelect = "All";
             $scope.skillLevelSelect = "All";
-            Dropins.get().then(
+            Dropins.getBySport($scope.sport).then(
                     function (dropins) {
                         $scope.dropins = orderBy(dropins, 'datetime_start.time');
                     },
@@ -25,6 +26,7 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
                         alert('Failed: ' + reason);
                     });
         };
+
 
         // orders by predicate
         $scope.order = function (predicate, reverse) {
@@ -41,7 +43,7 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
 
         // gets all data and applies requested filters 
         $scope.applyFilters = function () {
-               Dropins.get().then(
+               Dropins.getBySport('soccer').then(
                     function (dropins) {
                         
                         // apply each filter if 'All' isn't selected

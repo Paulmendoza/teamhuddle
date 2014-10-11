@@ -5,6 +5,7 @@
 //= require angular-resource
 //= require angular-animate
 //= require angular-rails-templates
+//= require moment
 //= require ngmap
 //= require teamhuddleService
 //= require teamhuddleApp

@@ -9,11 +9,17 @@ class DropinsController < ApplicationController
       to = Time.parse(params[:to])
     end
     
+    #default to volleyball right now
+    sport = "volleyball"
+    
+    sport = params[:sport] if params[:sport].present?
     # This is for the API -> see index.json.rabl
-    @sport_event_instances = SportEventInstance.includes(:event, :location, :sport_event).between(from, to) 
+    @sport_event_instances = SportEventInstance.includes(:event, :location, :sport_event)
+                                               .between(from, to)
+                                               .where( sport_events: { type: "dropin", sport: sport})
     
     # This is for the admin page -> see index.erb
-    @dropins = SportEvent.joins(:event).where( sport_events: { type: "dropin"}).select("*")
+    @dropins = SportEvent.joins(:event).where( sport_events: { type: "dropin", sport: sport}).select("*")
     
   end
   
