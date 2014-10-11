@@ -20,7 +20,6 @@ class DropinsController < ApplicationController
     
     # This is for the admin page -> see index.erb
     @dropins = SportEvent.joins(:event).where( sport_events: { type: "dropin", sport: sport}).select("*")
-    
   end
   
   def show
@@ -113,10 +112,9 @@ class DropinsController < ApplicationController
 
   def destroy
     @sportevent = SportEvent.find(params[:id])
-    if Event.find(@sportevent.event_id).destroy
-      if Event.find(params[:id]).destroy
-        render :nothing => true, status => :no_conent
-      end
+    @event = Event.find(@sportevent.events)
+     respond_to do |format|
+      format.html { render json: @sportevent }
     end
   end
 

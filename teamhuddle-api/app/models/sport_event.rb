@@ -2,7 +2,7 @@ class SportEvent < ActiveRecord::Base
   self.inheritance_column = 'zoink'
   after_initialize :init
   
-  belongs_to :event, :dependent => :delete
+  belongs_to :event
   has_many :archived_sport_events
   has_many :sport_event_instances, :dependent => :delete_all
 

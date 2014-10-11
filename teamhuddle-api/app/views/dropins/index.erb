@@ -14,6 +14,7 @@
     <th>End Date</th>
     <th># of Sessions</th>
     <th>Time</th>
+    <th>CRUD</th>
   </tr>
   
   <% @dropins.each do |dropin| %>
@@ -29,6 +30,7 @@
     <td><%= dropin.schedule.last.strftime('%-d-%b-%y') %></td>
     <td><%= dropin.schedule.all_occurrences.count %></td>
     <td><%= dropin.schedule.start_time.strftime('%l:%M%P') %> - <%= dropin.schedule.end_time.strftime('%l:%M%P') %></td>
+    <td><%= button_to "DELETE", dropin_path(dropin),  method: :delete %></td>
   </tr>
   <% end %>
 </table>
