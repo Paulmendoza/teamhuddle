@@ -19,7 +19,8 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
                         google.maps.event.trigger($scope.map, 'resize');
                         
                         // reset the center to the first object in the array
-                        $scope.centerDropin(dropins[0]);
+                        var mapCenter = new google.maps.LatLng($scope.dropins[0].location.lat, $scope.dropins[0].location.long);
+                        $scope.map.setCenter(mapCenter);
                     },
                     function (reason) {
                         alert('Failed: ' + reason);
@@ -54,7 +55,6 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
                         }
                         
                         $scope.dropins = dropins;
-                        $scope.centerDropin(dropins[0]);
                     },
                     function (reason) {
                         alert('Failed: ' + reason);
@@ -66,7 +66,6 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
             var index = $scope.dropins.indexOf(item);
             $scope.dropins.splice(index, 1);
         };
-        
     }]);
 
 // filters based on weekday
