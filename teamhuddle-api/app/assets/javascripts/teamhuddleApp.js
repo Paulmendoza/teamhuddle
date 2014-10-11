@@ -15,7 +15,7 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
             $scope.skillLevelSelect = "All";
             Dropins.getBySport($scope.sport).then(
                     function (dropins) {
-                        $scope.dropins = orderBy(dropins, $scope.predicate, true);
+                        $scope.dropins = orderBy(dropins, $scope.predicate, false);
                         
                         // call a resize because map has moved and recenter it
                         google.maps.event.trigger($scope.map, 'resize');
