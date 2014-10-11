@@ -6,6 +6,8 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
         var orderBy = $filter('orderBy');
         $scope.dropins = [];
         $scope.sport = 'somegarbage';
+        $scope.predicate = 'datetime_start.time';
+        
 
         // use a deferred promise from the Dropins service to populate the scope
         $scope.refreshDropins = function () {
@@ -13,13 +15,15 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
             $scope.skillLevelSelect = "All";
             Dropins.getBySport($scope.sport).then(
                     function (dropins) {
-                        $scope.dropins = orderBy(dropins, 'datetime_start.time');
+                        $scope.dropins = orderBy(dropins, $scope.predicate, false);
                         
                         // call a resize because map has moved and recenter it
                         google.maps.event.trigger($scope.map, 'resize');
                         
                         // reset the center to the first object in the array
-                        $scope.centerDropin(dropins[0]);
+                        if($scope.dropins.length > 0){
+                            $scope.centerDropin($scope.dropins[0])
+                        }
                     },
                     function (reason) {
                         alert('Failed: ' + reason);
@@ -31,9 +35,22 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
         $scope.order = function (predicate, reverse) {
             $scope.dropins = orderBy($scope.dropins, predicate, reverse);
         };
-        // initial assignment of dropins
-        $scope.refreshDropins();
-
+        
+        $scope.getSkillSortOrder = function(dropin){
+            switch(dropin.sport_event.skill_level){
+                case 'Recreational':
+                    return 1;
+                case 'Beginner':
+                    return 2;
+                case 'Intermediate':
+                    return 3;
+                case 'Advanced':
+                    return 4;
+                default:
+                    return 0;
+            }
+        };
+        
         $scope.centerDropin = function (dropin) {
             $scope.map.panTo(new google.maps.LatLng(dropin.location.lat, dropin.location.long));
             $scope.map.setZoom(11);
@@ -54,7 +71,6 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
                         }
                         
                         $scope.dropins = dropins;
-                        $scope.centerDropin(dropins[0]);
                     },
                     function (reason) {
                         alert('Failed: ' + reason);
@@ -66,6 +82,7 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
             var index = $scope.dropins.indexOf(item);
             $scope.dropins.splice(index, 1);
         };
+        
         
     }]);
 

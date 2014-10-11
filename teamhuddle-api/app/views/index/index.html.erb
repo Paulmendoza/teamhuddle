@@ -88,7 +88,7 @@
                   <th>
                     Skill Level
                     <span ng-class="reverse && (predicate === 'sport_event.skill_level') ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'" 
-                            ng-click="reverse =! reverse; predicate = 'sport_event.skill_level'; order(predicate, reverse)"/>
+                            ng-click="reverse =! reverse; predicate = 'sport_event.skill_level'; order(getSkillSortOrder, reverse)"/>
                   </th>
 
                   <th>Time</th>
