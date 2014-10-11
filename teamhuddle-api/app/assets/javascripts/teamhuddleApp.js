@@ -21,8 +21,9 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
                         google.maps.event.trigger($scope.map, 'resize');
                         
                         // reset the center to the first object in the array
-                        var mapCenter = new google.maps.LatLng($scope.dropins[0].location.lat, $scope.dropins[0].location.long);
-                        $scope.map.setCenter(mapCenter);
+                        if($scope.dropins.length > 0){
+                            $scope.centerDropin($scope.dropins[0])
+                        }
                     },
                     function (reason) {
                         alert('Failed: ' + reason);
