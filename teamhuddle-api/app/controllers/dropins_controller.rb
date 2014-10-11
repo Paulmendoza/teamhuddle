@@ -111,10 +111,12 @@ class DropinsController < ApplicationController
   end
 
   def destroy
-    @sportevent = SportEvent.find(params[:id])
-    @event = Event.find(@sportevent.events)
-     respond_to do |format|
-      format.html { render json: @sportevent }
+    @event = Event.find(params[:id])
+    @event.destroy
+    respond_to do |format|
+      format.html { redirect_to :action => 'index'}
+      format.json { render :nothing => true, status => :no_conent }
+      format.xml { render :nothing => true, status => :no_conent }
     end
   end
 

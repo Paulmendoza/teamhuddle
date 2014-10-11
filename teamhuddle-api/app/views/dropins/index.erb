@@ -30,7 +30,7 @@
     <td><%= dropin.schedule.last.strftime('%-d-%b-%y') %></td>
     <td><%= dropin.schedule.all_occurrences.count %></td>
     <td><%= dropin.schedule.start_time.strftime('%l:%M%P') %> - <%= dropin.schedule.end_time.strftime('%l:%M%P') %></td>
-    <td><%= button_to "DELETE", dropin_path(dropin),  method: :delete %></td>
+    <td><%= link_to "DELETE", dropin_path(dropin.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
   </tr>
   <% end %>
 </table>
