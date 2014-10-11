@@ -14,6 +14,13 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
             Dropins.getBySport($scope.sport).then(
                     function (dropins) {
                         $scope.dropins = orderBy(dropins, 'datetime_start.time');
+                        
+                        // call a resize because map has moved and recenter it
+                        google.maps.event.trigger($scope.map, 'resize');
+                        
+                        // reset the center to the first object in the array
+                        var mapCenter = new google.maps.LatLng($scope.dropins[0].location.lat, $scope.dropins[0].location.long);
+                        $scope.map.setCenter(mapCenter);
                     },
                     function (reason) {
                         alert('Failed: ' + reason);
