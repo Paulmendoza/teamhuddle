@@ -4,14 +4,7 @@ var map = {};
 
 app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $filter, Dropins) {
         var orderBy = $filter('orderBy');
-        $scope.dropins = [
-            {
-                datetime_start: {time: ''},
-                datetime_end: {time: ''},
-                event: {name: ''},
-                location: {name: ''}
-            }
-        ];
+        $scope.dropins = [];
         $scope.sport = 'somegarbage';
 
         // use a deferred promise from the Dropins service to populate the scope
