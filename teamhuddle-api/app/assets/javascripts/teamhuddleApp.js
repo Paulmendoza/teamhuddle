@@ -43,7 +43,7 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
 
         // gets all data and applies requested filters 
         $scope.applyFilters = function () {
-               Dropins.getBySport('soccer').then(
+               Dropins.getBySport($scope.sport).then(
                     function (dropins) {
                         
                         // apply each filter if 'All' isn't selected
