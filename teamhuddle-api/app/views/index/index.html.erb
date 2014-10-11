@@ -10,8 +10,8 @@
                 <h4>Filters <button class="btn btn-default" ng-click="refreshDropins()">Reset</button></h4>
             </div>
             <div class="col-md-6">
-                <label>Day of the week</label>
-                <select class="form-control" ng-model="weekdaySelect" ng-change="filterDays()">
+                <label>Day of the Week</label>
+                <select class="form-control" ng-model="weekdaySelect" ng-change="applyFilters()">
                     <option value="All">All</option>
                     <option value="Monday">Monday</option>
                     <option value="Tuesday">Tuesday</option>
@@ -20,6 +20,14 @@
                     <option value="Friday">Friday</option>
                     <option value="Saturday">Saturday</option>
                     <option value="Sunday">Sunday</option>
+                </select>
+                <label>Skill Level</label>
+                <select class="form-control" ng-model="skillLevelSelect" ng-change="applyFilters()">
+                    <option value="All">All</option>
+                    <option value="Recreational">Recreational</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
                 </select>
             </div>
             <table class="table">
@@ -36,6 +44,12 @@
                         <th>
                       Location Name
                     </th>
+                    
+                    <th>
+                      Skill Level
+                      <span ng-class="reverse && (predicate === 'sport_event.skill_level') ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'" 
+                              ng-click="reverse =! reverse; predicate = 'sport_event.skill_level'; order(predicate, reverse)"/>
+                    </th>
 
                     <th>Time</th>
                     <th></th>
@@ -45,6 +59,7 @@
                     <td>{{dropin.datetime_start.time | date:'EEEE'}}</td>
                     <td>{{dropin.event.name}}</td>
                     <td>{{dropin.location.name}}</td>
+                    <td>{{dropin.sport_event.skill_level}}</td>
                     <td>{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</td>
                     
                     <td><span class="button glyphicon glyphicon-remove" ng-click="remove(dropin)" /></td>

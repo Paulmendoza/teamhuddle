@@ -13,14 +13,10 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
             }
         ];
 
-        $scope.remove = function (item) {
-            var index = $scope.dropins.indexOf(item);
-            $scope.dropins.splice(index, 1);
-        };
-
         // use a deferred promise from the Dropins service to populate the scope
         $scope.refreshDropins = function () {
             $scope.weekdaySelect = "All";
+            $scope.skillLevelSelect = "All";
             Dropins.get().then(
                     function (dropins) {
                         $scope.dropins = orderBy(dropins, 'datetime_start.time');
@@ -34,7 +30,7 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
         $scope.order = function (predicate, reverse) {
             $scope.dropins = orderBy($scope.dropins, predicate, reverse);
         };
-
+        // initial assignment of dropins
         $scope.refreshDropins();
 
         $scope.centerDropin = function (dropin) {
@@ -43,26 +39,34 @@ app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $fi
         };
 
 
-
-        $scope.filterDays = function () {
-            if($scope.weekdaySelect === "All"){
-                $scope.refreshDropins();
-            }
-            else{
+        // gets all data and applies requested filters 
+        $scope.applyFilters = function () {
                Dropins.get().then(
                     function (dropins) {
-                        $scope.dropins = $filter('weekday')(dropins, $scope.weekdaySelect);
+                        
+                        // apply each filter if 'All' isn't selected
+                        if($scope.weekdaySelect !== 'All'){
+                            dropins = $filter('weekday')(dropins, $scope.weekdaySelect);
+                        }
+                        if($scope.skillLevelSelect !== 'All'){
+                            dropins = $filter('skill_level')(dropins, $scope.skillLevelSelect);
+                        }
+                        
+                        $scope.dropins = dropins;
                     },
                     function (reason) {
                         alert('Failed: ' + reason);
                     }); 
-            }
-            
-        }
-
+        };
+        
+        // function to remove an item from the list
+        $scope.remove = function (item) {
+            var index = $scope.dropins.indexOf(item);
+            $scope.dropins.splice(index, 1);
+        };
     }]);
 
-
+// filters based on weekday
 app.filter('weekday', function ($filter) {
     return function (sport_events, day) {
         var retn = [];
@@ -74,10 +78,22 @@ app.filter('weekday', function ($filter) {
             }
         });
 
-        console.log(retn);
-        // return items.slice().reverse();
         return retn;
     };
 });
 
+// filters based on skill level
+app.filter('skill_level', function () {
+    return function (sport_events, skill) {
+        var retn = [];
+        
+        angular.forEach(sport_events, function (event) {
+            
+            if (event.sport_event.skill_level === skill) {
+                retn.push(event);
+            }
+        });
 
+        return retn;
+    };
+});
