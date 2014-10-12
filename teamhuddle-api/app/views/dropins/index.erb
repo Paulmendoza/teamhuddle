@@ -1,4 +1,13 @@
-<h1>All Dropins <small>(volleyball only right now)</small></h1>
+
+<h1><%= @sport.capitalize %> Dropins </h1>
+<%= link_to 'Volleyball', {:sport => 'volleyball' }, class:'btn btn-default' %>
+<%= link_to 'Soccer', {:sport => 'soccer'} , class:'btn btn-default' %>
+<%= link_to 'Hockey', {:sport => 'hockey'} , class:'btn btn-default' %>
+<%= link_to 'Dragonboat', {:sport => 'dragonboat'} , class:'btn btn-default' %>
+<%= link_to 'Basketball', {:sport => 'basketball'} , class:'btn btn-default' %>
+
+<%#= link_to 'Show Only Active', params.merge(:active => 'true'), class:'btn btn-default pull-right' %>
+<br/>
 <%= link_to 'Create a new dropin', new_dropin_path, class: 'btn btn-default' %>
 
 <table class="table table-hover">

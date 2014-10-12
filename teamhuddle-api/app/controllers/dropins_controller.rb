@@ -10,16 +10,24 @@ class DropinsController < ApplicationController
     end
     
     #default to volleyball right now
-    sport = "volleyball"
+    @sport = String.new("volleyball")
+    @sport = params[:sport] if params[:sport].present?
     
-    sport = params[:sport] if params[:sport].present?
+    
+    # This is for the admin page -> see index.erb
+    @dropins = SportEvent.joins(:event).where( sport_events: { type: "dropin", sport: @sport}).select("*")
+    
+    
+    #active = false
+    #active = params[:active] if params[:active].present?
+    #dropin.schedule.occurring_between?(Time.now, Time.new('2100'))
+    
+    
     # This is for the API -> see index.json.rabl
     @sport_event_instances = SportEventInstance.includes(:event, :location, :sport_event)
                                                .between(from, to)
-                                               .where( sport_events: { type: "dropin", sport: sport})
+                                               .where( sport_events: { type: "dropin", sport: @sport})
     
-    # This is for the admin page -> see index.erb
-    @dropins = SportEvent.joins(:event).where( sport_events: { type: "dropin", sport: sport}).select("*")
   end
   
   def show

@@ -48,19 +48,6 @@ class SportEvent < ActiveRecord::Base
     self.event.organization
   end
 
-  def createvent (name, locaiton_id, organization_id)
-    @event = Event.new
-    @event.name = name
-    @event.location_id = location_id
-    @event.organization_id = organization_id
-
-    if @event.save
-      self.event_id = @event.id
-      return @event.event_id
-    else
-      return -1
-    end
-  end
   # end
 
   private
