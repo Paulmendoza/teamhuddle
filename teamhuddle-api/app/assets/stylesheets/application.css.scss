@@ -161,7 +161,9 @@ li {
   display: inline-block;
 }
 
-
+.left-wrapper {
+  margin-bottom: 35px;
+}
 
 
 // ========== IMAGE STYLES ===========
@@ -206,7 +208,7 @@ li {
 
 .orange_bck {
   background-color: $dark-orange;
-  &:hover {
+  &:hover { 
     background-color: $light-orange;
   }  
 }
@@ -237,6 +239,18 @@ li {
   &:hover {
     color: #777;
     background-color: transparent;
+  }
+}
+
+.btn-success {
+  background-color: $light-green;
+  border: 1px solid $dark-green;
+  border-radius: 0px;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: $dark-green;
+    border: 1px solid $dark-green;
   }
 }
 
