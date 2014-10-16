@@ -1,6 +1,8 @@
 class DropinsController < ApplicationController
   include IceCube
 
+  before_action :authenticate_admin!, :only => [:new, :edit, :create, :destroy]
+
   def index
     from = DateTime.now.beginning_of_day
     to = DateTime.now.end_of_day
@@ -41,6 +43,8 @@ class DropinsController < ApplicationController
   end
 
   def create
+    before_action :authenticate_admin!
+
     @event = Event.new(event_params)
     
     if @event.save
