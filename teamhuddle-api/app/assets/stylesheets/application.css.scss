@@ -144,8 +144,8 @@ body {
 }
 
 .sport_logos {
-  min-height: 800px;
-
+  min-height: 700px;
+  margin-bottom: 80px;
 }
 
 .footer {
@@ -165,6 +165,10 @@ li {
   margin-bottom: 35px;
 }
 
+.right-wrapper {
+  margin-bottom: 35px;
+
+}
 
 // ========== IMAGE STYLES ===========
 
@@ -224,6 +228,10 @@ li {
 
 
 // ========== BUTTON STYLES ===========
+
+.btn {
+  font-weight: 400;
+}
 
 .glyphicon {
   margin-right: 5px;
@@ -372,9 +380,9 @@ li {
     width: 30%;
   }
 
-  .sport_logos {
-    margin-bottom: 80px;
-  }
+  // .sport_logos {
+  //   margin-bottom: 80px;
+  // }
 
 }
 

@@ -9,13 +9,17 @@ h1 {
 h2 {
   line-height: 1px;
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 400;
   word-wrap: break-word;
 }
 
 h2, h3, h4, h5, h6, p, input, button, select, textarea {
   font-family: 'Raleway', sans-serif;
 
+}
+
+.slogan {
+  opacity: .7;
 }
 
 li, a {
