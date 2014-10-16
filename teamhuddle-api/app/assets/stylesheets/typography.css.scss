@@ -1,21 +1,24 @@
 h1 {
-  font-family: 'Fredoka One', cursive;
-  font-size: 40px;
+  // font-family: 'Fredoka One', cursive;
+  font-family: 'Jura', sans-serif;
+  font-weight: 600;
+  font-size: 55px;
   // text-transform: uppercase;
 }
 
 h2 {
   line-height: 1px;
-  font-size: 22px;
+  font-size: 30px;
+  font-weight: 300;
 }
 
 h2, h3, h4, h5, h6, p, input {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 li, a {
-  // font-family: 'Fredoka One', cursive;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #EAEAEA;
 }
 
