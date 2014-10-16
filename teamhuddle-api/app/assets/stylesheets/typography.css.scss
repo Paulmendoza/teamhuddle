@@ -1,7 +1,7 @@
 h1 {
   font-family: 'Fredoka One', cursive;
   font-size: 40px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 h2 {
@@ -14,12 +14,25 @@ h2, h3, h4, h5, h6, p, input {
 }
 
 li, a {
+  // font-family: 'Fredoka One', cursive;
   font-family: 'Open Sans', sans-serif;
-  color: #EAEAEA !important;
+  color: #EAEAEA;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #fff;
 }
 
 
+.navbar-inverse .navbar-nav > li > a {
+  color: #EAEAEA;
+}
 
+.white {
+  color: #fff;
+}
 
-
-
+.grey {
+  color: #EAEAEA;
+}

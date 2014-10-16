@@ -8,37 +8,38 @@
 </section>
 
 <section class="sport_logos text-center" ng-show="sport === 'somegarbage'">
-  <%= link_to(image_tag("volleyball1.png", :alt => "asdf", 
-      class: "sport_logo green_bck col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "", 
-      :data => { :'ng-click' => 'sport="volleyball"; refreshDropins()' }) %>
+    <%= link_to(image_tag("volleyball1.png", :alt => "asdf",
+        class: "sport_logo green_bck", id: "first"), "", 
+        :data => { :'ng-click' => 'sport="volleyball"; refreshDropins()' }) %>
+      
+    <%= link_to(image_tag("hockey1.png", :alt => "asdf", 
+        class: "sport_logo blue_bck", id: "second"), "", 
+        :data => { :'ng-click' => 'sport="hockey"; refreshDropins()' }) %>
+      
+    <%= link_to(image_tag("basketball1.png", :alt => "asdf", 
+        class: "sport_logo orange_bck", id: "third"), "", 
+        :data => { :'ng-click' => 'sport="basketball"; refreshDropins()' }) %>
+      
+    <%= link_to(image_tag("soccer1.png", :alt => "asdf", 
+        class: "sport_logo red_bck ", id: "fourth"), "", 
+        :data => { :'ng-click' => 'sport="soccer"; refreshDropins()' }) %>
+          
+    <%= link_to(image_tag("dragonboating1.png", :alt => "asdf", 
+        class: "sport_logo green_bck", id: "first"), "", 
+        :data => { :'ng-click' => 'sport="dragonboat"; refreshDropins()' }) %>
     
-  <%= link_to(image_tag("hockey1.png", :alt => "asdf", 
-      class: "sport_logo blue_bck col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "", 
-      :data => { :'ng-click' => 'sport="hockey"; refreshDropins()' }) %>
+    <%= link_to(image_tag("http://placehold.it/280x280", :alt => "asdf", 
+        class: "sport_logo test_images", id: "second"), "", 
+        :data => { :'ng-click' => 'sport="blank"; refreshDropins()' }) %>
+
+    <%= link_to(image_tag("http://placehold.it/280x280", :alt => "asdf", 
+        class: "sport_logo test_images", id: "third"), "", 
+        :data => { :'ng-click' => 'sport="blank"; refreshDropins()' }) %>
+      
+    <%= link_to(image_tag("http://placehold.it/280x280", :alt => "asdf", 
+        class: "sport_logo test_images", id: "fourth"), "", 
+        :data => { :'ng-click' => 'sport="blank"; refreshDropins()' }) %>
     
-  <%= link_to(image_tag("basketball1.png", :alt => "asdf", 
-      class: "sport_logo orange_bck col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "", 
-      :data => { :'ng-click' => 'sport="basketball"; refreshDropins()' }) %>
-    
-  <%= link_to(image_tag("soccer1.png", :alt => "asdf", 
-      class: "sport_logo red_bck col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "", 
-      :data => { :'ng-click' => 'sport="soccer"; refreshDropins()' }) %>
-    
-  <%= link_to(image_tag("dragonboating1.png", :alt => "asdf", 
-      class: "sport_logo red_bck col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "", 
-      :data => { :'ng-click' => 'sport="dragonboat"; refreshDropins()' }) %>
-    
-  <%= link_to(image_tag("http://placehold.it/280x280", :alt => "asdf", 
-      class: "sport_logo test_images col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "", 
-      :data => { :'ng-click' => 'sport="blank"; refreshDropins()' }) %>
-    
-  <%= link_to(image_tag("http://placehold.it/280x280", :alt => "asdf", 
-      class: "sport_logo test_images col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "", 
-      :data => { :'ng-click' => 'sport="blank"; refreshDropins()' }) %>
-    
-  <%= link_to(image_tag("http://placehold.it/280x280", :alt => "asdf", 
-      class: "sport_logo test_images col-lg-3 col-md-3 col-sm-6 col-xs-12 img-responsive"), "", 
-      :data => { :'ng-click' => 'sport="blank"; refreshDropins()' }) %>
 </section>
 
 <section ng-show="sport !== 'somegarbage'">
