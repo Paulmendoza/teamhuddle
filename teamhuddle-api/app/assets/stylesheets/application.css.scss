@@ -223,11 +223,22 @@ li {
 
 // ========== BUTTON STYLES ===========
 
-// .btn-choose {
-//   background-color: $light-red;
-//   border: 1px solid $dark-red;
-//   margin-left: 30px;
-// }
+.glyphicon {
+  margin-right: 5px;
+}
+
+.btn-choose {
+  margin-left: 30px;
+  color: #000;
+  background-color: transparent;
+  border-radius: 0px;
+  font-size: 16px;
+
+  &:hover {
+    color: #777;
+    background-color: transparent;
+  }
+}
 
 
 
