@@ -35,6 +35,7 @@ $light-red: #ff4009;
 .navbar {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
+  width: 99.99%;;
 }
 
 .navbar-brand {
@@ -90,10 +91,10 @@ $light-red: #ff4009;
     }
   }
   &:nth-child(3) {
+    padding-right: 10px;
     &:hover {
       border-top: 1px solid $dark-orange;
     }
-    // margin-right: 15px !important;
   }
 }
 
@@ -149,7 +150,8 @@ body {
 
 .footer {
   background-color: #000;
-  min-height: 150px;
+  min-height: 200px;
+  max-height: 350px;
   border-top: 2px solid tomato;
   background-clip: padding-box;
 }
