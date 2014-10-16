@@ -150,8 +150,8 @@ body {
 
 .footer {
   background-color: #000;
-  min-height: 200px;
-  max-height: 350px;
+  min-height: 300px;
+  max-height: 400px;
   border-top: 2px solid tomato;
   background-clip: padding-box;
 }
@@ -341,7 +341,12 @@ li {
 
 // ========== MEDIA QUERIES ===========
 
+
 @media screen and (min-width: 480px) {
+
+  .sport_logos {
+    margin-bottom: 80px;
+  }
 
 }
 
@@ -367,6 +372,10 @@ li {
     width: 30%;
   }
 
+  .sport_logos {
+    margin-bottom: 80px;
+  }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -390,7 +399,10 @@ li {
   #fourth {
     width: 21.14%;
   }
-  
+
+  .footer {
+    height: 200px;
+  }
 
 }
 
