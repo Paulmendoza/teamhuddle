@@ -45,6 +45,7 @@ $light-red: #ff4009;
 .logo {
   width: 25px;
   margin-bottom: 20px;
+  margin-left: 30px;
 }
 
 .navbar-inverse {
@@ -75,7 +76,7 @@ $light-red: #ff4009;
 
 .navlinks {
   font-size: 16px;
-  margin: 0px 5px 0px 0px !important;
+  margin: 0px 5px 0px 0px;
   background-color: #000;
   font-weight: bold;
 
@@ -91,10 +92,12 @@ $light-red: #ff4009;
     }
   }
   &:nth-child(3) {
-    padding-right: 10px;
     &:hover {
       border-top: 1px solid $dark-orange;
     }
+  }
+  &:nth-child(4) {
+    margin-right: 30px;
   }
 }
 
@@ -150,10 +153,8 @@ body {
 
 .footer {
   background-color: #000;
-  min-height: 300px;
-  max-height: 400px;
+  height: 250px;
   border-top: 2px solid tomato;
-  background-clip: padding-box;
 }
 
 li {
@@ -334,8 +335,8 @@ map {
   padding-top: 70px;
 }
 
-.padding-top-60 {
-  padding-top: 60px;
+.padding-top-50 {
+  padding-top: 50px;
 }
 
 
@@ -391,9 +392,6 @@ map {
     width: 30%;
   }
 
-  // .sport_logos {
-  //   margin-bottom: 80px;
-  // }
 
 }
 
@@ -417,10 +415,6 @@ map {
 
   #fourth {
     width: 21.14%;
-  }
-
-  .footer {
-    height: 200px;
   }
 
 }
