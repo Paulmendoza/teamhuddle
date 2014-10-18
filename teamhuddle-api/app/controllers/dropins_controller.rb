@@ -1,7 +1,7 @@
 class DropinsController < ApplicationController
   include IceCube
 
-  before_action :authenticate_admin!, :only => [:new, :edit, :create, :destroy]
+  before_action :authenticate_admin!
 
   def index
     from = DateTime.now.beginning_of_day

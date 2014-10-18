@@ -1,0 +1,2 @@
+class ApiDropinsController < DropinsController
+end
