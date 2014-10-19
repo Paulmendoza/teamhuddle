@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
 
-  before_action :authenticate_admin!, :only => [:new, :edit, :create, :destroy]
+  before_action :admin_only
 
   def index
     @locations = Location.all
@@ -76,5 +76,10 @@ class LocationsController < ApplicationController
     params.require(:location).permit(:name, :lat, :long, :address)
   end
 
+  def admin_only
+    unless admin_signed_in?
+      redirect_to new_admin_session_path
+    end
+  end
 end
 
