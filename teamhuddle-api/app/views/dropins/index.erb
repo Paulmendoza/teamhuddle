@@ -6,9 +6,12 @@
 <%= link_to 'Dragonboat', {:sport => 'dragonboat'} , class:'btn btn-default' %>
 <%= link_to 'Basketball', {:sport => 'basketball'} , class:'btn btn-default' %>
 
+<%= link_to 'Import Dropins', import_dropins_path, class:'btn btn-warning' %><small>(experimeental)</small>
+
 <%#= link_to 'Show Only Active', params.merge(:active => 'true'), class:'btn btn-default pull-right' %>
 <br/>
 <%= link_to 'Create a new dropin', new_dropin_path, class: 'btn btn-default' %>
+
 
 <table class="table table-hover">
   <tr>
