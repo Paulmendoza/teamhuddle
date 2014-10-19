@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
 
-  before_action :authenticate_admin!, :only => [:new, :edit, :create, :destroy]
+  before_action :authenticate_admin!
 
   def index
     @locations = Location.all
@@ -23,6 +23,8 @@ class LocationsController < ApplicationController
     else
       render json: { error: @location.errors }, :status => :unprocessable_entity
     end
+    
+    session[:location] = @location
     
   end
 
