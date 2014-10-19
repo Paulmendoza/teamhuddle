@@ -1,6 +1,6 @@
 class OrganizationsController < ApplicationController
 
-  before_action :authenticate_admin!, :only => [:new, :edit, :create, :destroy]
+  before_action :authenticate_admin!
 
   def index
     @organizations = Organization.all

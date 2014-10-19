@@ -25,11 +25,6 @@ class DropinsController < ApplicationController
     #dropin.schedule.occurring_between?(Time.now, Time.new('2100'))
     
     
-    # This is for the API -> see index.json.rabl
-    @sport_event_instances = SportEventInstance.includes(:event, :location, :sport_event)
-                                               .between(from, to)
-                                               .where( sport_events: { type: "dropin", sport: @sport})
-    
   end
   
   def show
