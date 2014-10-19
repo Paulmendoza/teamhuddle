@@ -1,5 +1,26 @@
 <h1>Importer</h1>
 
+<p>
+    <i>Note:</i> Currently, this will not import anything, but it does pull <b>live</b> data from the city of Vancouver sites.
+</p>
+
+<p>The sites are:</p>
+<table class="table">
+    <tr>
+        <td>Volleyball</td>
+        <td><a href="http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx">http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx</a></td>
+    </tr>
+    <tr>
+        <td>Basketball</td>
+        <td><a href="http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx">http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx</a></td>
+    </tr>
+    <tr>
+        <td>Soccer</td>
+        <td><a href="http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx">http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx</a></td>
+    </tr>
+</table>
+<br/>
+
 <%= form_tag({controller: "dropins", action: "scrape"}, method: "post") do %>
   <%= label_tag(:api_url, "Choose a source: ") %>
   <%= select_tag(:api_url, options_for_select([['City of Vancouver - Volleyball', 'https://api.import.io/store/data/d1df1527-628b-4ba3-a220-e22f3f700ff1/_query?input/webpage/url=http%3A%2F%2Fvancouver.ca%2Fparks-recreation-culture%2Fvolleyball-drop-in-schedule.aspx&_user=3e6c3c6f-f03c-4ddb-8c32-b71c6c7195bc&_apikey=2nVN%2B4TPUHf4xqq2rpsoKG%2FXkLZmKk%2FgORXvgmwmk%2FosZBD5O0EfeK3z5eaNcWOyf76a1FjkPWAbhnQqwPlecg%3D%3D'],
