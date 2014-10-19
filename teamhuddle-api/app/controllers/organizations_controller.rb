@@ -1,5 +1,7 @@
 class OrganizationsController < ApplicationController
 
+  before_action :authenticate_admin!
+
   def index
     @organizations = Organization.all
 
@@ -67,7 +69,7 @@ class OrganizationsController < ApplicationController
 
   private
   def organization_params
-    params.require(:organization).permit(:name, :location_id, :user_id, :phone, :email)
+    params.require(:organization).permit(:name, :location_id, :phone, :email)
   end
 
 end

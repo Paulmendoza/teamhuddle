@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   include ActionController::MimeResponds
-  
   layout 'admin'
 
   rescue_from(ActionController::ParameterMissing) do |parameter_missing_exception|
@@ -22,4 +21,18 @@ class ApplicationController < ActionController::Base
       format.json { render json: response, status: :not_found }
     end
   end
+
+  def after_sign_in_path_for(resource)
+    sign_in_url = url_for(:action => 'new', :controller => 'sessions', :only_path => false, :protocol => 'http')
+    if request.referer == sign_in_url
+      super
+    else
+      stored_location_for(resource) || request.referer || root_path
+    end
+  end
+
+  def after_sign_out_path_for(resource_or_scope)
+    request.referrer
+  end
+
 end

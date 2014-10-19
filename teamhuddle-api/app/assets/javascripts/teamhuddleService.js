@@ -4,7 +4,7 @@ var app = angular.module('app', ['ngResource', 'ngMap', 'ngAnimate']);
 // the dropins service that is expandable with new functions easily
 app.service('Dropins', function($http, $q){
     
-    var baseUrl = '/api/v1/dropins.json?';
+    var baseUrl = '/api/v1/api_dropins.json?';
             
             
     baseUrl += 'from=' + moment().startOf('week').format();        

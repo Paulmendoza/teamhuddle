@@ -1,4 +1,6 @@
 class LocationsController < ApplicationController
+  
+  before_action :authenticate_admin!
 
   def index
     @locations = Location.all
@@ -21,6 +23,8 @@ class LocationsController < ApplicationController
     else
       render json: { error: @location.errors }, :status => :unprocessable_entity
     end
+    
+    session[:location] = @location
     
   end
 
@@ -74,5 +78,10 @@ class LocationsController < ApplicationController
     params.require(:location).permit(:name, :lat, :long, :address)
   end
 
+  def admin_only
+    unless admin_signed_in?
+      redirect_to new_admin_session_path
+    end
+  end
 end
 
