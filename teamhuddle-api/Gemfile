@@ -51,3 +51,5 @@ gem 'angular-rails-templates'
 
 gem 'rest-client'
 
+gem 'byebug'
+

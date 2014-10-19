@@ -3,7 +3,30 @@
 <%= form_tag({controller: "dropins", action: "scrape"}, method: "post") do %>
   <%= label_tag(:api_url, "Choose a source: ") %>
   <%= select_tag(:api_url, options_for_select([['City of Vancouver - Volleyball', 'https://api.import.io/store/data/d1df1527-628b-4ba3-a220-e22f3f700ff1/_query?input/webpage/url=http%3A%2F%2Fvancouver.ca%2Fparks-recreation-culture%2Fvolleyball-drop-in-schedule.aspx&_user=3e6c3c6f-f03c-4ddb-8c32-b71c6c7195bc&_apikey=2nVN%2B4TPUHf4xqq2rpsoKG%2FXkLZmKk%2FgORXvgmwmk%2FosZBD5O0EfeK3z5eaNcWOyf76a1FjkPWAbhnQqwPlecg%3D%3D'],
-                                         ['City of Vancouver - Basketball', 'http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx']])) %>
+        ['City of Vancouver - Basketball', 'https://api.import.io/store/data/d1df1527-628b-4ba3-a220-e22f3f700ff1/_query?input/webpage/url=http%3A%2F%2Fvancouver.ca%2Fparks-recreation-culture%2Fbasketball-drop-in-schedule.aspx&_user=3e6c3c6f-f03c-4ddb-8c32-b71c6c7195bc&_apikey=2nVN%2B4TPUHf4xqq2rpsoKG%2FXkLZmKk%2FgORXvgmwmk%2FosZBD5O0EfeK3z5eaNcWOyf76a1FjkPWAbhnQqwPlecg%3D%3D'],
+        ['City of Vancouver - Soccer', 'https://api.import.io/store/data/d1df1527-628b-4ba3-a220-e22f3f700ff1/_query?input/webpage/url=http%3A%2F%2Fvancouver.ca%2Fparks-recreation-culture%2Fsoccer-drop-in-schedule.aspx&_user=3e6c3c6f-f03c-4ddb-8c32-b71c6c7195bc&_apikey=2nVN%2B4TPUHf4xqq2rpsoKG%2FXkLZmKk%2FgORXvgmwmk%2FosZBD5O0EfeK3z5eaNcWOyf76a1FjkPWAbhnQqwPlecg%3D%3D']])) %>
   <br/>
   <%= submit_tag("Scrape") %>
+<% end %>
+
+
+
+<% if @events.present? %>
+  <table class="table">
+      <tr>
+          <th>Day</th>
+          <th>Name</th>
+          <th>Until</th>
+          <th>Location</th>
+      </tr>
+      <% @events.each do |event| %>
+        <tr>
+            <td><%= event[:day] %></td>
+            <td><%= event[:name] %></td>
+            <td><%= event[:until] %></td>
+            <td><%= event[:location] %></td>
+        </tr>
+      <% end %>
+
+  </table>
 <% end %>

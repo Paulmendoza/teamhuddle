@@ -65,11 +65,11 @@ class DropinsController < ApplicationController
       
       # get the start date and end date NOTE: adds time as well to startime
       start_date = Time.new(params[:start_date][:year], params[:start_date][:month], params[:start_date][:day], 
-                            params[:start_time][:hour], params[:start_time][:minute])
+        params[:start_time][:hour], params[:start_time][:minute])
       end_date = Time.new(params[:end_date][:year], params[:end_date][:month], params[:end_date][:day])
       
       # create a new schedule setting the duration
-      schedule = Schedule.new(start_date, :end_time => start_date.change(hour: params[:end_time][:hour], min: params[:end_time][:minute])) do |s|
+      schedule = Schedule.new(:start_time => start_date, :end_time => start_date.change(hour: params[:end_time][:hour], min: params[:end_time][:minute])) do |s|
         # add weekly recurrence ruling based on the day of the week selected
         s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[params[:day]]).until(end_date))
       end
@@ -79,7 +79,7 @@ class DropinsController < ApplicationController
       if @dropin.save
         # once dropin is saved, generate sport event instances
         duration = @dropin.schedule.end_time - @dropin.schedule.start_time
-        
+
         @dropin.schedule.each_occurrence do |i|
           dropin_instance = SportEventInstance.new
           dropin_instance.sport_event_id = @dropin.id
@@ -129,29 +129,45 @@ class DropinsController < ApplicationController
     # turn the JSON response into a hash
     response = JSON.parse(response)
     
-    events = []
+    @events = []
+    
+    days_of_the_week = ['monday', 'tuesday', 'wednesday', 
+      'thursday', 'friday', 'saturday', 'sunday']
     
     
+    # loop through each community center
+    response['results'].each do |rec_center|  
+      
+      days_of_the_week.each do | day |
+        if rec_center[day].present?
+          parse_days(rec_center[day], day).each do | event |
+            event[:location] = rec_center['rec_center_name']
+            event[:until] = rec_center['schedule_until']
+            @events.push(event)
+          end
+        end
+      end
+    end
     
-#    # loop through each community center
-#    response['results'].each do |rec_center|  
-#      
-#      parse_days(rec_center['monday']).each do | event |
-#        events.push(event)
-#      end
-#    end
     
-    render json: response['results'] , :status => :ok
+    render :template => 'dropins/import'
   end
   
-#  private
-#  def parse_days(events)
-#    parsed_events = []
-#    
-#    events.each do | event |
-#      event
-#    end
-#  end
+  private
+  def parse_days(events = [], day)
+    parsed_events = []
+    
+    if events.is_a?(String)
+      parsed_events.push(:name => events, :day => day)
+    else
+      events.each do | event |
+        parsed_events.push(:name => event, :day => day)
+      end
+    end 
+    
+    
+    return parsed_events
+  end
 
   def destroy
     @event = Event.find(params[:id])
