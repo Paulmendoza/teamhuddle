@@ -13,7 +13,12 @@ Rails.application.routes.draw do
   scope :admin do
     resources :locations
     resources :organizations
-    resources :dropins
+    resources :dropins do
+      collection do
+        get 'import'
+        post 'scrape'
+      end
+    end
   end
   
   

@@ -117,6 +117,42 @@ class DropinsController < ApplicationController
 
   def update
   end
+  
+  def import
+    
+  end
+  
+  def scrape
+    
+    # get a response from the API
+    response = RestClient.get params[:api_url]
+    
+    # turn the JSON response into a hash
+    response = JSON.parse(response)
+    
+    events = []
+    
+    
+    
+#    # loop through each community center
+#    response['results'].each do |rec_center|  
+#      
+#      parse_days(rec_center['monday']).each do | event |
+#        events.push(event)
+#      end
+#    end
+    
+    render json: response['results'] , :status => :ok
+  end
+  
+#  private
+#  def parse_days(events)
+#    parsed_events = []
+#    
+#    events.each do | event |
+#      event
+#    end
+#  end
 
   def destroy
     @event = Event.find(params[:id])
