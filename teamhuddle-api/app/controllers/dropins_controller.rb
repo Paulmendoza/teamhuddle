@@ -38,7 +38,6 @@ class DropinsController < ApplicationController
   end
 
   def create
-    before_action :authenticate_admin!
 
     @event = Event.new(event_params)
     
