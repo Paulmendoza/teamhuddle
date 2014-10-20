@@ -1,10 +1,7 @@
 <div class="container" ng-controller="dropins">
+
   <section class="header">
-    <%= image_tag 'logo.png', class: "center-block logo animated bounceInLeft", alt: 'teamhuddle_logo'%>
-    <h1 class="text-center animated bounceInRight">teamhuddle</h1>
-    <h2 class="text-center slogan" ng-if="sport === 'somegarbage'">What are you playing tonight?</h2>
-    <h2 class="text-center slogan" ng-if="sport !== 'somegarbage'">{{sport | lowercase }}</h2>
-    <br>
+
   </section>
 
   <section class="sport_logos text-center" ng-show="sport === 'somegarbage'">
