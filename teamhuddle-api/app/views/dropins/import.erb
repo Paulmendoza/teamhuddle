@@ -39,6 +39,8 @@
           <th>Name</th>
           <th>Until</th>
           <th>Location</th>
+          <th>Start</th>
+          <th>End</th>
       </tr>
       <% @events.each do |event| %>
         <tr>
@@ -46,6 +48,8 @@
             <td><%= event[:name] %></td>
             <td><%= event[:until] %></td>
             <td><%= event[:location] %></td>
+            <td><%= event[:start_time] %></td>
+            <td><%= event[:end_time] %></td>
         </tr>
       <% end %>
 

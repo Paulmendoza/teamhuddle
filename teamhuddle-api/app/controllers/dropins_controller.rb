@@ -38,74 +38,50 @@ class DropinsController < ApplicationController
   end
 
   def create
-
-    @event = Event.new(event_params)
+    # hash to convert form data to symbols for IceCube
+    days_of_the_week = {
+      'mo' => :monday,
+      'tu' => :tuesday,
+      'we' => :wednesday,
+      'th' => :thursday,
+      'fr' => :friday,
+      'sa' => :saturday,
+      'su' => :sunday
+    }
     
-    if @event.save
-      @dropin = SportEvent.new
-      @dropin.sport = params[:dropin][:sport]
-      @dropin.price_per_one = params[:dropin][:price_per_one]
-      @dropin.skill_level = params[:skill_level]
-      @dropin.event_id = @event.id
-      @dropin.type = 'dropin'
-      @dropin.spots_filled = -1
-      @dropin.gender = 'n/a'
+    # get the start date and end date NOTE: adds time as well to startime
+    start_date = Time.new(params[:start_date][:year], params[:start_date][:month], params[:start_date][:day], 
+      params[:start_time][:hour], params[:start_time][:minute])
+    end_date = Time.new(params[:end_date][:year], params[:end_date][:month], params[:end_date][:day])
       
-      # hash to convert form data to symbols for IceCube
-      days_of_the_week = {
-        'mo' => :monday,
-        'tu' => :tuesday,
-        'we' => :wednesday,
-        'th' => :thursday,
-        'fr' => :friday,
-        'sa' => :saturday,
-        'su' => :sunday
-      }
-      
-      # get the start date and end date NOTE: adds time as well to startime
-      start_date = Time.new(params[:start_date][:year], params[:start_date][:month], params[:start_date][:day], 
-        params[:start_time][:hour], params[:start_time][:minute])
-      end_date = Time.new(params[:end_date][:year], params[:end_date][:month], params[:end_date][:day])
-      
-      # create a new schedule setting the duration
-      schedule = Schedule.new(start_date, :end_time => start_date.change(hour: params[:end_time][:hour], min: params[:end_time][:minute])) do |s|
-        # add weekly recurrence ruling based on the day of the week selected
-        s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[params[:day]]).until(end_date))
-      end
-      
-      @dropin.schedule = schedule
-      
-      if @dropin.save
-        # once dropin is saved, generate sport event instances
-        duration = @dropin.schedule.end_time - @dropin.schedule.start_time
-
-        @dropin.schedule.each_occurrence do |i|
-          dropin_instance = SportEventInstance.new
-          dropin_instance.sport_event_id = @dropin.id
-          dropin_instance.datetime_start = i
-          dropin_instance.datetime_end = i + duration
-          dropin_instance.event_id = @event.id
-          
-          unless dropin_instance.save
-            @dropin.destroy
-            render json: { error: @dropin.errors }, :status => :unprocessable_entity
-          end
-        end
-        
-        
-        respond_to do |format|
-          format.json { render json: @dropin }
-          format.html { redirect_to action: 'index' }
-        end
-      else
-        @event.destroy
-        render json: { error: @dropin.errors }, :status => :unprocessable_entity
-      end
-    else
-      render json: { error: @event.errors }, :status => :unprocessable_entity
+    # create a new schedule setting the duration
+    schedule = Schedule.new(start_date, :end_time => start_date.change(hour: params[:end_time][:hour], min: params[:end_time][:minute])) do |s|
+      # add weekly recurrence ruling based on the day of the week selected
+      s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[params[:day]]).until(end_date))
     end
+    
+    dropin = Dropin.new(params[:dropin][:name],
+      params[:dropin][:location_id],
+      params[:dropin][:organization_id],
+      params[:dropin][:comments],
+      params[:dropin][:sport],
+      params[:price_per_one],
+      params[:skill_level],
+      schedule)
+    
+    
+    if dropin.errors.count > 0 
+      render json: { error: dropin.errors }, :status => :unprocessable_entity
+    else
+      respond_to do |format|
+        format.json { render json: @dropin }
+        format.html { redirect_to action: 'index' }
+      end
+    
+    end
+    
   end
-
+  
   def new
     @locations = Location.all
   end
@@ -121,7 +97,6 @@ class DropinsController < ApplicationController
   end
   
   def scrape
-    
     # get a response from the API
     response = RestClient.get params[:api_url]
     
@@ -157,16 +132,25 @@ class DropinsController < ApplicationController
     parsed_events = []
     
     if events.is_a?(String)
-      parsed_events.push(:name => events, :day => day)
+      time_capture = /(\d{1,2}:\d{2}[ap]m)–(\d{1,2}:\d{2}[ap]m)/.match(events)
+      parsed_events.push(:name => events, :day => day, :start_time => time_capture[1], :end_time => time_capture[2])
     else
       events.each do | event |
-        parsed_events.push(:name => event, :day => day)
+        time_capture = /(\d{1,2}:\d{2}[ap]m)–(\d{1,2}:\d{2}[ap]m)/.match(event)
+        parsed_events.push(:name => event, :day => day, :start_time => time_capture[1], :end_time => time_capture[2])
       end
     end 
     
-    
     return parsed_events
   end
+  
+  #  private
+  #  def parse_time_from_event(event)
+  #    regex_match = /(\d{1,2}:\d{2}[ap]m)–(\d{1,2}:\d{2}[ap]m)/.match(event)
+  #    start_time
+  #    end_time
+  #    
+  #  end
 
   def destroy
     @event = Event.find(params[:id])
