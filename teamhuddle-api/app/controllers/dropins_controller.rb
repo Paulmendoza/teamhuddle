@@ -82,6 +82,16 @@ class DropinsController < ApplicationController
     
   end
   
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    respond_to do |format|
+      format.html { redirect_to :action => 'index'}
+      format.json { render :nothing => true, status => :no_conent }
+      format.xml { render :nothing => true, status => :no_conent }
+    end
+  end
+  
   def new
     @locations = Location.all
   end
@@ -152,15 +162,7 @@ class DropinsController < ApplicationController
   #    
   #  end
 
-  def destroy
-    @event = Event.find(params[:id])
-    @event.destroy
-    respond_to do |format|
-      format.html { redirect_to :action => 'index'}
-      format.json { render :nothing => true, status => :no_conent }
-      format.xml { render :nothing => true, status => :no_conent }
-    end
-  end
+  
 
   private
   def dropin_params
