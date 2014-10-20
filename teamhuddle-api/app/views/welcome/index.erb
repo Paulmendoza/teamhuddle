@@ -1,12 +1,10 @@
 <h1>Welcome to Teamhuddle Admin <small>...heavily under construction</small></h1>
 <hr>
-<h2>Todo/Bugs</h2>
+<h2>What's new?</h2>
 <ul>
-  <li><strike>generate <i>SportEventInstances</i></strike></li>
-  <li>create <code>UD</code> of <code>CRUD</code> for <strike><i>Locations, Organizations</i></strike> and <i>Dropins</i></li>
-  <li><strike>fix <i>SportEvents</i> id redirection issue</strike></li>
-  <li><strike>fix durations when storing recurring events and generating <i>SportEventInstances</i></strike></li>
-  <li>have the <code>API</code> return custom object arrays</li>
+  <%= link_to 'NEW Import Dropins', import_dropins_path, class: 'btn btn-warning' %>
+    
+  <h4 class='warning'>Ability to sign in and out</h4>
 </ul>
 
 <h2>Currently Functional:</h2>
@@ -20,7 +18,7 @@
 <h2>Notes</h2>
 <ul>
   <li>This portion of the webapp will only act as an admin interface</li>
-  <li>It will be used to interact with database and to supplement the Ember.js client</li>
+  <li>It will be used to interact with database and to supplement the AngularJS client</li>
 </ul>
 
   

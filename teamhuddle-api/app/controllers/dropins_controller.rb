@@ -38,7 +38,6 @@ class DropinsController < ApplicationController
   end
 
   def create
-    before_action :authenticate_admin!
 
     @event = Event.new(event_params)
     
@@ -69,7 +68,7 @@ class DropinsController < ApplicationController
       end_date = Time.new(params[:end_date][:year], params[:end_date][:month], params[:end_date][:day])
       
       # create a new schedule setting the duration
-      schedule = Schedule.new(:start_time => start_date, :end_time => start_date.change(hour: params[:end_time][:hour], min: params[:end_time][:minute])) do |s|
+      schedule = Schedule.new(start_date, :end_time => start_date.change(hour: params[:end_time][:hour], min: params[:end_time][:minute])) do |s|
         # add weekly recurrence ruling based on the day of the week selected
         s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[params[:day]]).until(end_date))
       end
@@ -148,7 +147,7 @@ class DropinsController < ApplicationController
         end
       end
     end
-    
+ 
     
     render :template => 'dropins/import'
   end
