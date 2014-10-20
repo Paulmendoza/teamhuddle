@@ -122,13 +122,20 @@ class DropinsController < ApplicationController
     # loop through each community center
     response['results'].each do |rec_center|  
       
+      # see if there is anything per day
       days_of_the_week.each do | day |
+        
         if rec_center[day].present?
-          parse_days(rec_center[day], day).each do | event |
-            event[:location] = rec_center['rec_center_name']
-            event[:until] = rec_center['schedule_until']
-            @events.push(event)
+          
+          # sometimes it's just a single event otherwise an array
+          if rec_center[day].is_a?(String)
+            @events.push(parse_event(rec_center[day], day, rec_center['rec_center_name'], rec_center['schedule_until']))
+          else
+            rec_center[day].each do | event |
+              @events.push(parse_event(event, day, rec_center['rec_center_name'], rec_center['schedule_until']))
+            end
           end
+          
         end
       end
     end
@@ -138,20 +145,20 @@ class DropinsController < ApplicationController
   end
   
   private
-  def parse_days(events = [], day)
-    parsed_events = []
+  def parse_event(event, day, location, schedule_until)
     
-    if events.is_a?(String)
-      time_capture = /(\d{1,2}:\d{2}[ap]m)–(\d{1,2}:\d{2}[ap]m)/.match(events)
-      parsed_events.push(:name => events, :day => day, :start_time => time_capture[1], :end_time => time_capture[2])
-    else
-      events.each do | event |
-        time_capture = /(\d{1,2}:\d{2}[ap]m)–(\d{1,2}:\d{2}[ap]m)/.match(event)
-        parsed_events.push(:name => event, :day => day, :start_time => time_capture[1], :end_time => time_capture[2])
-      end
-    end 
+    @parsed_event = {}
     
-    return parsed_events
+    time_capture = /(\d{1,2}:\d{2}[ap]m)–(\d{1,2}:\d{2}[ap]m)/.match(event)
+    
+    @parsed_event[:name] = event
+    @parsed_event[:day] = day
+    @parsed_event[:start_time] = time_capture[1]
+    @parsed_event[:end_time] = time_capture[2]
+    @parsed_event[:location] = location
+    @parsed_event[:until] = schedule_until
+    
+    return @parsed_event
   end
   
   #  private
