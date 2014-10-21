@@ -39,8 +39,12 @@ $light-red: #ff4009;
 }
 
 .navbar-brand {
-  margin-bottom: 20px;
-  margin-left: 30px;
+  margin: -5px 0px 20px 30px;
+
+}
+.logo {
+  height: 25px;
+  width: 25px;
 }
 
 // .navlogo {
@@ -51,7 +55,7 @@ $light-red: #ff4009;
 
 .navbar-inverse {
   background-color: #000;
-  height: 90px;
+  min-height: 90px;
   border-bottom: 2px solid tomato;
   border-radius: 0px;
 
@@ -77,22 +81,18 @@ $light-red: #ff4009;
   }
 }
 
-.logo {
-  height: 30px;
-  width: 30px;
-}
+// .iconfeature {
+//   margin: 0 auto;
+// }
 
-.iconfeature {
-  margin: 0 auto;
-}
-
-.wireicon {
-  width: 40px;
-}
+// .wireicon {
+//   width: 40px;
+// }
 
 .navlinks {
   font-size: 16px;
-  margin: 10px 5px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  padding-top: 10px;
   background-color: #000;
   font-weight: bold;
 
@@ -125,7 +125,7 @@ $light-red: #ff4009;
 // ========== SECTION STYLES ===========
 
 body {
-  padding-top: 90px; 
+  padding-top: 120px; 
   background: #eaeaea; /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhZWFlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYWVhZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -158,14 +158,9 @@ body {
 
 }
 
-.header {
-  margin: 30px 0px 35px;
-}
-
-
 .sport_logos {
-  min-height: 700px;
-  margin-bottom: 80px;
+  min-height: 200px;
+  margin-bottom: 20px;
 }
 
 .footer {
