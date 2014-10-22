@@ -91,8 +91,8 @@
         <table class="table">
           <tr>
             <th>Day of the Week 
-                <span ng-class="reverse && (predicate === 'datetime_start.time') ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'" 
-                      ng-click="reverse =! reverse; predicate = 'datetime_start.time'; order(predicate, reverse)"/>
+                <span ng-class="reverse && (predicate === 'datetime_start') ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'" 
+                      ng-click="reverse =! reverse; predicate = 'datetime_start'; order(predicate, reverse)"/>
             </th>
 
             <th>Dropin Name 
@@ -111,11 +111,11 @@
             <th></th>
           </tr>
           <tr class="table-row" ng-repeat="dropin in dropins" ng-mouseover="centerDropin(dropin)">
-            <td>{{dropin.datetime_start.time | date:'EEEE'}}</td>
+            <td>{{dropin.datetime_start | date:'EEEE'}}</td>
             <td>{{dropin.event.name}}</td>
             <td>{{dropin.location.name}}</td>
             <td>{{dropin.sport_event.skill_level}}</td>
-            <td>{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</td>
+            <td>{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</td>
 
             <td><span class="button glyphicon glyphicon-remove" ng-click="remove(dropin)" /></td>
           </tr>

@@ -139,6 +139,16 @@ class DropinsController < ApplicationController
         end
       end
     end
+    
+    @events.each do |event|
+      
+      error = create_dropin_from_scrape_object(event)
+      unless error.nil?
+        event[:error] = error  
+      end
+      
+    end
+    
  
     
     render :template => 'dropins/import'
@@ -161,15 +171,49 @@ class DropinsController < ApplicationController
     return @parsed_event
   end
   
-  #  private
-  #  def parse_time_from_event(event)
-  #    regex_match = /(\d{1,2}:\d{2}[ap]m)–(\d{1,2}:\d{2}[ap]m)/.match(event)
-  #    start_time
-  #    end_time
-  #    
-  #  end
-
-  
+  private
+  def create_dropin_from_scrape_object(event)
+    days_of_the_week = {
+      'monday' => :monday,
+      'tuesday' => :tuesday,
+      'wednesday' => :wednesday,
+      'thursday' => :thursday,
+      'friday' => :friday,
+      'saturday' => :saturday,
+      'sunday' => :sunday
+    }
+    
+    start_time = Time.parse(event[:start_time])
+    end_time = Time.parse(event[:end_time])
+    
+    # get the start date and end date NOTE: adds time as well to startime
+    start_datetime = Time.new(2014, 6, 31, start_time.hour, start_time.min) 
+    end_date = Time.new(2014, 12, 31)
+      
+    # create a new schedule setting the duration
+    schedule = Schedule.new(start_datetime, :end_time => start_datetime.change(hour: end_time.hour, min: end_time.min)) do |s|
+      # add weekly recurrence ruling based on the day of the week selected
+      s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[event[:day]]).until(end_date))
+    end
+    
+    dropin = Dropin.new((0..16).to_a.map{|a| rand(16).to_s(16)}.join, #random name for now
+      9, # harcode everything to Creekside. TODO: change this to dynamic lookup
+      5, # hardcoded to Vancouver board right now. TODO: change to dynamic lookup
+      nil,
+      'volleyball', # hardcoded to volleyball. TODO: change to dynamic lookup
+      0,
+      'Beginner', # hardcoded to random value TODO: try and parse this with regexes
+      schedule)
+    
+#    # if there are errors, return them
+#    if dropin.errors.count > 0
+#      return dropin.errors
+#    end
+    
+    # otherwise return nil
+    return nil
+    
+  end
 
   private
   def dropin_params
