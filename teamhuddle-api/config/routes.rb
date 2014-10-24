@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  # devise_for :admins, :controllers => { :registrations => :registrations }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -68,15 +69,11 @@ Rails.application.routes.draw do
   scope :api, defaults: { format: 'json' } do
     scope :v1 do
 
-      resources :dropins, :leagues, :tournaments 
-
-      #
-      resources :locations
-
-      #
-      resources :organizations
+      resources :api_dropins
     end
   end
+  
+  
 
 
 end

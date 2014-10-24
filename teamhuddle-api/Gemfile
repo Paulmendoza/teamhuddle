@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.1'
 
-gem 'rails-api'
-
 gem 'spring', :group => :development
 
 gem 'jquery-rails'
@@ -21,6 +19,8 @@ gem 'ice_cube'
 gem 'rabl'
 # Also add either `oj` or `yajl-ruby` as the JSON parser
 gem 'oj'
+
+gem 'devise'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

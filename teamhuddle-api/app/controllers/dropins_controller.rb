@@ -1,6 +1,8 @@
 class DropinsController < ApplicationController
   include IceCube
 
+  before_action :authenticate_admin!
+
   def index
     from = DateTime.now.beginning_of_day
     to = DateTime.now.end_of_day
@@ -23,11 +25,6 @@ class DropinsController < ApplicationController
     #dropin.schedule.occurring_between?(Time.now, Time.new('2100'))
     
     
-    # This is for the API -> see index.json.rabl
-    @sport_event_instances = SportEventInstance.includes(:event, :location, :sport_event)
-                                               .between(from, to)
-                                               .where( sport_events: { type: "dropin", sport: @sport})
-    
   end
   
   def show
@@ -41,6 +38,7 @@ class DropinsController < ApplicationController
   end
 
   def create
+
     @event = Event.new(event_params)
     
     if @event.save
