@@ -38,7 +38,6 @@ $light-red: #ff4009;
 .navbar {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
-  width: 99.99%;
 }
 
 .navbar-brand {
@@ -85,12 +84,46 @@ $light-red: #ff4009;
 }
 
 // .iconfeature {
-//   margin: 0 auto;
+//   width: 100px;
+//   background-color: #fff;;
+//   height: 90px;
+//   float: left;
+//   margin: none;
+//   text-align: center;
+//   -webkit-transition: all 1s ease;
+//    -moz-transition: all 1s ease;
+//      -o-transition: all 1s ease;
+//     -ms-transition: all 1s ease;
+//         transition: all 1s ease;
+//   &:hover {
+//     height: 100px;
+//   }
 // }
 
-// .wireicon {
-//   width: 40px;
-// }
+
+.wireicon {
+  width: 60px;
+  height: 60px;
+  float: none;
+  margin: 5px;
+  text-align: center;
+  -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+     -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+        transition: all 1s ease;
+  &:hover {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.centericons {
+  padding: 0;
+  list-style: none;
+  width:400px;
+  margin:0 auto;
+}
 
 .navlinks {
   font-size: 16px;
