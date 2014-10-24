@@ -8,7 +8,10 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
-*/
+ *= require_self
+ *= require_tree .
+ */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -54,7 +57,7 @@ $light-red: #ff4009;
 // }
 
 .navbar-inverse {
-  background-color: #000;
+  background-color: #000 !important;
   min-height: 90px;
   border-bottom: 2px solid tomato;
   border-radius: 0px;
