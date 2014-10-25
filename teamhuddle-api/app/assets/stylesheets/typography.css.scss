@@ -48,6 +48,19 @@ li {
   color: #EAEAEA;
 }
 
+.dropdown-menu {
+  background-color: #000;
+}
+.dropdown-menu>li>a {
+  color: #fff !important;
+  background-color: #000;
+
+  &:hover {
+    color: #fff !important;
+    background-color: #000 !important;
+  }
+}
+
 .white {
   color: #fff;
 }
