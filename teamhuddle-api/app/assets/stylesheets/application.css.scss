@@ -216,7 +216,7 @@ li {
 
 map {
   position: fixed;
-  left: 120px;
+  left: 50px;
   top: 120px;
   height: 450px;
   width: 450px;
@@ -231,14 +231,10 @@ map {
 }
 
 .right-wrapper {
+  min-height: 600px;
   margin-bottom: 35px;
 
 }
-
-
-
-
-
 
 
 // ========== IMAGE STYLES ===========
@@ -313,6 +309,7 @@ map {
   border: 1px solid $dark-green;
   border-radius: 0px !important;
   margin-top: 10px;
+  letter-spacing: 1px;
 
   &:hover {
     background-color: $dark-green;
@@ -325,6 +322,7 @@ map {
   border: 1px solid $dark-blue;
   border-radius: 0px !important;
   margin-top: 10px;
+  letter-spacing: 1px;
 
   &:hover {
     background-color: $dark-blue;
@@ -422,6 +420,12 @@ map {
 
 @media screen and (min-width: 480px) {
 
+  .fullcontainer {
+    min-height: 500px;
+    width: 100%;
+  }
+
+
 }
 
 @media screen and (min-width: 768px) {
@@ -446,6 +450,10 @@ map {
     width: 30%;
   }
 
+  .fullcontainer {
+    min-height: 500px;
+    width: 100%;
+  }
 
 }
 
@@ -459,6 +467,7 @@ map {
     width: 21.14%;
   }
 
+
   #second {
     width: 21.14%;  
   }
@@ -469,6 +478,14 @@ map {
 
   #fourth {
     width: 21.14%;
+  }
+
+  .fullcontainer {
+    min-height: 50%;
+  }
+
+  .right-wrapper {
+    min-height: 50%;
   }
 
 }

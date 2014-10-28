@@ -69,16 +69,18 @@
   </section>
 
   <section ng-show="sport !== 'somegarbage'">
-
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left-wrapper">
-      <map center="Vancouver, Canada" zoom="10">
-        <marker ng-repeat="dropin in dropins"
-                    position="[{{dropin.location.lat}},{{dropin.location.long}}]"/>
-      </map>
+    <div class="fullcontainer">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper">
+        <map center="Vancouver, Canada" zoom="10">
+          <marker ng-repeat="dropin in dropins"
+                      position="[{{dropin.location.lat}},{{dropin.location.long}}]"/>
+        </map>
+      </div>
     </div>
-    <div class="col-lg-6 right-wrapper">        
-    <br>
-      <div class="col-lg-6">
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper">        
+      <br>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <label>Day of the Week</label>
         <select class="form-control" ng-model="weekdaySelect" ng-change="applyFilters()">
           <option value="All">All</option>
@@ -91,7 +93,7 @@
           <option value="Sunday">Sunday</option>
         </select>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <label>Skill Level</label>
         <select class="form-control" ng-model="skillLevelSelect" ng-change="applyFilters()">
           <option value="All">All</option>
@@ -101,10 +103,10 @@
           <option value="Advanced">Advanced</option>
         </select>
       </div>
-      <button class="btn btn-success form-control" ng-click="refreshDropins()">Reset</button>
-      <button class="btn btn-info form-control" ng-click="sport = 'somegarbage'">Choose another sport</button>
-
-        <table class="table">
+      <button class="btn btn-success form-control" ng-click="refreshDropins()">reset</button>
+      <button class="btn btn-info form-control" ng-click="sport = 'somegarbage'">choose another sport</button>
+        <br>
+        <table class="table col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <tr>
             <th>Day of the Week 
                 <span ng-class="reverse && (predicate === 'datetime_start.time') ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'" 
@@ -115,16 +117,21 @@
                 <span ng-class="reverse && (predicate === 'event.name') ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'" 
                       ng-click="reverse =! reverse; predicate = 'event.name'; order(predicate, reverse)"/>
             </th>
+
             <th>
               Location Name
             </th>
+
             <th>
               Skill Level
               <span ng-class="reverse && (predicate === 'sport_event.skill_level') ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'" 
                       ng-click="reverse =! reverse; predicate = 'sport_event.skill_level'; order(getSkillSortOrder, reverse)"/>
             </th>
+
             <th>Time</th>
+
             <th></th>
+
           </tr>
           <tr class="table-row" ng-repeat="dropin in dropins" ng-mouseover="centerDropin(dropin)">
             <td>{{dropin.datetime_start.time | date:'EEEE'}}</td>
@@ -136,7 +143,6 @@
             <td><span class="button glyphicon glyphicon-remove" ng-click="remove(dropin)" /></td>
           </tr>
         </table>
-      </div>
     </div>
   </section>
 </div>
