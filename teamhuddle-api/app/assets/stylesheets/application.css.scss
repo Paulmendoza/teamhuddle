@@ -49,12 +49,6 @@ $light-red: #ff4009;
   width: 25px;
 }
 
-// .navlogo {
-//   width: 25px;
-//   margin-bottom: 20px;
-//   margin-left: 30px;
-// }
-
 .navbar-inverse {
   background-color: #000 !important;
   height: 80px;
@@ -82,22 +76,6 @@ $light-red: #ff4009;
 }
 
 
-// .iconfeature {
-//   width: 100px;
-//   background-color: #fff;;
-//   height: 90px;
-//   float: left;
-//   margin: none;
-//   text-align: center;
-//   -webkit-transition: all 1s ease;
-//    -moz-transition: all 1s ease;
-//      -o-transition: all 1s ease;
-//     -ms-transition: all 1s ease;
-//         transition: all 1s ease;
-//   &:hover {
-//     height: 100px;
-//   }
-// }
 
 
 .wireicon {
@@ -206,6 +184,10 @@ body {
 .footer {
   background-color: #000;
   height: 250px;
+  padding: 0px;
+  margin-left: 0px;
+  margin-top: 20px;
+  margin-bottom: -20px;
   border-top: 2px solid tomato;
 }
 
@@ -218,8 +200,8 @@ map {
   position: fixed;
   left: 50px;
   top: 120px;
-  height: 450px;
-  width: 450px;
+  height: 490px;
+  width: 550px;
   border: 1px solid #000;
 }
 
@@ -233,6 +215,7 @@ map {
 .right-wrapper {
   min-height: 600px;
   margin-bottom: 35px;
+  float: right;
 
 }
 
@@ -425,7 +408,6 @@ map {
     width: 100%;
   }
 
-
 }
 
 @media screen and (min-width: 768px) {
@@ -454,6 +436,8 @@ map {
     min-height: 500px;
     width: 100%;
   }
+
+
 
 }
 
@@ -487,6 +471,13 @@ map {
   .right-wrapper {
     min-height: 50%;
   }
+
+
+
+}
+
+@media screen and (min-width: 1200px) {
+
 
 }
 
