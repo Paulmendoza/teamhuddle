@@ -6,26 +6,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <ul class="nav navbar-nav">
-      <!-- <div class="centericons">
-        <span class="iconfeature">
-          <li><%#= image_tag 'wirevolleyball.png', class: "center-block wireicon", alt: 'teamhuddle_logo'%></li>
-        </span>
-        <span class="iconfeature">
-          <li><%#= image_tag 'wirehockey.png', class: "center-block wireicon", alt: 'teamhuddle_logo'%></li>
-        </span>
-        <span class="">
-          <li><%#= image_tag 'wirebasketball.png', class: "center-block wireicon", alt: 'teamhuddle_logo'%></li>
-        </span>
-        <span class="iconfeature">
-          <li><%#= image_tag 'wiresoccer.png', class: "center-block wireicon", alt: 'teamhuddle_logo'%></li>
-        </span>
-        <span class="iconfeature">
-          <li><%#= image_tag 'wiredragonboat.png', class: "center-block wireicon", alt: 'teamhuddle_logo'%></li>
-        </span>
-      </div> -->
 
-    </ul> 
     <div class="collapse navbar-collapse">
 
     <ul class="nav navbar-nav navbar-right">
@@ -48,6 +29,7 @@
     </div>
 
   </nav>
+
 
 <div class="container-fluid" ng-controller="dropins">
 
@@ -88,48 +70,40 @@
 
   <section ng-show="sport !== 'somegarbage'">
 
-    <div class="row clearfix">
-      <button class="btn btn-choose" ng-click="sport = 'somegarbage'">
-        <span class="glyphicon glyphicon-backward"></span> choose another sport
-      </button>
-    </div>
-    <br>
-    <div class="col-lg-6 col-md-6">
-      <map style="display:block;height:450px;width:100%" center="Vancouver, Canada" zoom="10">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left-wrapper">
+      <map center="Vancouver, Canada" zoom="10">
         <marker ng-repeat="dropin in dropins"
-                      position="[{{dropin.location.lat}},{{dropin.location.long}}]"/>
+                    position="[{{dropin.location.lat}},{{dropin.location.long}}]"/>
       </map>
-      <br/>
-      <div class="col-lg-12 left-wrapper">
-        <button class="btn btn-success pull-right" ng-click="refreshDropins()">Reset</button>
-        <h4>filters </h4>
-          <div class="col-lg-6">
-            <label>Day of the Week</label>
-            <select class="form-control" ng-model="weekdaySelect" ng-change="applyFilters()">
-              <option value="All">All</option>
-              <option value="Monday">Monday</option>
-              <option value="Tuesday">Tuesday</option>
-              <option value="Wednesday">Wednesday</option>
-              <option value="Thursday">Thursday</option>
-              <option value="Friday">Friday</option>
-              <option value="Saturday">Saturday</option>
-              <option value="Sunday">Sunday</option>
-            </select>
-            <br>
-            <label>Skill Level</label>
-            <select class="form-control" ng-model="skillLevelSelect" ng-change="applyFilters()">
-              <option value="All">All</option>
-              <option value="Recreational">Recreational</option>
-              <option value="Beginner">Beginner</option>
-              <option value="Intermediate">Intermediate</option>
-              <option value="Advanced">Advanced</option>
-            </select>
-          </div>
-          <br>
-          <br>
-        </div>
+    </div>
+    <div class="col-lg-6 right-wrapper">        
+    <br>
+      <div class="col-lg-6">
+        <label>Day of the Week</label>
+        <select class="form-control" ng-model="weekdaySelect" ng-change="applyFilters()">
+          <option value="All">All</option>
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+          <option value="Sunday">Sunday</option>
+        </select>
       </div>
-      <div class="col-lg-6 right-wrapper">
+      <div class="col-lg-6">
+        <label>Skill Level</label>
+        <select class="form-control" ng-model="skillLevelSelect" ng-change="applyFilters()">
+          <option value="All">All</option>
+          <option value="Recreational">Recreational</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+      </div>
+      <button class="btn btn-success form-control" ng-click="refreshDropins()">Reset</button>
+      <button class="btn btn-info form-control" ng-click="sport = 'somegarbage'">Choose another sport</button>
+
         <table class="table">
           <tr>
             <th>Day of the Week 

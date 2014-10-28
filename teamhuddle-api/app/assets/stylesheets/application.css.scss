@@ -215,18 +215,25 @@ li {
 }
 
 map {
+  position: fixed;
+  left: 120px;
+  top: 120px;
+  height: 450px;
+  width: 450px;
   border: 1px solid #000;
 }
 
 .left-wrapper {
+  min-height: 600px;
+  width: 100%;
   margin-bottom: 35px;
+  float: none;
 }
 
 .right-wrapper {
   margin-bottom: 35px;
 
 }
-
 
 
 
@@ -301,18 +308,6 @@ map {
   margin-right: 5px;
 }
 
-.btn-choose {
-  margin-left: 30px;
-  color: #000;
-  background-color: transparent;
-  font-size: 16px;
-
-  &:hover {
-    color: #777;
-    background-color: transparent;
-  }
-}
-
 .btn-success {
   background-color: $light-green;
   border: 1px solid $dark-green;
@@ -323,6 +318,18 @@ map {
     background-color: $dark-green;
     border: 1px solid $dark-green;
   }
+}
+
+.btn-info {
+  background-color: $light-blue;
+  border: 1px solid $dark-blue;
+  border-radius: 0px !important;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: $dark-blue;
+    border: 1px solid $dark-blue;
+  }  
 }
 
 
