@@ -1,30 +1,30 @@
-<div class="container" ng-controller="dropins">
-  <section class="header">
-    <%= image_tag 'logo.png', class: "center-block logo animated bounceInLeft", alt: 'teamhuddle_logo'%>
+<div class="container" >
+  <section class="header" >
+    <%= image_tag 'logo-compressed.png', class: "center-block logo animated bounceInLeft", alt: 'teamhuddle_logo'%>
     <h1 class="text-center animated bounceInRight">teamhuddle</h1>
-    <h2 class="text-center slogan" ng-if="sport === 'somegarbage'">What are you playing tonight?</h2>
-    <h2 class="text-center slogan" ng-if="sport !== 'somegarbage'">{{sport | lowercase }}</h2>
+    <h2 class="text-center slogan" ng-if="sport === 'no-sport'" ng-cloak>What are you playing tonight?</h2>
+    <h2 class="text-center slogan" ng-if="sport !== 'no-sport'" ng-cloak>{{sport | lowercase }}</h2>
     <br>
   </section>
 
-  <section class="sport_logos text-center" ng-show="sport === 'somegarbage'">
-      <%= link_to(image_tag("volleyball1.png", :alt => "asdf",
+  <section class="sport_logos text-center" ng-show="sport === 'no-sport'">
+      <%= link_to(image_tag("volleyball-compressed.png", :alt => "asdf",
           class: "sport_logo green_bck", id: "first"), "", 
           :data => { :'ng-click' => 'sport="volleyball"; refreshDropins()' }) %>
         
-      <%= link_to(image_tag("hockey1.png", :alt => "asdf", 
+      <%= link_to(image_tag("hockey-compressed.png", :alt => "asdf", 
           class: "sport_logo blue_bck", id: "second"), "", 
           :data => { :'ng-click' => 'sport="hockey"; refreshDropins()' }) %>
         
-      <%= link_to(image_tag("basketball1.png", :alt => "asdf", 
+      <%= link_to(image_tag("basketball-compressed.png", :alt => "asdf", 
           class: "sport_logo orange_bck", id: "third"), "", 
           :data => { :'ng-click' => 'sport="basketball"; refreshDropins()' }) %>
         
-      <%= link_to(image_tag("soccer1.png", :alt => "asdf", 
+      <%= link_to(image_tag("soccer-compressed.png", :alt => "asdf", 
           class: "sport_logo red_bck ", id: "fourth"), "", 
           :data => { :'ng-click' => 'sport="soccer"; refreshDropins()' }) %>
             
-      <%= link_to(image_tag("dragonboating1.png", :alt => "asdf", 
+      <%= link_to(image_tag("dragonboat-compressed.png", :alt => "asdf", 
           class: "sport_logo green_bck", id: "first"), "", 
           :data => { :'ng-click' => 'sport="dragonboat"; refreshDropins()' }) %>
       
@@ -42,9 +42,9 @@
       
   </section>
 
-  <section ng-show="sport !== 'somegarbage'">
+  <section ng-show="sport !== 'no-sport'">
     <div class="row clearfix">
-      <button class="btn btn-choose" ng-click="sport = 'somegarbage'">
+      <button class="btn btn-choose" ng-click="sport = 'no-sport'">
         <span class="glyphicon glyphicon-backward"></span> choose another sport
       </button>
     </div>
@@ -85,7 +85,7 @@
         </div>
       </div>
       <div class="col-lg-6 right-wrapper">
-      <h2 class="text-center" ng-if="sport !== 'somegarbage'">{{sport | lowercase }} events near you</h2>
+      <h2 class="text-center" ng-if="sport !== 'no-sport'">{{sport | lowercase }} events near you</h2>
       <br>
       <br>
         <table class="table">
