@@ -1,19 +1,18 @@
 h1 {
-  // font-family: 'Fredoka One', cursive;
   font-family: 'Jura', sans-serif;
   font-weight: 600;
   font-size: 55px;
-  // text-transform: uppercase;
+  color: #000;
 }
 
 h2 {
+  font-family: 'Jura', sans-serif;
   line-height: 1px;
   font-size: 30px;
   font-weight: 400;
-  word-wrap: break-word;
 }
 
-h2, h3, h4, h5, h6, p, input, button, select, textarea {
+h3, h4, h5, h6, p, input, button, select, textarea {
   font-family: 'Raleway', sans-serif;
 
 }

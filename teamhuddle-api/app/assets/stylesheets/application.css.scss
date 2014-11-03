@@ -41,17 +41,17 @@ $light-red: #ff4009;
 }
 
 .navbar-brand {
-  margin: -5px 0px 20px 30px;
+  margin: -5px 0px 20px 15px;
 
 }
-.logo {
+.logonav {
   height: 25px;
   width: 25px;
 }
 
 .navbar-inverse {
   background-color: #000 !important;
-  height: 80px;
+  height: 70px;
   border-bottom: 2px solid tomato !important;
   border-radius: 0px;     
 }
@@ -75,26 +75,6 @@ $light-red: #ff4009;
   }
 }
 
-
-
-
-.wireicon {
-  width: 60px;
-  height: 60px;
-  float: none;
-  margin: 5px 10px;
-  text-align: center;
-  -webkit-transition: all 1s ease;
-   -moz-transition: all 1s ease;
-     -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-        transition: all 1s ease;
-  &:hover {
-    width: 50px;
-    height: 50px;
-  }
-}
-
 .centericons {
   padding: 0;
   list-style: none;
@@ -104,8 +84,6 @@ $light-red: #ff4009;
 
 .navlinks {
   font-size: 16px;
-  margin: 0px;
-  padding-top: 5px;
   background-color: #000;
   font-weight: bold;
 
@@ -238,7 +216,7 @@ map {
 
 
 .test_images {
-  width: 47%;
+  width: 45%;
   background-color: #474747;
   -webkit-filter: grayscale(100%);
      -moz-filter: grayscale(100%);
@@ -393,9 +371,10 @@ map {
   margin-right: 20px;
 }
 
-.margin-bottom-20 {
-  padding-bottom: 6px;
+.margin-bottom-30 {
+  margin-bottom: 30px;
 }
+
 
 
 
