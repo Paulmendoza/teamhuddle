@@ -5,7 +5,7 @@ var map = {};
 app.controller('dropins', ['$scope', '$filter', 'Dropins', function ($scope, $filter, Dropins) {
         var orderBy = $filter('orderBy');
         $scope.dropins = [];
-        $scope.sport = 'somegarbage';
+        $scope.sport = 'no-sport';
         $scope.predicate = 'datetime_start.time';
         
 

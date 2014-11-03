@@ -14,10 +14,10 @@
     
     <%= csrf_meta_tags %>
   </head>
-  <body>
+  <body ng-controller="dropins">
 
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <a class="navbar-brand text-center" href="#"><%= image_tag 'logo-compressed.png', class: "navlogo", alt: 'teamhuddle_logo'%></a>
+        <a class="navbar-brand text-center" href="#"><%= image_tag 'logo-compressed.png', class: "navlogo", alt: 'teamhuddle_logo'%></a><span ng-show="sport !== 'no-sport'">Teamhuddle</span>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
