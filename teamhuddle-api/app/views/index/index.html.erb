@@ -28,16 +28,18 @@
     </ul>
   </div>
 
-  </nav>
+</nav>
 
-<body>
+<body ng-controller="dropins">
+
   <div class="container-fluid">
 
-    <div ng-show="sport ==! 'somegarbage'">
+    <div class="margin-bottom-30" ng-show="sport === 'somegarbage'">
       <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo'%>
       <h1 class="text-center">teamhuddle</h1>
-      <h2 class="text-center margin-bottom-30">Game on!</h2>
+      <h2 class="text-center">Game on!</h2>
     </div>
+
 
     <section class="sport_logos text-center" ng-show="sport === 'somegarbage'">
         <%= link_to(image_tag("volleyball-compressed.png", :alt => "asdf",
