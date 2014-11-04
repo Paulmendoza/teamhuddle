@@ -55,9 +55,9 @@
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper">        
       <br>
       <div class="dropinfilters_row">
-        <button class="btn btn-success col-lg-3" ng-click="refreshDropins()">reset</button>
-        <button class="btn btn-info col-lg-3" ng-click="sport = 'somegarbage'">another sport</button>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <button class="btn btn-success col-lg-3 col-md-3 col-sm-6 col-xs-6" ng-click="refreshDropins()">reset</button>
+        <button class="btn btn-info col-lg-3 col-md-3 col-sm-6 col-xs-6" ng-click="sport = 'somegarbage'">another sport</button>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
           <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="applyFilters()">
             <option value="" disabled selected>Day of the Week</option>
             <option value="All">All</option>
@@ -70,7 +70,7 @@
             <option value="Sunday">Sunday</option>
           </select>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
           <select class="form-control dropin_filter2" ng-model="skillLevelSelect" ng-change="applyFilters()">
             <option value="" disabled selected>Skill Level</option>
             <option value="All">All</option>
@@ -82,40 +82,12 @@
         </div>
       </div>
 
-      <div>
-        <h2 class="text-center sport_name" ng-if="sport !== 'somegarbage'">{{sport | lowercase }}</h2>
-      </div>
+      <h2 class="text-center sport_name" ng-if="sport !== 'somegarbage'">{{sport | lowercase }}</h2>
+      <div class="dropin_results">  
         <br>
-        <table class="table col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <tr>
-            <th>Day of the Week 
-                <span ng-class="reverse && (predicate === 'datetime_start.time') ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'" 
-                      ng-click="reverse =! reverse; predicate = 'datetime_start.time'; order(predicate, reverse)"/>
-            </th>
-
-            <th>Dropin Name 
-                <span ng-class="reverse && (predicate === 'event.name') ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'" 
-                      ng-click="reverse =! reverse; predicate = 'event.name'; order(predicate, reverse)"/>
-            </th>
-
-            <th>
-              Location Name
-            </th>
-
-            <th>
-              Skill Level
-              <span ng-class="reverse && (predicate === 'sport_event.skill_level') ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'" 
-                      ng-click="reverse =! reverse; predicate = 'sport_event.skill_level'; order(getSkillSortOrder, reverse)"/>
-            </th>
-
-            <th>Time</th>
-
-            <th></th>
-
-          </tr>
+        <table class="table col-lg-6 col-md-6 col-sm-10 col-xs-10">
           <tr class="table-row" ng-repeat="dropin in dropins" ng-mouseover="centerDropin(dropin)">
             <td>{{dropin.datetime_start.time | date:'EEEE'}}</td>
-            <td>{{dropin.event.name}}</td>
             <td>{{dropin.location.name}}</td>
             <td>{{dropin.sport_event.skill_level}}</td>
             <td>{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</td>
@@ -123,6 +95,7 @@
             <td><span class="button glyphicon glyphicon-remove" ng-click="remove(dropin)" /></td>
           </tr>
         </table>
+      </div>
     </div>
   </section>
 </body>

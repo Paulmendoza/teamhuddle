@@ -180,6 +180,8 @@ map {
   top: 68px;
   height: 100%;
   width: 47%;
+  border-right: 1px solid #777;
+
 }
 
 
@@ -413,11 +415,40 @@ map {
 // ========== MEDIA QUERIES ===========
 
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
 
-  .fullcontainer {
-    min-height: 500px;
-    width: 100%;
+  /* Removes map from mobile view*/
+  map {
+    display: none;
+  }
+
+  .right-wrapper {
+    margin-bottom: 35px;
+  }
+
+  .sport_name {
+    margin-top: -170px;
+  }
+
+  .dropinfilters_row {
+    margin-left: 7%;
+    margin-top: -30px;
+    margin-bottom: 110px;
+  }
+
+  .dropin_filter1 {
+    margin-left: 1%;
+    margin-bottom: 10px;
+
+  }
+
+  .dropin_filter2 {
+    margin-left: -20px;
+    margin-bottom: 10px;
+  }
+
+  .dropin_results {
+    font-size: 12px;
   }
 
 }
@@ -456,7 +487,7 @@ map {
 @media screen and (min-width: 1024px) {
   
   /************************* 
-  THREE COLUMN LAYOUT
+  FOUR COLUMN LAYOUT
   *************************/
 
   #first {
