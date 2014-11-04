@@ -179,9 +179,11 @@ map {
   left: 0px;
   top: 68px;
   height: 100%;
-  width: 50%;
+  width: 47%;
 }
 
+
+/* Prevents map filters and list results from overlapping map */
 .left-wrapper {
   min-height: 600px;
   width: 100%;
@@ -196,6 +198,10 @@ map {
 
 }
 
+.sport_name {
+  margin-top: 70px;
+}
+ 
 
 /*// ========== IMAGE STYLES ===========
 */
@@ -278,6 +284,8 @@ map {
   border: 1px solid $dark-green;
   border-radius: 0px !important;
   margin-top: 10px;
+  margin-right: 5px;
+  margin-left: -10px;
   letter-spacing: 1px;
 
   &:hover {
@@ -299,6 +307,23 @@ map {
   }  
 }
 
+
+.dropinfilters_row {
+  margin-left: 5%;
+  margin-top: -50px;
+  margin-bottom: 35px;
+}
+
+
+.dropin_filter1 {
+  margin-top: 10px;
+  margin-left: -10px;
+}
+
+.dropin_filter2 {
+  margin-top: 10px;
+  margin-left: -35px;
+}
 
 
 

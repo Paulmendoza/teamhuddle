@@ -3,7 +3,7 @@
   <div class="margin-bottom-30" ng-show="sport === 'somegarbage'">
     <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo'%>
     <h1 class="text-center">teamhuddle</h1>
-    <h2 class="text-center">Game on!</h2>
+    <h2 class="text-center">GAME ON!</h2>
   </div>
 
 
@@ -54,31 +54,37 @@
 
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper">        
       <br>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <label>Day of the Week</label>
-        <select class="form-control" ng-model="weekdaySelect" ng-change="applyFilters()">
-          <option value="All">All</option>
-          <option value="Monday">Monday</option>
-          <option value="Tuesday">Tuesday</option>
-          <option value="Wednesday">Wednesday</option>
-          <option value="Thursday">Thursday</option>
-          <option value="Friday">Friday</option>
-          <option value="Saturday">Saturday</option>
-          <option value="Sunday">Sunday</option>
-        </select>
+      <div class="dropinfilters_row">
+        <button class="btn btn-success col-lg-3" ng-click="refreshDropins()">reset</button>
+        <button class="btn btn-info col-lg-3" ng-click="sport = 'somegarbage'">another sport</button>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+          <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="applyFilters()">
+            <option value="" disabled selected>Day of the Week</option>
+            <option value="All">All</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+          <select class="form-control dropin_filter2" ng-model="skillLevelSelect" ng-change="applyFilters()">
+            <option value="" disabled selected>Skill Level</option>
+            <option value="All">All</option>
+            <option value="Recreational">Recreational</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+        </div>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <label>Skill Level</label>
-        <select class="form-control" ng-model="skillLevelSelect" ng-change="applyFilters()">
-          <option value="All">All</option>
-          <option value="Recreational">Recreational</option>
-          <option value="Beginner">Beginner</option>
-          <option value="Intermediate">Intermediate</option>
-          <option value="Advanced">Advanced</option>
-        </select>
+
+      <div>
+        <h2 class="text-center sport_name" ng-if="sport !== 'somegarbage'">{{sport | lowercase }}</h2>
       </div>
-      <button class="btn btn-success form-control" ng-click="refreshDropins()">reset</button>
-      <button class="btn btn-info form-control" ng-click="sport = 'somegarbage'">choose another sport</button>
         <br>
         <table class="table col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <tr>
