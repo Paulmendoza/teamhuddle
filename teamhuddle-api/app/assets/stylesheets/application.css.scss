@@ -206,6 +206,7 @@ li {
 .test_images {
   width: 45%;
   background-color: #666;
+  cursor: default;
   -webkit-filter: grayscale(100%);
      -moz-filter: grayscale(100%);
        -o-filter: grayscale(100%);
