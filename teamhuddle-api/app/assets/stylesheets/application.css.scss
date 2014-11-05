@@ -13,6 +13,11 @@
 @import "bootstrap";
 
 
+[ng-cloak]
+{
+  display: none !important;
+}
+
 // ========== VARIABLES ===========
 
 $dark-green: #00DA65;
