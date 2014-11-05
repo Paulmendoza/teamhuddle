@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
   
   belongs_to :location
-  has_one :organization
+  belongs_to :organization
   has_one :sport_event, :dependent => :delete
   has_many :sport_event_instance, :dependent => :delete_all
 

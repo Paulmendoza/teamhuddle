@@ -5,6 +5,8 @@ class SportEvent < ActiveRecord::Base
   belongs_to :event, :dependent => :delete
   has_many :archived_sport_events
   has_many :sport_event_instances, :dependent => :delete_all
+  has_one :location, :through => :event
+  has_one :organization, :through => :event
 
   validates :sport, :presence => true
   validates :type, :presence => true, inclusion: { in: ["dropin", "league", "tournament"] }

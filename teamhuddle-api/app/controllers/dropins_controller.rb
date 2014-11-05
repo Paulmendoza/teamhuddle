@@ -17,7 +17,7 @@ class DropinsController < ApplicationController
     
     
     # This is for the admin page -> see index.erb
-    @dropins = SportEvent.joins(:event).where( sport_events: { type: "dropin", sport: @sport}).select("*")
+    @dropins = SportEvent.includes(:event, :location, :organization).where( sport_events: { type: "dropin", sport: @sport})
     
     
     #active = false

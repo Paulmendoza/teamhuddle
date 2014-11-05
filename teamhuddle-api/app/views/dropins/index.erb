@@ -31,8 +31,8 @@
     <td><%= dropin.name %></td>
     <td><%= dropin.sport %></td>
     <td><%= dropin.skill_level %></td>
-    <td><%= Location.find(dropin.location_id).name %></td>
-    <td><%= Organization.find(dropin.organization_id).name %></td>
+    <td><%= dropin.location.name %></td>
+    <td><%= dropin.organization.name %></td>
     <td><%= number_to_currency(dropin.price_per_one, :unit => "$") %></td>
     <td><%= dropin.schedule.to_s %></td>
     <td><%= dropin.schedule.start_time.strftime('%-d-%b-%y') %></td>
