@@ -174,32 +174,6 @@ li {
   display: inline-block;
 }
 
-map {
-  position: fixed;
-  left: 0px;
-  top: 68px;
-  height: 100%;
-  width: 47%;
-  border-right: 1px solid #777;
-
-}
-
-
-/* Prevents map filters and list results from overlapping map */
-.left-wrapper {
-  min-height: 600px;
-  width: 100%;
-  margin-bottom: 35px;
-  float: none;
-}
-
-.right-wrapper {
-  min-height: 600px;
-  margin-bottom: 35px;
-  float: right;
-
-}
-
 .sport_name {
   margin-top: 70px;
 }
@@ -224,7 +198,7 @@ map {
 
 .test_images {
   width: 45%;
-  background-color: #474747;
+  background-color: #666;
   -webkit-filter: grayscale(100%);
      -moz-filter: grayscale(100%);
        -o-filter: grayscale(100%);
@@ -275,6 +249,7 @@ map {
 */
 .btn {
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .glyphicon {
@@ -288,7 +263,6 @@ map {
   margin-top: 10px;
   margin-right: 5px;
   margin-left: -10px;
-  letter-spacing: 1px;
 
   &:hover {
     background-color: $dark-green;
@@ -301,30 +275,11 @@ map {
   border: 1px solid $dark-blue;
   border-radius: 0px !important;
   margin-top: 10px;
-  letter-spacing: 1px;
 
   &:hover {
     background-color: $dark-blue;
     border: 1px solid $dark-blue;
   }  
-}
-
-
-.dropinfilters_row {
-  margin-left: 5%;
-  margin-top: -50px;
-  margin-bottom: 35px;
-}
-
-
-.dropin_filter1 {
-  margin-top: 10px;
-  margin-left: -10px;
-}
-
-.dropin_filter2 {
-  margin-top: 10px;
-  margin-left: -35px;
 }
 
 
@@ -415,36 +370,40 @@ map {
 // ========== MEDIA QUERIES ===========
 
 
-@media screen and (min-width: 320px) {
+@media (min-width: 0px) and (max-width: 767px) {
 
   /* Removes map from mobile view*/
   map {
     display: none;
   }
 
+  /*  .btn {
+      font-size: ;
+    }*/
+
   .right-wrapper {
     margin-bottom: 35px;
   }
 
   .sport_name {
-    margin-top: -170px;
+    margin-top: 110px;
   }
 
   .dropinfilters_row {
     margin-left: 7%;
-    margin-top: -30px;
-    margin-bottom: 110px;
+    margin-top: -50px;
   }
 
   .dropin_filter1 {
     margin-left: 1%;
     margin-bottom: 10px;
-
+    margin-top: 10px;
   }
 
   .dropin_filter2 {
     margin-left: -20px;
     margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   .dropin_results {
@@ -453,7 +412,7 @@ map {
 
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
 
   /************************* 
   THREE COLUMN LAYOUT
@@ -475,11 +434,6 @@ map {
     width: 30%;
   }
 
-/*  .fullcontainer {
-    min-height: 500px;
-    width: 100%;
-  }*/
-
   /* Removes map from mobile view*/
   map {
     display: none;
@@ -489,25 +443,22 @@ map {
     margin-bottom: 35px;
   }
 
-  .sport_name {
-    margin-top: -170px;
-  }
-
   .dropinfilters_row {
-    margin-left: 7%;
-    margin-top: -30px;
+    margin-left: 5%;
+    margin-top: -50px;
     margin-bottom: 110px;
   }
 
   .dropin_filter1 {
     margin-left: 1%;
     margin-bottom: 10px;
-
+    margin-top: 10px;
   }
 
   .dropin_filter2 {
     margin-left: -20px;
     margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   .dropin_results {
@@ -518,7 +469,7 @@ map {
 
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   
   /************************* 
   FOUR COLUMN LAYOUT
@@ -527,7 +478,6 @@ map {
   #first {
     width: 21.14%;
   }
-
 
   #second {
     width: 21.14%;  
@@ -541,25 +491,55 @@ map {
     width: 21.14%;
   }
 
-  .fullcontainer {
-    min-height: 50%;
+  .right-wrapper {
+    position: absolute !important;
+    right: 0px !important;
+    top: 100px !important;
+  }
+
+  map {
+    position: fixed;
+    left: 0px;
+    top: 68px;
+    height: 100%;
+    width: 47%;
+    border-right: 1px solid #777;
+    }
+
+  .sport_name {
+    margin-top: 70px;
+  }
+
+  .dropinfilters_row {
+    margin-left: 5%;
+    margin-top: -50px;
+    margin-bottom: 35px;
+  }
+
+  .dropin_filter1 {
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+
+  .dropin_filter2 {
+    margin-top: 10px;
+    margin-left: -35px;
+  }
+
+/* Prevents map filters and list results from overlapping map
+  .left-wrapper {
+    min-height: 600px;
+    width: 100%;
+    margin-bottom: 35px;
+    float: none;
   }
 
   .right-wrapper {
-    min-height: 50%;
-  }
+    min-height: 100%;
+    margin-bottom: 35px;
+    float: right;
 
-map {
-  position: fixed;
-  left: 0px;
-  top: 68px;
-  height: 100%;
-  width: 47%;
-  border-right: 1px solid #777;
-
-}
-
-
+  }*/
 }
 
 

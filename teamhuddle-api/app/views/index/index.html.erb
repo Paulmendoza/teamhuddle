@@ -43,13 +43,11 @@
   </section>
 
   <section ng-show="sport !== 'somegarbage'">
-    <div class="fullcontainer">
-      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper">
-        <map center="Vancouver, Canada" zoom="10">
-          <marker ng-repeat="dropin in dropins"
-                      position="[{{dropin.location.lat}},{{dropin.location.long}}]"/>
-        </map>
-      </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper">
+      <map center="Vancouver, Canada" zoom="10">
+        <marker ng-repeat="dropin in dropins"
+                    position="[{{dropin.location.lat}},{{dropin.location.long}}]"/>
+      </map>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper">        
@@ -85,7 +83,7 @@
       <h2 class="text-center sport_name" ng-if="sport !== 'somegarbage'">{{sport | lowercase }}</h2>
       <div class="dropin_results">  
         <br>
-        <table class="table col-lg-6 col-md-6 col-sm-10 col-xs-10">
+        <table class="table col-lg-6 col-md-10 col-sm-10 col-xs-10">
           <tr class="table-row" ng-repeat="dropin in dropins" ng-mouseover="centerDropin(dropin)">
             <td>{{dropin.datetime_start.time | date:'EEEE'}}</td>
             <td>{{dropin.location.name}}</td>
