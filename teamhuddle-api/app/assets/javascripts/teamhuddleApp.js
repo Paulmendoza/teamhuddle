@@ -91,6 +91,11 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             var index = $scope.dropins.indexOf(item);
             $scope.dropins.splice(index, 1);
         };
+        
+        $scope.resetSport = function() {
+            $location.path('/');
+            $sport = 'no-sport';
+        }
 
 
     }]);
