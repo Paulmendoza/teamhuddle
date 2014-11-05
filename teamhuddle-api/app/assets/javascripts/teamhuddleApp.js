@@ -4,24 +4,10 @@ var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonb
 
 app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function ($scope, $filter, $location, Dropins) {
 
-        //watch to see if the location changes and then set the sport accordingly
-        $scope.$on('$locationChangeSuccess', function(event){
-            if (sportRoutes.indexOf($location.path()) >= 0) {
-                $scope.sport = $location.url().replace("/", "");
-            }
-            else {
-                $scope.sport = 'no-sport';
-            }
-        });
-
-        var orderBy = $filter('orderBy');
-        $scope.dropins = [];
-        $scope.predicate = 'datetime_start.time';
-
+        $scope.weekdaySelect = "All";
+        $scope.skillLevelSelect = "All";
         // use a deferred promise from the Dropins service to populate the scope
         $scope.refreshDropins = function () {
-            $scope.weekdaySelect = "All";
-            $scope.skillLevelSelect = "All";
             Dropins.getBySport($scope.sport).then(
                     function (dropins) {
                         $scope.dropins = orderBy(dropins, $scope.predicate, false);
@@ -38,6 +24,23 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                         alert('Failed: ' + reason);
                     });
         };
+        
+        //watch to see if the location changes and then set the sport accordingly
+        $scope.$on('$locationChangeSuccess', function(event){
+            if (sportRoutes.indexOf($location.path()) >= 0) {
+                $scope.sport = $location.path().replace("/", "");
+                $scope.refreshDropins();
+            }
+            else {
+                $scope.sport = 'no-sport';
+            }
+        });
+
+        var orderBy = $filter('orderBy');
+        $scope.dropins = [];
+        $scope.predicate = 'datetime_start.time';
+
+        
 
 
         // orders by predicate
@@ -73,9 +76,11 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 
                         // apply each filter if 'All' isn't selected
                         if ($scope.weekdaySelect !== 'All') {
+                            $location.search('day', $scope.weekdaySelect);
                             dropins = $filter('weekday')(dropins, $scope.weekdaySelect);
                         }
                         if ($scope.skillLevelSelect !== 'All') {
+                            $location.search('skill', $scope.skillLevelSelect);
                             dropins = $filter('skill_level')(dropins, $scope.skillLevelSelect);
                         }
 
