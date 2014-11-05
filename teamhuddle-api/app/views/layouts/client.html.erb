@@ -14,10 +14,12 @@
     
     <%= csrf_meta_tags %>
   </head>
-  <body ng-controller="dropins">
+  <body>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53af382b4ee31991" async="async"></script>
 
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <a class="navbar-brand text-center" href="#"><%= image_tag 'logo-compressed.png', class: "navlogo", alt: 'teamhuddle_logo'%></a><span ng-show="sport !== 'no-sport'">Teamhuddle</span>
+      <a class="navbar-brand logotext" href="#"><%= image_tag 'logo.png', class: "logonav center-block", alt: 'teamhuddle_logo'%></a>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -26,7 +28,19 @@
       </button>
 
       <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown navlinks">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">sports <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">volleyball</a></li>
+            <li><a href="#">hockey</a></li>
+            <li><a href="#">basketball</a></li>
+            <li><a href="#">soccer</a></li>
+            <li><a href="#">dragonboating</a></li>
+          </ul>
+        </li>
+
           <li class="navlinks"><%= link_to "about" %></li>        
           <li class="navlinks"><%= link_to "contact" %></li>        
           <li class="navlinks"><%= link_to "team" %></li>
@@ -36,29 +50,20 @@
 
     </nav>
 
-    <div class="container">
+    <div class="container-fluid">
         <%= yield %>
     </div>
 
-    <section class="footer">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="footer">
+      <div class="addthis_horizontal_follow_toolbox pull-right addthis"></div>
+    </div>
 
-        <h1 class="white padding-top-50">teamhuddle</h1>
-          
-          <ul>
-            <li class="margin-right-20"><%= link_to "Privacy" %></li>
-            <li class="margin-right-20"><%= link_to "Terms" %></li>
-            <li><%= link_to "Contact Us" %></li>
-          </ul>
-        
-        <p class="grey">&#169 2014, Team Huddle</p>
-
-      </div>
-    </section>
-    
-      
     <%= javascript_include_tag 'application' %>  
     <%= javascript_include_tag '//maps.googleapis.com/maps/api/js?key=AIzaSyDwIy4KU0bhEV5R3yV5hAqAcL_TIjlrY0o' %>
+    
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+
   <script>
     var navHeight = $('.navbar-collapse').height();
 

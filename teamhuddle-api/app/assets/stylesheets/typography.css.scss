@@ -1,40 +1,66 @@
 h1 {
-  // font-family: 'Fredoka One', cursive;
   font-family: 'Jura', sans-serif;
   font-weight: 600;
-  font-size: 55px;
-  // text-transform: uppercase;
+  font-size: 45px;
+  color: #000;
 }
 
 h2 {
+  font-family: 'Jura', sans-serif;
   line-height: 1px;
   font-size: 30px;
   font-weight: 400;
-  word-wrap: break-word;
 }
 
-h2, h3, h4, h5, h6, p, input, button, select, textarea {
+h3, h4, h5, h6, p, input, button, select, textarea {
   font-family: 'Raleway', sans-serif;
 
+}
+
+a {
+  font-family: 'Jura', sans-serif;
+  color: #fff !important;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.logotext {
+  display: inline block;
+  text-align: right;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: -15px;
 }
 
 .slogan {
   opacity: .7;
 }
 
-li, a {
+li {
   font-family: 'Raleway', sans-serif;
   color: #EAEAEA;
 }
 
-a:hover {
-  text-decoration: none;
-  color: #fff;
-}
 
 
 .navbar-inverse .navbar-nav > li > a {
   color: #EAEAEA;
+}
+
+.dropdown-menu {
+  background-color: #000;
+}
+.dropdown-menu>li>a {
+  color: #fff !important;
+  background-color: #000;
+
+  &:hover {
+    color: #fff !important;
+    background-color: #000 !important;
+  }
 }
 
 .white {
