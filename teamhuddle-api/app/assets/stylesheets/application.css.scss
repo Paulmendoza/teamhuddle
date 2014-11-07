@@ -81,6 +81,10 @@ $light-red: #ff4009;
   }
 }
 
+.dropdown:hover .dropdown-menu {
+    display: block;
+ }
+
 .centericons {
   padding: 0;
   list-style: none;
