@@ -117,7 +117,7 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2014.9)
+    tzinfo-data (1.2014.7)
       tzinfo (>= 1.0.0)
     warden (1.2.3)
       rack (>= 1.0)

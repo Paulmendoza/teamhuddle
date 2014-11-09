@@ -43,6 +43,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             }
             else {
                 $scope.sport = 'no-sport';
+                $scope.dropins = [];
             }
         });
         
