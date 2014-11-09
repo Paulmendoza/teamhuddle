@@ -1,6 +1,6 @@
 <div class="container" ng-controller="dropins">
 
-  <div class="margin-bottom-30" ng-show="sport === 'no-sport'">
+  <div class="header" ng-show="sport === 'no-sport'">
     <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo'%>
     <h1 class="text-center">teamhuddle</h1>
     <h2 class="text-center">GAME ON!</h2>
@@ -25,7 +25,7 @@
           :data => { :'ng-click' => 'sport="soccer"; refreshDropins()' }) %>
             
       <%= link_to(image_tag("dragonboat-compressed.png", :alt => "asdf", 
-          class: "sport_logo green_bck", id: "first"), "#dragonboat", 
+          class: "sport_logo red_bck", id: "first"), "#dragonboat", 
           :data => { :'ng-click' => 'sport="dragonboat"; refreshDropins()' }) %>
       
       <%= link_to(image_tag("baseball.png", :alt => "asdf", 
@@ -53,9 +53,9 @@
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak>        
       <br>
       <div class="dropinfilters_row">
-        <button class="btn btn-success col-lg-3 col-md-3 col-sm-6 col-xs-6" ng-click="refreshDropins()">reset</button>
-        <%= link_to "another sport", "/#/", class: "btn btn-info col-lg-3 col-md-3 col-sm-6 col-xs-6" %>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <button class="btn btn-success col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-click="refreshDropins()">reset</button>
+        <%= link_to "another sport", "/#/", class: "btn btn-info col-lg-3 col-md-4 col-sm-6 col-xs-6" %>
+        <div class="col-lg-3 col-md-2 col-sm-6 col-xs-6">
           <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="applyFilters()">
             <option value="" disabled selected>Day of the Week</option>
             <option value="All">All</option>
@@ -68,7 +68,7 @@
             <option value="Sunday">Sunday</option>
           </select>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <div class="col-lg-3 col-md-2 col-sm-6 col-xs-6">
           <select class="form-control dropin_filter2" ng-model="skillLevelSelect" ng-change="applyFilters()">
             <option value="" disabled selected>Skill Level</option>
             <option value="All">All</option>

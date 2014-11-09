@@ -82,6 +82,19 @@
        }, 100);
     });
 
+    // Fix mobile floating toolbar when input is focused
+    if(/iPhone|iPod|Android|iPad/.test(window.navigator.platform)){
+
+    $(document)
+      .on('focus', 'textarea,input,select', function(e) {
+        $('.footer').css('position', 'absolute');
+      })
+      .on('blur', 'textarea,input,select', function(e) {
+        $('.footer').css('position', '');
+      });
+    }
+  } 
+
   </script>
 
   </body>
