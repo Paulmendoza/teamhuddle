@@ -1,6 +1,6 @@
 var map = {};
 
-var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonboat'];
+var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonboating'];
 
 app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function ($scope, $filter, $location, Dropins) {
 
@@ -14,21 +14,25 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 
                         // call a resize because map has moved and recenter it
                         google.maps.event.trigger($scope.map, 'resize');
-
+                        
+                        $scope.applyFilters();
+                        
                         // reset the center to the first object in the array
                         if ($scope.dropins.length > 0) {
-                            $scope.centerDropin($scope.dropins[0])
+                            $scope.centerDropin($scope.dropins[0]);
                         }
+                        
                     },
                     function (reason) {
                         alert('Failed: ' + reason);
                     });
         };
-        
+
         //watch to see if the location changes and then set the sport accordingly
-        $scope.$on('$locationChangeSuccess', function(event){
+        $scope.$on('$locationChangeSuccess', function (event) {
             if (sportRoutes.indexOf($location.path()) >= 0) {
                 $scope.sport = $location.path().replace("/", "");
+
                 $scope.refreshDropins();
             }
             else {
@@ -39,9 +43,6 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         var orderBy = $filter('orderBy');
         $scope.dropins = [];
         $scope.predicate = 'datetime_start.time';
-
-        
-
 
         // orders by predicate
         $scope.order = function (predicate, reverse) {
@@ -68,39 +69,69 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             $scope.map.setZoom(11);
         };
 
+        $scope.applyFilters = function () {
+            // apply each filter if 'All' isn't selected
+            if (typeof $location.search()['day'] !== 'undefined') {               
+                $scope.dropins = $filter('weekday')($scope.dropins, $location.search()['day']);
+                $scope.weekdaySelect = $location.search()['day'];
+            }
+            else if (typeof $location.search()['day'] === 'undefined'){
+                $scope.weekdaySelect = 'All';
+            }
+            if (typeof $location.search()['skill'] !== 'undefined') {
+                $scope.dropins = $filter('skill_level')($scope.dropins, $location.search()['skill']);
+                $scope.skillLevelSelect = $location.search()['skill'];
+            }
+            else if (typeof $location.search()['skill'] !== 'undefined'){
+                $scope.skillLevelSelect = 'All';
+            }
+        };
+
+        $scope.setFilters = function () {
+            if ($scope.weekdaySelect !== 'All') {
+                $location.search('day', $scope.weekdaySelect);
+            }
+            else if ($scope.weekdaySelect === 'All'){
+                $location.search('day', null);
+            }
+            
+            if ($scope.skillLevelSelect !== 'All') {
+                $location.search('skill', $scope.skillLevelSelect);
+            }
+            else if ($scope.skillLevelSelect === 'All'){
+                $location.search('skill', null);
+            }
+        };
+        
+        $scope.resetFilters = function () {
+            $scope.weekdaySelect = 'All';
+            $scope.skillLevelSelect = 'All';
+            $location.search('day', null);
+            $location.search('skill', null);
+        };
+        
 
         // gets all data and applies requested filters 
-        $scope.applyFilters = function () {
-            Dropins.getBySport($scope.sport).then(
-                    function (dropins) {
-
-                        // apply each filter if 'All' isn't selected
-                        if ($scope.weekdaySelect !== 'All') {
-                            $location.search('day', $scope.weekdaySelect);
-                            dropins = $filter('weekday')(dropins, $scope.weekdaySelect);
-                        }
-                        if ($scope.skillLevelSelect !== 'All') {
-                            $location.search('skill', $scope.skillLevelSelect);
-                            dropins = $filter('skill_level')(dropins, $scope.skillLevelSelect);
-                        }
-
-                        $scope.dropins = dropins;
-                    },
-                    function (reason) {
-                        alert('Failed: ' + reason);
-                    });
-        };
+//        $scope.applyFilters = function () {
+//            Dropins.getBySport($scope.sport).then(
+//                    function (dropins) {
+//
+//                    },
+//                    function (reason) {
+//                        alert('Failed: ' + reason);
+//                    });
+//        };
 
         // function to remove an item from the list
         $scope.remove = function (item) {
             var index = $scope.dropins.indexOf(item);
             $scope.dropins.splice(index, 1);
         };
-        
-        $scope.resetSport = function() {
+
+        $scope.resetSport = function () {
             $location.path('/');
             $sport = 'no-sport';
-        }
+        };
 
 
     }]);
