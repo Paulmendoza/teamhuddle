@@ -134,9 +134,10 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         
         // definition of the marker object that is linked to each dropin event
         // properties: 
-        //  isOpen(bool)      : indicates whether the marker object is open
-        //  marker(Object)    : the google maps marker objecct
-        //  infoWindow(Object : the google maps info window object
+        //  isOpen(bool)                        : indicates whether the marker object is open
+        //  marker(Object)                      : the google maps marker objecct
+        //  infoWindow(Object)                  : the google maps info window object
+        //  infoWindow.toggle(function(bool))   : function to toggle an info window
         function MarkerWrapper(dropin) {
             this.isOpen = false;
 
@@ -147,9 +148,9 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 
             // the content for the infoWindow is set
             this.infoWindow = new google.maps.InfoWindow({
-                content: "<p>Location: " + dropin.location.name + "</p>" +
-                        "<p>Day: " + dropin.datetime_start.time.getDay + " </p>" +
-                        "<p>Skill: " + dropin.sport_event.skill_level + "</p>",
+                content: "<p><b>Location:</b> " + dropin.location.name + "</p>" +
+                        "<p><b>Day:</b> " + dropin.datetime_start.time.getDay + " </p>" +
+                        "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>",
                 maxwidth: 600
             });
             
@@ -161,7 +162,8 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                 that.infoWindow.toggle();
             });
             
-            // toggles the infoWindow unless keep open is passed in as true
+            // toggles the infoWindow
+            // param: keepOpen - if this is passed in the info window will stay open
             this.infoWindow.toggle = function(keepOpen) {
                 if(typeof(keepOpen) === 'undefined') keepOpen = false;
                 
