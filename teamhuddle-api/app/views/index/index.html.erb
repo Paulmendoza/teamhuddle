@@ -1,6 +1,6 @@
 <div class="container" ng-controller="dropins">
 
-  <div class="margin-bottom-30" ng-show="sport === 'no-sport'">
+  <div class="header" ng-show="sport === 'no-sport'">
     <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo'%>
     <h1 class="text-center">teamhuddle</h1>
     <h2 class="text-center">GAME ON!</h2>
@@ -9,54 +9,43 @@
 
   <section class="sport_logos text-center" ng-show="sport === 'no-sport'">
       <%= link_to(image_tag("volleyball-compressed.png", :alt => "asdf",
-          class: "sport_logo green_bck", id: "first"), "#volleyball", 
-          :data => { :'ng-click' => 'sport="volleyball"; refreshDropins()' }) %>
+          class: "sport_logo green_bck", id: "first"), "#volleyball") %>
         
       <%= link_to(image_tag("hockey-compressed.png", :alt => "asdf", 
-          class: "sport_logo blue_bck", id: "second"), "#hockey", 
-          :data => { :'ng-click' => 'sport="hockey"; refreshDropins()' }) %>
+          class: "sport_logo blue_bck", id: "second"), "#hockey") %>
         
       <%= link_to(image_tag("basketball-compressed.png", :alt => "asdf", 
-          class: "sport_logo orange_bck", id: "third"), "#basketball", 
-          :data => { :'ng-click' => 'sport="basketball"; refreshDropins()' }) %>
+          class: "sport_logo orange_bck", id: "third"), "#basketball") %>
         
       <%= link_to(image_tag("soccer-compressed.png", :alt => "asdf", 
-          class: "sport_logo red_bck ", id: "fourth"), "#soccer", 
-          :data => { :'ng-click' => 'sport="soccer"; refreshDropins()' }) %>
+          class: "sport_logo red_bck ", id: "fourth"), "#soccer") %>
             
       <%= link_to(image_tag("dragonboat-compressed.png", :alt => "asdf", 
-          class: "sport_logo green_bck", id: "first"), "#dragonboat", 
-          :data => { :'ng-click' => 'sport="dragonboat"; refreshDropins()' }) %>
+          class: "sport_logo red_bck", id: "first"), "#dragonboat") %>
       
       <%= link_to(image_tag("baseball.png", :alt => "asdf", 
-          class: "disabled sport_logo test_images", id: "second"), "", 
-          :data => { :'ng-click' => 'sport="blank"; refreshDropins()' }) %>
+          class: "disabled sport_logo test_images", id: "second"), "") %>
 
       <%= link_to(image_tag("ultimate.png", :alt => "asdf", 
-          class: "sdisabled sport_logo test_images", id: "third"), "", 
-          :data => { :'ng-click' => 'sport="blank"; refreshDropins()' }) %>
+          class: "sdisabled sport_logo test_images", id: "third"), "") %>
         
       <%= link_to(image_tag("dodgeball.png", :alt => "asdf", 
-          class: "disabled sport_logo test_images", id: "fourth"), "", 
-          :data => { :'ng-click' => 'sport="blank"; refreshDropins()' }) %>
+          class: "disabled sport_logo test_images", id: "fourth"), "") %>
         
   </section>
 
   <section ng-show="sport !== 'no-sport'">
     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak>
-      <map center="Vancouver, Canada" zoom="10">
-        <marker ng-repeat="dropin in dropins"
-                    position="[{{dropin.location.lat}},{{dropin.location.long}}]"/>
-      </map>
+      <map zoom="10"></map>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak>        
       <br>
       <div class="dropinfilters_row">
-        <button class="btn btn-success col-lg-3 col-md-3 col-sm-6 col-xs-6" ng-click="refreshDropins()">reset</button>
-        <%= link_to "another sport", "/#/", class: "btn btn-info col-lg-3 col-md-3 col-sm-6 col-xs-6" %>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-          <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="applyFilters()">
+        <button class="btn btn-success col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-click="resetFilters()">reset</button>
+        <%= link_to "another sport", "/#/", class: "btn btn-info col-lg-3 col-md-4 col-sm-6 col-xs-6" %>
+        <div class="col-lg-3 col-md-2 col-sm-6 col-xs-6">
+          <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="setFilters()">
             <option value="" disabled selected>Day of the Week</option>
             <option value="All">All</option>
             <option value="Monday">Monday</option>
@@ -68,8 +57,8 @@
             <option value="Sunday">Sunday</option>
           </select>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-          <select class="form-control dropin_filter2" ng-model="skillLevelSelect" ng-change="applyFilters()">
+        <div class="col-lg-3 col-md-2 col-sm-6 col-xs-6">
+          <select class="form-control dropin_filter2" ng-model="skillLevelSelect" ng-change="setFilters()">
             <option value="" disabled selected>Skill Level</option>
             <option value="All">All</option>
             <option value="Recreational">Recreational</option>
@@ -80,12 +69,12 @@
         </div>
       </div>
 
-      <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">{{sport | lowercase }}</h2>
+      <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
       <div class="dropin_results">  
         <br>
         <table class="table col-lg-6 col-md-10 col-sm-10 col-xs-10">
-          <tr class="table-row" ng-repeat="dropin in dropins" ng-mouseover="centerDropin(dropin)">
-            <td>{{dropin.datetime_start.time | date:'EEEE'}}</td>
+          <tr class="table-row" ng-repeat="dropin in dropins" ng-click="markerWrappers[dropin.id].infoWindow.toggle(true); centerDropin(dropin)">
+            <td>{{dropin.datetime_start | date:'EEEE'}}</td>
             <td>{{dropin.location.name}}</td>
             <td>{{dropin.sport_event.skill_level}}</td>
             <td>{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</td>
@@ -93,6 +82,7 @@
             <td><span class="button glyphicon glyphicon-remove" ng-click="remove(dropin)" /></td>
           </tr>
         </table>
+        
       </div>
     </div>
   </section>

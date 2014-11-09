@@ -6,7 +6,6 @@
     <%= stylesheet_link_tag  'application', 
                              'http://fonts.googleapis.com/css?family=Jura:400,600',
                              'http://fonts.googleapis.com/css?family=Raleway:400,300',
-                             'animate',
                              'typography',
                              media: 'all',
                              'data-turbolinks-track' => true%>
@@ -31,13 +30,14 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown navlinks">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">sports <span class="caret"></span></a>
+          <a href="#/" class="dropdown-toggle" data-toggle="dropdown">sports <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">volleyball</a></li>
-            <li><a href="#">hockey</a></li>
-            <li><a href="#">basketball</a></li>
-            <li><a href="#">soccer</a></li>
-            <li><a href="#">dragonboating</a></li>
+            <li><%= link_to "volleyball", "#volleyball" %></li>
+            <li><%= link_to "hockey", "#hockey" %></li>
+            <li><%= link_to "basketball", "#basketball" %></li>
+            <li><%= link_to "soccer", "#soccer" %></li>
+            <li><%= link_to "dragonboating", "#dragonboating" %></li>
+
           </ul>
         </li>
 
@@ -82,6 +82,18 @@
         'padding-top': parseInt($("body").css("padding-top")) - navHeight
        }, 100);
     });
+
+    // Fix mobile floating toolbar when input is focused
+    if(/iPhone|iPod|Android|iPad/.test(window.navigator.platform)){
+
+    $(document)
+      .on('focus', 'textarea,input,select', function(e) {
+        $('.footer').css('position', 'absolute');
+      })
+      .on('blur', 'textarea,input,select', function(e) {
+        $('.footer').css('position', '');
+      });
+  } 
 
   </script>
 

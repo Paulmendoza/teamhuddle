@@ -3,6 +3,7 @@ class SportEvent < ActiveRecord::Base
   after_initialize :init
   
   belongs_to :event, :dependent => :delete
+  belongs_to :sport
   has_many :archived_sport_events
   has_many :sport_event_instances, :dependent => :delete_all
   has_one :location, :through => :event
