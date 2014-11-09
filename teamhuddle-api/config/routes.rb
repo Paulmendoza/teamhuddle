@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'admin' => 'welcome#index'
   
+  
+  # basic routes
+  get 'contact' => 'index#contact'
+  get 'about' => 'index#about'
+  
   scope :admin do
     resources :locations
     resources :organizations
