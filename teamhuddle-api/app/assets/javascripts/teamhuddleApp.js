@@ -155,7 +155,8 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             
             // redecleration needed to set up listener correctly
             var that = this;
-
+            
+            // listener to listen for click event on marker object
             google.maps.event.addListener(that.marker, 'click', function () {
                 that.infoWindow.toggle();
             });
