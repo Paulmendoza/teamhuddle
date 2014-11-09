@@ -17,6 +17,9 @@ Rails.application.routes.draw do
     resources :dropins
   end
   
+  resources :static_pages do 
+
+  end 
   
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
