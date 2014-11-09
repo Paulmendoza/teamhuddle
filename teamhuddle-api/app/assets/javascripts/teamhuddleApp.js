@@ -1,4 +1,4 @@
-var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonboating'];
+var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonboat'];
 
 app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function ($scope, $filter, $location, Dropins) {
         // set my own orderBy filter directive
