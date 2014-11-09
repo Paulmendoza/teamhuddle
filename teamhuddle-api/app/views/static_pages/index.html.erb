@@ -13,7 +13,9 @@
     
     <%= csrf_meta_tags %>
   </head>
-  <body>
+  <body class="static_pages">
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53af382b4ee31991" async="async"></script>
 
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <a class="navbar-brand logotext" href="#"><%= image_tag 'logo.png', class: "logonav center-block", alt: 'teamhuddle_logo'%></a>
@@ -141,21 +143,50 @@
         </div>
       </div>
     </section>
+  </div>  
 
 
     <section>
-      <div class="features">
-        <div id="calendar">
+      <div class="features col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
+        <h2 class="text-center feature1">Cool feature #1</h2><br>
+        <p class="text-center">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.</p>
+      </div>
+      <div class="features col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
+        <h2 class="text-center feature2">Cool feature #2</h2><br>
+        <p class="text-center">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.</p>
+      </div>
+      <div class="features col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
+        <h2 class="text-center feature3">Cool feature #3</h2><br>
+        <p class="text-center">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.</p>
+      </div>
+    </section>
 
-        </div>  
+  <div class="container-fluid">
 
+    <section>
+      <div class="mailer">
+        <div class="mailer-inner text-center col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+          <h3>Find the sports you love playing with the players you love playing with!</h3>
+          <h4>Submit your e-mail below you receive front of the line access to our beta</h4>
+          <br>
+
+          <form role="form" class="text-center">
+            <div class="form-group">
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+          </form>
+        </div>
       </div>
     </section>
   </div>
 
           <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <div class="footer">
-      <div class="addthis_horizontal_follow_toolbox pull-right addthis"></div>
+      <div class="addthis_horizontal_follow_toolbox addthis pull-right"></div>
     </div>
 
     </section>
