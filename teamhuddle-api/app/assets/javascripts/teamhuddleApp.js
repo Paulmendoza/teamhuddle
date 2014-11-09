@@ -157,7 +157,14 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             var that = this;
 
             google.maps.event.addListener(that.marker, 'click', function () {
-                if (that.isOpen) {
+                that.infoWindow.toggle();
+            });
+            
+            // toggles the infoWindow unless keep open is passed in as true
+            this.infoWindow.toggle = function(keepOpen) {
+                if(typeof(keepOpen) === 'undefined') keepOpen = false;
+                
+                if (that.isOpen && !keepOpen) {
                     $scope.markerWrappers.currentlyOpen = null;
                     that.infoWindow.close();
                     that.isOpen = false;
@@ -172,7 +179,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                     that.infoWindow.open($scope.map, that.marker);
                     that.isOpen = true;
                 }
-            });
+            };
         }
         
         // UNUSED HELPER METHOD, COULD BE USERFUL LATER

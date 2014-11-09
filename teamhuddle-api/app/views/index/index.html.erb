@@ -73,7 +73,7 @@
       <div class="dropin_results">  
         <br>
         <table class="table col-lg-6 col-md-10 col-sm-10 col-xs-10">
-          <tr class="table-row" ng-repeat="dropin in dropins" ng-mouseover="centerDropin(dropin)">
+          <tr class="table-row" ng-repeat="dropin in dropins" ng-click="markerWrappers[dropin.id].infoWindow.toggle(true); centerDropin(dropin)">
             <td>{{dropin.datetime_start.time | date:'EEEE'}}</td>
             <td>{{dropin.location.name}}</td>
             <td>{{dropin.sport_event.skill_level}}</td>
