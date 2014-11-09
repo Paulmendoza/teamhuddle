@@ -11,7 +11,7 @@ then running
 ###Setup Instructions:###
 
 
-` $ bundle update `
+` $ bundle install `
 
 ` $ rake db:migrate `
 
