@@ -8,6 +8,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         $scope.skillLevelSelect = "All";
         // use a deferred promise from the Dropins service to populate the scope
         $scope.refreshDropins = function () {
+            $scope.dropins = "";
             Dropins.getBySport($scope.sport).then(
                     function (dropins) {
                         $scope.dropins = orderBy(dropins, $scope.predicate, false);
