@@ -36,10 +36,7 @@
 
   <section ng-show="sport !== 'no-sport'">
     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak>
-      <map center="Vancouver, Canada" zoom="10">
-        <marker ng-repeat="dropin in dropins"
-                    position="[{{dropin.location.lat}},{{dropin.location.long}}]"/>
-      </map>
+      <map zoom="10"></map>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak>        
@@ -85,6 +82,7 @@
             <td><span class="button glyphicon glyphicon-remove" ng-click="remove(dropin)" /></td>
           </tr>
         </table>
+        
       </div>
     </div>
   </section>

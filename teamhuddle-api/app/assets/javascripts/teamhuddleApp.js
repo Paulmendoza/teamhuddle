@@ -1,34 +1,39 @@
-var map = {};
-
 var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonboating'];
 
 app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function ($scope, $filter, $location, Dropins) {
+        // set my own orderBy filter directive
+        var orderBy = $filter('orderBy');
+        
+        // a dictionary to hold all of the MarkerWrapper objects
+        $scope.markerWrappers = {};
+        
+        // this will hold the id of the marker that is currently open
+        $scope.markerWrappers.currentlyOpen = null;
 
         $scope.weekdaySelect = "All";
         $scope.skillLevelSelect = "All";
-        // use a deferred promise from the Dropins service to populate the scope
-        $scope.refreshDropins = function () {
-            $scope.dropins = "";
-            Dropins.getBySport($scope.sport).then(
-                    function (dropins) {
-                        $scope.dropins = orderBy(dropins, $scope.predicate, false);
+        
+        // initialize the predicate that sorting will be done through
+        $scope.predicate = 'datetime_start.time';
+        
+        // array that will have all the dropin objects
+        $scope.dropins = [];
 
-                        // call a resize because map has moved and recenter it
-                        google.maps.event.trigger($scope.map, 'resize');
-                        
-                        $scope.applyFilters();
-                        
-                        // reset the center to the first object in the array
-                        if ($scope.dropins.length > 0) {
-                            $scope.centerDropin($scope.dropins[0]);
-                        }
-                        
-                    },
-                    function (reason) {
-                        alert('Failed: ' + reason);
-                    });
-        };
+        // watches dropins and makes sure markers are in sync
+        $scope.$watchCollection('dropins', function (newValues, oldValues) {
+            
+            // delete the old MarkerWrappers
+            oldValues.forEach(function (oldDropin) {
+                $scope.markerWrappers[oldDropin.id]['marker'].setMap(null);
+                delete $scope.markerWrappers[oldDropin.id];
+            });
 
+            // add new MarkerWrappers
+            $scope.dropins.forEach(function (dropin) {
+                $scope.markerWrappers[dropin.id] = new MarkerWrapper(dropin);
+            });
+        });
+        
         //watch to see if the location changes and then set the sport accordingly
         $scope.$on('$locationChangeSuccess', function (event) {
             if (sportRoutes.indexOf($location.path()) >= 0) {
@@ -40,104 +45,157 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                 $scope.sport = 'no-sport';
             }
         });
+        
+        // DROPIN CONTROLLER FUNCTIONS:
+        // use a deferred promise from the Dropins service to populate the scope
+        $scope.refreshDropins = function () {
+            Dropins.getBySport($scope.sport).then(
+                    function (dropins) {
+                        $scope.dropins = orderBy(dropins, $scope.predicate, false);
 
-        var orderBy = $filter('orderBy');
-        $scope.dropins = [];
-        $scope.predicate = 'datetime_start.time';
+                        // call a resize because map has moved and recenter it
+                        google.maps.event.trigger($scope.map, 'resize');
 
-        // orders by predicate
+                        $scope.applyFilters();
+                    },
+                    function (reason) {
+                        alert('Failed: ' + reason);
+                    });
+        };
+
+        // function which orders by predicate
         $scope.order = function (predicate, reverse) {
             $scope.dropins = orderBy($scope.dropins, predicate, reverse);
         };
-
-        $scope.getSkillSortOrder = function (dropin) {
-            switch (dropin.sport_event.skill_level) {
-                case 'Recreational':
-                    return 1;
-                case 'Beginner':
-                    return 2;
-                case 'Intermediate':
-                    return 3;
-                case 'Advanced':
-                    return 4;
-                default:
-                    return 0;
-            }
-        };
-
+        
+        // set the maps center to the dropin location
         $scope.centerDropin = function (dropin) {
             $scope.map.panTo(new google.maps.LatLng(dropin.location.lat, dropin.location.long));
             $scope.map.setZoom(11);
         };
-
+        
+        
+        // applies filters from the URL
         $scope.applyFilters = function () {
             // apply each filter if 'All' isn't selected
-            if (typeof $location.search()['day'] !== 'undefined') {               
+            if (typeof $location.search()['day'] !== 'undefined') {
                 $scope.dropins = $filter('weekday')($scope.dropins, $location.search()['day']);
                 $scope.weekdaySelect = $location.search()['day'];
             }
-            else if (typeof $location.search()['day'] === 'undefined'){
+            else if (typeof $location.search()['day'] === 'undefined') {
                 $scope.weekdaySelect = 'All';
             }
             if (typeof $location.search()['skill'] !== 'undefined') {
                 $scope.dropins = $filter('skill_level')($scope.dropins, $location.search()['skill']);
                 $scope.skillLevelSelect = $location.search()['skill'];
             }
-            else if (typeof $location.search()['skill'] !== 'undefined'){
+            else if (typeof $location.search()['skill'] !== 'undefined') {
                 $scope.skillLevelSelect = 'All';
             }
         };
-
+        
+        
+        // sets the filter arguments in the URL
         $scope.setFilters = function () {
             if ($scope.weekdaySelect !== 'All') {
                 $location.search('day', $scope.weekdaySelect);
             }
-            else if ($scope.weekdaySelect === 'All'){
+            else if ($scope.weekdaySelect === 'All') {
                 $location.search('day', null);
             }
-            
+
             if ($scope.skillLevelSelect !== 'All') {
                 $location.search('skill', $scope.skillLevelSelect);
             }
-            else if ($scope.skillLevelSelect === 'All'){
+            else if ($scope.skillLevelSelect === 'All') {
                 $location.search('skill', null);
             }
         };
-        
+
+        // resets the filter arguments in the URL
         $scope.resetFilters = function () {
             $scope.weekdaySelect = 'All';
             $scope.skillLevelSelect = 'All';
             $location.search('day', null);
             $location.search('skill', null);
         };
-        
 
-        // gets all data and applies requested filters 
-//        $scope.applyFilters = function () {
-//            Dropins.getBySport($scope.sport).then(
-//                    function (dropins) {
-//
-//                    },
-//                    function (reason) {
-//                        alert('Failed: ' + reason);
-//                    });
-//        };
-
-        // function to remove an item from the list
+        // function to remove an item from the list TODO, GET RID OF THIS EVENTUALLY
         $scope.remove = function (item) {
             var index = $scope.dropins.indexOf(item);
             $scope.dropins.splice(index, 1);
         };
-
+        
+        // function to reset the sport
         $scope.resetSport = function () {
             $location.path('/');
-            $sport = 'no-sport';
+            $scope.sport = 'no-sport';
         };
+        
+        // definition of the marker object that is linked to each dropin event
+        // properties: 
+        //  isOpen(bool)      : indicates whether the marker object is open
+        //  marker(Object)    : the google maps marker objecct
+        //  infoWindow(Object : the google maps info window object
+        function MarkerWrapper(dropin) {
+            this.isOpen = false;
 
+            this.marker = new google.maps.Marker({
+                map: $scope.map,
+                position: new google.maps.LatLng(dropin.location.lat, dropin.location.long)
+            });
+
+            // the content for the infoWindow is set
+            this.infoWindow = new google.maps.InfoWindow({
+                content: "<p>Location: " + dropin.location.name + "</p>" +
+                        "<p>Day: " + dropin.datetime_start.time.getDay + " </p>" +
+                        "<p>Skill: " + dropin.sport_event.skill_level + "</p>",
+                maxwidth: 600
+            });
+            
+            // redecleration needed to set up listener correctly
+            var that = this;
+
+            google.maps.event.addListener(that.marker, 'click', function () {
+                if (that.isOpen) {
+                    $scope.markerWrappers.currentlyOpen = null;
+                    that.infoWindow.close();
+                    that.isOpen = false;
+                }
+                else {
+                    if ($scope.markerWrappers.currentlyOpen !== null) {
+                        $scope.markerWrappers[$scope.markerWrappers.currentlyOpen].isOpen = false;
+                        $scope.markerWrappers[$scope.markerWrappers.currentlyOpen].infoWindow.close();
+                    }
+
+                    $scope.markerWrappers.currentlyOpen = dropin.id;                    
+                    that.infoWindow.open($scope.map, that.marker);
+                    that.isOpen = true;
+                }
+            });
+        }
+        
+        // UNUSED HELPER METHOD, COULD BE USERFUL LATER
+//        $scope.getSkillSortOrder = function (dropin) {
+//            switch (dropin.sport_event.skill_level) {
+//                case 'Recreational':
+//                    return 1;
+//                case 'Beginner':
+//                    return 2;
+//                case 'Intermediate':
+//                    return 3;
+//                case 'Advanced':
+//                    return 4;
+//                default:
+//                    return 0;
+//            }
+//        };
 
     }]);
 
-// filters based on weekday
+
+// FILTERS
+// filter based on a certain weekday
 app.filter('weekday', function ($filter) {
     return function (sport_events, day) {
         var retn = [];
@@ -153,7 +211,7 @@ app.filter('weekday', function ($filter) {
     };
 });
 
-// filters based on skill level
+// filter based on skill level
 app.filter('skill_level', function () {
     return function (sport_events, skill) {
         var retn = [];
