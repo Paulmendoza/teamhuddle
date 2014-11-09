@@ -1,10 +1,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require angular
-//= require angular-route
 //= require angular-resource
 //= require angular-animate
-//= require moment
 //= require ngmap
 //= require teamhuddleService
 //= require teamhuddleApp
