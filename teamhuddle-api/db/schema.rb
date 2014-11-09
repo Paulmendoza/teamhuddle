@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141016032542) do
+ActiveRecord::Schema.define(version: 20141109082901) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -94,11 +94,7 @@ ActiveRecord::Schema.define(version: 20141016032542) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "username"
-    t.string   "salthashpass"
-    t.string   "salt"
-    t.string   "first_name"
-    t.string   "locale"
+    t.string   "name"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"

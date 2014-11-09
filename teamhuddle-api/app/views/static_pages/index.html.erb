@@ -170,15 +170,14 @@
       <div class="mailer">
         <div class="mailer-inner text-center col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
           <h3>Find the sports you love playing with the players you love playing with!</h3>
-          <h4>Submit your e-mail below you receive front of the line access to our beta</h4>
+          <h4>Submit your e-mail below to receive front of the line access to our beta</h4>
           <br>
 
-          <form role="form" class="text-center">
-            <div class="form-group">
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-            </div>
-            <button type="submit" class="btn btn-info">Submit</button>
-          </form>
+          <%= form_for User.new do |f| %> 
+            <%= f.text_field :email, class: "form-control", placeholder: "Enter your e-mail" %>
+            <%= f.submit "Submit", class: "btn btn-info" %>
+          <% end %>
+
         </div>
       </div>
     </section>
