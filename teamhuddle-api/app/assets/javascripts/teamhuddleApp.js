@@ -150,7 +150,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             // the content for the infoWindow is set
             this.infoWindow = new google.maps.InfoWindow({
                 content: "<p><b>Location:</b> " + dropin.location.name + "</p>" +
-                        "<p><b>Day:</b> " + weekdayEnum[new Date(dropin.datetime_start.time).getDay() - 1] + " </p>" +
+                        "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start.time, 'EEEE') + " </p>" +
                         "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>",
                 maxwidth: 600
             });
@@ -237,5 +237,3 @@ app.filter('skill_level', function () {
         return retn;
     };
 });
-
-var weekdayEnum = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
