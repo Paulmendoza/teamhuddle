@@ -3,37 +3,52 @@ var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonb
 app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function ($scope, $filter, $location, Dropins) {
         // set my own orderBy filter directive
         var orderBy = $filter('orderBy');
-        
+
         // a dictionary to hold all of the MarkerWrapper objects
         $scope.markerWrappers = {};
-        
+
         // this will hold the id of the marker that is currently open
         $scope.markerWrappers.currentlyOpen = null;
 
         $scope.weekdaySelect = "All";
         $scope.skillLevelSelect = "All";
-        
+
         // initialize the predicate that sorting will be done through
         $scope.predicate = 'datetime_start';
-        
+
         // array that will have all the dropin objects
         $scope.dropins = [];
 
         // watches dropins and makes sure markers are in sync
         $scope.$watchCollection('dropins', function (newValues, oldValues) {
-            
+
+            console.log("Old length = " + oldValues.length);
+            console.log("New length = " + newValues.length);
+
             // delete the old MarkerWrappers
             oldValues.forEach(function (oldDropin) {
                 $scope.markerWrappers[oldDropin.id]['marker'].setMap(null);
                 delete $scope.markerWrappers[oldDropin.id];
+
+                console.log("Deleting marker: " + oldDropin.id);
             });
 
             // add new MarkerWrappers
-            newValues.forEach(function (dropin) {
-                $scope.markerWrappers[dropin.id] = new MarkerWrapper(dropin);
+            $scope.dropins.forEach(function (dropin) {
+                if (typeof ($scope.markerWrappers[dropin.id]) === 'undefined') {
+                    $scope.markerWrappers[dropin.id] = new MarkerWrapper(dropin);
+                    console.log("Adding marker: " + dropin.id);
+                }
+                
+                
             });
+            
+            // if the currently open id is no longer contained in the wrappers then obviously set it to null, as it can't be open
+            if(typeof($scope.markerWrappers[$scope.markerWrappers.currentlyOpen]) === 'undefined'){
+                $scope.markerWrappers.currentlyOpen = null;
+            }
         });
-        
+
         //watch to see if the location changes and then set the sport accordingly
         $scope.$on('$locationChangeSuccess', function (event) {
             if (sportRoutes.indexOf($location.path()) >= 0) {
@@ -46,7 +61,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                 $scope.dropins = [];
             }
         });
-        
+
         // DROPIN CONTROLLER FUNCTIONS:
         // use a deferred promise from the Dropins service to populate the scope
         $scope.refreshDropins = function () {
@@ -68,14 +83,14 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         $scope.order = function (predicate, reverse) {
             $scope.dropins = orderBy($scope.dropins, predicate, reverse);
         };
-        
+
         // set the maps center to the dropin location
         $scope.centerDropin = function (dropin) {
             $scope.map.panTo(new google.maps.LatLng(dropin.location.lat, dropin.location.long));
             $scope.map.setZoom(11);
         };
-        
-        
+
+
         // applies filters from the URL
         $scope.applyFilters = function () {
             // apply each filter if 'All' isn't selected
@@ -94,8 +109,8 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                 $scope.skillLevelSelect = 'All';
             }
         };
-        
-        
+
+
         // sets the filter arguments in the URL
         $scope.setFilters = function () {
             if ($scope.weekdaySelect !== 'All') {
@@ -126,13 +141,13 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             var index = $scope.dropins.indexOf(item);
             $scope.dropins.splice(index, 1);
         };
-        
+
         // function to reset the sport
         $scope.resetSport = function () {
             $location.path('/');
             $scope.sport = 'no-sport';
         };
-        
+
         // definition of the marker object that is linked to each dropin event
         // properties: 
         //  isOpen(bool)                        : indicates whether the marker object is open
@@ -154,20 +169,21 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                         "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>",
                 maxwidth: 600
             });
-            
+
             // redecleration needed to set up listener correctly
             var that = this;
-            
+
             // listener to listen for click event on marker object
             google.maps.event.addListener(that.marker, 'click', function () {
                 that.infoWindow.toggle();
             });
-            
+
             // toggles the infoWindow
             // param: keepOpen - if this is passed in the info window will stay open
-            this.infoWindow.toggle = function(keepOpen) {
-                if(typeof(keepOpen) === 'undefined') keepOpen = false;
-                
+            this.infoWindow.toggle = function (keepOpen) {
+                if (typeof (keepOpen) === 'undefined')
+                    keepOpen = false;
+
                 if (that.isOpen && !keepOpen) {
                     $scope.markerWrappers.currentlyOpen = null;
                     that.infoWindow.close();
@@ -179,13 +195,13 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                         $scope.markerWrappers[$scope.markerWrappers.currentlyOpen].infoWindow.close();
                     }
 
-                    $scope.markerWrappers.currentlyOpen = dropin.id;                    
+                    $scope.markerWrappers.currentlyOpen = dropin.id;
                     that.infoWindow.open($scope.map, that.marker);
                     that.isOpen = true;
                 }
             };
         }
-        
+
         // UNUSED HELPER METHOD, COULD BE USERFUL LATER
 //        $scope.getSkillSortOrder = function (dropin) {
 //            switch (dropin.sport_event.skill_level) {
