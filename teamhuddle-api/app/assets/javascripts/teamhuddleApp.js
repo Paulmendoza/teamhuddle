@@ -14,7 +14,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         $scope.skillLevelSelect = "All";
 
         // initialize the predicate that sorting will be done through
-        $scope.predicate = 'datetime_start';
+        $scope.predicate = 'datetime_start.time';
 
         // array that will have all the dropin objects
         $scope.dropins = [];
@@ -165,7 +165,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             // the content for the infoWindow is set
             this.infoWindow = new google.maps.InfoWindow({
                 content: "<p><b>Location:</b> " + dropin.location.name + "</p>" +
-                        "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start, 'EEEE') + " </p>" +
+                        "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start.time, 'EEEE') + " </p>" +
                         "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>",
                 maxwidth: 600
             });
@@ -228,7 +228,7 @@ app.filter('weekday', function ($filter) {
         var retn = [];
 
         angular.forEach(sport_events, function (sport_event) {
-            if ($filter('date')(sport_event.datetime_start, 'EEEE') === day) {
+            if ($filter('date')(sport_event.datetime_start.time, 'EEEE') === day) {
 
                 retn.push(sport_event);
             }

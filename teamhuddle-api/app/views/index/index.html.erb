@@ -74,10 +74,10 @@
         <br>
         <table class="table col-lg-6 col-md-10 col-sm-10 col-xs-10">
           <tr class="table-row" ng-repeat="dropin in dropins" ng-click="markerWrappers[dropin.id].infoWindow.toggle(true); centerDropin(dropin)">
-            <td>{{dropin.datetime_start | date:'EEEE'}}</td>
+            <td>{{dropin.datetime_start.time | date:'EEEE'}}</td>
             <td>{{dropin.location.name}}</td>
             <td>{{dropin.sport_event.skill_level}}</td>
-            <td>{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</td>
+            <td>{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</td>
 
             <td><span class="button glyphicon glyphicon-remove" ng-click="remove(dropin)" /></td>
           </tr>
