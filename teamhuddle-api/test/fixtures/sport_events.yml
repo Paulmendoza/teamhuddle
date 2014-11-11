@@ -5,7 +5,7 @@ sport_events_001:
   sport_id: volleyball
   type: dropin
   skill_level: Beginner
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -35,7 +35,7 @@ sport_events_002:
   sport_id: volleyball
   type: dropin
   skill_level: Beginner
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -65,7 +65,7 @@ sport_events_003:
   sport_id: volleyball
   type: dropin
   skill_level: Beginner
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -95,7 +95,7 @@ sport_events_004:
   sport_id: volleyball
   type: dropin
   skill_level: Intermediate
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -125,7 +125,7 @@ sport_events_005:
   sport_id: volleyball
   type: dropin
   skill_level: Intermediate
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -155,7 +155,7 @@ sport_events_006:
   sport_id: volleyball
   type: dropin
   skill_level: Intermediate
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -185,7 +185,7 @@ sport_events_007:
   sport_id: volleyball
   type: dropin
   skill_level: Advanced
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -215,7 +215,7 @@ sport_events_008:
   sport_id: volleyball
   type: dropin
   skill_level: Advanced
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -245,7 +245,7 @@ sport_events_009:
   sport_id: volleyball
   type: dropin
   skill_level: Recreational
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -275,7 +275,7 @@ sport_events_010:
   sport_id: volleyball
   type: dropin
   skill_level: Advanced
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -305,7 +305,7 @@ sport_events_011:
   sport_id: volleyball
   type: dropin
   skill_level: Recreational
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -335,7 +335,7 @@ sport_events_012:
   sport_id: volleyball
   type: dropin
   skill_level: Recreational
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -365,7 +365,7 @@ sport_events_013:
   sport_id: soccer
   type: dropin
   skill_level: beginner
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -395,7 +395,7 @@ sport_events_014:
   sport_id: dragonboating
   type: dropin
   skill_level: Beginner
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -425,7 +425,7 @@ sport_events_015:
   sport_id: pooping
   type: dropin
   skill_level: Beginner
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -455,7 +455,7 @@ sport_events_016:
   sport_id: volleyball
   type: dropin
   skill_level: Beginner
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -485,7 +485,7 @@ sport_events_017:
   sport_id: hockey
   type: dropin
   skill_level: Beginner
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -515,7 +515,7 @@ sport_events_018:
   sport_id: basketball
   type: dropin
   skill_level: Beginner
-  price_per_one: 
+  price_per_one: 5
   price_per_group: 
   spots: 
   spots_filled: -1
@@ -524,6 +524,36 @@ sport_events_018:
   format: 
   created_at: '2014-11-09 22:16:55.937607'
   updated_at: '2014-11-09 22:16:55.937607'
+  schedule: |
+    ---
+    :start_time: 2014-10-09 19:00:00.000000000 -07:00
+    :start_date: 2014-10-09 19:00:00.000000000 -07:00
+    :end_time: 2014-10-09 22:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-09 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+sport_events_019:
+  id: 62
+  event_id: 92
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-11-10 03:04:31.319436'
+  updated_at: '2014-11-10 03:04:31.319436'
   schedule: |
     ---
     :start_time: 2014-10-09 19:00:00.000000000 -07:00

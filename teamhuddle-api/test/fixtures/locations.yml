@@ -1,7 +1,9 @@
 ---
 locations_001:
   id: 6
-  address: 
+  address: |-
+    6550 Bonsor Ave
+    Burnaby, BC V5H 2G8
   lat: 49.224338
   long: -122.99672
   name: Bonsor Recreation Centre
@@ -9,7 +11,9 @@ locations_001:
   updated_at: '2014-10-05 23:33:41.007419'
 locations_002:
   id: 9
-  address: 
+  address: |-
+    1 Athletes Way
+    Vancouver, BC V5Y 0B1
   lat: 49.27158
   long: -123.10563
   name: Creekside Community Centre
@@ -25,7 +29,9 @@ locations_003:
   updated_at: '2014-07-28 20:53:59.025998'
 locations_004:
   id: 28
-  address: 
+  address: |-
+    6111 River Rd
+    Richmond, BC V7C 0A2
   lat: 49.174819
   long: -123.151905
   name: Richmond Olympic Oval
@@ -33,7 +39,9 @@ locations_004:
   updated_at: '2014-10-05 23:32:56.933560'
 locations_005:
   id: 29
-  address: 
+  address: |-
+    480 Broughton St
+    Vancouver, BC V6G 3H4
   lat: 49.290287
   long: -123.125423
   name: Coal Harbour Community Centre
@@ -41,7 +49,9 @@ locations_005:
   updated_at: '2014-07-28 20:58:39.305029'
 locations_006:
   id: 33
-  address: 
+  address: |-
+    181 Roundhouse Mews
+    Vancouver, BC V6Z 2W3
   lat: 49.273653
   long: -123.121425
   name: Roundhouse Community Center
@@ -49,7 +59,9 @@ locations_006:
   updated_at: '2014-08-03 05:00:39.319585'
 locations_007:
   id: 34
-  address: 
+  address: |-
+    700 Willingdon Ave
+    Burnaby, BC V5G 3H2
   lat: 49.248615
   long: -123.001042
   name: British Columbia Institute of Technology SAC
@@ -57,7 +69,9 @@ locations_007:
   updated_at: '2014-10-05 22:03:08.229824'
 locations_008:
   id: 35
-  address: 
+  address: |-
+    1661 Napier St
+    Vancouver, BC V5L 4X4
   lat: 49.27479
   long: -123.071301
   name: Britannia Community Center
@@ -65,7 +79,9 @@ locations_008:
   updated_at: '2014-10-05 23:24:25.025110'
 locations_009:
   id: 36
-  address: 
+  address: |-
+    7433 Edmonds St
+    Burnaby, BC V3N 1B2
   lat: 49.221479
   long: -122.947658
   name: Edmonds Recreation Centre
@@ -73,7 +89,9 @@ locations_009:
   updated_at: '2014-10-05 23:32:17.623619'
 locations_010:
   id: 37
-  address: 
+  address: |-
+    12800 Cambie Rd
+    Richmond, BC V6V 0A9
   lat: 49.189109
   long: -123.078512
   name: Cambie Community Centre
@@ -81,7 +99,9 @@ locations_010:
   updated_at: '2014-10-05 23:35:59.819483'
 locations_011:
   id: 38
-  address: 
+  address: |-
+    3360 Victoria Dr
+    Vancouver, BC V5N 4M4
   lat: 49.255734
   long: -123.065289
   name: Trout Lake Community Centre
@@ -89,7 +109,9 @@ locations_011:
   updated_at: '2014-10-05 23:40:41.941781'
 locations_012:
   id: 39
-  address: 
+  address: |-
+    401 Main St
+    Vancouver, BC V6A 2T7
   lat: 49.281594
   long: -123.099514
   name: Carnegie Community Centre
@@ -97,7 +119,9 @@ locations_012:
   updated_at: '2014-10-05 23:53:47.425427'
 locations_013:
   id: 40
-  address: 
+  address: |-
+    3350 Maquinna Dr
+    Vancouver, BC V5S 4C6
   lat: 49.215158
   long: -123.031987
   name: Champlain Heights Community Centre
@@ -105,7 +129,9 @@ locations_013:
   updated_at: '2014-10-05 23:55:34.492061'
 locations_014:
   id: 41
-  address: 
+  address: |-
+    801 W 22nd Ave
+    Vancouver, BC V5Z 1Z8
   lat: 49.252022
   long: -123.122195
   name: Douglas Park Community Centre
@@ -113,7 +139,9 @@ locations_014:
   updated_at: '2014-10-05 23:56:47.175572'
 locations_015:
   id: 42
-  address: 
+  address: |-
+    4747 Dunbar Street
+    Vancouver, BC V6S 2H2
   lat: 49.244248
   long: -123.186031
   name: Dunbar Community Centre
@@ -121,7 +149,9 @@ locations_015:
   updated_at: '2014-10-05 23:57:57.547398'
 locations_016:
   id: 43
-  address: 
+  address: |-
+    320 Alexander St
+    Vancouver, BC V6A 1C3
   lat: 49.284394
   long: -123.096703
   name: Evelyne Saller Centre
@@ -129,7 +159,9 @@ locations_016:
   updated_at: '2014-10-05 23:58:40.416079'
 locations_017:
   id: 44
-  address: 
+  address: |-
+    1318 Cartwright St
+    Vancouver, BC V6H 3R8
   lat: 49.284828
   long: -123.096596
   name: False Creek Community Centre
@@ -137,7 +169,9 @@ locations_017:
   updated_at: '2014-10-06 00:00:47.824925'
 locations_018:
   id: 45
-  address: 
+  address: |-
+    609 Helmcken St
+    Vancouver, BC V6B 5R1
   lat: 49.278025
   long: -123.123482
   name: The Gathering Place
@@ -145,7 +179,9 @@ locations_018:
   updated_at: '2014-10-06 00:01:53.180894'
 locations_019:
   id: 46
-  address: 
+  address: |-
+    3096 Hastings St E
+    Vancouver, BC V5K 2A3
   lat: 49.28326
   long: -123.038661
   name: Hastings Community Centre
@@ -153,7 +189,9 @@ locations_019:
   updated_at: '2014-10-06 00:06:06.888831'
 locations_020:
   id: 47
-  address: 
+  address: |-
+    4575 Clancy Loranger Way
+    Vancouver, BC V5Y 2M4
   lat: 49.24719
   long: -123.104948
   name: Hillcrest Community Centre
@@ -161,7 +199,9 @@ locations_020:
   updated_at: '2014-10-06 00:07:04.900490'
 locations_021:
   id: 48
-  address: 
+  address: |-
+    5175 Dumfries Street
+    Vancouver, BC V5P 3A2
   lat: 49.238378
   long: -123.074215
   name: Kensington Community Centre
@@ -169,7 +209,9 @@ locations_021:
   updated_at: '2014-10-06 00:07:54.186882'
 locations_022:
   id: 49
-  address: 
+  address: |-
+    5851 West Blvd
+    Vancouver, BC V6M 3W9
   lat: 49.233517
   long: -123.156355
   name: Kerrisdale Community Centre
@@ -177,7 +219,9 @@ locations_022:
   updated_at: '2014-10-06 00:13:50.404673'
 locations_023:
   id: 50
-  address: 
+  address: |-
+    2690 Larch St
+    Vancouver, BC V6K 4K9
   lat: 49.26212
   long: -123.162084
   name: Kitsilano Community Centre
@@ -185,7 +229,9 @@ locations_023:
   updated_at: '2014-10-06 00:09:34.627974'
 locations_024:
   id: 51
-  address: 
+  address: |-
+    6260 Killarney St
+    Vancouver, BC V5S 2X7
   lat: 49.227043
   long: -123.043488
   name: Killarney Community Centre
@@ -193,7 +239,9 @@ locations_024:
   updated_at: '2014-10-06 00:10:44.714116'
 locations_025:
   id: 52
-  address: 
+  address: |-
+    990 W 59 Ave
+    Vancouver, BC V6P 1X9
   lat: 49.217443
   long: -123.12801
   name: Marpole Oakridge Community Centre
@@ -201,7 +249,9 @@ locations_025:
   updated_at: '2014-10-06 00:11:58.420505'
 locations_026:
   id: 53
-  address: 
+  address: |-
+    1 Kingway
+    Vancouver, BC V5T 3H7
   lat: 49.264245
   long: -123.100182
   name: Mount Pleasant Community Centre
@@ -209,7 +259,9 @@ locations_026:
   updated_at: '2014-10-06 00:13:31.601728'
 locations_027:
   id: 54
-  address: 
+  address: |-
+    920 East Hastings Street
+    Vancouver, BC V6A 3T1
   lat: 49.281258
   long: -123.083056
   name: Ray Cam Co-Operative Centre
@@ -217,7 +269,9 @@ locations_027:
   updated_at: '2014-10-06 00:14:44.808308'
 locations_028:
   id: 55
-  address: 
+  address: |-
+    2929 E 22nd Ave
+    Vancouver, BC V5M 2Y3
   lat: 49.251224
   long: -123.042737
   name: Renfrew Community Centre
@@ -225,7 +279,9 @@ locations_028:
   updated_at: '2014-10-06 00:15:41.596599'
 locations_029:
   id: 56
-  address: 
+  address: |-
+    601 Keefer St
+    Vancouver, BC V6A 3V8
   lat: 49.279831
   long: -123.091532
   name: Strathcona Community Centre
@@ -233,7 +289,9 @@ locations_029:
   updated_at: '2014-10-06 00:16:26.470370'
 locations_030:
   id: 57
-  address: 
+  address: |-
+    6810 Main St
+    Vancouver, BC V5X 0A1
   lat: 49.22623
   long: -123.100974
   name: Sunset Community Centre
@@ -241,7 +299,9 @@ locations_030:
   updated_at: '2014-10-06 00:17:28.259297'
 locations_031:
   id: 58
-  address: 
+  address: |-
+    2311 Cassiar St
+    Vancouver, BC V5M 3X3
   lat: 49.264066
   long: -123.031193
   name: Thunderbird Community Centre
@@ -249,7 +309,9 @@ locations_031:
   updated_at: '2014-10-06 00:18:38.778117'
 locations_032:
   id: 59
-  address: 
+  address: |-
+    870 Denman St
+    Vancouver, BC V6G 2L8
   lat: 49.290776
   long: -123.136464
   name: West End Community Centre
@@ -257,7 +319,9 @@ locations_032:
   updated_at: '2014-10-06 00:19:46.565042'
 locations_033:
   id: 60
-  address: 
+  address: |-
+    4397 W 2nd Ave
+    Vancouver, BC V6R 1K4
   lat: 49.271893
   long: -123.203948
   name: West Point Grey Community Centre

@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-    @locations = Location.all
+    @locations = Location.all.order(:name)
 
     respond_to do |format|
       format.html

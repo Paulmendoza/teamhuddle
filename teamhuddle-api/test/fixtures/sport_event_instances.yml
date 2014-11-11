@@ -3727,3 +3727,75 @@ sport_event_instances_466:
   datetime_start: '2014-12-08 03:00:00.000000'
   datetime_end: '2014-12-08 06:00:00.000000'
   event_id: 91
+sport_event_instances_467:
+  id: 1022
+  sport_event_id: 62
+  created_at: '2014-11-10 03:04:31.334539'
+  updated_at: '2014-11-10 03:04:31.334539'
+  datetime_start: '2014-10-13 02:00:00.000000'
+  datetime_end: '2014-10-13 05:00:00.000000'
+  event_id: 92
+sport_event_instances_468:
+  id: 1023
+  sport_event_id: 62
+  created_at: '2014-11-10 03:04:31.343344'
+  updated_at: '2014-11-10 03:04:31.343344'
+  datetime_start: '2014-10-20 02:00:00.000000'
+  datetime_end: '2014-10-20 05:00:00.000000'
+  event_id: 92
+sport_event_instances_469:
+  id: 1024
+  sport_event_id: 62
+  created_at: '2014-11-10 03:04:31.350348'
+  updated_at: '2014-11-10 03:04:31.350348'
+  datetime_start: '2014-10-27 02:00:00.000000'
+  datetime_end: '2014-10-27 05:00:00.000000'
+  event_id: 92
+sport_event_instances_470:
+  id: 1025
+  sport_event_id: 62
+  created_at: '2014-11-10 03:04:31.358242'
+  updated_at: '2014-11-10 03:04:31.358242'
+  datetime_start: '2014-11-03 03:00:00.000000'
+  datetime_end: '2014-11-03 06:00:00.000000'
+  event_id: 92
+sport_event_instances_471:
+  id: 1026
+  sport_event_id: 62
+  created_at: '2014-11-10 03:04:31.364691'
+  updated_at: '2014-11-10 03:04:31.364691'
+  datetime_start: '2014-11-10 03:00:00.000000'
+  datetime_end: '2014-11-10 06:00:00.000000'
+  event_id: 92
+sport_event_instances_472:
+  id: 1027
+  sport_event_id: 62
+  created_at: '2014-11-10 03:04:31.371695'
+  updated_at: '2014-11-10 03:04:31.371695'
+  datetime_start: '2014-11-17 03:00:00.000000'
+  datetime_end: '2014-11-17 06:00:00.000000'
+  event_id: 92
+sport_event_instances_473:
+  id: 1028
+  sport_event_id: 62
+  created_at: '2014-11-10 03:04:31.380251'
+  updated_at: '2014-11-10 03:04:31.380251'
+  datetime_start: '2014-11-24 03:00:00.000000'
+  datetime_end: '2014-11-24 06:00:00.000000'
+  event_id: 92
+sport_event_instances_474:
+  id: 1029
+  sport_event_id: 62
+  created_at: '2014-11-10 03:04:31.387432'
+  updated_at: '2014-11-10 03:04:31.387432'
+  datetime_start: '2014-12-01 03:00:00.000000'
+  datetime_end: '2014-12-01 06:00:00.000000'
+  event_id: 92
+sport_event_instances_475:
+  id: 1030
+  sport_event_id: 62
+  created_at: '2014-11-10 03:04:31.395069'
+  updated_at: '2014-11-10 03:04:31.395069'
+  datetime_start: '2014-12-08 03:00:00.000000'
+  datetime_end: '2014-12-08 06:00:00.000000'
+  event_id: 92
