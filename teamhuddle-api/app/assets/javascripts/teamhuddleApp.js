@@ -75,6 +75,14 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                         google.maps.event.trigger($scope.map, 'resize');
 
                         $scope.applyFilters();
+                        
+                        debugger
+                        if($scope.dropins.length > 3){
+                            $scope.format = 'table';
+                        }
+                        else{
+                            $scope.format = 'items';
+                        }
                     },
                     function (reason) {
                         alert('Failed: ' + reason);
