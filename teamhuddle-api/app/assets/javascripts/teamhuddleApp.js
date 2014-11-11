@@ -3,6 +3,8 @@ var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonb
 app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function ($scope, $filter, $location, Dropins) {
         // set my own orderBy filter directive
         var orderBy = $filter('orderBy');
+        
+        $scope.format = 'items';
 
         // a dictionary to hold all of the MarkerWrapper objects
         $scope.markerWrappers = {};
