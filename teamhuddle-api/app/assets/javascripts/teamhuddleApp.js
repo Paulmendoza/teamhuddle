@@ -5,6 +5,10 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         var orderBy = $filter('orderBy');
         
         $scope.format = 'items';
+        
+        $scope.isSelected = function(dropin_id){
+            return $scope.format ===  'items' || $scope.markerWrappers.currentlyOpen === dropin_id;
+        };
 
         // a dictionary to hold all of the MarkerWrapper objects
         $scope.markerWrappers = {};
@@ -76,13 +80,12 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 
                         $scope.applyFilters();
                         
-                        debugger
                         if($scope.dropins.length > 3){
                             $scope.format = 'table';
                         }
                         else{
                             $scope.format = 'items';
-                        }
+                        }                        
                     },
                     function (reason) {
                         alert('Failed: ' + reason);
@@ -209,6 +212,11 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                     that.infoWindow.open($scope.map, that.marker);
                     that.isOpen = true;
                 }
+                
+                if(!$scope.$$phase) {
+                    $scope.$apply();
+                }
+                
             };
         }
 

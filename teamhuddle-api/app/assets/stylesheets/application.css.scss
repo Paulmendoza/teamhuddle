@@ -208,6 +208,29 @@ li {
     dl {
         margin-bottom: 10px;               
     }
+    
+    hr {
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    p {
+        padding-top: 6px;
+    }
+    email {
+        padding-bottom: 5px;
+    }
+    .bolded {
+        font-weight: bold;
+    }
+    .dropin-info{
+        padding-bottom: 15px;
+    }
+    background-color: white;
+    
+}
+
+.selected {
+    background-color: #F2F2F2;
 }
 
  /*// ========== IMAGE STYLES ===========
