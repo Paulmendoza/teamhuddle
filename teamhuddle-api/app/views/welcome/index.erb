@@ -4,6 +4,7 @@
 <ul>
   <h4>Lots of Client Changes</h4>
   <h4>Ability to sign in and out</h4>
+  <h4>So far, <%= @users.count  %> people have signed up.</h4>
 </ul>
 
 <h2>Currently Functional:</h2>
@@ -19,5 +20,12 @@
   <li>This portion of the webapp will only act as an admin interface</li>
   <li>It will be used to interact with database and to supplement the Angular.js client</li>
 </ul>
+<br>
+<h4>List of people signed up</h4>
+<table>
+    <% @users.each do |user| %>
+    <tr><%=  user.email %></tr>
+    <% end %>
+</table>
 
   
