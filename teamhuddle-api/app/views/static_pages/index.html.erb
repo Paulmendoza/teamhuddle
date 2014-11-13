@@ -1,0 +1,70 @@
+<div class="container">
+<section>
+  <div class="header" ng-show="sport === 'no-sport'">
+      <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo'%>
+      <h1 class="text-center">teamhuddle</h1>
+      <h2 class="text-center">GAME ON!</h2>
+  </div>
+</section>
+
+
+<section class="sport_logos text-center" ng-show="sport === 'no-sport'">
+  <%= link_to(image_tag("volleyball-compressed.png", :alt => "asdf",
+  class: "sport_logo green_bck", id: "first"), "/#/volleyball") %>
+
+  <%= link_to(image_tag("hockey-compressed.png", :alt => "asdf", 
+  class: "sport_logo blue_bck", id: "second"), "/#/hockey") %>
+
+  <%= link_to(image_tag("basketball-compressed.png", :alt => "asdf", 
+  class: "sport_logo orange_bck", id: "third"), "/#/basketball") %>
+
+  <%= link_to(image_tag("soccer-compressed.png", :alt => "asdf", 
+  class: "sport_logo red_bck ", id: "fourth"), "/#/soccer") %>
+
+  <%= link_to(image_tag("dragonboat-compressed.png", :alt => "asdf", 
+  class: "sport_logo red_bck", id: "first"), "/#/dragonboat") %>
+
+  <%= link_to(image_tag("baseball.png", :alt => "asdf", 
+  class: "disabled sport_logo test_images", id: "second"), "") %>
+
+  <%= link_to(image_tag("ultimate.png", :alt => "asdf", 
+  class: "sdisabled sport_logo test_images", id: "third"), "") %>
+
+  <%= link_to(image_tag("dodgeball.png", :alt => "asdf", 
+  class: "disabled sport_logo test_images", id: "fourth"), "") %>     
+</section>
+
+<section>
+    <div class="features col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
+        <h2 class="text-center feature1">Cool feature #1</h2><br>
+        <p class="text-center">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.</p>
+    </div>
+    <div class="features col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
+        <h2 class="text-center feature2">Cool feature #2</h2><br>
+        <p class="text-center">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.</p>
+    </div>
+    <div class="features col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
+        <h2 class="text-center feature3">Cool feature #3</h2><br>
+        <p class="text-center">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.</p>
+    </div>
+</section>
+
+  <section>
+    <div class="mailer">
+      <div class="mailer-inner text-center col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+          <h3>Find the sports you love playing with the players you love playing with!</h3>
+          <h4>Submit your e-mail below to receive front of the line access to our beta</h4>
+          <br>
+          <%= form_for User.new do |f| %> 
+            <%= f.email_field :email, class: "form-control", placeholder: "Enter your e-mail" %>
+              <%= f.submit "Submit", class: "btn btn-info" %>
+          <% end %>
+
+        </div>
+      </div>
+  </section>
+    
+</div>

@@ -3,7 +3,8 @@
   <head>
     <title>teamhuddle</title>
     
-    <%= stylesheet_link_tag  'application', 
+    <%= stylesheet_link_tag  'application',
+                             'static_pages',
                              'http://fonts.googleapis.com/css?family=Jura:400,600',
                              'http://fonts.googleapis.com/css?family=Raleway:400,300',
                              'typography',
@@ -49,9 +50,7 @@
 
     </nav>
 
-    <div class="container-fluid">
         <%= yield %>
-    </div>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <div class="footer">

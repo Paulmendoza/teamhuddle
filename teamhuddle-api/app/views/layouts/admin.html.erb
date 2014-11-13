@@ -6,22 +6,22 @@
     <%= javascript_include_tag "admin"%>
   </head>
   <body>
-    <div class="container">
-      <div id="wrapper" class="panel panel-default">
+    <!-- <div class="container"> -->
+<!--       <div id="wrapper" class="panel panel-default">
         <ul class="nav nav-pills">
-        <% if admin_signed_in? %>
+        <%# if admin_signed_in? %>
           <li><a href="/admin">Home</a></li>
-          <li><%= link_to 'Organizations', organizations_path %></li>
-          <li><%= link_to 'Locations', locations_path %></li>
-          <li><%= link_to 'Dropins', dropins_path %></li>
-          <li><%= link_to "Sign out", destroy_admin_session_path, :method => :delete %></li>
-          <li><%= link_to "Change your password", edit_admin_registration_path %></li>
+          <li><%#= link_to 'Organizations', organizations_path %></li>
+          <li><%#= link_to 'Locations', locations_path %></li>
+          <li><%#= link_to 'Dropins', dropins_path %></li>
+          <li><%#= link_to "Sign out", destroy_admin_session_path, :method => :delete %></li>
+          <li><%#= link_to "Change your password", edit_admin_registration_path %></li>
           <li><a href="#">More to come...</a></li>
-        <% end %>
-        <li><%= link_to 'Client', root_path%></li>
-        </ul>
+        <%# end %>
+        <li><%#= link_to 'Client', root_path%></li>
+        </ul> -->
         <%= yield %>
-      </div>
-    </div>
-  </body>
+<!--       </div>
+ --><!--     </div>
+ -->  </body>
 </html>
