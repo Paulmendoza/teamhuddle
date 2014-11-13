@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   # basic routes
   get 'contact' => 'index#contact'
   get 'about' => 'index#about'
+  get 'landing' => 'index#landing'
   
   scope :admin do
     resources :locations
@@ -22,7 +23,6 @@ Rails.application.routes.draw do
     resources :dropins
   end
   
-  resources :static_pages 
 
   resources :users
 
