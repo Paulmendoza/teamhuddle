@@ -241,7 +241,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 
 // FILTERS
 // filter based on a certain weekday
-app.filter('weekday', function ($filter) {
+app.filter('weekday', ['$filter', function ($filter) {
     return function (sport_events, day) {
         var retn = [];
 
@@ -254,7 +254,7 @@ app.filter('weekday', function ($filter) {
 
         return retn;
     };
-});
+}]);
 
 // filter based on skill level
 app.filter('skill_level', function () {

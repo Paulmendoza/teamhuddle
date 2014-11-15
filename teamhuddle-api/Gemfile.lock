@@ -126,6 +126,9 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2014.7)
       tzinfo (>= 1.0.0)
+    uglifier (2.5.3)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -151,3 +154,4 @@ DEPENDENCIES
   sqlite3
   therubyracer
   tzinfo-data
+  uglifier
