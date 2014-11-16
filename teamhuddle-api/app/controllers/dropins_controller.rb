@@ -17,7 +17,9 @@ class DropinsController < ApplicationController
     
     
     # This is for the admin page -> see index.erb
-    @dropins = SportEvent.includes(:event, :location, :organization).where( sport_events: { type: "dropin", sport_id: @sport})
+    @dropins = SportEvent.includes(:event, :location, :organization)
+    .where( sport_events: { type: "dropin", sport_id: @sport, dtDeleted: nil })
+    .order(:created_at)
     
     
     #active = false
@@ -83,8 +85,7 @@ class DropinsController < ApplicationController
   end
   
   def destroy
-    @event = Event.find(params[:id])
-    @event.destroy
+    SportEvent.find(params[:id]).soft_delete
     respond_to do |format|
       format.html { redirect_to :action => 'index'}
       format.json { render :nothing => true, status => :no_conent }
@@ -147,11 +148,8 @@ class DropinsController < ApplicationController
         event[:error] = error  
       end
       
+      render :template => 'dropins/import'
     end
-    
- 
-    
-    render :template => 'dropins/import'
   end
   
   private
@@ -205,10 +203,10 @@ class DropinsController < ApplicationController
       'Beginner', # hardcoded to random value TODO: try and parse this with regexes
       schedule)
     
-#    # if there are errors, return them
-#    if dropin.errors.count > 0
-#      return dropin.errors
-#    end
+    #    # if there are errors, return them
+    #    if dropin.errors.count > 0
+    #      return dropin.errors
+    #    end
     
     # otherwise return nil
     return nil

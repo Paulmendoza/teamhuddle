@@ -72,18 +72,54 @@
       <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
       <div class="dropin_results">  
         <br>
-        <table class="table col-lg-6 col-md-10 col-sm-10 col-xs-10">
-          <tr class="table-row" ng-repeat="dropin in dropins" ng-click="markerWrappers[dropin.id].infoWindow.toggle(true); centerDropin(dropin)">
-            <td>{{dropin.datetime_start | date:'EEEE'}}</td>
-            <td>{{dropin.location.name}}</td>
-            <td>{{dropin.sport_event.skill_level}}</td>
-            <td>{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</td>
+        <%#*<table ng-if="format === 'items'" class="table col-lg-6 col-md-10 col-sm-10 col-xs-10">%>
+        <%#*<tr class="table-row" ng-repeat="dropin in dropins" ng-click="markerWrappers[dropin.id].infoWindow.toggle(true); centerDropin(dropin)">%>
+          <%#*<td>{{dropin.datetime_start.time | date:'EEEE'}}</td>%>
+          <%#*<td>{{dropin.location.name}}</td>%>
+          <%#*<td>{{dropin.sport_event.skill_level}}</td>%>
+          <%#*<td>{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</td>%>
 
-            <td><span class="button glyphicon glyphicon-remove" ng-click="remove(dropin)" /></td>
-          </tr>
-        </table>
-        
+          <%#*<td><span class="button glyphicon glyphicon-remove" ng-click="remove(dropin)" /></td>%>
+        <%#*</tr>%>
+        <%#*</table>%>
+        <div class="row clearfix dropin-repeat" ng-class="{selected: markerWrappers.currentlyOpen === dropin.id}"  ng-repeat="dropin in dropins" ng-click="markerWrappers[dropin.id].infoWindow.toggle(); centerDropin(dropin)">         
+            <hr>
+            <div class="col-md-4">
+              <h4 ng-class="{bolded: isSelected(dropin.id)}">{{dropin.location.name}}</h4>
+              <div ng-show="isSelected(dropin.id)" class="dropin-info">
+                <span>{{dropin.location.address}}</span><br>
+                <span>{{dropin.organization.phone}}</span><br>
+                <email>{{dropin.organization.email}}</email>
+              </div>
+            </div>
+            <!-- show this if it's not selected -->
+            <div ng-hide="isSelected(dropin.id)">
+                <p class="col-md-2 col-xs-4">{{dropin.datetime_start.time | date:'EEEE'}}</p>
+                <p class="col-md-2 col-xs-4">{{dropin.sport_event.skill_level}}</p>
+                <p class="col-md-4 col-xs-8">{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</p>
+            </div>
+            
+            <!-- show this if it is selected -->
+            <div ng-show="isSelected(dropin.id)">
+              <div class="col-md-4">
+                <br>
+                <dt>Price</dt><dl>{{dropin.sport_event.price_per_one | currency }}</dl>
+                <dt>Skill Level</dt><dl>{{dropin.sport_event.skill_level}}</dl>
+              </div>
+              <div class="col-md-4">
+                <br>
+                <dt>Day</dt><dl>{{dropin.datetime_start.time | date:'EEEE'}}</dl>
+                <dt>Time</dt><dl>{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</dl>
+              </div>
+            </div>
+            
+        </div>
+        </div>
       </div>
     </div>
   </section>
 </div>
+
+<%= javascript_include_tag 'application' %>  
+<%= javascript_include_tag '//maps.googleapis.com/maps/api/js?key=AIzaSyDwIy4KU0bhEV5R3yV5hAqAcL_TIjlrY0o' %>
+

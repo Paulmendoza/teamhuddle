@@ -4,6 +4,7 @@
 <table class="table">
   <tr>
     <th>Name</th>
+    <th>Address</th>
     <th>Latitude</th>
     <th>Longtitude</th>
     <th></th>
@@ -12,6 +13,7 @@
   <% @locations.each do |location| %>
   <tr>
     <td><%= link_to location.name, location_path(location) %></td>
+    <td><%= location.address %>
     <td><%= location.lat %></td>
     <td><%= location.long %></td>
     <td>

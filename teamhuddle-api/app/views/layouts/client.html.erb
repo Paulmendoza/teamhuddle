@@ -3,7 +3,8 @@
   <head>
     <title>teamhuddle</title>
     
-    <%= stylesheet_link_tag  'application', 
+    <%= stylesheet_link_tag  'application',
+                             'static_pages',
                              'http://fonts.googleapis.com/css?family=Jura:400,600',
                              'http://fonts.googleapis.com/css?family=Raleway:400,300',
                              'typography',
@@ -18,7 +19,7 @@
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53af382b4ee31991" async="async"></script>
 
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <a class="navbar-brand logotext" href="#"><%= image_tag 'logo.png', class: "logonav center-block", alt: 'teamhuddle_logo'%></a>
+      <a class="navbar-brand logotext" href="/#/"><%= image_tag 'logo-compressed.png', class: "logonav center-block", alt: 'teamhuddle_logo'%></a>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -30,37 +31,33 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown navlinks">
-          <a href="#/" class="dropdown-toggle" data-toggle="dropdown">sports <span class="caret"></span></a>
+          <a href="/#/" class="dropdown-toggle" data-toggle="dropdown">sports <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><%= link_to "volleyball", "#volleyball" %></li>
-            <li><%= link_to "hockey", "#hockey" %></li>
-            <li><%= link_to "basketball", "#basketball" %></li>
-            <li><%= link_to "soccer", "#soccer" %></li>
-            <li><%= link_to "dragonboating", "#dragonboating" %></li>
+            <li><%= link_to "volleyball", "/#/volleyball" %></li>
+            <li><%= link_to "hockey", "/#/hockey" %></li>
+            <li><%= link_to "basketball", "/#/basketball" %></li>
+            <li><%= link_to "soccer", "/#/soccer" %></li>
+            <li><%= link_to "dragonboat", "/#/dragonboat" %></li>
 
           </ul>
         </li>
 
-          <li class="navlinks"><%= link_to "about" %></li>        
-          <li class="navlinks"><%= link_to "contact" %></li>        
-          <li class="navlinks"><%= link_to "team" %></li>
+          <li class="navlinks"><%= link_to "about", controller: :index, action: :about %></li>        
+          <li class="navlinks"><%= link_to "contact", controller: :index, action: :contact %></li>
+          <li class="navlinks"><%= link_to "landing page", controller: :index, action: :landing %></li>
           <li class="navlinks"></li>
         </ul>
       </div>
 
     </nav>
 
-    <div class="container-fluid">
         <%= yield %>
-    </div>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <div class="footer">
       <div class="addthis_horizontal_follow_toolbox pull-right addthis"></div>
     </div>
-
-    <%= javascript_include_tag 'application' %>  
-    <%= javascript_include_tag '//maps.googleapis.com/maps/api/js?key=AIzaSyDwIy4KU0bhEV5R3yV5hAqAcL_TIjlrY0o' %>
+    
     
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
 

@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'admin' => 'welcome#index'
   
+  
+  # basic routes
+  get 'contact' => 'index#contact'
+  get 'about' => 'index#about'
+  get 'landing' => 'index#landing'
+  
   scope :admin do
     resources :locations
     resources :organizations
@@ -22,7 +28,8 @@ Rails.application.routes.draw do
     end
   end
   
-  
+
+  resources :users
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

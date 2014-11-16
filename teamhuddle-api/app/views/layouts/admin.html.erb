@@ -6,7 +6,7 @@
     <%= javascript_include_tag "admin"%>
   </head>
   <body>
-    <div class="container">
+     <div class="container">
       <div id="wrapper" class="panel panel-default">
         <ul class="nav nav-pills">
         <% if admin_signed_in? %>
@@ -21,6 +21,6 @@
         </ul>
         <%= yield %>
       </div>
-    </div>
+     </div>
   </body>
 </html>

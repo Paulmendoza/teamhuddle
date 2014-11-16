@@ -1,15 +1,71 @@
 ---
 admins_001:
-  id: 2
-  email: akos@akos.com
-  encrypted_password: $2a$10$jVOdrx1E.NUJxaJxrAGJ8ONv9F3GSCDiutnpSgvQQvKLMfo6jZZru
+  id: 3
+  email: jon@teamhuddle.ca
+  encrypted_password: $2a$10$iBC0hUD3KKvuR2/j2wRnLuVQGxujoYGYRkr6w1sWj7R2FdnCq3IX2
   reset_password_token: 
   reset_password_sent_at: 
-  remember_created_at: '2014-11-09 14:03:44.560803'
-  sign_in_count: 4
-  current_sign_in_at: '2014-11-09 14:05:41.332918'
-  last_sign_in_at: '2014-11-09 14:03:44.577647'
-  current_sign_in_ip: 127.0.0.1
-  last_sign_in_ip: 127.0.0.1
-  created_at: '2014-10-18 22:59:13.526806'
-  updated_at: '2014-11-09 14:05:41.334715'
+  remember_created_at: 
+  sign_in_count: 0
+  current_sign_in_at: 
+  last_sign_in_at: 
+  current_sign_in_ip: 
+  last_sign_in_ip: 
+  created_at: '2014-11-13 04:45:29.425221'
+  updated_at: '2014-11-13 04:45:29.425221'
+admins_002:
+  id: 4
+  email: marc@teamhuddle.ca
+  encrypted_password: $2a$10$cBTzPc57bLnVYN8bEzlDHeHwjyZVGH8ifTFDPiuQDb9NIDll9powa
+  reset_password_token: 
+  reset_password_sent_at: 
+  remember_created_at: 
+  sign_in_count: 0
+  current_sign_in_at: 
+  last_sign_in_at: 
+  current_sign_in_ip: 
+  last_sign_in_ip: 
+  created_at: '2014-11-13 04:46:41.700899'
+  updated_at: '2014-11-13 04:46:41.700899'
+admins_003:
+  id: 5
+  email: zamina@teamhuddle.ca
+  encrypted_password: $2a$10$v8mEiFdEb4z.EYLqK9Anf.1d0n4JM1QWbN0OK9zugz6Oco7SKMVne
+  reset_password_token: 
+  reset_password_sent_at: 
+  remember_created_at: 
+  sign_in_count: 0
+  current_sign_in_at: 
+  last_sign_in_at: 
+  current_sign_in_ip: 
+  last_sign_in_ip: 
+  created_at: '2014-11-13 04:47:23.003829'
+  updated_at: '2014-11-13 04:47:23.003829'
+admins_004:
+  id: 6
+  email: paul@teamhuddle.ca
+  encrypted_password: $2a$10$Ul5Ee/mK2ZJVqb.VPrV28.yUfnrUyvj.sWB/VIgAefBDOLWzFrGx2
+  reset_password_token: 
+  reset_password_sent_at: 
+  remember_created_at: 
+  sign_in_count: 0
+  current_sign_in_at: 
+  last_sign_in_at: 
+  current_sign_in_ip: 
+  last_sign_in_ip: 
+  created_at: '2014-11-13 04:48:26.298321'
+  updated_at: '2014-11-13 04:48:26.298321'
+admins_005:
+  id: 7
+  email: akos@teamhuddle.ca
+  encrypted_password: $2a$10$Vz0QQIZYaeg/Jgux1Sl42eJy.JlfE8QPQ0QEfMWSyRkg65z4.KFrm
+  reset_password_token: 
+  reset_password_sent_at: 
+  remember_created_at: 
+  sign_in_count: 0
+  current_sign_in_at: 
+  last_sign_in_at: 
+  current_sign_in_ip: 
+  last_sign_in_ip: 
+  created_at: '2014-11-13 04:49:21.947904'
+  updated_at: '2014-11-13 04:49:21.947904'

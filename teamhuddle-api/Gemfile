@@ -41,7 +41,7 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.2.0'
 
 # Only install on UNIX platforms
-gem "therubyracer", :platform => :ruby
+gem 'therubyracer', :platform => :ruby
 
 gem 'autoprefixer-rails'
 
@@ -51,5 +51,7 @@ gem 'angular-rails-templates'
 
 gem 'rest-client'
 
+# For debugging
 gem 'byebug'
 
+gem 'uglifier'

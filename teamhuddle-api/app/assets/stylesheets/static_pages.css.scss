@@ -1,0 +1,53 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+@import "variables";
+
+.features {
+	min-height: 1px;
+	padding: 30px;
+	background-color: $contrast-color;
+
+	.feature1 {
+		color: $light-green;
+	}
+
+	.feature2 {
+		color: $light-blue;
+	}
+
+	.feature3 {
+		color: $light-orange;
+	}
+
+	p {
+		color: $primary-color;
+	}
+
+	img {
+		border: 2px solid $primary-color;
+	}
+}
+
+
+.mailer {
+	min-height: 400px;
+	background-color: #fff;
+
+	.mailer-inner {
+		padding: 60px 60px 100px 60px
+	}
+
+	.form-group {
+		margin: 0 auto;
+	}
+
+	.btn-info:hover {
+		color: $light-red;
+		background-color: #fff;
+		border: 1px solid $light-red;
+	}
+
+}
