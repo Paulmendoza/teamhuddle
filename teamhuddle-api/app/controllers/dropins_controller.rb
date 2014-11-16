@@ -15,17 +15,14 @@ class DropinsController < ApplicationController
     @sport = String.new("volleyball")
     @sport = params[:sport] if params[:sport].present?
     
-    
     # This is for the admin page -> see index.erb
     @dropins = SportEvent.includes(:event, :location, :organization)
     .where( sport_events: { type: "dropin", sport_id: @sport, dt_deleted: nil })
     .order(:created_at)
     
-    
     #active = false
     #active = params[:active] if params[:active].present?
     #dropin.schedule.occurring_between?(Time.now, Time.new('2100'))
-    
     
   end
   
@@ -104,7 +101,6 @@ class DropinsController < ApplicationController
   end
   
   def import
-    
   end
   
   def scrape
@@ -118,8 +114,7 @@ class DropinsController < ApplicationController
     
     days_of_the_week = ['monday', 'tuesday', 'wednesday', 
       'thursday', 'friday', 'saturday', 'sunday']
-    
-    
+
     # loop through each community center
     response['results'].each do |rec_center|  
       
@@ -153,7 +148,6 @@ class DropinsController < ApplicationController
       
       
     end
-    byebug
     respond_to do |format|
       format.html { render json: @tentative_events }
       format.json { render json: @tentative_events }
