@@ -10,7 +10,9 @@ class SportEventWrapper
       sport,
       skill_level,
       price_per_one,
-      schedule)
+      schedule,
+      suppress_sport_event_instances: false)
+    
     
     @current_dropin = {}
     
@@ -54,7 +56,12 @@ class SportEventWrapper
           sport_event_instances.push(dropin_instance)
         end
         
-        @current_dropin[:sport_event_instances] = sport_event_instances
+        
+        # only add it if you really want it
+        if not suppress_sport_event_instances
+          @current_dropin[:sport_event_instances] = sport_event_instances
+        end
+        
         
       else
         @current_dropin[:errors] = @current_dropin[:sport_event].errors

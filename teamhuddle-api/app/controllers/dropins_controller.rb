@@ -62,7 +62,7 @@ class DropinsController < ApplicationController
       s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[params[:day]]).until(end_date))
     end
     
-    dropin = SportEventWrapper.new(params[:dropin][:name],
+    @dropin = SportEventWrapper.new(params[:dropin][:name],
       params[:dropin][:location_id],
       params[:dropin][:organization_id],
       params[:dropin][:comments],
@@ -72,7 +72,7 @@ class DropinsController < ApplicationController
       schedule)
     
     
-    if dropin[:errors].present?
+    if @dropin[:errors].present?
       render json: { error: dropin[:errors] }, :status => :unprocessable_entity
     else
       respond_to do |format|
@@ -141,15 +141,24 @@ class DropinsController < ApplicationController
       end
     end
     
+    # go through all parse events and try and create dropins from them
+    
+    
+    @tentative_events = Array.new
+    
     @events.each do |event|
+      temp_dropin = create_dropin_from_scrape_object(event)
       
-      error = create_dropin_from_scrape_object(event)
-      unless error.nil?
-        event[:error] = error  
-      end
+      @tentative_events.push(temp_dropin)
       
-      render :template => 'dropins/import'
+      
     end
+    byebug
+    respond_to do |format|
+      format.html { render json: @tentative_events }
+      format.json { render json: @tentative_events }
+    end
+    
   end
   
   private
@@ -185,6 +194,7 @@ class DropinsController < ApplicationController
     end_time = Time.parse(event[:end_time])
     
     # get the start date and end date NOTE: adds time as well to startime
+    # hardcoded right now. TODO change this
     start_datetime = Time.new(2014, 6, 31, start_time.hour, start_time.min) 
     end_date = Time.new(2014, 12, 31)
       
@@ -201,15 +211,11 @@ class DropinsController < ApplicationController
       'volleyball', # hardcoded to volleyball. TODO: change to dynamic lookup
       0,
       'Beginner', # hardcoded to random value TODO: try and parse this with regexes
-      schedule)
+      schedule,
+      suppress_sport_event_instances: true)
     
-    #    # if there are errors, return them
-    #    if dropin.errors.count > 0
-    #      return dropin.errors
-    #    end
-    
-    # otherwise return nil
-    return nil
+
+    return dropin
     
   end
 
