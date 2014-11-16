@@ -18,7 +18,7 @@ class DropinsController < ApplicationController
     
     # This is for the admin page -> see index.erb
     @dropins = SportEvent.includes(:event, :location, :organization)
-    .where( sport_events: { type: "dropin", sport_id: @sport, dtDeleted: nil })
+    .where( sport_events: { type: "dropin", sport_id: @sport, dt_deleted: nil })
     .order(:created_at)
     
     
@@ -62,7 +62,7 @@ class DropinsController < ApplicationController
       s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[params[:day]]).until(end_date))
     end
     
-    dropin = Dropin.new(params[:dropin][:name],
+    dropin = SportEventWrapper.new(params[:dropin][:name],
       params[:dropin][:location_id],
       params[:dropin][:organization_id],
       params[:dropin][:comments],
@@ -72,8 +72,8 @@ class DropinsController < ApplicationController
       schedule)
     
     
-    if dropin.errors.count > 0 
-      render json: { error: dropin.errors }, :status => :unprocessable_entity
+    if dropin[:errors].present?
+      render json: { error: dropin[:errors] }, :status => :unprocessable_entity
     else
       respond_to do |format|
         format.json { render json: @dropin }
@@ -194,7 +194,7 @@ class DropinsController < ApplicationController
       s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[event[:day]]).until(end_date))
     end
     
-    dropin = Dropin.new((0..16).to_a.map{|a| rand(16).to_s(16)}.join, #random name for now
+    dropin = SportEventWrapper.new((0..16).to_a.map{|a| rand(16).to_s(16)}.join, #random name for now
       9, # harcode everything to Creekside. TODO: change this to dynamic lookup
       5, # hardcoded to Vancouver board right now. TODO: change to dynamic lookup
       nil,

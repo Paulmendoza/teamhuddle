@@ -27,9 +27,16 @@ Rails.application.routes.draw do
       end
     end
   end
-  
 
   resources :users
+  
+  # aliases of sport_event
+  scope :api, defaults: { format: 'json' } do
+    scope :v1 do
+
+      resources :api_dropins
+    end
+  end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
@@ -77,13 +84,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   
-  # aliases of sport_event
-  scope :api, defaults: { format: 'json' } do
-    scope :v1 do
-
-      resources :api_dropins
-    end
-  end
+  
   
   
 

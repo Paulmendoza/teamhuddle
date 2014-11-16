@@ -24,7 +24,7 @@ class SportEvent < ActiveRecord::Base
   end
   
   def schedule_has_no_occurrences
-    if schedule.present? && (schedule.remaining_occurrences.count < 1)
+    if schedule.present? && (schedule.all_occurrences.count < 1)
       errors.add(:no_occurrences, "The way you configured your schedule, no occurences were made. (Maybe start date was greater than end date?)") 
     end
   end
