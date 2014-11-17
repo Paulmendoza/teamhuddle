@@ -59,14 +59,17 @@ class DropinsController < ApplicationController
       s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[params[:day]]).until(end_date))
     end
     
+    byebug
+    
     @dropin = SportEventWrapper.new(params[:dropin][:name],
       params[:dropin][:location_id],
       params[:dropin][:organization_id],
       params[:dropin][:comments],
       params[:dropin][:sport],
-      params[:price_per_one],
       params[:skill_level],
-      schedule)
+      params[:price_per_one],
+      schedule,
+      false)
     
     
     if @dropin[:errors].present?
@@ -203,10 +206,10 @@ class DropinsController < ApplicationController
       5, # hardcoded to Vancouver board right now. TODO: change to dynamic lookup
       nil,
       'volleyball', # hardcoded to volleyball. TODO: change to dynamic lookup
-      0,
       'Beginner', # hardcoded to random value TODO: try and parse this with regexes
+      0,
       schedule,
-      suppress_sport_event_instances: true)
+      true)
     
 
     return dropin

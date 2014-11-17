@@ -11,7 +11,7 @@ class SportEventWrapper
       skill_level,
       price_per_one,
       schedule,
-      suppress_sport_event_instances: false)
+      suppress_sport_event_instances)
     
     
     @current_dropin = {}
