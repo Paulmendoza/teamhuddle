@@ -2,7 +2,7 @@
 admins_001:
   id: 3
   email: jon@teamhuddle.ca
-  encrypted_password: $2a$10$iBC0hUD3KKvuR2/j2wRnLuVQGxujoYGYRkr6w1sWj7R2FdnCq3IX2
+  encrypted_password: "$2a$10$iBC0hUD3KKvuR2/j2wRnLuVQGxujoYGYRkr6w1sWj7R2FdnCq3IX2"
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
@@ -16,21 +16,21 @@ admins_001:
 admins_002:
   id: 4
   email: marc@teamhuddle.ca
-  encrypted_password: $2a$10$cBTzPc57bLnVYN8bEzlDHeHwjyZVGH8ifTFDPiuQDb9NIDll9powa
+  encrypted_password: "$2a$10$cBTzPc57bLnVYN8bEzlDHeHwjyZVGH8ifTFDPiuQDb9NIDll9powa"
   reset_password_token: 
   reset_password_sent_at: 
-  remember_created_at: 
-  sign_in_count: 0
-  current_sign_in_at: 
-  last_sign_in_at: 
-  current_sign_in_ip: 
-  last_sign_in_ip: 
+  remember_created_at: '2014-11-14 02:19:39.140784'
+  sign_in_count: 1
+  current_sign_in_at: '2014-11-14 02:19:39.148001'
+  last_sign_in_at: '2014-11-14 02:19:39.148001'
+  current_sign_in_ip: 24.114.25.20
+  last_sign_in_ip: 24.114.25.20
   created_at: '2014-11-13 04:46:41.700899'
-  updated_at: '2014-11-13 04:46:41.700899'
+  updated_at: '2014-11-14 02:19:39.149081'
 admins_003:
   id: 5
   email: zamina@teamhuddle.ca
-  encrypted_password: $2a$10$v8mEiFdEb4z.EYLqK9Anf.1d0n4JM1QWbN0OK9zugz6Oco7SKMVne
+  encrypted_password: "$2a$10$v8mEiFdEb4z.EYLqK9Anf.1d0n4JM1QWbN0OK9zugz6Oco7SKMVne"
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
@@ -44,7 +44,7 @@ admins_003:
 admins_004:
   id: 6
   email: paul@teamhuddle.ca
-  encrypted_password: $2a$10$Ul5Ee/mK2ZJVqb.VPrV28.yUfnrUyvj.sWB/VIgAefBDOLWzFrGx2
+  encrypted_password: "$2a$10$Ul5Ee/mK2ZJVqb.VPrV28.yUfnrUyvj.sWB/VIgAefBDOLWzFrGx2"
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
@@ -58,14 +58,14 @@ admins_004:
 admins_005:
   id: 7
   email: akos@teamhuddle.ca
-  encrypted_password: $2a$10$Vz0QQIZYaeg/Jgux1Sl42eJy.JlfE8QPQ0QEfMWSyRkg65z4.KFrm
+  encrypted_password: "$2a$10$Vz0QQIZYaeg/Jgux1Sl42eJy.JlfE8QPQ0QEfMWSyRkg65z4.KFrm"
   reset_password_token: 
   reset_password_sent_at: 
-  remember_created_at: 
-  sign_in_count: 0
-  current_sign_in_at: 
-  last_sign_in_at: 
-  current_sign_in_ip: 
-  last_sign_in_ip: 
+  remember_created_at: '2014-11-13 07:49:36.308587'
+  sign_in_count: 4
+  current_sign_in_at: '2014-11-17 02:11:11.950162'
+  last_sign_in_at: '2014-11-13 19:56:48.572376'
+  current_sign_in_ip: 24.84.34.3
+  last_sign_in_ip: 199.60.19.194
   created_at: '2014-11-13 04:49:21.947904'
-  updated_at: '2014-11-13 04:49:21.947904'
+  updated_at: '2014-11-17 02:11:11.951708'
