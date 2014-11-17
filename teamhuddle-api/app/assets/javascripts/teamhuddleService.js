@@ -22,7 +22,7 @@ function getEndOfTheWeek(d) {
 }
 
 // the dropins service that is expandable with new functions easily
-app.service('Dropins', function ($http, $q) {
+app.service('Dropins', ['$http', '$q', function ($http, $q) {
 
     var baseUrl = '/api/v1/api_dropins.json?';
 
@@ -52,4 +52,4 @@ app.service('Dropins', function ($http, $q) {
         return deferred.promise;
     };
 
-});
+}]);

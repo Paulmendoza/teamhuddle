@@ -18,7 +18,7 @@ class DropinsController < ApplicationController
     
     # This is for the admin page -> see index.erb
     @dropins = SportEvent.includes(:event, :location, :organization)
-                         .where( sport_events: { type: "dropin", sport_id: @sport})
+                         .where( sport_events: { type: "dropin", sport_id: @sport, dt_deleted: nil })
                          .order(:created_at)
     
     
@@ -119,8 +119,11 @@ class DropinsController < ApplicationController
   end
 
   def destroy
-    @event = Event.find(params[:id])
-    @event.destroy
+#    @event = Event.find(params[:id])
+#    @event.destroy
+    
+    SportEvent.find(params[:id]).soft_delete
+    
     respond_to do |format|
       format.html { redirect_to :action => 'index'}
       format.json { render :nothing => true, status => :no_conent }
