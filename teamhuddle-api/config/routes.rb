@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  # devise_for :admins, :controllers => { :registrations => :registrations }
+  devise_for :admins, :controllers => { :registrations => :registrations }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -11,13 +11,18 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'admin' => 'welcome#index'
   
+  
+  # basic routes
+  get 'contact' => 'index#contact'
+  get 'about' => 'index#about'
+  get 'landing' => 'index#landing'
+  
   scope :admin do
     resources :locations
     resources :organizations
     resources :dropins
   end
   
-  resources :static_pages 
 
   resources :users
 

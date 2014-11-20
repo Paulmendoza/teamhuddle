@@ -8,55 +8,56 @@
 
 
   <section class="sport_logos text-center" ng-show="sport === 'no-sport'">
-      <%= link_to(image_tag("volleyball-compressed.png", :alt => "volleyball",
-          class: "sport_logo green_bck", id: "first"), "#volleyball", 
-          :data => { :'ng-click' => 'sport="volleyball"; refreshDropins()' }) %>
-        
-      <%= link_to(image_tag("hockey-compressed.png", :alt => "hockey", 
-          class: "sport_logo blue_bck", id: "second"), "#hockey", 
-          :data => { :'ng-click' => 'sport="hockey"; refreshDropins()' }) %>
-        
-      <%= link_to(image_tag("basketball-compressed.png", :alt => "basketball", 
-          class: "sport_logo orange_bck", id: "third"), "#basketball", 
-          :data => { :'ng-click' => 'sport="basketball"; refreshDropins()' }) %>
-        
-      <%= link_to(image_tag("soccer-compressed.png", :alt => "soccer", 
-          class: "sport_logo red_bck ", id: "fourth"), "#soccer", 
-          :data => { :'ng-click' => 'sport="soccer"; refreshDropins()' }) %>
-            
-      <%= link_to(image_tag("dragonboat-compressed.png", :alt => "dragonboat", 
-          class: "sport_logo red_bck", id: "first"), "#dragonboat", 
-          :data => { :'ng-click' => 'sport="dragonboat"; refreshDropins()' }) %>
-      
-      <%= link_to(image_tag("baseball.png", :alt => "baseball", 
-          class: "disabled sport_logo test_images", id: "second"), "", 
-          :data => { :'ng-click' => 'sport="blank"; refreshDropins()' }) %>
 
-      <%= link_to(image_tag("ultimate.png", :alt => "ultimate", 
-          class: "sdisabled sport_logo test_images", id: "third"), "", 
-          :data => { :'ng-click' => 'sport="blank"; refreshDropins()' }) %>
-        
-      <%= link_to(image_tag("dodgeball.png", :alt => "dodgeball", 
-          class: "disabled sport_logo test_images", id: "fourth"), "", 
-          :data => { :'ng-click' => 'sport="blank"; refreshDropins()' }) %>
-        
+<!-- DO NOT DELETE -->
+<!--     <div class="sport-outer">
+      <div class="sport-first col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-second col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-third col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-fourth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-fifth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-sixth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-seventh col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-eighth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+    </div> -->
+  <!-- DO NOT DELETE -->
+    <%= link_to(image_tag("volleyball-compressed.png", :alt => "asdf",
+    class: "sport_logo green_bck", id: "first"), "/#/volleyball") %>
+
+    <%= link_to(image_tag("hockey-compressed.png", :alt => "asdf", 
+    class: "sport_logo blue_bck", id: "second"), "/#/hockey") %>
+
+    <%= link_to(image_tag("basketball-compressed.png", :alt => "asdf", 
+    class: "sport_logo orange_bck", id: "third"), "/#/basketball") %>
+
+    <%= link_to(image_tag("soccer-compressed.png", :alt => "asdf", 
+    class: "sport_logo red_bck ", id: "fourth"), "/#/soccer") %>
+
+    <%= link_to(image_tag("dragonboat-compressed.png", :alt => "asdf", 
+    class: "sport_logo red_bck", id: "first"), "/#/dragonboat") %>
+
+    <%= link_to(image_tag("baseball.png", :alt => "asdf", 
+    class: "disabled sport_logo test_images", id: "second"), "") %>
+
+    <%= link_to(image_tag("ultimate.png", :alt => "asdf", 
+    class: "sdisabled sport_logo test_images", id: "third"), "") %>
+
+    <%= link_to(image_tag("dodgeball.png", :alt => "asdf", 
+    class: "disabled sport_logo test_images", id: "fourth"), "") %>     
   </section>
 
   <section ng-show="sport !== 'no-sport'">
     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak>
-      <map center="Vancouver, Canada" zoom="10">
-        <marker ng-repeat="dropin in dropins"
-                    position="[{{dropin.location.lat}},{{dropin.location.long}}]"/>
-      </map>
+      <map zoom="10"></map>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak>        
       <br>
       <div class="dropinfilters_row">
-        <button class="btn btn-success col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-click="refreshDropins()">reset</button>
+        <button class="btn btn-success col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-click="resetFilters()">reset</button>
         <%= link_to "another sport", "/#/", class: "btn btn-info col-lg-3 col-md-4 col-sm-6 col-xs-6" %>
         <div class="col-lg-3 col-md-2 col-sm-6 col-xs-6">
-          <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="applyFilters()">
+          <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="setFilters()">
             <option value="" disabled selected>Day of the Week</option>
             <option value="All">All</option>
             <option value="Monday">Monday</option>
@@ -69,7 +70,7 @@
           </select>
         </div>
         <div class="col-lg-3 col-md-2 col-sm-6 col-xs-6">
-          <select class="form-control dropin_filter2" ng-model="skillLevelSelect" ng-change="applyFilters()">
+          <select class="form-control dropin_filter2" ng-model="skillLevelSelect" ng-change="setFilters()">
             <option value="" disabled selected>Skill Level</option>
             <option value="All">All</option>
             <option value="Recreational">Recreational</option>
@@ -80,19 +81,52 @@
         </div>
       </div>
 
-      <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">{{sport | lowercase }}</h2>
+      <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
       <div class="dropin_results">  
         <br>
-        <table class="table col-lg-6 col-md-10 col-sm-10 col-xs-10">
-          <tr class="table-row" ng-repeat="dropin in dropins" ng-mouseover="centerDropin(dropin)">
-            <td>{{dropin.datetime_start.time | date:'EEEE'}}</td>
-            <td>{{dropin.location.name}}</td>
-            <td>{{dropin.sport_event.skill_level}}</td>
-            <td>{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</td>
+        <%#*<table ng-if="format === 'items'" class="table col-lg-6 col-md-10 col-sm-10 col-xs-10">%>
+        <%#*<tr class="table-row" ng-repeat="dropin in dropins" ng-click="markerWrappers[dropin.id].infoWindow.toggle(true); centerDropin(dropin)">%>
+          <%#*<td>{{dropin.datetime_start.time | date:'EEEE'}}</td>%>
+          <%#*<td>{{dropin.location.name}}</td>%>
+          <%#*<td>{{dropin.sport_event.skill_level}}</td>%>
+          <%#*<td>{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</td>%>
 
-            <td><span class="button glyphicon glyphicon-remove" ng-click="remove(dropin)" /></td>
-          </tr>
-        </table>
+          <%#*<td><span class="button glyphicon glyphicon-remove" ng-click="remove(dropin)" /></td>%>
+        <%#*</tr>%>
+        <%#*</table>%>
+        <div class="row clearfix dropin-repeat" ng-class="{selected: markerWrappers.currentlyOpen === dropin.id}"  ng-repeat="dropin in dropins" ng-click="markerWrappers[dropin.id].infoWindow.toggle(); centerDropin(dropin)">         
+            <hr>
+            <div class="col-md-4">
+              <h4 ng-class="{bolded: isSelected(dropin.id)}">{{dropin.location.name}}</h4>
+              <div ng-show="isSelected(dropin.id)" class="dropin-info">
+                <span>{{dropin.location.address}}</span><br>
+                <span>{{dropin.organization.phone}}</span><br>
+                <email>{{dropin.organization.email}}</email>
+              </div>
+            </div>
+            <!-- show this if it's not selected -->
+            <div ng-hide="isSelected(dropin.id)">
+                <p class="col-md-2 col-xs-4">{{dropin.datetime_start.time | date:'EEEE'}}</p>
+                <p class="col-md-2 col-xs-4">{{dropin.sport_event.skill_level}}</p>
+                <p class="col-md-4 col-xs-8">{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</p>
+            </div>
+            
+            <!-- show this if it is selected -->
+            <div ng-show="isSelected(dropin.id)">
+              <div class="col-md-4">
+                <br>
+                <dt>Price</dt><dl>{{dropin.sport_event.price_per_one | currency }}</dl>
+                <dt>Skill Level</dt><dl>{{dropin.sport_event.skill_level}}</dl>
+              </div>
+              <div class="col-md-4">
+                <br>
+                <dt>Day</dt><dl>{{dropin.datetime_start.time | date:'EEEE'}}</dl>
+                <dt>Time</dt><dl>{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</dl>
+              </div>
+            </div>
+            
+        </div>
+        </div>
       </div>
     </div>
   </section>
@@ -100,3 +134,4 @@
 
 <%= javascript_include_tag 'application' %>  
 <%= javascript_include_tag '//maps.googleapis.com/maps/api/js?key=AIzaSyDwIy4KU0bhEV5R3yV5hAqAcL_TIjlrY0o' %>
+

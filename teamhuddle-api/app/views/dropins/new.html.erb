@@ -7,7 +7,7 @@
   
   <p>
     <%= f.label :sport %><br>
-    <%= f.text_field :sport %>
+    <%= f.select(:sport, options_from_collection_for_select(Sport.all, :sport, :sport)) %>
   </p>
 
   <p>
@@ -22,13 +22,13 @@
 
   <p>
     <%= f.label :organization_id %><br>
-    <%= f.select(:organization_id, options_from_collection_for_select(Organization.all, :id, :name)) %> 
+    <%= f.select(:organization_id, options_from_collection_for_select(Organization.all.order(:name), :id, :name)) %> 
     <small>Organization not on the list? <%= link_to 'Add it here', new_organization_path  %> (Note: Form will reset)</small>
   </p>
   
   <p>
     <%= f.label :location_id %><br>
-    <%= f.select(:location_id, options_from_collection_for_select(Location.all, :id, :name))%>
+    <%= f.select(:location_id, options_from_collection_for_select(Location.all.order(:name), :id, :name))%>
     <small>Location not on the list? <%= link_to 'Add it here', new_location_path  %> (Note: Form will reset)</small>
   </p>
   

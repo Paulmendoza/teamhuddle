@@ -3,7 +3,7 @@ class OrganizationsController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-    @organizations = Organization.all
+    @organizations = Organization.all.order(:name)
 
     respond_to do |format|
       format.html

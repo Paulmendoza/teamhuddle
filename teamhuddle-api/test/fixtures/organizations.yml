@@ -4,8 +4,8 @@ organizations_001:
   name: Bonsor
   location_id: 
   user_id: 
-  phone: 604
-  email: akos@akos.com
+  phone: 6048881234
+  email: bonsor@bonsor.ca
   created_at: '2014-07-24 06:05:50.839084'
   updated_at: '2014-07-24 06:05:50.839084'
 organizations_002:
@@ -13,8 +13,8 @@ organizations_002:
   name: UrbanRec
   location_id: 
   user_id: 
-  phone: 778
-  email: email@email.com
+  phone: 7789993211
+  email: urban@urbanrec.ca
   created_at: '2014-07-28 22:13:30.027362'
   updated_at: '2014-08-02 18:41:42.811498'
 organizations_003:
@@ -22,26 +22,26 @@ organizations_003:
   name: BCIT
   location_id: 
   user_id: 
-  phone: 60412132
+  phone: 6041213234
   email: BCIT@bcit.com
   created_at: '2014-08-02 17:10:39.122993'
   updated_at: '2014-08-02 17:10:39.122993'
 organizations_004:
   id: 5
-  name: Vancouver Board
+  name: Vancouver, City of
   location_id: 
   user_id: 
   phone: 6046046044
   email: vancouver@vancouver.com
   created_at: '2014-08-02 17:12:19.017706'
-  updated_at: '2014-08-02 17:12:19.017706'
+  updated_at: '2014-11-14 02:22:42.644599'
 organizations_005:
   id: 6
   name: VolleyballBC
   location_id: 
   user_id: 
-  phone: 
-  email: ''
+  phone: 604789654
+  email: volleyball@bc.ca
   created_at: '2014-10-06 00:24:03.951532'
   updated_at: '2014-10-06 00:24:03.951532'
 organizations_006:
@@ -53,3 +53,30 @@ organizations_006:
   email: vball@poco.ca
   created_at: '2014-10-06 00:25:35.095117'
   updated_at: '2014-10-06 00:25:35.095117'
+organizations_007:
+  id: 9
+  name: Burnaby, City of
+  location_id: 
+  user_id: 
+  phone: 6041111111
+  email: Burnaby@Burnaby.ca
+  created_at: '2014-11-14 02:22:04.878874'
+  updated_at: '2014-11-14 02:24:25.413068'
+organizations_008:
+  id: 10
+  name: Surrey, City of
+  location_id: 
+  user_id: 
+  phone: 6040000000
+  email: surrey@surrey.ca
+  created_at: '2014-11-14 02:24:00.023808'
+  updated_at: '2014-11-14 02:24:00.023808'
+organizations_009:
+  id: 11
+  name: 6Pack Indoor Beach
+  location_id: 
+  user_id: 
+  phone: 6043216800
+  email: staff@6packbeach.ca
+  created_at: '2014-11-14 02:26:20.513359'
+  updated_at: '2014-11-14 02:26:20.513359'

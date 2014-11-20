@@ -3,6 +3,7 @@ class SportEvent < ActiveRecord::Base
   after_initialize :init
   
   belongs_to :event, :dependent => :delete
+  belongs_to :sport
   has_many :archived_sport_events
   has_many :sport_event_instances, :dependent => :delete_all
   has_one :location, :through => :event
@@ -14,7 +15,8 @@ class SportEvent < ActiveRecord::Base
   
   serialize :schedule, IceCube::Schedule
   
-  validate :non_terminating_schedule, :schedule_has_no_occurrences, :start_time_greater_than_or_equal_end_time
+  validate :non_terminating_schedule, :start_time_greater_than_or_equal_end_time
+  validate :schedule_has_no_occurrences, :on => :create
   
   # IceCube schedule validations
   def non_terminating_schedule
@@ -33,6 +35,11 @@ class SportEvent < ActiveRecord::Base
     end
   end
   
+  def soft_delete
+    self.dtDeleted = Time.now
+    self.save
+  end
+ 
   def as_json(options={})
    options[:except] ||= [:event_id]
    super(options)
@@ -55,7 +62,7 @@ class SportEvent < ActiveRecord::Base
   private
   def init
   end
-
+  
 end
 
 <<-DOC

@@ -10,9 +10,9 @@ class UsersController < ApplicationController
     @user.email = params['user']['email']
     
 		if @user.save
-			redirect_to static_pages_path, notice: "Thanks!"
+			redirect_to url_for(:controller => :index, :action => :landing), notice: "Thanks!"
 		else
-			redirect_to static_pages_path
+			redirect_to 'index#landing'
 		end
 	end
 
