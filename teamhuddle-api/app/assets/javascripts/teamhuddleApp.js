@@ -16,9 +16,6 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         // this will hold the id of the marker that is currently open
         $scope.markerWrappers.currentlyOpen = null;
 
-//        $scope.weekdaySelect = "All";
-//        $scope.skillLevelSelect = "All";
-
         // initialize the predicate that sorting will be done through
         $scope.predicate = 'datetime_start.time';
 
@@ -58,8 +55,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         //watch to see if the location changes and then set the sport accordingly
         $scope.$on('$locationChangeSuccess', function (event) {
             if (sportRoutes.indexOf($location.path()) >= 0) {
-                $scope.sport = $location.path().replace("/", "");
-
+                $scope.sport = $location.path().replace("/", "");               
                 $scope.refreshDropins();
             }
             else {
@@ -110,9 +106,15 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                 $scope.dropins = $filter('weekday')($scope.dropins, $location.search()['day']);
                 $scope.weekdaySelect = $location.search()['day'];
             }
+            else{
+                $scope.weekdaySelect = undefined;
+            }
             if (typeof $location.search()['skill'] !== 'undefined') {
                 $scope.dropins = $filter('skill_level')($scope.dropins, $location.search()['skill']);
                 $scope.skillLevelSelect = $location.search()['skill'];
+            }
+            else{
+                $scope.skillLevelSelect = undefined
             }
         };
 
