@@ -16,8 +16,8 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         // this will hold the id of the marker that is currently open
         $scope.markerWrappers.currentlyOpen = null;
 
-        $scope.weekdaySelect = "All";
-        $scope.skillLevelSelect = "All";
+//        $scope.weekdaySelect = "All";
+//        $scope.skillLevelSelect = "All";
 
         // initialize the predicate that sorting will be done through
         $scope.predicate = 'datetime_start.time';
@@ -103,7 +103,6 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             $scope.map.setZoom(11);
         };
 
-
         // applies filters from the URL
         $scope.applyFilters = function () {
             // apply each filter if 'All' isn't selected
@@ -111,18 +110,11 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                 $scope.dropins = $filter('weekday')($scope.dropins, $location.search()['day']);
                 $scope.weekdaySelect = $location.search()['day'];
             }
-            else if (typeof $location.search()['day'] === 'undefined') {
-                $scope.weekdaySelect = 'All';
-            }
             if (typeof $location.search()['skill'] !== 'undefined') {
                 $scope.dropins = $filter('skill_level')($scope.dropins, $location.search()['skill']);
                 $scope.skillLevelSelect = $location.search()['skill'];
             }
-            else if (typeof $location.search()['skill'] !== 'undefined') {
-                $scope.skillLevelSelect = 'All';
-            }
         };
-
 
         // sets the filter arguments in the URL
         $scope.setFilters = function () {
@@ -143,8 +135,8 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 
         // resets the filter arguments in the URL
         $scope.resetFilters = function () {
-            $scope.weekdaySelect = 'All';
-            $scope.skillLevelSelect = 'All';
+            $scope.weekdaySelect = undefined;
+            $scope.skillLevelSelect = undefined;
             $location.search('day', null);
             $location.search('skill', null);
         };
@@ -235,9 +227,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 //                    return 0;
 //            }
 //        };
-
     }]);
-
 
 // FILTERS
 // filter based on a certain weekday
