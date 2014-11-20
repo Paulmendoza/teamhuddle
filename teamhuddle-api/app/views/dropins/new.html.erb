@@ -64,11 +64,15 @@
   </p>
   
   <p>
+    <%= label_tag(:spots, "Spots") %><br>
+    <%= f.number_field :price_per_one, min: 0, step: 1 %>
+  </p>
+  
+  <p>
     <%= f.label :comments %><br>
     <%= f.text_area :comments %>
   </p>
 
- 
   <p>
     <%= f.submit %>
   </p>

@@ -22,10 +22,21 @@
 </ul>
 <br>
 <h4>List of people signed up</h4>
-<table>
+
+<div>
+<table class="table table-bordered">
+    <thead>         
+    <tr>
+        <td>Email</td>
+        <td>Submission Date</td>
+    </tr>
+    </thead>
     <% @users.each do |user| %>
-    <tr><%=  user.email %></tr>
+    <tr>
+        <td><%= user.email %></td>
+        <td><%= user.created_at %></td>
+    </tr>
     <% end %>
 </table>
-
+</div>
   

@@ -169,10 +169,21 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 
             // the content for the infoWindow is set
             this.infoWindow = new google.maps.InfoWindow({
-                content: "<p><b>Location:</b> " + dropin.location.name + "</p>" +
+                content: "<div class='info-window'>" +  
+                        "<h5>" + dropin.location.name + "</h5>" + 
+                        "<p>" + dropin.location.address + "</p>" +
+                        "<p>" + dropin.organization.phone + "</p>" +
+                        "<div class='info-window'>" + 
+                        "<div class='col-md-7'>" + 
                         "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start.time, 'EEEE') + " </p>" +
-                        "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>",
-                maxwidth: 600
+                        "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>" + 
+                        "</div>" + 
+                        "<div class='col-md-5'>" + 
+                        "<p><b>Price:</b> " + $filter('currency')(dropin.sport_event.price_per_one) + "</p>" + 
+                        "<p><b>Time:</b> " + $filter('date')(dropin.datetime_start.time, 'h:mm a') + " - " + $filter('date')(dropin.datetime_end.time, 'h:mm a') +  "</p>" + 
+                        "</div>",
+                
+                maxwidth: 200
             });
 
             // redecleration needed to set up listener correctly
