@@ -374,13 +374,13 @@ li {
 
 .btn-info {
   background-color: $light-blue;
-  border: 1px solid $dark-blue;
+  border: 1px solid #000;
   border-radius: 0px !important;
   margin-top: 10px;
 
   &:hover {
     background-color: $dark-blue;
-    border: 1px solid $dark-blue;
+    border: 1px solid #000;
   }  
 }
 
