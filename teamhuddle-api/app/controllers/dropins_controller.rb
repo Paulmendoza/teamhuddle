@@ -52,6 +52,7 @@ class DropinsController < ApplicationController
       @dropin.type = 'dropin'
       @dropin.spots_filled = -1
       @dropin.gender = 'n/a'
+      @dropin.gender = params[:dropin][:source]
       
       # hash to convert form data to symbols for IceCube
       days_of_the_week = {
@@ -134,7 +135,7 @@ class DropinsController < ApplicationController
   private
   def dropin_params
     params.require(:dropin).permit(:sport, :skill_level, :price_per_one,
-      :spots, :notes, :format)
+      :spots, :notes, :format, :source)
   end
 
   private

@@ -117,6 +117,7 @@
               <div class="col-md-4">
                 <br>
                 <dt>Time</dt><dl>{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</dl>
+                <dt ng-show="{{dropin.sport_event.source !== null}}">Source</dt><dl><a href="{{dropin.sport_event.source}}">{{dropin.organization.name}}</a></dl>
               </div>
             </div>
             
