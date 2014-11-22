@@ -1,5 +1,9 @@
 <h1>Welcome to Teamhuddle Admin <small>...heavily under construction</small></h1>
 <hr>
+<% if @sport_events.length != 22 %>
+<h2><label class="label label-danger">THERE ARE MORE DROPINS THAN FIXTURES!</label></h2>
+<h2><label class="label label-danger">INVESTIGATE!</label></h2>
+<% end %>
 <h2>What's new?</h2>
 <ul>
   <h4>Lots of Client Changes</h4>
