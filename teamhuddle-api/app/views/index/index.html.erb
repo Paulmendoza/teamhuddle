@@ -84,7 +84,11 @@
       <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
       <div class="dropin_results">  
         <br>
-        <div class="row clearfix dropin-repeat" ng-class="{selected: markerWrappers.currentlyOpen === dropin.id}"  ng-repeat="dropin in dropins" ng-click="markerWrappers[dropin.id].infoWindow.toggle(); centerDropin(dropin)">         
+        <div class="row clearfix dropin-repeat"
+             ng-class="{selected: markerWrappers.currentlyOpen === dropin.id}"  
+             ng-repeat="dropin in dropins" 
+             ng-click="markerWrappers[dropin.id].infoWindow.toggle(); centerDropin(dropin)"
+             ng-attr-id="{{ 'dropin-' + dropin.id }}">         
             <hr>
             <div class="col-md-4">
               <h4 ng-class="{bolded: isSelected(dropin.id)}">{{dropin.location.name}}</h4>
@@ -123,7 +127,14 @@
             </div>
             
         </div>
-        </div>
+      </div>
+      <div class="disclaimer clearfix">
+          <p><i>
+           Something something disclaimer please don't sue us! I swear this was correct when I looked at it, 
+           just because you didn't call ahead it's not my fault, why can't we all just be diplomatic. 
+           Blah blah, this is not always correct
+          </i></p>
+      </div>
       </div>
     </div>
   </section>

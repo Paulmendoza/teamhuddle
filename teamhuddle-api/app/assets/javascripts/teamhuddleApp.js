@@ -216,6 +216,11 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                     $scope.markerWrappers.currentlyOpen = dropin.id;
                     that.infoWindow.open($scope.map, that.marker);
                     that.isOpen = true;
+                    
+                    // scroll to list item here
+                    var scrollPos = $('#dropin-' + dropin.id).offset().top;
+                    // offset the scroll to account for the header
+                    $('body').animate({scrollTop: scrollPos - 75}, 'fast');
                 }
                 
                 if(!$scope.$$phase) {
