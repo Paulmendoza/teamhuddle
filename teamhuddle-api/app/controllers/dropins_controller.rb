@@ -30,13 +30,9 @@ class DropinsController < ApplicationController
   end
   
   def show
-    @dropin = SportEvent.joins(:event).where( events: { id: params[:id]}).select('*')
+    @dropin = SportEvent.includes(:event, :location, :organization).find(params[:id])                         
+                         
     
-    respond_to do |format|
-      format.html { render json: @dropin }
-      format.json { render json: @dropin, :except => [:event_id] }
-      format.xml { render xml: @dropin, except: [:event_id] }
-    end
   end
 
   def create
