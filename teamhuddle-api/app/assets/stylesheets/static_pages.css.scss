@@ -31,8 +31,28 @@
 	}
 }
 
-.socialmedia {
-	height: 50px;
+.contact-us {
+
+
+	.socialmedia-full {
+		border-left: 1px solid #000;
+
+		li {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.socialmedia {
+		height: 50px;
+	}
+
+	@media (max-width: 768px) {
+		.socialmedia-full {
+			border: 0;
+		}
+	}
+
 
 }
 
