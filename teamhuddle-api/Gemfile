@@ -52,4 +52,5 @@ gem 'angular-rails-templates'
 # For debugging
 gem 'byebug'
 
+# For minimizing JS
 gem 'uglifier'
