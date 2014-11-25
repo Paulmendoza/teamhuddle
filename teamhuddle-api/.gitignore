@@ -23,3 +23,7 @@ gemfile.lock
 
 # Ignore bower junk
 /lib/assets/bower_components
+
+
+# Ignore RubyMine files
+.idea
