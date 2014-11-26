@@ -47,11 +47,12 @@
   </section>
 
   <section ng-show="sport !== 'no-sport'">
-    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak>
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak ng-class="{'map-mobile-toggle': !mapMobileToggle}">
       <map center="Vancouver, Canada" zoom="10" init-event="loadMap"></map>
+      <button class="btn-info hidden-md" ng-click="mapMobileToggle = !mapMobileToggle">show list</button>
     </div>
 
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak>        
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak ng-class="{'map-mobile-toggle': mapMobileToggle}">        
       <br>
       <div class="dropinfilters_row">
         <button class="btn btn-success col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-click="resetFilters()">reset filters</button>
@@ -80,6 +81,8 @@
           </select>
         </div>
       </div>
+      
+      <button class="btn-info hidden-lg hidden-md" ng-click="mapMobileToggle = !mapMobileToggle; refreshDropins()">show map</button>
 
       <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
       <div class="dropin_results">  

@@ -2,8 +2,9 @@ var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonb
 
 app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function ($scope, $filter, $location, Dropins) {
         // set my own orderBy filter directive
-        var orderBy = $filter('orderBy');
+        var orderBy = $filter('orderBy');        
         
+        // for displaying all list items as verbose or non verbose format
         $scope.format = 'items';              
         
         $scope.isSelected = function(dropin_id){
@@ -21,7 +22,11 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 
         // array that will have all the dropin objects
         $scope.dropins = [];
-
+        
+        
+        /**** DROPIN EVENTS/WATCHERS: ****/
+        /*******************************************/
+        
         // watches dropins and makes sure markers are in sync
         $scope.$watchCollection('dropins', function (newValues, oldValues) {
 
@@ -42,8 +47,6 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                     $scope.markerWrappers[dropin.id] = new MarkerWrapper(dropin);
                     console.log("Adding marker: " + dropin.id);
                 }
-                
-                
             });
             
             // if the currently open id is no longer contained in the wrappers then obviously set it to null, as it can't be open
@@ -63,8 +66,11 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                 $scope.dropins = [];
             }
         });
-
-        // DROPIN CONTROLLER FUNCTIONS:
+        
+        
+        /**** DROPIN CONTROLLER FUNCTIONS: ****/
+        /**************************************/
+        
         // use a deferred promise from the Dropins service to populate the scope
         $scope.refreshDropins = function () {
             $scope.$emit("loadMap");
@@ -155,7 +161,13 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             $location.path('/');
             $scope.sport = 'no-sport';
         };
-
+        
+        $scope.moreDropinInfo = function () {
+            debugger;
+        };
+        
+        /**** INNER CLASS: ****/
+        /***********************/
         // definition of the marker object that is linked to each dropin event
         // properties: 
         //  isOpen(bool)                        : indicates whether the marker object is open
@@ -173,17 +185,22 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             // the content for the infoWindow is set
             this.infoWindow = new google.maps.InfoWindow({
                 content: "<div class='info-window'>" +  
-                        "<h5>" + dropin.location.name + "</h5>" + 
-                        "<p>" + dropin.location.address + "</p>" +
-                        "<p>" + dropin.organization.phone + "</p>" +
-                        "<div class='info-window'>" + 
-                        "<div class='col-md-7'>" + 
-                        "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start.time, 'EEEE') + " </p>" +
-                        "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>" + 
-                        "</div>" + 
-                        "<div class='col-md-5'>" + 
-                        "<p><b>Price:</b> " + $filter('currency')(dropin.sport_event.price_per_one) + "</p>" + 
-                        "<p><b>Time:</b> " + $filter('date')(dropin.datetime_start.time, 'h:mm a') + " - " + $filter('date')(dropin.datetime_end.time, 'h:mm a') +  "</p>" + 
+                            "<h5>" + dropin.location.name + "</h5>" + 
+                            "<p>" + dropin.location.address + "</p>" +
+                            "<p>" + dropin.organization.phone + "</p>" +
+                            "<div class='hidden-xs hidden-sm'>" + //hide extra stuff on mobile, instead show a button to go to the list
+                                "<div class='col-md-7 col-sm-7'>" + 
+                                    "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start.time, 'EEEE') + " </p>" +
+                                    "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>" +                         
+                                "</div>" + 
+                                "<div class='col-md-5 col-sm-5'>" + 
+                                    "<p><b>Price:</b> " + $filter('currency')(dropin.sport_event.price_per_one) + "</p>" + 
+                                    "<p><b>Time:</b> " + $filter('date')(dropin.datetime_start.time, 'h:mm a') + " - " + $filter('date')(dropin.datetime_end.time, 'h:mm a') +  "</p>" + 
+                                "</div>" + 
+                            "</div>" +
+                            "<div class='hidden-lg hidden-md'>" +
+                                "<button class='btn' ng-click='moreDropinInfo()'>more info</button>" + 
+                            "</div>" +
                         "</div>",
                 
                 maxwidth: 200
@@ -228,7 +245,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                     }
                     // otherwise scroll to the element minus a buffer so it will always show on screen
                     else{
-                        $('body').animate({scrollTop: scrollPos - 150}, 'fast');
+                        $('body').animate({scrollTop: scrollPos - 175}, 'fast');
                     }                        
                 }
                 

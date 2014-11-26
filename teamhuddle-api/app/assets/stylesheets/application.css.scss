@@ -350,7 +350,6 @@ li {
     &:hover {
         background-color: $light-red;
     }
-
 }
 
 
@@ -440,8 +439,13 @@ li {
 @media (min-width: 0px) and (max-width: 767px) {
 
     /* Removes map from mobile view*/
-    .left-wrapper {
+    .map-mobile-toggle {
         display: none;
+    }
+
+    // show the map button again
+    .mobile-button {
+        visibility: visible;
     }
 
     .btn {
@@ -503,10 +507,14 @@ li {
     }
 
     /* Removes map from mobile view*/
-    .left-wrapper {
+    .map-mobile-toggle {
         display: none;
     }
 
+    // show the map button again
+    .mobile-button {
+        visibility: visible;
+    }
 
     .right-wrapper {
         margin-bottom: 35px;
@@ -594,7 +602,11 @@ li {
         margin-left: -35px;
     }
 
+    // hide this button when map is shown
+    .mobile-button {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
 }
-
-
 
