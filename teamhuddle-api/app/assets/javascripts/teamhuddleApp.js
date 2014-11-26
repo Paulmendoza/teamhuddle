@@ -4,7 +4,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         // set my own orderBy filter directive
         var orderBy = $filter('orderBy');
         
-        $scope.format = 'items';
+        $scope.format = 'items';              
         
         $scope.isSelected = function(dropin_id){
             return $scope.format ===  'items' || $scope.markerWrappers.currentlyOpen === dropin_id;
@@ -67,6 +67,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         // DROPIN CONTROLLER FUNCTIONS:
         // use a deferred promise from the Dropins service to populate the scope
         $scope.refreshDropins = function () {
+            $scope.$emit("loadMap");
             Dropins.getBySport($scope.sport).then(
                     function (dropins) {
                         $scope.dropins = orderBy(dropins, $scope.predicate, false);
@@ -217,10 +218,18 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                     that.infoWindow.open($scope.map, that.marker);
                     that.isOpen = true;
                     
-                    // scroll to list item here
+                    // scroll to logic here
                     var scrollPos = $('#dropin-' + dropin.id).offset().top;
-                    // offset the scroll to account for the header
-                    $('body').animate({scrollTop: scrollPos - 75}, 'fast');
+                    
+                    // if the element would fall into the height of the window 
+                    // minus some buffer then just scroll to the top
+                    if(scrollPos < window.innerHeight - 150) {
+                        $('body').animate({scrollTop: 0}, 'fast');
+                    }
+                    // otherwise scroll to the element minus a buffer so it will always show on screen
+                    else{
+                        $('body').animate({scrollTop: scrollPos - 150}, 'fast');
+                    }                        
                 }
                 
                 if(!$scope.$$phase) {

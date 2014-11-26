@@ -7,7 +7,7 @@
   </div>
 
 
-  <section class="sport_logos text-center" ng-show="sport === 'no-sport'">
+  <section class="sport_logos text-center" ng-if="sport === 'no-sport'">
 
 <!-- DO NOT DELETE -->
 <!--     <div class="sport-outer">
@@ -48,7 +48,7 @@
 
   <section ng-show="sport !== 'no-sport'">
     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak>
-      <map center="Vancouver, Canada" zoom="10"></map>
+      <map center="Vancouver, Canada" zoom="10" init-event="loadMap"></map>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak>        
