@@ -440,12 +440,7 @@ li {
 
     /* Removes map from mobile view*/
     .map-mobile-toggle {
-        display: none;
-    }
-
-    // show the map button again
-    .mobile-button {
-        visibility: visible;
+        display: none !important;
     }
 
     .btn {
@@ -508,12 +503,7 @@ li {
 
     /* Removes map from mobile view*/
     .map-mobile-toggle {
-        display: none;
-    }
-
-    // show the map button again
-    .mobile-button {
-        visibility: visible;
+        display: none !important;
     }
 
     .right-wrapper {
