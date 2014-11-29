@@ -32,6 +32,7 @@ Rails.application.configure do
   #config.assets.precompile << /(^[^_\/]|\/[^_])[^\/]*$/
   config.assets.precompile = ['application.js',
                               'angular_application.js',
+                              'landing_page.js',
                               'admin.js',
                               '*.png',
                               'application.css.scss',

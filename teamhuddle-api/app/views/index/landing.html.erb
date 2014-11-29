@@ -66,19 +66,41 @@
     </div>
 </section>
 
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="landing-page" ng-cloak>
   <section>
     <div class="mailer">
       <div class="mailer-inner text-center col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
           <h3>Find the sports you love playing with the players you love playing with!</h3>
           <h4>Submit your e-mail below to receive front of the line access to our beta</h4>
           <br>
-          <%= form_for User.new do |f| %> 
-            <%= f.email_field :email, class: "form-control", placeholder: "Enter your e-mail" %>
-              <%= f.submit "Submit", class: "btn btn-info" %>
-          <% end %>
+          <%#= form_for User.new do |f| %> 
+            <%#= f.email_field :email, class: "form-control", placeholder: "Enter your e-mail" %>
+              <%#= f.submit "Submit", class: "btn btn-info" %>
+          <%# end %>
+          
+          <form ng-submit="submit()">
+              <input type="email" ng-model="email" class="form-control"/>
+              <input value="submit" type="submit" class="btn btn-info"/>
+          </form>
+          <br>
+          <!-- Show this div while waiting for a response from the server -->
+          <div ng-if="processing">
+              <p>please wait..</p>
+          </div>
+          
+          <!-- Show this div on success -->
+          <div class="panel panel-success" ng-if="success && submitted && !processing">
+              <p>Thanks for signing up, {{user.email}}!</p>
+          </div>
+          
+          <!-- Show this div if there was an error -->
+          <div class="panel panel-warn" ng-if="!success && submitted && !processing">
+              <p>There was an error processing your request. Sorry!</p>
+          </div>
 
         </div>
       </div>
   </section>
 </div>
+
+<%= javascript_include_tag 'landing_page' %>  
