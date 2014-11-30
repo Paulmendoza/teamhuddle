@@ -228,7 +228,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
                                 "<p><b>Price:</b> " + $filter('currency')(dropin.sport_event.price_per_one) + "</p>" +
                                 "<p><b>Time:</b> " + $filter('date')(dropin.datetime_start.time, 'h:mm a') + " - " + $filter('date')(dropin.datetime_end.time, 'h:mm a') + "</p>" +
                             "</div>" +
-                            "<br><br><br><br>" + 
+                            "<br><br><br><br><br>" + 
                         "</div>" +
                         "<div class='hidden-lg hidden-md'>" +
                             "<button class='btn' ng-click='switchToList()'>more info</button>" +
