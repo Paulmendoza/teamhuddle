@@ -2,13 +2,15 @@ var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonb
 
 app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function ($scope, $filter, $location, Dropins) {
         // set my own orderBy filter directive
-        var orderBy = $filter('orderBy');        
+        var orderBy = $filter('orderBy');
         
+        $scope.mapMobileToggle = false;
+
         // for displaying all list items as verbose or non verbose format
-        $scope.format = 'items';              
-        
-        $scope.isSelected = function(dropin_id){
-            return $scope.format ===  'items' || $scope.markerWrappers.currentlyOpen === dropin_id;
+        $scope.format = 'items';
+
+        $scope.isSelected = function (dropin_id) {
+            return $scope.format === 'items' || $scope.markerWrappers.currentlyOpen === dropin_id;
         };
 
         // a dictionary to hold all of the MarkerWrapper objects
@@ -22,11 +24,11 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 
         // array that will have all the dropin objects
         $scope.dropins = [];
-        
-        
+
+
         /**** DROPIN EVENTS/WATCHERS: ****/
         /*******************************************/
-        
+
         // watches dropins and makes sure markers are in sync
         $scope.$watchCollection('dropins', function (newValues, oldValues) {
 
@@ -48,9 +50,9 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                     console.log("Adding marker: " + dropin.id);
                 }
             });
-            
+
             // if the currently open id is no longer contained in the wrappers then obviously set it to null, as it can't be open
-            if(typeof($scope.markerWrappers[$scope.markerWrappers.currentlyOpen]) === 'undefined'){
+            if (typeof ($scope.markerWrappers[$scope.markerWrappers.currentlyOpen]) === 'undefined') {
                 $scope.markerWrappers.currentlyOpen = null;
             }
         });
@@ -58,7 +60,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         //watch to see if the location changes and then set the sport accordingly
         $scope.$on('$locationChangeSuccess', function (event) {
             if (sportRoutes.indexOf($location.path()) >= 0) {
-                $scope.sport = $location.path().replace("/", "");               
+                $scope.sport = $location.path().replace("/", "");
                 $scope.refreshDropins();
             }
             else {
@@ -66,11 +68,12 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                 $scope.dropins = [];
             }
         });
+
         
         
         /**** DROPIN CONTROLLER FUNCTIONS: ****/
         /**************************************/
-        
+
         // use a deferred promise from the Dropins service to populate the scope
         $scope.refreshDropins = function () {
             $scope.$emit("loadMap");
@@ -78,21 +81,50 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                     function (dropins) {
                         $scope.dropins = orderBy(dropins, $scope.predicate, false);
 
-                        // call a resize because map has moved and recenter it
-                        google.maps.event.trigger($scope.map, 'resize');
+                        $scope.resizeMap();
 
                         $scope.applyFilters();
-                        
-                        if($scope.dropins.length > 3){
+
+                        if ($scope.dropins.length > 3) {
                             $scope.format = 'table';
                         }
-                        else{
+                        else {
                             $scope.format = 'items';
-                        }                        
+                        }
                     },
                     function (reason) {
                         alert('Failed: ' + reason);
                     });
+        };
+        
+        $scope.resizeMap = function () {            
+            // set a minor timeout to fix load issues
+            window.setTimeout(function(){
+                google.maps.event.trigger($scope.map, 'resize');
+            },100);
+        };
+        
+        $scope.switchToMap = function () {   
+            $scope.mapMobileToggle = !$scope.mapMobileToggle;
+            $scope.resizeMap();
+            window.setTimeout(function(){
+                if($scope.markerWrappers.currentlyOpen !== null){
+                    var currentlyOpen = $scope.markerWrappers.currentlyOpen;
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                }                
+            },250);
+        };
+        
+        $scope.switchToList = function () {   
+            $scope.mapMobileToggle = !$scope.mapMobileToggle;
+            window.setTimeout(function(){
+                if($scope.markerWrappers.currentlyOpen !== null){
+                    var currentlyOpen = $scope.markerWrappers.currentlyOpen;
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                }                
+            },250);
         };
 
         // function which orders by predicate
@@ -113,14 +145,14 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                 $scope.dropins = $filter('weekday')($scope.dropins, $location.search()['day']);
                 $scope.weekdaySelect = $location.search()['day'];
             }
-            else{
+            else {
                 $scope.weekdaySelect = undefined;
             }
             if (typeof $location.search()['skill'] !== 'undefined') {
                 $scope.dropins = $filter('skill_level')($scope.dropins, $location.search()['skill']);
                 $scope.skillLevelSelect = $location.search()['skill'];
             }
-            else{
+            else {
                 $scope.skillLevelSelect = undefined
             }
         };
@@ -161,11 +193,11 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             $location.path('/');
             $scope.sport = 'no-sport';
         };
-        
+
         $scope.moreDropinInfo = function () {
             debugger;
         };
-        
+
         /**** INNER CLASS: ****/
         /***********************/
         // definition of the marker object that is linked to each dropin event
@@ -185,25 +217,24 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 
             // the content for the infoWindow is set
             this.infoWindow = new google.maps.InfoWindow({
-                content: "<div class='info-window'>" +  
-                            "<h5>" + dropin.location.name + "</h5>" + 
-                            "<p>" + dropin.location.address + "</p>" +
-                            "<p>" + dropin.organization.phone + "</p>" +
-                            "<div class='hidden-xs hidden-sm'>" + //hide extra stuff on mobile, instead show a button to go to the list
-                                "<div class='col-md-7 col-sm-7'>" + 
-                                    "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start.time, 'EEEE') + " </p>" +
-                                    "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>" +                         
-                                "</div>" + 
-                                "<div class='col-md-5 col-sm-5'>" + 
-                                    "<p><b>Price:</b> " + $filter('currency')(dropin.sport_event.price_per_one) + "</p>" + 
-                                    "<p><b>Time:</b> " + $filter('date')(dropin.datetime_start.time, 'h:mm a') + " - " + $filter('date')(dropin.datetime_end.time, 'h:mm a') +  "</p>" + 
-                                "</div>" + 
-                            "</div>" +
-                            "<div class='hidden-lg hidden-md'>" +
-                                "<button class='btn' ng-click='moreDropinInfo()'>more info</button>" + 
-                            "</div>" +
+                content: "<div class='info-window'>" +
+                        "<h5>" + dropin.location.name + "</h5>" +
+                        "<p>" + dropin.location.address + "</p>" +
+                        "<p>" + dropin.organization.phone + "</p>" +
+                        "<div class='hidden-xs hidden-sm'>" + //hide extra stuff on mobile, instead show a button to go to the list
+                        "<div class='col-md-7 col-sm-7'>" +
+                        "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start.time, 'EEEE') + " </p>" +
+                        "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>" +
+                        "</div>" +
+                        "<div class='col-md-5 col-sm-5'>" +
+                        "<p><b>Price:</b> " + $filter('currency')(dropin.sport_event.price_per_one) + "</p>" +
+                        "<p><b>Time:</b> " + $filter('date')(dropin.datetime_start.time, 'h:mm a') + " - " + $filter('date')(dropin.datetime_end.time, 'h:mm a') + "</p>" +
+                        "</div>" +
+                        "</div>" +
+                        "<div class='hidden-lg hidden-md'>" +
+                        "<button class='btn' ng-click='moreDropinInfo()'>more info</button>" +
+                        "</div>" +
                         "</div>",
-                
                 maxwidth: 200
             });
 
@@ -235,26 +266,26 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                     $scope.markerWrappers.currentlyOpen = dropin.id;
                     that.infoWindow.open($scope.map, that.marker);
                     that.isOpen = true;
-                    
+
                     // scroll to logic here
                     var scrollPos = $('#dropin-' + dropin.id).offset().top;
-                    
+
                     // if the element would fall into the height of the window 
                     // minus some buffer then just scroll to the top
-                    if(scrollPos < window.innerHeight - 150) {
+                    if (scrollPos < window.innerHeight - 150) {
                         $('body').animate({scrollTop: 0}, 'fast');
                     }
                     // otherwise scroll to the element minus a buffer so it will always show on screen
-                    else{
+                    else {
                         $('body').animate({scrollTop: scrollPos - 175}, 'fast');
-                    }                        
+                    }
                 }
-                
-                if(!$scope.$$phase) {
+
+                if (!$scope.$$phase) {
                     $scope.$apply();
                 }
-                
             };
+            
         }
 
         // UNUSED HELPER METHOD, COULD BE USERFUL LATER
@@ -277,19 +308,19 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 // FILTERS
 // filter based on a certain weekday
 app.filter('weekday', ['$filter', function ($filter) {
-    return function (sport_events, day) {
-        var retn = [];
+        return function (sport_events, day) {
+            var retn = [];
 
-        angular.forEach(sport_events, function (sport_event) {
-            if ($filter('date')(sport_event.datetime_start.time, 'EEEE') === day) {
+            angular.forEach(sport_events, function (sport_event) {
+                if ($filter('date')(sport_event.datetime_start.time, 'EEEE') === day) {
 
-                retn.push(sport_event);
-            }
-        });
+                    retn.push(sport_event);
+                }
+            });
 
-        return retn;
-    };
-}]);
+            return retn;
+        };
+    }]);
 
 // filter based on skill level
 app.filter('skill_level', function () {

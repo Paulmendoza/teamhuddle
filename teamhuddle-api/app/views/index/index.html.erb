@@ -47,9 +47,9 @@
   </section>
 
   <section ng-show="sport !== 'no-sport'">
-    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak ng-class="{'map-mobile-toggle': !mapMobileToggle}">
-      <map center="Vancouver, Canada" zoom="10" init-event="loadMap"></map>
-      <button class="btn-info hidden-md" ng-click="mapMobileToggle = !mapMobileToggle">show list</button>
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak ng-class="{'map-mobile-toggle': !mapMobileToggle}" ng-view>
+      <map center="Vancouver, Canada" zoom="10" init-event="loadMap" geo-fallback-center="Vancouver, Canada"></map>
+      <button class="btn-info hidden-md" ng-click="switchToList()">show list</button>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak ng-class="{'map-mobile-toggle': mapMobileToggle}">        
@@ -82,7 +82,7 @@
         </div>
       </div>
       
-      <button class="btn-info hidden-lg hidden-md" ng-click="mapMobileToggle = !mapMobileToggle; refreshDropins()">show map</button>
+      <button class="btn-info hidden-lg hidden-md" ng-click="switchToMap()">show map</button>
 
       <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
       <div class="dropin_results">  
@@ -93,13 +93,16 @@
              ng-click="markerWrappers[dropin.id].infoWindow.toggle(); centerDropin(dropin)"
              ng-attr-id="{{ 'dropin-' + dropin.id }}">         
             <hr>
-            <div class="col-md-4">
+            <div class="col-md-4 col-xs-12">
               <h4 ng-class="{bolded: isSelected(dropin.id)}">{{dropin.location.name}}</h4>
               <div ng-show="isSelected(dropin.id)" class="dropin-info">
                 <span>{{dropin.location.address}}</span><br>
                 <span>{{dropin.organization.phone}}</span><br>
                 <email>{{dropin.organization.email}}</email>
               </div>
+            </div>
+            <div class="col-xs-12 hidden-lg hidden-md" ng-if="isSelected(dropin.id)">
+                <button class="btn-info" ng-click="$event.stopPropagation(); switchToMap()">show this shiet on the dope-ass map</button>
             </div>
             
             <!-- show this if it's not selected -->
