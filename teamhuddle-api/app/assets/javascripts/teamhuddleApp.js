@@ -179,6 +179,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 
             this.marker = new google.maps.Marker({
                 map: $scope.map,
+                //icon: "<%= asset_path('Hockey-MapMarker.png') %>",
                 position: new google.maps.LatLng(dropin.location.lat, dropin.location.long)
             });
 
