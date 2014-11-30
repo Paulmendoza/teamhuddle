@@ -1,6 +1,6 @@
 var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonboat'];
 
-app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function ($scope, $filter, $location, Dropins) {
+app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropins', function ($scope, $filter, $location, $compile, Dropins) {
         // set my own orderBy filter directive
         var orderBy = $filter('orderBy');
         
@@ -214,10 +214,8 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                 //icon: "<%= asset_path('Hockey-MapMarker.png') %>",
                 position: new google.maps.LatLng(dropin.location.lat, dropin.location.long)
             });
-
-            // the content for the infoWindow is set
-            this.infoWindow = new google.maps.InfoWindow({
-                content: "<div class='info-window'>" +
+            
+            var htmlContent = "<div class='info-window'>" +
                         "<h5>" + dropin.location.name + "</h5>" +
                         "<p>" + dropin.location.address + "</p>" +
                         "<p>" + dropin.organization.phone + "</p>" +
@@ -232,9 +230,16 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                         "</div>" +
                         "</div>" +
                         "<div class='hidden-lg hidden-md'>" +
-                        "<button class='btn' ng-click='moreDropinInfo()'>more info</button>" +
+                        "<button class='btn' ng-click='switchToList()'>more info</button>" +
+                        "<br><br><br>" + 
                         "</div>" +
-                        "</div>",
+                        "</div>";
+                
+            var compiled = $compile(htmlContent)($scope);
+
+            // the content for the infoWindow is set
+            this.infoWindow = new google.maps.InfoWindow({
+                content: compiled[0],
                 maxwidth: 200
             });
 
