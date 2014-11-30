@@ -220,23 +220,24 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
                         "<p>" + dropin.location.address + "</p>" +
                         "<p>" + dropin.organization.phone + "</p>" +
                         "<div class='hidden-xs hidden-sm'>" + //hide extra stuff on mobile, instead show a button to go to the list
-                        "<div class='col-md-7 col-sm-7'>" +
-                        "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start.time, 'EEEE') + " </p>" +
-                        "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>" +
-                        "</div>" +
-                        "<div class='col-md-5 col-sm-5'>" +
-                        "<p><b>Price:</b> " + $filter('currency')(dropin.sport_event.price_per_one) + "</p>" +
-                        "<p><b>Time:</b> " + $filter('date')(dropin.datetime_start.time, 'h:mm a') + " - " + $filter('date')(dropin.datetime_end.time, 'h:mm a') + "</p>" +
-                        "</div>" +
+                            "<div class='col-md-7 col-sm-7'>" +
+                                "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start.time, 'EEEE') + " </p>" +
+                                "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>" +
+                            "</div>" +
+                            "<div class='col-md-5 col-sm-5'>" +
+                                "<p><b>Price:</b> " + $filter('currency')(dropin.sport_event.price_per_one) + "</p>" +
+                                "<p><b>Time:</b> " + $filter('date')(dropin.datetime_start.time, 'h:mm a') + " - " + $filter('date')(dropin.datetime_end.time, 'h:mm a') + "</p>" +
+                            "</div>" +
+                            "<br><br><br><br>" + 
                         "</div>" +
                         "<div class='hidden-lg hidden-md'>" +
-                        "<button class='btn' ng-click='switchToList()'>more info</button>" +
-                        "<br><br><br>" + 
+                            "<button class='btn' ng-click='switchToList()'>more info</button>" +
+                            "<br><br><br>" + 
                         "</div>" +
                         "</div>";
-                
+            
             var compiled = $compile(htmlContent)($scope);
-
+            
             // the content for the infoWindow is set
             this.infoWindow = new google.maps.InfoWindow({
                 content: compiled[0],
