@@ -43,6 +43,7 @@ class DropinsController < ApplicationController
       @dropin = SportEvent.new
       @dropin.sport = Sport.find(params[:dropin][:sport])
       @dropin.price_per_one = params[:dropin][:price_per_one]
+      @dropin.price_per_group = params[:dropin][:price_per_group]
       @dropin.skill_level = params[:skill_level]
       @dropin.event_id = @event.id
       @dropin.type = 'dropin'
