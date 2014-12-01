@@ -54,4 +54,7 @@ gem 'rest-client'
 # For debugging
 gem 'byebug'
 
+# For minimizing JS
 gem 'uglifier'
+
+gem 'pg'

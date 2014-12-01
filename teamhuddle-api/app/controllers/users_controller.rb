@@ -10,9 +10,9 @@ class UsersController < ApplicationController
     @user.email = params['user']['email']
     
 		if @user.save
-			redirect_to url_for(:controller => :index, :action => :landing), notice: "Thanks!"
+			render json: @user
 		else
-			redirect_to 'index#landing'
+			render json: @user
 		end
 	end
 

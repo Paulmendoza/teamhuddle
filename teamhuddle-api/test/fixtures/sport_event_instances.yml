@@ -3799,3 +3799,411 @@ sport_event_instances_475:
   datetime_start: '2014-12-08 03:00:00.000000'
   datetime_end: '2014-12-08 06:00:00.000000'
   event_id: 92
+sport_event_instances_476:
+  id: 1031
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.515293'
+  updated_at: '2014-11-14 02:28:37.515293'
+  datetime_start: '2014-09-09 03:00:00.000000'
+  datetime_end: '2014-09-09 05:00:00.000000'
+  event_id: 93
+sport_event_instances_477:
+  id: 1032
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.522392'
+  updated_at: '2014-11-14 02:28:37.522392'
+  datetime_start: '2014-09-16 03:00:00.000000'
+  datetime_end: '2014-09-16 05:00:00.000000'
+  event_id: 93
+sport_event_instances_478:
+  id: 1033
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.528643'
+  updated_at: '2014-11-14 02:28:37.528643'
+  datetime_start: '2014-09-23 03:00:00.000000'
+  datetime_end: '2014-09-23 05:00:00.000000'
+  event_id: 93
+sport_event_instances_479:
+  id: 1034
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.533548'
+  updated_at: '2014-11-14 02:28:37.533548'
+  datetime_start: '2014-09-30 03:00:00.000000'
+  datetime_end: '2014-09-30 05:00:00.000000'
+  event_id: 93
+sport_event_instances_480:
+  id: 1035
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.538462'
+  updated_at: '2014-11-14 02:28:37.538462'
+  datetime_start: '2014-10-07 03:00:00.000000'
+  datetime_end: '2014-10-07 05:00:00.000000'
+  event_id: 93
+sport_event_instances_481:
+  id: 1036
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.543651'
+  updated_at: '2014-11-14 02:28:37.543651'
+  datetime_start: '2014-10-14 03:00:00.000000'
+  datetime_end: '2014-10-14 05:00:00.000000'
+  event_id: 93
+sport_event_instances_482:
+  id: 1037
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.548904'
+  updated_at: '2014-11-14 02:28:37.548904'
+  datetime_start: '2014-10-21 03:00:00.000000'
+  datetime_end: '2014-10-21 05:00:00.000000'
+  event_id: 93
+sport_event_instances_483:
+  id: 1038
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.553612'
+  updated_at: '2014-11-14 02:28:37.553612'
+  datetime_start: '2014-10-28 03:00:00.000000'
+  datetime_end: '2014-10-28 05:00:00.000000'
+  event_id: 93
+sport_event_instances_484:
+  id: 1039
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.558390'
+  updated_at: '2014-11-14 02:28:37.558390'
+  datetime_start: '2014-11-04 04:00:00.000000'
+  datetime_end: '2014-11-04 06:00:00.000000'
+  event_id: 93
+sport_event_instances_485:
+  id: 1040
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.562951'
+  updated_at: '2014-11-14 02:28:37.562951'
+  datetime_start: '2014-11-11 04:00:00.000000'
+  datetime_end: '2014-11-11 06:00:00.000000'
+  event_id: 93
+sport_event_instances_486:
+  id: 1041
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.567564'
+  updated_at: '2014-11-14 02:28:37.567564'
+  datetime_start: '2014-11-18 04:00:00.000000'
+  datetime_end: '2014-11-18 06:00:00.000000'
+  event_id: 93
+sport_event_instances_487:
+  id: 1042
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.573177'
+  updated_at: '2014-11-14 02:28:37.573177'
+  datetime_start: '2014-11-25 04:00:00.000000'
+  datetime_end: '2014-11-25 06:00:00.000000'
+  event_id: 93
+sport_event_instances_488:
+  id: 1043
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.577870'
+  updated_at: '2014-11-14 02:28:37.577870'
+  datetime_start: '2014-12-02 04:00:00.000000'
+  datetime_end: '2014-12-02 06:00:00.000000'
+  event_id: 93
+sport_event_instances_489:
+  id: 1044
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.582519'
+  updated_at: '2014-11-14 02:28:37.582519'
+  datetime_start: '2014-12-09 04:00:00.000000'
+  datetime_end: '2014-12-09 06:00:00.000000'
+  event_id: 93
+sport_event_instances_490:
+  id: 1045
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.588225'
+  updated_at: '2014-11-14 02:28:37.588225'
+  datetime_start: '2014-12-16 04:00:00.000000'
+  datetime_end: '2014-12-16 06:00:00.000000'
+  event_id: 93
+sport_event_instances_491:
+  id: 1046
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.593213'
+  updated_at: '2014-11-14 02:28:37.593213'
+  datetime_start: '2014-12-23 04:00:00.000000'
+  datetime_end: '2014-12-23 06:00:00.000000'
+  event_id: 93
+sport_event_instances_492:
+  id: 1047
+  sport_event_id: 63
+  created_at: '2014-11-14 02:28:37.597801'
+  updated_at: '2014-11-14 02:28:37.597801'
+  datetime_start: '2014-12-30 04:00:00.000000'
+  datetime_end: '2014-12-30 06:00:00.000000'
+  event_id: 93
+sport_event_instances_493:
+  id: 1048
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.514024'
+  updated_at: '2014-11-14 02:31:29.514024'
+  datetime_start: '2014-09-09 03:15:00.000000'
+  datetime_end: '2014-09-09 05:00:00.000000'
+  event_id: 94
+sport_event_instances_494:
+  id: 1049
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.519144'
+  updated_at: '2014-11-14 02:31:29.519144'
+  datetime_start: '2014-09-16 03:15:00.000000'
+  datetime_end: '2014-09-16 05:00:00.000000'
+  event_id: 94
+sport_event_instances_495:
+  id: 1050
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.524030'
+  updated_at: '2014-11-14 02:31:29.524030'
+  datetime_start: '2014-09-23 03:15:00.000000'
+  datetime_end: '2014-09-23 05:00:00.000000'
+  event_id: 94
+sport_event_instances_496:
+  id: 1051
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.529157'
+  updated_at: '2014-11-14 02:31:29.529157'
+  datetime_start: '2014-09-30 03:15:00.000000'
+  datetime_end: '2014-09-30 05:00:00.000000'
+  event_id: 94
+sport_event_instances_497:
+  id: 1052
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.534085'
+  updated_at: '2014-11-14 02:31:29.534085'
+  datetime_start: '2014-10-07 03:15:00.000000'
+  datetime_end: '2014-10-07 05:00:00.000000'
+  event_id: 94
+sport_event_instances_498:
+  id: 1053
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.538943'
+  updated_at: '2014-11-14 02:31:29.538943'
+  datetime_start: '2014-10-14 03:15:00.000000'
+  datetime_end: '2014-10-14 05:00:00.000000'
+  event_id: 94
+sport_event_instances_499:
+  id: 1054
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.550268'
+  updated_at: '2014-11-14 02:31:29.550268'
+  datetime_start: '2014-10-21 03:15:00.000000'
+  datetime_end: '2014-10-21 05:00:00.000000'
+  event_id: 94
+sport_event_instances_500:
+  id: 1055
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.559574'
+  updated_at: '2014-11-14 02:31:29.559574'
+  datetime_start: '2014-10-28 03:15:00.000000'
+  datetime_end: '2014-10-28 05:00:00.000000'
+  event_id: 94
+sport_event_instances_501:
+  id: 1056
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.565723'
+  updated_at: '2014-11-14 02:31:29.565723'
+  datetime_start: '2014-11-04 04:15:00.000000'
+  datetime_end: '2014-11-04 06:00:00.000000'
+  event_id: 94
+sport_event_instances_502:
+  id: 1057
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.571257'
+  updated_at: '2014-11-14 02:31:29.571257'
+  datetime_start: '2014-11-11 04:15:00.000000'
+  datetime_end: '2014-11-11 06:00:00.000000'
+  event_id: 94
+sport_event_instances_503:
+  id: 1058
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.577055'
+  updated_at: '2014-11-14 02:31:29.577055'
+  datetime_start: '2014-11-18 04:15:00.000000'
+  datetime_end: '2014-11-18 06:00:00.000000'
+  event_id: 94
+sport_event_instances_504:
+  id: 1059
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.582894'
+  updated_at: '2014-11-14 02:31:29.582894'
+  datetime_start: '2014-11-25 04:15:00.000000'
+  datetime_end: '2014-11-25 06:00:00.000000'
+  event_id: 94
+sport_event_instances_505:
+  id: 1060
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.588218'
+  updated_at: '2014-11-14 02:31:29.588218'
+  datetime_start: '2014-12-02 04:15:00.000000'
+  datetime_end: '2014-12-02 06:00:00.000000'
+  event_id: 94
+sport_event_instances_506:
+  id: 1061
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.594081'
+  updated_at: '2014-11-14 02:31:29.594081'
+  datetime_start: '2014-12-09 04:15:00.000000'
+  datetime_end: '2014-12-09 06:00:00.000000'
+  event_id: 94
+sport_event_instances_507:
+  id: 1062
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.599887'
+  updated_at: '2014-11-14 02:31:29.599887'
+  datetime_start: '2014-12-16 04:15:00.000000'
+  datetime_end: '2014-12-16 06:00:00.000000'
+  event_id: 94
+sport_event_instances_508:
+  id: 1063
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.605046'
+  updated_at: '2014-11-14 02:31:29.605046'
+  datetime_start: '2014-12-23 04:15:00.000000'
+  datetime_end: '2014-12-23 06:00:00.000000'
+  event_id: 94
+sport_event_instances_509:
+  id: 1064
+  sport_event_id: 64
+  created_at: '2014-11-14 02:31:29.610258'
+  updated_at: '2014-11-14 02:31:29.610258'
+  datetime_start: '2014-12-30 04:15:00.000000'
+  datetime_end: '2014-12-30 06:00:00.000000'
+  event_id: 94
+sport_event_instances_510:
+  id: 1065
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.200811'
+  updated_at: '2014-11-14 02:33:07.200811'
+  datetime_start: '2014-09-09 02:00:00.000000'
+  datetime_end: '2014-09-09 05:00:00.000000'
+  event_id: 95
+sport_event_instances_511:
+  id: 1066
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.206303'
+  updated_at: '2014-11-14 02:33:07.206303'
+  datetime_start: '2014-09-16 02:00:00.000000'
+  datetime_end: '2014-09-16 05:00:00.000000'
+  event_id: 95
+sport_event_instances_512:
+  id: 1067
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.210903'
+  updated_at: '2014-11-14 02:33:07.210903'
+  datetime_start: '2014-09-23 02:00:00.000000'
+  datetime_end: '2014-09-23 05:00:00.000000'
+  event_id: 95
+sport_event_instances_513:
+  id: 1068
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.215928'
+  updated_at: '2014-11-14 02:33:07.215928'
+  datetime_start: '2014-09-30 02:00:00.000000'
+  datetime_end: '2014-09-30 05:00:00.000000'
+  event_id: 95
+sport_event_instances_514:
+  id: 1069
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.221252'
+  updated_at: '2014-11-14 02:33:07.221252'
+  datetime_start: '2014-10-07 02:00:00.000000'
+  datetime_end: '2014-10-07 05:00:00.000000'
+  event_id: 95
+sport_event_instances_515:
+  id: 1070
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.225903'
+  updated_at: '2014-11-14 02:33:07.225903'
+  datetime_start: '2014-10-14 02:00:00.000000'
+  datetime_end: '2014-10-14 05:00:00.000000'
+  event_id: 95
+sport_event_instances_516:
+  id: 1071
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.230449'
+  updated_at: '2014-11-14 02:33:07.230449'
+  datetime_start: '2014-10-21 02:00:00.000000'
+  datetime_end: '2014-10-21 05:00:00.000000'
+  event_id: 95
+sport_event_instances_517:
+  id: 1072
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.235031'
+  updated_at: '2014-11-14 02:33:07.235031'
+  datetime_start: '2014-10-28 02:00:00.000000'
+  datetime_end: '2014-10-28 05:00:00.000000'
+  event_id: 95
+sport_event_instances_518:
+  id: 1073
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.239751'
+  updated_at: '2014-11-14 02:33:07.239751'
+  datetime_start: '2014-11-04 03:00:00.000000'
+  datetime_end: '2014-11-04 06:00:00.000000'
+  event_id: 95
+sport_event_instances_519:
+  id: 1074
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.244663'
+  updated_at: '2014-11-14 02:33:07.244663'
+  datetime_start: '2014-11-11 03:00:00.000000'
+  datetime_end: '2014-11-11 06:00:00.000000'
+  event_id: 95
+sport_event_instances_520:
+  id: 1075
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.249431'
+  updated_at: '2014-11-14 02:33:07.249431'
+  datetime_start: '2014-11-18 03:00:00.000000'
+  datetime_end: '2014-11-18 06:00:00.000000'
+  event_id: 95
+sport_event_instances_521:
+  id: 1076
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.254049'
+  updated_at: '2014-11-14 02:33:07.254049'
+  datetime_start: '2014-11-25 03:00:00.000000'
+  datetime_end: '2014-11-25 06:00:00.000000'
+  event_id: 95
+sport_event_instances_522:
+  id: 1077
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.258839'
+  updated_at: '2014-11-14 02:33:07.258839'
+  datetime_start: '2014-12-02 03:00:00.000000'
+  datetime_end: '2014-12-02 06:00:00.000000'
+  event_id: 95
+sport_event_instances_523:
+  id: 1078
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.264758'
+  updated_at: '2014-11-14 02:33:07.264758'
+  datetime_start: '2014-12-09 03:00:00.000000'
+  datetime_end: '2014-12-09 06:00:00.000000'
+  event_id: 95
+sport_event_instances_524:
+  id: 1079
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.270100'
+  updated_at: '2014-11-14 02:33:07.270100'
+  datetime_start: '2014-12-16 03:00:00.000000'
+  datetime_end: '2014-12-16 06:00:00.000000'
+  event_id: 95
+sport_event_instances_525:
+  id: 1080
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.274778'
+  updated_at: '2014-11-14 02:33:07.274778'
+  datetime_start: '2014-12-23 03:00:00.000000'
+  datetime_end: '2014-12-23 06:00:00.000000'
+  event_id: 95
+sport_event_instances_526:
+  id: 1081
+  sport_event_id: 65
+  created_at: '2014-11-14 02:33:07.279384'
+  updated_at: '2014-11-14 02:33:07.279384'
+  datetime_start: '2014-12-30 03:00:00.000000'
+  datetime_end: '2014-12-30 06:00:00.000000'
+  event_id: 95

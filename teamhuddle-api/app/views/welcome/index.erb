@@ -1,5 +1,9 @@
 <h1>Welcome to Teamhuddle Admin <small>...heavily under construction</small></h1>
 <hr>
+<% if @sport_events.length != 22 %>
+<h2><label class="label label-danger">THERE ARE MORE DROPINS THAN FIXTURES!</label></h2>
+<h2><label class="label label-danger">DEVS DON'T LOAD FIXTURES, MAYBE MARC IS ADDING THINGS</label></h2>
+<% end %>
 <h2>What's new?</h2>
 <ul>
   <h4>Lots of Client Changes</h4>
@@ -25,10 +29,21 @@
 </ul>
 <br>
 <h4>List of people signed up</h4>
-<table>
+
+<div>
+<table class="table table-bordered">
+    <thead>         
+    <tr>
+        <td>Email</td>
+        <td>Submission Date</td>
+    </tr>
+    </thead>
     <% @users.each do |user| %>
-    <tr><%=  user.email %></tr>
+    <tr>
+        <td><%= user.email %></td>
+        <td><%= user.created_at %></td>
+    </tr>
     <% end %>
 </table>
-
+</div>
   

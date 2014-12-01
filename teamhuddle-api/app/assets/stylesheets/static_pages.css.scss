@@ -51,3 +51,15 @@
 	}
 
 }
+
+
+.showme{ 
+	display: none;
+	 -webkit-transition: padding 2s;
+
+}
+.showbio:hover .showme{
+	display : block;
+	transition: opacity 0.2s 1s ease;
+	-webkit-transition: border-radius 2s;
+}

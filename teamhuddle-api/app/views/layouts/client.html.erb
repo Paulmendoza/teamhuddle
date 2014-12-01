@@ -11,6 +11,7 @@
                              media: 'all',
                              'data-turbolinks-track' => true%>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico.png">
     
     <%= csrf_meta_tags %>
   </head>
@@ -54,13 +55,14 @@
         <%= yield %>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    
     <div class="footer">
       <div class="addthis_horizontal_follow_toolbox pull-right addthis"></div>
     </div>
     
+  <%= javascript_include_tag 'application' %>  
     
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <script>
     var navHeight = $('.navbar-collapse').height();
 

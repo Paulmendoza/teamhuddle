@@ -7,7 +7,7 @@ sport_events_001:
   skill_level: Beginner
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -29,6 +29,7 @@ sport_events_001:
       :until: 2014-09-02 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_002:
   id: 45
   event_id: 70
@@ -37,7 +38,7 @@ sport_events_002:
   skill_level: Beginner
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -59,6 +60,7 @@ sport_events_002:
       :until: 2015-06-20 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_003:
   id: 46
   event_id: 71
@@ -67,7 +69,7 @@ sport_events_003:
   skill_level: Beginner
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -89,6 +91,7 @@ sport_events_003:
       :until: 2014-12-24 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_004:
   id: 47
   event_id: 72
@@ -97,7 +100,7 @@ sport_events_004:
   skill_level: Intermediate
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -119,6 +122,7 @@ sport_events_004:
       :until: 2017-10-22 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_005:
   id: 48
   event_id: 73
@@ -127,7 +131,7 @@ sport_events_005:
   skill_level: Intermediate
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -149,6 +153,7 @@ sport_events_005:
       :until: 2015-01-19 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_006:
   id: 49
   event_id: 74
@@ -157,7 +162,7 @@ sport_events_006:
   skill_level: Intermediate
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -179,6 +184,7 @@ sport_events_006:
       :until: 2014-11-25 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_007:
   id: 50
   event_id: 75
@@ -187,7 +193,7 @@ sport_events_007:
   skill_level: Advanced
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -209,6 +215,7 @@ sport_events_007:
       :until: 2014-12-25 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_008:
   id: 51
   event_id: 76
@@ -217,7 +224,7 @@ sport_events_008:
   skill_level: Advanced
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -239,6 +246,7 @@ sport_events_008:
       :until: 2014-11-27 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_009:
   id: 52
   event_id: 78
@@ -247,7 +255,7 @@ sport_events_009:
   skill_level: Recreational
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -269,6 +277,7 @@ sport_events_009:
       :until: 2014-11-27 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_010:
   id: 53
   event_id: 80
@@ -277,7 +286,7 @@ sport_events_010:
   skill_level: Advanced
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -299,6 +308,7 @@ sport_events_010:
       :until: 2014-11-27 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_011:
   id: 54
   event_id: 81
@@ -307,7 +317,7 @@ sport_events_011:
   skill_level: Recreational
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -329,6 +339,7 @@ sport_events_011:
       :until: 2014-11-30 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_012:
   id: 55
   event_id: 82
@@ -337,7 +348,7 @@ sport_events_012:
   skill_level: Recreational
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -359,6 +370,7 @@ sport_events_012:
       :until: 2014-11-01 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_013:
   id: 56
   event_id: 84
@@ -367,7 +379,7 @@ sport_events_013:
   skill_level: beginner
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -389,6 +401,7 @@ sport_events_013:
       :until: 2014-12-10 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_014:
   id: 57
   event_id: 85
@@ -397,7 +410,7 @@ sport_events_014:
   skill_level: Beginner
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -419,6 +432,7 @@ sport_events_014:
       :until: 2014-12-08 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_015:
   id: 58
   event_id: 86
@@ -427,7 +441,7 @@ sport_events_015:
   skill_level: Beginner
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -449,6 +463,7 @@ sport_events_015:
       :until: 2014-12-08 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_016:
   id: 59
   event_id: 89
@@ -457,7 +472,7 @@ sport_events_016:
   skill_level: Beginner
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -479,6 +494,7 @@ sport_events_016:
       :until: 2014-12-09 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_017:
   id: 60
   event_id: 90
@@ -487,7 +503,7 @@ sport_events_017:
   skill_level: Beginner
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -509,6 +525,7 @@ sport_events_017:
       :until: 2014-12-09 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_018:
   id: 61
   event_id: 91
@@ -517,7 +534,7 @@ sport_events_018:
   skill_level: Beginner
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -539,6 +556,7 @@ sport_events_018:
       :until: 2014-12-09 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
 sport_events_019:
   id: 62
   event_id: 92
@@ -547,7 +565,7 @@ sport_events_019:
   skill_level: Advanced
   price_per_one: 5
   price_per_group: 
-  spots: 
+  spots: 25
   spots_filled: -1
   gender: n/a
   notes: 
@@ -569,3 +587,97 @@ sport_events_019:
       :until: 2014-12-09 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: 
+sport_events_020:
+  id: 63
+  event_id: 93
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 25
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-11-14 02:28:37.500146'
+  updated_at: '2014-11-14 02:28:37.500146'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-02 20:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-02 22:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-30 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+sport_events_021:
+  id: 64
+  event_id: 94
+  sport_id: volleyball
+  type: dropin
+  skill_level: Beginner
+  price_per_one: 5
+  price_per_group: 
+  spots: 25
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-11-14 02:31:29.501841'
+  updated_at: '2014-11-14 02:31:29.501841'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-02 20:15:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-02 22:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-30 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+sport_events_022:
+  id: 65
+  event_id: 95
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 7
+  price_per_group: 
+  spots: 25
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-11-14 02:33:07.186836'
+  updated_at: '2014-11-14 02:33:07.186836'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-02 19:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-02 22:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-30 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 

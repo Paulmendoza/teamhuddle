@@ -5,3 +5,9 @@ users_001:
   email: akos_sebestyen@hotmail.com
   created_at: '2014-11-13 04:40:11.145270'
   updated_at: '2014-11-13 04:40:11.145270'
+users_002:
+  id: 18
+  name: 
+  email: marc@eje.ca
+  created_at: '2014-11-13 07:49:54.344954'
+  updated_at: '2014-11-13 07:49:54.344954'

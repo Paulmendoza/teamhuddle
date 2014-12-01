@@ -1,5 +1,8 @@
-var app = angular.module('app', ['ngResource', 'ngMap', 'ngAnimate']);
+//COMMENT IN:   disable logging
+//COMMENT OUT:  enable  logging 
+//console.log = function() {}
 
+var app = angular.module('app', ['ngResource', 'ngMap', 'ngAnimate']);
 
 function getStartOfTheWeek(d) {
     d = new Date(d);
@@ -29,7 +32,7 @@ app.service('Dropins', ['$http', '$q', function ($http, $q) {
     baseUrl += 'from=' + getStartOfTheWeek(new Date()).toISOString();
     baseUrl += '&to=' + getEndOfTheWeek(new Date()).toISOString();
     
-    // default get
+    // default get (gets events for the week)
     this.get = function () {
         return this.fetch(baseUrl);
     };
@@ -39,7 +42,6 @@ app.service('Dropins', ['$http', '$q', function ($http, $q) {
         return this.fetch(url);
     };
 
-    // 
     this.fetch = function (builtUrl) {
         var deferred = $q.defer();
 
@@ -51,5 +53,4 @@ app.service('Dropins', ['$http', '$q', function ($http, $q) {
 
         return deferred.promise;
     };
-
 }]);

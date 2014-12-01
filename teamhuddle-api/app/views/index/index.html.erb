@@ -3,50 +3,64 @@
   <div class="header" ng-show="sport === 'no-sport'">
     <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo'%>
     <h1 class="text-center">teamhuddle</h1>
+    <h3 class="text-center">DROPIN FINDER</h3>
     <h2 class="text-center">GAME ON!</h2>
   </div>
 
 
-  <section class="sport_logos text-center" ng-show="sport === 'no-sport'">
-      <%= link_to(image_tag("volleyball-compressed.png", :alt => "asdf",
-          class: "sport_logo green_bck", id: "first"), "#volleyball") %>
-        
-      <%= link_to(image_tag("hockey-compressed.png", :alt => "asdf", 
-          class: "sport_logo blue_bck", id: "second"), "#hockey") %>
-        
-      <%= link_to(image_tag("basketball-compressed.png", :alt => "asdf", 
-          class: "sport_logo orange_bck", id: "third"), "#basketball") %>
-        
-      <%= link_to(image_tag("soccer-compressed.png", :alt => "asdf", 
-          class: "sport_logo red_bck ", id: "fourth"), "#soccer") %>
-            
-      <%= link_to(image_tag("dragonboat-compressed.png", :alt => "asdf", 
-          class: "sport_logo red_bck", id: "first"), "#dragonboat") %>
-      
-      <%= link_to(image_tag("baseball.png", :alt => "asdf", 
-          class: "disabled sport_logo test_images", id: "second"), "") %>
+  <section class="sport_logos text-center" ng-if="sport === 'no-sport'">
 
-      <%= link_to(image_tag("ultimate.png", :alt => "asdf", 
-          class: "sdisabled sport_logo test_images", id: "third"), "") %>
-        
-      <%= link_to(image_tag("dodgeball.png", :alt => "asdf", 
-          class: "disabled sport_logo test_images", id: "fourth"), "") %>
-        
+<!-- DO NOT DELETE -->
+<!--     <div class="sport-outer">
+      <div class="sport-first col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-second col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-third col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-fourth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-fifth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-sixth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-seventh col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-eighth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+    </div> -->
+  <!-- DO NOT DELETE -->
+    <%= link_to(image_tag("volleyball-compressed.png", :alt => "asdf",
+    class: "sport_logo green_bck", id: "first"), "/#/volleyball") %>
+
+    <%= link_to(image_tag("hockey-compressed.png", :alt => "asdf", 
+    class: "sport_logo blue_bck", id: "second"), "/#/hockey") %>
+
+    <%= link_to(image_tag("basketball-compressed.png", :alt => "asdf", 
+    class: "sport_logo orange_bck", id: "third"), "/#/basketball") %>
+
+    <%= link_to(image_tag("soccer-compressed.png", :alt => "asdf", 
+    class: "sport_logo red_bck ", id: "fourth"), "/#/soccer") %>
+
+    <%= link_to(image_tag("dragonboat-compressed.png", :alt => "asdf", 
+    class: "sport_logo red_bck", id: "first"), "/#/dragonboat") %>
+
+    <%= link_to(image_tag("baseball.png", :alt => "asdf", 
+    class: "disabled sport_logo test_images", id: "second"), "") %>
+
+    <%= link_to(image_tag("ultimate.png", :alt => "asdf", 
+    class: "sdisabled sport_logo test_images", id: "third"), "") %>
+
+    <%= link_to(image_tag("dodgeball.png", :alt => "asdf", 
+    class: "disabled sport_logo test_images", id: "fourth"), "") %>     
   </section>
 
   <section ng-show="sport !== 'no-sport'">
-    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak>
-      <map zoom="10"></map>
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak ng-class="{'map-mobile-toggle': !mapMobileToggle}" ng-view>
+      <map center="Vancouver, Canada" zoom="10" init-event="loadMap" geo-fallback-center="Vancouver, Canada"></map>
+      <button class="btn-info hidden-md" ng-click="switchToList()">show list</button>
     </div>
 
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak>        
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak ng-class="{'map-mobile-toggle': mapMobileToggle}">        
       <br>
       <div class="dropinfilters_row">
-        <button class="btn btn-success col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-click="resetFilters()">reset</button>
-        <%= link_to "another sport", "/#/", class: "btn btn-info col-lg-3 col-md-4 col-sm-6 col-xs-6" %>
+        <button class="btn btn-success col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-click="resetFilters()">reset filters</button>
+        <%= link_to "change sport", "/#/", class: "btn btn-info col-lg-3 col-md-4 col-sm-6 col-xs-6" %>
         <div class="col-lg-3 col-md-2 col-sm-6 col-xs-6">
           <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="setFilters()">
-            <option value="" disabled selected>Day of the Week</option>
+            <option value="" disabled selected>Day</option>
             <option value="All">All</option>
             <option value="Monday">Monday</option>
             <option value="Tuesday">Tuesday</option>
@@ -68,23 +82,19 @@
           </select>
         </div>
       </div>
+      
+      <button class="btn-info hidden-lg hidden-md" ng-click="switchToMap()">show map</button>
 
       <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
       <div class="dropin_results">  
         <br>
-        <%#*<table ng-if="format === 'items'" class="table col-lg-6 col-md-10 col-sm-10 col-xs-10">%>
-        <%#*<tr class="table-row" ng-repeat="dropin in dropins" ng-click="markerWrappers[dropin.id].infoWindow.toggle(true); centerDropin(dropin)">%>
-          <%#*<td>{{dropin.datetime_start.time | date:'EEEE'}}</td>%>
-          <%#*<td>{{dropin.location.name}}</td>%>
-          <%#*<td>{{dropin.sport_event.skill_level}}</td>%>
-          <%#*<td>{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</td>%>
-
-          <%#*<td><span class="button glyphicon glyphicon-remove" ng-click="remove(dropin)" /></td>%>
-        <%#*</tr>%>
-        <%#*</table>%>
-        <div class="row clearfix dropin-repeat" ng-class="{selected: markerWrappers.currentlyOpen === dropin.id}"  ng-repeat="dropin in dropins" ng-click="markerWrappers[dropin.id].infoWindow.toggle(); centerDropin(dropin)">         
+        <div class="row clearfix dropin-repeat"
+             ng-class="{selected: markerWrappers.currentlyOpen === dropin.id}"  
+             ng-repeat="dropin in dropins" 
+             ng-click="markerWrappers[dropin.id].infoWindow.toggle(); centerDropin(dropin)"
+             ng-attr-id="{{ 'dropin-' + dropin.id }}">         
             <hr>
-            <div class="col-md-4">
+            <div class="col-md-4 col-xs-12">
               <h4 ng-class="{bolded: isSelected(dropin.id)}">{{dropin.location.name}}</h4>
               <div ng-show="isSelected(dropin.id)" class="dropin-info">
                 <span>{{dropin.location.address}}</span><br>
@@ -92,34 +102,50 @@
                 <email>{{dropin.organization.email}}</email>
               </div>
             </div>
+            <div class="col-xs-12 hidden-lg hidden-md" ng-if="isSelected(dropin.id)">
+                <button class="btn-info" ng-click="$event.stopPropagation(); switchToMap()">show on map</button>
+            </div>
+            
             <!-- show this if it's not selected -->
             <div ng-hide="isSelected(dropin.id)">
                 <p class="col-md-2 col-xs-4">{{dropin.datetime_start.time | date:'EEEE'}}</p>
                 <p class="col-md-2 col-xs-4">{{dropin.sport_event.skill_level}}</p>
-                <p class="col-md-4 col-xs-8">{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</p>
+                <p class="col-md-4 col-xs-4">{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</p>
             </div>
             
             <!-- show this if it is selected -->
             <div ng-show="isSelected(dropin.id)">
-              <div class="col-md-4">
-                <br>
-                <dt>Price</dt><dl>{{dropin.sport_event.price_per_one | currency }}</dl>
-                <dt>Skill Level</dt><dl>{{dropin.sport_event.skill_level}}</dl>
-              </div>
-              <div class="col-md-4">
+              <div class="col-md-2 col-xs-4">
                 <br>
                 <dt>Day</dt><dl>{{dropin.datetime_start.time | date:'EEEE'}}</dl>
+                <dt>Price</dt><dl>{{dropin.sport_event.price_per_one | currency }}</dl>                
+              </div>
+              <div class="col-md-2 col-xs-4">
+                <br>
+                <dt>Skill Level</dt><dl>{{dropin.sport_event.skill_level}}</dl>
+                <dt>Spots Available</dt><dl>{{dropin.sport_event.spots }}</dl>
+                
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <br>
                 <dt>Time</dt><dl>{{dropin.datetime_start.time | date:'h:mm a'}} - {{dropin.datetime_end.time | date:'h:mm a'}}</dl>
+                <dt ng-show="{{dropin.sport_event.source !== null}}">Source</dt><dl><a href="{{dropin.sport_event.source}}" ng-click="$event.stopPropagation()">{{dropin.sport_event.source}}</a></dl>
               </div>
             </div>
             
         </div>
-        </div>
+      </div>
+      <div class="disclaimer clearfix">
+          <p><i>
+           Something something disclaimer please don't sue us! I swear this was correct when I looked at it, 
+           just because you didn't call ahead it's not my fault, why can't we all just be diplomatic. 
+           Blah blah, this is not always correct
+          </i></p>
+      </div>
       </div>
     </div>
   </section>
 </div>
 
-<%= javascript_include_tag 'application' %>  
+<%= javascript_include_tag 'angular_application', 'data-turbolinks-track' => true %>  
 <%= javascript_include_tag '//maps.googleapis.com/maps/api/js?key=AIzaSyDwIy4KU0bhEV5R3yV5hAqAcL_TIjlrY0o' %>
-

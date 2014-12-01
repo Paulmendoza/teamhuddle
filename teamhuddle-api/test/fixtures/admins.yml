@@ -19,14 +19,14 @@ admins_002:
   encrypted_password: $2a$10$cBTzPc57bLnVYN8bEzlDHeHwjyZVGH8ifTFDPiuQDb9NIDll9powa
   reset_password_token: 
   reset_password_sent_at: 
-  remember_created_at: 
-  sign_in_count: 0
-  current_sign_in_at: 
-  last_sign_in_at: 
-  current_sign_in_ip: 
-  last_sign_in_ip: 
+  remember_created_at: '2014-11-14 02:19:39.140784'
+  sign_in_count: 1
+  current_sign_in_at: '2014-11-14 02:19:39.148001'
+  last_sign_in_at: '2014-11-14 02:19:39.148001'
+  current_sign_in_ip: 24.114.25.20
+  last_sign_in_ip: 24.114.25.20
   created_at: '2014-11-13 04:46:41.700899'
-  updated_at: '2014-11-13 04:46:41.700899'
+  updated_at: '2014-11-14 02:19:39.149081'
 admins_003:
   id: 5
   email: zamina@teamhuddle.ca
@@ -61,11 +61,11 @@ admins_005:
   encrypted_password: $2a$10$Vz0QQIZYaeg/Jgux1Sl42eJy.JlfE8QPQ0QEfMWSyRkg65z4.KFrm
   reset_password_token: 
   reset_password_sent_at: 
-  remember_created_at: 
-  sign_in_count: 0
-  current_sign_in_at: 
-  last_sign_in_at: 
-  current_sign_in_ip: 
-  last_sign_in_ip: 
+  remember_created_at: '2014-11-13 07:49:36.308587'
+  sign_in_count: 4
+  current_sign_in_at: '2014-11-17 02:11:11.950162'
+  last_sign_in_at: '2014-11-13 19:56:48.572376'
+  current_sign_in_ip: 24.84.34.3
+  last_sign_in_ip: 199.60.19.194
   created_at: '2014-11-13 04:49:21.947904'
-  updated_at: '2014-11-13 04:49:21.947904'
+  updated_at: '2014-11-17 02:11:11.951708'

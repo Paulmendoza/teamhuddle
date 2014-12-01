@@ -4,6 +4,11 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Ignore database.yml for security when deploying to production.
+
+# Compiled assets
+/public
+
 # Ignore bundler config.
 /.bundle
 
@@ -23,3 +28,8 @@ gemfile.lock
 
 # Ignore bower junk
 /lib/assets/bower_components
+
+# Ignore RubyMine files
+.idea
+
+/config/database.yml

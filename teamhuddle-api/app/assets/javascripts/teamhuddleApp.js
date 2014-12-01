@@ -1,13 +1,16 @@
 var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonboat'];
 
-app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function ($scope, $filter, $location, Dropins) {
+app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropins', function ($scope, $filter, $location, $compile, Dropins) {
         // set my own orderBy filter directive
         var orderBy = $filter('orderBy');
         
+        $scope.mapMobileToggle = false;
+
+        // for displaying all list items as verbose or non verbose format
         $scope.format = 'items';
-        
-        $scope.isSelected = function(dropin_id){
-            return $scope.format ===  'items' || $scope.markerWrappers.currentlyOpen === dropin_id;
+
+        $scope.isSelected = function (dropin_id) {
+            return $scope.format === 'items' || $scope.markerWrappers.currentlyOpen === dropin_id;
         };
 
         // a dictionary to hold all of the MarkerWrapper objects
@@ -16,14 +19,15 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         // this will hold the id of the marker that is currently open
         $scope.markerWrappers.currentlyOpen = null;
 
-        $scope.weekdaySelect = "All";
-        $scope.skillLevelSelect = "All";
-
         // initialize the predicate that sorting will be done through
         $scope.predicate = 'datetime_start.time';
 
         // array that will have all the dropin objects
         $scope.dropins = [];
+
+
+        /**** DROPIN EVENTS/WATCHERS: ****/
+        /*******************************************/
 
         // watches dropins and makes sure markers are in sync
         $scope.$watchCollection('dropins', function (newValues, oldValues) {
@@ -45,12 +49,10 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                     $scope.markerWrappers[dropin.id] = new MarkerWrapper(dropin);
                     console.log("Adding marker: " + dropin.id);
                 }
-                
-                
             });
-            
+
             // if the currently open id is no longer contained in the wrappers then obviously set it to null, as it can't be open
-            if(typeof($scope.markerWrappers[$scope.markerWrappers.currentlyOpen]) === 'undefined'){
+            if (typeof ($scope.markerWrappers[$scope.markerWrappers.currentlyOpen]) === 'undefined') {
                 $scope.markerWrappers.currentlyOpen = null;
             }
         });
@@ -59,7 +61,6 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
         $scope.$on('$locationChangeSuccess', function (event) {
             if (sportRoutes.indexOf($location.path()) >= 0) {
                 $scope.sport = $location.path().replace("/", "");
-
                 $scope.refreshDropins();
             }
             else {
@@ -68,28 +69,62 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             }
         });
 
-        // DROPIN CONTROLLER FUNCTIONS:
+        
+        
+        /**** DROPIN CONTROLLER FUNCTIONS: ****/
+        /**************************************/
+
         // use a deferred promise from the Dropins service to populate the scope
         $scope.refreshDropins = function () {
+            $scope.$emit("loadMap");
             Dropins.getBySport($scope.sport).then(
                     function (dropins) {
                         $scope.dropins = orderBy(dropins, $scope.predicate, false);
 
-                        // call a resize because map has moved and recenter it
-                        google.maps.event.trigger($scope.map, 'resize');
+                        $scope.resizeMap();
 
                         $scope.applyFilters();
-                        
-                        if($scope.dropins.length > 3){
+
+                        if ($scope.dropins.length > 3) {
                             $scope.format = 'table';
                         }
-                        else{
+                        else {
                             $scope.format = 'items';
-                        }                        
+                        }
                     },
                     function (reason) {
                         alert('Failed: ' + reason);
                     });
+        };
+        
+        $scope.resizeMap = function () {            
+            // set a minor timeout to fix load issues
+            window.setTimeout(function(){
+                google.maps.event.trigger($scope.map, 'resize');
+            },100);
+        };
+        
+        $scope.switchToMap = function () {   
+            $scope.mapMobileToggle = !$scope.mapMobileToggle;
+            $scope.resizeMap();
+            window.setTimeout(function(){
+                if($scope.markerWrappers.currentlyOpen !== null){
+                    var currentlyOpen = $scope.markerWrappers.currentlyOpen;
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                }                
+            },250);
+        };
+        
+        $scope.switchToList = function () {   
+            $scope.mapMobileToggle = !$scope.mapMobileToggle;
+            window.setTimeout(function(){
+                if($scope.markerWrappers.currentlyOpen !== null){
+                    var currentlyOpen = $scope.markerWrappers.currentlyOpen;
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                }                
+            },250);
         };
 
         // function which orders by predicate
@@ -103,7 +138,6 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             $scope.map.setZoom(11);
         };
 
-
         // applies filters from the URL
         $scope.applyFilters = function () {
             // apply each filter if 'All' isn't selected
@@ -111,18 +145,17 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                 $scope.dropins = $filter('weekday')($scope.dropins, $location.search()['day']);
                 $scope.weekdaySelect = $location.search()['day'];
             }
-            else if (typeof $location.search()['day'] === 'undefined') {
-                $scope.weekdaySelect = 'All';
+            else {
+                $scope.weekdaySelect = undefined;
             }
             if (typeof $location.search()['skill'] !== 'undefined') {
                 $scope.dropins = $filter('skill_level')($scope.dropins, $location.search()['skill']);
                 $scope.skillLevelSelect = $location.search()['skill'];
             }
-            else if (typeof $location.search()['skill'] !== 'undefined') {
-                $scope.skillLevelSelect = 'All';
+            else {
+                $scope.skillLevelSelect = undefined
             }
         };
-
 
         // sets the filter arguments in the URL
         $scope.setFilters = function () {
@@ -143,8 +176,8 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 
         // resets the filter arguments in the URL
         $scope.resetFilters = function () {
-            $scope.weekdaySelect = 'All';
-            $scope.skillLevelSelect = 'All';
+            $scope.weekdaySelect = undefined;
+            $scope.skillLevelSelect = undefined;
             $location.search('day', null);
             $location.search('skill', null);
         };
@@ -161,6 +194,12 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
             $scope.sport = 'no-sport';
         };
 
+        $scope.moreDropinInfo = function () {
+            debugger;
+        };
+
+        /**** INNER CLASS: ****/
+        /***********************/
         // definition of the marker object that is linked to each dropin event
         // properties: 
         //  isOpen(bool)                        : indicates whether the marker object is open
@@ -172,15 +211,37 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 
             this.marker = new google.maps.Marker({
                 map: $scope.map,
+                //icon: "<%= asset_path('Hockey-MapMarker.png') %>",
                 position: new google.maps.LatLng(dropin.location.lat, dropin.location.long)
             });
-
+            
+            var htmlContent = "<div class='info-window'>" +
+                        "<h5>" + dropin.location.name + "</h5>" +
+                        "<p>" + dropin.location.address + "</p>" +
+                        "<p>" + dropin.organization.phone + "</p>" +
+                        "<div class='hidden-xs hidden-sm'>" + //hide extra stuff on mobile, instead show a button to go to the list
+                            "<div class='col-md-7 col-sm-7'>" +
+                                "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start.time, 'EEEE') + " </p>" +
+                                "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>" +
+                            "</div>" +
+                            "<div class='col-md-5 col-sm-5'>" +
+                                "<p><b>Price:</b> " + $filter('currency')(dropin.sport_event.price_per_one) + "</p>" +
+                                "<p><b>Time:</b> " + $filter('date')(dropin.datetime_start.time, 'h:mm a') + " - " + $filter('date')(dropin.datetime_end.time, 'h:mm a') + "</p>" +
+                            "</div>" +
+                            "<br><br><br><br><br>" + 
+                        "</div>" +
+                        "<div class='hidden-lg hidden-md'>" +
+                            "<button class='btn' ng-click='switchToList()'>more info</button>" +
+                            "<br><br><br>" + 
+                        "</div>" +
+                        "</div>";
+            
+            var compiled = $compile(htmlContent)($scope);
+            
             // the content for the infoWindow is set
             this.infoWindow = new google.maps.InfoWindow({
-                content: "<p><b>Location:</b> " + dropin.location.name + "</p>" +
-                        "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start.time, 'EEEE') + " </p>" +
-                        "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>",
-                maxwidth: 600
+                content: compiled[0],
+                maxwidth: 200
             });
 
             // redecleration needed to set up listener correctly
@@ -211,13 +272,26 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
                     $scope.markerWrappers.currentlyOpen = dropin.id;
                     that.infoWindow.open($scope.map, that.marker);
                     that.isOpen = true;
+
+                    // scroll to logic here
+                    var scrollPos = $('#dropin-' + dropin.id).offset().top;
+
+                    // if the element would fall into the height of the window 
+                    // minus some buffer then just scroll to the top
+                    if (scrollPos < window.innerHeight - 150) {
+                        $('body').animate({scrollTop: 0}, 'fast');
+                    }
+                    // otherwise scroll to the element minus a buffer so it will always show on screen
+                    else {
+                        $('body').animate({scrollTop: scrollPos - 175}, 'fast');
+                    }
                 }
-                
-                if(!$scope.$$phase) {
+
+                if (!$scope.$$phase) {
                     $scope.$apply();
                 }
-                
             };
+            
         }
 
         // UNUSED HELPER METHOD, COULD BE USERFUL LATER
@@ -235,26 +309,24 @@ app.controller('dropins', ['$scope', '$filter', '$location', 'Dropins', function
 //                    return 0;
 //            }
 //        };
-
     }]);
-
 
 // FILTERS
 // filter based on a certain weekday
 app.filter('weekday', ['$filter', function ($filter) {
-    return function (sport_events, day) {
-        var retn = [];
+        return function (sport_events, day) {
+            var retn = [];
 
-        angular.forEach(sport_events, function (sport_event) {
-            if ($filter('date')(sport_event.datetime_start.time, 'EEEE') === day) {
+            angular.forEach(sport_events, function (sport_event) {
+                if ($filter('date')(sport_event.datetime_start.time, 'EEEE') === day) {
 
-                retn.push(sport_event);
-            }
-        });
+                    retn.push(sport_event);
+                }
+            });
 
-        return retn;
-    };
-}]);
+            return retn;
+        };
+    }]);
 
 // filter based on skill level
 app.filter('skill_level', function () {

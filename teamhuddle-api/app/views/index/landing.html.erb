@@ -1,38 +1,52 @@
 <div class="container">
-<section>
-  <div class="header" ng-show="sport === 'no-sport'">
-      <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo'%>
-      <h1 class="text-center">teamhuddle</h1>
-      <h2 class="text-center">GAME ON!</h2>
-  </div>
-</section>
+  <section>
+    <div class="header">
+        <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo'%>
+        <h1 class="text-center">teamhuddle</h1>
+        <h2 class="text-center">GAME ON!</h2>
+    </div>
+  </section>
 
 
-<section class="sport_logos text-center" ng-show="sport === 'no-sport'">
-  <%= link_to(image_tag("volleyball-compressed.png", :alt => "asdf",
-  class: "sport_logo green_bck", id: "first"), "/#/volleyball") %>
+  <section class="sport_logos text-center">
 
-  <%= link_to(image_tag("hockey-compressed.png", :alt => "asdf", 
-  class: "sport_logo blue_bck", id: "second"), "/#/hockey") %>
+<!-- DO NOT DELETE -->
+<!--     <div class="sport-outer">
+      <div class="sport-first col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-second col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-third col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-fourth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-fifth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-sixth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-seventh col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+      <div class="sport-eighth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
+    </div> -->
+  <!-- DO NOT DELETE -->
+    <%= link_to(image_tag("volleyball-compressed.png", :alt => "asdf",
+    class: "sport_logo green_bck", id: "first"), "/#/volleyball") %>
 
-  <%= link_to(image_tag("basketball-compressed.png", :alt => "asdf", 
-  class: "sport_logo orange_bck", id: "third"), "/#/basketball") %>
+    <%= link_to(image_tag("hockey-compressed.png", :alt => "asdf", 
+    class: "sport_logo blue_bck", id: "second"), "/#/hockey") %>
 
-  <%= link_to(image_tag("soccer-compressed.png", :alt => "asdf", 
-  class: "sport_logo red_bck ", id: "fourth"), "/#/soccer") %>
+    <%= link_to(image_tag("basketball-compressed.png", :alt => "asdf", 
+    class: "sport_logo orange_bck", id: "third"), "/#/basketball") %>
 
-  <%= link_to(image_tag("dragonboat-compressed.png", :alt => "asdf", 
-  class: "sport_logo red_bck", id: "first"), "/#/dragonboat") %>
+    <%= link_to(image_tag("soccer-compressed.png", :alt => "asdf", 
+    class: "sport_logo red_bck ", id: "fourth"), "/#/soccer") %>
 
-  <%= link_to(image_tag("baseball.png", :alt => "asdf", 
-  class: "disabled sport_logo test_images", id: "second"), "") %>
+    <%= link_to(image_tag("dragonboat-compressed.png", :alt => "asdf", 
+    class: "sport_logo red_bck", id: "first"), "/#/dragonboat") %>
 
-  <%= link_to(image_tag("ultimate.png", :alt => "asdf", 
-  class: "sdisabled sport_logo test_images", id: "third"), "") %>
+    <%= link_to(image_tag("baseball.png", :alt => "asdf", 
+    class: "disabled sport_logo test_images", id: "second"), "") %>
 
-  <%= link_to(image_tag("dodgeball.png", :alt => "asdf", 
-  class: "disabled sport_logo test_images", id: "fourth"), "") %>     
-</section>
+    <%= link_to(image_tag("ultimate.png", :alt => "asdf", 
+    class: "sdisabled sport_logo test_images", id: "third"), "") %>
+
+    <%= link_to(image_tag("dodgeball.png", :alt => "asdf", 
+    class: "disabled sport_logo test_images", id: "fourth"), "") %>     
+  </section>
+</div>
 
 <section>
     <div class="features col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -52,19 +66,41 @@
     </div>
 </section>
 
+<div class="container-fluid" ng-controller="landing-page" ng-cloak>
   <section>
     <div class="mailer">
       <div class="mailer-inner text-center col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
           <h3>Find the sports you love playing with the players you love playing with!</h3>
           <h4>Submit your e-mail below to receive front of the line access to our beta</h4>
           <br>
-          <%= form_for User.new do |f| %> 
-            <%= f.email_field :email, class: "form-control", placeholder: "Enter your e-mail" %>
-              <%= f.submit "Submit", class: "btn btn-info" %>
-          <% end %>
+          <%#= form_for User.new do |f| %> 
+            <%#= f.email_field :email, class: "form-control", placeholder: "Enter your e-mail" %>
+              <%#= f.submit "Submit", class: "btn btn-info" %>
+          <%# end %>
+          
+          <form ng-submit="submit()">
+              <input type="email" ng-model="email" class="form-control"/>
+              <input value="submit" type="submit" class="btn btn-info"/>
+          </form>
+          <br>
+          <!-- Show this div while waiting for a response from the server -->
+          <div ng-if="processing">
+              <p>please wait..</p>
+          </div>
+          
+          <!-- Show this div on success -->
+          <div class="panel panel-success" ng-if="success && submitted && !processing">
+              <p>Thanks for signing up, {{user.email}}!</p>
+          </div>
+          
+          <!-- Show this div if there was an error -->
+          <div class="panel panel-warn" ng-if="!success && submitted && !processing">
+              <p>There was an error processing your request. Sorry!</p>
+          </div>
 
         </div>
       </div>
   </section>
-    
 </div>
+
+<%= javascript_include_tag 'landing_page' %>  

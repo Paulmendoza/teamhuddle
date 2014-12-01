@@ -17,8 +17,9 @@ class DropinsController < ApplicationController
     
     # This is for the admin page -> see index.erb
     @dropins = SportEvent.includes(:event, :location, :organization)
-    .where( sport_events: { type: "dropin", sport_id: @sport, dt_deleted: nil })
-    .order(:created_at)
+                         .where( sport_events: { type: "dropin", sport_id: @sport, dt_deleted: nil })
+                         .order(:created_at)
+    
     
     #active = false
     #active = params[:active] if params[:active].present?
@@ -27,13 +28,9 @@ class DropinsController < ApplicationController
   end
   
   def show
-    @dropin = SportEvent.joins(:event).where( events: { id: params[:id]}).select('*')
+    @dropin = SportEvent.includes(:event, :location, :organization).find(params[:id])                         
+                         
     
-    respond_to do |format|
-      format.html { render json: @dropin }
-      format.json { render json: @dropin, :except => [:event_id] }
-      format.xml { render xml: @dropin, except: [:event_id] }
-    end
   end
 
   def create
@@ -219,7 +216,7 @@ class DropinsController < ApplicationController
   private
   def dropin_params
     params.require(:dropin).permit(:sport, :skill_level, :price_per_one,
-      :spots, :notes, :format)
+      :spots, :notes, :format, :source)
   end
 
   private

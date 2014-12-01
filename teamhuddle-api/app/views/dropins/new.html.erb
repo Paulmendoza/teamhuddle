@@ -59,16 +59,30 @@
   </p>
  
   <p>
-    <%= label_tag(:price_per_one, "Drop-in Price") %><br>
+    <%= label_tag(:price_per_one, "Drop-in Price per session") %><br>
     <%= f.number_field :price_per_one, min: 0, step: 0.01 %>
+  </p>
+  
+  <p>
+    <%= label_tag(:price_per_group, "Drop-in Price per season (optional)") %><br>
+    <%= f.number_field :price_per_group, min: 0, step: 0.01 %>
+  </p>
+  
+  <p>
+    <%= label_tag(:spots, "Spots") %><br>
+    <%= f.number_field :spots, min: 0, step: 1 %>
   </p>
   
   <p>
     <%= f.label :comments %><br>
     <%= f.text_area :comments %>
   </p>
+  
+  <p>
+    <%= f.label :source %><br>
+    <%= f.text_field :source %> <small>Enter the link to the site where you got the information from</small>
+  </p>
 
- 
   <p>
     <%= f.submit %>
   </p>

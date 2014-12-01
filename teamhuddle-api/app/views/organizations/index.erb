@@ -6,7 +6,8 @@
     <th>Name</th>
     <th>Phone</th>
     <th>Email</th>
-    <th></th>
+    <th>Website</th>
+    <th>Action</th>
   </tr>
   
   <% @organizations.each do |organization| %>
@@ -14,6 +15,7 @@
     <td><%= link_to organization.name, organization_path(organization)%></td>
     <td><%= organization.phone %></td>
     <td><%= organization.email %></td>
+    <td><a href="<%= organization.website %>"><%= organization.website %></a></td>
     <td>
       <%= link_to 'Edit', edit_organization_path(organization), class: 'btn btn-default' %>
       <%= link_to 'Delete', organization, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
