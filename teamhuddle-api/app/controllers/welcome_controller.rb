@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
   def index
     @users = User.all.order(created_at: :desc)
     
-    @sport_events = SportEvent.all
+    @sport_events = SportEvent.all.where(dt_deleted: nil)
     
   end
 end

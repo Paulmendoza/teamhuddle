@@ -36,7 +36,7 @@ class SportEvent < ActiveRecord::Base
   end
   
   def soft_delete
-    self.dtDeleted = Time.now
+    self.dt_deleted = Time.now
     self.save
   end
  
