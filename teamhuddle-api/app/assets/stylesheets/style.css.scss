@@ -22,6 +22,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+[ng-cloak]
+{
+    display: none !important;
+}   
+
 body{
     background-color: #6EC2F2 !important;
 }
