@@ -3,6 +3,7 @@
   <div class="header" ng-show="sport === 'no-sport'">
     <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo'%>
     <h1 class="text-center">teamhuddle</h1>
+    <h3 class="text-center">DROPIN FINDER</h3>
     <h2 class="text-center">GAME ON!</h2>
   </div>
 
@@ -56,10 +57,10 @@
       <br>
       <div class="dropinfilters_row">
         <button class="btn btn-success col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-click="resetFilters()">reset filters</button>
-        <%= link_to "another sport", "/#/", class: "btn btn-info col-lg-3 col-md-4 col-sm-6 col-xs-6" %>
+        <%= link_to "change sport", "/#/", class: "btn btn-info col-lg-3 col-md-4 col-sm-6 col-xs-6" %>
         <div class="col-lg-3 col-md-2 col-sm-6 col-xs-6">
           <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="setFilters()">
-            <option value="" disabled selected>Day of the Week</option>
+            <option value="" disabled selected>Day</option>
             <option value="All">All</option>
             <option value="Monday">Monday</option>
             <option value="Tuesday">Tuesday</option>
@@ -102,7 +103,7 @@
               </div>
             </div>
             <div class="col-xs-12 hidden-lg hidden-md" ng-if="isSelected(dropin.id)">
-                <button class="btn-info" ng-click="$event.stopPropagation(); switchToMap()">show this shiet on the dope-ass map</button>
+                <button class="btn-info" ng-click="$event.stopPropagation(); switchToMap()">show on map</button>
             </div>
             
             <!-- show this if it's not selected -->

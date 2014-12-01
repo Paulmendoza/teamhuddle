@@ -48,7 +48,7 @@ class DropinsController < ApplicationController
       @dropin.type = 'dropin'
       @dropin.spots_filled = -1
       @dropin.gender = 'n/a'
-      @dropin.gender = params[:dropin][:source]
+      @dropin.source = params[:dropin][:source]
       
       # hash to convert form data to symbols for IceCube
       days_of_the_week = {
