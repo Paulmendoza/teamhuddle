@@ -19,8 +19,7 @@ class DropinsController < ApplicationController
     @dropins = SportEvent.includes(:event, :location, :organization)
                          .where( sport_events: { type: "dropin", sport_id: @sport, dt_deleted: nil })
                          .order(:created_at)
-    
-    
+                         
     #active = false
     #active = params[:active] if params[:active].present?
     #dropin.schedule.occurring_between?(Time.now, Time.new('2100'))
@@ -28,9 +27,7 @@ class DropinsController < ApplicationController
   end
   
   def show
-    @dropin = SportEvent.includes(:event, :location, :organization).find(params[:id])                         
-                         
-    
+    @dropin = SportEvent.includes(:event, :location, :organization).find(params[:id])
   end
 
   def create
@@ -56,29 +53,27 @@ class DropinsController < ApplicationController
       s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[params[:day]]).until(end_date))
     end
     
-    byebug
+    temp_event = SportEvent.new(dropin_params)
+    temp_event.sport_id = params[:dropin][:sport]
+    temp_event.skill_level = params[:skill_level]
+    temp_event.schedule = schedule
     
     @dropin = SportEventWrapper.new(params[:dropin][:name],
       params[:dropin][:location_id],
       params[:dropin][:organization_id],
       params[:dropin][:comments],
-      params[:dropin][:sport],
-      params[:skill_level],
-      params[:price_per_one],
-      schedule,
+      temp_event,
+      'dropin',
       false)
     
-    
     if @dropin[:errors].present?
-      render json: { error: dropin[:errors] }, :status => :unprocessable_entity
+      render json: { error: @dropin[:errors] }, :status => :unprocessable_entity
     else
       respond_to do |format|
         format.json { render json: @dropin }
         format.html { redirect_to action: 'index' }
       end
-    
     end
-    
   end
   
   def destroy
@@ -137,7 +132,6 @@ class DropinsController < ApplicationController
     end
     
     # go through all parse events and try and create dropins from them
-    
     
     @tentative_events = Array.new
     
@@ -208,14 +202,13 @@ class DropinsController < ApplicationController
       schedule,
       true)
     
-
     return dropin
     
   end
 
   private
   def dropin_params
-    params.require(:dropin).permit(:sport, :skill_level, :price_per_one,
+    params.require(:dropin).permit(:skill_level, :price_per_one, :price_per_group, 
       :spots, :notes, :format, :source)
   end
 

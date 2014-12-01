@@ -1,18 +1,12 @@
-class SportEventWrapper
-  
-  # temporary hash to do things with
-  
+class SportEventWrapper  
   
   def self.new(name,
       location_id ,
       organization_id,
-      comments = nil,
-      sport,
-      skill_level,
-      price_per_one,
-      schedule,
+      comments,
+      sport_event,
+      type,
       suppress_sport_event_instances)
-    
     
     @current_dropin = {}
     
@@ -23,16 +17,11 @@ class SportEventWrapper
     @current_dropin[:event].comments = comments
     
     if @current_dropin[:event].save
-      @current_dropin[:sport_event] = SportEvent.new
-      @current_dropin[:sport_event].sport_id = sport
-      @current_dropin[:sport_event].price_per_one = price_per_one
-      @current_dropin[:sport_event].skill_level = skill_level
+      @current_dropin[:sport_event] = sport_event
       @current_dropin[:sport_event].event_id = @current_dropin[:event].id
-      @current_dropin[:sport_event].type = 'dropin'
+      @current_dropin[:sport_event].type = type
       @current_dropin[:sport_event].spots_filled = -1
-      @current_dropin[:sport_event].gender = 'n/a'
-      
-      @current_dropin[:sport_event].schedule = schedule
+      @current_dropin[:sport_event].gender = 'n/a'           
       
       if @current_dropin[:sport_event].save
         # once dropin is saved, generate sport event instances
