@@ -20,7 +20,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
         $scope.markerWrappers.currentlyOpen = null;
 
         // initialize the predicate that sorting will be done through
-        $scope.predicate = 'datetime_start.time';
+        $scope.predicate = 'datetime_start';
 
         // array that will have all the dropin objects
         $scope.dropins = [];
@@ -221,12 +221,12 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
                         "<p>" + dropin.organization.phone + "</p>" +
                         "<div class='hidden-xs hidden-sm'>" + //hide extra stuff on mobile, instead show a button to go to the list
                             "<div class='col-md-7 col-sm-7'>" +
-                                "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start.time, 'EEEE') + " </p>" +
+                                "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start, 'EEEE') + " </p>" +
                                 "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>" +
                             "</div>" +
                             "<div class='col-md-5 col-sm-5'>" +
                                 "<p><b>Price:</b> " + $filter('currency')(dropin.sport_event.price_per_one) + "</p>" +
-                                "<p><b>Time:</b> " + $filter('date')(dropin.datetime_start.time, 'h:mm a') + " - " + $filter('date')(dropin.datetime_end.time, 'h:mm a') + "</p>" +
+                                "<p><b>Time:</b> " + $filter('date')(dropin.datetime_start, 'h:mm a') + " - " + $filter('date')(dropin.datetime_end, 'h:mm a') + "</p>" +
                             "</div>" +
                             "<br><br><br><br><br>" + 
                         "</div>" +
@@ -318,7 +318,7 @@ app.filter('weekday', ['$filter', function ($filter) {
             var retn = [];
 
             angular.forEach(sport_events, function (sport_event) {
-                if ($filter('date')(sport_event.datetime_start.time, 'EEEE') === day) {
+                if ($filter('date')(sport_event.datetime_start, 'EEEE') === day) {
 
                     retn.push(sport_event);
                 }
