@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '4.1.1'
 
@@ -58,3 +58,5 @@ gem 'byebug'
 gem 'uglifier'
 
 gem 'pg'
+
+gem 'foreigner', '~> 1.7.1'
