@@ -41,41 +41,6 @@
 
 }
 
-/*.navbar-inverse {
-    background-color: #000 !important;
-    max-height: 68px;
-    border-bottom: 2px solid $light-red !important;
-    border-radius: 0px;     
-}
-
-.navbar-toggle {
-    position: relative;
-    float: right;
-    margin-right: 15px;
-    padding: 9px 10px;
-    margin-bottom: 8px;
-    margin-right: 30px;
-    background-color: transparent;
-    background-image: none;
-    border: none;
-    border-radius: 0px;
-
-    &:hover {
-        color: #fff;
-        background-color: #000 !important;
-    }
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}*/
-
-/*.navbar-inverse {
-  background-color: #000 !important;
-  max-height: 68px;
-  border-bottom: 2px solid $light-red !important;
-  border-radius: 0px;     
-}*/
 
 .navbar-default {
   background-color: #000;
@@ -101,9 +66,17 @@
     background-color: #000;
   }
 
+  &:focus {
+    background-color: #000;
+  }
+  &:active {
+    background-color: #000;
+  }
+
   &.collapsed {
     background-color: #000;
   }
+
 }
 
 .navbar-collapse {
@@ -514,9 +487,6 @@ li {
 
 
 
-
-
-
 // ========== MEDIA QUERIES ===========
 
 
@@ -546,14 +516,15 @@ li {
     }
 
     .dropin_filter1 {
-        margin-left: 1%;
-        margin-bottom: 10px;
+        margin-left: -2.50%;
+        //margin-bottom: 10px;
         margin-top: 10px;
     }
 
     .dropin_filter2 {
-        margin-left: -20px;
-        margin-bottom: 10px;
+        //margin-left: -20px;
+        margin-left: -2.50%;
+        margin-bottom: 20px;
         margin-top: 10px;
     }
 
