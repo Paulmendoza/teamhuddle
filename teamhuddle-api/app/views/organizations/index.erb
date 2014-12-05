@@ -18,7 +18,7 @@
     <td><a href="<%= organization.website %>"><%= organization.website %></a></td>
     <td>
       <%= link_to 'Edit', edit_organization_path(organization), class: 'btn btn-default' %>
-      <%= link_to 'Delete', organization, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+      <%#<%= link_to 'Delete', organization, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
     </td>
   </tr>
   <% end %>
