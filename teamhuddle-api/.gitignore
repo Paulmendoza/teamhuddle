@@ -33,3 +33,6 @@ gemfile.lock
 .idea
 
 /config/database.yml
+
+# Random files
+/app/assets/images/teamhuddle_files
