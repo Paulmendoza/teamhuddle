@@ -636,18 +636,28 @@ li {
     .dropinfilters_row {
         margin-left: 5%;
         margin-top: -50px;
+        padding-bottom: 40px;
     }
 
     .dropin_filter1 {
         margin-top: 10px;
-        margin-left: -10px;
+        margin-left: 5px;
     }
 
     .dropin_filter2 {
         margin-top: 10px;
-        margin-left: -35px;
+        margin-left: -20px;
     }
 
+}
+
+@media (min-width: 1199px) {
+
+    .dropinfilters_row {
+        margin-left: 5%;
+        margin-top: -50px;
+        padding-bottom: 0px;
+    }
 }
 
 
