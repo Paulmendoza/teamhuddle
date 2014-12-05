@@ -30,6 +30,7 @@ sport_events_001:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_002:
   id: 45
   event_id: 70
@@ -61,6 +62,7 @@ sport_events_002:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_003:
   id: 46
   event_id: 71
@@ -92,6 +94,7 @@ sport_events_003:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_004:
   id: 47
   event_id: 72
@@ -123,6 +126,7 @@ sport_events_004:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_005:
   id: 48
   event_id: 73
@@ -154,6 +158,7 @@ sport_events_005:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_006:
   id: 49
   event_id: 74
@@ -185,6 +190,7 @@ sport_events_006:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_007:
   id: 50
   event_id: 75
@@ -216,6 +222,7 @@ sport_events_007:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_008:
   id: 51
   event_id: 76
@@ -247,6 +254,7 @@ sport_events_008:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_009:
   id: 52
   event_id: 78
@@ -278,6 +286,7 @@ sport_events_009:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_010:
   id: 53
   event_id: 80
@@ -309,6 +318,7 @@ sport_events_010:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_011:
   id: 54
   event_id: 81
@@ -340,6 +350,7 @@ sport_events_011:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_012:
   id: 55
   event_id: 82
@@ -371,6 +382,7 @@ sport_events_012:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_013:
   id: 56
   event_id: 84
@@ -402,6 +414,7 @@ sport_events_013:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_014:
   id: 57
   event_id: 85
@@ -433,6 +446,7 @@ sport_events_014:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_015:
   id: 58
   event_id: 86
@@ -464,6 +478,7 @@ sport_events_015:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_016:
   id: 59
   event_id: 89
@@ -495,6 +510,7 @@ sport_events_016:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_017:
   id: 60
   event_id: 90
@@ -526,6 +542,7 @@ sport_events_017:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_018:
   id: 61
   event_id: 91
@@ -557,6 +574,7 @@ sport_events_018:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_019:
   id: 62
   event_id: 92
@@ -588,6 +606,7 @@ sport_events_019:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_020:
   id: 63
   event_id: 93
@@ -619,6 +638,7 @@ sport_events_020:
     :rtimes: []
     :extimes: []
   dt_deleted: 
+  source: 
 sport_events_021:
   id: 64
   event_id: 94
@@ -633,7 +653,7 @@ sport_events_021:
   notes: 
   format: 
   created_at: '2014-11-14 02:31:29.501841'
-  updated_at: '2014-11-14 02:31:29.501841'
+  updated_at: '2014-12-04 18:54:06.913439'
   schedule: |
     ---
     :start_time: &1 2014-09-02 20:15:00.000000000 -07:00
@@ -649,7 +669,8 @@ sport_events_021:
       :until: 2014-12-30 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
-  dt_deleted: 
+  dt_deleted: '2014-12-04 18:54:06.909540'
+  source: 
 sport_events_022:
   id: 65
   event_id: 95
@@ -664,7 +685,7 @@ sport_events_022:
   notes: 
   format: 
   created_at: '2014-11-14 02:33:07.186836'
-  updated_at: '2014-11-14 02:33:07.186836'
+  updated_at: '2014-12-04 18:54:02.832549'
   schedule: |
     ---
     :start_time: &1 2014-09-02 19:00:00.000000000 -07:00
@@ -680,4 +701,2693 @@ sport_events_022:
       :until: 2014-12-30 00:00:00.000000000 -08:00
     :rtimes: []
     :extimes: []
+  dt_deleted: '2014-12-04 18:54:02.826942'
+  source: 
+sport_events_023:
+  id: 67
+  event_id: 97
+  sport_id: volleyball
+  type: dropin
+  skill_level: Beginner
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: http://vancouvervolleyball.ca
+  notes: 
+  format: 
+  created_at: '2014-11-30 23:29:29.293031'
+  updated_at: '2014-12-01 00:56:44.887914'
+  schedule: |
+    ---
+    :start_time: &1 2014-11-30 19:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2014-11-30 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-30 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-01 00:56:44.883689'
+  source: 
+sport_events_024:
+  id: 68
+  event_id: 98
+  sport_id: volleyball
+  type: dropin
+  skill_level: Beginner
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: http://vancouvervolleyball.ca
+  notes: 
+  format: 
+  created_at: '2014-11-30 23:31:10.797045'
+  updated_at: '2014-12-01 00:56:41.347627'
+  schedule: |
+    ---
+    :start_time: &1 2014-08-18 19:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-08-18 22:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-30 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-01 00:56:41.341469'
+  source: 
+sport_events_025:
+  id: 69
+  event_id: 99
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-01 00:56:04.050111'
+  updated_at: '2014-12-01 00:59:25.933395'
+  schedule: |
+    ---
+    :start_time: &1 2014-11-30 20:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2014-11-30 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-11-30 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-01 00:59:25.929333'
+  source: ''
+sport_events_026:
+  id: 70
+  event_id: 100
+  sport_id: soccer
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-01 01:01:04.190933'
+  updated_at: '2014-12-01 01:08:07.153528'
+  schedule: |
+    ---
+    :start_time: &1 2014-11-30 20:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2014-11-30 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-11-30 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-01 01:08:07.148745'
+  source: ''
+sport_events_027:
+  id: 71
+  event_id: 101
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.24
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-01 01:28:41.150181'
+  updated_at: '2014-12-01 01:29:38.744325'
+  schedule: |
+    ---
+    :start_time: &1 2014-11-30 20:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2014-11-30 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-11-30 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-01 01:29:38.740373'
+  source: http://www.burnaby.ca/Assets/New+Things+To+Do/Be+Active+Programs+new/Rates+$!26+Schedules/Bonsor+-+Drop-in+Gym+Schedule.pdf
+sport_events_028:
+  id: 72
+  event_id: 102
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.24
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-01 01:32:59.088399'
+  updated_at: '2014-12-01 01:32:59.088399'
+  schedule: |
+    ---
+    :start_time: &1 2014-01-05 19:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2014-01-05 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
   dt_deleted: 
+  source: ''
+sport_events_029:
+  id: 73
+  event_id: 103
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.24
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-01 02:49:38.618959'
+  updated_at: '2014-12-01 02:49:38.618959'
+  schedule: |
+    ---
+    :start_time: &1 2014-11-30 21:20:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2014-11-30 22:50:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-02 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: ''
+sport_events_030:
+  id: 74
+  event_id: 104
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.24
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-01 02:58:09.603466'
+  updated_at: '2014-12-01 02:58:09.603466'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-02 19:10:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-02 20:40:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-30 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: ''
+sport_events_031:
+  id: 75
+  event_id: 105
+  sport_id: basketball
+  type: dropin
+  skill_level: Beginner
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:06:37.921206'
+  updated_at: '2014-12-02 01:06:37.921206'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-01 17:30:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-01 18:45:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-31 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_032:
+  id: 76
+  event_id: 107
+  sport_id: basketball
+  type: dropin
+  skill_level: Beginner
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:08:02.708599'
+  updated_at: '2014-12-02 01:08:02.708599'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-01 12:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-01 13:45:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-01-01 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_033:
+  id: 77
+  event_id: 108
+  sport_id: basketball
+  type: dropin
+  skill_level: Beginner
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:10:38.663316'
+  updated_at: '2014-12-02 01:10:38.663316'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-10 20:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-10 21:45:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-10 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_034:
+  id: 78
+  event_id: 109
+  sport_id: basketball
+  type: dropin
+  skill_level: Beginner
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:11:53.789416'
+  updated_at: '2014-12-02 01:11:53.789416'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-07 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-07 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-25 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_035:
+  id: 79
+  event_id: 110
+  sport_id: basketball
+  type: dropin
+  skill_level: Beginner
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:13:44.549311'
+  updated_at: '2014-12-02 01:13:44.549311'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-09 12:10:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-09 13:30:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-16 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_036:
+  id: 80
+  event_id: 111
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:14:44.909588'
+  updated_at: '2014-12-02 01:14:44.909588'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-06 10:05:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-06 11:50:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 6
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-20 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_037:
+  id: 81
+  event_id: 114
+  sport_id: basketball
+  type: dropin
+  skill_level: Beginner
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:16:18.715894'
+  updated_at: '2014-12-02 01:16:18.715894'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-09 12:10:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-09 13:30:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-19 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_038:
+  id: 82
+  event_id: 115
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:17:05.069873'
+  updated_at: '2014-12-02 01:17:05.069873'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-10 18:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-10 19:45:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-17 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_039:
+  id: 83
+  event_id: 116
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:17:44.149595'
+  updated_at: '2014-12-02 01:17:44.149595'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 20:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 21:45:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-15 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: ''
+sport_events_040:
+  id: 84
+  event_id: 117
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:19:42.200032'
+  updated_at: '2014-12-02 01:19:42.200032'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-03 18:15:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-03 20:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-17 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_041:
+  id: 85
+  event_id: 119
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:20:43.817187'
+  updated_at: '2014-12-02 01:20:43.817187'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-14 18:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-14 20:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-29 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_042:
+  id: 86
+  event_id: 120
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:22:27.845162'
+  updated_at: '2014-12-02 01:22:27.845162'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-02 20:15:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-02 22:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-16 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_043:
+  id: 87
+  event_id: 121
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:23:06.762927'
+  updated_at: '2014-12-02 01:23:06.762927'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-13 20:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-13 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-28 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_044:
+  id: 88
+  event_id: 122
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:25:13.312510'
+  updated_at: '2014-12-02 01:25:13.312510'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-10 20:15:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-10 22:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-17 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_045:
+  id: 89
+  event_id: 123
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:25:59.035142'
+  updated_at: '2014-12-02 01:25:59.035142'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-07 20:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-07 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-25 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_046:
+  id: 90
+  event_id: 124
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:27:07.058440'
+  updated_at: '2014-12-02 01:27:07.058440'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-17 19:30:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-17 21:30:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-17 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_047:
+  id: 91
+  event_id: 125
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:28:08.056190'
+  updated_at: '2014-12-02 01:28:08.056190'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-03 20:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-03 21:45:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-17 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_048:
+  id: 92
+  event_id: 126
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:28:54.432765'
+  updated_at: '2014-12-02 01:28:54.432765'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-04 20:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-04 21:45:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-18 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_049:
+  id: 93
+  event_id: 127
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:30:11.813347'
+  updated_at: '2014-12-02 01:30:11.813347'
+  schedule: |
+    ---
+    :start_time: &1 2014-11-06 20:10:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2014-11-06 21:50:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-18 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_050:
+  id: 94
+  event_id: 128
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:30:58.951292'
+  updated_at: '2014-12-02 01:30:58.951292'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 20:10:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 21:50:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-02-12 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_051:
+  id: 95
+  event_id: 129
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-02 01:31:43.379089'
+  updated_at: '2014-12-02 01:31:43.379089'
+  schedule: |
+    ---
+    :start_time: &1 2015-02-19 20:10:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-02-19 21:50:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-26 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/basketball-drop-in-schedule.aspx
+sport_events_052:
+  id: 96
+  event_id: 130
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 5
+  price_per_group: 
+  spots: 42
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 18:56:55.394308'
+  updated_at: '2014-12-04 19:01:41.959035'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-12 19:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-12 22:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-12 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-04 19:01:41.955257'
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_053:
+  id: 97
+  event_id: 131
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 5
+  price_per_group: 36
+  spots: 42
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 18:57:49.857808'
+  updated_at: '2014-12-04 19:02:06.061335'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-23 19:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-23 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-27 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-04 19:02:06.057723'
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_054:
+  id: 98
+  event_id: 133
+  sport_id: volleyball
+  type: dropin
+  skill_level: Beginner
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 18:59:16.501530'
+  updated_at: '2014-12-04 18:59:45.830865'
+  schedule: |
+    ---
+    :start_time: &1 2014-12-04 19:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2014-12-04 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2014-12-10 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-04 18:59:45.826988'
+  source: ''
+sport_events_055:
+  id: 99
+  event_id: 134
+  sport_id: volleyball
+  type: dropin
+  skill_level: Beginner
+  price_per_one: 5
+  price_per_group: 46
+  spots: 36
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:01:27.965019'
+  updated_at: '2014-12-04 19:27:06.161332'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 19:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-26 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-04 19:27:06.157548'
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_056:
+  id: 100
+  event_id: 135
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 5
+  price_per_group: 36
+  spots: 36
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:03:01.951468'
+  updated_at: '2014-12-04 19:03:01.951468'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-23 19:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-23 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-27 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_057:
+  id: 101
+  event_id: 136
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 5
+  price_per_group: 50
+  spots: 36
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:04:25.241511'
+  updated_at: '2014-12-04 19:04:25.241511'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 19:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_058:
+  id: 102
+  event_id: 137
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 46
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:05:59.380029'
+  updated_at: '2014-12-04 19:05:59.380029'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-30 12:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-30 13:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 6
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_059:
+  id: 103
+  event_id: 138
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 6
+  price_per_group: 54
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:07:12.840230'
+  updated_at: '2014-12-04 19:07:12.840230'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 18:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 19:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_060:
+  id: 104
+  event_id: 139
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 6
+  price_per_group: 54
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:09:28.732473'
+  updated_at: '2014-12-04 19:09:28.732473'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_061:
+  id: 105
+  event_id: 140
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 56
+  spots: 42
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:10:53.115989'
+  updated_at: '2014-12-04 19:10:53.115989'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-12 20:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-12 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-27 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_062:
+  id: 106
+  event_id: 141
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 64
+  spots: 42
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:12:13.910365'
+  updated_at: '2014-12-04 19:12:13.910365'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-13 18:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-13 20:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-28 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_063:
+  id: 107
+  event_id: 142
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 6
+  price_per_group: 64
+  spots: 42
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:13:23.990454'
+  updated_at: '2014-12-04 19:28:19.404537'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-15 20:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-15 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-04 19:28:19.400529'
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_064:
+  id: 108
+  event_id: 143
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 56
+  spots: 42
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:14:41.639932'
+  updated_at: '2014-12-04 19:14:41.639932'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-16 19:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-16 20:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-05-01 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_065:
+  id: 109
+  event_id: 144
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 6
+  price_per_group: 60
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:16:59.276631'
+  updated_at: '2014-12-04 19:16:59.276631'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 19:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_066:
+  id: 110
+  event_id: 145
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:18:53.734117'
+  updated_at: '2014-12-04 19:18:53.734117'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-20 18:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-20 20:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-27 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_067:
+  id: 111
+  event_id: 146
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 5.5
+  price_per_group: 
+  spots: 28
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:21:05.877883'
+  updated_at: '2014-12-04 19:21:05.877883'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-07 20:10:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-07 21:50:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-25 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_068:
+  id: 112
+  event_id: 147
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 66
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:22:35.026072'
+  updated_at: '2014-12-04 19:22:35.026072'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 18:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 20:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-26 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_069:
+  id: 113
+  event_id: 148
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 6
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:25:39.502085'
+  updated_at: '2014-12-04 19:25:39.502085'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-09 19:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-09 21:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-13 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_070:
+  id: 114
+  event_id: 149
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 6
+  price_per_group: 72
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:26:45.059883'
+  updated_at: '2014-12-04 19:26:45.059883'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 22:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_071:
+  id: 115
+  event_id: 150
+  sport_id: volleyball
+  type: dropin
+  skill_level: Beginner
+  price_per_one: 5
+  price_per_group: 46
+  spots: 36
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:28:03.520369'
+  updated_at: '2014-12-04 19:28:03.520369'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 19:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-26 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_072:
+  id: 116
+  event_id: 151
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 6
+  price_per_group: 64
+  spots: 42
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:29:29.722091'
+  updated_at: '2014-12-04 19:29:29.722091'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-15 20:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-15 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_073:
+  id: 117
+  event_id: 152
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:31:37.389852'
+  updated_at: '2014-12-04 19:31:37.389852'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-20 16:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-20 18:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-27 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_074:
+  id: 118
+  event_id: 153
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 5.5
+  price_per_group: 57
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:32:58.324252'
+  updated_at: '2014-12-04 19:32:58.324252'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-07 19:05:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-07 21:20:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-25 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_075:
+  id: 119
+  event_id: 154
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 28
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:34:35.754810'
+  updated_at: '2014-12-04 19:34:35.754810'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 19:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-02-23 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_076:
+  id: 120
+  event_id: 155
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 32
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:35:41.388291'
+  updated_at: '2014-12-04 19:35:41.388291'
+  schedule: |
+    ---
+    :start_time: &1 2015-03-02 19:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-03-02 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-27 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_077:
+  id: 121
+  event_id: 156
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 60
+  spots: 24
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:37:18.152679'
+  updated_at: '2014-12-04 19:37:53.935240'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-07 18:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-07 19:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-25 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-04 19:37:53.931084'
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_078:
+  id: 122
+  event_id: 157
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.5
+  price_per_group: 60
+  spots: 24
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:39:04.962725'
+  updated_at: '2014-12-04 19:39:04.962725'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-07 18:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-07 19:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-25 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_079:
+  id: 123
+  event_id: 158
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 5.5
+  price_per_group: 60
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:40:03.156400'
+  updated_at: '2014-12-04 19:40:03.156400'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-07 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-07 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-25 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_080:
+  id: 124
+  event_id: 159
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 5.5
+  price_per_group: 60
+  spots: 24
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:41:19.118144'
+  updated_at: '2014-12-04 19:41:19.118144'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-04 17:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-04 18:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-29 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_081:
+  id: 125
+  event_id: 160
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 5.5
+  price_per_group: 60
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:42:23.806631'
+  updated_at: '2014-12-04 19:42:23.806631'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-04 19:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-04 20:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-29 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_082:
+  id: 126
+  event_id: 161
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.5
+  price_per_group: 54
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:43:42.964822'
+  updated_at: '2014-12-04 19:43:42.964822'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-07 18:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-07 19:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-25 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_083:
+  id: 127
+  event_id: 162
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 51
+  spots: 28
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:45:43.513580'
+  updated_at: '2014-12-04 19:45:43.513580'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-26 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_084:
+  id: 128
+  event_id: 163
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 51
+  spots: 28
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:46:30.091644'
+  updated_at: '2014-12-04 19:46:39.630518'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-26 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-04 19:46:39.626614'
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_085:
+  id: 129
+  event_id: 164
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 46.75
+  spots: 28
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:47:35.019666'
+  updated_at: '2014-12-04 19:47:35.019666'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-11 03:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-11 04:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-22 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_086:
+  id: 130
+  event_id: 165
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 54
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 19:52:21.296325'
+  updated_at: '2014-12-04 19:52:21.296325'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-07 19:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-07 21:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-25 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+sport_events_087:
+  id: 131
+  event_id: 166
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 6.75
+  price_per_group: 97.2
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 20:51:15.913505'
+  updated_at: '2014-12-04 20:51:15.913505'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 12:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 13:15:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-05 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_088:
+  id: 132
+  event_id: 167
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 6.75
+  price_per_group: 97.2
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 20:51:37.283082'
+  updated_at: '2014-12-04 20:51:37.283082'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 12:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 13:15:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-05 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_089:
+  id: 133
+  event_id: 168
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 6.75
+  price_per_group: 43.2
+  spots: 15
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 20:54:02.553012'
+  updated_at: '2014-12-04 20:55:16.954131'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 21:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-02-09 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-04 20:55:16.950155'
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_090:
+  id: 134
+  event_id: 169
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 6.75
+  price_per_group: 43.2
+  spots: 15
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 20:55:00.285424'
+  updated_at: '2014-12-04 20:55:00.285424'
+  schedule: |
+    ---
+    :start_time: &1 2015-02-23 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-02-23 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_091:
+  id: 135
+  event_id: 170
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 6.75
+  price_per_group: 43.2
+  spots: 15
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 20:55:51.783888'
+  updated_at: '2014-12-04 20:55:51.783888'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-02-09 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_092:
+  id: 136
+  event_id: 171
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 6.75
+  price_per_group: 43.2
+  spots: 15
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 20:56:29.221477'
+  updated_at: '2014-12-04 20:56:29.221477'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-09 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-09 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-02-13 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_093:
+  id: 137
+  event_id: 172
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 6.75
+  price_per_group: 43.2
+  spots: 15
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 20:56:57.011025'
+  updated_at: '2014-12-04 20:56:57.011025'
+  schedule: |
+    ---
+    :start_time: &1 2015-02-20 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-02-20 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-27 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_094:
+  id: 138
+  event_id: 173
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 6.75
+  price_per_group: 43.2
+  spots: 15
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 20:58:38.166104'
+  updated_at: '2014-12-04 20:58:38.166104'
+  schedule: |
+    ---
+    :start_time: &1 2015-02-19 21:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-02-19 23:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-26 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_095:
+  id: 139
+  event_id: 174
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 6.75
+  price_per_group: 43.2
+  spots: 15
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 20:59:13.966534'
+  updated_at: '2014-12-04 20:59:13.966534'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 21:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 23:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-02-12 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_096:
+  id: 140
+  event_id: 175
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 6.75
+  price_per_group: 43.2
+  spots: 15
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 20:59:52.746331'
+  updated_at: '2014-12-04 20:59:52.746331'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-11 18:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-11 20:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-02-15 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_097:
+  id: 141
+  event_id: 176
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 6.75
+  price_per_group: 43.2
+  spots: 15
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 21:00:17.228774'
+  updated_at: '2014-12-04 21:00:17.228774'
+  schedule: |
+    ---
+    :start_time: &1 2015-02-21 18:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-02-21 20:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-29 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_098:
+  id: 142
+  event_id: 177
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 6.75
+  price_per_group: 43.2
+  spots: 15
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 21:01:17.177085'
+  updated_at: '2014-12-04 21:01:26.650923'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 21:01:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 23:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-02-17 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-04 21:01:26.647049'
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_099:
+  id: 143
+  event_id: 178
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 6.75
+  price_per_group: 43.2
+  spots: 15
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 21:01:39.184363'
+  updated_at: '2014-12-04 21:01:39.184363'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 21:01:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 23:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-02-17 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_100:
+  id: 144
+  event_id: 179
+  sport_id: volleyball
+  type: dropin
+  skill_level: Advanced
+  price_per_one: 6.75
+  price_per_group: 43.2
+  spots: 15
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 21:02:11.691007'
+  updated_at: '2014-12-04 21:02:11.691007'
+  schedule: |
+    ---
+    :start_time: &1 2015-02-24 21:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-02-24 23:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/volleyball.aspx
+sport_events_101:
+  id: 145
+  event_id: 180
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 1.9
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 23:35:03.924214'
+  updated_at: '2014-12-04 23:35:03.924214'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 11:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 12:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-27 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/basketball.aspx
+sport_events_102:
+  id: 146
+  event_id: 181
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 1.9
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 23:35:35.296433'
+  updated_at: '2014-12-04 23:35:35.296433'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 11:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 12:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-27 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/basketball.aspx
+sport_events_103:
+  id: 147
+  event_id: 182
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 1.9
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 23:35:46.350392'
+  updated_at: '2014-12-04 23:35:46.350392'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 11:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 12:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-27 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/basketball.aspx
+sport_events_104:
+  id: 148
+  event_id: 183
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 4
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 23:36:48.737529'
+  updated_at: '2014-12-04 23:38:42.320676'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: '2014-12-04 23:38:42.316875'
+  source: http://www.northvanrec.com/programs/sports/basketball.aspx
+sport_events_105:
+  id: 149
+  event_id: 184
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 4
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 23:38:02.299073'
+  updated_at: '2014-12-04 23:38:02.299073'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-26 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/basketball.aspx
+sport_events_106:
+  id: 150
+  event_id: 185
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 4
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2014-12-04 23:38:22.332688'
+  updated_at: '2014-12-04 23:38:22.332688'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  dt_deleted: 
+  source: http://www.northvanrec.com/programs/sports/basketball.aspx

@@ -8,6 +8,7 @@ organizations_001:
   email: bonsor@bonsor.ca
   created_at: '2014-07-24 06:05:50.839084'
   updated_at: '2014-07-24 06:05:50.839084'
+  website: 
 organizations_002:
   id: 2
   name: UrbanRec
@@ -17,6 +18,7 @@ organizations_002:
   email: urban@urbanrec.ca
   created_at: '2014-07-28 22:13:30.027362'
   updated_at: '2014-08-02 18:41:42.811498'
+  website: 
 organizations_003:
   id: 4
   name: BCIT
@@ -26,15 +28,17 @@ organizations_003:
   email: BCIT@bcit.com
   created_at: '2014-08-02 17:10:39.122993'
   updated_at: '2014-08-02 17:10:39.122993'
+  website: 
 organizations_004:
   id: 5
   name: Vancouver, City of
   location_id: 
   user_id: 
   phone: '6046046044'
-  email: vancouver@vancouver.com
+  email: vancouver@vancouver.ca
   created_at: '2014-08-02 17:12:19.017706'
-  updated_at: '2014-11-14 02:22:42.644599'
+  updated_at: '2014-12-02 00:17:27.005348'
+  website: 
 organizations_005:
   id: 6
   name: VolleyballBC
@@ -44,6 +48,7 @@ organizations_005:
   email: volleyball@bc.ca
   created_at: '2014-10-06 00:24:03.951532'
   updated_at: '2014-10-06 00:24:03.951532'
+  website: 
 organizations_006:
   id: 7
   name: POCO Volleyball
@@ -53,6 +58,7 @@ organizations_006:
   email: vball@poco.ca
   created_at: '2014-10-06 00:25:35.095117'
   updated_at: '2014-10-06 00:25:35.095117'
+  website: 
 organizations_007:
   id: 9
   name: Burnaby, City of
@@ -62,6 +68,7 @@ organizations_007:
   email: Burnaby@Burnaby.ca
   created_at: '2014-11-14 02:22:04.878874'
   updated_at: '2014-11-14 02:24:25.413068'
+  website: 
 organizations_008:
   id: 10
   name: Surrey, City of
@@ -71,6 +78,7 @@ organizations_008:
   email: surrey@surrey.ca
   created_at: '2014-11-14 02:24:00.023808'
   updated_at: '2014-11-14 02:24:00.023808'
+  website: 
 organizations_009:
   id: 11
   name: 6Pack Indoor Beach
@@ -80,3 +88,24 @@ organizations_009:
   email: staff@6packbeach.ca
   created_at: '2014-11-14 02:26:20.513359'
   updated_at: '2014-11-14 02:26:20.513359'
+  website: 
+organizations_010:
+  id: 16
+  name: UBC Recreation
+  location_id: 
+  user_id: 
+  phone: 604 822 6121
+  email: ice.rink@ubc.ca
+  created_at: '2014-12-02 05:45:22.648530'
+  updated_at: '2014-12-02 05:45:22.648530'
+  website: 
+organizations_011:
+  id: 17
+  name: North Vancouver Recreation & Culture
+  location_id: 
+  user_id: 
+  phone: 604-987-7529
+  email: ''
+  created_at: '2014-12-04 20:47:41.163061'
+  updated_at: '2014-12-04 20:47:41.163061'
+  website: 

@@ -183,3 +183,675 @@ events_023:
   comments: ''
   created_at: '2014-11-14 02:33:07.171203'
   updated_at: '2014-11-14 02:33:07.171203'
+events_024:
+  id: 97
+  name: source dropin
+  organization_id: 11
+  location_id: 6
+  comments: ''
+  created_at: '2014-11-30 23:29:29.279900'
+  updated_at: '2014-11-30 23:29:29.279900'
+events_025:
+  id: 98
+  name: source dropinzz
+  organization_id: 11
+  location_id: 6
+  comments: ''
+  created_at: '2014-11-30 23:31:10.785487'
+  updated_at: '2014-11-30 23:31:10.785487'
+events_026:
+  id: 99
+  name: Bonsor Soccer
+  organization_id: 1
+  location_id: 6
+  comments: ''
+  created_at: '2014-12-01 00:56:03.989931'
+  updated_at: '2014-12-01 00:56:03.989931'
+events_027:
+  id: 100
+  name: Bonsor Soccer 2
+  organization_id: 1
+  location_id: 6
+  comments: ''
+  created_at: '2014-12-01 01:01:04.151562'
+  updated_at: '2014-12-01 01:01:04.151562'
+events_028:
+  id: 101
+  name: Bonsor Soccer shizz
+  organization_id: 11
+  location_id: 6
+  comments: Adult Soccer
+  created_at: '2014-12-01 01:28:41.107830'
+  updated_at: '2014-12-01 01:28:41.107830'
+events_029:
+  id: 102
+  name: Bonsor Soccer Shizz1
+  organization_id: 1
+  location_id: 6
+  comments: Adult Soccer
+  created_at: '2014-12-01 01:32:59.064513'
+  updated_at: '2014-12-01 01:32:59.064513'
+events_030:
+  id: 103
+  name: Cam
+  organization_id: 1
+  location_id: 76
+  comments: ''
+  created_at: '2014-12-01 02:49:38.604378'
+  updated_at: '2014-12-01 02:49:38.604378'
+events_031:
+  id: 104
+  name: camrec2
+  organization_id: 1
+  location_id: 6
+  comments: ''
+  created_at: '2014-12-01 02:58:09.589583'
+  updated_at: '2014-12-01 02:58:09.589583'
+events_032:
+  id: 105
+  name: Night Hoops Jr Girls
+  organization_id: 5
+  location_id: 35
+  comments: ''
+  created_at: '2014-12-02 01:06:37.898140'
+  updated_at: '2014-12-02 01:06:37.898140'
+events_033:
+  id: 107
+  name: Preteen Basketball Open Gym
+  organization_id: 5
+  location_id: 35
+  comments: ''
+  created_at: '2014-12-02 01:08:02.699574'
+  updated_at: '2014-12-02 01:08:02.699574'
+events_034:
+  id: 108
+  name: Mon - Champlain (Fall)
+  organization_id: 5
+  location_id: 40
+  comments: ''
+  created_at: '2014-12-02 01:10:38.649256'
+  updated_at: '2014-12-02 01:10:38.649256'
+events_035:
+  id: 109
+  name: Mon - Champlain (Winter)
+  organization_id: 5
+  location_id: 40
+  comments: "$49 the whole season"
+  created_at: '2014-12-02 01:11:53.771448'
+  updated_at: '2014-12-02 01:11:53.771448'
+events_036:
+  id: 110
+  name: Tue - Coal (Noon)
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2014-12-02 01:13:44.531364'
+  updated_at: '2014-12-02 01:13:44.531364'
+events_037:
+  id: 111
+  name: Sat - Coal
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2014-12-02 01:14:44.898307'
+  updated_at: '2014-12-02 01:14:44.898307'
+events_038:
+  id: 114
+  name: Fri - Coal
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2014-12-02 01:16:18.706263'
+  updated_at: '2014-12-02 01:16:18.706263'
+events_039:
+  id: 115
+  name: Wed - Coal
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2014-12-02 01:17:05.057704'
+  updated_at: '2014-12-02 01:17:05.057704'
+events_040:
+  id: 116
+  name: Mon - Coal
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2014-12-02 01:17:44.138407'
+  updated_at: '2014-12-02 01:17:44.138407'
+events_041:
+  id: 117
+  name: Wed - Creekside
+  organization_id: 5
+  location_id: 9
+  comments: ''
+  created_at: '2014-12-02 01:19:42.184459'
+  updated_at: '2014-12-02 01:19:42.184459'
+events_042:
+  id: 119
+  name: Wed - Creekside (Winter)
+  organization_id: 5
+  location_id: 9
+  comments: ''
+  created_at: '2014-12-02 01:20:43.800506'
+  updated_at: '2014-12-02 01:20:43.800506'
+events_043:
+  id: 120
+  name: Tue - Creekside (Fall)
+  organization_id: 5
+  location_id: 9
+  comments: ''
+  created_at: '2014-12-02 01:22:27.834259'
+  updated_at: '2014-12-02 01:22:27.834259'
+events_044:
+  id: 121
+  name: Tue - Creekside (Winter)
+  organization_id: 5
+  location_id: 9
+  comments: ''
+  created_at: '2014-12-02 01:23:06.747585'
+  updated_at: '2014-12-02 01:23:06.747585'
+events_045:
+  id: 122
+  name: Wed - Dunbar Coed (Fall)
+  organization_id: 5
+  location_id: 42
+  comments: ''
+  created_at: '2014-12-02 01:25:13.300401'
+  updated_at: '2014-12-02 01:25:13.300401'
+events_046:
+  id: 123
+  name: Wed - Dunbar Coed (Winter)
+  organization_id: 5
+  location_id: 42
+  comments: ''
+  created_at: '2014-12-02 01:25:59.020244'
+  updated_at: '2014-12-02 01:25:59.020244'
+events_047:
+  id: 124
+  name: Wed - False 3 on 3
+  organization_id: 5
+  location_id: 44
+  comments: ''
+  created_at: '2014-12-02 01:27:07.046435'
+  updated_at: '2014-12-02 01:27:07.046435'
+events_048:
+  id: 125
+  name: Wed - Hastings Half Court
+  organization_id: 5
+  location_id: 46
+  comments: ''
+  created_at: '2014-12-02 01:28:08.045141'
+  updated_at: '2014-12-02 01:28:08.045141'
+events_049:
+  id: 126
+  name: Thu - Hastings Full Court
+  organization_id: 5
+  location_id: 46
+  comments: ''
+  created_at: '2014-12-02 01:28:54.424477'
+  updated_at: '2014-12-02 01:28:54.424477'
+events_050:
+  id: 127
+  name: Thu - Hillcrest Adult (Fall)
+  organization_id: 5
+  location_id: 47
+  comments: ''
+  created_at: '2014-12-02 01:30:11.802496'
+  updated_at: '2014-12-02 01:30:11.802496'
+events_051:
+  id: 128
+  name: Thu - Hillcrest Adult (Winter)
+  organization_id: 5
+  location_id: 47
+  comments: ''
+  created_at: '2014-12-02 01:30:58.936960'
+  updated_at: '2014-12-02 01:30:58.936960'
+events_052:
+  id: 129
+  name: Thu - Hillcrest Adult (Spring)
+  organization_id: 5
+  location_id: 47
+  comments: ''
+  created_at: '2014-12-02 01:31:43.366304'
+  updated_at: '2014-12-02 01:31:43.366304'
+events_053:
+  id: 130
+  name: Fri - Brit (Fall)
+  organization_id: 5
+  location_id: 35
+  comments: ''
+  created_at: '2014-12-04 18:56:55.373907'
+  updated_at: '2014-12-04 18:56:55.373907'
+events_054:
+  id: 131
+  name: Fri - Brit (Win)
+  organization_id: 5
+  location_id: 35
+  comments: ''
+  created_at: '2014-12-04 18:57:49.846417'
+  updated_at: '2014-12-04 18:57:49.846417'
+events_055:
+  id: 133
+  name: Thu - Hillcrest Adult (Winter)
+  organization_id: 11
+  location_id: 78
+  comments: ''
+  created_at: '2014-12-04 18:59:16.490145'
+  updated_at: '2014-12-04 18:59:16.490145'
+events_056:
+  id: 134
+  name: Thu - Brit (Win)
+  organization_id: 5
+  location_id: 35
+  comments: ''
+  created_at: '2014-12-04 19:01:27.950703'
+  updated_at: '2014-12-04 19:01:27.950703'
+events_057:
+  id: 135
+  name: Fri - Brit (Win)
+  organization_id: 5
+  location_id: 35
+  comments: ''
+  created_at: '2014-12-04 19:03:01.939746'
+  updated_at: '2014-12-04 19:03:01.939746'
+events_058:
+  id: 136
+  name: Tue - Brit (Win)
+  organization_id: 5
+  location_id: 35
+  comments: ''
+  created_at: '2014-12-04 19:04:25.223671'
+  updated_at: '2014-12-04 19:04:25.223671'
+events_059:
+  id: 137
+  name: Sat - Coal (Win)
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2014-12-04 19:05:59.364826'
+  updated_at: '2014-12-04 19:05:59.364826'
+events_060:
+  id: 138
+  name: Tue - Coal (Win)
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2014-12-04 19:07:12.828336'
+  updated_at: '2014-12-04 19:07:12.828336'
+events_061:
+  id: 139
+  name: Tue Late - Coal (Win)
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2014-12-04 19:09:28.707242'
+  updated_at: '2014-12-04 19:09:28.707242'
+events_062:
+  id: 140
+  name: Mon - Creek (Win)
+  organization_id: 5
+  location_id: 9
+  comments: ''
+  created_at: '2014-12-04 19:10:53.099188'
+  updated_at: '2014-12-04 19:10:53.099188'
+events_063:
+  id: 141
+  name: Tue - Creek (Winter)
+  organization_id: 5
+  location_id: 9
+  comments: ''
+  created_at: '2014-12-04 19:12:13.889027'
+  updated_at: '2014-12-04 19:12:13.889027'
+events_064:
+  id: 142
+  name: Thu - Creek (Win)
+  organization_id: 5
+  location_id: 9
+  comments: ''
+  created_at: '2014-12-04 19:13:23.973248'
+  updated_at: '2014-12-04 19:13:23.973248'
+events_065:
+  id: 143
+  name: Fri - Creek (Win)
+  organization_id: 5
+  location_id: 9
+  comments: ''
+  created_at: '2014-12-04 19:14:41.626614'
+  updated_at: '2014-12-04 19:14:41.626614'
+events_066:
+  id: 144
+  name: Mon - Dunbar (Win)
+  organization_id: 5
+  location_id: 42
+  comments: ''
+  created_at: '2014-12-04 19:16:59.260022'
+  updated_at: '2014-12-04 19:16:59.260022'
+events_067:
+  id: 145
+  name: Fri Youth - Hastings (Win)
+  organization_id: 5
+  location_id: 46
+  comments: Youth Ages 13-18
+  created_at: '2014-12-04 19:18:53.721386'
+  updated_at: '2014-12-04 19:18:53.721386'
+events_068:
+  id: 146
+  name: Wed - Hilcrest (Win)
+  organization_id: 5
+  location_id: 47
+  comments: ''
+  created_at: '2014-12-04 19:21:05.859293'
+  updated_at: '2014-12-04 19:21:05.859293'
+events_069:
+  id: 147
+  name: Thu - Kits (Win)
+  organization_id: 5
+  location_id: 50
+  comments: ''
+  created_at: '2014-12-04 19:22:35.010350'
+  updated_at: '2014-12-04 19:22:35.010350'
+events_070:
+  id: 148
+  name: Fri - Kits (Win)
+  organization_id: 5
+  location_id: 50
+  comments: Kitsilano High School
+  created_at: '2014-12-04 19:25:39.486893'
+  updated_at: '2014-12-04 19:25:39.486893'
+events_071:
+  id: 149
+  name: Tue - Kits (Win)
+  organization_id: 5
+  location_id: 50
+  comments: ''
+  created_at: '2014-12-04 19:26:45.045417'
+  updated_at: '2014-12-04 19:26:45.045417'
+events_072:
+  id: 150
+  name: Thu - Brit (Win)
+  organization_id: 5
+  location_id: 35
+  comments: ''
+  created_at: '2014-12-04 19:28:03.505417'
+  updated_at: '2014-12-04 19:28:03.505417'
+events_073:
+  id: 151
+  name: Thu - Creek (Win)
+  organization_id: 5
+  location_id: 9
+  comments: ''
+  created_at: '2014-12-04 19:29:29.706103'
+  updated_at: '2014-12-04 19:29:29.706103'
+events_074:
+  id: 152
+  name: Fri Youth- Marpole (Win)
+  organization_id: 5
+  location_id: 52
+  comments: Youth Drop-in
+  created_at: '2014-12-04 19:31:37.373219'
+  updated_at: '2014-12-04 19:31:37.373219'
+events_075:
+  id: 153
+  name: Wed - Marpole (Win)
+  organization_id: 5
+  location_id: 52
+  comments: ''
+  created_at: '2014-12-04 19:32:58.302751'
+  updated_at: '2014-12-04 19:32:58.302751'
+events_076:
+  id: 154
+  name: Mon - Mount (Win)
+  organization_id: 5
+  location_id: 53
+  comments: ''
+  created_at: '2014-12-04 19:34:35.739987'
+  updated_at: '2014-12-04 19:34:35.739987'
+events_077:
+  id: 155
+  name: Mon - Mount (Spring)
+  organization_id: 5
+  location_id: 53
+  comments: ''
+  created_at: '2014-12-04 19:35:41.359547'
+  updated_at: '2014-12-04 19:35:41.359547'
+events_078:
+  id: 156
+  name: Wed - Round (Win)
+  organization_id: 5
+  location_id: 33
+  comments: ''
+  created_at: '2014-12-04 19:37:18.136663'
+  updated_at: '2014-12-04 19:37:18.136663'
+events_079:
+  id: 157
+  name: Wed - Round (Win)
+  organization_id: 5
+  location_id: 33
+  comments: ''
+  created_at: '2014-12-04 19:39:04.947052'
+  updated_at: '2014-12-04 19:39:04.947052'
+events_080:
+  id: 158
+  name: Wed Late - Round (Win)
+  organization_id: 5
+  location_id: 33
+  comments: ''
+  created_at: '2014-12-04 19:40:03.143303'
+  updated_at: '2014-12-04 19:40:03.143303'
+events_081:
+  id: 159
+  name: Sun - Round (Win)
+  organization_id: 5
+  location_id: 33
+  comments: ''
+  created_at: '2014-12-04 19:41:19.099452'
+  updated_at: '2014-12-04 19:41:19.099452'
+events_082:
+  id: 160
+  name: Sun Late - Round (Win)
+  organization_id: 5
+  location_id: 33
+  comments: ''
+  created_at: '2014-12-04 19:42:23.790207'
+  updated_at: '2014-12-04 19:42:23.790207'
+events_083:
+  id: 161
+  name: Wed - Sunset (Win)
+  organization_id: 5
+  location_id: 57
+  comments: ''
+  created_at: '2014-12-04 19:43:42.943636'
+  updated_at: '2014-12-04 19:43:42.943636'
+events_084:
+  id: 162
+  name: Thu - Trout (Win)
+  organization_id: 5
+  location_id: 38
+  comments: ''
+  created_at: '2014-12-04 19:45:43.496390'
+  updated_at: '2014-12-04 19:45:43.496390'
+events_085:
+  id: 163
+  name: Thu - Trout (Win)
+  organization_id: 5
+  location_id: 38
+  comments: ''
+  created_at: '2014-12-04 19:46:30.078219'
+  updated_at: '2014-12-04 19:46:30.078219'
+events_086:
+  id: 164
+  name: Sun - Trout (Win)
+  organization_id: 5
+  location_id: 38
+  comments: ''
+  created_at: '2014-12-04 19:47:34.999987'
+  updated_at: '2014-12-04 19:47:34.999987'
+events_087:
+  id: 165
+  name: Wed - West Point (Win)
+  organization_id: 5
+  location_id: 60
+  comments: ''
+  created_at: '2014-12-04 19:52:21.279062'
+  updated_at: '2014-12-04 19:52:21.279062'
+events_088:
+  id: 166
+  name: Tue Noon - McDougall (Win)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 20:51:15.896770'
+  updated_at: '2014-12-04 20:51:15.896770'
+events_089:
+  id: 167
+  name: Thu Noon - McDougall (Win)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 20:51:37.271733'
+  updated_at: '2014-12-04 20:51:37.271733'
+events_090:
+  id: 168
+  name: Mon - McDougall (Win)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 20:54:02.539970'
+  updated_at: '2014-12-04 20:54:02.539970'
+events_091:
+  id: 169
+  name: Mon - McDougall (Spring)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 20:55:00.271660'
+  updated_at: '2014-12-04 20:55:00.271660'
+events_092:
+  id: 170
+  name: Mon - McDougall (Winter)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 20:55:51.771204'
+  updated_at: '2014-12-04 20:55:51.771204'
+events_093:
+  id: 171
+  name: Fri - McDougall (Winter)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 20:56:29.210528'
+  updated_at: '2014-12-04 20:56:29.210528'
+events_094:
+  id: 172
+  name: Fri - McDougall (Spring)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 20:56:56.999017'
+  updated_at: '2014-12-04 20:56:56.999017'
+events_095:
+  id: 173
+  name: Thu - McDougall (Spring)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 20:58:38.151709'
+  updated_at: '2014-12-04 20:58:38.151709'
+events_096:
+  id: 174
+  name: Thu - McDougall (Winter)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 20:59:13.957168'
+  updated_at: '2014-12-04 20:59:13.957168'
+events_097:
+  id: 175
+  name: Sun - McDougall (Winter)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 20:59:52.724606'
+  updated_at: '2014-12-04 20:59:52.724606'
+events_098:
+  id: 176
+  name: Sun - McDougall (Spring)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 21:00:17.215852'
+  updated_at: '2014-12-04 21:00:17.215852'
+events_099:
+  id: 177
+  name: Tue - McDougall (Spring)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 21:01:17.164674'
+  updated_at: '2014-12-04 21:01:17.164674'
+events_100:
+  id: 178
+  name: Tue - McDougall (Winter)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 21:01:39.172422'
+  updated_at: '2014-12-04 21:01:39.172422'
+events_101:
+  id: 179
+  name: Tue - McDougall (Spring)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 21:02:11.679330'
+  updated_at: '2014-12-04 21:02:11.679330'
+events_102:
+  id: 180
+  name: Mon - McDougall (Winter)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 23:35:03.909246'
+  updated_at: '2014-12-04 23:35:03.909246'
+events_103:
+  id: 181
+  name: Wed - McDougall (Winter)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 23:35:35.280369'
+  updated_at: '2014-12-04 23:35:35.280369'
+events_104:
+  id: 182
+  name: Fri - McDougall (Winter)
+  organization_id: 17
+  location_id: 79
+  comments: ''
+  created_at: '2014-12-04 23:35:46.335449'
+  updated_at: '2014-12-04 23:35:46.335449'
+events_105:
+  id: 183
+  name: Mon - McDougall (Winter)
+  organization_id: 17
+  location_id: 85
+  comments: ''
+  created_at: '2014-12-04 23:36:48.720305'
+  updated_at: '2014-12-04 23:36:48.720305'
+events_106:
+  id: 184
+  name: Thu - North Shore (Winter)
+  organization_id: 17
+  location_id: 85
+  comments: ''
+  created_at: '2014-12-04 23:38:02.286136'
+  updated_at: '2014-12-04 23:38:02.286136'
+events_107:
+  id: 185
+  name: Mon - North Shore (Winter)
+  organization_id: 17
+  location_id: 85
+  comments: ''
+  created_at: '2014-12-04 23:38:22.321454'
+  updated_at: '2014-12-04 23:38:22.321454'

@@ -69,24 +69,20 @@ locations_007:
   updated_at: '2014-10-05 22:03:08.229824'
 locations_008:
   id: 35
-  address: |-
-    1661 Napier St
-    Vancouver, BC V5L 4X4
+  address: 1661 Napier StVancouver, BC V5L 4X4
   lat: 49.27479
   long: -123.071301
   name: Britannia Community Center
   created_at: '2014-10-05 23:24:25.025110'
-  updated_at: '2014-10-05 23:24:25.025110'
+  updated_at: '2014-12-02 00:16:55.411033'
 locations_009:
   id: 36
-  address: |-
-    7433 Edmonds St
-    Burnaby, BC V3N 1B2
+  address: 7433 Edmonds StBurnaby, BC V3N 1B2
   lat: 49.221479
   long: -122.947658
-  name: Edmonds Recreation Centre
+  name: Edmonds Community Centre
   created_at: '2014-10-05 23:32:17.623619'
-  updated_at: '2014-10-05 23:32:17.623619'
+  updated_at: '2014-11-27 21:58:35.377836'
 locations_010:
   id: 37
   address: |-
@@ -327,3 +323,142 @@ locations_033:
   name: West Point Grey Community Centre
   created_at: '2014-10-06 00:21:05.267983'
   updated_at: '2014-10-06 00:21:05.267983'
+locations_034:
+  id: 71
+  address: 15105 105 Avenue Surrey, BC V3R 7G8
+  lat: 49.193794
+  long: -122.802558
+  name: Guildford Recreation Centre
+  created_at: '2014-11-27 21:54:05.129922'
+  updated_at: '2014-11-27 21:56:04.737631'
+locations_035:
+  id: 72
+  address: 1379 Laurier Ave Port Coquitlam, BC V3B 2B9
+  lat: 49.275656
+  long: -122.75105
+  name: Hyde Creek Recreation Centre
+  created_at: '2014-11-27 21:55:38.361263'
+  updated_at: '2014-11-27 21:55:38.361263'
+locations_036:
+  id: 73
+  address: St. Andrews & East 23rd Ave, North Vancouver
+  lat: 49.330162
+  long: -123.065916
+  name: McDougall Recreation Centre
+  created_at: '2014-11-27 21:57:56.370999'
+  updated_at: '2014-11-27 21:57:56.370999'
+locations_037:
+  id: 74
+  address: 7888 200 St Langley, BC V2Y 3J4
+  lat: 49.146218
+  long: -122.6662
+  name: Langley Events Centre
+  created_at: '2014-11-27 21:59:20.629858'
+  updated_at: '2014-11-27 21:59:20.629858'
+locations_038:
+  id: 75
+  address: 8880 Williams Rd Richmond, BC V7A 1G6
+  lat: 49.140976
+  long: -123.127701
+  name: 'South Arms Community Centre '
+  created_at: '2014-11-27 22:00:30.801209'
+  updated_at: '2014-11-27 22:00:30.801209'
+locations_039:
+  id: 76
+  address: "\t9523 Cameron St, Burnaby, BC V3J 1L6"
+  lat: 49.253479
+  long: -122.899427
+  name: Cameron Recreation Centre
+  created_at: '2014-12-01 02:37:07.121233'
+  updated_at: '2014-12-01 02:37:07.121233'
+locations_040:
+  id: 77
+  address: 6066 Thunderbird Blvd
+  lat: 49.2607645
+  long: -123.2421803
+  name: Doug Mitchell Thunderbird Sports Centre
+  created_at: '2014-12-02 05:47:16.124733'
+  updated_at: '2014-12-02 05:47:16.124733'
+locations_041:
+  id: 78
+  address: 3705 Rupert Street, Vancouver, BC V5M 3W2, Canada
+  lat: 49.2513465
+  long: -123.03412370000001
+  name: Akos' House
+  created_at: '2014-12-02 22:31:36.891173'
+  updated_at: '2014-12-02 22:31:36.891173'
+locations_042:
+  id: 79
+  address: Mickey McDougall Gym, 23rd Street East, North Vancouver, BC V7L 4R4, Canada
+  lat: 49.330569
+  long: -123.06722760000002
+  name: Mickey McDougall Gym
+  created_at: '2014-12-04 20:49:19.392065'
+  updated_at: '2014-12-04 20:49:19.392065'
+locations_043:
+  id: 80
+  address: Delbrook Community Recreation Centre, North Vancouver, BC V7N 2L3, Canada
+  lat: 49.3371095
+  long: -123.0864671
+  name: Dellbrook Community Recreation
+  created_at: '2014-12-04 21:04:01.733995'
+  updated_at: '2014-12-04 21:04:01.733995'
+locations_044:
+  id: 81
+  address: 123 East 23rd Street North Vancouver, BC V7L 3E2
+  lat: 49.332513
+  long: -123.071503
+  name: Harry Jerome Community Recreation Centre
+  created_at: '2014-12-04 21:06:08.372696'
+  updated_at: '2014-12-04 21:06:08.372696'
+locations_045:
+  id: 82
+  address: 145 West 1st Street North Vancouver, BC V7M 3N8
+  lat: 49.313929
+  long: -123.080728
+  name: John Braithwaite Community Centre
+  created_at: '2014-12-04 23:12:54.893091'
+  updated_at: '2014-12-04 23:12:54.893091'
+locations_046:
+  id: 83
+  address: Karen Magnussen Wave Pool, 2300 Kirkstone Road, North Vancouver, BC V7J
+    1Z6, Canada
+  lat: 49.3304921
+  long: -123.04593090000003
+  name: Karen Magnussen Community Recreation Centre
+  created_at: '2014-12-04 23:13:21.408803'
+  updated_at: '2014-12-04 23:13:50.128233'
+locations_047:
+  id: 84
+  address: Lynn Valley Community Recreation Centre, Frederick Road, North Vancouver,
+    BC V7K 2H5, Canada
+  lat: 49.341402
+  long: -123.03770800000001
+  name: Lynn Valley Community Recreation Centre
+  created_at: '2014-12-04 23:14:42.218488'
+  updated_at: '2014-12-04 23:14:42.218488'
+locations_048:
+  id: 85
+  address: North Shore Neighbourhood House, 1230 West 20 Street, North Vancouver,
+    BC V7P 2B9, Canada
+  lat: 49.3276787
+  long: -123.10847439999998
+  name: North Shore Neighbourhood House
+  created_at: '2014-12-04 23:16:14.016779'
+  updated_at: '2014-12-04 23:16:14.016779'
+locations_049:
+  id: 86
+  address: 3625 Banff Court North Vancouver, BC V7H 2Z8
+  lat: 49.32042
+  long: -122.968819
+  name: Parkgate Community Centre
+  created_at: '2014-12-04 23:17:21.069387'
+  updated_at: '2014-12-04 23:17:21.069387'
+locations_050:
+  id: 87
+  address: 100 block East 23rd Street North Vancouver, BC V7N 2L3
+  lat: 49.330299
+  long: -123.068986
+  name: Memorial Community Recreation Centre
+  created_at: '2014-12-04 23:43:28.507519'
+  updated_at: '2014-12-04 23:43:28.507519'
