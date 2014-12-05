@@ -200,6 +200,14 @@ body {
   margin-bottom: 30px;
 }
 
+.slogan {
+    padding: 10px 120px;
+
+    @media (max-width: 567px) {
+        padding: 10px 30px;
+    }
+}
+
 .sport_logos {
     margin-bottom: 80px;
 
@@ -457,7 +465,6 @@ li {
 .margin-bottom-30 {
     margin-bottom: 30px;
 }
-
 
 
 
