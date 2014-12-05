@@ -5,6 +5,10 @@
 
 @import "variables";
 
+
+
+// ========== LANDING PAGE ===========
+
 .features {
 	min-height: 1px;
 	padding: 30px;
@@ -31,6 +35,28 @@
 	}
 }
 
+.contact-us {
+
+	.socialmedia-full {
+		border-left: 1px solid #000;
+
+		li {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.socialmedia {
+		height: 50px;
+	}
+
+	@media (max-width: 1199px) {
+		.socialmedia-full {
+			border: 0;
+		}
+	}
+
+}
 
 .mailer {
 	min-height: 400px;
@@ -62,4 +88,60 @@
 	display : block;
 	transition: opacity 0.2s 1s ease;
 	-webkit-transition: border-radius 2s;
+
+}
+
+
+
+
+// ========== ABOUT US PAGE ===========
+
+.about-us {
+
+    .about-us-text {
+        border-right: 1px solid #000;
+
+        @media (max-width: 1199px) {
+        	border: none;
+        }
+    }
+
+    .teammember {
+    	height: 500px;
+    	cursor: pointer;
+    }
+}
+
+
+
+// ========== CONTACT US US PAGE ===========
+
+.contact-us {
+	
+	.contact-us-text {
+		height: 300px;
+	}
+
+	.contact-us-form {
+		.form-control	{
+			border: 1px solid #000;
+			border-radius: 0px; 
+			
+		}
+	}
+
+	.socialmedia-full {
+		ul li {
+			display: block; 
+			padding-bottom: 25px; 
+		}
+	}
+
+	.disclaimer {
+		padding-top:100px;
+		height: 200px;
+	}
+
+
+
 }
