@@ -126,16 +126,28 @@
         &:hover {
             border-top: 1px solid $dark-green;
 
+            @media (max-width: 767px) {
+                background-color: $dark-green;
+            }
+
         }
     }
     &:nth-child(2) {
         &:hover {
             border-top: 1px solid $dark-blue;
+
+            @media (max-width: 767px) {
+                background-color: $dark-blue;
+            }
         }
     }
     &:nth-child(3) {
         &:hover {
             border-top: 1px solid $dark-orange;
+
+            @media (max-width: 767px) {
+                background-color: $dark-orange;
+            }
         }
     }
     &:nth-child(4) {
@@ -145,7 +157,34 @@
             padding-right: 0px;
             margin-right: 30px;
             border-top: 1px solid $dark-red;
+
         }
+        @media (max-width: 767px) {
+            padding-right: 0px;
+            margin-right: 0px;
+
+            &:hover {
+                border: none;
+                border-top: 1px solid $dark-red;
+                background-color: $dark-red;
+                            padding-right: 0px;
+            margin-right: 0px;
+                
+            }
+        }
+    }
+}
+
+.dropdown-menu {
+
+    ul {
+        li {
+            a {
+            background-color: $dark-red !important;
+                
+            }
+        }
+        
     }
 }
 
@@ -155,6 +194,7 @@
 
 .dropdown {
   padding-right: 30px;
+  border-top: none;
 }
 
 
