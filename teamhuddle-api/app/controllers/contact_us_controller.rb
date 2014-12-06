@@ -1,5 +1,9 @@
 class ContactUsController < ApplicationController
 
+  def index
+    @forms = ContactUs.all
+  end
+
   def create
     @form = ContactUs.new(contact_us_params)
     @form.save

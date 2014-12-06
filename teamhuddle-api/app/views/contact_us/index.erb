@@ -1,0 +1,14 @@
+<div class="container" ng-controller="contact-us">
+  <h1>What people were thinking about..</h1>
+
+
+  <div gridster>
+    <ul>
+      <li gridster-item="item" ng-repeat="item in forms" class="grid-item">
+        <h4>{{item.form.first_name}} {{item.form.last_name}}</h4>
+        <p><i>{{item.form.email}}</i></p>
+        <p>{{item.form.comments}}</p>
+      </li>
+    </ul>
+  </div>
+</div>
