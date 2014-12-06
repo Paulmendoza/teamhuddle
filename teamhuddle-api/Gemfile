@@ -57,7 +57,7 @@ gem 'byebug'
 # For minimizing JS
 gem 'uglifier'
 
-gem 'pg'
+# gem 'pg'
 
 gem 'foreigner', '~> 1.7.1'
 

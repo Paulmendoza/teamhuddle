@@ -66,35 +66,9 @@
     
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <script>
-    // var navHeight = $('.navbar-collapse').height();
-
-    // $('.navbar-collapse').on('show.bs.collapse', function(){
-    //   if($(this).height() != 0){
-    //      navHeight = $(this).height();
-    //   }
-    //   $('body').animate({
-    //     'padding-top': parseInt($("body").css("padding-top")) + navHeight
-    //    }, 100);
-    // });
-
-    // $('.navbar-collapse').on('hide.bs.collapse', function(){
-    //   navHeight = $(this).height();
-    //   $('body').animate({
-    //     'padding-top': parseInt($("body").css("padding-top")) - navHeight
-    //    }, 100);
-    // });
-
+  
     // Fix mobile floating toolbar when input is focused
     if(/iPhone|iPod|Android|iPad/.test(window.navigator.platform)){
-
-    $(document)
-      .on('focus', 'textarea,input,select', function(e) {
-        $('.footer').css('position', 'absolute');
-      })
-      .on('blur', 'textarea,input,select', function(e) {
-        $('.footer').css('position', '');
-      });
-  } 
 
   </script>
 
