@@ -24,13 +24,20 @@ function getEndOfTheWeek(d) {
     return new Date(d.setDate(diff));
 }
 
+Date.prototype.addDays = function(days) {
+    this.setDate(this.getDate() + days);
+    return this;
+};
+
 // the dropins service that is expandable with new functions easily
 app.service('Dropins', ['$http', '$q', function ($http, $q) {
 
     var baseUrl = '/api/v1/api_dropins.json?';
 
-    baseUrl += 'from=' + getStartOfTheWeek(new Date()).toISOString();
-    baseUrl += '&to=' + getEndOfTheWeek(new Date()).toISOString();
+    var dateFrom = new Date(Date.now());
+
+    baseUrl += 'from=' + dateFrom.toISOString();
+    baseUrl += '&to=' + dateFrom.addDays(7).toISOString();
     
     // default get (gets events for the week)
     this.get = function () {
