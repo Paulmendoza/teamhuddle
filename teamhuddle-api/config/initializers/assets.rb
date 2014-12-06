@@ -9,5 +9,6 @@ Rails.application.config.assets.precompile += %w( animate.css )
 Rails.application.config.assets.precompile += %w( typography.css )
 Rails.application.config.assets.precompile += %w( static_pages.css )
 
-Rails.application.config.assets.precompile += %w( angular_application.js )
-Rails.application.config.assets.precompile += %w( landing_page.js )
+Rails.application.config.assets.precompile += %w( base_client_application.js )
+Rails.application.config.assets.precompile += %w( angular_client_application.js )
+

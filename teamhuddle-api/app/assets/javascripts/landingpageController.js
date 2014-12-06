@@ -1,6 +1,4 @@
-var app = angular.module('app', []);
-
-app.controller('landing-page', ['$scope', '$http', function($scope, $http) {                
+app.controller('landing-page', ['$scope', '$http', function($scope, $http) {
         $scope.submitted = false;
         
         $scope.success = false;

@@ -1,4 +1,0 @@
-//= require angular
-//= require landingpageApp
-
-

@@ -2,7 +2,7 @@
 //COMMENT OUT:  enable  logging 
 //console.log = function() {}
 
-var app = angular.module('app', ['ngResource', 'ngMap', 'ngAnimate']);
+
 
 function getStartOfTheWeek(d) {
     d = new Date(d);
