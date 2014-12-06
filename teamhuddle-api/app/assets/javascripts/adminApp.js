@@ -67,10 +67,16 @@ app.controller('contact-us', ['$scope', '$http', function ($scope, $http) {
 
             var rowCount = 0;
             var colCount = 0;
+
+            const denominator = 600;
+
             for (var i = 0; i < data.forms.length; i++) {
+
+                var dimensionsFactor = Math.ceil(data.forms[i].comments.length / denominator) === 0 ? 1 : Math.ceil(data.forms[i].comments.length / denominator);
+
                 var tempform = {
-                    sizeX: 1,
-                    sizeY: 1,
+                    sizeX: dimensionsFactor,
+                    sizeY: dimensionsFactor,
                     row: rowCount,
                     col: colCount,
                     form: data.forms[i]
@@ -132,3 +138,22 @@ app.controller('contact-us', ['$scope', '$http', function ($scope, $http) {
         }
     };
 }]);
+
+
+app.filter('truncate', function () {
+        return function (text, length, end) {
+            if (isNaN(length))
+                length = 10;
+
+            if (end === undefined)
+                end = "...";
+
+            if (text.length <= length || text.length - end.length <= length) {
+                return text;
+            }
+            else {
+                return String(text).substring(0, length-end.length) + end;
+            }
+
+        };
+    });
