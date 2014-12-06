@@ -60,3 +60,5 @@ gem 'uglifier'
 gem 'pg'
 
 gem 'foreigner', '~> 1.7.1'
+
+gem "paranoia", "~> 2.0"

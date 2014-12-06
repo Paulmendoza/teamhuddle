@@ -1,21 +1,21 @@
 class Organization < ActiveRecord::Base
-  
-  after_initialize :init
+
+  before_destroy :check_event_references
+
   belongs_to :location
+  has_many :events
 
   validates :name, :presence => true, :uniqueness => true
   validates :email, :uniqueness => true, :allow_nil => true
   validates :location_id, :inclusion => { :in => Location.pluck(:id),
     :message => "not a valid location" }, :allow_nil => true
-  
-  # exposes associated objects
-  def location
-    Location.where( id: self.location_id )
-  end
 
-  #
-  private
-  def init
+  def check_event_references
+    return true if events.count == 0
+
+    errors.add :event_reference_found, 'Cannot delete organization with events linked to it'
+
+    return false
   end
 
 end

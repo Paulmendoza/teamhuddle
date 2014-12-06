@@ -58,13 +58,18 @@ class OrganizationsController < ApplicationController
   end
 
   def destroy
-    if Organization.find(params[:id]).destroy
+    @organization = Organization.find(params[:id])
+    if @organization.destroy
       respond_to do |format|
         format.html { redirect_to :action => 'index'}
         format.json { render :nothing => true, status => :no_conent }
         format.xml { render :nothing => true, status => :no_conent }
       end
+    else
+      render json: { error: @organization.errors }, :status => :unprocessable_entity
     end
+
+
   end
 
   private

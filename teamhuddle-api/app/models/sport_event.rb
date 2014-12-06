@@ -1,7 +1,8 @@
 class SportEvent < ActiveRecord::Base
   self.inheritance_column = 'zoink'
   after_initialize :init
-  
+  acts_as_paranoid
+
   belongs_to :event, :dependent => :delete
   belongs_to :sport
   has_many :archived_sport_events
@@ -33,11 +34,6 @@ class SportEvent < ActiveRecord::Base
     if schedule.present? && (schedule.start_time >= schedule.end_time)
       errors.add(:start_time_greater_or_equal, "The start time can't be more than or equal to the end time") 
     end
-  end
-  
-  def soft_delete
-    self.dt_deleted = Time.now
-    self.save
   end
  
   def as_json(options={})

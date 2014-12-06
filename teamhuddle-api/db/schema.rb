@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141203014453) do
+ActiveRecord::Schema.define(version: 20141206025450) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -92,9 +92,11 @@ ActiveRecord::Schema.define(version: 20141203014453) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "schedule"
-    t.datetime "dt_deleted"
     t.string   "source"
+    t.datetime "deleted_at"
   end
+
+  add_index "sport_events", ["deleted_at"], name: "index_sport_events_on_deleted_at"
 
   create_table "sports", id: false, force: true do |t|
     t.string   "sport",      null: false

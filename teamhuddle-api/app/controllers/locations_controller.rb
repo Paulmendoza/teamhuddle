@@ -63,12 +63,15 @@ class LocationsController < ApplicationController
 
   def destroy
     @location = Location.find(params[:id])
-    @location.destroy
-    
-    respond_to do |format|
-      format.html { redirect_to :action => 'index'}
-      format.json { render :nothing => true, status => :no_conent }
-      format.xml { render :nothing => true, status => :no_conent }
+
+    if @location.destroy
+      respond_to do |format|
+        format.html { redirect_to :action => 'index'}
+        format.json { render :nothing => true, status => :no_content }
+        format.xml { render :nothing => true, status => :no_content }
+      end
+    else
+      render json: { error: @location.errors }, :status => :unprocessable_entity
     end
   end
   
