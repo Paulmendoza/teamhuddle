@@ -1,4 +1,5 @@
 class ContactUsController < ApplicationController
+  before_action :authenticate_admin!
 
   def index
     @forms = ContactUs.all
