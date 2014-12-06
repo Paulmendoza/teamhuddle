@@ -34,10 +34,10 @@ organizations_004:
   name: Vancouver, City of
   location_id: 
   user_id: 
-  phone: '6046046044'
+  phone: 604-873-7000
   email: vancouver@vancouver.ca
   created_at: '2014-08-02 17:12:19.017706'
-  updated_at: '2014-12-02 00:17:27.005348'
+  updated_at: '2014-12-05 19:41:22.332741'
   website: 
 organizations_005:
   id: 6
