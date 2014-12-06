@@ -7,3 +7,4 @@
 //= require teamhuddleFilters.js
 //= require dropinsController.js
 //= require landingpageController.js
+//= require contactController

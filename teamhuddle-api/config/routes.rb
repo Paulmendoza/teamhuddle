@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'contact_us/new'
+
   devise_for :admins, :controllers => { :registrations => :registrations }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -9,9 +11,11 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get 'admin' => 'welcome#index'
+  get 'admin' => 'admin#index'
   
-  
+  post 'contact_us' => 'contact_us#create'
+  post 'users' => 'users#create'
+
   # basic routes
   get 'contact' => 'index#contact'
   get 'about' => 'index#about'
@@ -26,9 +30,8 @@ Rails.application.routes.draw do
         post 'scrape'
       end
     end
+    get 'contact_us' => 'contact_us#index'
   end
-
-  resources :users
   
   # aliases of sport_event
   scope :api, defaults: { format: 'json' } do
