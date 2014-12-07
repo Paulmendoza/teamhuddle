@@ -86,12 +86,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
 
                 $scope.applyFilters();
 
-                if ($scope.dropins.length > 3) {
-                    $scope.format = 'table';
-                }
-                else {
-                    $scope.format = 'items';
-                }
+                $scope.format = 'table';
             },
             function (reason) {
                 alert('Failed: ' + reason);
