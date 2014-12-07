@@ -77,7 +77,7 @@
           <h4>Submit your e-mail below to receive front of the line access to our beta</h4>
           <br>
           
-          <form ng-submit="submit()">
+          <form ng-submit="submit()" ng-class="{ animateSlide: success && submitted && !processing }"> <!--ng-hide="success && submitted && !processing" -->
               <input type="email" ng-model="email" class="form-control"/>
               <input value="submit" type="submit" class="btn btn-info"/>
           </form>

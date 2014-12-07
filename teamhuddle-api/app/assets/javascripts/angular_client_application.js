@@ -5,6 +5,7 @@
 //= require teamhuddleApp
 //= require teamhuddleService.js
 //= require teamhuddleFilters.js
+//= require teamhuddleDirectives.js
 //= require dropinsController.js
 //= require landingpageController.js
 //= require contactController
