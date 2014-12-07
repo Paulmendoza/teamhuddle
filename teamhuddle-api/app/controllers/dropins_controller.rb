@@ -5,20 +5,14 @@ class DropinsController < ApplicationController
 
   def index
     #default to volleyball right now
-    @sport = String.new("volleyball")
-    @sport = params[:sport] if params[:sport].present?
+    @sport_param = "volleyball"
+    @sport_param = params[:sport] if params[:sport].present?
     
     # This is for the admin page -> see index.erb
-    @dropins = SportEvent.includes(:event, :location, :organization)
-                         .where( sport_events: { type: "dropin", sport_id: @sport, deleted_at: nil })
-                         .order(:created_at)
-
     @dropins_grid = initialize_grid(SportEvent,
       :joins => [:event, :location, :organization],
-      :conditions => {:type => "dropin", :sport_id => @sport, :deleted_at => nil}
+      :conditions => {:type => "dropin", :sport_id => @sport_param, :deleted_at => nil}
     )
-
-
 
     myvar = 'false'
     #active = false

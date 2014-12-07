@@ -169,7 +169,8 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
-    wice_grid (3.4.2)
+    wice_grid (3.4.10)
+      coffee-rails
       kaminari (>= 0.13.0)
 
 PLATFORMS
@@ -201,4 +202,4 @@ DEPENDENCIES
   therubyracer
   tzinfo-data
   uglifier
-  wice_grid (= 3.4.2)
+  wice_grid (~> 3.4.10)
