@@ -60,6 +60,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
     //watch to see if the location changes and then set the sport accordingly
     $scope.$on('$locationChangeSuccess', function (event) {
         if (sportRoutes.indexOf($location.path()) >= 0) {
+            ga('send', 'pageview', $location.path()); // add google analytics to the "router"
             $scope.sport = $location.path().replace("/", "");
             $scope.refreshDropins();
         }
