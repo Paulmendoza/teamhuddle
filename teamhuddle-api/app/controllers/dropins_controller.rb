@@ -4,13 +4,6 @@ class DropinsController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-    from = DateTime.now.beginning_of_day
-    to = DateTime.now.end_of_day
-    if params[:from].present? and params[:to].present?
-      from = Time.parse(params[:from])
-      to = Time.parse(params[:to])
-    end
-    
     #default to volleyball right now
     @sport = String.new("volleyball")
     @sport = params[:sport] if params[:sport].present?

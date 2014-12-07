@@ -3,6 +3,8 @@ class LocationsController < ApplicationController
   before_action :authenticate_admin!
 
   def index
+    @locations_grid = initialize_grid(Location)
+
     @locations = Location.all.order(:name)
 
     respond_to do |format|

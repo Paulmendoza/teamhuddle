@@ -3,6 +3,8 @@ class OrganizationsController < ApplicationController
   before_action :authenticate_admin!
 
   def index
+    @organizations_grid = initialize_grid(Organization)
+
     @organizations = Organization.all.order(:name)
 
     respond_to do |format|
@@ -74,7 +76,7 @@ class OrganizationsController < ApplicationController
 
   private
   def organization_params
-    params.require(:organization).permit(:name, :location_id, :phone, :email)
+    params.require(:organization).permit(:name, :location_id, :phone, :email, :website)
   end
 
 end
