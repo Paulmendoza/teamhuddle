@@ -76,10 +76,6 @@
           <h3>Find the sports you love playing with the players you love playing with!</h3>
           <h4>Submit your e-mail below to receive front of the line access to our beta</h4>
           <br>
-          <%#= form_for User.new do |f| %> 
-            <%#= f.email_field :email, class: "form-control", placeholder: "Enter your e-mail" %>
-              <%#= f.submit "Submit", class: "btn btn-info" %>
-          <%# end %>
           
           <form ng-submit="submit()">
               <input type="email" ng-model="email" class="form-control"/>
