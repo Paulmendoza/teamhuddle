@@ -1,0 +1,26 @@
+<%= grid(@locations_grid) do |g|
+  g.column name: 'Name', attribute: 'name' do |location|
+    location.name
+  end
+
+  g.column name: 'Address', attribute: 'address' do |location|
+    location.address
+  end
+
+  g.column name: 'Latitude', attribute: 'lat' do |location|
+    location.lat
+  end
+
+  g.column name: 'Longitude', attribute: 'long' do |location|
+    location.long
+  end
+
+  g.column do |location|
+    link_to 'Edit', edit_location_path(location), class: 'btn btn-default'
+  end
+
+  g.column do |location|
+    link_to 'Delete', location, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+  end
+
+end -%>

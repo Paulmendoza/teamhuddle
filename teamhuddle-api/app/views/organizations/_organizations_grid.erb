@@ -1,0 +1,26 @@
+<%= grid(@organizations_grid) do |g|
+  g.column name: 'Name', attribute: 'name' do |organization|
+    organization.name
+  end
+
+  g.column name: 'Email', attribute: 'email' do |organization|
+    organization.email
+  end
+
+  g.column name: 'Phone', attribute: 'phone' do |organization|
+    organization.phone
+  end
+
+  g.column name: 'Website', attribute: 'website' do |organization|
+    link_to organization.website, organization.website.to_s
+  end
+
+  g.column do |organization|
+    link_to 'Edit', edit_organization_path(organization), class: 'btn btn-default'
+  end
+
+  g.column do |organization|
+    link_to 'Delete', organization, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+  end
+
+end -%>

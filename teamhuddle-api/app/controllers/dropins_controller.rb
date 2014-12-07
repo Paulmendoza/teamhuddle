@@ -11,8 +11,17 @@ class DropinsController < ApplicationController
     # This is for the admin page -> see index.erb
     @dropins_grid = initialize_grid(SportEvent,
       :joins => [:event, :location, :organization],
-      :conditions => {:type => "dropin", :sport_id => @sport_param, :deleted_at => nil}
+      :conditions => {:type => "dropin", :sport_id => @sport_param, :deleted_at => nil},
+      :enable_export_to_csv => true,
+      :csv_field_separator => ';',
+      :csv_file_name => 'dropins',
+      :name => 'dropins'
     )
+
+    export_grid_if_requested('dropins' => 'dropins_grid') do
+      # usual render or redirect code executed if the request is not a CSV export request
+    end
+
 
     myvar = 'false'
     #active = false

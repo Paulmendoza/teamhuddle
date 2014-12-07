@@ -1,4 +1,3 @@
-
 <h1><%= @sport_param.capitalize %> Dropins </h1>
 <%= link_to 'Create a new dropin', new_dropin_path, class: 'btn btn-success' %> &nbsp;&nbsp;&nbsp;
 <%= link_to 'Volleyball', {:sport => 'volleyball' }, class:'btn btn-default' %>
@@ -11,49 +10,5 @@
 <%#= link_to 'Show Only Active', params.merge(:active => 'true'), class:'btn btn-default pull-right' %>
 <br>
 <br>
-<%= grid(@dropins_grid) do |g|
-  g.column name: 'Name', attribute: 'name', model: 'Event' do |dropin|
-    link_to dropin.name, dropin_path(dropin.id)
-  end
-
-  g.column name: 'Skill Level', attribute: 'skill_level' do |dropin|
-    dropin.skill_level
-  end
-
-  g.column name: 'Location', attribute: 'name', model: 'Location' do |dropin|
-    dropin.location.name
-  end
-
-  g.column name: 'Price Per One', attribute: 'price_per_one', filter_type: :range do |dropin|
-    number_to_currency(dropin.price_per_one, :unit => "$")
-  end
-
-  g.column name: 'Price Per Group', attribute: 'price_per_group', filter_type: :range do |dropin|
-    number_to_currency(dropin.price_per_group, :unit => "$")
-  end
-
-  g.column name: 'Schedule' do |dropin|
-    dropin.schedule.to_s
-  end
-
-  g.column name: 'Start Date' do |dropin|
-    dropin.schedule.start_time.strftime('%-d-%b-%y')
-  end
-
-  g.column name: 'End Date' do |dropin|
-    dropin.schedule.last.strftime('%-d-%b-%y')
-  end
-
-  g.column name: 'Number of Sessions' do |dropin|
-    dropin.schedule.all_occurrences.count
-  end
-
-  g.column name: 'Time' do |dropin|
-    dropin.schedule.start_time.strftime('%l:%M%P')
-  end
-
-  g.column do |dropin|
-    link_to "DELETE", dropin_path(dropin.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
-  end
-
-end -%>
+<%= render 'dropins_grid' %>
+<button class="btn btn-default wg-external-csv-export-button" data-grid-name="dropins">Export to CSV</button>
