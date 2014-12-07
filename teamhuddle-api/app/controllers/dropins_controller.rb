@@ -12,7 +12,15 @@ class DropinsController < ApplicationController
     @dropins = SportEvent.includes(:event, :location, :organization)
                          .where( sport_events: { type: "dropin", sport_id: @sport, deleted_at: nil })
                          .order(:created_at)
-                         
+
+    @dropins_grid = initialize_grid(SportEvent,
+      :joins => [:event, :location, :organization],
+      :conditions => {:type => "dropin", :sport_id => @sport, :deleted_at => nil}
+    )
+
+
+
+    myvar = 'false'
     #active = false
     #active = params[:active] if params[:active].present?
     #dropin.schedule.occurring_between?(Time.now, Time.new('2100'))
