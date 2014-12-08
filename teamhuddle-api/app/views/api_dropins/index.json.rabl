@@ -20,6 +20,9 @@ end
 
 child :sport_event do
   attributes :id, :type, :sport_id, :skill_level, :price_per_one, :spots, :source
+  node :schedule_until do |se|
+    se.schedule.last
+  end
 end
 
 child :event do
