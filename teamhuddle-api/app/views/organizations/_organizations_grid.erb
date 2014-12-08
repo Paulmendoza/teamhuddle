@@ -12,7 +12,7 @@
   end
 
   g.column name: 'Website', attribute: 'website' do |organization|
-    link_to organization.website, organization.website.to_s
+    link_to organization.website, organization.website.to_s, :target => "_blank"
   end
 
   g.column do |organization|
