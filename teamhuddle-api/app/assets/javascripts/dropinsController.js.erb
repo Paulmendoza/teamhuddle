@@ -214,7 +214,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
         var htmlContent = "<div class='info-window'>" +
             "<h5>" + dropin.location.name + "</h5>" +
             "<p>" + dropin.location.address + "</p>" +
-            "<p>" + dropin.organization.phone + "</p>" +
+            "<p>" + dropin.phone + "</p>" +
             "<div class='hidden-xs hidden-sm'>" + //hide extra stuff on mobile, instead show a button to go to the list
             "<div class='col-md-7 col-sm-7'>" +
             "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start, 'EEEE') + " </p>" +

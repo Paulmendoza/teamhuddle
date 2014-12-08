@@ -15,6 +15,10 @@
     location.long
   end
 
+  g.column name: 'Phone Number', attribute: 'phone' do |location|
+    location.phone
+  end
+
   g.column do |location|
     link_to 'Edit', edit_location_path(location), class: 'btn btn-default'
   end
