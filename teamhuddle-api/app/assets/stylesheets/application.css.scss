@@ -236,6 +236,8 @@ body {
     padding: 0px;
     margin-top: 20px;
     border-top: 2px solid #777;
+    position: absolute;
+bottom: 0;
 }
 
 .fixfixed .footer { 
@@ -651,7 +653,7 @@ li {
     map {
         position: fixed;
         left: 0px;
-        top: 68px;
+        top: 0px;
         height: 100%;
         width: 47%;
         border-right: 1px solid #777;
