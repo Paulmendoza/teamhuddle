@@ -85,11 +85,11 @@
           <br>
 
           <!-- Show this div while waiting for a response from the server -->
-          <div ng-if="processing">
-              <p>please wait..</p>
-          </div>
-          
-          <!-- Show this div on success -->
+        <div class="text-center"  ng-show="processing">
+          <%= image_tag("loading.gif", alt: "loading") %>
+        </div>
+
+        <!-- Show this div on success -->
           <div class="panel panel-success" ng-if="success && submitted && !processing">
               <p>Thanks for signing up, {{user.email}}!</p>
           </div>

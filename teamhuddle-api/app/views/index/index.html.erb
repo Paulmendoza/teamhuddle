@@ -86,7 +86,10 @@
       <button class="btn-info hidden-lg hidden-md" ng-click="switchToMap()">show map</button>
 
       <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
-      <div class="dropin_results">  
+      <div class="dropin_results">
+        <div class="text-center"  ng-show="loadingDropins">
+          <%= image_tag("loading.gif", alt: "loading") %>
+        </div>
         <br>
         <div class="row clearfix dropin-repeat"
              ng-class="{selected: markerWrappers.currentlyOpen === dropin.id}"  

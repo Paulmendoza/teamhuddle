@@ -4,6 +4,8 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
     // set my own orderBy filter directive
     var orderBy = $filter('orderBy');
 
+    $scope.loadingDropins = false;
+
     $scope.mapMobileToggle = false;
 
     // for displaying all list items as verbose or non verbose format
@@ -77,6 +79,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
     // use a deferred promise from the Dropins service to populate the scope
     $scope.refreshDropins = function () {
         $scope.$emit("loadMap");
+        $scope.loadingDropins = true;
         Dropins.getBySport($scope.sport).then(
                 function (dropins) {
                     $scope.dropins = orderBy(dropins, $scope.predicate, false);
@@ -86,8 +89,11 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
                     $scope.applyFilters();
 
                     $scope.format = 'table';
+
+                    $scope.loadingDropins = false;
                 },
                 function (reason) {
+                    $scope.loadingDropins = false;
                     alert('Failed: ' + reason);
                 });
     };
