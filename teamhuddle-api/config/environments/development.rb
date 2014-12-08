@@ -1,4 +1,15 @@
 Rails.application.configure do
+  config.action_mailer.default_url_options = { host: "teamhuddle.ca" }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      address: "s113.panelboxmanager.com",
+      port: 25,
+      domain: "teamhuddle.ca",
+      authentication: "plain",
+      user_name: "teamhud",
+      password: $p0rt1234
+  }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

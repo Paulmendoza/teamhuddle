@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     @user.email = params['user']['email']
     
 		if @user.save
+      #SignUpMailer.welcome(@user).deliver
 			render json: @user
 		else
 			render json: @user

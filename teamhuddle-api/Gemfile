@@ -49,16 +49,28 @@ gem 'autoprefixer-rails'
 gem 'bower-rails'
 gem 'angular-rails-templates'
 
+# HTTP requests within the app
 gem 'rest-client'
 
-# For debugging
+# Debugging
 gem 'byebug'
 
-# For minimizing JS
+# Minimizing JS
 gem 'uglifier'
 
+# Postgres
 gem 'pg'
 
+# Foreign key constrains for databases
 gem 'foreigner', '~> 1.7.1'
 
+# Soft deletes
 gem "paranoia", "~> 2.0"
+
+# Automatic inlining of styles on email templates
+gem "roadie", "~> 2.4.0"
+
+# Automatic grids
+gem "wice_grid", '~> 3.4.10'
+# WiceGrid needs it
+gem "coffee-rails"

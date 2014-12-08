@@ -1,26 +1,6 @@
 <h1>All Locations</h1>
-<%= link_to 'Create a new location', new_location_path, class: 'btn btn-default'  %>
+<%= link_to 'Create a new location', new_location_path, class: 'btn btn-success'  %>
 
-<table class="table">
-  <tr>
-    <th>Name</th>
-    <th>Address</th>
-    <th>Latitude</th>
-    <th>Longtitude</th>
-    <th></th>
-  </tr>
-  
-  <% @locations.each do |location| %>
-  <tr>
-    <td><%= link_to location.name, location_path(location) %></td>
-    <td><%= location.address %>
-    <td><%= location.lat %></td>
-    <td><%= location.long %></td>
-    <td>
-      <%= link_to 'Edit', edit_location_path(location), class: 'btn btn-default' %>
-      <%= link_to 'Delete', location, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-    </td>
-  </tr>
-  <% end %>
-</table>
+<%= render 'locations_grid' %>
 
+<button class="btn btn-default wg-external-csv-export-button" data-grid-name="locations">Export to CSV</button>

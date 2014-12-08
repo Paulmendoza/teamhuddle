@@ -4,22 +4,26 @@ class DropinsController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-    from = DateTime.now.beginning_of_day
-    to = DateTime.now.end_of_day
-    if params[:from].present? and params[:to].present?
-      from = Time.parse(params[:from])
-      to = Time.parse(params[:to])
-    end
-    
     #default to volleyball right now
-    @sport = String.new("volleyball")
-    @sport = params[:sport] if params[:sport].present?
+    @sport_param = "volleyball"
+    @sport_param = params[:sport] if params[:sport].present?
     
     # This is for the admin page -> see index.erb
-    @dropins = SportEvent.includes(:event, :location, :organization)
-                         .where( sport_events: { type: "dropin", sport_id: @sport, deleted_at: nil })
-                         .order(:created_at)
-                         
+    @dropins_grid = initialize_grid(SportEvent,
+      :joins => [:event, :location, :organization],
+      :conditions => {:type => "dropin", :sport_id => @sport_param, :deleted_at => nil},
+      :enable_export_to_csv => true,
+      :csv_field_separator => ';',
+      :csv_file_name => 'dropins',
+      :name => 'dropins'
+    )
+
+    export_grid_if_requested('dropins' => 'dropins_grid') do
+      # usual render or redirect code executed if the request is not a CSV export request
+    end
+
+
+    myvar = 'false'
     #active = false
     #active = params[:active] if params[:active].present?
     #dropin.schedule.occurring_between?(Time.now, Time.new('2100'))

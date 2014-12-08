@@ -1,17 +1,19 @@
 {
-  "lib": {
-    "name": "bower-rails generated lib assets",
-    "dependencies": {
-       "angular": "1.3.2",
-	   "angular-resource": "1.3.2",
-	   "angular-animate": "1.3.2",
-	   "ngmap": "1.1.5"
+    "lib": {
+        "name": "bower-rails generated lib assets",
+        "dependencies": {
+            "angular": "1.3.2",
+            "angular-resource": "1.3.2",
+            "angular-animate": "1.3.2",
+            "angular-gridster": "latest",
+            "ngmap": "1.1.5",
+            "jquery-ui": "latest"
+        }
+    },
+    "vendor": {
+        "name": "bower-rails generated vendor assets",
+        "dependencies": {
+            //"moment.js"    : "latest"
+        }
     }
-  },
-  "vendor": {
-    "name": "bower-rails generated vendor assets",
-    "dependencies": {
-	   //"moment.js"    : "latest"
-    }
-  }
 }

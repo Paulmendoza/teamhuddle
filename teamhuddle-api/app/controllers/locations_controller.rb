@@ -3,13 +3,22 @@ class LocationsController < ApplicationController
   before_action :authenticate_admin!
 
   def index
+    @locations_grid = initialize_grid(Location,
+                                      :enable_export_to_csv => true,
+                                      :csv_field_separator => ';',
+                                      :csv_file_name => 'locations',
+                                      :name => 'locations')
+
     @locations = Location.all.order(:name)
 
-    respond_to do |format|
-      format.html
-      format.json { render json: @locations }
-      format.xml { render xml: @locations }
+    export_grid_if_requested('locations' => 'locations_grid') do
+      respond_to do |format|
+        format.html
+        format.json { render json: @locations }
+        format.xml { render xml: @locations }
+      end
     end
+
   end
 
   def create

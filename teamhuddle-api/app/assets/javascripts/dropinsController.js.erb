@@ -60,6 +60,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
     //watch to see if the location changes and then set the sport accordingly
     $scope.$on('$locationChangeSuccess', function (event) {
         if (sportRoutes.indexOf($location.path()) >= 0) {
+            ga('send', 'pageview', $location.path()); // add google analytics to the "router"
             $scope.sport = $location.path().replace("/", "");
             $scope.refreshDropins();
         }
@@ -85,12 +86,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
 
                 $scope.applyFilters();
 
-                if ($scope.dropins.length > 3) {
-                    $scope.format = 'table';
-                }
-                else {
-                    $scope.format = 'items';
-                }
+                $scope.format = 'table';
             },
             function (reason) {
                 alert('Failed: ' + reason);
@@ -211,7 +207,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
 
         this.marker = new google.maps.Marker({
             map: $scope.map,
-            //icon: "<%= asset_path('Hockey-MapMarker.png') %>",
+            icon: getMapMarkerPath($scope.sport),
             position: new google.maps.LatLng(dropin.location.lat, dropin.location.long)
         });
 
@@ -294,6 +290,22 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
 
     }
 
+    function getMapMarkerPath(sport){
+        switch(sport){
+            case "volleyball":
+                return "<%= asset_path("Person-MapMarker.png") %>"; //todo switch this to volleyball once its done
+            case "hockey":
+                return "<%= asset_path("Hockey-MapMarker.png") %>";
+            case "basketball":
+                return "<%= asset_path("Person-MapMarker.png") %>"; //todo switch this to basketball once its done
+            case "soccer":
+                return "<%= asset_path("Soccer-MapMarker.png") %>";
+            default :
+                return "";
+        }
+
+    }
+
     // UNUSED HELPER METHOD, COULD BE USERFUL LATER
 //        $scope.getSkillSortOrder = function (dropin) {
 //            switch (dropin.sport_event.skill_level) {
@@ -310,3 +322,4 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
 //            }
 //        };
 }]);
+
