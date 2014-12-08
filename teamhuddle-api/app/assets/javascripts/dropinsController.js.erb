@@ -71,7 +71,6 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
     });
 
 
-
     /**** DROPIN CONTROLLER FUNCTIONS: ****/
     /**************************************/
 
@@ -79,48 +78,48 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
     $scope.refreshDropins = function () {
         $scope.$emit("loadMap");
         Dropins.getBySport($scope.sport).then(
-            function (dropins) {
-                $scope.dropins = orderBy(dropins, $scope.predicate, false);
+                function (dropins) {
+                    $scope.dropins = orderBy(dropins, $scope.predicate, false);
 
-                $scope.resizeMap();
+                    $scope.resizeMap();
 
-                $scope.applyFilters();
+                    $scope.applyFilters();
 
-                $scope.format = 'table';
-            },
-            function (reason) {
-                alert('Failed: ' + reason);
-            });
+                    $scope.format = 'table';
+                },
+                function (reason) {
+                    alert('Failed: ' + reason);
+                });
     };
 
     $scope.resizeMap = function () {
         // set a minor timeout to fix load issues
-        window.setTimeout(function(){
+        window.setTimeout(function () {
             google.maps.event.trigger($scope.map, 'resize');
-        },100);
+        }, 100);
     };
 
     $scope.switchToMap = function () {
         $scope.mapMobileToggle = !$scope.mapMobileToggle;
         $scope.resizeMap();
-        window.setTimeout(function(){
-            if($scope.markerWrappers.currentlyOpen !== null){
+        window.setTimeout(function () {
+            if ($scope.markerWrappers.currentlyOpen !== null) {
                 var currentlyOpen = $scope.markerWrappers.currentlyOpen;
                 $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
                 $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
             }
-        },250);
+        }, 250);
     };
 
     $scope.switchToList = function () {
         $scope.mapMobileToggle = !$scope.mapMobileToggle;
-        window.setTimeout(function(){
-            if($scope.markerWrappers.currentlyOpen !== null){
+        window.setTimeout(function () {
+            if ($scope.markerWrappers.currentlyOpen !== null) {
                 var currentlyOpen = $scope.markerWrappers.currentlyOpen;
                 $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
                 $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
             }
-        },250);
+        }, 250);
     };
 
     // function which orders by predicate
@@ -190,10 +189,6 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
         $scope.sport = 'no-sport';
     };
 
-    $scope.moreDropinInfo = function () {
-        debugger;
-    };
-
     /**** INNER CLASS: ****/
     /***********************/
     // definition of the marker object that is linked to each dropin event
@@ -211,32 +206,9 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
             position: new google.maps.LatLng(dropin.location.lat, dropin.location.long)
         });
 
-        var htmlContent = "<div class='info-window'>" +
-            "<h5>" + dropin.location.name + "</h5>" +
-            "<p>" + dropin.location.address + "</p>" +
-            "<p>" + dropin.phone + "</p>" +
-            "<div class='hidden-xs hidden-sm'>" + //hide extra stuff on mobile, instead show a button to go to the list
-            "<div class='col-md-7 col-sm-7'>" +
-            "<p><b>Day:</b> " + $filter('date')(dropin.datetime_start, 'EEEE') + " </p>" +
-            "<p><b>Skill:</b> " + dropin.sport_event.skill_level + "</p>" +
-            "</div>" +
-            "<div class='col-md-5 col-sm-5'>" +
-            "<p><b>Price:</b> " + $filter('currency')(dropin.sport_event.price_per_one) + "</p>" +
-            "<p><b>Time:</b> " + $filter('date')(dropin.datetime_start, 'h:mm a') + " - " + $filter('date')(dropin.datetime_end, 'h:mm a') + "</p>" +
-            "</div>" +
-            "<br><br><br><br><br>" +
-            "</div>" +
-            "<div class='hidden-lg hidden-md'>" +
-            "<button class='btn' ng-click='switchToList()'>more info</button>" +
-            "<br><br><br>" +
-            "</div>" +
-            "</div>";
-
-        var compiled = $compile(htmlContent)($scope);
-
-        // the content for the infoWindow is set
+        // the content for the infoWindow is set to blank to be generate at toggle-time
         this.infoWindow = new google.maps.InfoWindow({
-            content: compiled[0],
+            content: "",
             maxwidth: 200
         });
 
@@ -264,8 +236,10 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
                     $scope.markerWrappers[$scope.markerWrappers.currentlyOpen].isOpen = false;
                     $scope.markerWrappers[$scope.markerWrappers.currentlyOpen].infoWindow.close();
                 }
+                var dropinsAtMarker = getDropinsForLocation(dropin.location.id);
 
                 $scope.markerWrappers.currentlyOpen = dropin.id;
+                that.infoWindow.content = generateInfoWindowHtmlContent(dropinsAtMarker);
                 that.infoWindow.open($scope.map, that.marker);
                 that.isOpen = true;
 
@@ -290,8 +264,60 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
 
     }
 
-    function getMapMarkerPath(sport){
-        switch(sport){
+    //dynamically generates compiled html content for infowindows
+    function generateInfoWindowHtmlContent(dropins) {
+        var templateDropin = dropins[0];
+        var  htmlContent = "<div class='info-window'>" +
+                "<h5>" + templateDropin.location.name + "</h5>" +
+                "<p>" + templateDropin.location.address + "</p>" +
+                "<p>" + templateDropin.phone + "</p>";
+
+        if (dropins.length === 1) {
+            htmlContent += "<div class='hidden-xs hidden-sm'>" + //hide extra stuff on mobile, instead show a button to go to the list
+                    "<div class='col-md-7 col-sm-7'>" +
+                    "<p><b>Day:</b> " + $filter('date')(templateDropin.datetime_start, 'EEEE') + " </p>" +
+                    "<p><b>Skill:</b> " + templateDropin.sport_event.skill_level + "</p>" +
+                    "</div>" +
+                    "<div class='col-md-5 col-sm-5'>" +
+                    "<p><b>Price:</b> " + $filter('currency')(templateDropin.sport_event.price_per_one) + "</p>" +
+                    "<p><b>Time:</b> " + $filter('date')(templateDropin.datetime_start, 'h:mm a') + " - " + $filter('date')(templateDropin.datetime_end, 'h:mm a') + "</p>" +
+                    "</div>" +
+                    "<br><br><br><br><br>" +
+                    "</div>" +
+                    "<div class='hidden-lg hidden-md'>" +
+                    "<button class='btn' ng-click='switchToList()'>more info</button>" +
+                    "<br><br><br>" +
+                    "</div>";
+        }
+        else if (dropins.length > 1){
+            htmlContent += "<table>"
+            dropins.forEach(function(thisDropin) {
+                htmlContent += "<tr><td>" + $filter('date')(thisDropin.datetime_start, 'EEEE') + "</td>" +
+                               "<td>&nbsp;&nbsp;" + $filter('date')(thisDropin.datetime_start, 'h:mm a') + " - " + $filter('date')(thisDropin.datetime_end, 'h:mm a') + "</td>" +
+                               //"<td>&nbsp;&nbsp;See more</td>"  +
+                "</tr>";
+            });
+
+            htmlContent += "</table>" + "<br>";
+        }
+        htmlContent += "</div>";
+        var compiled = $compile(htmlContent)($scope);
+        return compiled[0];
+    }
+
+    function getDropinsForLocation(location_id) {
+        var tempDropins = [];
+        $scope.dropins.forEach(function (dropin) {
+            if (dropin.location.id === location_id) {
+                tempDropins.push(dropin);
+            }
+        });
+        return tempDropins;
+    }
+
+    // get the path for each map marker asset
+    function getMapMarkerPath(sport) {
+        switch (sport) {
             case "volleyball":
                 return "<%= asset_path("volleyball-mapmarker.png") %>";
             case "hockey":

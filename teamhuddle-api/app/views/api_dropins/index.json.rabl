@@ -30,7 +30,7 @@ child :event do
 end
 
 child :location do
-  attributes :name, :lat, :long, :address
+  attributes :id, :name, :lat, :long, :address
 end
 
 child :organization do
