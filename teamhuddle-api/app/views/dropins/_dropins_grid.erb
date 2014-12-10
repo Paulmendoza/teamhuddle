@@ -39,9 +39,9 @@
     dropin.schedule.start_time.strftime('%l:%M%P')
   end
 
-  g.column do |dropin|
-    link_to "EDIT", edit_dropin_path(dropin.id), class: 'btn btn-default'
-  end
+  # g.column do |dropin|
+  #   link_to "EDIT", edit_dropin_path(dropin.id), class: 'btn btn-default'
+  # end
 
   g.column do |dropin|
     link_to "DELETE", dropin_path(dropin.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
