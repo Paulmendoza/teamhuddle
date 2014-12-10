@@ -216,9 +216,23 @@ body {
 
 }
 
-.header {
-  margin-top: 20px;
-  margin-bottom: 30px;
+.header-outer {
+    padding: 20px 80px 30px;
+    
+    @media (max-width: 822px) {
+        padding: 20px 20px 30px
+    }
+    
+    .header {
+
+        @media (max-width: 1155px) {
+            h2, h4 {
+                font-size: 20px;
+            }
+        }
+
+    }
+    
 }
 
 .slogan {
@@ -230,8 +244,8 @@ body {
     }
 }
 
-.sport_logos {
-    margin-bottom: 80px;
+.default-sport_logos {
+    padding-bottom: 80px;
 
 }
 
