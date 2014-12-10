@@ -1,0 +1,29 @@
+<p>
+  <%= f.label :sport %><br>
+  <%= f.select(:sport, options_from_collection_for_select(Sport.all, :sport, :sport)) %>
+</p>
+
+<p>
+  <%= f.label :skill_level %><br>
+  <%= select_tag(:skill_level, options_for_select([
+                                                          ['Beginner', 'Beginner'],
+                                                          ['Recreational', 'Recreational'],
+                                                          ['Intermediate', 'Intermediate'],
+                                                          ['Advanced', 'Advanced']
+                                                  ])) %>
+</p>
+
+<p>
+  <%= f.label :organization %>
+  <br>
+  <%= f.select(:organization, options_from_collection_for_select(Organization.all.order(:name), :id, :name)) %>
+  <small>Organization not on the list? <%= link_to 'Add it here', new_organization_path %> (Note: Form will reset)
+  </small>
+</p>
+
+<p>
+  <%= f.label :location %>
+  <br>
+  <%= f.select(:location, options_from_collection_for_select(Location.all.order(:name), :id, :name)) %>
+  <small>Location not on the list? <%= link_to 'Add it here', new_location_path %> (Note: Form will reset)</small>
+</p>

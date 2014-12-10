@@ -22,8 +22,6 @@ class DropinsController < ApplicationController
       # usual render or redirect code executed if the request is not a CSV export request
     end
 
-
-    myvar = 'false'
     #active = false
     #active = params[:active] if params[:active].present?
     #dropin.schedule.occurring_between?(Time.now, Time.new('2100'))
@@ -35,17 +33,7 @@ class DropinsController < ApplicationController
   end
 
   def create
-    # hash to convert form data to symbols for IceCube
-    days_of_the_week = {
-      'mo' => :monday,
-      'tu' => :tuesday,
-      'we' => :wednesday,
-      'th' => :thursday,
-      'fr' => :friday,
-      'sa' => :saturday,
-      'su' => :sunday
-    }
-    
+
     # get the start date and end date NOTE: adds time as well to startime
     start_date = Time.new(params[:start_date][:year], params[:start_date][:month], params[:start_date][:day], 
       params[:start_time][:hour], params[:start_time][:minute])
@@ -54,18 +42,18 @@ class DropinsController < ApplicationController
     # create a new schedule setting the duration
     schedule = Schedule.new(start_date, :end_time => start_date.change(hour: params[:end_time][:hour], min: params[:end_time][:minute])) do |s|
       # add weekly recurrence ruling based on the day of the week selected
-      s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[params[:day]]).until(end_date))
+      s.add_recurrence_rule(Rule.weekly.day(params[:day].intern).until(end_date))
     end
     
     temp_event = SportEvent.new(dropin_params)
-    temp_event.sport_id = params[:dropin][:sport]
+    temp_event.sport_id = params[:sport_event][:sport]
     temp_event.skill_level = params[:skill_level]
     temp_event.schedule = schedule
     
-    @dropin = SportEventWrapper.new(params[:dropin][:name],
-      params[:dropin][:location_id],
-      params[:dropin][:organization_id],
-      params[:dropin][:comments],
+    @dropin = SportEventWrapper.new(params[:sport_event][:name],
+      params[:sport_event][:location],
+      params[:sport_event][:organization],
+      params[:sport_event][:comments],
       temp_event,
       'dropin',
       false)
@@ -94,9 +82,21 @@ class DropinsController < ApplicationController
   end
 
   def edit
+    @dropin = SportEvent.includes(:event).find(params[:id])
   end
 
   def update
+    @dropin = SportEvent.find(params[:id])
+    @event = Event.find(@dropin.event_id)
+
+    if @event.update(:location_id => params[:sport_event][:location],
+                     :organization_id => params[:sport_event][:organization],
+                     :comments => params[:sport_event][:comments]) && @dropin.update(dropin_params)
+      redirect_to dropin_path(@dropin)
+    else
+      render json: { error: @event.errors }, :status => :unprocessable_entity
+    end
+
   end
   
   def import
@@ -196,15 +196,15 @@ class DropinsController < ApplicationController
       s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[event[:day]]).until(end_date))
     end
     
-    dropin = SportEventWrapper.new((0..16).to_a.map{|a| rand(16).to_s(16)}.join, #random name for now
-      9, # harcode everything to Creekside. TODO: change this to dynamic lookup
-      5, # hardcoded to Vancouver board right now. TODO: change to dynamic lookup
-      nil,
-      'volleyball', # hardcoded to volleyball. TODO: change to dynamic lookup
-      'Beginner', # hardcoded to random value TODO: try and parse this with regexes
-      0,
-      schedule,
-      true)
+    # dropin = SportEventWrapper.new((0..16).to_a.map{|a| rand(16).to_s(16)}.join, #random name for now
+    #   9, # harcode everything to Creekside. TODO: change this to dynamic lookup
+    #   5, # hardcoded to Vancouver board right now. TODO: change to dynamic lookup
+    #   nil,
+    #   'volleyball', # hardcoded to volleyball. TODO: change to dynamic lookup
+    #   'Beginner', # hardcoded to random value TODO: try and parse this with regexes
+    #   0,
+    #   schedule,
+    #   true)
     
     return dropin
     
@@ -212,13 +212,13 @@ class DropinsController < ApplicationController
 
   private
   def dropin_params
-    params.require(:dropin).permit(:skill_level, :price_per_one, :price_per_group, 
+    params.require(:sport_event).permit(:skill_level, :price_per_one, :price_per_group,
       :spots, :notes, :format, :source)
   end
 
   private
   def event_params
-    params.require(:dropin).permit(:name, :location_id, :organization_id, :comments)
+    params.require(:sport_event).permit(:name, :location, :organization, :comments)
   end
 
 end

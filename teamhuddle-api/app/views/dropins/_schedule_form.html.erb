@@ -1,0 +1,26 @@
+<p>
+  <%= label_tag(:day, "Day of the week") %><br>
+  <%= select_tag(:day, options_for_select([['Monday', 'monday'],
+                                           ['Tuesday', 'tuesday'],
+                                           ['Wednesday', 'wednesday'],
+                                           ['Thursday', 'thursday'],
+                                           ['Friday', 'friday'],
+                                           ['Saturday', 'saturday'],
+                                           ['Sunday', 'sunday']])) %>
+</p>
+
+<p>
+  <%= label_tag(:date, "Start Date") %><br>
+  <%= select_date Date.today, prefix: :start_date %>
+</p>
+
+<p>
+  <%= label_tag(:date, "End Date") %><br>
+  <%= select_date Date.today, prefix: :end_date %>
+</p>
+
+<p>
+  <%= label_tag(:time, "Time") %><br>
+  <%= select_time Time.now.change(hour: 19, min: 0), prefix: :start_time %>
+  - <%= select_time Time.now.change(hour: 22, min: 0), prefix: :end_time %>
+</p>
