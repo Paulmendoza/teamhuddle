@@ -71,13 +71,62 @@
 	}
 }
 
-.sport_logos {
-	margin-bottom: 0;
+.sport_logos-outer {
 
 	.sport-logos-inner {
-		padding-top: 40px;
+
+		.icon1 {
+			width: 250px;
+    		height: 250px;
+    		background: url(icons_sprite.png) 0 0;
+		}
+		.icon2 {
+			width: 250px;
+    		height: 250px;
+    		background: url(icons_sprite.png) -252px 0px;
+		}
+		.icon3 {
+			width: 250px;
+    		height: 250px;
+    		background: url(icons_sprite.png) -504px 0px;
+		}
+		.icon4 {
+			width: 250px;
+    		height: 250px;
+    		background: url(icons_sprite.png) -756px 0px;
+		}
+		.icon5 {
+			width: 250px;
+    		height: 250px;
+    		background: url(icons_sprite.png) -1009px 0px;
+		}
+		.icon6 {
+			width: 250px;
+    		height: 250px;
+    		background: url(icons_sprite.png) -1260px 0px;
+		}
+		.icon7 {
+			width: 250px;
+    		height: 250px;
+    		background: url(icons_sprite.png) -1512px 0px;
+		}
+		.icon8 {
+			width: 250px;
+    		height: 250px;
+    		background: url(icons_sprite.png) -1764px 0px;
+		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
 
 /*.features {
 	min-height: 1px;
