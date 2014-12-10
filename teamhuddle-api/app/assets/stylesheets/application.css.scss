@@ -19,7 +19,6 @@
     display: none !important;
 }
 
-
 /*// ========== NAVIGATION STYLES ===========
 */
 .navbar {
@@ -177,8 +176,13 @@
 
 
 
-/*// ========== SECTION STYLES ===========
-*/
+// ========== SECTION STYLES ===========
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 body {
   /*padding-top: 80px; */
   background: #eaeaea; /* Old browsers */
@@ -409,6 +413,10 @@ li {
     padding-top: 50px;
 }
 
+.padding-bottom-50 {
+    padding-bottom: 50px;
+}
+
 
 
 .margin-right-20 {
@@ -417,6 +425,10 @@ li {
 
 .margin-bottom-30 {
     margin-bottom: 30px;
+}
+
+.margin-bottom-100 {
+    margin-bottom: 100px;
 }
 
 .disclaimer {
