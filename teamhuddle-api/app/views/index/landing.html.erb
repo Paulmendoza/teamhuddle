@@ -1,80 +1,18 @@
-<div class="container-fluid">
-  <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="container-fluid" ng-controller="landing-page" ng-cloak>
+
+  <section class="header-outer col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="header">
         <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo'%>
-        <h1 class="text-center">teamhuddle</h1>
-        <h2 class="text-center">GAME ON!</h2>
-        <h4 class="text-center slogan">Vestibulum id ligula porta felis euismod semper. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</h4>
-    </div>
-  </section>
-
-
-  <section class="sport_logos text-center">
-
-<!-- DO NOT DELETE -->
-<!--     <div class="sport-outer">
-      <div class="sport-first col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
-      <div class="sport-second col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
-      <div class="sport-third col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
-      <div class="sport-fourth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
-      <div class="sport-fifth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
-      <div class="sport-sixth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
-      <div class="sport-seventh col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
-      <div class="sport-eighth col-lg-3 col-md-3 col-sm-6 col-xs-6"></div>
-    </div> -->
-  <!-- DO NOT DELETE -->
-    <%= link_to(image_tag("volleyball-compressed.png", :alt => "asdf",
-    class: "sport_logo green_bck", id: "first"), "/#/volleyball") %>
-
-    <%= link_to(image_tag("hockey-compressed.png", :alt => "asdf", 
-    class: "sport_logo blue_bck", id: "second"), "/#/hockey") %>
-
-    <%= link_to(image_tag("basketball-compressed.png", :alt => "asdf", 
-    class: "sport_logo orange_bck", id: "third"), "/#/basketball") %>
-
-    <%= link_to(image_tag("soccer-compressed.png", :alt => "asdf", 
-    class: "sport_logo red_bck ", id: "fourth"), "/#/soccer") %>
-
-    <%= link_to(image_tag("dragonboat-compressed.png", :alt => "asdf", 
-    class: "sport_logo red_bck", id: "first"), "/#/dragonboat") %>
-
-    <%= link_to(image_tag("baseball.png", :alt => "asdf", 
-    class: "disabled sport_logo test_images", id: "second"), "") %>
-
-    <%= link_to(image_tag("ultimate.png", :alt => "asdf", 
-    class: "sdisabled sport_logo test_images", id: "third"), "") %>
-
-    <%= link_to(image_tag("dodgeball.png", :alt => "asdf", 
-    class: "disabled sport_logo test_images", id: "fourth"), "") %>     
-  </section>
-</div>
-
-<section>
-  <div class="feature-outer">
-    <div class="features col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center center-block">
-        <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
-        <h2 class="feature1">dropin finder</h2><br>
-        <p>Not sure when and where your closest drop-in or league is? We’ve got you covered! The map feature allows you to seamlessly find local sporting events and activities nearby. You can browse different locations, and will eventually be able to join or create your own sporting event.</p><p>We’re making it easier for you to keep active!</p>
-    </div>
-    <div class="features col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center center-block">
-      <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
-      <h2 class="feature3">drop-in checkin</h2><br>
-      <p>Plan ahead to make your next drop-in worthwhile. Want to know which drop-ins are popular, or which ones have space for you and your big group? Maybe you’re an athlete that just needs a lot of space to perfect his/her craft, perhaps a social butterfly who enjoys seeing new faces and meeting new players at drop-ins? The check-in and comments feature will come in handy to give you more insight on the drop-in.</p><p> This is great for players who’ve been away from the sporting scene for quite sometime, as you can review comments from other patrons to keep you updated!</p>
-    </div>
-    <div class="features col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center center-block">
-        <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
-        <h2 class="feature2">find a player</h2><br>
-        <p >Tired of paying those penalties for lack of players? Never be short-benched again! The “Find a Player” feature allows your team to pick and choose their recruits base on location and skillset. Fill empty spots in the roster for league games or find familiar faces to attend drop-ins with! Are you a player searching for a team to play on?</p><p> Update your athletic resume (COMING SOON) and show the sporting community what you have to offer!</p>
-    </div>
-
-  </div>
-</section>
-
-<div class="container-fluid" ng-controller="landing-page" ng-cloak>
-  <section>
-    <div class="mailer">
-      <div class="mailer-inner text-center col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+        <div class="text-center">
+          <h1>teamhuddle</h1>
           <h3>Find the sports you love playing with the players you love playing with!</h3>
+          <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.</h5>
+        </div>
+    </div>
+  </section>
+  <section class="mailer-outer">
+    <div class="mailer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="mailer-inner text-center">
           <h4>Submit your e-mail below to receive front of the line access to our beta</h4>
           <br>
           
@@ -102,6 +40,45 @@
         </div>
       </div>
   </section>
+
+   <section class="feature-outer">
+    <div class="feature col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <h1 class="text-center">teamhuddle features</h1><br>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center-block">
+          <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
+          <h2 class="text-center feature1">drop-in finder</h2><br>
+          <p>Not sure when and where your closest drop-in or league is? We’ve got you covered! The map feature allows you to seamlessly find local sporting events and activities nearby. You can browse different locations, and will eventually be able to join or create your own sporting event.</p><p>We’re making it easier for you to keep active!</p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center-block">
+        <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
+        <h2 class="text-center feature3">check-in</h2><br>
+        <p>Plan ahead to make your next drop-in worthwhile. Want to know which drop-ins are popular, or which ones have space for you and your big group? Maybe you’re an athlete that just needs a lot of space to perfect his/her craft, perhaps a social butterfly who enjoys seeing new faces and meeting new players at drop-ins? The check-in and comments feature will come in handy to give you more insight on the drop-in.</p><p> This is great for players who’ve been away from the sporting scene for quite sometime, as you can review comments from other patrons to keep you updated!</p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center-block">
+          <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
+          <h2 class="text-center feature2">find a player</h2><br>
+          <p >Tired of paying those penalties for lack of players? Never be short-benched again! The “Find a Player” feature allows your team to pick and choose their recruits base on location and skillset. Fill empty spots in the roster for league games or find familiar faces to attend drop-ins with! Are you a player searching for a team to play on?</p><p> Update your athletic resume (COMING SOON) and show the sporting community what you have to offer!</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="sport_logos-outer">
+    <div class="sport-logos-inner">
+      <div class="icon-outer">
+        <div class="sport_logo icon1"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon2"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon3"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon4"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon5"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon6"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon7"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon8"><img src="" class="img-responsive"></div>
+      </div>
+    </div>   
+  </section>
+
 </div>
 
 <%= javascript_include_tag 'angular_client_application' %>

@@ -11,4 +11,5 @@ Rails.application.config.assets.precompile += %w( static_pages.css )
 
 Rails.application.config.assets.precompile += %w( base_client_application.js )
 Rails.application.config.assets.precompile += %w( angular_client_application.js )
+Rails.application.config.assets.precompile += %w( angular_client_application.js )
 

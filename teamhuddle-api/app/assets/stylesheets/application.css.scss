@@ -19,7 +19,6 @@
     display: none !important;
 }
 
-
 /*// ========== NAVIGATION STYLES ===========
 */
 .navbar {
@@ -29,10 +28,15 @@
   margin: 0;
 }
 
+.navbar-nav {
+    margin-right: 0 !important;
+}
+
 .navbar-brand {
     padding: 10px 0px 20px 15px;
 
 }
+
 .logonav {
     height: 25px;
     width: 25px;
@@ -40,7 +44,6 @@
     padding: 0;
 
 }
-
 
 .navbar-default {
   background-color: #000;
@@ -173,8 +176,13 @@
 
 
 
-/*// ========== SECTION STYLES ===========
-*/
+// ========== SECTION STYLES ===========
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 body {
   /*padding-top: 80px; */
   background: #eaeaea; /* Old browsers */
@@ -208,9 +216,23 @@ body {
 
 }
 
-.header {
-  margin-top: 20px;
-  margin-bottom: 30px;
+.header-outer {
+    padding: 20px 80px 30px;
+    
+    @media (max-width: 822px) {
+        padding: 20px 20px 30px
+    }
+    
+    .header {
+
+        @media (max-width: 1155px) {
+            h2, h4 {
+                font-size: 20px;
+            }
+        }
+
+    }
+    
 }
 
 .slogan {
@@ -222,8 +244,8 @@ body {
     }
 }
 
-.sport_logos {
-    margin-bottom: 80px;
+.default-sport_logos {
+    padding-bottom: 80px;
 
 }
 
@@ -239,7 +261,6 @@ body {
 }
 
 .fixfixed .footer { 
-    position: absolute; 
 } 
 
 
@@ -295,71 +316,11 @@ li {
 /*// ========== IMAGE STYLES ===========
 */
 
-/*.sport-outer {
-
-  .sport-first {
-    background: url("spritesmall.png") 1750px 0px;
-    height: 250px;
-    width: 250px;
-    margin-right: 30px;
-  }
-
-  .sport-second {
-    background: url("spritesmall.png") 2000px 0px;
-    height: 250px;
-    width: 250px;
-    margin-right: 30px;
-
-  }
-
-  .sport-third {
-    background: url("spritesmall.png") 1500px 0px;
-    height: 250px;
-    width: 250px;
-    margin-right: 30px;
-  }
-
-  .sport-fourth {
-    background: url("spritesmall.png") 1250px 0px;
-    height: 250px;
-    width: 250px;
-    margin-right: 30px;
-  }
-
-  .sport-fifth {
-    background: url("spritesmall.png") 1000px 0px;
-    height: 250px;
-    width: 250px;
-    margin-right: 30px;
-  }
-
-  .sport-sixth {
-    background: url("spritesmall.png") 750px 0px;
-    height: 250px;
-    width: 250px;
-    margin-right: 30px;
-  }
-
-  .sport-seventh {
-    background: url("spritesmall.png") 500px 0px;
-    height: 250px;
-    width: 250px;
-    margin-right: 30px;
-  }
-
-  .sport-eighth {
-    background: url("spritesmall.png") 250px 0px;
-    height: 250px;
-    width: 250px;
-    margin-right: 30px;
-  }
-}*/
-
 .sport_logo {
     width: 45%;
-    padding: 15px; 
     margin: 2px 1px;
     background-color: transparent;
+    border: 2px solid #000;
     &:hover {
         opacity: 0.9;
         -webkit-transition :opacity .25s ease-in-out;
@@ -387,7 +348,7 @@ li {
     }
 }
 
-.green_bck {
+/*.green_bck {
     background-color: $dark-green;
     &:hover {
         background-color: $light-green;
@@ -414,7 +375,7 @@ li {
     &:hover {
         background-color: $light-red;
     }
-}
+}*/
 
 
 
@@ -466,7 +427,9 @@ li {
     padding-top: 50px;
 }
 
-
+.padding-bottom-50 {
+    padding-bottom: 50px;
+}
 
 .margin-right-20 {
     margin-right: 20px;
@@ -474,6 +437,10 @@ li {
 
 .margin-bottom-30 {
     margin-bottom: 30px;
+}
+
+.margin-bottom-100 {
+    margin-bottom: 100px;
 }
 
 .disclaimer {
@@ -651,7 +618,7 @@ li {
     map {
         position: fixed;
         left: 0px;
-        top: 68px;
+        top: 0px;
         height: 100%;
         width: 47%;
         border-right: 1px solid #777;
