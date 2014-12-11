@@ -325,13 +325,13 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
     function getMapMarkerPath(sport) {
         switch (sport) {
             case "volleyball":
-                return "<%= asset_path("volleyball-mapmarker.png") %>";
+                return "<%= asset_path("volleyball-marker.png") %>";
             case "hockey":
-                return "<%= asset_path("hockey-mapmarker.png") %>";
+                return "<%= asset_path("hockey-marker.png") %>";
             case "basketball":
-                return "<%= asset_path("basketball-mapmarker.png") %>";
+                return "<%= asset_path("basketball-marker.png") %>";
             case "soccer":
-                return "<%= asset_path("soccer-mapmarker.png") %>";
+                return "<%= asset_path("soccer-marker.png") %>";
             default :
                 return "";
         }
