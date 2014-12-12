@@ -1,6 +1,7 @@
 <div class="container">
   <br>
 
+
   <div class="contact-us">
 
     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" ng-controller="contact">
@@ -15,6 +16,19 @@
 
       </section>
       <div class="form-wrapper" ng-cloak>
+        <!-- Show this div while waiting for a response from the server -->
+        <div ng-if="processing">
+          <p>please wait..</p>
+        </div>
+          <!-- Show this div on success -->
+        <div class="panel panel-success" ng-if="success && submitted && !processing">
+          <p>You'll hear from us soon, {{data.first_name}} {{data.last_name}}!</p>
+        </div>
+
+        <!-- Show this div if there was an error -->
+        <div class="panel panel-warn" ng-if="!success && submitted && !processing">
+          <p>There was an error processing your request. Sorry!</p>
+        </div>
         <form class="form-horizontal contact-us-form" ng-submit="submit()" ng-hide="success && submitted && !processing">
           <div class="form-group">
             <label for="firstName" class="col-sm-2 control-label">First name</label>
@@ -53,20 +67,6 @@
 
 
         </form>
-        <!-- Show this div while waiting for a response from the server -->
-        <div ng-if="processing">
-          <p>please wait..</p>
-        </div>
-
-        <!-- Show this div on success -->
-        <div class="panel panel-success" ng-if="success && submitted && !processing">
-          <p>You'll hear from us soon, {{data.first_name}} {{data.last_name}}!</p>
-        </div>
-
-        <!-- Show this div if there was an error -->
-        <div class="panel panel-warn" ng-if="!success && submitted && !processing">
-          <p>There was an error processing your request. Sorry!</p>
-        </div>
       </div>
     </div>
 

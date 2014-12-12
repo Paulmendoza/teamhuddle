@@ -258,6 +258,18 @@
 		max-height: 35px;
 	}
 
+	.panel {
+		background-color: transparent;
+	}
+
+	.panel-warn {
+		color: $dark-red;
+	}
+
+	.panel-success {
+		color: $dark-green;
+	}
+
 	@media (max-width: 1199px) {
 		.socialmedia-full {
 			border: 0;
