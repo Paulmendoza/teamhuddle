@@ -9,178 +9,161 @@
 
 // ========== LANDING PAGE ===========
 
-.header-outer {
-	background-color: transparent;
+.landing-page {
 
-	.header {
-		padding: 0px 40px;
-
-		h3 {
-			color: $dark-blue;
-		}
+	.panel {
+		background-color: transparent;
+		border: none;
 	}
+		.panel-success {
+			color: $light-green;
+		}
+
+		.panel-warn {
+			color: $dark-red;
+		}
 
 
-	@media (max-width: 750px) {
+	.header-outer {
+		background-color: transparent;
+
 		.header {
-			padding: 0px;
+			padding: 0px 40px;
+
+			h3 {
+				color: $dark-blue;
+			}
 		}
-	}
-}
 
-.mailer-outer {
-	background-color: #fff;
-	min-height: 1px;
 
-	.mailer {
-		min-height: 200px;
-	}
 
-	.mailer-inner {
-		input[type="email"] {
-			width: 50%;
-			margin: 0 auto;
+		@media (max-width: 750px) {
+			.header {
+				padding: 0px;
+			}
 		}
 	}
 
-}
-
-.feature-outer {
-	color: $primary-color;
-
-	h1 {
-		color: $primary-color;
-	}
-	
-	.feature {
-		background-color: #000;
-		padding: 40px 80px;
-	}
-
-	.feature1 {
-		color: $light-green;
-	}
-
-	.feature2 {
-		color: $light-blue;
-	}
-
-	.feature3 {
-		color: $light-orange;
-	}
-
-	@media (max-width: 750px) {
-		.feature {
-			padding: 40px 20px;
-		}
-	}
-}
-
-.sport_logos-outer {
-	padding: 50px 40px 100px;
-
-	.sport-logos-inner {
-
-		.icon-outer {
-			max-width: 1200px;
-			margin: 0 auto;
-			text-align: center;
-
-			.icon1 {
-				margin-top: 50px;
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) 0 0;
-				display: inline-block;
-			}
-			.icon2 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -253px 0px;
-				display: inline-block;
-			}
-			.icon3 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -505px 0px;
-				display: inline-block;
-			}
-			.icon4 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -757px 0px;
-				display: inline-block;
-			}
-			.icon5 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -1010px 0px;
-				display: inline-block;
-			}
-			.icon6 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -1262px 0px;
-				display: inline-block;
-			}
-			.icon7 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -1513px 0px;
-				display: inline-block;
-			}
-			.icon8 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -1766px 0px;
-				display: inline-block;
-			}
-		}
-	}
-}
-
-// CONTACT US
-
-.contact-us {
-	
-
-
-
-
-}
-
-/*.mailer {
-	min-height: 400px;
-	background-color: #fff;
-
-	.mailer-inner {
-		padding: 60px 60px 100px 60px
-	}
-
-	.form-group {
-		margin: 0 auto;
-	}
-
-	.btn-info:hover {
-		color: $light-red;
+	.mailer-outer {
 		background-color: #fff;
-		border: 1px solid $light-red;
+		min-height: 1px;
+
+		.mailer {
+			min-height: 200px;
+		}
+
+		.mailer-inner {
+			input[type="email"] {
+				width: 50%;
+				margin: 0 auto;
+			}
+		}
+
+	}
+
+	.feature-outer {
+		color: $primary-color;
+
+		h1 {
+			color: $primary-color;
+		}
+		
+		.feature {
+			background-color: #000;
+			padding: 40px 80px;
+		}
+
+		.feature1 {
+			color: $light-green;
+		}
+
+		.feature2 {
+			color: $light-blue;
+		}
+
+		.feature3 {
+			color: $light-orange;
+		}
+
+		@media (max-width: 750px) {
+			.feature {
+				padding: 40px 20px;
+			}
+		}
+	}
+
+	.sport_logos-outer {
+		padding: 50px 40px 100px;
+
+		.sport-logos-inner {
+
+			.icon-outer {
+				max-width: 1200px;
+				margin: 0 auto;
+				text-align: center;
+
+				.icon1 {
+					margin-top: 50px;
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) 0 0;
+					display: inline-block;
+				}
+				.icon2 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -253px 0px;
+					display: inline-block;
+				}
+				.icon3 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -505px 0px;
+					display: inline-block;
+				}
+				.icon4 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -757px 0px;
+					display: inline-block;
+				}
+				.icon5 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -1010px 0px;
+					display: inline-block;
+				}
+				.icon6 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -1262px 0px;
+					display: inline-block;
+				}
+				.icon7 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -1513px 0px;
+					display: inline-block;
+				}
+				.icon8 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -1766px 0px;
+					display: inline-block;
+				}
+			}
+		}
 	}
 
 }
-
-*/
-
-
-
 
 // ========== ABOUT US PAGE ===========
 
@@ -267,7 +250,7 @@
 	}
 
 	.panel-success {
-		color: $dark-green;
+		color: $light-green;
 	}
 
 	@media (max-width: 1199px) {
