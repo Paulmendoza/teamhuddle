@@ -9,31 +9,19 @@
     </div>
   </section>
 
-  <section class="default-sport_logos text-center" ng-if="sport === 'no-sport'">
-
-    <%= link_to(image_tag("volleyball.png", :alt => "asdf",
-    class: "sport_logo green_bck", id: "first"), "/#/volleyball") %>
-
-    <%= link_to(image_tag("hockey.png", :alt => "asdf", 
-    class: "sport_logo blue_bck", id: "second"), "/#/hockey") %>
-
-    <%= link_to(image_tag("basketball.png", :alt => "asdf", 
-    class: "sport_logo orange_bck", id: "third"), "/#/basketball") %>
-
-    <%= link_to(image_tag("soccer.png", :alt => "asdf", 
-    class: "sport_logo red_bck ", id: "fourth"), "/#/soccer") %>
-
-    <%= link_to(image_tag("dragonboating.png", :alt => "asdf", 
-    class: "sport_logo red_bck", id: "first"), "/#/dragonboat") %>
-
-    <%= link_to(image_tag("baseball.png", :alt => "asdf", 
-    class: "disabled sport_logo test_images", id: "second"), "") %>
-
-    <%= link_to(image_tag("ultimate.png", :alt => "asdf", 
-    class: "sdisabled sport_logo test_images", id: "third"), "") %>
-
-    <%= link_to(image_tag("dodgeball.png", :alt => "asdf", 
-    class: "disabled sport_logo test_images", id: "fourth"), "") %>     
+  <section class="default-sport_logos-outer" ng-if="sport === 'no-sport'">
+    <div class="default-sport-logos-inner">
+      <div class="default-icon-outer">
+        <div class="sport_logo icon1"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon2"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon3"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon4"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon5"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon6"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon7"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon8"><img src="" class="img-responsive"></div>
+      </div>
+    </div>   
   </section>
 
   <section ng-show="sport !== 'no-sport'">
