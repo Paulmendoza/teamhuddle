@@ -15,13 +15,14 @@
 		background-color: transparent;
 		border: none;
 	}
-		.panel-success {
-			color: $light-green;
-		}
 
-		.panel-warn {
-			color: $dark-red;
-		}
+	.panel-success {
+		color: $light-green;
+	}
+
+	.panel-warn {
+		color: $dark-red;
+	}
 
 
 	.header-outer {
@@ -178,17 +179,20 @@
     }
 
     img {
-    	width: 300px;
-    	border-radius: 5px;
-    	padding: 10px;
-    	border: 2px solid #000;
+    	width: 250px;
+    	height: 250px;
+    	border: 1px solid #000;
     }
 
-    .teammember {
+    h4 {
+    	margin-top: 0;
+    }
+
+/*    .teammember {
     	height: 1200px;
     	cursor: pointer;
     }
-
+*/
 	.showme{ 
 		display: none;
 		 -webkit-transition: padding 2s;
