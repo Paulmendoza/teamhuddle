@@ -59,7 +59,7 @@ gem 'byebug'
 gem 'uglifier'
 
 # Postgres
-#gem 'pg'
+gem 'pg'
 
 # Foreign key constrains for databases
 gem 'foreigner', '~> 1.7.1'
