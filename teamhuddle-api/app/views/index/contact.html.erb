@@ -65,8 +65,24 @@
             </div>
           </div>
 
-
         </form>
+<<<<<<< HEAD
+=======
+        <!-- Show this div while waiting for a response from the server -->
+        <div class="text-center"  ng-show="processing">
+          <%= image_tag("loading.gif", alt: "loading") %>
+        </div>
+
+        <!-- Show this div on success -->
+        <div class="panel panel-success" ng-if="success && submitted && !processing">
+          <p>You'll hear from us soon, {{data.first_name}} {{data.last_name}}!</p>
+        </div>
+
+        <!-- Show this div if there was an error -->
+        <div class="panel panel-warn" ng-if="!success && submitted && !processing">
+          <p>There was an error processing your request. Sorry!</p>
+        </div>
+>>>>>>> 5b72c2b6fa225c9505416f1720e50f2f4d383667
       </div>
     </div>
 

@@ -10,8 +10,19 @@ node :datetime_end do |sei|
   sei.datetime_end.utc
 end
 
+node :phone do |sei|
+  if sei.location.phone.present?
+    sei.location.phone
+  else
+    sei.organization.phone
+  end
+end
+
 child :sport_event do
   attributes :id, :type, :sport_id, :skill_level, :price_per_one, :spots, :source
+  node :schedule_until do |se|
+    se.schedule.last
+  end
 end
 
 child :event do
@@ -19,9 +30,9 @@ child :event do
 end
 
 child :location do
-  attributes :name, :lat, :long, :address
+  attributes :id, :name, :lat, :long, :address
 end
 
 child :organization do
-  attributes :name, :phone, :email
+  attributes :name, :email
 end

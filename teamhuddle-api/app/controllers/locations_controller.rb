@@ -87,7 +87,7 @@ class LocationsController < ApplicationController
   # strong paramaters
   private
   def location_params
-    params.require(:location).permit(:name, :lat, :long, :address)
+    params.require(:location).permit(:name, :lat, :long, :address, :phone)
   end
 
   def admin_only

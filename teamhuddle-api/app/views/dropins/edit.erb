@@ -1,0 +1,13 @@
+<h1>Edit <%= @dropin.name %> dropin</h1>
+<%= form_for @dropin, url: dropin_path do |f| %>
+    <%= render :partial => 'location_form', :locals => { :f => f } %>
+    <p>
+      <label class="label label-info">Note</label> you can't edit the schedule. That would mess things up. If you made a mistake on the schedule, just
+      delete and recreate the dropin.
+    </p>
+    <%= render :partial => 'optional_form', :locals => { :f => f } %>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

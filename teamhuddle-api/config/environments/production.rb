@@ -34,6 +34,7 @@ Rails.application.configure do
                               'angular_client_application.js',
                               'admin.js',
                               '*.png',
+                              '*.gif',
                               'application.css.scss',
                               'static_pages.css.scss',
                               'typography.css.scss',
