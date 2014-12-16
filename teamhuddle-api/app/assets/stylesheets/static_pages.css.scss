@@ -9,222 +9,162 @@
 
 // ========== LANDING PAGE ===========
 
-.header-outer {
-	background-color: transparent;
+.landing-page {
 
-	.header {
-		padding: 0px 80px;
+	.panel {
+		background-color: transparent;
+		border: none;
 	}
 
-	@media (max-width: 750px) {
+	.panel-success {
+		color: $light-green;
+	}
+
+	.panel-warn {
+		color: $dark-red;
+	}
+
+
+	.header-outer {
+		background-color: transparent;
+
 		.header {
-			padding: 0px;
+			padding: 0px 40px;
+
+			h3 {
+				color: $dark-blue;
+			}
 		}
-	}
-}
 
-.mailer-outer {
-	background-color: #fff;
-	min-height: 1px;
 
-	.mailer {
-		min-height: 200px;
-	}
 
-	.mailer-inner {
-		input[type="email"] {
-			width: 50%;
-			margin: 0 auto;
+		@media (max-width: 750px) {
+			.header {
+				padding: 0px;
+			}
 		}
 	}
 
-}
-
-.feature-outer {
-	color: $primary-color;
-
-	h1 {
-		color: $primary-color;
-	}
-	
-	.feature {
-		background-color: #000;
-		padding: 40px 80px;
-	}
-
-	.feature1 {
-		color: $light-green;
-	}
-
-	.feature2 {
-		color: $light-blue;
-	}
-
-	.feature3 {
-		color: $light-orange;
-	}
-
-	@media (max-width: 750px) {
-		.feature {
-			padding: 40px 20px;
-		}
-	}
-}
-
-.sport_logos-outer {
-	padding: 50px 40px 100px;
-
-	.sport-logos-inner {
-
-		.icon-outer {
-			max-width: 1200px;
-			margin: 0 auto;
-			text-align: center;
-
-			.icon1 {
-				margin-top: 50px;
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) 0 0;
-				display: inline-block;
-			}
-			.icon2 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -252px 0px;
-				display: inline-block;
-			}
-			.icon3 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -504px 0px;
-				display: inline-block;
-			}
-			.icon4 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -756px 0px;
-				display: inline-block;
-			}
-			.icon5 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -1009px 0px;
-				display: inline-block;
-			}
-			.icon6 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -1261px 0px;
-				display: inline-block;
-			}
-			.icon7 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -1512px 0px;
-				display: inline-block;
-			}
-			.icon8 {
-				min-width: 250px;
-				max-width: 250px;
-	    		height: 250px;
-	    		background: url(icons_sprite.png) -1765px 0px;
-				display: inline-block;
-			}
-		}
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-/*.features {
-	min-height: 1px;
-	padding: 30px;
-	min-height: 600px;
-	background-color: $contrast-color;
-
-	.feature1 {
-		color: $light-green;
-	}
-
-	.feature2 {
-		color: $light-blue;
-	}
-
-	.feature3 {
-		color: $light-orange;
-	}
-
-	p {
-		color: $primary-color;
-	}
-
-	img {
-		border: 2px solid $primary-color;
-	}
-}
-
-.contact-us {
-
-	.socialmedia-full {
-
-		li {
-			padding-left: 0;
-			padding-right: 0;
-		}
-	}
-
-	.socialmedia {
-		height: 50px;
-	}
-
-	@media (max-width: 1199px) {
-		.socialmedia-full {
-			border: 0;
-		}
-	}
-
-}
-
-.mailer {
-	min-height: 400px;
-	background-color: #fff;
-
-	.mailer-inner {
-		padding: 60px 60px 100px 60px
-	}
-
-	.form-group {
-		margin: 0 auto;
-	}
-
-	.btn-info:hover {
-		color: $light-red;
+	.mailer-outer {
 		background-color: #fff;
-		border: 1px solid $light-red;
+		min-height: 1px;
+
+		.mailer {
+			min-height: 200px;
+		}
+
+		.mailer-inner {
+			input[type="email"] {
+				width: 50%;
+				margin: 0 auto;
+			}
+		}
+
+	}
+
+	.feature-outer {
+		color: $primary-color;
+
+		h1 {
+			color: $primary-color;
+		}
+		
+		.feature {
+			background-color: #000;
+			padding: 40px 80px;
+		}
+
+		.feature1 {
+			color: $light-green;
+		}
+
+		.feature2 {
+			color: $light-blue;
+		}
+
+		.feature3 {
+			color: $light-orange;
+		}
+
+		@media (max-width: 750px) {
+			.feature {
+				padding: 40px 20px;
+			}
+		}
+	}
+
+	.sport_logos-outer {
+		padding: 50px 40px 100px;
+
+		.sport-logos-inner {
+
+			.icon-outer {
+				max-width: 1200px;
+				margin: 0 auto;
+				text-align: center;
+
+				.icon1 {
+					margin-top: 50px;
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) 0 0;
+					display: inline-block;
+				}
+				.icon2 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -253px 0px;
+					display: inline-block;
+				}
+				.icon3 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -505px 0px;
+					display: inline-block;
+				}
+				.icon4 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -757px 0px;
+					display: inline-block;
+				}
+				.icon5 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -1010px 0px;
+					display: inline-block;
+				}
+				.icon6 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -1262px 0px;
+					display: inline-block;
+				}
+				.icon7 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -1513px 0px;
+					display: inline-block;
+				}
+				.icon8 {
+					min-width: 250px;
+					max-width: 250px;
+		    		height: 250px;
+		    		background: url(icons_sprite.png) -1766px 0px;
+					display: inline-block;
+				}
+			}
+		}
 	}
 
 }
-
-
-*/
-
-
 
 // ========== ABOUT US PAGE ===========
 
@@ -238,11 +178,21 @@
         }
     }
 
-    .teammember {
-    	height: 500px;
-    	cursor: pointer;
+    img {
+    	width: 250px;
+    	height: 250px;
+    	border: 1px solid #000;
     }
 
+    h4 {
+    	margin-top: 0;
+    }
+
+/*    .teammember {
+    	height: 1200px;
+    	cursor: pointer;
+    }
+*/
 	.showme{ 
 		display: none;
 		 -webkit-transition: padding 2s;
@@ -254,6 +204,10 @@
 		-webkit-transition: border-radius 2s;
 
 	}
+
+	.hidden {
+     display:none;
+	}
 }
 
 
@@ -263,7 +217,7 @@
 .contact-us {
 	
 	.contact-us-text {
-		height: 300px;
+		max-height: 300px;
 	}
 
 	.contact-us-form {
@@ -274,18 +228,50 @@
 		}
 	}
 
+	ul {
+		padding: 0 !important;
+	}
+
+	li {
+		padding: 5px 0px;
+		display: block;
+	}
+
 	.socialmedia-full {
-		ul li {
-			display: block; 
-			padding-bottom: 25px; 
+		border-left: 1px solid #000;
+	}
+
+	.socialmedia {
+		max-height: 35px;
+	}
+
+	.panel {
+		background-color: transparent;
+	}
+
+	.panel-warn {
+		color: $dark-red;
+	}
+
+	.panel-success {
+		color: $light-green;
+	}
+
+	@media (max-width: 1199px) {
+		.socialmedia-full {
+			border: 0;
+		}
+
+	}
+
+	@media (max-width: 768px) {
+		.socialmedia-full {
+			border: 0;
+
+			ul li {
+				float: left;
+				padding-right: 5px;
+			}
 		}
 	}
-
-	.disclaimer {
-		padding-top:100px;
-		height: 200px;
-	}
-
-
-
 }

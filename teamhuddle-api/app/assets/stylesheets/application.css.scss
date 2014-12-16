@@ -224,11 +224,8 @@ body {
     }
     
     .header {
-
-        @media (max-width: 1155px) {
-            h2, h4 {
-                font-size: 20px;
-            }
+        h3 {
+            color: $dark-blue;
         }
 
     }
@@ -313,69 +310,86 @@ li {
     }
 }
 
-/*// ========== IMAGE STYLES ===========
-*/
+// ========== IMAGE STYLES ===========
 
-.sport_logo {
-    width: 45%;
-    margin: 2px 1px;
-    background-color: transparent;
-    border: 2px solid #000;
-    &:hover {
-        opacity: 0.9;
-        -webkit-transition :opacity .25s ease-in-out;
-        -ms-transition: opacity .25s ease-in-out;
-        -o-transition: opacity .25s ease-in-out;
-        transition: opacity .25s ease-in-out;
+.default-sport_logos-outer {
+    padding: 0px 40px 50px;
+
+    .default-sport-logos-inner {
+
+        .default-icon-outer {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+
+            .icon1 {
+                margin-top: 50px;
+                min-width: 250px;
+                max-width: 250px;
+                height: 250px;
+                background: url(icons_sprite.png) 0 0;
+                display: inline-block;
+                border: 1px solid #000;
+            }
+            .icon2 {
+                min-width: 250px;
+                max-width: 250px;
+                height: 250px;
+                background: url(icons_sprite.png) -253px 0px;
+                display: inline-block;
+                border: 1px solid #000;
+            }
+            .icon3 {
+                min-width: 250px;
+                max-width: 250px;
+                height: 250px;
+                background: url(icons_sprite.png) -505px 0px;
+                display: inline-block;
+                border: 1px solid #000;
+            }
+            .icon4 {
+                min-width: 250px;
+                max-width: 250px;
+                height: 250px;
+                background: url(icons_sprite.png) -757px 0px;
+                display: inline-block;
+                border: 1px solid #000;
+            }
+            .icon5 {
+                min-width: 250px;
+                max-width: 250px;
+                height: 250px;
+                background: url(icons_sprite.png) -1010px 0px;
+                display: inline-block;
+                border: 1px solid #000;
+            }
+            .icon6 {
+                min-width: 250px;
+                max-width: 250px;
+                height: 250px;
+                background: url(icons_sprite.png) -1262px 0px;
+                display: inline-block;
+                border: 1px solid #000;
+            }
+            .icon7 {
+                min-width: 250px;
+                max-width: 250px;
+                height: 250px;
+                background: url(icons_sprite.png) -1513px 0px;
+                display: inline-block;
+                border: 1px solid #000;
+            }
+            .icon8 {
+                min-width: 250px;
+                max-width: 250px;
+                height: 250px;
+                background: url(icons_sprite.png) -1766px 0px;
+                display: inline-block;
+                border: 1px solid #000;
+            }
+        }
     }
 }
-
-.test_images {
-    width: 45%;
-    background-color: #000;
-    cursor: default;
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    filter: grayscale(100%); 
-    &:hover {
-        opacity: 1;
-        -webkit-transition :opacity;
-        -ms-transition: opacity;
-        -o-transition: opacity;
-        transition: opacity;
-    }
-}
-
-/*.green_bck {
-    background-color: $dark-green;
-    &:hover {
-        background-color: $light-green;
-    }
-}
-
-.blue_bck {
-    background-color: $dark-blue;
-    &:hover {
-        background-color: $light-blue;
-    }
-
-}
-
-.orange_bck {
-    background-color: $dark-orange;
-    &:hover { 
-        background-color: $light-orange;
-    }  
-}
-
-.red_bck {
-    background-color: $dark-red;
-    &:hover {
-        background-color: $light-red;
-    }
-}*/
 
 
 
@@ -442,25 +456,6 @@ li {
 .margin-bottom-100 {
     margin-bottom: 100px;
 }
-
-.disclaimer {
-    width: 65%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 100px; 
-}
-
-
-
-
-
-
-
-
-
-
 
 
 

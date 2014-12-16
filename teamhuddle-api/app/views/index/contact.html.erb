@@ -15,6 +15,19 @@
 
       </section>
       <div class="form-wrapper" ng-cloak>
+        <!-- Show this div while waiting for a response from the server -->
+        <div ng-if="processing">
+          <p>please wait..</p>
+        </div>
+          <!-- Show this div on success -->
+        <div class="panel panel-success" ng-if="success && submitted && !processing">
+          <p>You'll hear from us soon, {{data.first_name}} {{data.last_name}}!</p>
+        </div>
+
+        <!-- Show this div if there was an error -->
+        <div class="panel panel-warn" ng-if="!success && submitted && !processing">
+          <p>There was an error processing your request. Sorry!</p>
+        </div>
         <form class="form-horizontal contact-us-form" ng-submit="submit()" ng-hide="success && submitted && !processing">
           <div class="form-group">
             <label for="firstName" class="col-sm-2 control-label">First name</label>
@@ -51,45 +64,30 @@
             </div>
           </div>
 
+
         </form>
-        <!-- Show this div while waiting for a response from the server -->
-        <div class="text-center"  ng-show="processing">
-          <%= image_tag("loading.gif", alt: "loading") %>
-        </div>
-
-        <!-- Show this div on success -->
-        <div class="panel panel-success" ng-if="success && submitted && !processing">
-          <p>You'll hear from us soon, {{data.first_name}} {{data.last_name}}!</p>
-        </div>
-
-        <!-- Show this div if there was an error -->
-        <div class="panel panel-warn" ng-if="!success && submitted && !processing">
-          <p>There was an error processing your request. Sorry!</p>
-        </div>
       </div>
     </div>
 
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 socialmedia-full">
-
-      <br><br>
       <ul>
-        <li class="img-responsive">
-          <%= link_to(image_tag("facebook.png", alt: "facebook", class: "socialmedia"), "http://www.facebook.com",) %>
+        <li>
+          <%= link_to(image_tag("facebook.png", alt: "facebook", class: "socialmedia center-block"), "http://www.facebook.com",) %>
         </li>
-        <li class="img-responsive">
-          <%= link_to(image_tag("twitter.png", alt: "twitter", class: "socialmedia"), "",) %>
+        <li>
+          <%= link_to(image_tag("twitter.png", alt: "twitter", class: "socialmedia center-block"), "",) %>
         </li>
-        <li class="img-responsive">
-          <%= link_to(image_tag("youtube.png", alt: "youtube", class: "socialmedia"), "",) %>
+        <li>
+          <%= link_to(image_tag("youtube.png", alt: "youtube", class: "socialmedia center-block"), "",) %>
         </li>
-        <li class="img-responsive">
-          <%= link_to(image_tag("instagram.png", alt: "instagram", class: "socialmedia"), "",) %>
+        <li>
+          <%= link_to(image_tag("instagram.png", alt: "instagram", class: "socialmedia center-block"), "",) %>
         </li>
       </ul>
     </div>
 
-    <div class="disclaimer col-lg-12 col-md-12 col-sm-12 col-xs-12 center-block">
-      <p><strong>Disclaimer:</strong> The content on our site are from various organizations and are subjected to what
+    <div class="disclaimer padding-top-50 padding-bottom-50 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+      <p>The content on our site are from various organizations and are subjected to what
         are posted on the organization's websites. If any information is incomplete, incorrect or out of date, please
         feel free to contact teamhuddle. </p>
     </div>
