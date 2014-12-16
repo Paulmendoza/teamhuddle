@@ -2,11 +2,11 @@
 events_001:
   id: 69
   name: Today
-  organization_id: 1
-  location_id: 6
+  organization_id: 11
+  location_id: 78
   comments: ''
   created_at: '2014-08-03 02:38:29.820725'
-  updated_at: '2014-08-03 02:38:29.820725'
+  updated_at: '2014-12-10 04:49:39.934361'
 events_002:
   id: 70
   name: BCIT Volleyball Dropin
@@ -855,3 +855,845 @@ events_107:
   comments: ''
   created_at: '2014-12-04 23:38:22.321454'
   updated_at: '2014-12-04 23:38:22.321454'
+events_108:
+  id: 186
+  name: Mon - Kensington (Winter)
+  organization_id: 5
+  location_id: 48
+  comments: ''
+  created_at: '2014-12-09 03:08:36.885358'
+  updated_at: '2014-12-09 03:08:36.885358'
+events_109:
+  id: 187
+  name: Sat - Kerrisdale (Winter)
+  organization_id: 5
+  location_id: 49
+  comments: ''
+  created_at: '2014-12-09 03:10:11.047802'
+  updated_at: '2014-12-09 03:10:11.047802'
+events_110:
+  id: 188
+  name: Sat - Kerrisdale (Winter)
+  organization_id: 5
+  location_id: 49
+  comments: ''
+  created_at: '2014-12-09 03:11:20.762876'
+  updated_at: '2014-12-09 03:11:20.762876'
+events_111:
+  id: 189
+  name: Fri - Kerrisdale (Winter)
+  organization_id: 5
+  location_id: 49
+  comments: 13-18 yrs Drop-in
+  created_at: '2014-12-09 03:13:34.762241'
+  updated_at: '2014-12-09 03:13:34.762241'
+events_112:
+  id: 190
+  name: Thu - Kerrisdale (Winter)
+  organization_id: 5
+  location_id: 49
+  comments: ''
+  created_at: '2014-12-09 03:14:44.076339'
+  updated_at: '2014-12-09 03:14:44.076339'
+events_113:
+  id: 191
+  name: Sat - Kerrisdale (Winter)
+  organization_id: 5
+  location_id: 49
+  comments: ''
+  created_at: '2014-12-09 03:15:59.684243'
+  updated_at: '2014-12-09 03:15:59.684243'
+events_114:
+  id: 192
+  name: Mon - Killarney (Winter)
+  organization_id: 5
+  location_id: 51
+  comments: Youth - Open Full Gym
+  created_at: '2014-12-09 03:18:16.615154'
+  updated_at: '2014-12-09 03:18:16.615154'
+events_115:
+  id: 193
+  name: Sat - Killarney (Winter)
+  organization_id: 5
+  location_id: 51
+  comments: Youth - $1 Basketball Drop-in
+  created_at: '2014-12-09 03:20:37.650011'
+  updated_at: '2014-12-09 03:20:37.650011'
+events_116:
+  id: 194
+  name: Test - 1
+  organization_id: 10
+  location_id: 71
+  comments: ''
+  created_at: '2014-12-10 01:58:14.467448'
+  updated_at: '2014-12-10 01:58:14.467448'
+events_117:
+  id: 195
+  name: Test - 2
+  organization_id: 5
+  location_id: 35
+  comments: ''
+  created_at: '2014-12-10 02:00:16.334046'
+  updated_at: '2014-12-10 02:00:16.334046'
+events_118:
+  id: 196
+  name: Test - 3
+  organization_id: 16
+  location_id: 27
+  comments: ''
+  created_at: '2014-12-10 02:01:19.760468'
+  updated_at: '2014-12-10 02:01:19.760468'
+events_119:
+  id: 197
+  name: Test - 4
+  organization_id: 9
+  location_id: 6
+  comments: ''
+  created_at: '2014-12-10 02:02:59.539993'
+  updated_at: '2014-12-10 02:02:59.539993'
+events_120:
+  id: 198
+  name: Test - 5
+  organization_id: 9
+  location_id: 6
+  comments: ''
+  created_at: '2014-12-10 02:03:53.082140'
+  updated_at: '2014-12-10 02:03:53.082140'
+events_121:
+  id: 199
+  name: Test - 6
+  organization_id: 9
+  location_id: 6
+  comments: ''
+  created_at: '2014-12-10 02:05:06.458311'
+  updated_at: '2014-12-10 02:05:06.458311'
+events_122:
+  id: 200
+  name: Test - 7
+  organization_id: 9
+  location_id: 36
+  comments: ''
+  created_at: '2014-12-10 02:06:20.315121'
+  updated_at: '2014-12-10 02:06:20.315121'
+events_123:
+  id: 201
+  name: 'test '
+  organization_id: 10
+  location_id: 88
+  comments: ''
+  created_at: '2014-12-10 18:26:48.596689'
+  updated_at: '2014-12-10 18:26:48.596689'
+events_124:
+  id: 202
+  name: 'test '
+  organization_id: 10
+  location_id: 88
+  comments: ''
+  created_at: '2014-12-10 18:27:36.108038'
+  updated_at: '2014-12-10 18:27:36.108038'
+events_125:
+  id: 203
+  name: 'test '
+  organization_id: 10
+  location_id: 89
+  comments: ''
+  created_at: '2014-12-10 18:28:11.989462'
+  updated_at: '2014-12-10 18:28:11.989462'
+events_126:
+  id: 204
+  name: 'test '
+  organization_id: 10
+  location_id: 90
+  comments: ''
+  created_at: '2014-12-10 18:28:50.897856'
+  updated_at: '2014-12-10 18:28:50.897856'
+events_127:
+  id: 206
+  name: Test
+  organization_id: 10
+  location_id: 93
+  comments: ''
+  created_at: '2014-12-10 18:36:38.892613'
+  updated_at: '2014-12-10 18:36:38.892613'
+events_128:
+  id: 207
+  name: Test
+  organization_id: 10
+  location_id: 90
+  comments: ''
+  created_at: '2014-12-10 19:16:31.692661'
+  updated_at: '2014-12-10 19:16:31.692661'
+events_129:
+  id: 208
+  name: Test
+  organization_id: 10
+  location_id: 90
+  comments: ''
+  created_at: '2014-12-10 19:22:05.379444'
+  updated_at: '2014-12-10 19:22:05.379444'
+events_130:
+  id: 209
+  name: Test
+  organization_id: 5
+  location_id: 57
+  comments: Beginners only
+  created_at: '2014-12-10 19:23:22.085238'
+  updated_at: '2014-12-10 19:23:22.085238'
+events_131:
+  id: 210
+  name: Test
+  organization_id: 5
+  location_id: 52
+  comments: Very Rec
+  created_at: '2014-12-10 19:24:37.634423'
+  updated_at: '2014-12-10 19:24:37.634423'
+events_132:
+  id: 211
+  name: Test
+  organization_id: 5
+  location_id: 52
+  comments: ''
+  created_at: '2014-12-10 19:24:54.812970'
+  updated_at: '2014-12-10 19:24:54.812970'
+events_133:
+  id: 212
+  name: Test
+  organization_id: 5
+  location_id: 42
+  comments: ''
+  created_at: '2014-12-10 19:25:06.427666'
+  updated_at: '2014-12-10 19:25:06.427666'
+events_134:
+  id: 213
+  name: Test
+  organization_id: 5
+  location_id: 38
+  comments: ''
+  created_at: '2014-12-10 19:26:23.524847'
+  updated_at: '2014-12-10 19:26:23.524847'
+events_135:
+  id: 214
+  name: Test
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2014-12-10 19:30:03.911942'
+  updated_at: '2014-12-10 19:30:03.911942'
+events_136:
+  id: 215
+  name: Test
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2014-12-10 19:30:25.465703'
+  updated_at: '2014-12-10 19:30:25.465703'
+events_137:
+  id: 216
+  name: Test
+  organization_id: 5
+  location_id: 60
+  comments: Men's Dro-in
+  created_at: '2014-12-10 19:31:33.943472'
+  updated_at: '2014-12-10 19:31:33.943472'
+events_138:
+  id: 217
+  name: Test
+  organization_id: 18
+  location_id: 94
+  comments: ''
+  created_at: '2014-12-10 19:36:37.685578'
+  updated_at: '2014-12-10 19:36:37.685578'
+events_139:
+  id: 218
+  name: Test
+  organization_id: 18
+  location_id: 94
+  comments: ''
+  created_at: '2014-12-10 19:36:51.681653'
+  updated_at: '2014-12-10 19:36:51.681653'
+events_140:
+  id: 219
+  name: Test
+  organization_id: 9
+  location_id: 6
+  comments: ''
+  created_at: '2014-12-10 19:46:13.685658'
+  updated_at: '2014-12-10 19:46:13.685658'
+events_141:
+  id: 220
+  name: Test
+  organization_id: 9
+  location_id: 6
+  comments: ''
+  created_at: '2014-12-10 19:46:37.520292'
+  updated_at: '2014-12-10 19:46:37.520292'
+events_142:
+  id: 221
+  name: Test
+  organization_id: 5
+  location_id: 57
+  comments: ''
+  created_at: '2014-12-10 19:47:22.893158'
+  updated_at: '2014-12-10 19:47:22.893158'
+events_143:
+  id: 222
+  name: Test
+  organization_id: 5
+  location_id: 57
+  comments: ''
+  created_at: '2014-12-10 19:47:37.758834'
+  updated_at: '2014-12-10 19:47:37.758834'
+events_144:
+  id: 223
+  name: Test
+  organization_id: 5
+  location_id: 53
+  comments: ''
+  created_at: '2014-12-10 19:47:56.151910'
+  updated_at: '2014-12-10 19:47:56.151910'
+events_145:
+  id: 224
+  name: Test
+  organization_id: 5
+  location_id: 9
+  comments: ''
+  created_at: '2014-12-10 19:48:16.682299'
+  updated_at: '2014-12-10 19:48:16.682299'
+events_146:
+  id: 225
+  name: Test
+  organization_id: 5
+  location_id: 47
+  comments: ''
+  created_at: '2014-12-10 19:49:01.152630'
+  updated_at: '2014-12-10 19:49:01.152630'
+events_147:
+  id: 226
+  name: Tue - Poco (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: ''
+  created_at: '2014-12-11 01:21:29.153214'
+  updated_at: '2014-12-11 01:21:29.153214'
+events_148:
+  id: 227
+  name: Thu - Poco (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Everyone Welcome Ring, Stick and Puck
+  created_at: '2014-12-11 01:22:16.903181'
+  updated_at: '2014-12-11 01:22:16.903181'
+events_149:
+  id: 228
+  name: Tue - Poco (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Everyone Welcome Ring, Stick and Puck
+  created_at: '2014-12-11 01:22:27.438059'
+  updated_at: '2014-12-11 01:22:27.438059'
+events_150:
+  id: 229
+  name: Tue - Poco Ladies (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Ladies Daytime Hockey (19+ yrs)
+  created_at: '2014-12-11 01:23:34.827582'
+  updated_at: '2014-12-11 01:23:34.827582'
+events_151:
+  id: 230
+  name: Thu - Poco Ladies (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Ladies Daytime Hockey (19+ yrs)
+  created_at: '2014-12-11 01:24:04.164419'
+  updated_at: '2014-12-11 01:24:04.164419'
+events_152:
+  id: 231
+  name: Mon - Poco Day (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Youth/Adult Daytime Hockey
+  created_at: '2014-12-11 01:31:38.641445'
+  updated_at: '2014-12-11 01:31:38.641445'
+events_153:
+  id: 232
+  name: Tue - Poco Day (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Youth/Adult Daytime Hockey
+  created_at: '2014-12-11 01:31:57.593167'
+  updated_at: '2014-12-11 01:31:57.593167'
+events_154:
+  id: 233
+  name: Wed - Poco Day (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Youth/Adult Daytime Hockey
+  created_at: '2014-12-11 01:32:07.149909'
+  updated_at: '2014-12-11 01:32:07.149909'
+events_155:
+  id: 234
+  name: Thu - Poco Day (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Youth/Adult Daytime Hockey
+  created_at: '2014-12-11 01:32:18.634362'
+  updated_at: '2014-12-11 01:32:18.634362'
+events_156:
+  id: 235
+  name: Fri - Poco Day (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Youth/Adult Daytime Hockey
+  created_at: '2014-12-11 01:32:31.533460'
+  updated_at: '2014-12-11 01:32:31.533460'
+events_157:
+  id: 236
+  name: Fri - Poco Day (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Youth/Adult Daytime Hockey
+  created_at: '2014-12-11 01:32:53.758721'
+  updated_at: '2014-12-11 01:32:53.758721'
+events_158:
+  id: 237
+  name: Thu - Poco Adult (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Adult Evening Hockey (19+)
+  created_at: '2014-12-11 01:34:31.707536'
+  updated_at: '2014-12-11 01:34:31.707536'
+events_159:
+  id: 238
+  name: Sat - Poco Adult (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Adult Evening Hockey (19+)
+  created_at: '2014-12-11 01:37:09.356914'
+  updated_at: '2014-12-11 01:37:09.356914'
+events_160:
+  id: 239
+  name: Tue - Poco 45 (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Hockey (45yrs+)
+  created_at: '2014-12-11 01:39:16.373544'
+  updated_at: '2014-12-11 01:39:16.373544'
+events_161:
+  id: 240
+  name: Fri - Poco 45 (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Hockey (45yrs+)
+  created_at: '2014-12-11 01:40:02.772787'
+  updated_at: '2014-12-11 01:40:02.772787'
+events_162:
+  id: 241
+  name: Sun - Hyde (Winter)
+  organization_id: 19
+  location_id: 72
+  comments: ''
+  created_at: '2014-12-11 01:44:24.968111'
+  updated_at: '2014-12-11 01:44:24.968111'
+events_163:
+  id: 242
+  name: Sun - Hyde (Winter)
+  organization_id: 19
+  location_id: 72
+  comments: Youth/Adult
+  created_at: '2014-12-11 01:45:20.724200'
+  updated_at: '2014-12-11 01:45:20.724200'
+events_164:
+  id: 243
+  name: Tue - Hyde (Winter)
+  organization_id: 19
+  location_id: 72
+  comments: Youth/Adult
+  created_at: '2014-12-11 01:45:54.113626'
+  updated_at: '2014-12-11 01:45:54.113626'
+events_165:
+  id: 244
+  name: ''
+  organization_id: 11
+  location_id: 78
+  comments: ''
+  created_at: '2014-12-11 01:54:15.172837'
+  updated_at: '2014-12-11 01:54:15.172837'
+events_166:
+  id: 245
+  name: Test
+  organization_id: 19
+  location_id: 95
+  comments: Adults 45+
+  created_at: '2014-12-11 18:09:09.127203'
+  updated_at: '2014-12-11 18:09:09.127203'
+events_167:
+  id: 246
+  name: Test
+  organization_id: 19
+  location_id: 95
+  comments: Learn how to play
+  created_at: '2014-12-11 18:09:41.109336'
+  updated_at: '2014-12-11 18:09:41.109336'
+events_168:
+  id: 247
+  name: Test
+  organization_id: 19
+  location_id: 95
+  comments: Learn how to play
+  created_at: '2014-12-11 18:10:08.333009'
+  updated_at: '2014-12-11 18:10:08.333009'
+events_169:
+  id: 248
+  name: Test
+  organization_id: 5
+  location_id: 57
+  comments: Floor Hockey
+  created_at: '2014-12-11 18:10:33.618335'
+  updated_at: '2014-12-11 18:10:33.618335'
+events_170:
+  id: 249
+  name: Test
+  organization_id: 5
+  location_id: 50
+  comments: Floor Hockey
+  created_at: '2014-12-11 18:11:11.000685'
+  updated_at: '2014-12-11 18:11:11.000685'
+events_171:
+  id: 250
+  name: Test
+  organization_id: 10
+  location_id: 92
+  comments: Mens 45+
+  created_at: '2014-12-11 18:11:58.621713'
+  updated_at: '2014-12-11 18:11:58.621713'
+events_172:
+  id: 251
+  name: 'DMC : Drop in Hockey'
+  organization_id: 16
+  location_id: 77
+  comments: Please arrive at least 10 minutes prior to the start of the game to sign
+    in. If you are not here, you may lose your spot to someone on the waitlist
+  created_at: '2014-12-15 00:18:14.953339'
+  updated_at: '2014-12-15 00:18:14.953339'
+events_173:
+  id: 252
+  name: 'DMC : Stick & Puck'
+  organization_id: 16
+  location_id: 77
+  comments: "Maximum 30 skaters on the ice\r\nStudent or Government Issued Photo ID
+    is required for pinny rental\r\nFull gear is recommended for all participants\r\nAll
+    participants under 16 years of age must be accompanied by an adult\r\nFull gear
+    is required for participants under 16 years old\r\nPucks available for purchase
+    from the proshop (or bring your own)\r\nAnyone perceived to be under the influence
+    of drugs or alcohol will be refused entry\r\nGoalies, games and scrimmages are
+    not permitted during the session"
+  created_at: '2014-12-15 00:20:34.597087'
+  updated_at: '2014-12-15 00:20:34.597087'
+events_174:
+  id: 253
+  name: 'DMC : Family Hockey'
+  organization_id: 16
+  location_id: 77
+  comments: "Family Hockey is a fun way for parents and kids to play together in a
+    safe, toned down atmosphere! Helmets are required for all participants and all
+    adults must be accompanied by a child. It is recommended that all youth wear full
+    gear for their own safety. As this is a program geared towards children and youth
+    no slap shots or hard wrist shots are permitted during the session.\r\n\r\nStudent
+    or Government Issued Photo ID is required for pinny rental\r\nAnyone perceived
+    to be under the influence of drugs or alcohol will be refused entry\r\nPucks available
+    for purchase from the proshop (or bring your own)"
+  created_at: '2014-12-15 00:22:50.293487'
+  updated_at: '2014-12-15 00:22:50.293487'
+events_175:
+  id: 254
+  name: 'DMC : Stick & Puck'
+  organization_id: 16
+  location_id: 77
+  comments: "New to the game? Know the game, but looking to brush up those skills?
+    Just wanting to get on the ice in a non-game or non-competitive environment? Stick
+    & Puck is the answer to all of the above and a great way to get on the ice any
+    time throughout the year. You don't even need all the gear! Space is limited &
+    session rules do apply.\r\n\r\nMaximum 30 skaters on the ice\r\nStudent or Government
+    Issued Photo ID is required for pinny rental\r\nFull gear is recommended for all
+    participants\r\nAll participants under 16 years of age must be accompanied by
+    an adult\r\nFull gear is required for participants under 16 years old\r\nPucks
+    available for purchase from the proshop (or bring your own)\r\nAnyone perceived
+    to be under the influence of drugs or alcohol will be refused entry\r\nGoalies,
+    games and scrimmages are not permitted during the session"
+  created_at: '2014-12-15 00:28:52.076911'
+  updated_at: '2014-12-15 00:28:52.076911'
+events_176:
+  id: 255
+  name: 'DMC : Drop in Hockey'
+  organization_id: 16
+  location_id: 77
+  comments: "To sign up, you must to call the proshop at 604-827-4324 to reserve your
+    spot. Spots are reserved on the day of only.\r\n\r\nFull equipment is required\r\nStudent
+    or Government Issued Photo ID is required for pinny rental\r\nMinimum age is 16
+    years\r\nAnyone perceived to be under the influence of drugs or alcohol will be
+    refused entry\r\nPlease arrive at least 10 minutes prior to the start of the game
+    to sign in. If you are not here, you may lose your spot to someone on the waitlist"
+  created_at: '2014-12-15 00:31:30.106207'
+  updated_at: '2014-12-15 00:31:30.106207'
+events_177:
+  id: 256
+  name: 'DMC : Drop in Hockey'
+  organization_id: 16
+  location_id: 77
+  comments: "Drop-In Hockey is a great way to keep on the ice regularly, to dust off
+    the skates, or for those looking to try the game for the first time. Regular sessions
+    run throughout the year for this non-contact drop-in program. You must sign up
+    to ensure your place on the roster.\r\n\r\nTo sign up, you must to call the proshop
+    at 604-827-4324 to reserve your spot. Spots are reserved on the day of only.\r\n\r\nFull
+    equipment is required\r\nStudent or Government Issued Photo ID is required for
+    pinny rental\r\nMinimum age is 16 years\r\nAnyone perceived to be under the influence
+    of drugs or alcohol will be refused entry\r\nPlease arrive at least 10 minutes
+    prior to the start of the game to sign in. If you are not here, you may lose your
+    spot to someone on the waitlist"
+  created_at: '2014-12-15 00:33:37.865814'
+  updated_at: '2014-12-15 00:33:37.865814'
+events_178:
+  id: 257
+  name: 'DMC : Drop in Hockey'
+  organization_id: 16
+  location_id: 77
+  comments: "Drop-In Hockey is a great way to keep on the ice regularly, to dust off
+    the skates, or for those looking to try the game for the first time. Regular sessions
+    run throughout the year for this non-contact drop-in program. You must sign up
+    to ensure your place on the roster.\r\n\r\nTo sign up, you must to call the proshop
+    at 604-827-4324 to reserve your spot. Spots are reserved on the day of only.\r\n\r\nFull
+    equipment is required\r\nStudent or Government Issued Photo ID is required for
+    pinny rental\r\nMinimum age is 16 years\r\nAnyone perceived to be under the influence
+    of drugs or alcohol will be refused entry\r\nPlease arrive at least 10 minutes
+    prior to the start of the game to sign in. If you are not here, you may lose your
+    spot to someone on the waitlist"
+  created_at: '2014-12-15 00:35:02.822071'
+  updated_at: '2014-12-15 00:35:02.822071'
+events_179:
+  id: 258
+  name: Adult Thursday Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:00:57.888061'
+  updated_at: '2014-12-15 05:00:57.888061'
+events_180:
+  id: 259
+  name: Adult Thursday Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:01:05.624520'
+  updated_at: '2014-12-15 05:01:05.624520'
+events_181:
+  id: 260
+  name: Adult Thursday Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:01:38.956832'
+  updated_at: '2014-12-15 05:01:38.956832'
+events_182:
+  id: 261
+  name: Adult Thursday Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:01:50.657797'
+  updated_at: '2014-12-15 05:01:50.657797'
+events_183:
+  id: 262
+  name: 'Adult Thursday Late Night Hockey '
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:04:22.140799'
+  updated_at: '2014-12-15 05:04:22.140799'
+events_184:
+  id: 263
+  name: 'Adult Thursday Late Night Hockey '
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:05:10.990117'
+  updated_at: '2014-12-15 05:05:10.990117'
+events_185:
+  id: 264
+  name: 'Adult Thursday Late Night Hockey '
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:05:18.909225'
+  updated_at: '2014-12-15 05:05:18.909225'
+events_186:
+  id: 265
+  name: ''
+  organization_id: 11
+  location_id: 78
+  comments: ''
+  created_at: '2014-12-15 05:08:09.173300'
+  updated_at: '2014-12-15 05:08:09.173300'
+events_187:
+  id: 266
+  name: Test
+  organization_id: 5
+  location_id: 56
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:14:28.477232'
+  updated_at: '2014-12-15 21:14:28.477232'
+events_188:
+  id: 267
+  name: Test
+  organization_id: 10
+  location_id: 90
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:14:49.162768'
+  updated_at: '2014-12-15 21:14:49.162768'
+events_189:
+  id: 268
+  name: Test
+  organization_id: 9
+  location_id: 6
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:15:35.614831'
+  updated_at: '2014-12-15 21:15:35.614831'
+events_190:
+  id: 269
+  name: Test
+  organization_id: 9
+  location_id: 9
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:15:49.914971'
+  updated_at: '2014-12-15 21:15:49.914971'
+events_191:
+  id: 270
+  name: Test
+  organization_id: 9
+  location_id: 47
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:16:15.054702'
+  updated_at: '2014-12-15 21:16:15.054702'
+events_192:
+  id: 271
+  name: Test
+  organization_id: 9
+  location_id: 57
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:16:29.455766'
+  updated_at: '2014-12-15 21:16:29.455766'
+events_193:
+  id: 272
+  name: Test
+  organization_id: 9
+  location_id: 51
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:16:43.793400'
+  updated_at: '2014-12-15 21:16:43.793400'
+events_194:
+  id: 273
+  name: Test
+  organization_id: 9
+  location_id: 36
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:16:53.207158'
+  updated_at: '2014-12-15 21:16:53.207158'
+events_195:
+  id: 274
+  name: Test
+  organization_id: 10
+  location_id: 93
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:17:23.075994'
+  updated_at: '2014-12-15 21:17:23.075994'
+events_196:
+  id: 275
+  name: Test
+  organization_id: 10
+  location_id: 72
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:18:01.867209'
+  updated_at: '2014-12-15 21:18:01.867209'
+events_197:
+  id: 276
+  name: Test
+  organization_id: 18
+  location_id: 94
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:18:27.058657'
+  updated_at: '2014-12-15 21:18:27.058657'
+events_198:
+  id: 277
+  name: Test
+  organization_id: 10
+  location_id: 88
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:18:53.697827'
+  updated_at: '2014-12-15 21:18:53.697827'
+events_199:
+  id: 278
+  name: Coed Adult Drop In Hockey
+  organization_id: 26
+  location_id: 50
+  comments: "19 years and older, same day reservations and full gear is required.\r\nReserve
+    your spot by calling 604-257-6980 after 10:15am on the day of the program. To
+    keep your\r\nreservation, you must pay and sign in by 11:30am or risk losing your
+    spot. Goalies play for free and\r\ncan call at 10:00am to reserve their spot.
+    Maximum 20 players and 2 goalies. Starts September 30."
+  created_at: '2014-12-16 06:23:25.751467'
+  updated_at: '2014-12-16 06:23:25.751467'
+events_200:
+  id: 279
+  name: Coed Adult Drop In Hockey
+  organization_id: 26
+  location_id: 50
+  comments: "19 years and older, same day reservations and full gear is required.\r\nReserve
+    your spot by calling 604-257-6980 after 10:15am on the day of the program. To
+    keep your\r\nreservation, you must pay and sign in by 11:30am or risk losing your
+    spot. Goalies play for free and\r\ncan call at 10:00am to reserve their spot.
+    Maximum 20 players and 2 goalies. Starts September 30."
+  created_at: '2014-12-16 06:25:25.576565'
+  updated_at: '2014-12-16 06:25:25.576565'
+events_201:
+  id: 280
+  name: Adult Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-16 06:38:05.100358'
+  updated_at: '2014-12-16 06:38:05.100358'
+events_202:
+  id: 281
+  name: Adult Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-16 06:38:17.218785'
+  updated_at: '2014-12-16 06:38:17.218785'
+events_203:
+  id: 282
+  name: Adult Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-16 06:43:27.669296'
+  updated_at: '2014-12-16 06:43:27.669296'
+events_204:
+  id: 283
+  name: Floor Hockey
+  organization_id: 5
+  location_id: 49
+  comments: "Please bring your own stick (plastic\r\nor composite). Shin guards and
+    eye\r\nprotection recommended. Goalies play\r\nfor free. Drop-in $5, space permitting"
+  created_at: '2014-12-16 06:47:04.410837'
+  updated_at: '2014-12-16 06:47:04.410837'
