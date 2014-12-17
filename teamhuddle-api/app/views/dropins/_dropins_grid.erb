@@ -39,6 +39,10 @@
     dropin.schedule.start_time.strftime('%l:%M%P')
   end
 
+  g.column name: 'Expired' do |dropin|
+    !dropin.active
+  end
+
   # g.column do |dropin|
   #   link_to "EDIT", edit_dropin_path(dropin.id), class: 'btn btn-default'
   # end
