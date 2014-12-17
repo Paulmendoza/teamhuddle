@@ -39,13 +39,14 @@ class SportEventWrapper
           unless dropin_instance.save
             @current_dropin[:errors] = dropin_instance.errors
             dropin_instance.destroy
+            @current_dropin[:sport_event].really_destroy!
+            @current_dropin[:event].destroy
             return @current_dropin
           end
           
           sport_event_instances.push(dropin_instance)
         end
-        
-        
+
         # only add it if you really want it
         if not suppress_sport_event_instances
           @current_dropin[:sport_event_instances] = sport_event_instances
@@ -54,7 +55,7 @@ class SportEventWrapper
         
       else
         @current_dropin[:errors] = @current_dropin[:sport_event].errors
-        @current_dropin[:sport_event].destroy
+        @current_dropin[:event].destroy
         return @current_dropin
       end
     else
