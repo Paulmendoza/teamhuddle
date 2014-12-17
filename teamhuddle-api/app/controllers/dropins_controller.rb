@@ -89,14 +89,21 @@ class DropinsController < ApplicationController
     @dropin = SportEvent.find(params[:id])
     @event = Event.find(@dropin.event_id)
 
-    if @event.update(:location_id => params[:sport_event][:location],
-                     :organization_id => params[:sport_event][:organization],
-                     :comments => params[:sport_event][:comments]) && @dropin.update(dropin_params)
+    @event.attributes = {
+        :location_id => params[:sport_event][:location],
+        :organization_id => params[:sport_event][:organization],
+        :comments => params[:sport_event][:comments]
+    }
+
+    @dropin.attributes = dropin_params
+
+    if @event.valid? && @dropin.valid?
+      @event.save
+      @dropin.save
       redirect_to dropin_path(@dropin)
     else
       render json: { error: @event.errors }, :status => :unprocessable_entity
     end
-
   end
   
   def import
