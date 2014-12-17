@@ -152,7 +152,6 @@
 }
 
 .dropdown-menu {
-
     ul {
         li {
             a {
@@ -160,7 +159,6 @@
                 
             }
         }
-        
     }
 }
 
@@ -169,8 +167,13 @@
 }
 
 .dropdown {
-  padding-right: 30px;
   border-top: none;
+}
+
+.navbar-right{
+  .right-side {
+    padding-right: 30px;
+  }
 }
 
 
@@ -404,7 +407,7 @@ li {
     margin-right: 5px;
 }
 
-.btn-success {
+.btn-success, .btn-default {
     background-color: $light-green;
     border: 1px solid #000;
     border-radius: 0px !important;
@@ -418,16 +421,20 @@ li {
     }
 }
 
-.btn-info {
-    background-color: $light-blue;
-    border: 1px solid #000;
-    border-radius: 0px !important;
-    margin-top: 10px;
+.btn-default {
+  background-color: $light-blue;
+}
 
-    &:hover {
-        background-color: $dark-blue;
-        border: 1px solid #000;
-    }  
+.btn-info {
+  background-color: $light-blue;
+  border: 1px solid #000;
+  border-radius: 0px !important;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: $dark-blue;
+    border: 1px solid #000;
+  }
 }
 
 

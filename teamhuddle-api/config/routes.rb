@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   # basic routes
   get 'contact' => 'index#contact'
   get 'about' => 'index#about'
-  get 'landing' => 'index#landing'
+  get 'dropin-finder' => 'index#dropin_finder'
   
   scope :admin do
     resources :locations

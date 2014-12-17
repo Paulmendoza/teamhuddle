@@ -1,22 +1,79 @@
-<div class="container" ng-controller="dropins">
+<div class="container-fluid" ng-controller="landing-page" ng-cloak>
 
-  <section class="header-outer">
-    <div class="header text-center" ng-show="sport === 'no-sport'">
-      <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo'%>
-      <h1>teamhuddle</h1>
-      <h4>A platform connecting your community through sports.</h4>
-      <h3>Find the sports you love playing, with the players you love playing with!</h3>
+<div class="landing-page">
+
+  <section class="header-outer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="header">
+        <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo'%>
+        <div class="text-center">
+          <h1>teamhuddle</h1>
+          <h4>A platform connecting your community through sports</h4>
+          <h3>Find the sports you love playing with the players you love playing with!</h3>
+        </div>
+    </div>
+  </section>
+  <section class="mailer-outer">
+    <div class="mailer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="mailer-inner text-center">
+          <h4>Submit your e-mail below to receive front of the line access to our beta</h4>
+          <br>
+          
+          <form ng-submit="submit()" ng-class="{ animateSlide: success && submitted && !processing }"> <!--ng-hide="success && submitted && !processing" -->
+              <input type="email" ng-model="email" class="form-control"/>
+              <input value="submit" type="submit" class="btn btn-info"/>
+          </form>
+          <br>
+
+          <!-- Show this div while waiting for a response from the server -->
+        <div class="text-center"  ng-show="processing">
+          <%= image_tag("loading.gif", alt: "loading") %>
+        </div>
+
+        <!-- Show this div on success -->
+          <div class="panel panel-success" ng-if="success && submitted && !processing">
+              <p>Thanks for signing up, {{user.email}}!</p>
+          </div>
+          
+          <!-- Show this div if there was an error -->
+          <div class="panel panel-warn" ng-if="!success && submitted && !processing">
+              <p>There was an error processing your request. Sorry!</p>
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+   <section class="feature-outer">
+    <div class="feature col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <h1 class="text-center">teamhuddle features</h1><br>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center-block">
+          <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
+          <h2 class="text-center feature1">drop-in finder</h2><br>
+          <p>Not sure when and where your closest drop-in is? We’ve got you covered! Our map and listings help you find drop-ins around your neighborhood. Browse by day and skill level to find out what, where and when you want to play. We’re making it easier for you to keep active!</p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center-block">
+        <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
+        <h2 class="text-center feature3">check-in</h2><br>
+        <p>Tired of paying penalties for lack of players? Never be short-benched again! “Find a Player” helps you choose the players you need. Find a sub for your league or familiar faces to do drop-ins with! Need a team to play on? Update your athletic profile (COMING SOON) and show what you have to offer!</p>
+
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center-block">
+          <img src="http://www.placehold.it/350x250" class="center-block img-responsive">
+          <h2 class="text-center feature2">find a player</h2><br>
+          <p>Plan ahead to make your next drop-in worthwhile. Know which ones are popular, or which ones have space for you and your group. Whether you’re an athlete perfecting his/her craft, or social butterfly who enjoys seeing and meeting new players, the check-in and comments will give you more insight on the drop-in. </p>
+      </div>
     </div>
   </section>
 
-  <section class="default-sport_logos-outer" ng-if="sport === 'no-sport'">
-    <div class="default-sport-logos-inner">
-      <div class="default-icon-outer">
 
-        <a href="/#/volleyball"><div class="sport_logo icon2"><img src="" class="img-responsive"></div></a>
-        <a href="/#/basketball"><div class="sport_logo icon1"><img src="" class="img-responsive"></div></a>
-        <a href="/#/hockey"><div class="sport_logo icon3"><img src="" class="img-responsive"></div></a>
-        <a href="/#/soccer"><div class="sport_logo icon4"><img src="" class="img-responsive"></div></a>
+  <section class="sport_logos-outer">
+    <div class="sport-logos-inner">
+      <div class="icon-outer">
+        <div class="sport_logo icon1"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon2"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon3"><img src="" class="img-responsive"></div>
+        <div class="sport_logo icon4"><img src="" class="img-responsive"></div>
         <div class="sport_logo icon5"><img src="" class="img-responsive"></div>
         <div class="sport_logo icon6"><img src="" class="img-responsive"></div>
         <div class="sport_logo icon7"><img src="" class="img-responsive"></div>
@@ -25,109 +82,6 @@
     </div>   
   </section>
 
-  <section ng-show="sport !== 'no-sport'">
-    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak ng-class="{'map-mobile-toggle': !mapMobileToggle}" ng-view>
-      <map center="Vancouver, Canada" zoom="10" init-event="loadMap" geo-fallback-center="Vancouver, Canada"></map>
-      <button class="btn-info hidden-md" ng-click="switchToList()">show list</button>
-    </div>
-
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak ng-class="{'map-mobile-toggle': mapMobileToggle}">        
-      <br>
-      <div class="dropinfilters_row">
-        <button class="btn btn-success col-lg-3 col-md-6 col-sm-6 col-xs-6" ng-click="resetFilters()">reset filters</button>
-        <%= link_to "another sport", "/#/", class: "btn btn-info col-lg-3 col-md-6 col-sm-6 col-xs-6" %>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-          <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="setFilters()">
-            <option value="" disabled selected>Day</option>
-            <option value="All">All</option>
-            <option value="Monday">Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-            <option value="Sunday">Sunday</option>
-          </select>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-          <select class="form-control dropin_filter2" ng-model="skillLevelSelect" ng-change="setFilters()">
-            <option value="" disabled selected>Skill Level</option>
-            <option value="All">All</option>
-            <option value="Recreational">Recreational</option>
-            <option value="Beginner">Beginner</option>
-            <option value="Intermediate">Intermediate</option>
-            <option value="Advanced">Advanced</option>
-          </select>
-        </div>
-      </div>
-      
-      <button class="btn-info hidden-lg hidden-md" ng-click="switchToMap()">show map</button>
-
-      <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
-      <div class="dropin_results">
-        <div class="text-center"  ng-show="loadingDropins">
-          <%= image_tag("loading.gif", alt: "loading") %>
-        </div>
-        <br>
-        <div class="row clearfix dropin-repeat"
-             ng-class="{selected: markerWrappers.currentlyOpen === dropin.id}"  
-             ng-repeat="dropin in dropins" 
-             ng-click="markerWrappers[dropin.id].infoWindow.toggle(); centerDropin(dropin)"
-             ng-attr-id="{{ 'dropin-' + dropin.id }}">         
-            <hr>
-            <div class="col-md-4 col-xs-12">
-              <h4 ng-class="{bolded: isSelected(dropin.id)}">{{dropin.location.name}}</h4>
-              <div ng-show="isSelected(dropin.id)" class="dropin-info">
-                <span>{{dropin.location.address}}</span><br>
-                <span>{{dropin.phone}}</span><br>
-                <email>{{dropin.organization.email}}</email>
-              </div>
-            </div>
-            <div class="col-xs-12 hidden-lg hidden-md" ng-if="isSelected(dropin.id)">
-                <button class="btn-info" ng-click="$event.stopPropagation(); switchToMap()">show on map</button>
-            </div>
-            
-            <!-- show this if it's not selected -->
-            <div ng-hide="isSelected(dropin.id)">
-                <p class="col-md-2 col-xs-4">{{dropin.datetime_start | date:'EEEE'}}</p>
-                <p class="col-md-2 col-xs-4">{{dropin.sport_event.skill_level}}</p>
-                <p class="col-md-4 col-xs-4">{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</p>
-            </div>
-            
-            <!-- show this if it is selected -->
-            <div ng-show="isSelected(dropin.id)">
-              <div class="col-md-2 col-xs-4">
-                <br>
-                <dt>Day</dt><dl>{{dropin.datetime_start | date:'EEEE'}}</dl>
-                <dt>Price</dt><dl>{{dropin.sport_event.price_per_one | currency }}</dl>                
-              </div>
-              <div class="col-md-2 col-xs-4">
-                <br>
-                <dt>Skill Level</dt><dl>{{dropin.sport_event.skill_level}}</dl>
-                <dt>Spots Available</dt>
-                <dl ng-if="dropin.sport_event.spots !== null">{{ dropin.sport_events.spots }}</dl>
-                <dl ng-if="dropin.sport_event.spots === null">N/A</dl>
-              </div>
-              <div class="col-md-4 col-xs-4">
-                <br>
-                <dt>Time</dt><dl>{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</dl>
-                <dt>Schedule Until</dt><dl>{{dropin.sport_event.schedule_until | date:'MMM d'}}</dl>
-                <dt ng-show="dropin.sport_event.source !== null">Source</dt><dl><a href="{{dropin.sport_event.source}}" ng-click="$event.stopPropagation()">{{dropin.sport_event.source}}</a></dl>
-              </div>
-            </div>
-            
-        </div>
-      </div>
-      <div class="disclaimer clearfix">
-          <p><i>
-           Something something disclaimer please don't sue us! I swear this was correct when I looked at it, 
-           just because you didn't call ahead it's not my fault, why can't we all just be diplomatic. 
-           Blah blah, this is not always correct
-          </i></p>
-      </div>
-      </div>
-  </section>
 </div>
 
-<%= javascript_include_tag 'angular_client_application', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag '//maps.googleapis.com/maps/api/js?key=AIzaSyDwIy4KU0bhEV5R3yV5hAqAcL_TIjlrY0o' %>
+<%= javascript_include_tag 'angular_client_application' %>
