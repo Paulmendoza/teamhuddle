@@ -25,9 +25,14 @@ Rails.application.routes.draw do
     resources :locations
     resources :organizations
     resources :dropins do
+      member do
+        get 'renew'
+      end
+
       collection do
         get 'import'
         post 'scrape'
+        post 'duplicate'
       end
     end
     get 'contact_us' => 'contact_us#index'
@@ -36,7 +41,6 @@ Rails.application.routes.draw do
   # aliases of sport_event
   scope :api, defaults: { format: 'json' } do
     scope :v1 do
-
       resources :api_dropins
     end
   end

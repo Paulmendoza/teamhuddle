@@ -57,7 +57,8 @@
   <tr>
     <td><b>Action</b></td>
     <td>
-      <%= link_to "EDIT", edit_dropin_path(@dropin.id), class: 'btn btn-default' %>
+      <%= link_to "RENEW", renew_dropin_path(@dropin.id), class: 'btn btn-info' %>
+      <%= link_to "EDIT", edit_dropin_path(@dropin.id), class: 'btn btn-warning' %>
       <%= link_to "DELETE", dropin_path(@dropin.id), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
     </td>
   </tr>

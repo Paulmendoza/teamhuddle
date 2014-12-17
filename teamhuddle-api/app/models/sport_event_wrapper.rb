@@ -21,7 +21,7 @@ class SportEventWrapper
       @current_dropin[:sport_event].event_id = @current_dropin[:event].id
       @current_dropin[:sport_event].type = type
       @current_dropin[:sport_event].spots_filled = -1
-      @current_dropin[:sport_event].gender = 'n/a'           
+      @current_dropin[:sport_event].gender = 'n/a'
       
       if @current_dropin[:sport_event].save
         # once dropin is saved, generate sport event instances

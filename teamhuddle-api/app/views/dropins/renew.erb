@@ -1,0 +1,17 @@
+<h1>Renew <%= @dropin.name %> dropin</h1>
+<p><span class="label label-info">Description </span>&nbsp;This will let you essentially renew this dropin by cloning it</p>
+<%= form_for @dropin, method: :post, url: duplicate_dropins_url do |f| %>
+
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+
+    <%= render :partial => 'location_form', :locals => { :f => f } %>
+    <%= render :partial => 'schedule_form', :locals => { :f => f } %>
+    <%= render :partial => 'optional_form', :locals => { :f => f } %>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

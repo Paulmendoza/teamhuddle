@@ -63,7 +63,7 @@ class DropinsController < ApplicationController
     else
       respond_to do |format|
         format.json { render json: @dropin }
-        format.html { redirect_to action: 'index' }
+        format.html { redirect_to dropin_path(@dropin[:sport_event]) }
       end
     end
   end
@@ -83,6 +83,45 @@ class DropinsController < ApplicationController
 
   def edit
     @dropin = SportEvent.includes(:event).find(params[:id])
+  end
+
+  def renew
+    @dropin = SportEvent.includes(:event).find(params[:id])
+  end
+
+  def duplicate
+    # get the start date and end date NOTE: adds time as well to startime
+    start_date = Time.new(params[:start_date][:year], params[:start_date][:month], params[:start_date][:day],
+                          params[:start_time][:hour], params[:start_time][:minute])
+    end_date = Time.new(params[:end_date][:year], params[:end_date][:month], params[:end_date][:day])
+
+    # create a new schedule setting the duration
+    schedule = Schedule.new(start_date, :end_time => start_date.change(hour: params[:end_time][:hour], min: params[:end_time][:minute])) do |s|
+      # add weekly recurrence ruling based on the day of the week selected
+      s.add_recurrence_rule(Rule.weekly.day(params[:day].intern).until(end_date))
+    end
+
+    temp_event = SportEvent.new(dropin_params)
+    temp_event.sport_id = params[:sport_event][:sport]
+    temp_event.skill_level = params[:skill_level]
+    temp_event.schedule = schedule
+
+    @dropin = SportEventWrapper.new(params[:sport_event][:name],
+                                    params[:sport_event][:location],
+                                    params[:sport_event][:organization],
+                                    params[:sport_event][:comments],
+                                    temp_event,
+                                    'dropin',
+                                    false)
+
+    if @dropin[:errors].present?
+      render json: { error: @dropin[:errors] }, :status => :unprocessable_entity
+    else
+      respond_to do |format|
+        format.json { render json: @dropin }
+        format.html { redirect_to dropin_path(@dropin[:sport_event]) }
+      end
+    end
   end
 
   def update
