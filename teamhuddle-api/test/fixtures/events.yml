@@ -4,9 +4,9 @@ events_001:
   name: Today
   organization_id: 11
   location_id: 78
-  comments: ''
+  comments: it's awesome
   created_at: '2014-08-03 02:38:29.820725'
-  updated_at: '2014-12-10 04:49:39.934361'
+  updated_at: '2014-12-17 16:38:35.670667'
 events_002:
   id: 70
   name: BCIT Volleyball Dropin
@@ -1697,3 +1697,75 @@ events_204:
     eye\r\nprotection recommended. Goalies play\r\nfor free. Drop-in $5, space permitting"
   created_at: '2014-12-16 06:47:04.410837'
   updated_at: '2014-12-16 06:47:04.410837'
+events_205:
+  id: 284
+  name: ''
+  organization_id: 9
+  location_id: 59
+  comments: ''
+  created_at: '2014-12-16 08:11:56.211784'
+  updated_at: '2014-12-16 08:11:56.211784'
+events_206:
+  id: 285
+  name: ''
+  organization_id: 9
+  location_id: 59
+  comments: ''
+  created_at: '2014-12-16 08:12:31.323288'
+  updated_at: '2014-12-16 08:12:31.323288'
+events_207:
+  id: 286
+  name: ''
+  organization_id: 9
+  location_id: 59
+  comments: ''
+  created_at: '2014-12-16 08:12:43.649316'
+  updated_at: '2014-12-16 08:12:43.649316'
+events_208:
+  id: 287
+  name: ''
+  organization_id: 5
+  location_id: 40
+  comments: ''
+  created_at: '2014-12-17 01:49:44.443262'
+  updated_at: '2014-12-17 01:49:44.443262'
+events_209:
+  id: 288
+  name: Champlain Heights
+  organization_id: 5
+  location_id: 40
+  comments: ''
+  created_at: '2014-12-17 01:55:18.891600'
+  updated_at: '2014-12-17 01:55:18.891600'
+events_210:
+  id: 289
+  name: Champlain Heights
+  organization_id: 5
+  location_id: 40
+  comments: ''
+  created_at: '2014-12-17 01:56:49.419652'
+  updated_at: '2014-12-17 01:56:49.419652'
+events_211:
+  id: 290
+  name: Dunbar
+  organization_id: 5
+  location_id: 42
+  comments: "35 + years men\r\n30+ year women"
+  created_at: '2014-12-17 02:03:42.132225'
+  updated_at: '2014-12-17 02:03:42.132225'
+events_212:
+  id: 291
+  name: FalseCreek
+  organization_id: 5
+  location_id: 44
+  comments: Age 18 and Up
+  created_at: '2014-12-17 02:05:58.083668'
+  updated_at: '2014-12-17 02:05:58.083668'
+events_213:
+  id: 292
+  name: Guildford Wednesdays
+  organization_id: 10
+  location_id: 71
+  comments: "Fills up early, register early.\r\n\r\n3 Courts, 7 per team, 42 sports"
+  created_at: '2014-12-17 16:50:34.024500'
+  updated_at: '2014-12-17 16:50:34.024500'
