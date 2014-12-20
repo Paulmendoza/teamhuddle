@@ -36,6 +36,7 @@ Rails.application.routes.draw do
       end
     end
     get 'contact_us' => 'contact_us#index'
+    get 'admin_stats' => 'admin#admin_stats'
   end
   
   # aliases of sport_event
