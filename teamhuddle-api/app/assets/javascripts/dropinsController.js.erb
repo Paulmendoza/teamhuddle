@@ -1,8 +1,19 @@
 var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonboat'];
 
-app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropins', function ($scope, $filter, $location, $compile, Dropins) {
+app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropins', 'Admins', function ($scope, $filter, $location, $compile, Dropins, Admins) {
     // set my own orderBy filter directive
     var orderBy = $filter('orderBy');
+
+    $scope.admin_signed_in = false;
+
+    Admins.signed_in().then(
+        function (signed_in) {
+            $scope.admin_signed_in = signed_in;
+        },
+        function (signed_in) {
+            $scope.admin_signed_in = false;
+        }
+    );
 
     $scope.loadingDropins = false;
 
