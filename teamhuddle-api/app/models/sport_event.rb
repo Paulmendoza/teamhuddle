@@ -7,6 +7,7 @@ class SportEvent < ActiveRecord::Base
 
   belongs_to :event, :dependent => :delete
   belongs_to :sport
+  belongs_to :admin
   has_many :archived_sport_events
   has_many :sport_event_instances, :dependent => :delete_all
   has_one :location, :through => :event

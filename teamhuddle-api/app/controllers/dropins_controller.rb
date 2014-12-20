@@ -30,6 +30,13 @@ class DropinsController < ApplicationController
   
   def show
     @dropin = SportEvent.includes(:event, :location, :organization).find(params[:id])
+
+    begin
+      @created_by_admin = Admin.find(@dropin.admin_id)
+    rescue ActiveRecord::RecordNotFound
+      # wut
+    end
+
   end
 
   def create
@@ -56,7 +63,9 @@ class DropinsController < ApplicationController
       params[:sport_event][:comments],
       temp_event,
       'dropin',
-      false)
+      false,
+      current_admin.id
+    )
     
     if @dropin[:errors].present?
       render json: { error: @dropin[:errors] }, :status => :unprocessable_entity
@@ -112,7 +121,9 @@ class DropinsController < ApplicationController
                                     params[:sport_event][:comments],
                                     temp_event,
                                     'dropin',
-                                    false)
+                                    false,
+                                    current_admin.id
+    )
 
     if @dropin[:errors].present?
       render json: { error: @dropin[:errors] }, :status => :unprocessable_entity

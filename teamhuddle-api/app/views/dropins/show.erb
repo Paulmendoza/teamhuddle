@@ -2,6 +2,18 @@
 
 <table class="table">
   <tr>
+    <td><b>Sport Event ID</b></td>
+    <td><%= @dropin.id %></td>
+  </tr>
+  <tr>
+    <td><b>Created by</b></td>
+    <% if @created_by_admin.present? %>
+        <td> <%= @created_by_admin.email %></td>
+        <% else %>
+        <td> N/A</td>
+    <% end %>
+  </tr>
+  <tr>
     <td><b>Sport</b></td>
     <td><%= @dropin.sport_id %></td>
   </tr>
