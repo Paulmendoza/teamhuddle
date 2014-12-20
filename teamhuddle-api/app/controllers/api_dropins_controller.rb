@@ -18,9 +18,4 @@ class ApiDropinsController < ApplicationController
                                                .where( sport_events: { type: "dropin", sport_id: @sport, deleted_at: nil })
     
   end
-
-  def admin_stats
-
-  end
-  
 end
