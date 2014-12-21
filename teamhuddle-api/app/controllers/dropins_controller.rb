@@ -157,7 +157,7 @@ class DropinsController < ApplicationController
   end
 
   def refresh_inactive_dropins
-    @active_dropins = SportEvent.where(type: "dropin", active: true).all
+    @active_dropins = SportEvent.where(type: "dropin", is_active: true).all
 
     @active_dropins.each do |dropin|
       unless dropin.check_active
