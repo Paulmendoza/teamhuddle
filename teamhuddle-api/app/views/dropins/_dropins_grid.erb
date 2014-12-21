@@ -39,7 +39,7 @@
     dropin.schedule.start_time.strftime('%l:%M%P')
   end
 
-  g.column name: 'Expired' do |dropin|
-    !dropin.active
+  g.column name: 'Currently Active' do |dropin|
+    dropin.is_active
   end
 end -%>

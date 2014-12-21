@@ -7,11 +7,16 @@ class DropinsController < ApplicationController
     #default to volleyball right now
     @sport_param = "volleyball"
     @sport_param = params[:sport] if params[:sport].present?
-    
+
+    @show_all = params[:show_all] == "true"
+
+    @conditions = {:type => "dropin", :sport_id => @sport_param, :deleted_at => nil}
+    @conditions[:is_active] = true unless @show_all
+
     # This is for the admin page -> see index.erb
     @dropins_grid = initialize_grid(SportEvent,
-      :joins => [:event, :location, :organization],
-      :conditions => {:type => "dropin", :sport_id => @sport_param, :deleted_at => nil},
+      :include => [:event, :location, :organization],
+      :conditions => @conditions,
       :enable_export_to_csv => true,
       :csv_field_separator => ';',
       :csv_file_name => 'dropins',
@@ -21,11 +26,6 @@ class DropinsController < ApplicationController
     export_grid_if_requested('dropins' => 'dropins_grid') do
       # usual render or redirect code executed if the request is not a CSV export request
     end
-
-    #active = false
-    #active = params[:active] if params[:active].present?
-    #dropin.schedule.occurring_between?(Time.now, Time.new('2100'))
-    
   end
   
   def show
@@ -154,6 +154,18 @@ class DropinsController < ApplicationController
     else
       render json: { error: @event.errors }, :status => :unprocessable_entity
     end
+  end
+
+  def refresh_inactive_dropins
+    @active_dropins = SportEvent.where(type: "dropin", active: true).all
+
+    @active_dropins.each do |dropin|
+      unless dropin.check_active
+        dropin.update(is_active: false)
+      end
+    end
+
+    redirect_to dropins_path
   end
   
   def import

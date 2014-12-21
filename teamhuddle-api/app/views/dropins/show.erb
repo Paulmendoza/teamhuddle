@@ -1,6 +1,12 @@
 <h1><%= @dropin.name %></h1>
 
+<!-- show this if the dropin is expired -->
+<% if !@dropin.check_active %>
+    <small class="label label-warning">EXPIRED</small>
+<% end %>
+
 <table class="table">
+
   <tr>
     <td><b>Sport Event ID</b></td>
     <td><%= @dropin.id %></td>

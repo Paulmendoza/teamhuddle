@@ -56,7 +56,7 @@ class SportEvent < ActiveRecord::Base
     self.event.organization
   end
 
-  def active
+  def check_active
     return self.sport_event_instances.active.any?
   end
 

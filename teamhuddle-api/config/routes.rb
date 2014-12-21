@@ -37,6 +37,7 @@ Rails.application.routes.draw do
         get 'import'
         post 'scrape'
         post 'duplicate'
+        post 'refresh_inactive_dropins'
       end
     end
     get 'contact_us' => 'contact_us#index'
