@@ -106,7 +106,7 @@ app.controller('location-create', ['$scope', 'GeoCoder', function ($scope, GeoCo
         GeoCoder.geocode({address: $scope.searchInput, bounds: bounds}).then(function (result) {
             $scope.result.address = result[0].formatted_address;
             $scope.result.lat = result[0].geometry.location.k;
-            $scope.result.long = result[0].geometry.location.B;
+            $scope.result.long = result[0].geometry.location.D;
         });
 
         if ($scope.result.address === before_search) {
