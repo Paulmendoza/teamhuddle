@@ -2,6 +2,8 @@ class AdminController < ApplicationController
   before_action :authenticate_admin!, :except => [:admin_signed_in]
  
   def index
+    @admin_name = current_admin.email.gsub("@teamhuddle.ca", "").capitalize
+
     @users = User.all.order(created_at: :desc)
     
     @sport_events = SportEvent.all.where(deleted_at: nil)
