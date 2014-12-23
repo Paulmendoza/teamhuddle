@@ -250,7 +250,7 @@ body {
 }
 
 .footer {
-    position: fixed;
+//    position: fixed;
     bottom: 0;
     background-color: #000;
     height: 50px;
@@ -258,6 +258,13 @@ body {
     padding: 0px;
     margin-top: 20px;
     border-top: 2px solid #777;
+
+  .footer-content{
+    span {
+      color: white;
+    }
+
+  }
 }
 
 .fixfixed .footer { 
@@ -265,7 +272,6 @@ body {
 
 
 .addthis_horizontal_follow_toolbox {
-    margin-top: -2px;
     padding-right: 10px;
 }
 
