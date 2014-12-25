@@ -317,6 +317,10 @@ li {
         padding-left: 0;
         padding-right: 0;
     }
+
+    .marker-row-selected{
+      background-color: $selected-dropin;
+    }
 }
 
 // ========== IMAGE STYLES ===========
