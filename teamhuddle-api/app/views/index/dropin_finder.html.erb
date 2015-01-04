@@ -35,7 +35,7 @@
       <div class="dropinfilters_row">
         <button class="btn btn-default hidden-lg hidden-md col-sm-12 col-xs-12" ng-click="switchToMap()">show map</button>
         <button class="btn btn-success col-lg-3 col-md-6 col-sm-6 col-xs-6" ng-click="resetFilters()">reset filters</button>
-        <%= link_to "another sport", "#/", class: "btn btn-info col-lg-3 col-md-6 col-sm-6 col-xs-6" %>
+        <%= link_to "more sports", "#/", class: "btn btn-info col-lg-3 col-md-6 col-sm-6 col-xs-6" %>
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
           <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="setFilters()">
             <option value="" disabled selected>Day</option>
@@ -61,7 +61,7 @@
         </div>
       </div>
 
-      <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
+      <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">drop-in {{sport | lowercase }} events</h2>
       <div class="dropin_results">
         <div class="text-center"  ng-show="loadingDropins">
           <%= image_tag("loading.gif", alt: "loading") %>
@@ -120,9 +120,7 @@
       </div>
       <div class="disclaimer clearfix">
           <p><i>
-           Something something disclaimer please don't sue us! I swear this was correct when I looked at it, 
-           just because you didn't call ahead it's not my fault, why can't we all just be diplomatic. 
-           Blah blah, this is not always correct
+           Schedules are subject to change. Please phone facilities for confirmation.
           </i></p>
       </div>
       </div>
