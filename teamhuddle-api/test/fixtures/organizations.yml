@@ -157,8 +157,8 @@ organizations_016:
   phone: "(604)-467-7346"
   email: parksandleisure@mapleridge.ca
   created_at: '2014-12-16 00:24:17.913021'
-  updated_at: '2014-12-16 00:24:17.913021'
-  website: http://http://mrpmparksandleisure.ca/
+  updated_at: '2014-12-31 21:52:09.826989'
+  website: http://mrpmparksandleisure.ca/
 organizations_017:
   id: 24
   name: Delta, City of
@@ -189,3 +189,63 @@ organizations_019:
   created_at: '2014-12-16 06:21:23.836332'
   updated_at: '2014-12-17 16:39:32.454154'
   website: http://kitscc.com/contact
+organizations_020:
+  id: 27
+  name: Center Ice Arenas
+  location_id: 
+  user_id: 
+  phone: '6045047565'
+  email: noEmail@noEmail.ca
+  created_at: '2014-12-30 02:33:04.166303'
+  updated_at: '2014-12-30 02:33:04.166303'
+  website: www.centerice.ca
+organizations_021:
+  id: 28
+  name: Chuck Bailey Recreation Centre
+  location_id: 
+  user_id: 
+  phone: " (604) 598-5898"
+  email: webteam@surrey.ca
+  created_at: '2014-12-30 19:26:58.913909'
+  updated_at: '2014-12-30 19:26:58.913909'
+  website: http://www.surrey.ca/culture-recreation/5985.aspx
+organizations_022:
+  id: 29
+  name: City of Abbotsford
+  location_id: 
+  user_id: 
+  phone: 604-853-2281
+  email: noEmail@noEmail.com
+  created_at: '2014-12-30 21:40:17.933098'
+  updated_at: '2014-12-30 21:40:17.933098'
+  website: http://www.abbotsford.ca/leisure/recreation/
+organizations_023:
+  id: 30
+  name: Canlan Ice Sports
+  location_id: 
+  user_id: 
+  phone: 604 736 9152
+  email: noEmail2@noEmail.ca
+  created_at: '2014-12-30 23:33:57.832162'
+  updated_at: '2014-12-30 23:33:57.832162'
+  website: http://www.icesports.com/
+organizations_024:
+  id: 31
+  name: Township of Langley
+  location_id: 
+  user_id: 
+  phone: '6045343211'
+  email: info@tol.ca
+  created_at: '2014-12-31 01:47:45.194116'
+  updated_at: '2014-12-31 01:47:45.194116'
+  website: http://www.tol.ca/
+organizations_025:
+  id: 32
+  name: District of Mission
+  location_id: 
+  user_id: 
+  phone: "(604) 820-5350"
+  email: leisureservices@mission.ca
+  created_at: '2014-12-31 22:35:02.498015'
+  updated_at: '2014-12-31 22:35:02.498015'
+  website: http://www.mission.ca/municipal-hall/departments/parks-recreation-culture/leisure-centre/

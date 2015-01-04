@@ -535,11 +535,11 @@ locations_059:
 locations_060:
   id: 97
   address: 7140 Miller Road  Richmond B.C. V7B 1L4
-  lat: 
-  long: 
+  lat: 49.192354
+  long: -123.144521
   name: Sea Island Community Centre
   created_at: '2014-12-15 21:39:12.567893'
-  updated_at: '2014-12-16 00:29:33.337109'
+  updated_at: '2015-01-01 20:50:18.136907'
   phone: "(604) 718-8000"
 locations_061:
   id: 98
@@ -563,10 +563,10 @@ locations_063:
   id: 100
   address: 9180 No. 1 Rd, Richmond, BC V7E 6L5, Canada
   lat: 49.14625230000001
-  long: 
+  long: -123.178367
   name: West Richmond Community Centre
   created_at: '2014-12-15 21:42:50.158197'
-  updated_at: '2014-12-16 00:28:36.132959'
+  updated_at: '2015-01-01 20:49:32.962439'
   phone: "(604) 718-8400 "
 locations_064:
   id: 101
@@ -635,37 +635,37 @@ locations_071:
   id: 108
   address: 1450 Parkway Boulevard, Coquitlam, BC V3E 3L2, Canada
   lat: 49.2954155
-  long: 
+  long: -122.806428
   name: Summit Community Centre
   created_at: '2014-12-15 23:50:55.931629'
-  updated_at: '2014-12-16 00:28:08.259294'
+  updated_at: '2015-01-01 20:49:09.802172'
   phone: "(604) 927-6960"
 locations_072:
   id: 109
   address: 300 Ioco Road, Port Moody, BC V3H 5M9, Canada
   lat: 49.283624
-  long: 
+  long: -122.831974
   name: Port Moody Recreation Complex
   created_at: '2014-12-16 00:16:44.714450'
-  updated_at: '2014-12-16 00:28:00.404998'
+  updated_at: '2015-01-01 20:48:47.817384'
   phone: "(604) 469-4556"
 locations_073:
   id: 110
   address: 11925 Haney Place, Maple Ridge, BC V2X 6G2, Canada
   lat: 49.2189701
-  long: 
+  long: -122.599498
   name: Maple Ridge Leisure Centre
   created_at: '2014-12-16 00:26:47.940570'
-  updated_at: '2014-12-16 00:27:52.523751'
+  updated_at: '2015-01-01 20:46:24.956340'
   phone: "(604) 465-2452"
 locations_074:
   id: 111
   address: 12027 Harris Road, Pitt Meadows, BC V3Y 2B5, Canada
   lat: 49.2207532
-  long: 
+  long: -122.691492
   name: Pitt Meadows Family Recreation Centre
   created_at: '2014-12-16 00:30:24.387774'
-  updated_at: '2014-12-16 00:30:24.387774'
+  updated_at: '2015-01-01 20:47:24.292190'
   phone: "(604) 465-2452"
 locations_075:
   id: 112
@@ -703,3 +703,156 @@ locations_078:
   created_at: '2014-12-16 00:53:45.490969'
   updated_at: '2014-12-16 00:53:45.490969'
   phone: "(604) 777-5100"
+locations_079:
+  id: 116
+  address: '65 East 6th Avenue New Westminster, BC '
+  lat: 49.22162
+  long: -122.906438
+  name: Centennial Community Centre, New West
+  created_at: '2014-12-22 02:14:36.610389'
+  updated_at: '2014-12-22 02:14:36.610389'
+  phone: "(604) 777-5100"
+locations_080:
+  id: 117
+  address: 600 Eighth Street New Westminster, BC  V3M 3S2
+  lat: 49.214724
+  long: -122.903369
+  name: Queen's Park Arenex
+  created_at: '2014-12-22 02:17:35.823340'
+  updated_at: '2014-12-22 02:17:35.823340'
+  phone: "(604) 777-5121"
+locations_081:
+  id: 118
+  address: 920 Ewen Avenue New Westminster, BC  V3M 5C8
+  lat: 49.186472
+  long: -122.943645
+  name: Queensborough Community Centre
+  created_at: '2014-12-22 02:19:58.762263'
+  updated_at: '2014-12-22 02:19:58.762263'
+  phone: "(604) 525-7388"
+locations_082:
+  id: 119
+  address: 701 8 Avenue, New Westminster, BC ‎
+  lat: 49.216013
+  long: -122.926029
+  name: Moody Park Arena
+  created_at: '2014-12-22 02:22:45.693541'
+  updated_at: '2014-12-22 02:22:45.693541'
+  phone: "(604) 525-5301"
+locations_083:
+  id: 120
+  address: '220-238 First St New Westminster, BC V3L '
+  lat: 49.215495
+  long: -122.906803
+  name: Queen's Park Arena
+  created_at: '2014-12-22 02:25:18.725881'
+  updated_at: '2014-12-22 02:25:18.725881'
+  phone: "(604) 777-5111"
+locations_084:
+  id: 121
+  address: 3600 Townline Rd.
+  lat: 49.068968
+  long: -122.358446
+  name: Centre Ice
+  created_at: '2014-12-30 02:34:55.281807'
+  updated_at: '2014-12-31 00:27:14.958935'
+  phone: "(604) 504-7565"
+locations_085:
+  id: 122
+  address: 2499 McMillan Road
+  lat: 49.048104
+  long: -122.26275269999996
+  name: Abbotsford Recreation Centre
+  created_at: '2014-12-30 21:42:09.665885'
+  updated_at: '2014-12-31 00:26:47.423913'
+  phone: "(604) 854-8785"
+locations_086:
+  id: 123
+  address: 3106 Clearbrook Road
+  lat: 49.0584932
+  long: -122.33535689999997
+  name: Matsqui Recreation Centre
+  created_at: '2014-12-30 21:43:36.743435'
+  updated_at: '2014-12-31 00:26:31.359020'
+  phone: "(604) 855-0500"
+locations_087:
+  id: 124
+  address: 13730 72 Ave, Surrey, BC V3W 2P4
+  lat: 49.133711
+  long: -122.842126
+  name: Newton Recreation Centre
+  created_at: '2014-12-30 23:04:04.118075'
+  updated_at: '2014-12-30 23:04:04.118075'
+  phone: "(604) 501-5540"
+locations_088:
+  id: 125
+  address: 12870 72 Avenue, Surrey, BC V3W 2M9
+  lat: 49.134241
+  long: -122.86619
+  name: Princess Margaret Secondary School
+  created_at: '2014-12-30 23:26:40.812237'
+  updated_at: '2014-12-30 23:26:40.812237'
+  phone: "(604) 501-5540"
+locations_089:
+  id: 126
+  address: 5700 Langley Bypass, Langley, BC V2Y 2P3, Canada
+  lat: 49.1069893
+  long: -122.64289869999999
+  name: Langley Twin Rinks
+  created_at: '2014-12-30 23:36:29.238142'
+  updated_at: '2014-12-31 00:25:57.723303'
+  phone: "(604) 532-8946"
+locations_090:
+  id: 127
+  address: 6501 Sprott Street, Burnaby, BC V5B 3B8, Canada
+  lat: 49.2500023
+  long: -122.97067500000003
+  name: Burnaby 8 Rinks
+  created_at: '2014-12-31 00:12:02.817509'
+  updated_at: '2014-12-31 00:27:03.264315'
+  phone: "(604) 291-0626"
+locations_091:
+  id: 128
+  address: 20699 42 Avenue, Langley, BC V3A 2G5, Canada
+  lat: 49.0770326
+  long: -122.64984240000001
+  name: George Preston Recreation Centre
+  created_at: '2014-12-31 01:48:43.012119'
+  updated_at: '2014-12-31 01:48:43.012119'
+  phone: '6045301323'
+locations_092:
+  id: 129
+  address: 2882 272 Street, Aldergrove, BC V4W 3J9, Canada
+  lat: 49.05480679999999
+  long: -122.47065959999998
+  name: Aldergrove Community Arena
+  created_at: '2014-12-31 02:06:58.773388'
+  updated_at: '2014-12-31 02:06:58.773388'
+  phone: '6045301323'
+locations_093:
+  id: 130
+  address: 7650 Grand Street, Mission, BC V2V 3T3
+  lat: 49.141386
+  long: -122.307012
+  name: Mission Liesure Centre
+  created_at: '2014-12-31 22:39:08.529867'
+  updated_at: '2014-12-31 22:39:08.529867'
+  phone: "(604) 820-5350"
+locations_094:
+  id: 131
+  address: 3676 Kensington Avenue, Burnaby, BC V5B 4Z6, Canada
+  lat: 49.253344
+  long: -122.96645699999999
+  name: Bill Copeland Sports Centre
+  created_at: '2015-01-02 01:01:02.935222'
+  updated_at: '2015-01-02 01:01:02.935222'
+  phone: '6042974521'
+locations_095:
+  id: 132
+  address: 3676 Kensington Avenue, Burnaby, BC V5B 4Z6, Canada
+  lat: 49.253344
+  long: -122.96645699999999
+  name: Burnaby Lake Arena
+  created_at: '2015-01-02 01:09:37.092163'
+  updated_at: '2015-01-02 01:09:37.092163'
+  phone: '6042974521'
