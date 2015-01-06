@@ -56,8 +56,7 @@
     </nav>
 
     <%= yield %>
-
-    <div id="footer" class="footer container">
+    <div id="footer" class="footer">
       <div class="footer-content text-center"><span>&copy; Teamhuddle Athletics Inc.</span></div>
 
       <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -66,20 +65,7 @@
     </div>
   <%= javascript_include_tag 'base_client_application' %>
 
-  <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <script>
-  
-    // Fix mobile floating toolbar when input is focused
-    if(/iPhone|iPod|Android|iPad/.test(window.navigator.platform)){
-
-    $(document)
-      .on('focus', 'textarea,input,select', function(e) {
-        $('.footer').css('position', 'absolute');
-      })
-      .on('blur', 'textarea,input,select', function(e) {
-        $('.footer').css('position', '');
-      });
-    }
     //Google Analytics
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
     { (i[r].q=i[r].q||[]).push(arguments)}
@@ -88,7 +74,6 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-56771767-1', 'auto');
     ga('send', 'pageview');
-
   </script>
 
   </body>
