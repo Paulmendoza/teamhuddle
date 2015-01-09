@@ -11,9 +11,13 @@ h2 {
   font-weight: 400;
 }
 
-h3, h4, h5, h6, p, input, button, select, textarea {
+h3, h4, h5, h6, p, select, textarea {
   font-family: 'Helvetica', sans-serif;
 
+}
+
+input, button {
+  font-family: "Raleway", sans-serif;
 }
 
 a {

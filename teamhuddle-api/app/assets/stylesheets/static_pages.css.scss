@@ -24,6 +24,15 @@
 		color: $dark-red;
 	}
 
+	.slogan {
+		font-family: "Raleway", sans-serif;
+		font-size: 23px;
+	}
+
+	.intro {
+		font-family: "Raleway", sans-serif;
+		font-size: 33px;
+	}
 
 	.header-outer {
 		background-color: transparent;
@@ -97,6 +106,10 @@
 		padding: 50px 40px 100px;
 		clear: both;
     	position: relative;
+
+    	h1 {
+    		margin-bottom: 0;
+    	}
 
 		.sport-logos-inner {
 

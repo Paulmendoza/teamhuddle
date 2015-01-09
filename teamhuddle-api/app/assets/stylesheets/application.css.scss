@@ -235,7 +235,7 @@ body {
   padding: 0px;
   margin-top: 20px;
   border-top: 2px solid #777;
-  
+
   .footer-content{
     span {
       color: white;
@@ -246,6 +246,18 @@ body {
 
 .header-outer {
     padding: 20px 80px 5px;
+
+    .slogan {
+        font-family: "Raleway", sans-serif;
+        font-size: 23px;
+        margin-top: 0;
+    }
+
+    .intro {
+        font-family: "Helvetica", sans-serif;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
     
     @media (max-width: 822px) {
         padding: 20px 20px 30px
