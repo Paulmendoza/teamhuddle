@@ -84,6 +84,7 @@
 
 .navbar-collapse {
   border: none;
+  padding-right: 0;
 }
 
 .centericons {
@@ -172,7 +173,12 @@
 
 .navbar-right{
   .right-side {
-    padding-right: 30px;
+    margin-right: 30px;
+
+    @media (max-width: 767px) {
+        margin-right: 0px;
+        padding-right: 30px;
+    }
   }
 }
 
