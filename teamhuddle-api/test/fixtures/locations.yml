@@ -543,12 +543,12 @@ locations_060:
   phone: "(604) 718-8000"
 locations_061:
   id: 98
-  address: '4111 Moncton Street  Richmond, B.C., V7E 3A8 '
+  address: '4111 Moncton Street, Richmond B.C., V7E 3A8 '
   lat: 49.125486
   long: -123.178697
   name: Steveston Community Centre
   created_at: '2014-12-15 21:40:56.004024'
-  updated_at: '2014-12-16 00:27:45.256642'
+  updated_at: '2015-01-07 17:58:22.787843'
   phone: "(604) 718-8080"
 locations_062:
   id: 99
@@ -759,21 +759,21 @@ locations_084:
   phone: "(604) 504-7565"
 locations_085:
   id: 122
-  address: 2499 McMillan Road
+  address: 2499 McMillan Road, Abbotsford, BC V2S 7S5, Canada
   lat: 49.048104
   long: -122.26275269999996
   name: Abbotsford Recreation Centre
   created_at: '2014-12-30 21:42:09.665885'
-  updated_at: '2014-12-31 00:26:47.423913'
+  updated_at: '2015-01-08 20:01:29.648222'
   phone: "(604) 854-8785"
 locations_086:
   id: 123
-  address: 3106 Clearbrook Road
+  address: 3106 Clearbrook Road, Abbotsford, BC V2T 4B9
   lat: 49.0584932
   long: -122.33535689999997
   name: Matsqui Recreation Centre
   created_at: '2014-12-30 21:43:36.743435'
-  updated_at: '2014-12-31 00:26:31.359020'
+  updated_at: '2015-01-08 20:01:08.040091'
   phone: "(604) 855-0500"
 locations_087:
   id: 124
@@ -856,3 +856,39 @@ locations_095:
   created_at: '2015-01-02 01:09:37.092163'
   updated_at: '2015-01-02 01:09:37.092163'
   phone: '6042974521'
+locations_096:
+  id: 133
+  address: 10275 City Parkway, Surrey, BC V3T, Canada
+  lat: 49.1878557
+  long: -122.84774920000001
+  name: North Surrey Recreation Centre
+  created_at: '2015-01-07 02:31:54.565585'
+  updated_at: '2015-01-08 22:10:17.932704'
+  phone: "(604) 502-6300"
+locations_097:
+  id: 134
+  address: 6090 176 Street, Surrey, BC V3S, Canada
+  lat: 49.113243
+  long: -122.73416299999997
+  name: Cloverdale Arena
+  created_at: '2015-01-08 22:11:28.982033'
+  updated_at: '2015-01-08 22:11:28.982033'
+  phone: "(604) 502-6410"
+locations_098:
+  id: 135
+  address: 7120 136B Street, Surrey, BC V3W, Canada
+  lat: 49.1320171
+  long: -122.84279600000002
+  name: Newton Arena
+  created_at: '2015-01-08 22:12:06.017652'
+  updated_at: '2015-01-08 22:12:06.017652'
+  phone: "(604) 501-5044"
+locations_099:
+  id: 136
+  address: 2199 148 Street, Surrey, BC V4A 8L5, Canada
+  lat: 49.0414724
+  long: -122.8160924
+  name: South Surrey Arena
+  created_at: '2015-01-08 22:12:34.462078'
+  updated_at: '2015-01-08 22:12:34.462078'
+  phone: "(604) 502-6200"

@@ -211,13 +211,13 @@ organizations_021:
   website: http://www.surrey.ca/culture-recreation/5985.aspx
 organizations_022:
   id: 29
-  name: City of Abbotsford
+  name: Abbotsford, City of
   location_id: 
   user_id: 
-  phone: 604-853-2281
+  phone: "(604) 853-2281"
   email: noEmail@noEmail.com
   created_at: '2014-12-30 21:40:17.933098'
-  updated_at: '2014-12-30 21:40:17.933098'
+  updated_at: '2015-01-08 19:59:20.398983'
   website: http://www.abbotsford.ca/leisure/recreation/
 organizations_023:
   id: 30

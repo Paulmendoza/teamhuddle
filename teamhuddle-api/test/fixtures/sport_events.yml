@@ -5861,7 +5861,7 @@ sport_events_173:
   notes: 
   format: 
   created_at: '2014-12-15 00:28:52.102808'
-  updated_at: '2014-12-30 23:18:17.590643'
+  updated_at: '2015-01-08 21:17:13.025742'
   schedule: |
     ---
     :start_time: &1 2014-12-14 13:15:00.000000000 -08:00
@@ -5878,7 +5878,7 @@ sport_events_173:
     :rtimes: []
     :extimes: []
   source: http://www.recreation.ubc.ca/ice/ice-drop-in/
-  deleted_at: 
+  deleted_at: '2015-01-08 21:17:13.025742'
   admin_id: 
   is_active: t
 sport_events_174:
@@ -6609,7 +6609,7 @@ sport_events_195:
   notes: 
   format: 
   created_at: '2014-12-17 16:50:34.043936'
-  updated_at: '2014-12-30 21:20:53.292013'
+  updated_at: '2015-01-07 21:03:49.963974'
   schedule: |
     ---
     :start_time: &1 2014-12-17 19:45:00.000000000 -08:00
@@ -6626,7 +6626,7 @@ sport_events_195:
     :rtimes: []
     :extimes: []
   source: https://webreg.surrey.ca/WebReg/Activities/ActivitiesCourseDetails.asp?cid=1147312
-  deleted_at: 
+  deleted_at: '2015-01-07 21:03:49.963974'
   admin_id: 4
   is_active: t
 sport_events_196:
@@ -7187,7 +7187,7 @@ sport_events_212:
   notes: 
   format: 
   created_at: '2014-12-30 21:46:51.368616'
-  updated_at: '2014-12-30 21:46:57.731410'
+  updated_at: '2015-01-09 01:55:54.430612'
   schedule: |
     ---
     :start_time: &1 2015-01-08 20:00:00.000000000 -08:00
@@ -7204,7 +7204,7 @@ sport_events_212:
     :rtimes: []
     :extimes: []
   source: http://www.surrey.ca/culture-recreation/1881.aspx
-  deleted_at: 
+  deleted_at: '2015-01-09 01:55:54.430612'
   admin_id: 4
   is_active: t
 sport_events_213:
@@ -7935,7 +7935,7 @@ sport_events_234:
   notes: 
   format: 
   created_at: '2014-12-30 22:45:11.476428'
-  updated_at: '2014-12-30 22:45:11.476428'
+  updated_at: '2015-01-08 21:33:55.832220'
   schedule: |
     ---
     :start_time: &1 2015-01-06 17:15:00.000000000 -08:00
@@ -7951,7 +7951,7 @@ sport_events_234:
       :until: 2015-03-31 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -7969,7 +7969,7 @@ sport_events_235:
   notes: 
   format: 
   created_at: '2014-12-30 22:45:41.836564'
-  updated_at: '2014-12-30 22:45:41.836564'
+  updated_at: '2015-01-08 21:34:15.086378'
   schedule: |
     ---
     :start_time: &1 2015-01-06 19:45:00.000000000 -08:00
@@ -7985,7 +7985,7 @@ sport_events_235:
       :until: 2015-03-31 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8003,7 +8003,7 @@ sport_events_236:
   notes: 
   format: 
   created_at: '2014-12-30 22:46:13.148495'
-  updated_at: '2014-12-30 22:46:13.148495'
+  updated_at: '2015-01-08 21:34:31.270057'
   schedule: |
     ---
     :start_time: &1 2015-01-07 19:45:00.000000000 -08:00
@@ -8019,7 +8019,7 @@ sport_events_236:
       :until: 2015-04-01 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8037,7 +8037,7 @@ sport_events_237:
   notes: 
   format: 
   created_at: '2014-12-30 22:46:47.575484'
-  updated_at: '2014-12-30 22:46:47.575484'
+  updated_at: '2015-01-08 21:34:50.825934'
   schedule: |
     ---
     :start_time: &1 2015-01-09 17:45:00.000000000 -08:00
@@ -8053,7 +8053,7 @@ sport_events_237:
       :until: 2015-04-03 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8071,7 +8071,7 @@ sport_events_238:
   notes: 
   format: 
   created_at: '2014-12-30 22:47:35.404092'
-  updated_at: '2014-12-30 22:47:35.404092'
+  updated_at: '2015-01-08 21:35:09.544153'
   schedule: |
     ---
     :start_time: &1 2015-01-03 15:30:00.000000000 -08:00
@@ -8087,7 +8087,7 @@ sport_events_238:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8105,7 +8105,7 @@ sport_events_239:
   notes: 
   format: 
   created_at: '2014-12-30 22:48:19.905940'
-  updated_at: '2014-12-30 22:48:19.905940'
+  updated_at: '2015-01-08 21:35:26.481768'
   schedule: |
     ---
     :start_time: &1 2015-01-04 08:15:00.000000000 -08:00
@@ -8121,7 +8121,7 @@ sport_events_239:
       :until: 2015-03-29 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8139,7 +8139,7 @@ sport_events_240:
   notes: 
   format: 
   created_at: '2014-12-30 22:49:23.084122'
-  updated_at: '2014-12-30 22:49:23.084122'
+  updated_at: '2015-01-08 21:32:26.575693'
   schedule: |
     ---
     :start_time: &1 2015-01-09 08:15:00.000000000 -08:00
@@ -8156,7 +8156,7 @@ sport_events_240:
     :rtimes: []
     :extimes: []
   source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
-  deleted_at: 
+  deleted_at: '2015-01-08 21:32:26.575693'
   admin_id: 4
   is_active: t
 sport_events_241:
@@ -8173,7 +8173,7 @@ sport_events_241:
   notes: 
   format: 
   created_at: '2014-12-30 22:51:34.153539'
-  updated_at: '2014-12-30 22:51:34.153539'
+  updated_at: '2015-01-08 21:35:59.388244'
   schedule: |
     ---
     :start_time: &1 2015-01-04 06:15:00.000000000 -08:00
@@ -8189,7 +8189,7 @@ sport_events_241:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8207,7 +8207,7 @@ sport_events_242:
   notes: 
   format: 
   created_at: '2014-12-30 22:51:48.200077'
-  updated_at: '2014-12-30 22:51:48.200077'
+  updated_at: '2015-01-08 21:36:13.808707'
   schedule: |
     ---
     :start_time: &1 2015-01-04 06:15:00.000000000 -08:00
@@ -8223,7 +8223,7 @@ sport_events_242:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8241,7 +8241,7 @@ sport_events_243:
   notes: 
   format: 
   created_at: '2014-12-30 22:51:55.762527'
-  updated_at: '2014-12-30 22:51:55.762527'
+  updated_at: '2015-01-08 21:36:29.364835'
   schedule: |
     ---
     :start_time: &1 2015-01-04 06:15:00.000000000 -08:00
@@ -8257,7 +8257,7 @@ sport_events_243:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8275,7 +8275,7 @@ sport_events_244:
   notes: 
   format: 
   created_at: '2014-12-30 22:52:05.768497'
-  updated_at: '2014-12-30 22:52:05.768497'
+  updated_at: '2015-01-08 21:38:12.878201'
   schedule: |
     ---
     :start_time: &1 2015-01-04 06:15:00.000000000 -08:00
@@ -8291,7 +8291,7 @@ sport_events_244:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8309,7 +8309,7 @@ sport_events_245:
   notes: 
   format: 
   created_at: '2014-12-30 22:52:15.674129'
-  updated_at: '2014-12-30 22:52:15.674129'
+  updated_at: '2015-01-08 21:37:55.179594'
   schedule: |
     ---
     :start_time: &1 2015-01-04 06:15:00.000000000 -08:00
@@ -8325,7 +8325,7 @@ sport_events_245:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8343,7 +8343,7 @@ sport_events_246:
   notes: 
   format: 
   created_at: '2014-12-30 22:53:01.314208'
-  updated_at: '2014-12-30 22:53:01.314208'
+  updated_at: '2015-01-08 21:36:47.016017'
   schedule: |
     ---
     :start_time: &1 2015-01-04 12:00:00.000000000 -08:00
@@ -8359,7 +8359,7 @@ sport_events_246:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8377,7 +8377,7 @@ sport_events_247:
   notes: 
   format: 
   created_at: '2014-12-30 22:53:12.564579'
-  updated_at: '2014-12-30 22:53:12.564579'
+  updated_at: '2015-01-08 20:08:32.965403'
   schedule: |
     ---
     :start_time: &1 2015-01-04 12:00:00.000000000 -08:00
@@ -8393,7 +8393,7 @@ sport_events_247:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8411,7 +8411,7 @@ sport_events_248:
   notes: 
   format: 
   created_at: '2014-12-30 22:53:29.611524'
-  updated_at: '2014-12-30 22:53:29.611524'
+  updated_at: '2015-01-08 21:37:01.455967'
   schedule: |
     ---
     :start_time: &1 2015-01-04 12:00:00.000000000 -08:00
@@ -8427,7 +8427,7 @@ sport_events_248:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8445,7 +8445,7 @@ sport_events_249:
   notes: 
   format: 
   created_at: '2014-12-30 22:54:00.745993'
-  updated_at: '2014-12-30 22:54:00.745993'
+  updated_at: '2015-01-08 21:37:31.541652'
   schedule: |
     ---
     :start_time: &1 2015-01-04 09:00:00.000000000 -08:00
@@ -8461,7 +8461,7 @@ sport_events_249:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8479,7 +8479,7 @@ sport_events_250:
   notes: 
   format: 
   created_at: '2014-12-30 22:54:13.854679'
-  updated_at: '2014-12-30 22:54:13.854679'
+  updated_at: '2015-01-08 21:37:15.547240'
   schedule: |
     ---
     :start_time: &1 2015-01-04 09:00:00.000000000 -08:00
@@ -8495,7 +8495,7 @@ sport_events_250:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8513,7 +8513,7 @@ sport_events_251:
   notes: 
   format: 
   created_at: '2014-12-30 22:54:55.555794'
-  updated_at: '2014-12-30 22:54:55.555794'
+  updated_at: '2015-01-07 22:10:40.960409'
   schedule: |
     ---
     :start_time: &1 2015-01-04 19:45:00.000000000 -08:00
@@ -8529,7 +8529,7 @@ sport_events_251:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8547,7 +8547,7 @@ sport_events_252:
   notes: 
   format: 
   created_at: '2014-12-30 22:55:28.474379'
-  updated_at: '2014-12-30 22:55:28.474379'
+  updated_at: '2015-01-07 22:11:12.090835'
   schedule: |
     ---
     :start_time: &1 2015-01-04 20:00:00.000000000 -08:00
@@ -8563,7 +8563,7 @@ sport_events_252:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8581,7 +8581,7 @@ sport_events_253:
   notes: 
   format: 
   created_at: '2014-12-30 22:56:10.043983'
-  updated_at: '2014-12-30 22:56:10.043983'
+  updated_at: '2015-01-07 22:11:34.048858'
   schedule: |
     ---
     :start_time: &1 2015-01-04 17:00:00.000000000 -08:00
@@ -8597,7 +8597,7 @@ sport_events_253:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8615,7 +8615,7 @@ sport_events_254:
   notes: 
   format: 
   created_at: '2014-12-30 22:57:01.270748'
-  updated_at: '2014-12-30 22:57:01.270748'
+  updated_at: '2015-01-07 22:14:29.554396'
   schedule: |
     ---
     :start_time: &1 2015-01-04 18:15:00.000000000 -08:00
@@ -8631,7 +8631,7 @@ sport_events_254:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8649,7 +8649,7 @@ sport_events_255:
   notes: 
   format: 
   created_at: '2014-12-30 22:57:33.563222'
-  updated_at: '2014-12-30 22:57:33.563222'
+  updated_at: '2015-01-07 22:13:38.987357'
   schedule: |
     ---
     :start_time: &1 2015-01-04 15:00:00.000000000 -08:00
@@ -8665,7 +8665,7 @@ sport_events_255:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8683,7 +8683,7 @@ sport_events_256:
   notes: 
   format: 
   created_at: '2014-12-30 22:58:13.819173'
-  updated_at: '2014-12-30 22:58:13.819173'
+  updated_at: '2015-01-07 21:03:42.997182'
   schedule: |
     ---
     :start_time: &1 2015-01-04 19:45:00.000000000 -08:00
@@ -8699,7 +8699,7 @@ sport_events_256:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: https://webreg.surrey.ca/WebReg/Activities/ActivitiesCourseDetails.asp?cid=1147312
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8717,7 +8717,7 @@ sport_events_257:
   notes: 
   format: 
   created_at: '2014-12-30 22:58:42.441263'
-  updated_at: '2014-12-30 22:58:42.441263'
+  updated_at: '2015-01-07 22:05:58.273460'
   schedule: |
     ---
     :start_time: &1 2015-01-04 14:45:00.000000000 -08:00
@@ -8733,7 +8733,7 @@ sport_events_257:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -8751,7 +8751,7 @@ sport_events_258:
   notes: 
   format: 
   created_at: '2014-12-30 22:59:26.599476'
-  updated_at: '2014-12-30 23:01:58.796057'
+  updated_at: '2015-01-07 22:09:29.077399'
   schedule: |
     ---
     :start_time: &1 2015-01-04 12:15:00.000000000 -08:00
@@ -8767,7 +8767,7 @@ sport_events_258:
       :until: 2015-04-04 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/1918.aspxhttp://www.surrey.ca/culture-recreation/1876.aspx
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -9023,7 +9023,7 @@ sport_events_266:
   notes: 
   format: 
   created_at: '2014-12-30 23:18:05.531336'
-  updated_at: '2014-12-30 23:18:05.531336'
+  updated_at: '2015-01-08 21:47:31.211930'
   schedule: |
     ---
     :start_time: &1 2015-01-04 18:00:00.000000000 -08:00
@@ -9039,7 +9039,7 @@ sport_events_266:
       :until: 2015-04-05 00:00:00.000000000 -07:00
     :rtimes: []
     :extimes: []
-  source: http://www.surrey.ca/culture-recreation/7325.aspx
+  source: test test test
   deleted_at: 
   admin_id: 4
   is_active: t
@@ -9159,7 +9159,7 @@ sport_events_270:
   notes: 
   format: 
   created_at: '2014-12-30 23:22:20.591407'
-  updated_at: '2014-12-30 23:22:20.591407'
+  updated_at: '2015-01-08 22:00:05.215655'
   schedule: |
     ---
     :start_time: &1 2015-01-04 19:15:00.000000000 -08:00
@@ -9176,7 +9176,7 @@ sport_events_270:
     :rtimes: []
     :extimes: []
   source: http://www.surrey.ca/culture-recreation/1928.aspx
-  deleted_at: 
+  deleted_at: '2015-01-08 22:00:05.215655'
   admin_id: 4
   is_active: t
 sport_events_271:
@@ -10349,7 +10349,7 @@ sport_events_305:
   notes: 
   format: 
   created_at: '2014-12-31 20:31:51.498450'
-  updated_at: '2014-12-31 21:11:04.643802'
+  updated_at: '2015-01-08 20:11:54.001776'
   schedule: |
     ---
     :start_time: &1 2015-01-01 11:45:00.000000000 -08:00
@@ -10655,7 +10655,7 @@ sport_events_314:
   notes: 
   format: 
   created_at: '2014-12-31 20:44:40.430639'
-  updated_at: '2014-12-31 20:44:40.430639'
+  updated_at: '2015-01-08 20:15:22.480435'
   schedule: |
     ---
     :start_time: &1 2015-01-01 20:00:00.000000000 -08:00
@@ -12933,7 +12933,7 @@ sport_events_381:
   notes: 
   format: 
   created_at: '2015-01-04 07:30:56.441045'
-  updated_at: '2015-01-04 07:30:56.441045'
+  updated_at: '2015-01-08 20:42:19.169590'
   schedule: |
     ---
     :start_time: &1 2014-12-30 18:30:00.000000000 -08:00
@@ -12950,7 +12950,7 @@ sport_events_381:
     :rtimes: []
     :extimes: []
   source: http://www.surrey.ca/city-government/599.aspx
-  deleted_at: 
+  deleted_at: '2015-01-08 20:42:19.169590'
   admin_id: 3
   is_active: t
 sport_events_382:
@@ -12984,6 +12984,3202 @@ sport_events_382:
     :rtimes: []
     :extimes: []
   source: http://vancouver.ca/parks-recreation-culture/volleyball-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_383:
+  id: 427
+  event_id: 494
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 00:20:32.487857'
+  updated_at: '2015-01-06 00:47:47.141821'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 17:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: '2015-01-06 00:47:47.141821'
+  admin_id: 4
+  is_active: t
+sport_events_384:
+  id: 428
+  event_id: 495
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 54
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 00:21:34.742713'
+  updated_at: '2015-01-06 00:47:23.731425'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 18:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 19:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-26 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: '2015-01-06 00:47:23.731425'
+  admin_id: 4
+  is_active: t
+sport_events_385:
+  id: 429
+  event_id: 496
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 4.75
+  price_per_group: 53
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 00:22:43.302028'
+  updated_at: '2015-01-06 00:46:02.321162'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-04 15:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-04 16:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-29 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: '2015-01-06 00:46:02.321162'
+  admin_id: 4
+  is_active: t
+sport_events_386:
+  id: 430
+  event_id: 497
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 00:50:14.715454'
+  updated_at: '2015-01-06 00:50:14.715454'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 17:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_387:
+  id: 431
+  event_id: 498
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 54
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 00:51:15.560962'
+  updated_at: '2015-01-06 00:51:15.560962'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 18:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 19:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_388:
+  id: 432
+  event_id: 499
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 45
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:02:20.906525'
+  updated_at: '2015-01-06 01:02:20.906525'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 19:05:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 20:25:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_389:
+  id: 433
+  event_id: 500
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 49
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:03:22.707806'
+  updated_at: '2015-01-06 01:03:22.707806'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 18:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 19:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_390:
+  id: 434
+  event_id: 501
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 49
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:04:22.495856'
+  updated_at: '2015-01-06 01:04:22.495856'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_391:
+  id: 435
+  event_id: 502
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 4.75
+  price_per_group: 53
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:05:09.702066'
+  updated_at: '2015-01-06 01:05:09.702066'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-04 15:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-04 16:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_392:
+  id: 436
+  event_id: 503
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 56
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:13:07.172228'
+  updated_at: '2015-01-06 01:13:07.172228'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-12 18:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-12 20:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-27 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_393:
+  id: 437
+  event_id: 504
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 3
+  price_per_group: 32
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:14:19.401142'
+  updated_at: '2015-01-06 01:14:19.401142'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-13 12:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-13 13:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-28 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_394:
+  id: 438
+  event_id: 505
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 3
+  price_per_group: 32
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:14:53.313873'
+  updated_at: '2015-01-06 01:59:04.171903'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-15 12:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-15 13:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: '2015-01-06 01:59:04.171903'
+  admin_id: 4
+  is_active: t
+sport_events_395:
+  id: 439
+  event_id: 506
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 3
+  price_per_group: 32
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:15:53.246180'
+  updated_at: '2015-01-06 01:15:53.246180'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-15 12:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-15 13:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_396:
+  id: 440
+  event_id: 507
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 60
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:16:31.029892'
+  updated_at: '2015-01-06 01:16:31.029892'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-15 18:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-15 20:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_397:
+  id: 441
+  event_id: 508
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 48
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:17:26.109953'
+  updated_at: '2015-01-06 01:17:26.109953'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-17 12:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-17 13:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 6
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-25 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_398:
+  id: 442
+  event_id: 509
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 66
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:19:56.196173'
+  updated_at: '2015-01-06 01:19:56.196173'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-09 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-09 21:15:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-27 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_399:
+  id: 443
+  event_id: 510
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 68
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:21:12.179257'
+  updated_at: '2015-01-06 01:21:12.179257'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 19:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 21:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_400:
+  id: 444
+  event_id: 511
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 4.5
+  price_per_group: 42
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:26:27.353951'
+  updated_at: '2015-01-06 01:26:27.353951'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 19:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-05-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_401:
+  id: 445
+  event_id: 512
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 66
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:31:01.951335'
+  updated_at: '2015-01-06 01:31:01.951335'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 19:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 21:15:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-05-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_402:
+  id: 446
+  event_id: 513
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 66
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:32:16.496049'
+  updated_at: '2015-01-06 01:32:16.496049'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 21:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 22:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-05-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_403:
+  id: 447
+  event_id: 514
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 9
+  price_per_group: 60
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:38:29.096142'
+  updated_at: '2015-01-06 01:57:31.328001'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-10 15:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-10 16:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 6
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-28 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: '2015-01-06 01:57:31.328001'
+  admin_id: 4
+  is_active: t
+sport_events_404:
+  id: 448
+  event_id: 515
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 9
+  price_per_group: 60
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:40:02.412920'
+  updated_at: '2015-01-06 01:58:25.798360'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-10 15:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-10 16:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 6
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-28 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: '2015-01-06 01:58:25.798360'
+  admin_id: 4
+  is_active: t
+sport_events_405:
+  id: 449
+  event_id: 516
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 9
+  price_per_group: 60
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:40:31.687871'
+  updated_at: '2015-01-06 01:40:31.687871'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-10 15:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-10 16:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 6
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-28 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_406:
+  id: 450
+  event_id: 517
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 32
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:43:41.720517'
+  updated_at: '2015-01-06 01:43:41.720517'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 19:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-02-24 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_407:
+  id: 451
+  event_id: 518
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 36
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:44:38.191233'
+  updated_at: '2015-01-06 01:44:38.191233'
+  schedule: |
+    ---
+    :start_time: &1 2015-03-30 19:45:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2015-03-30 21:45:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-28 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_408:
+  id: 452
+  event_id: 519
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.5
+  price_per_group: 64
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:47:34.807380'
+  updated_at: '2015-01-06 01:47:34.807380'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 22:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_409:
+  id: 453
+  event_id: 520
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.5
+  price_per_group: 60
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:49:03.235346'
+  updated_at: '2015-01-06 01:49:03.235346'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 22:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 23:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-26 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_410:
+  id: 454
+  event_id: 521
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.5
+  price_per_group: 56
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:49:56.800291'
+  updated_at: '2015-01-06 01:49:56.800291'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-04 13:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-04 14:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-29 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_411:
+  id: 455
+  event_id: 522
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 3.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:51:51.140544'
+  updated_at: '2015-01-06 01:51:51.140544'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 20:10:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:50:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_412:
+  id: 456
+  event_id: 523
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 51
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:53:19.866614'
+  updated_at: '2015-01-06 01:53:19.866614'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-07 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-07 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-25 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_413:
+  id: 457
+  event_id: 524
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 50
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:54:29.759081'
+  updated_at: '2015-01-06 01:54:29.759081'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-05 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-05 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-30 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_414:
+  id: 458
+  event_id: 525
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 59
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-06 01:56:01.615550'
+  updated_at: '2015-01-06 01:56:01.615550'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 19:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://vancouver.ca/parks-recreation-culture/soccer-drop-in-schedule.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_415:
+  id: 459
+  event_id: 526
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 96
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 01:48:14.303254'
+  updated_at: '2015-01-08 20:28:30.139906'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 19:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://flipbook-surrey-ca.cld.bz/COS-LG-Winter-2015-Flipbook#91/z
+  deleted_at: '2015-01-08 20:28:30.139906'
+  admin_id: 8
+  is_active: t
+sport_events_416:
+  id: 460
+  event_id: 527
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 8
+  price_per_group: 96
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 01:48:52.675025'
+  updated_at: '2015-01-07 01:49:36.390793'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 19:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://flipbook-surrey-ca.cld.bz/COS-LG-Winter-2015-Flipbook#91/z
+  deleted_at: '2015-01-07 01:49:36.390793'
+  admin_id: 8
+  is_active: t
+sport_events_417:
+  id: 461
+  event_id: 528
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 96
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 01:49:12.061003'
+  updated_at: '2015-01-08 20:28:39.657522'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 19:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://flipbook-surrey-ca.cld.bz/COS-LG-Winter-2015-Flipbook#91/z
+  deleted_at: '2015-01-08 20:28:39.657522'
+  admin_id: 8
+  is_active: t
+sport_events_418:
+  id: 462
+  event_id: 529
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 8
+  price_per_group: 96
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 01:53:59.567755'
+  updated_at: '2015-01-07 01:54:05.023479'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 09:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://flipbook-surrey-ca.cld.bz/COS-LG-Winter-2015-Flipbook#91/z
+  deleted_at: '2015-01-07 01:54:05.023479'
+  admin_id: 8
+  is_active: t
+sport_events_419:
+  id: 463
+  event_id: 530
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 96
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 01:55:01.468538'
+  updated_at: '2015-01-08 21:43:42.820181'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 18:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 20:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://flipbook-surrey-ca.cld.bz/COS-LG-Winter-2015-Flipbook#91/z
+  deleted_at: '2015-01-08 21:43:42.820181'
+  admin_id: 8
+  is_active: t
+sport_events_420:
+  id: 464
+  event_id: 531
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 8
+  price_per_group: 96
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 02:01:41.187412'
+  updated_at: '2015-01-07 02:02:22.083862'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 19:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://flipbook-surrey-ca.cld.bz/COS-LG-Winter-2015-Flipbook#91/z
+  deleted_at: '2015-01-07 02:02:22.083862'
+  admin_id: 8
+  is_active: t
+sport_events_421:
+  id: 465
+  event_id: 532
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 96
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 02:02:36.334930'
+  updated_at: '2015-01-08 20:28:15.667242'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 19:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://flipbook-surrey-ca.cld.bz/COS-LG-Winter-2015-Flipbook#91/z
+  deleted_at: '2015-01-08 20:28:15.667242'
+  admin_id: 8
+  is_active: t
+sport_events_422:
+  id: 466
+  event_id: 533
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 6
+  price_per_group: 96
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 02:11:52.363709'
+  updated_at: '2015-01-08 20:32:34.849792'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://flipbook-surrey-ca.cld.bz/COS-LG-Winter-2015-Flipbook#91/z
+  deleted_at: '2015-01-08 20:32:34.849792'
+  admin_id: 8
+  is_active: t
+sport_events_423:
+  id: 467
+  event_id: 534
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 20
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 02:22:32.675902'
+  updated_at: '2015-01-08 23:01:11.642415'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 12:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 13:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: '2015-01-08 23:01:11.642415'
+  admin_id: 8
+  is_active: t
+sport_events_424:
+  id: 468
+  event_id: 535
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 20
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 02:30:51.137009'
+  updated_at: '2015-01-08 23:01:26.739936'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 21:15:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: '2015-01-08 23:01:26.739936'
+  admin_id: 8
+  is_active: t
+sport_events_425:
+  id: 469
+  event_id: 536
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 20
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 02:32:43.377372'
+  updated_at: '2015-01-08 23:02:12.325240'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 11:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 13:15:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1702.aspx
+  deleted_at: '2015-01-08 23:02:12.325240'
+  admin_id: 8
+  is_active: t
+sport_events_426:
+  id: 470
+  event_id: 537
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 02:33:54.309580'
+  updated_at: '2015-01-08 23:02:43.771115'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 11:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 13:15:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1702.aspx
+  deleted_at: '2015-01-08 23:02:43.771115'
+  admin_id: 8
+  is_active: t
+sport_events_427:
+  id: 471
+  event_id: 538
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 02:36:14.113693'
+  updated_at: '2015-01-08 23:06:15.056687'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 11:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 13:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1702.aspx
+  deleted_at: '2015-01-08 23:06:15.056687'
+  admin_id: 8
+  is_active: t
+sport_events_428:
+  id: 472
+  event_id: 539
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 10.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 02:38:15.130860'
+  updated_at: '2015-01-08 23:06:26.007371'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 13:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 14:15:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1702.aspx
+  deleted_at: '2015-01-08 23:06:26.007371'
+  admin_id: 8
+  is_active: t
+sport_events_429:
+  id: 473
+  event_id: 540
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 02:39:27.525327'
+  updated_at: '2015-01-08 23:06:35.497901'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 08:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 09:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1702.aspx
+  deleted_at: '2015-01-08 23:06:35.497901'
+  admin_id: 8
+  is_active: t
+sport_events_430:
+  id: 474
+  event_id: 541
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 02:40:23.456143'
+  updated_at: '2015-01-08 23:06:45.704108'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 08:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 09:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1702.aspx
+  deleted_at: '2015-01-08 23:06:45.704108'
+  admin_id: 8
+  is_active: t
+sport_events_431:
+  id: 475
+  event_id: 542
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 0
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 02:41:00.249990'
+  updated_at: '2015-01-08 23:08:35.040846'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 11:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 13:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1702.aspx
+  deleted_at: '2015-01-08 23:08:35.040846'
+  admin_id: 8
+  is_active: t
+sport_events_432:
+  id: 476
+  event_id: 543
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 0
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 02:41:33.103286'
+  updated_at: '2015-01-08 23:08:46.333005'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-06 11:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-06 12:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1702.aspx
+  deleted_at: '2015-01-08 23:08:46.333005'
+  admin_id: 8
+  is_active: t
+sport_events_433:
+  id: 477
+  event_id: 544
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-07 22:15:45.874787'
+  updated_at: '2015-01-07 22:16:28.137693'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-07 19:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-07 22:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-01-18 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: ''
+  deleted_at: '2015-01-07 22:16:28.137693'
+  admin_id: 4
+  is_active: t
+sport_events_434:
+  id: 478
+  event_id: 545
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 20:47:37.460621'
+  updated_at: '2015-01-08 20:47:37.460621'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 17:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 19:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1918.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_435:
+  id: 479
+  event_id: 546
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 21:39:27.810696'
+  updated_at: '2015-01-08 21:39:27.810696'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 08:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 09:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 6
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_436:
+  id: 480
+  event_id: 547
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 21:40:34.611978'
+  updated_at: '2015-01-08 21:40:34.611978'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 17:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 19:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_437:
+  id: 481
+  event_id: 548
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 21:41:09.330583'
+  updated_at: '2015-01-08 21:41:09.330583'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 12:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 14:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1876.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_438:
+  id: 482
+  event_id: 549
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 
+  price_per_group: 6
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 21:58:11.061015'
+  updated_at: '2015-01-08 23:10:02.501326'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 18:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 20:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/7325.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_439:
+  id: 483
+  event_id: 550
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 
+  price_per_group: 6
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 22:00:56.754126'
+  updated_at: '2015-01-08 22:00:56.754126'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 19:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-31 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1928.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_440:
+  id: 484
+  event_id: 551
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 22:35:55.724981'
+  updated_at: '2015-01-08 22:35:55.724981'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 12:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 13:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_441:
+  id: 485
+  event_id: 552
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 22:50:21.659848'
+  updated_at: '2015-01-08 23:01:00.121317'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 12:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 13:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: '2015-01-08 23:01:00.121317'
+  admin_id: 4
+  is_active: t
+sport_events_442:
+  id: 486
+  event_id: 553
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 22:51:29.027621'
+  updated_at: '2015-01-08 22:51:29.027621'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 11:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 13:15:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_443:
+  id: 487
+  event_id: 554
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 22:52:22.333653'
+  updated_at: '2015-01-08 22:52:22.333653'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 11:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 13:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_444:
+  id: 488
+  event_id: 555
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 22:52:39.696659'
+  updated_at: '2015-01-08 22:52:39.696659'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 11:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 13:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_445:
+  id: 489
+  event_id: 556
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 10.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 22:53:33.515243'
+  updated_at: '2015-01-08 23:08:01.900997'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 13:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 14:15:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_446:
+  id: 490
+  event_id: 557
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 22:54:20.219380'
+  updated_at: '2015-01-08 22:54:20.219380'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 11:15:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 12:30:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_447:
+  id: 491
+  event_id: 558
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 22:55:01.362864'
+  updated_at: '2015-01-08 22:55:01.362864'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 11:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 13:00:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_448:
+  id: 492
+  event_id: 559
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 22:56:31.745085'
+  updated_at: '2015-01-08 22:56:31.745085'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 21:15:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_449:
+  id: 493
+  event_id: 560
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 22:58:40.903207'
+  updated_at: '2015-01-08 22:58:40.903207'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 08:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 09:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_450:
+  id: 494
+  event_id: 561
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 22:59:03.382600'
+  updated_at: '2015-01-08 22:59:03.382600'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 08:30:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 09:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_451:
+  id: 495
+  event_id: 562
+  sport_id: hockey
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 7.5
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-08 23:03:47.034575'
+  updated_at: '2015-01-08 23:03:47.034575'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-01 11:45:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-01 13:15:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1806.aspx
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_452:
+  id: 496
+  event_id: 563
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:34:35.829857'
+  updated_at: '2015-01-09 01:34:35.829857'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 20:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 22:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_453:
+  id: 497
+  event_id: 564
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:35:07.619085'
+  updated_at: '2015-01-09 01:35:07.619085'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 20:15:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 22:15:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_454:
+  id: 498
+  event_id: 565
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:35:44.981004'
+  updated_at: '2015-01-09 01:35:44.981004'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 20:30:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 22:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_455:
+  id: 499
+  event_id: 566
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:36:47.012916'
+  updated_at: '2015-01-09 01:36:47.012916'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 12:30:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 16:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_456:
+  id: 500
+  event_id: 568
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:37:58.172084'
+  updated_at: '2015-01-09 01:37:58.172084'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 19:30:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 22:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 5
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_457:
+  id: 501
+  event_id: 569
+  sport_id: basketball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:38:46.841798'
+  updated_at: '2015-01-09 01:38:46.841798'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 13:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 16:15:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 6
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_458:
+  id: 502
+  event_id: 570
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:39:28.495660'
+  updated_at: '2015-01-09 01:39:28.495660'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 17:30:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 19:30:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_459:
+  id: 503
+  event_id: 571
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:41:18.326447'
+  updated_at: '2015-01-09 01:41:18.326447'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 21:20:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 22:50:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_460:
+  id: 504
+  event_id: 572
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:41:58.182820'
+  updated_at: '2015-01-09 01:41:58.182820'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 19:10:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 21:40:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_461:
+  id: 505
+  event_id: 573
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:42:35.693789'
+  updated_at: '2015-01-09 01:42:35.693789'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 18:30:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 20:30:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_462:
+  id: 506
+  event_id: 574
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:43:24.415472'
+  updated_at: '2015-01-09 01:43:24.415472'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 20:50:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 22:50:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_463:
+  id: 507
+  event_id: 575
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:44:14.655066'
+  updated_at: '2015-01-09 01:44:14.655066'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 15:30:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 18:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_464:
+  id: 508
+  event_id: 576
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:44:34.412847'
+  updated_at: '2015-01-09 01:44:34.412847'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 18:10:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 20:30:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_465:
+  id: 509
+  event_id: 577
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:45:15.566163'
+  updated_at: '2015-01-09 01:45:15.566163'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 20:40:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 22:40:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_466:
+  id: 510
+  event_id: 578
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:45:47.369422'
+  updated_at: '2015-01-09 01:45:47.369422'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 13:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 15:30:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 6
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_467:
+  id: 511
+  event_id: 579
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:46:06.518888'
+  updated_at: '2015-01-09 01:46:06.518888'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 15:30:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 18:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 6
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_468:
+  id: 512
+  event_id: 580
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:46:41.029486'
+  updated_at: '2015-01-09 01:46:41.029486'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 16:15:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 18:15:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_469:
+  id: 513
+  event_id: 581
+  sport_id: soccer
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:47:46.246672'
+  updated_at: '2015-01-09 01:47:46.246672'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 18:15:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 20:15:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_470:
+  id: 514
+  event_id: 582
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:48:44.635612'
+  updated_at: '2015-01-09 01:48:44.635612'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 20:15:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 22:15:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 1
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_471:
+  id: 515
+  event_id: 583
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:49:12.876450'
+  updated_at: '2015-01-09 01:49:12.876450'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 20:15:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 22:15:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 3
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_472:
+  id: 516
+  event_id: 584
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:50:03.589361'
+  updated_at: '2015-01-09 01:50:03.589361'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 13:00:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 15:00:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 6
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_473:
+  id: 517
+  event_id: 585
+  sport_id: basketball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:50:36.114920'
+  updated_at: '2015-01-09 01:50:36.114920'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 17:30:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 19:30:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 0
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_474:
+  id: 518
+  event_id: 586
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:51:14.666542'
+  updated_at: '2015-01-09 01:51:14.666542'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 20:30:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 22:30:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 2
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_475:
+  id: 519
+  event_id: 587
+  sport_id: volleyball
+  type: dropin
+  skill_level: Recreational
+  price_per_one: 5.25
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:51:29.491827'
+  updated_at: '2015-01-09 01:51:29.491827'
+  schedule: |
+    ---
+    :start_time: &1 2014-09-08 20:30:00.000000000 -07:00
+    :start_date: *1
+    :end_time: 2014-09-08 22:30:00.000000000 -07:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-03-08 00:00:00.000000000 -08:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.burnaby.ca/Things-To-Do/Be-Active-Programs.html
+  deleted_at: 
+  admin_id: 4
+  is_active: t
+sport_events_476:
+  id: 520
+  event_id: 588
+  sport_id: volleyball
+  type: dropin
+  skill_level: Intermediate
+  price_per_one: 6
+  price_per_group: 
+  spots: 
+  spots_filled: -1
+  gender: n/a
+  notes: 
+  format: 
+  created_at: '2015-01-09 01:57:00.087029'
+  updated_at: '2015-01-09 01:57:00.087029'
+  schedule: |
+    ---
+    :start_time: &1 2015-01-08 20:00:00.000000000 -08:00
+    :start_date: *1
+    :end_time: 2015-01-08 21:45:00.000000000 -08:00
+    :rrules:
+    - :validations:
+        :day:
+        - 4
+      :rule_type: IceCube::WeeklyRule
+      :interval: 1
+      :week_start: 0
+      :until: 2015-04-20 00:00:00.000000000 -07:00
+    :rtimes: []
+    :extimes: []
+  source: http://www.surrey.ca/culture-recreation/1881.aspx
   deleted_at: 
   admin_id: 4
   is_active: t
