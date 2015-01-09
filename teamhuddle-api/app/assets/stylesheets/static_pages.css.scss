@@ -199,6 +199,16 @@
     	clear: both;
 		padding: 30px 0px;
 		border-bottom: 1px solid #ddd;
+
+		&:first-of-type {
+			border-top: 1px solid #ddd;
+
+		}
+
+		&:last-of-type {
+			border: 0;
+
+		}
     }
 }
 
@@ -247,6 +257,11 @@
 
 	.panel-success {
 		color: $light-green;
+	}
+
+	.footer {
+	    min-height: 300px;
+
 	}
 
 	@media (max-width: 1199px) {
