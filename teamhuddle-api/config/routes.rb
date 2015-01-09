@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   get 'contact_us/new'
 
   devise_for :admins, :controllers => { :registrations => :registrations }
+  as :admin do
+    get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'
+    put 'admins' => 'devise/registrations#update', :as => 'admin_registration'
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -19,25 +23,32 @@ Rails.application.routes.draw do
   # basic routes
   get 'contact' => 'index#contact'
   get 'about' => 'index#about'
-  get 'landing' => 'index#landing'
+  get 'dropin-finder' => 'index#dropin_finder'
   
   scope :admin do
     resources :locations
     resources :organizations
     resources :dropins do
+      member do
+        get 'renew'
+      end
+
       collection do
         get 'import'
         post 'scrape'
+        post 'duplicate'
+        post 'refresh_inactive_dropins'
       end
     end
     get 'contact_us' => 'contact_us#index'
+    get 'admin_stats' => 'admin#admin_stats'
+    get 'admin_signed_in' => 'admin#admin_signed_in'
   end
   
   # aliases of sport_event
   scope :api, defaults: { format: 'json' } do
     scope :v1 do
-
-      resources :api_dropins
+      resources :api_dropins, only: [:index]
     end
   end
 

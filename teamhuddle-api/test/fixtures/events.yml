@@ -2,20 +2,12 @@
 events_001:
   id: 69
   name: Today
-  organization_id: 1
-  location_id: 6
-  comments: ''
+  organization_id: 11
+  location_id: 78
+  comments: it's awesome
   created_at: '2014-08-03 02:38:29.820725'
-  updated_at: '2014-08-03 02:38:29.820725'
+  updated_at: '2014-12-17 16:38:35.670667'
 events_002:
-  id: 70
-  name: BCIT Volleyball Dropin
-  organization_id: 4
-  location_id: 34
-  comments: ''
-  created_at: '2014-08-03 05:05:10.461093'
-  updated_at: '2014-08-03 05:05:10.461093'
-events_003:
   id: 71
   name: Creekside Fridays
   organization_id: 5
@@ -23,23 +15,7 @@ events_003:
   comments: ''
   created_at: '2014-09-17 05:33:30.763094'
   updated_at: '2014-09-17 05:33:30.763094'
-events_004:
-  id: 72
-  name: Monday Funday
-  organization_id: 2
-  location_id: 28
-  comments: ''
-  created_at: '2014-09-23 00:53:56.543376'
-  updated_at: '2014-09-23 00:53:56.543376'
-events_005:
-  id: 73
-  name: Wednesday Debug
-  organization_id: 4
-  location_id: 34
-  comments: ''
-  created_at: '2014-09-25 00:36:00.911448'
-  updated_at: '2014-09-25 00:36:00.911448'
-events_006:
+events_003:
   id: 74
   name: Thursday's Days Creekside
   organization_id: 2
@@ -47,7 +23,7 @@ events_006:
   comments: ''
   created_at: '2014-09-25 07:15:19.752815'
   updated_at: '2014-09-25 07:15:19.752815'
-events_007:
+events_004:
   id: 75
   name: Thursday BCIT
   organization_id: 4
@@ -55,7 +31,7 @@ events_007:
   comments: ''
   created_at: '2014-09-25 07:15:49.595522'
   updated_at: '2014-09-25 07:15:49.595522'
-events_008:
+events_005:
   id: 76
   name: Saturday Demo
   organization_id: 1
@@ -63,7 +39,7 @@ events_008:
   comments: ''
   created_at: '2014-09-27 20:54:24.173449'
   updated_at: '2014-09-27 20:54:24.173449'
-events_009:
+events_006:
   id: 78
   name: Marc's Complaint Dropin
   organization_id: 2
@@ -71,7 +47,7 @@ events_009:
   comments: ''
   created_at: '2014-09-27 20:55:20.309660'
   updated_at: '2014-09-27 20:55:20.309660'
-events_010:
+events_007:
   id: 80
   name: Jonny Demo
   organization_id: 2
@@ -79,7 +55,7 @@ events_010:
   comments: ''
   created_at: '2014-09-27 20:56:42.453358'
   updated_at: '2014-09-27 20:56:42.453358'
-events_011:
+events_008:
   id: 81
   name: Tuesday Test Run
   organization_id: 4
@@ -87,7 +63,7 @@ events_011:
   comments: ''
   created_at: '2014-10-01 02:16:59.456513'
   updated_at: '2014-10-01 02:16:59.456513'
-events_012:
+events_009:
   id: 82
   name: Marc Eje's Dropin
   organization_id: 5
@@ -95,7 +71,7 @@ events_012:
   comments: Expensive Ass Dropin
   created_at: '2014-10-01 07:48:22.578350'
   updated_at: '2014-10-01 07:48:22.578350'
-events_013:
+events_010:
   id: 84
   name: Who plays soccer
   organization_id: 1
@@ -103,7 +79,7 @@ events_013:
   comments: ''
   created_at: '2014-10-11 01:31:10.173350'
   updated_at: '2014-10-11 01:31:10.173350'
-events_014:
+events_011:
   id: 85
   name: Dragonboating
   organization_id: 1
@@ -111,7 +87,7 @@ events_014:
   comments: ''
   created_at: '2014-11-09 07:55:58.417005'
   updated_at: '2014-11-09 07:55:58.417005'
-events_015:
+events_012:
   id: 86
   name: POOPING
   organization_id: 1
@@ -119,7 +95,7 @@ events_015:
   comments: ''
   created_at: '2014-11-09 07:56:21.131670'
   updated_at: '2014-11-09 07:56:21.131670'
-events_016:
+events_013:
   id: 87
   name: Sunday funday
   organization_id: 4
@@ -127,7 +103,7 @@ events_016:
   comments: ''
   created_at: '2014-11-09 21:52:51.049337'
   updated_at: '2014-11-09 21:52:51.049337'
-events_017:
+events_014:
   id: 89
   name: sunzy funzy
   organization_id: 4
@@ -135,7 +111,7 @@ events_017:
   comments: ''
   created_at: '2014-11-09 22:07:22.413316'
   updated_at: '2014-11-09 22:07:22.413316'
-events_018:
+events_015:
   id: 90
   name: hockey rocks
   organization_id: 4
@@ -143,7 +119,7 @@ events_018:
   comments: ''
   created_at: '2014-11-09 22:16:23.922503'
   updated_at: '2014-11-09 22:16:23.922503'
-events_019:
+events_016:
   id: 91
   name: basketball rules
   organization_id: 4
@@ -151,7 +127,7 @@ events_019:
   comments: ''
   created_at: '2014-11-09 22:16:55.922340'
   updated_at: '2014-11-09 22:16:55.922340'
-events_020:
+events_017:
   id: 92
   name: the ebst dropin
   organization_id: 4
@@ -159,7 +135,7 @@ events_020:
   comments: ''
   created_at: '2014-11-10 03:04:31.306823'
   updated_at: '2014-11-10 03:04:31.306823'
-events_021:
+events_018:
   id: 93
   name: Mon-Bonsor
   organization_id: 9
@@ -167,7 +143,7 @@ events_021:
   comments: ''
   created_at: '2014-11-14 02:28:37.480657'
   updated_at: '2014-11-14 02:28:37.480657'
-events_022:
+events_019:
   id: 94
   name: Mon-Creek
   organization_id: 5
@@ -175,7 +151,7 @@ events_022:
   comments: ''
   created_at: '2014-11-14 02:31:29.488489'
   updated_at: '2014-11-14 02:31:29.488489'
-events_023:
+events_020:
   id: 95
   name: Mon-Dunbar
   organization_id: 5
@@ -183,7 +159,7 @@ events_023:
   comments: ''
   created_at: '2014-11-14 02:33:07.171203'
   updated_at: '2014-11-14 02:33:07.171203'
-events_024:
+events_021:
   id: 97
   name: source dropin
   organization_id: 11
@@ -191,7 +167,7 @@ events_024:
   comments: ''
   created_at: '2014-11-30 23:29:29.279900'
   updated_at: '2014-11-30 23:29:29.279900'
-events_025:
+events_022:
   id: 98
   name: source dropinzz
   organization_id: 11
@@ -199,7 +175,7 @@ events_025:
   comments: ''
   created_at: '2014-11-30 23:31:10.785487'
   updated_at: '2014-11-30 23:31:10.785487'
-events_026:
+events_023:
   id: 99
   name: Bonsor Soccer
   organization_id: 1
@@ -207,7 +183,7 @@ events_026:
   comments: ''
   created_at: '2014-12-01 00:56:03.989931'
   updated_at: '2014-12-01 00:56:03.989931'
-events_027:
+events_024:
   id: 100
   name: Bonsor Soccer 2
   organization_id: 1
@@ -215,7 +191,7 @@ events_027:
   comments: ''
   created_at: '2014-12-01 01:01:04.151562'
   updated_at: '2014-12-01 01:01:04.151562'
-events_028:
+events_025:
   id: 101
   name: Bonsor Soccer shizz
   organization_id: 11
@@ -223,7 +199,7 @@ events_028:
   comments: Adult Soccer
   created_at: '2014-12-01 01:28:41.107830'
   updated_at: '2014-12-01 01:28:41.107830'
-events_029:
+events_026:
   id: 102
   name: Bonsor Soccer Shizz1
   organization_id: 1
@@ -231,7 +207,7 @@ events_029:
   comments: Adult Soccer
   created_at: '2014-12-01 01:32:59.064513'
   updated_at: '2014-12-01 01:32:59.064513'
-events_030:
+events_027:
   id: 103
   name: Cam
   organization_id: 1
@@ -239,7 +215,7 @@ events_030:
   comments: ''
   created_at: '2014-12-01 02:49:38.604378'
   updated_at: '2014-12-01 02:49:38.604378'
-events_031:
+events_028:
   id: 104
   name: camrec2
   organization_id: 1
@@ -247,7 +223,7 @@ events_031:
   comments: ''
   created_at: '2014-12-01 02:58:09.589583'
   updated_at: '2014-12-01 02:58:09.589583'
-events_032:
+events_029:
   id: 105
   name: Night Hoops Jr Girls
   organization_id: 5
@@ -255,7 +231,7 @@ events_032:
   comments: ''
   created_at: '2014-12-02 01:06:37.898140'
   updated_at: '2014-12-02 01:06:37.898140'
-events_033:
+events_030:
   id: 107
   name: Preteen Basketball Open Gym
   organization_id: 5
@@ -263,7 +239,7 @@ events_033:
   comments: ''
   created_at: '2014-12-02 01:08:02.699574'
   updated_at: '2014-12-02 01:08:02.699574'
-events_034:
+events_031:
   id: 108
   name: Mon - Champlain (Fall)
   organization_id: 5
@@ -271,7 +247,7 @@ events_034:
   comments: ''
   created_at: '2014-12-02 01:10:38.649256'
   updated_at: '2014-12-02 01:10:38.649256'
-events_035:
+events_032:
   id: 109
   name: Mon - Champlain (Winter)
   organization_id: 5
@@ -279,7 +255,7 @@ events_035:
   comments: "$49 the whole season"
   created_at: '2014-12-02 01:11:53.771448'
   updated_at: '2014-12-02 01:11:53.771448'
-events_036:
+events_033:
   id: 110
   name: Tue - Coal (Noon)
   organization_id: 5
@@ -287,7 +263,7 @@ events_036:
   comments: ''
   created_at: '2014-12-02 01:13:44.531364'
   updated_at: '2014-12-02 01:13:44.531364'
-events_037:
+events_034:
   id: 111
   name: Sat - Coal
   organization_id: 5
@@ -295,7 +271,7 @@ events_037:
   comments: ''
   created_at: '2014-12-02 01:14:44.898307'
   updated_at: '2014-12-02 01:14:44.898307'
-events_038:
+events_035:
   id: 114
   name: Fri - Coal
   organization_id: 5
@@ -303,7 +279,7 @@ events_038:
   comments: ''
   created_at: '2014-12-02 01:16:18.706263'
   updated_at: '2014-12-02 01:16:18.706263'
-events_039:
+events_036:
   id: 115
   name: Wed - Coal
   organization_id: 5
@@ -311,7 +287,7 @@ events_039:
   comments: ''
   created_at: '2014-12-02 01:17:05.057704'
   updated_at: '2014-12-02 01:17:05.057704'
-events_040:
+events_037:
   id: 116
   name: Mon - Coal
   organization_id: 5
@@ -319,7 +295,7 @@ events_040:
   comments: ''
   created_at: '2014-12-02 01:17:44.138407'
   updated_at: '2014-12-02 01:17:44.138407'
-events_041:
+events_038:
   id: 117
   name: Wed - Creekside
   organization_id: 5
@@ -327,7 +303,7 @@ events_041:
   comments: ''
   created_at: '2014-12-02 01:19:42.184459'
   updated_at: '2014-12-02 01:19:42.184459'
-events_042:
+events_039:
   id: 119
   name: Wed - Creekside (Winter)
   organization_id: 5
@@ -335,7 +311,7 @@ events_042:
   comments: ''
   created_at: '2014-12-02 01:20:43.800506'
   updated_at: '2014-12-02 01:20:43.800506'
-events_043:
+events_040:
   id: 120
   name: Tue - Creekside (Fall)
   organization_id: 5
@@ -343,7 +319,7 @@ events_043:
   comments: ''
   created_at: '2014-12-02 01:22:27.834259'
   updated_at: '2014-12-02 01:22:27.834259'
-events_044:
+events_041:
   id: 121
   name: Tue - Creekside (Winter)
   organization_id: 5
@@ -351,7 +327,7 @@ events_044:
   comments: ''
   created_at: '2014-12-02 01:23:06.747585'
   updated_at: '2014-12-02 01:23:06.747585'
-events_045:
+events_042:
   id: 122
   name: Wed - Dunbar Coed (Fall)
   organization_id: 5
@@ -359,7 +335,7 @@ events_045:
   comments: ''
   created_at: '2014-12-02 01:25:13.300401'
   updated_at: '2014-12-02 01:25:13.300401'
-events_046:
+events_043:
   id: 123
   name: Wed - Dunbar Coed (Winter)
   organization_id: 5
@@ -367,7 +343,7 @@ events_046:
   comments: ''
   created_at: '2014-12-02 01:25:59.020244'
   updated_at: '2014-12-02 01:25:59.020244'
-events_047:
+events_044:
   id: 124
   name: Wed - False 3 on 3
   organization_id: 5
@@ -375,7 +351,7 @@ events_047:
   comments: ''
   created_at: '2014-12-02 01:27:07.046435'
   updated_at: '2014-12-02 01:27:07.046435'
-events_048:
+events_045:
   id: 125
   name: Wed - Hastings Half Court
   organization_id: 5
@@ -383,7 +359,7 @@ events_048:
   comments: ''
   created_at: '2014-12-02 01:28:08.045141'
   updated_at: '2014-12-02 01:28:08.045141'
-events_049:
+events_046:
   id: 126
   name: Thu - Hastings Full Court
   organization_id: 5
@@ -391,7 +367,7 @@ events_049:
   comments: ''
   created_at: '2014-12-02 01:28:54.424477'
   updated_at: '2014-12-02 01:28:54.424477'
-events_050:
+events_047:
   id: 127
   name: Thu - Hillcrest Adult (Fall)
   organization_id: 5
@@ -399,7 +375,7 @@ events_050:
   comments: ''
   created_at: '2014-12-02 01:30:11.802496'
   updated_at: '2014-12-02 01:30:11.802496'
-events_051:
+events_048:
   id: 128
   name: Thu - Hillcrest Adult (Winter)
   organization_id: 5
@@ -407,7 +383,7 @@ events_051:
   comments: ''
   created_at: '2014-12-02 01:30:58.936960'
   updated_at: '2014-12-02 01:30:58.936960'
-events_052:
+events_049:
   id: 129
   name: Thu - Hillcrest Adult (Spring)
   organization_id: 5
@@ -415,7 +391,7 @@ events_052:
   comments: ''
   created_at: '2014-12-02 01:31:43.366304'
   updated_at: '2014-12-02 01:31:43.366304'
-events_053:
+events_050:
   id: 130
   name: Fri - Brit (Fall)
   organization_id: 5
@@ -423,7 +399,7 @@ events_053:
   comments: ''
   created_at: '2014-12-04 18:56:55.373907'
   updated_at: '2014-12-04 18:56:55.373907'
-events_054:
+events_051:
   id: 131
   name: Fri - Brit (Win)
   organization_id: 5
@@ -431,7 +407,7 @@ events_054:
   comments: ''
   created_at: '2014-12-04 18:57:49.846417'
   updated_at: '2014-12-04 18:57:49.846417'
-events_055:
+events_052:
   id: 133
   name: Thu - Hillcrest Adult (Winter)
   organization_id: 11
@@ -439,7 +415,7 @@ events_055:
   comments: ''
   created_at: '2014-12-04 18:59:16.490145'
   updated_at: '2014-12-04 18:59:16.490145'
-events_056:
+events_053:
   id: 134
   name: Thu - Brit (Win)
   organization_id: 5
@@ -447,7 +423,7 @@ events_056:
   comments: ''
   created_at: '2014-12-04 19:01:27.950703'
   updated_at: '2014-12-04 19:01:27.950703'
-events_057:
+events_054:
   id: 135
   name: Fri - Brit (Win)
   organization_id: 5
@@ -455,7 +431,7 @@ events_057:
   comments: ''
   created_at: '2014-12-04 19:03:01.939746'
   updated_at: '2014-12-04 19:03:01.939746'
-events_058:
+events_055:
   id: 136
   name: Tue - Brit (Win)
   organization_id: 5
@@ -463,7 +439,7 @@ events_058:
   comments: ''
   created_at: '2014-12-04 19:04:25.223671'
   updated_at: '2014-12-04 19:04:25.223671'
-events_059:
+events_056:
   id: 137
   name: Sat - Coal (Win)
   organization_id: 5
@@ -471,7 +447,7 @@ events_059:
   comments: ''
   created_at: '2014-12-04 19:05:59.364826'
   updated_at: '2014-12-04 19:05:59.364826'
-events_060:
+events_057:
   id: 138
   name: Tue - Coal (Win)
   organization_id: 5
@@ -479,7 +455,7 @@ events_060:
   comments: ''
   created_at: '2014-12-04 19:07:12.828336'
   updated_at: '2014-12-04 19:07:12.828336'
-events_061:
+events_058:
   id: 139
   name: Tue Late - Coal (Win)
   organization_id: 5
@@ -487,7 +463,7 @@ events_061:
   comments: ''
   created_at: '2014-12-04 19:09:28.707242'
   updated_at: '2014-12-04 19:09:28.707242'
-events_062:
+events_059:
   id: 140
   name: Mon - Creek (Win)
   organization_id: 5
@@ -495,7 +471,7 @@ events_062:
   comments: ''
   created_at: '2014-12-04 19:10:53.099188'
   updated_at: '2014-12-04 19:10:53.099188'
-events_063:
+events_060:
   id: 141
   name: Tue - Creek (Winter)
   organization_id: 5
@@ -503,7 +479,7 @@ events_063:
   comments: ''
   created_at: '2014-12-04 19:12:13.889027'
   updated_at: '2014-12-04 19:12:13.889027'
-events_064:
+events_061:
   id: 142
   name: Thu - Creek (Win)
   organization_id: 5
@@ -511,7 +487,7 @@ events_064:
   comments: ''
   created_at: '2014-12-04 19:13:23.973248'
   updated_at: '2014-12-04 19:13:23.973248'
-events_065:
+events_062:
   id: 143
   name: Fri - Creek (Win)
   organization_id: 5
@@ -519,7 +495,7 @@ events_065:
   comments: ''
   created_at: '2014-12-04 19:14:41.626614'
   updated_at: '2014-12-04 19:14:41.626614'
-events_066:
+events_063:
   id: 144
   name: Mon - Dunbar (Win)
   organization_id: 5
@@ -527,7 +503,7 @@ events_066:
   comments: ''
   created_at: '2014-12-04 19:16:59.260022'
   updated_at: '2014-12-04 19:16:59.260022'
-events_067:
+events_064:
   id: 145
   name: Fri Youth - Hastings (Win)
   organization_id: 5
@@ -535,7 +511,7 @@ events_067:
   comments: Youth Ages 13-18
   created_at: '2014-12-04 19:18:53.721386'
   updated_at: '2014-12-04 19:18:53.721386'
-events_068:
+events_065:
   id: 146
   name: Wed - Hilcrest (Win)
   organization_id: 5
@@ -543,7 +519,7 @@ events_068:
   comments: ''
   created_at: '2014-12-04 19:21:05.859293'
   updated_at: '2014-12-04 19:21:05.859293'
-events_069:
+events_066:
   id: 147
   name: Thu - Kits (Win)
   organization_id: 5
@@ -551,7 +527,7 @@ events_069:
   comments: ''
   created_at: '2014-12-04 19:22:35.010350'
   updated_at: '2014-12-04 19:22:35.010350'
-events_070:
+events_067:
   id: 148
   name: Fri - Kits (Win)
   organization_id: 5
@@ -559,7 +535,7 @@ events_070:
   comments: Kitsilano High School
   created_at: '2014-12-04 19:25:39.486893'
   updated_at: '2014-12-04 19:25:39.486893'
-events_071:
+events_068:
   id: 149
   name: Tue - Kits (Win)
   organization_id: 5
@@ -567,7 +543,7 @@ events_071:
   comments: ''
   created_at: '2014-12-04 19:26:45.045417'
   updated_at: '2014-12-04 19:26:45.045417'
-events_072:
+events_069:
   id: 150
   name: Thu - Brit (Win)
   organization_id: 5
@@ -575,7 +551,7 @@ events_072:
   comments: ''
   created_at: '2014-12-04 19:28:03.505417'
   updated_at: '2014-12-04 19:28:03.505417'
-events_073:
+events_070:
   id: 151
   name: Thu - Creek (Win)
   organization_id: 5
@@ -583,7 +559,7 @@ events_073:
   comments: ''
   created_at: '2014-12-04 19:29:29.706103'
   updated_at: '2014-12-04 19:29:29.706103'
-events_074:
+events_071:
   id: 152
   name: Fri Youth- Marpole (Win)
   organization_id: 5
@@ -591,7 +567,7 @@ events_074:
   comments: Youth Drop-in
   created_at: '2014-12-04 19:31:37.373219'
   updated_at: '2014-12-04 19:31:37.373219'
-events_075:
+events_072:
   id: 153
   name: Wed - Marpole (Win)
   organization_id: 5
@@ -599,7 +575,7 @@ events_075:
   comments: ''
   created_at: '2014-12-04 19:32:58.302751'
   updated_at: '2014-12-04 19:32:58.302751'
-events_076:
+events_073:
   id: 154
   name: Mon - Mount (Win)
   organization_id: 5
@@ -607,7 +583,7 @@ events_076:
   comments: ''
   created_at: '2014-12-04 19:34:35.739987'
   updated_at: '2014-12-04 19:34:35.739987'
-events_077:
+events_074:
   id: 155
   name: Mon - Mount (Spring)
   organization_id: 5
@@ -615,7 +591,7 @@ events_077:
   comments: ''
   created_at: '2014-12-04 19:35:41.359547'
   updated_at: '2014-12-04 19:35:41.359547'
-events_078:
+events_075:
   id: 156
   name: Wed - Round (Win)
   organization_id: 5
@@ -623,7 +599,7 @@ events_078:
   comments: ''
   created_at: '2014-12-04 19:37:18.136663'
   updated_at: '2014-12-04 19:37:18.136663'
-events_079:
+events_076:
   id: 157
   name: Wed - Round (Win)
   organization_id: 5
@@ -631,7 +607,7 @@ events_079:
   comments: ''
   created_at: '2014-12-04 19:39:04.947052'
   updated_at: '2014-12-04 19:39:04.947052'
-events_080:
+events_077:
   id: 158
   name: Wed Late - Round (Win)
   organization_id: 5
@@ -639,7 +615,7 @@ events_080:
   comments: ''
   created_at: '2014-12-04 19:40:03.143303'
   updated_at: '2014-12-04 19:40:03.143303'
-events_081:
+events_078:
   id: 159
   name: Sun - Round (Win)
   organization_id: 5
@@ -647,7 +623,7 @@ events_081:
   comments: ''
   created_at: '2014-12-04 19:41:19.099452'
   updated_at: '2014-12-04 19:41:19.099452'
-events_082:
+events_079:
   id: 160
   name: Sun Late - Round (Win)
   organization_id: 5
@@ -655,7 +631,7 @@ events_082:
   comments: ''
   created_at: '2014-12-04 19:42:23.790207'
   updated_at: '2014-12-04 19:42:23.790207'
-events_083:
+events_080:
   id: 161
   name: Wed - Sunset (Win)
   organization_id: 5
@@ -663,7 +639,7 @@ events_083:
   comments: ''
   created_at: '2014-12-04 19:43:42.943636'
   updated_at: '2014-12-04 19:43:42.943636'
-events_084:
+events_081:
   id: 162
   name: Thu - Trout (Win)
   organization_id: 5
@@ -671,7 +647,7 @@ events_084:
   comments: ''
   created_at: '2014-12-04 19:45:43.496390'
   updated_at: '2014-12-04 19:45:43.496390'
-events_085:
+events_082:
   id: 163
   name: Thu - Trout (Win)
   organization_id: 5
@@ -679,15 +655,7 @@ events_085:
   comments: ''
   created_at: '2014-12-04 19:46:30.078219'
   updated_at: '2014-12-04 19:46:30.078219'
-events_086:
-  id: 164
-  name: Sun - Trout (Win)
-  organization_id: 5
-  location_id: 38
-  comments: ''
-  created_at: '2014-12-04 19:47:34.999987'
-  updated_at: '2014-12-04 19:47:34.999987'
-events_087:
+events_083:
   id: 165
   name: Wed - West Point (Win)
   organization_id: 5
@@ -695,7 +663,7 @@ events_087:
   comments: ''
   created_at: '2014-12-04 19:52:21.279062'
   updated_at: '2014-12-04 19:52:21.279062'
-events_088:
+events_084:
   id: 166
   name: Tue Noon - McDougall (Win)
   organization_id: 17
@@ -703,7 +671,7 @@ events_088:
   comments: ''
   created_at: '2014-12-04 20:51:15.896770'
   updated_at: '2014-12-04 20:51:15.896770'
-events_089:
+events_085:
   id: 167
   name: Thu Noon - McDougall (Win)
   organization_id: 17
@@ -711,7 +679,7 @@ events_089:
   comments: ''
   created_at: '2014-12-04 20:51:37.271733'
   updated_at: '2014-12-04 20:51:37.271733'
-events_090:
+events_086:
   id: 168
   name: Mon - McDougall (Win)
   organization_id: 17
@@ -719,7 +687,7 @@ events_090:
   comments: ''
   created_at: '2014-12-04 20:54:02.539970'
   updated_at: '2014-12-04 20:54:02.539970'
-events_091:
+events_087:
   id: 169
   name: Mon - McDougall (Spring)
   organization_id: 17
@@ -727,7 +695,7 @@ events_091:
   comments: ''
   created_at: '2014-12-04 20:55:00.271660'
   updated_at: '2014-12-04 20:55:00.271660'
-events_092:
+events_088:
   id: 170
   name: Mon - McDougall (Winter)
   organization_id: 17
@@ -735,7 +703,7 @@ events_092:
   comments: ''
   created_at: '2014-12-04 20:55:51.771204'
   updated_at: '2014-12-04 20:55:51.771204'
-events_093:
+events_089:
   id: 171
   name: Fri - McDougall (Winter)
   organization_id: 17
@@ -743,7 +711,7 @@ events_093:
   comments: ''
   created_at: '2014-12-04 20:56:29.210528'
   updated_at: '2014-12-04 20:56:29.210528'
-events_094:
+events_090:
   id: 172
   name: Fri - McDougall (Spring)
   organization_id: 17
@@ -751,7 +719,7 @@ events_094:
   comments: ''
   created_at: '2014-12-04 20:56:56.999017'
   updated_at: '2014-12-04 20:56:56.999017'
-events_095:
+events_091:
   id: 173
   name: Thu - McDougall (Spring)
   organization_id: 17
@@ -759,7 +727,7 @@ events_095:
   comments: ''
   created_at: '2014-12-04 20:58:38.151709'
   updated_at: '2014-12-04 20:58:38.151709'
-events_096:
+events_092:
   id: 174
   name: Thu - McDougall (Winter)
   organization_id: 17
@@ -767,7 +735,7 @@ events_096:
   comments: ''
   created_at: '2014-12-04 20:59:13.957168'
   updated_at: '2014-12-04 20:59:13.957168'
-events_097:
+events_093:
   id: 175
   name: Sun - McDougall (Winter)
   organization_id: 17
@@ -775,7 +743,7 @@ events_097:
   comments: ''
   created_at: '2014-12-04 20:59:52.724606'
   updated_at: '2014-12-04 20:59:52.724606'
-events_098:
+events_094:
   id: 176
   name: Sun - McDougall (Spring)
   organization_id: 17
@@ -783,7 +751,7 @@ events_098:
   comments: ''
   created_at: '2014-12-04 21:00:17.215852'
   updated_at: '2014-12-04 21:00:17.215852'
-events_099:
+events_095:
   id: 177
   name: Tue - McDougall (Spring)
   organization_id: 17
@@ -791,7 +759,7 @@ events_099:
   comments: ''
   created_at: '2014-12-04 21:01:17.164674'
   updated_at: '2014-12-04 21:01:17.164674'
-events_100:
+events_096:
   id: 178
   name: Tue - McDougall (Winter)
   organization_id: 17
@@ -799,7 +767,7 @@ events_100:
   comments: ''
   created_at: '2014-12-04 21:01:39.172422'
   updated_at: '2014-12-04 21:01:39.172422'
-events_101:
+events_097:
   id: 179
   name: Tue - McDougall (Spring)
   organization_id: 17
@@ -807,7 +775,7 @@ events_101:
   comments: ''
   created_at: '2014-12-04 21:02:11.679330'
   updated_at: '2014-12-04 21:02:11.679330'
-events_102:
+events_098:
   id: 180
   name: Mon - McDougall (Winter)
   organization_id: 17
@@ -815,7 +783,7 @@ events_102:
   comments: ''
   created_at: '2014-12-04 23:35:03.909246'
   updated_at: '2014-12-04 23:35:03.909246'
-events_103:
+events_099:
   id: 181
   name: Wed - McDougall (Winter)
   organization_id: 17
@@ -823,7 +791,7 @@ events_103:
   comments: ''
   created_at: '2014-12-04 23:35:35.280369'
   updated_at: '2014-12-04 23:35:35.280369'
-events_104:
+events_100:
   id: 182
   name: Fri - McDougall (Winter)
   organization_id: 17
@@ -831,7 +799,7 @@ events_104:
   comments: ''
   created_at: '2014-12-04 23:35:46.335449'
   updated_at: '2014-12-04 23:35:46.335449'
-events_105:
+events_101:
   id: 183
   name: Mon - McDougall (Winter)
   organization_id: 17
@@ -839,7 +807,7 @@ events_105:
   comments: ''
   created_at: '2014-12-04 23:36:48.720305'
   updated_at: '2014-12-04 23:36:48.720305'
-events_106:
+events_102:
   id: 184
   name: Thu - North Shore (Winter)
   organization_id: 17
@@ -847,7 +815,7 @@ events_106:
   comments: ''
   created_at: '2014-12-04 23:38:02.286136'
   updated_at: '2014-12-04 23:38:02.286136'
-events_107:
+events_103:
   id: 185
   name: Mon - North Shore (Winter)
   organization_id: 17
@@ -855,3 +823,2856 @@ events_107:
   comments: ''
   created_at: '2014-12-04 23:38:22.321454'
   updated_at: '2014-12-04 23:38:22.321454'
+events_104:
+  id: 186
+  name: Mon - Kensington (Winter)
+  organization_id: 5
+  location_id: 48
+  comments: ''
+  created_at: '2014-12-09 03:08:36.885358'
+  updated_at: '2014-12-09 03:08:36.885358'
+events_105:
+  id: 187
+  name: Sat - Kerrisdale (Winter)
+  organization_id: 5
+  location_id: 49
+  comments: ''
+  created_at: '2014-12-09 03:10:11.047802'
+  updated_at: '2014-12-09 03:10:11.047802'
+events_106:
+  id: 188
+  name: Sat - Kerrisdale (Winter)
+  organization_id: 5
+  location_id: 49
+  comments: ''
+  created_at: '2014-12-09 03:11:20.762876'
+  updated_at: '2014-12-09 03:11:20.762876'
+events_107:
+  id: 189
+  name: Fri - Kerrisdale (Winter)
+  organization_id: 5
+  location_id: 49
+  comments: 13-18 yrs Drop-in
+  created_at: '2014-12-09 03:13:34.762241'
+  updated_at: '2014-12-09 03:13:34.762241'
+events_108:
+  id: 190
+  name: Thu - Kerrisdale (Winter)
+  organization_id: 5
+  location_id: 49
+  comments: ''
+  created_at: '2014-12-09 03:14:44.076339'
+  updated_at: '2014-12-09 03:14:44.076339'
+events_109:
+  id: 191
+  name: Sat - Kerrisdale (Winter)
+  organization_id: 5
+  location_id: 49
+  comments: ''
+  created_at: '2014-12-09 03:15:59.684243'
+  updated_at: '2014-12-09 03:15:59.684243'
+events_110:
+  id: 192
+  name: Mon - Killarney (Winter)
+  organization_id: 5
+  location_id: 51
+  comments: Youth - Open Full Gym
+  created_at: '2014-12-09 03:18:16.615154'
+  updated_at: '2014-12-09 03:18:16.615154'
+events_111:
+  id: 193
+  name: Sat - Killarney (Winter)
+  organization_id: 5
+  location_id: 51
+  comments: Youth - $1 Basketball Drop-in
+  created_at: '2014-12-09 03:20:37.650011'
+  updated_at: '2014-12-09 03:20:37.650011'
+events_112:
+  id: 194
+  name: Test - 1
+  organization_id: 10
+  location_id: 71
+  comments: ''
+  created_at: '2014-12-10 01:58:14.467448'
+  updated_at: '2014-12-10 01:58:14.467448'
+events_113:
+  id: 195
+  name: Test - 2
+  organization_id: 5
+  location_id: 35
+  comments: ''
+  created_at: '2014-12-10 02:00:16.334046'
+  updated_at: '2014-12-10 02:00:16.334046'
+events_114:
+  id: 196
+  name: Test - 3
+  organization_id: 16
+  location_id: 27
+  comments: ''
+  created_at: '2014-12-10 02:01:19.760468'
+  updated_at: '2014-12-10 02:01:19.760468'
+events_115:
+  id: 197
+  name: Test - 4
+  organization_id: 9
+  location_id: 6
+  comments: ''
+  created_at: '2014-12-10 02:02:59.539993'
+  updated_at: '2014-12-10 02:02:59.539993'
+events_116:
+  id: 198
+  name: Test - 5
+  organization_id: 9
+  location_id: 6
+  comments: ''
+  created_at: '2014-12-10 02:03:53.082140'
+  updated_at: '2014-12-10 02:03:53.082140'
+events_117:
+  id: 199
+  name: Test - 6
+  organization_id: 9
+  location_id: 6
+  comments: ''
+  created_at: '2014-12-10 02:05:06.458311'
+  updated_at: '2014-12-10 02:05:06.458311'
+events_118:
+  id: 200
+  name: Test - 7
+  organization_id: 9
+  location_id: 36
+  comments: ''
+  created_at: '2014-12-10 02:06:20.315121'
+  updated_at: '2014-12-10 02:06:20.315121'
+events_119:
+  id: 201
+  name: 'test '
+  organization_id: 10
+  location_id: 88
+  comments: ''
+  created_at: '2014-12-10 18:26:48.596689'
+  updated_at: '2014-12-10 18:26:48.596689'
+events_120:
+  id: 202
+  name: 'test '
+  organization_id: 10
+  location_id: 88
+  comments: ''
+  created_at: '2014-12-10 18:27:36.108038'
+  updated_at: '2014-12-10 18:27:36.108038'
+events_121:
+  id: 203
+  name: 'test '
+  organization_id: 10
+  location_id: 89
+  comments: ''
+  created_at: '2014-12-10 18:28:11.989462'
+  updated_at: '2014-12-10 18:28:11.989462'
+events_122:
+  id: 204
+  name: 'test '
+  organization_id: 10
+  location_id: 90
+  comments: ''
+  created_at: '2014-12-10 18:28:50.897856'
+  updated_at: '2014-12-10 18:28:50.897856'
+events_123:
+  id: 206
+  name: Test
+  organization_id: 10
+  location_id: 93
+  comments: ''
+  created_at: '2014-12-10 18:36:38.892613'
+  updated_at: '2014-12-10 18:36:38.892613'
+events_124:
+  id: 207
+  name: Test
+  organization_id: 10
+  location_id: 90
+  comments: ''
+  created_at: '2014-12-10 19:16:31.692661'
+  updated_at: '2014-12-10 19:16:31.692661'
+events_125:
+  id: 208
+  name: Test
+  organization_id: 10
+  location_id: 90
+  comments: ''
+  created_at: '2014-12-10 19:22:05.379444'
+  updated_at: '2014-12-10 19:22:05.379444'
+events_126:
+  id: 209
+  name: Test
+  organization_id: 5
+  location_id: 57
+  comments: Beginners only
+  created_at: '2014-12-10 19:23:22.085238'
+  updated_at: '2014-12-10 19:23:22.085238'
+events_127:
+  id: 210
+  name: Test
+  organization_id: 5
+  location_id: 52
+  comments: Very Rec
+  created_at: '2014-12-10 19:24:37.634423'
+  updated_at: '2014-12-10 19:24:37.634423'
+events_128:
+  id: 211
+  name: Test
+  organization_id: 5
+  location_id: 52
+  comments: ''
+  created_at: '2014-12-10 19:24:54.812970'
+  updated_at: '2014-12-10 19:24:54.812970'
+events_129:
+  id: 212
+  name: Test
+  organization_id: 5
+  location_id: 42
+  comments: ''
+  created_at: '2014-12-10 19:25:06.427666'
+  updated_at: '2014-12-10 19:25:06.427666'
+events_130:
+  id: 213
+  name: Test
+  organization_id: 5
+  location_id: 38
+  comments: ''
+  created_at: '2014-12-10 19:26:23.524847'
+  updated_at: '2014-12-10 19:26:23.524847'
+events_131:
+  id: 214
+  name: Test
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2014-12-10 19:30:03.911942'
+  updated_at: '2014-12-10 19:30:03.911942'
+events_132:
+  id: 215
+  name: Test
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2014-12-10 19:30:25.465703'
+  updated_at: '2014-12-10 19:30:25.465703'
+events_133:
+  id: 216
+  name: Test
+  organization_id: 5
+  location_id: 60
+  comments: Men's Dro-in
+  created_at: '2014-12-10 19:31:33.943472'
+  updated_at: '2014-12-10 19:31:33.943472'
+events_134:
+  id: 217
+  name: Test
+  organization_id: 18
+  location_id: 94
+  comments: ''
+  created_at: '2014-12-10 19:36:37.685578'
+  updated_at: '2014-12-10 19:36:37.685578'
+events_135:
+  id: 218
+  name: Test
+  organization_id: 18
+  location_id: 94
+  comments: ''
+  created_at: '2014-12-10 19:36:51.681653'
+  updated_at: '2014-12-10 19:36:51.681653'
+events_136:
+  id: 219
+  name: Test
+  organization_id: 9
+  location_id: 6
+  comments: ''
+  created_at: '2014-12-10 19:46:13.685658'
+  updated_at: '2014-12-10 19:46:13.685658'
+events_137:
+  id: 220
+  name: Test
+  organization_id: 9
+  location_id: 6
+  comments: ''
+  created_at: '2014-12-10 19:46:37.520292'
+  updated_at: '2014-12-10 19:46:37.520292'
+events_138:
+  id: 221
+  name: Test
+  organization_id: 5
+  location_id: 57
+  comments: ''
+  created_at: '2014-12-10 19:47:22.893158'
+  updated_at: '2014-12-10 19:47:22.893158'
+events_139:
+  id: 222
+  name: Test
+  organization_id: 5
+  location_id: 57
+  comments: ''
+  created_at: '2014-12-10 19:47:37.758834'
+  updated_at: '2014-12-10 19:47:37.758834'
+events_140:
+  id: 223
+  name: Test
+  organization_id: 5
+  location_id: 53
+  comments: ''
+  created_at: '2014-12-10 19:47:56.151910'
+  updated_at: '2014-12-10 19:47:56.151910'
+events_141:
+  id: 224
+  name: Test
+  organization_id: 5
+  location_id: 9
+  comments: ''
+  created_at: '2014-12-10 19:48:16.682299'
+  updated_at: '2014-12-10 19:48:16.682299'
+events_142:
+  id: 225
+  name: Test
+  organization_id: 5
+  location_id: 47
+  comments: ''
+  created_at: '2014-12-10 19:49:01.152630'
+  updated_at: '2014-12-10 19:49:01.152630'
+events_143:
+  id: 226
+  name: Tue - Poco (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: ''
+  created_at: '2014-12-11 01:21:29.153214'
+  updated_at: '2014-12-11 01:21:29.153214'
+events_144:
+  id: 227
+  name: Thu - Poco (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Everyone Welcome Ring, Stick and Puck
+  created_at: '2014-12-11 01:22:16.903181'
+  updated_at: '2014-12-11 01:22:16.903181'
+events_145:
+  id: 228
+  name: Tue - Poco (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Everyone Welcome Ring, Stick and Puck
+  created_at: '2014-12-11 01:22:27.438059'
+  updated_at: '2014-12-11 01:22:27.438059'
+events_146:
+  id: 229
+  name: Tue - Poco Ladies (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Ladies Daytime Hockey (19+ yrs)
+  created_at: '2014-12-11 01:23:34.827582'
+  updated_at: '2014-12-11 01:23:34.827582'
+events_147:
+  id: 230
+  name: Thu - Poco Ladies (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Ladies Daytime Hockey (19+ yrs)
+  created_at: '2014-12-11 01:24:04.164419'
+  updated_at: '2014-12-11 01:24:04.164419'
+events_148:
+  id: 231
+  name: Mon - Poco Day (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Youth/Adult Daytime Hockey
+  created_at: '2014-12-11 01:31:38.641445'
+  updated_at: '2014-12-11 01:31:38.641445'
+events_149:
+  id: 232
+  name: Tue - Poco Day (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Youth/Adult Daytime Hockey
+  created_at: '2014-12-11 01:31:57.593167'
+  updated_at: '2014-12-11 01:31:57.593167'
+events_150:
+  id: 233
+  name: Wed - Poco Day (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Youth/Adult Daytime Hockey
+  created_at: '2014-12-11 01:32:07.149909'
+  updated_at: '2014-12-11 01:32:07.149909'
+events_151:
+  id: 234
+  name: Thu - Poco Day (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Youth/Adult Daytime Hockey
+  created_at: '2014-12-11 01:32:18.634362'
+  updated_at: '2014-12-11 01:32:18.634362'
+events_152:
+  id: 235
+  name: Fri - Poco Day (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Youth/Adult Daytime Hockey
+  created_at: '2014-12-11 01:32:31.533460'
+  updated_at: '2014-12-11 01:32:31.533460'
+events_153:
+  id: 236
+  name: Fri - Poco Day (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Youth/Adult Daytime Hockey
+  created_at: '2014-12-11 01:32:53.758721'
+  updated_at: '2014-12-11 01:32:53.758721'
+events_154:
+  id: 237
+  name: Thu - Poco Adult (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Adult Evening Hockey (19+)
+  created_at: '2014-12-11 01:34:31.707536'
+  updated_at: '2014-12-11 01:34:31.707536'
+events_155:
+  id: 238
+  name: Sat - Poco Adult (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Adult Evening Hockey (19+)
+  created_at: '2014-12-11 01:37:09.356914'
+  updated_at: '2014-12-11 01:37:09.356914'
+events_156:
+  id: 239
+  name: Tue - Poco 45 (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Hockey (45yrs+)
+  created_at: '2014-12-11 01:39:16.373544'
+  updated_at: '2014-12-11 01:39:16.373544'
+events_157:
+  id: 240
+  name: Fri - Poco 45 (Winter)
+  organization_id: 19
+  location_id: 95
+  comments: Hockey (45yrs+)
+  created_at: '2014-12-11 01:40:02.772787'
+  updated_at: '2014-12-11 01:40:02.772787'
+events_158:
+  id: 241
+  name: Sun - Hyde (Winter)
+  organization_id: 19
+  location_id: 72
+  comments: ''
+  created_at: '2014-12-11 01:44:24.968111'
+  updated_at: '2014-12-11 01:44:24.968111'
+events_159:
+  id: 242
+  name: Sun - Hyde (Winter)
+  organization_id: 19
+  location_id: 72
+  comments: Youth/Adult
+  created_at: '2014-12-11 01:45:20.724200'
+  updated_at: '2014-12-11 01:45:20.724200'
+events_160:
+  id: 243
+  name: Tue - Hyde (Winter)
+  organization_id: 19
+  location_id: 72
+  comments: Youth/Adult
+  created_at: '2014-12-11 01:45:54.113626'
+  updated_at: '2014-12-11 01:45:54.113626'
+events_161:
+  id: 244
+  name: ''
+  organization_id: 11
+  location_id: 78
+  comments: ''
+  created_at: '2014-12-11 01:54:15.172837'
+  updated_at: '2014-12-11 01:54:15.172837'
+events_162:
+  id: 245
+  name: Test
+  organization_id: 19
+  location_id: 95
+  comments: Adults 45+
+  created_at: '2014-12-11 18:09:09.127203'
+  updated_at: '2014-12-11 18:09:09.127203'
+events_163:
+  id: 246
+  name: Test
+  organization_id: 19
+  location_id: 95
+  comments: Learn how to play
+  created_at: '2014-12-11 18:09:41.109336'
+  updated_at: '2014-12-11 18:09:41.109336'
+events_164:
+  id: 247
+  name: Test
+  organization_id: 19
+  location_id: 95
+  comments: Learn how to play
+  created_at: '2014-12-11 18:10:08.333009'
+  updated_at: '2014-12-11 18:10:08.333009'
+events_165:
+  id: 248
+  name: Test
+  organization_id: 5
+  location_id: 57
+  comments: Floor Hockey
+  created_at: '2014-12-11 18:10:33.618335'
+  updated_at: '2014-12-11 18:10:33.618335'
+events_166:
+  id: 249
+  name: Test
+  organization_id: 5
+  location_id: 50
+  comments: Floor Hockey
+  created_at: '2014-12-11 18:11:11.000685'
+  updated_at: '2014-12-11 18:11:11.000685'
+events_167:
+  id: 250
+  name: Test
+  organization_id: 10
+  location_id: 92
+  comments: Mens 45+
+  created_at: '2014-12-11 18:11:58.621713'
+  updated_at: '2014-12-11 18:11:58.621713'
+events_168:
+  id: 251
+  name: 'DMC : Drop in Hockey'
+  organization_id: 16
+  location_id: 77
+  comments: Please arrive at least 10 minutes prior to the start of the game to sign
+    in. If you are not here, you may lose your spot to someone on the waitlist
+  created_at: '2014-12-15 00:18:14.953339'
+  updated_at: '2014-12-15 00:18:14.953339'
+events_169:
+  id: 252
+  name: 'DMC : Stick & Puck'
+  organization_id: 16
+  location_id: 77
+  comments: "Maximum 30 skaters on the ice\r\nStudent or Government Issued Photo ID
+    is required for pinny rental\r\nFull gear is recommended for all participants\r\nAll
+    participants under 16 years of age must be accompanied by an adult\r\nFull gear
+    is required for participants under 16 years old\r\nPucks available for purchase
+    from the proshop (or bring your own)\r\nAnyone perceived to be under the influence
+    of drugs or alcohol will be refused entry\r\nGoalies, games and scrimmages are
+    not permitted during the session"
+  created_at: '2014-12-15 00:20:34.597087'
+  updated_at: '2014-12-15 00:20:34.597087'
+events_170:
+  id: 253
+  name: 'DMC : Family Hockey'
+  organization_id: 16
+  location_id: 77
+  comments: "Family Hockey is a fun way for parents and kids to play together in a
+    safe, toned down atmosphere! Helmets are required for all participants and all
+    adults must be accompanied by a child. It is recommended that all youth wear full
+    gear for their own safety. As this is a program geared towards children and youth
+    no slap shots or hard wrist shots are permitted during the session.\r\n\r\nStudent
+    or Government Issued Photo ID is required for pinny rental\r\nAnyone perceived
+    to be under the influence of drugs or alcohol will be refused entry\r\nPucks available
+    for purchase from the proshop (or bring your own)"
+  created_at: '2014-12-15 00:22:50.293487'
+  updated_at: '2014-12-15 00:22:50.293487'
+events_171:
+  id: 255
+  name: 'DMC : Drop in Hockey'
+  organization_id: 16
+  location_id: 77
+  comments: "To sign up, you must to call the proshop at 604-827-4324 to reserve your
+    spot. Spots are reserved on the day of only.\r\n\r\nFull equipment is required\r\nStudent
+    or Government Issued Photo ID is required for pinny rental\r\nMinimum age is 16
+    years\r\nAnyone perceived to be under the influence of drugs or alcohol will be
+    refused entry\r\nPlease arrive at least 10 minutes prior to the start of the game
+    to sign in. If you are not here, you may lose your spot to someone on the waitlist"
+  created_at: '2014-12-15 00:31:30.106207'
+  updated_at: '2014-12-15 00:31:30.106207'
+events_172:
+  id: 256
+  name: 'DMC : Drop in Hockey'
+  organization_id: 16
+  location_id: 77
+  comments: "Drop-In Hockey is a great way to keep on the ice regularly, to dust off
+    the skates, or for those looking to try the game for the first time. Regular sessions
+    run throughout the year for this non-contact drop-in program. You must sign up
+    to ensure your place on the roster.\r\n\r\nTo sign up, you must to call the proshop
+    at 604-827-4324 to reserve your spot. Spots are reserved on the day of only.\r\n\r\nFull
+    equipment is required\r\nStudent or Government Issued Photo ID is required for
+    pinny rental\r\nMinimum age is 16 years\r\nAnyone perceived to be under the influence
+    of drugs or alcohol will be refused entry\r\nPlease arrive at least 10 minutes
+    prior to the start of the game to sign in. If you are not here, you may lose your
+    spot to someone on the waitlist"
+  created_at: '2014-12-15 00:33:37.865814'
+  updated_at: '2014-12-15 00:33:37.865814'
+events_173:
+  id: 257
+  name: 'DMC : Drop in Hockey'
+  organization_id: 16
+  location_id: 77
+  comments: "Drop-In Hockey is a great way to keep on the ice regularly, to dust off
+    the skates, or for those looking to try the game for the first time. Regular sessions
+    run throughout the year for this non-contact drop-in program. You must sign up
+    to ensure your place on the roster.\r\n\r\nTo sign up, you must to call the proshop
+    at 604-827-4324 to reserve your spot. Spots are reserved on the day of only.\r\n\r\nFull
+    equipment is required\r\nStudent or Government Issued Photo ID is required for
+    pinny rental\r\nMinimum age is 16 years\r\nAnyone perceived to be under the influence
+    of drugs or alcohol will be refused entry\r\nPlease arrive at least 10 minutes
+    prior to the start of the game to sign in. If you are not here, you may lose your
+    spot to someone on the waitlist"
+  created_at: '2014-12-15 00:35:02.822071'
+  updated_at: '2014-12-15 00:35:02.822071'
+events_174:
+  id: 258
+  name: Adult Thursday Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:00:57.888061'
+  updated_at: '2014-12-15 05:00:57.888061'
+events_175:
+  id: 259
+  name: Adult Thursday Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:01:05.624520'
+  updated_at: '2014-12-15 05:01:05.624520'
+events_176:
+  id: 260
+  name: Adult Thursday Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:01:38.956832'
+  updated_at: '2014-12-15 05:01:38.956832'
+events_177:
+  id: 261
+  name: Adult Thursday Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:01:50.657797'
+  updated_at: '2014-12-15 05:01:50.657797'
+events_178:
+  id: 262
+  name: 'Adult Thursday Late Night Hockey '
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:04:22.140799'
+  updated_at: '2014-12-15 05:04:22.140799'
+events_179:
+  id: 263
+  name: 'Adult Thursday Late Night Hockey '
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:05:10.990117'
+  updated_at: '2014-12-15 05:05:10.990117'
+events_180:
+  id: 264
+  name: 'Adult Thursday Late Night Hockey '
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-15 05:05:18.909225'
+  updated_at: '2014-12-15 05:05:18.909225'
+events_181:
+  id: 265
+  name: ''
+  organization_id: 11
+  location_id: 78
+  comments: ''
+  created_at: '2014-12-15 05:08:09.173300'
+  updated_at: '2014-12-15 05:08:09.173300'
+events_182:
+  id: 266
+  name: Test
+  organization_id: 5
+  location_id: 56
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:14:28.477232'
+  updated_at: '2014-12-15 21:14:28.477232'
+events_183:
+  id: 267
+  name: Test
+  organization_id: 10
+  location_id: 90
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:14:49.162768'
+  updated_at: '2014-12-15 21:14:49.162768'
+events_184:
+  id: 268
+  name: Test
+  organization_id: 9
+  location_id: 6
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:15:35.614831'
+  updated_at: '2014-12-15 21:15:35.614831'
+events_185:
+  id: 269
+  name: Test
+  organization_id: 9
+  location_id: 9
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:15:49.914971'
+  updated_at: '2014-12-15 21:15:49.914971'
+events_186:
+  id: 270
+  name: Test
+  organization_id: 9
+  location_id: 47
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:16:15.054702'
+  updated_at: '2014-12-15 21:16:15.054702'
+events_187:
+  id: 271
+  name: Test
+  organization_id: 9
+  location_id: 57
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:16:29.455766'
+  updated_at: '2014-12-15 21:16:29.455766'
+events_188:
+  id: 272
+  name: Test
+  organization_id: 9
+  location_id: 51
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:16:43.793400'
+  updated_at: '2014-12-15 21:16:43.793400'
+events_189:
+  id: 273
+  name: Test
+  organization_id: 9
+  location_id: 36
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:16:53.207158'
+  updated_at: '2014-12-15 21:16:53.207158'
+events_190:
+  id: 274
+  name: Test
+  organization_id: 10
+  location_id: 93
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:17:23.075994'
+  updated_at: '2014-12-15 21:17:23.075994'
+events_191:
+  id: 275
+  name: Test
+  organization_id: 10
+  location_id: 72
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:18:01.867209'
+  updated_at: '2014-12-15 21:18:01.867209'
+events_192:
+  id: 276
+  name: Test
+  organization_id: 18
+  location_id: 94
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:18:27.058657'
+  updated_at: '2014-12-15 21:18:27.058657'
+events_193:
+  id: 277
+  name: Test
+  organization_id: 10
+  location_id: 88
+  comments: Sample Dropin
+  created_at: '2014-12-15 21:18:53.697827'
+  updated_at: '2014-12-15 21:18:53.697827'
+events_194:
+  id: 278
+  name: Coed Adult Drop In Hockey
+  organization_id: 26
+  location_id: 50
+  comments: "19 years and older, same day reservations and full gear is required.\r\nReserve
+    your spot by calling 604-257-6980 after 10:15am on the day of the program. To
+    keep your\r\nreservation, you must pay and sign in by 11:30am or risk losing your
+    spot. Goalies play for free and\r\ncan call at 10:00am to reserve their spot.
+    Maximum 20 players and 2 goalies. Starts September 30."
+  created_at: '2014-12-16 06:23:25.751467'
+  updated_at: '2014-12-16 06:23:25.751467'
+events_195:
+  id: 279
+  name: Coed Adult Drop In Hockey
+  organization_id: 26
+  location_id: 50
+  comments: "19 years and older, same day reservations and full gear is required.\r\nReserve
+    your spot by calling 604-257-6980 after 10:15am on the day of the program. To
+    keep your\r\nreservation, you must pay and sign in by 11:30am or risk losing your
+    spot. Goalies play for free and\r\ncan call at 10:00am to reserve their spot.
+    Maximum 20 players and 2 goalies. Starts September 30."
+  created_at: '2014-12-16 06:25:25.576565'
+  updated_at: '2014-12-16 06:25:25.576565'
+events_196:
+  id: 280
+  name: Adult Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-16 06:38:05.100358'
+  updated_at: '2014-12-16 06:38:05.100358'
+events_197:
+  id: 281
+  name: Adult Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-16 06:38:17.218785'
+  updated_at: '2014-12-16 06:38:17.218785'
+events_198:
+  id: 282
+  name: Adult Late Night Hockey
+  organization_id: 5
+  location_id: 35
+  comments: Full hockey equipment is mandatory. All levels welcome. Sign-up starts
+    at 9:30 pm at the rink.
+  created_at: '2014-12-16 06:43:27.669296'
+  updated_at: '2014-12-16 06:43:27.669296'
+events_199:
+  id: 283
+  name: Floor Hockey
+  organization_id: 5
+  location_id: 49
+  comments: "Please bring your own stick (plastic\r\nor composite). Shin guards and
+    eye\r\nprotection recommended. Goalies play\r\nfor free. Drop-in $5, space permitting"
+  created_at: '2014-12-16 06:47:04.410837'
+  updated_at: '2014-12-16 06:47:04.410837'
+events_200:
+  id: 284
+  name: ''
+  organization_id: 9
+  location_id: 59
+  comments: ''
+  created_at: '2014-12-16 08:11:56.211784'
+  updated_at: '2014-12-16 08:11:56.211784'
+events_201:
+  id: 285
+  name: ''
+  organization_id: 9
+  location_id: 59
+  comments: ''
+  created_at: '2014-12-16 08:12:31.323288'
+  updated_at: '2014-12-16 08:12:31.323288'
+events_202:
+  id: 286
+  name: ''
+  organization_id: 9
+  location_id: 59
+  comments: ''
+  created_at: '2014-12-16 08:12:43.649316'
+  updated_at: '2014-12-16 08:12:43.649316'
+events_203:
+  id: 287
+  name: ''
+  organization_id: 5
+  location_id: 40
+  comments: ''
+  created_at: '2014-12-17 01:49:44.443262'
+  updated_at: '2014-12-17 01:49:44.443262'
+events_204:
+  id: 288
+  name: Champlain Heights
+  organization_id: 5
+  location_id: 40
+  comments: ''
+  created_at: '2014-12-17 01:55:18.891600'
+  updated_at: '2014-12-17 01:55:18.891600'
+events_205:
+  id: 289
+  name: Champlain Heights
+  organization_id: 5
+  location_id: 40
+  comments: ''
+  created_at: '2014-12-17 01:56:49.419652'
+  updated_at: '2014-12-17 01:56:49.419652'
+events_206:
+  id: 290
+  name: Dunbar
+  organization_id: 5
+  location_id: 42
+  comments: "35 + years men\r\n30+ year women"
+  created_at: '2014-12-17 02:03:42.132225'
+  updated_at: '2014-12-17 02:03:42.132225'
+events_207:
+  id: 291
+  name: FalseCreek
+  organization_id: 5
+  location_id: 44
+  comments: Age 18 and Up
+  created_at: '2014-12-17 02:05:58.083668'
+  updated_at: '2014-12-17 02:05:58.083668'
+events_208:
+  id: 294
+  name: Sr Drop in Hockey
+  organization_id: 27
+  location_id: 121
+  comments: "Own Skates\r\nHockey Stick\r\nCSA Approved helmet with face mask\r\nElbow
+    pads\r\nShin Pads\r\nHockey gloves\r\nNeck Guard\r\nShoulder pads\r\nCup\r\nHockey
+    pants\r\nSuspenders\r\nHockey Socks\r\nGarter for socks"
+  created_at: '2014-12-30 21:19:54.332908'
+  updated_at: '2014-12-30 21:19:54.332908'
+events_209:
+  id: 296
+  name: Sr Drop in Hockey
+  organization_id: 27
+  location_id: 121
+  comments: "Own Skates\r\nHockey Stick\r\nCSA Approved helmet with face mask\r\nElbow
+    pads\r\nShin Pads\r\nHockey gloves\r\nNeck Guard\r\nShoulder pads\r\nCup\r\nHockey
+    pants\r\nSuspenders\r\nHockey Socks\r\nGarter for socks\r\n"
+  created_at: '2014-12-30 21:22:19.878867'
+  updated_at: '2014-12-30 21:22:19.878867'
+events_210:
+  id: 299
+  name: Sr Drop in Hockey
+  organization_id: 27
+  location_id: 121
+  comments: "Own Skates\r\nHockey Stick\r\nCSA Approved helmet with face mask\r\nElbow
+    pads\r\nShin Pads\r\nHockey gloves\r\nNeck Guard\r\nShoulder pads\r\nCup\r\nHockey
+    pants\r\nSuspenders\r\nHockey Socks\r\nGarter for socks"
+  created_at: '2014-12-30 21:23:49.428802'
+  updated_at: '2014-12-30 21:23:49.428802'
+events_211:
+  id: 300
+  name: Adult Drop in Hockey
+  organization_id: 27
+  location_id: 121
+  comments: "Own Skates\r\nHockey Stick\r\nCSA Approved helmet with face mask\r\nElbow
+    pads\r\nShin Pads\r\nHockey gloves\r\nNeck Guard\r\nShoulder pads\r\nCup\r\nHockey
+    pants\r\nSuspenders\r\nHockey Socks\r\nGarter for socks"
+  created_at: '2014-12-30 21:24:51.874252'
+  updated_at: '2014-12-30 21:24:51.874252'
+events_212:
+  id: 301
+  name: Adult Drop in Hockey
+  organization_id: 27
+  location_id: 121
+  comments: "Own Skates\r\nHockey Stick\r\nCSA Approved helmet with face mask\r\nElbow
+    pads\r\nShin Pads\r\nHockey gloves\r\nNeck Guard\r\nShoulder pads\r\nCup\r\nHockey
+    pants\r\nSuspenders\r\nHockey Socks\r\nGarter for socks"
+  created_at: '2014-12-30 21:25:06.247989'
+  updated_at: '2014-12-30 21:25:06.247989'
+events_213:
+  id: 302
+  name: Mon - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: ''
+  created_at: '2014-12-30 21:33:37.064761'
+  updated_at: '2014-12-30 21:33:37.064761'
+events_214:
+  id: 303
+  name: Wed - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: ''
+  created_at: '2014-12-30 21:34:36.532409'
+  updated_at: '2014-12-30 21:34:36.532409'
+events_215:
+  id: 304
+  name: Fri Day - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: ''
+  created_at: '2014-12-30 21:35:32.156641'
+  updated_at: '2014-12-30 21:35:32.156641'
+events_216:
+  id: 305
+  name: Fri - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: ''
+  created_at: '2014-12-30 21:36:10.374357'
+  updated_at: '2014-12-30 21:36:10.374357'
+events_217:
+  id: 306
+  name: Sun - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: ''
+  created_at: '2014-12-30 21:37:07.913841'
+  updated_at: '2014-12-30 21:37:07.913841'
+events_218:
+  id: 307
+  name: Wed - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: Adult 30+ Court 2
+  created_at: '2014-12-30 21:41:11.164168'
+  updated_at: '2014-12-30 21:41:11.164168'
+events_219:
+  id: 308
+  name: Tues - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: ''
+  created_at: '2014-12-30 21:42:56.809405'
+  updated_at: '2014-12-30 21:42:56.809405'
+events_220:
+  id: 309
+  name: Wed Day - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: ''
+  created_at: '2014-12-30 21:43:46.552884'
+  updated_at: '2014-12-30 21:43:46.552884'
+events_221:
+  id: 310
+  name: Sun - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: ''
+  created_at: '2014-12-30 21:44:45.412435'
+  updated_at: '2014-12-30 21:44:45.412435'
+events_222:
+  id: 311
+  name: Wed Women - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: Women's Drop-in
+  created_at: '2014-12-30 21:45:57.618057'
+  updated_at: '2014-12-30 21:45:57.618057'
+events_223:
+  id: 313
+  name: Sun - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: ''
+  created_at: '2014-12-30 21:47:43.192651'
+  updated_at: '2014-12-30 21:47:43.192651'
+events_224:
+  id: 314
+  name: Mon Early - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: Value Drop-in
+  created_at: '2014-12-30 21:52:43.315464'
+  updated_at: '2014-12-30 21:52:43.315464'
+events_225:
+  id: 315
+  name: Parent & Child Drop-in Hockey
+  organization_id: 29
+  location_id: 122
+  comments: Price covers adult and child
+  created_at: '2014-12-30 21:53:05.758554'
+  updated_at: '2014-12-30 21:53:05.758554'
+events_226:
+  id: 316
+  name: Tues Early - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: Value Drop-in
+  created_at: '2014-12-30 21:53:07.833641'
+  updated_at: '2014-12-30 21:53:07.833641'
+events_227:
+  id: 317
+  name: Thu Early - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: Value Drop-in
+  created_at: '2014-12-30 21:53:35.510151'
+  updated_at: '2014-12-30 21:53:35.510151'
+events_228:
+  id: 318
+  name: Fri Early - Cloverdale (Win)
+  organization_id: 10
+  location_id: 89
+  comments: Value Drop-in
+  created_at: '2014-12-30 21:53:53.788429'
+  updated_at: '2014-12-30 21:53:53.788429'
+events_229:
+  id: 319
+  name: Parent & Child Drop-in Hockey
+  organization_id: 29
+  location_id: 122
+  comments: Price covers adult and child
+  created_at: '2014-12-30 22:05:12.799772'
+  updated_at: '2014-12-30 22:05:12.799772'
+events_230:
+  id: 320
+  name: Mon Day- Chuck Bailey (Win)
+  organization_id: 10
+  location_id: 90
+  comments: ''
+  created_at: '2014-12-30 22:12:11.706092'
+  updated_at: '2014-12-30 22:12:11.706092'
+events_231:
+  id: 321
+  name: Mon - Chuck Bailey (Win)
+  organization_id: 10
+  location_id: 90
+  comments: ''
+  created_at: '2014-12-30 22:13:03.879802'
+  updated_at: '2014-12-30 22:13:03.879802'
+events_232:
+  id: 322
+  name: Thu - Chuck Bailey (Win)
+  organization_id: 10
+  location_id: 90
+  comments: ''
+  created_at: '2014-12-30 22:13:39.559467'
+  updated_at: '2014-12-30 22:13:39.559467'
+events_233:
+  id: 323
+  name: Sat Day- Chuck Bailey (Win)
+  organization_id: 10
+  location_id: 90
+  comments: ''
+  created_at: '2014-12-30 22:14:29.584017'
+  updated_at: '2014-12-30 22:14:29.584017'
+events_234:
+  id: 324
+  name: Wed - Chuck Bailey (Win)
+  organization_id: 10
+  location_id: 90
+  comments: ''
+  created_at: '2014-12-30 22:15:34.403706'
+  updated_at: '2014-12-30 22:15:34.403706'
+events_235:
+  id: 325
+  name: Fri - South Surrey (Win)
+  organization_id: 10
+  location_id: 88
+  comments: Youth Drop-in
+  created_at: '2014-12-30 22:19:18.774297'
+  updated_at: '2014-12-30 22:19:18.774297'
+events_236:
+  id: 326
+  name: Wed - South Surrey (Win)
+  organization_id: 10
+  location_id: 88
+  comments: ''
+  created_at: '2014-12-30 22:20:16.927141'
+  updated_at: '2014-12-30 22:20:16.927141'
+events_237:
+  id: 327
+  name: Thu - South Surrey (Win)
+  organization_id: 10
+  location_id: 88
+  comments: ''
+  created_at: '2014-12-30 22:20:43.133213'
+  updated_at: '2014-12-30 22:20:43.133213'
+events_238:
+  id: 328
+  name: Sun - South Surrey (Win)
+  organization_id: 10
+  location_id: 88
+  comments: ''
+  created_at: '2014-12-30 22:21:34.998130'
+  updated_at: '2014-12-30 22:21:34.998130'
+events_239:
+  id: 330
+  name: Thu - South Surrey (Win)
+  organization_id: 10
+  location_id: 88
+  comments: Value Drop-in
+  created_at: '2014-12-30 22:23:38.321487'
+  updated_at: '2014-12-30 22:23:38.321487'
+events_240:
+  id: 331
+  name: Mon - South Surrey (Win)
+  organization_id: 10
+  location_id: 88
+  comments: ''
+  created_at: '2014-12-30 22:24:51.505290'
+  updated_at: '2014-12-30 22:24:51.505290'
+events_241:
+  id: 332
+  name: Thu - South Surrey (Win)
+  organization_id: 10
+  location_id: 88
+  comments: Value Drop-in
+  created_at: '2014-12-30 22:27:04.322079'
+  updated_at: '2014-12-30 22:27:04.322079'
+events_242:
+  id: 335
+  name: Floor Hockey (12yr - 18yr)
+  organization_id: 29
+  location_id: 122
+  comments: 'Bring your own equipment and join us for a game. Location: Ag Rec'
+  created_at: '2014-12-30 22:40:14.648936'
+  updated_at: '2014-12-30 22:40:14.648936'
+events_243:
+  id: 336
+  name: Tue - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: ''
+  created_at: '2014-12-30 22:45:11.454172'
+  updated_at: '2014-12-30 22:45:11.454172'
+events_244:
+  id: 337
+  name: Tue 2 - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: ''
+  created_at: '2014-12-30 22:45:41.821076'
+  updated_at: '2014-12-30 22:45:41.821076'
+events_245:
+  id: 338
+  name: Wed - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: ''
+  created_at: '2014-12-30 22:46:13.132665'
+  updated_at: '2014-12-30 22:46:13.132665'
+events_246:
+  id: 339
+  name: Fri - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: ''
+  created_at: '2014-12-30 22:46:47.559255'
+  updated_at: '2014-12-30 22:46:47.559255'
+events_247:
+  id: 340
+  name: Sat - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: ''
+  created_at: '2014-12-30 22:47:35.387638'
+  updated_at: '2014-12-30 22:47:35.387638'
+events_248:
+  id: 341
+  name: Sun - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: ''
+  created_at: '2014-12-30 22:48:19.893836'
+  updated_at: '2014-12-30 22:48:19.893836'
+events_249:
+  id: 343
+  name: Mon Early - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Value Drop-in (Open)
+  created_at: '2014-12-30 22:51:34.129678'
+  updated_at: '2014-12-30 22:51:34.129678'
+events_250:
+  id: 344
+  name: Tues Early - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Value Drop-in (Open)
+  created_at: '2014-12-30 22:51:48.180477'
+  updated_at: '2014-12-30 22:51:48.180477'
+events_251:
+  id: 345
+  name: Wed Early - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Value Drop-in (Open)
+  created_at: '2014-12-30 22:51:55.749394'
+  updated_at: '2014-12-30 22:51:55.749394'
+events_252:
+  id: 346
+  name: Thu Early - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Value Drop-in (Open)
+  created_at: '2014-12-30 22:52:05.753131'
+  updated_at: '2014-12-30 22:52:05.753131'
+events_253:
+  id: 347
+  name: Fri Early - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Value Drop-in (Open)
+  created_at: '2014-12-30 22:52:15.658918'
+  updated_at: '2014-12-30 22:52:15.658918'
+events_254:
+  id: 348
+  name: Mon Noon - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Value Drop-in (Open)
+  created_at: '2014-12-30 22:53:01.296431'
+  updated_at: '2014-12-30 22:53:01.296431'
+events_255:
+  id: 349
+  name: Wed Noon - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Value Drop-in (Open)
+  created_at: '2014-12-30 22:53:12.489366'
+  updated_at: '2015-01-08 20:08:32.957092'
+events_256:
+  id: 350
+  name: Fri Noon - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Value Drop-in (Open)
+  created_at: '2014-12-30 22:53:29.597595'
+  updated_at: '2014-12-30 22:53:29.597595'
+events_257:
+  id: 351
+  name: Tues Early 2 - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Value Drop-in (Open)
+  created_at: '2014-12-30 22:54:00.729990'
+  updated_at: '2014-12-30 22:54:00.729990'
+events_258:
+  id: 352
+  name: Thu Early 2 - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Value Drop-in (Open)
+  created_at: '2014-12-30 22:54:13.840904'
+  updated_at: '2014-12-30 22:54:13.840904'
+events_259:
+  id: 353
+  name: Tues - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: ''
+  created_at: '2014-12-30 22:54:55.534370'
+  updated_at: '2015-01-07 22:10:40.953332'
+events_260:
+  id: 354
+  name: Fri - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: ''
+  created_at: '2014-12-30 22:55:28.458484'
+  updated_at: '2015-01-07 22:11:12.082995'
+events_261:
+  id: 355
+  name: Sun - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: ''
+  created_at: '2014-12-30 22:56:10.029441'
+  updated_at: '2015-01-07 22:11:34.040991'
+events_262:
+  id: 356
+  name: Wed - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Family Drop-in
+  created_at: '2014-12-30 22:57:01.247818'
+  updated_at: '2015-01-07 22:11:51.920785'
+events_263:
+  id: 357
+  name: Sun - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Family Drop-in
+  created_at: '2014-12-30 22:57:33.548719'
+  updated_at: '2015-01-07 22:12:07.877682'
+events_264:
+  id: 358
+  name: Wed - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Fills up early, register early. 3 Courts, 7 per team, 42 sports
+  created_at: '2014-12-30 22:58:13.803458'
+  updated_at: '2015-01-07 21:02:51.282758'
+events_265:
+  id: 359
+  name: Sun - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: ''
+  created_at: '2014-12-30 22:58:42.425931'
+  updated_at: '2015-01-07 22:05:58.266046'
+events_266:
+  id: 360
+  name: Wed Noon - Guildford (Win)
+  organization_id: 10
+  location_id: 71
+  comments: Value Drop-in (Open)
+  created_at: '2014-12-30 22:59:26.584052'
+  updated_at: '2015-01-07 22:06:34.043334'
+events_267:
+  id: 361
+  name: Tues Early - Newton (Win)
+  organization_id: 10
+  location_id: 124
+  comments: ''
+  created_at: '2014-12-30 23:07:03.640016'
+  updated_at: '2014-12-30 23:07:03.640016'
+events_268:
+  id: 362
+  name: Thu Early - Newton (Win)
+  organization_id: 10
+  location_id: 124
+  comments: ''
+  created_at: '2014-12-30 23:14:26.187361'
+  updated_at: '2014-12-30 23:14:26.187361'
+events_269:
+  id: 364
+  name: Tues - Newton (Win)
+  organization_id: 10
+  location_id: 124
+  comments: ''
+  created_at: '2014-12-30 23:15:05.891365'
+  updated_at: '2014-12-30 23:15:05.891365'
+events_270:
+  id: 365
+  name: Sun - Newton (Win)
+  organization_id: 10
+  location_id: 124
+  comments: Half-Gym
+  created_at: '2014-12-30 23:16:17.252428'
+  updated_at: '2014-12-30 23:16:17.252428'
+events_271:
+  id: 366
+  name: Mon - Newton (Win)
+  organization_id: 10
+  location_id: 124
+  comments: ''
+  created_at: '2014-12-30 23:16:56.895945'
+  updated_at: '2014-12-30 23:16:56.895945'
+events_272:
+  id: 368
+  name: Sun - Newton (Win)
+  organization_id: 11
+  location_id: 122
+  comments: ''
+  created_at: '2014-12-30 23:18:05.517663'
+  updated_at: '2015-01-08 21:47:31.204314'
+events_273:
+  id: 369
+  name: Tues - Fraser (Win)
+  organization_id: 10
+  location_id: 93
+  comments: ''
+  created_at: '2014-12-30 23:20:47.826172'
+  updated_at: '2014-12-30 23:20:47.826172'
+events_274:
+  id: 370
+  name: Sun - Fraser (Win)
+  organization_id: 10
+  location_id: 93
+  comments: ''
+  created_at: '2014-12-30 23:21:16.716029'
+  updated_at: '2014-12-30 23:21:16.716029'
+events_275:
+  id: 371
+  name: Sun 2 - Fraser (Win)
+  organization_id: 10
+  location_id: 93
+  comments: Open Basketball
+  created_at: '2014-12-30 23:21:54.796833'
+  updated_at: '2014-12-30 23:21:54.796833'
+events_276:
+  id: 373
+  name: Mon - Newton (Win)
+  organization_id: 10
+  location_id: 125
+  comments: Run by Newton Recreation Centre
+  created_at: '2014-12-30 23:28:20.125616'
+  updated_at: '2014-12-30 23:28:20.125616'
+events_277:
+  id: 374
+  name: Thu - Newton (Win)
+  organization_id: 10
+  location_id: 125
+  comments: Run by Newton Recreation Centre
+  created_at: '2014-12-30 23:28:31.140753'
+  updated_at: '2014-12-30 23:28:31.140753'
+events_278:
+  id: 375
+  name: 'Mon - Early Adult Drop in (Winter) '
+  organization_id: 30
+  location_id: 126
+  comments: "NOTE: Daytime drop in hockey spots can be reserved over the phone the
+    day of. Space is limited to 22 players and 2 goalies. (Goalies are free). Evening
+    spots may be reserved over the phone with pre-payment. \r\nReserve your drop in
+    time up to 2 weeks in advance when you purchase a Drop In Pass:\r\nDay Time- $70.00
+    for 12 sessions\r\nEvening- $90.00 for 12 sessions"
+  created_at: '2014-12-30 23:48:45.880103'
+  updated_at: '2014-12-30 23:48:45.880103'
+events_279:
+  id: 376
+  name: 'Mon - Afternoon Adult Drop in (Winter) '
+  organization_id: 30
+  location_id: 126
+  comments: "NOTE: Daytime drop in hockey spots can be reserved over the phone the
+    day of. Space is limited to 22 players and 2 goalies. (Goalies are free). Evening
+    spots may be reserved over the phone with pre-payment. \r\nReserve your drop in
+    time up to 2 weeks in advance when you purchase a Drop In Pass:\r\nDay Time- $70.00
+    for 12 sessions\r\nEvening- $90.00 for 12 sessions"
+  created_at: '2014-12-30 23:50:02.829312'
+  updated_at: '2014-12-30 23:50:02.829312'
+events_280:
+  id: 378
+  name: 'Tue - Afternoon Adult Drop in (Winter) '
+  organization_id: 30
+  location_id: 126
+  comments: "NOTE: Daytime drop in hockey spots can be reserved over the phone the
+    day of. Space is limited to 22 players and 2 goalies. (Goalies are free). Evening
+    spots may be reserved over the phone with pre-payment. \r\nReserve your drop in
+    time up to 2 weeks in advance when you purchase a Drop In Pass:\r\nDay Time- $70.00
+    for 12 sessions\r\nEvening- $90.00 for 12 sessions"
+  created_at: '2014-12-30 23:51:23.165157'
+  updated_at: '2014-12-30 23:51:23.165157'
+events_281:
+  id: 382
+  name: Sun - Centennial (Win)
+  organization_id: 21
+  location_id: 107
+  comments: Inquire with the Rec Centre for Price
+  created_at: '2014-12-31 00:04:02.283804'
+  updated_at: '2014-12-31 00:04:02.283804'
+events_282:
+  id: 384
+  name: Wed - Centennial (Win)
+  organization_id: 21
+  location_id: 107
+  comments: Inquire with the Rec Centre for Price
+  created_at: '2014-12-31 00:04:48.390761'
+  updated_at: '2014-12-31 00:04:48.390761'
+events_283:
+  id: 385
+  name: Sat - Pinetree (Win)
+  organization_id: 21
+  location_id: 103
+  comments: Inquire with the Rec Centre for Price
+  created_at: '2014-12-31 00:05:43.122863'
+  updated_at: '2014-12-31 00:05:43.122863'
+events_284:
+  id: 386
+  name: Mon - Pinetree (Win)
+  organization_id: 21
+  location_id: 103
+  comments: Inquire with the Rec Centre for Price
+  created_at: '2014-12-31 00:06:08.752314'
+  updated_at: '2014-12-31 00:06:08.752314'
+events_285:
+  id: 387
+  name: Thu - Summit (Win)
+  organization_id: 21
+  location_id: 108
+  comments: Inquire with the Rec Centre for Price
+  created_at: '2014-12-31 00:06:59.121373'
+  updated_at: '2014-12-31 00:06:59.121373'
+events_286:
+  id: 388
+  name: 'Wed - Adult Drop in (Winter) '
+  organization_id: 30
+  location_id: 126
+  comments: "NOTE: Daytime drop in hockey spots can be reserved over the phone the
+    day of. Space is limited to 22 players and 2 goalies. (Goalies are free). Evening
+    spots may be reserved over the phone with pre-payment. \r\nReserve your drop in
+    time up to 2 weeks in advance when you purchase a Drop In Pass:\r\nDay Time- $70.00
+    for 12 sessions\r\nEvening- $90.00 for 12 sessions"
+  created_at: '2014-12-31 00:08:39.367672'
+  updated_at: '2014-12-31 00:08:39.367672'
+events_287:
+  id: 389
+  name: Mon - Centennial (Win)
+  organization_id: 21
+  location_id: 107
+  comments: Inquire with the Rec Centre for Price
+  created_at: '2014-12-31 00:09:13.603893'
+  updated_at: '2014-12-31 00:09:13.603893'
+events_288:
+  id: 390
+  name: 'Thur - Adult Drop in (Winter) '
+  organization_id: 30
+  location_id: 126
+  comments: "NOTE: Daytime drop in hockey spots can be reserved over the phone the
+    day of. Space is limited to 22 players and 2 goalies. (Goalies are free). Evening
+    spots may be reserved over the phone with pre-payment. \r\nReserve your drop in
+    time up to 2 weeks in advance when you purchase a Drop In Pass:\r\nDay Time- $70.00
+    for 12 sessions\r\nEvening- $90.00 for 12 sessions"
+  created_at: '2014-12-31 00:09:20.955568'
+  updated_at: '2014-12-31 00:09:20.955568'
+events_289:
+  id: 392
+  name: 'Fri - Adult Drop in (Winter) '
+  organization_id: 30
+  location_id: 126
+  comments: "NOTE: Daytime drop in hockey spots can be reserved over the phone the
+    day of. Space is limited to 22 players and 2 goalies. (Goalies are free). Evening
+    spots may be reserved over the phone with pre-payment. \r\nReserve your drop in
+    time up to 2 weeks in advance when you purchase a Drop In Pass:\r\nDay Time- $70.00
+    for 12 sessions\r\nEvening- $90.00 for 12 sessions"
+  created_at: '2014-12-31 00:10:27.633293'
+  updated_at: '2014-12-31 00:10:27.633293'
+events_290:
+  id: 393
+  name: Thu - Pinetree (Win)
+  organization_id: 21
+  location_id: 103
+  comments: Inquire with the Rec Centre for Price
+  created_at: '2014-12-31 00:10:35.374219'
+  updated_at: '2014-12-31 00:10:35.374219'
+events_291:
+  id: 394
+  name: Wed - Pinetree (Win)
+  organization_id: 21
+  location_id: 103
+  comments: Inquire with the Rec Centre for Price
+  created_at: '2014-12-31 00:10:58.739040'
+  updated_at: '2014-12-31 00:10:58.739040'
+events_292:
+  id: 395
+  name: Tues - Summit (Win)
+  organization_id: 21
+  location_id: 108
+  comments: Inquire with the Rec Centre for Price
+  created_at: '2014-12-31 00:11:43.285784'
+  updated_at: '2014-12-31 00:11:43.285784'
+events_293:
+  id: 396
+  name: Tues - Pinetree (Win)
+  organization_id: 21
+  location_id: 103
+  comments: Inquire with the Rec Centre for Price
+  created_at: '2014-12-31 00:12:31.678688'
+  updated_at: '2014-12-31 00:12:31.678688'
+events_294:
+  id: 399
+  name: Tues - Hyde (Win)
+  organization_id: 19
+  location_id: 72
+  comments: Adult and Youth Drop-in
+  created_at: '2014-12-31 00:23:21.003590'
+  updated_at: '2014-12-31 00:23:21.003590'
+events_295:
+  id: 401
+  name: Sun - Hyde (Win)
+  organization_id: 19
+  location_id: 72
+  comments: Adult and Youth Drop-in
+  created_at: '2014-12-31 00:24:13.531388'
+  updated_at: '2014-12-31 00:24:13.531388'
+events_296:
+  id: 403
+  name: 'Mon - Casual Hockey (Win) '
+  organization_id: 30
+  location_id: 127
+  comments: "Full Gear is Mandatory\r\nAll players must be 19 years of age or older\r\nMaximum
+    of 20 skaters + 3 goalies - Goalies are free of charge and must sign in with name
+    and phone number in order to play.\r\nPlayers must display valid skate tag on
+    skate laces."
+  created_at: '2014-12-31 00:45:24.303074'
+  updated_at: '2014-12-31 00:45:24.303074'
+events_297:
+  id: 404
+  name: 'Fri - Casual Hockey (Win) '
+  organization_id: 30
+  location_id: 127
+  comments: "Full Gear is Mandatory\r\nAll players must be 19 years of age or older\r\nMaximum
+    of 20 skaters + 3 goalies - Goalies are free of charge and must sign in with name
+    and phone number in order to play.\r\nPlayers must display valid skate tag on
+    skate laces."
+  created_at: '2014-12-31 00:45:44.213250'
+  updated_at: '2014-12-31 00:45:44.213250'
+events_298:
+  id: 405
+  name: Wed - 13+ Drop-in (Win)
+  organization_id: 31
+  location_id: 128
+  comments: "13+ years\r\nGrab your full gear and drop by for an hour or two of stick
+    handling, shooting, or to simply skate away your stress.  Goalies play for free.
+    \ Full gear is mandatory, and a drop-in waiver must be signed.  Call to reserve
+    your spot.\r\n "
+  created_at: '2014-12-31 02:03:05.536448'
+  updated_at: '2014-12-31 02:03:05.536448'
+events_299:
+  id: 407
+  name: Mon - 13+ Drop-in (Win)
+  organization_id: 31
+  location_id: 128
+  comments: "13+ years\r\nGrab your full gear and drop by for an hour or two of stick
+    handling, shooting, or to simply skate away your stress.  Goalies play for free.
+    \ Full gear is mandatory, and a drop-in waiver must be signed.  Call to reserve
+    your spot.\r\n "
+  created_at: '2014-12-31 02:04:40.617646'
+  updated_at: '2014-12-31 02:04:40.617646'
+events_300:
+  id: 408
+  name: Fri - 13+ Drop in Hockey (Win)
+  organization_id: 31
+  location_id: 129
+  comments: "13+ years\r\nGrab your full gear and drop by for an hour or two of stick
+    handling, shooting, or to simply skate away your stress.  Goalies play for free.
+    \ Full gear is mandatory, and a drop-in waiver must be signed.  Call to reserve
+    your spot.\r\n "
+  created_at: '2014-12-31 02:09:44.624378'
+  updated_at: '2014-12-31 02:09:44.624378'
+events_301:
+  id: 409
+  name: Fri - 19+ Drop in Hockey (Win)
+  organization_id: 31
+  location_id: 74
+  comments: "19+ years\r\nGrab your full gear and drop by for an hour or two of stick
+    handling, shooting, or to simply skate away your stress.  Goalies play for free.
+    \ Full gear is mandatory, and a drop-in waiver must be signed.  Call to reserve
+    your spot.\r\n "
+  created_at: '2014-12-31 02:11:30.747365'
+  updated_at: '2014-12-31 02:11:30.747365'
+events_302:
+  id: 410
+  name: Mon W - Hamilton (Win)
+  organization_id: 20
+  location_id: 96
+  comments: Women's Floor Hockey
+  created_at: '2014-12-31 20:27:39.052973'
+  updated_at: '2014-12-31 20:27:39.052973'
+events_303:
+  id: 411
+  name: Mon - South Arm (Win)
+  organization_id: 20
+  location_id: 75
+  comments: ''
+  created_at: '2014-12-31 20:28:42.589795'
+  updated_at: '2014-12-31 20:28:42.589795'
+events_304:
+  id: 413
+  name: Tues - Cambie (Win)
+  organization_id: 20
+  location_id: 37
+  comments: ''
+  created_at: '2014-12-31 20:30:12.543323'
+  updated_at: '2014-12-31 20:30:12.543323'
+events_305:
+  id: 414
+  name: Tues - Cambie (Win)
+  organization_id: 20
+  location_id: 37
+  comments: ''
+  created_at: '2014-12-31 20:30:51.053994'
+  updated_at: '2014-12-31 20:30:51.053994'
+events_306:
+  id: 415
+  name: Thu - Cambie (Win)
+  organization_id: 20
+  location_id: 37
+  comments: Floor Hockey
+  created_at: '2014-12-31 20:31:51.476654'
+  updated_at: '2015-01-08 20:11:53.993448'
+events_307:
+  id: 417
+  name: Fri - Cambie (Win)
+  organization_id: 20
+  location_id: 37
+  comments: 13+ Yrs
+  created_at: '2014-12-31 20:33:03.416003'
+  updated_at: '2014-12-31 20:33:03.416003'
+events_308:
+  id: 419
+  name: Sun - Hamilton (Win)
+  organization_id: 20
+  location_id: 96
+  comments: 16+ Yrs
+  created_at: '2014-12-31 20:34:46.017551'
+  updated_at: '2014-12-31 20:34:46.017551'
+events_309:
+  id: 422
+  name: Tues - West Richmond (Win)
+  organization_id: 20
+  location_id: 100
+  comments: ''
+  created_at: '2014-12-31 20:42:37.662850'
+  updated_at: '2014-12-31 20:42:37.662850'
+events_310:
+  id: 423
+  name: Tues - West Richmond (Win)
+  organization_id: 20
+  location_id: 100
+  comments: Floor Hockey (Gilmore School)
+  created_at: '2014-12-31 20:43:33.266707'
+  updated_at: '2014-12-31 20:43:33.266707'
+events_311:
+  id: 424
+  name: Thu - West Richmond (Win)
+  organization_id: 20
+  location_id: 100
+  comments: Floor Hockey (Gilmore School)
+  created_at: '2014-12-31 20:43:55.448949'
+  updated_at: '2014-12-31 20:43:55.448949'
+events_312:
+  id: 425
+  name: Tues - Steveston (Win)
+  organization_id: 20
+  location_id: 98
+  comments: Floor Hockey (Played at Gilmore School)
+  created_at: '2014-12-31 20:44:40.409862'
+  updated_at: '2015-01-08 20:15:22.471015'
+events_313:
+  id: 426
+  name: Tues - Steveston (Win)
+  organization_id: 20
+  location_id: 98
+  comments: ''
+  created_at: '2014-12-31 20:45:29.494730'
+  updated_at: '2014-12-31 20:45:29.494730'
+events_314:
+  id: 427
+  name: Wed - Steveston (Win)
+  organization_id: 20
+  location_id: 98
+  comments: Floor Hockey
+  created_at: '2014-12-31 20:46:08.276755'
+  updated_at: '2014-12-31 20:46:08.276755'
+events_315:
+  id: 428
+  name: Thu - Steveston (Win)
+  organization_id: 20
+  location_id: 98
+  comments: Floor Hockey
+  created_at: '2014-12-31 20:46:44.002394'
+  updated_at: '2014-12-31 20:46:44.002394'
+events_316:
+  id: 429
+  name: Thu - Steveston (Win)
+  organization_id: 20
+  location_id: 98
+  comments: ''
+  created_at: '2014-12-31 20:46:50.812853'
+  updated_at: '2014-12-31 20:46:50.812853'
+events_317:
+  id: 430
+  name: Sat - Steveston (Win)
+  organization_id: 20
+  location_id: 98
+  comments: ''
+  created_at: '2014-12-31 20:47:26.164007'
+  updated_at: '2014-12-31 20:47:26.164007'
+events_318:
+  id: 431
+  name: Sun - Steveston (Win)
+  organization_id: 20
+  location_id: 98
+  comments: Floor Hockey
+  created_at: '2014-12-31 20:48:09.370294'
+  updated_at: '2014-12-31 20:48:09.370294'
+events_319:
+  id: 432
+  name: Mon - South Arm (Win)
+  organization_id: 20
+  location_id: 75
+  comments: ''
+  created_at: '2014-12-31 20:53:25.629523'
+  updated_at: '2014-12-31 20:53:25.629523'
+events_320:
+  id: 433
+  name: Mon - South Arm (Spring)
+  organization_id: 20
+  location_id: 75
+  comments: ''
+  created_at: '2014-12-31 20:53:54.121442'
+  updated_at: '2014-12-31 20:53:54.121442'
+events_321:
+  id: 434
+  name: Tues - Thompson (Spring)
+  organization_id: 20
+  location_id: 99
+  comments: ''
+  created_at: '2014-12-31 20:55:11.336016'
+  updated_at: '2014-12-31 20:55:11.336016'
+events_322:
+  id: 435
+  name: Tues - Thompson (Win)
+  organization_id: 20
+  location_id: 99
+  comments: ''
+  created_at: '2014-12-31 20:55:51.517384'
+  updated_at: '2014-12-31 20:55:51.517384'
+events_323:
+  id: 437
+  name: Thu - Thompson (Spring)
+  organization_id: 20
+  location_id: 99
+  comments: ''
+  created_at: '2014-12-31 20:57:11.776591'
+  updated_at: '2014-12-31 20:57:11.776591'
+events_324:
+  id: 438
+  name: Thu - Thompson (Win)
+  organization_id: 20
+  location_id: 99
+  comments: ''
+  created_at: '2014-12-31 20:57:47.747555'
+  updated_at: '2014-12-31 20:57:47.747555'
+events_325:
+  id: 439
+  name: Mon - West Richmond (Win)
+  organization_id: 11
+  location_id: 100
+  comments: Women Only (Boyd School)
+  created_at: '2014-12-31 20:59:00.096784'
+  updated_at: '2014-12-31 21:05:59.668523'
+events_326:
+  id: 440
+  name: Mon - West Richmond (Spring)
+  organization_id: 11
+  location_id: 100
+  comments: Women Only (Boyd School)
+  created_at: '2014-12-31 20:59:27.991493'
+  updated_at: '2014-12-31 21:06:37.502417'
+events_327:
+  id: 441
+  name: Wed - South Arm (Win)
+  organization_id: 20
+  location_id: 75
+  comments: ''
+  created_at: '2014-12-31 21:00:47.835710'
+  updated_at: '2014-12-31 21:00:47.835710'
+events_328:
+  id: 442
+  name: Wed - South Arm (Spring)
+  organization_id: 20
+  location_id: 75
+  comments: ''
+  created_at: '2014-12-31 21:01:12.610183'
+  updated_at: '2014-12-31 21:01:12.610183'
+events_329:
+  id: 443
+  name: Fri - Hamilton (Win)
+  organization_id: 20
+  location_id: 96
+  comments: 16+ Yrs
+  created_at: '2014-12-31 21:13:39.812382'
+  updated_at: '2014-12-31 21:13:39.812382'
+events_330:
+  id: 444
+  name: Sat - South Arm (Win)
+  organization_id: 20
+  location_id: 75
+  comments: ''
+  created_at: '2014-12-31 21:16:07.101168'
+  updated_at: '2014-12-31 21:16:07.101168'
+events_331:
+  id: 445
+  name: Mon - Queensborough (Win)
+  organization_id: 25
+  location_id: 118
+  comments: ''
+  created_at: '2014-12-31 21:40:42.617388'
+  updated_at: '2014-12-31 21:40:42.617388'
+events_332:
+  id: 446
+  name: Thu - Queensborough (Win)
+  organization_id: 25
+  location_id: 118
+  comments: ''
+  created_at: '2014-12-31 21:41:39.508746'
+  updated_at: '2014-12-31 21:41:39.508746'
+events_333:
+  id: 447
+  name: Sun - Queensborough (Win)
+  organization_id: 25
+  location_id: 118
+  comments: ''
+  created_at: '2014-12-31 21:42:08.555231'
+  updated_at: '2014-12-31 21:42:08.555231'
+events_334:
+  id: 449
+  name: Thu - Queens Arenex (Win)
+  organization_id: 25
+  location_id: 117
+  comments: ''
+  created_at: '2014-12-31 21:43:53.974916'
+  updated_at: '2014-12-31 21:43:53.974916'
+events_335:
+  id: 450
+  name: Tues - Queens Arenex (Win)
+  organization_id: 25
+  location_id: 117
+  comments: Women's Floor Hockey
+  created_at: '2014-12-31 21:44:23.255515'
+  updated_at: '2014-12-31 21:44:23.255515'
+events_336:
+  id: 451
+  name: Sun - Queens Arenex (Win)
+  organization_id: 25
+  location_id: 117
+  comments: ''
+  created_at: '2014-12-31 21:44:56.947809'
+  updated_at: '2014-12-31 21:44:56.947809'
+events_337:
+  id: 452
+  name: Mon - Queens Arena (Win)
+  organization_id: 25
+  location_id: 120
+  comments: ''
+  created_at: '2014-12-31 21:46:25.801487'
+  updated_at: '2014-12-31 21:46:25.801487'
+events_338:
+  id: 453
+  name: Tues - Queens Arena (Win)
+  organization_id: 25
+  location_id: 120
+  comments: ''
+  created_at: '2014-12-31 21:46:35.972286'
+  updated_at: '2014-12-31 21:46:35.972286'
+events_339:
+  id: 454
+  name: Wed - Queens Arena (Win)
+  organization_id: 25
+  location_id: 120
+  comments: ''
+  created_at: '2014-12-31 21:46:45.560862'
+  updated_at: '2014-12-31 21:46:45.560862'
+events_340:
+  id: 455
+  name: Fri - Queens Arena (Win)
+  organization_id: 25
+  location_id: 120
+  comments: ''
+  created_at: '2014-12-31 21:46:56.344799'
+  updated_at: '2014-12-31 21:46:56.344799'
+events_341:
+  id: 456
+  name: Tues - Pitt Meadows (win)
+  organization_id: 23
+  location_id: 111
+  comments: Ball Hockey (Men's 19yrs+)
+  created_at: '2014-12-31 22:14:13.817227'
+  updated_at: '2014-12-31 22:14:13.817227'
+events_342:
+  id: 457
+  name: Thu - Pitt Meadows (win)
+  organization_id: 23
+  location_id: 111
+  comments: Ball Hockey (Men's 19yrs+)
+  created_at: '2014-12-31 22:14:30.056168'
+  updated_at: '2014-12-31 22:14:30.056168'
+events_343:
+  id: 458
+  name: Fri - Pitt Meadows (win)
+  organization_id: 23
+  location_id: 111
+  comments: Ball Hockey (Men's 19yrs+)
+  created_at: '2014-12-31 22:14:56.427304'
+  updated_at: '2014-12-31 22:14:56.427304'
+events_344:
+  id: 459
+  name: Sat - Pitt Meadows (win)
+  organization_id: 23
+  location_id: 111
+  comments: 13 yrs+ 1/2 Gym
+  created_at: '2014-12-31 22:15:55.514587'
+  updated_at: '2014-12-31 22:15:55.514587'
+events_345:
+  id: 460
+  name: Sun - Pitt Meadows (win)
+  organization_id: 23
+  location_id: 111
+  comments: 16 yrs+
+  created_at: '2014-12-31 22:16:24.925028'
+  updated_at: '2014-12-31 22:16:24.925028'
+events_346:
+  id: 461
+  name: Mon - Pitt Meadows (win)
+  organization_id: 23
+  location_id: 111
+  comments: ''
+  created_at: '2014-12-31 22:17:24.783707'
+  updated_at: '2014-12-31 22:17:24.783707'
+events_347:
+  id: 462
+  name: Wed - Pitt Meadows (win)
+  organization_id: 23
+  location_id: 111
+  comments: 16 yrs+ All Levels
+  created_at: '2014-12-31 22:18:02.107312'
+  updated_at: '2014-12-31 22:18:02.107312'
+events_348:
+  id: 463
+  name: Tues - Maple Ridge (win)
+  organization_id: 23
+  location_id: 110
+  comments: Ball Hockey (Co-ed 19 yrs+)
+  created_at: '2014-12-31 22:19:38.793338'
+  updated_at: '2014-12-31 22:19:38.793338'
+events_349:
+  id: 464
+  name: Tues - Maple Ridge (win)
+  organization_id: 23
+  location_id: 110
+  comments: Ball Hockey (Co-ed 19 yrs+)
+  created_at: '2014-12-31 22:20:01.124313'
+  updated_at: '2014-12-31 22:20:01.124313'
+events_350:
+  id: 465
+  name: Thu - Maple Ridge (win)
+  organization_id: 23
+  location_id: 110
+  comments: Ball Hockey (13 yrs+ 1/2 Gym)
+  created_at: '2014-12-31 22:20:58.632981'
+  updated_at: '2014-12-31 22:20:58.632981'
+events_351:
+  id: 466
+  name: Thu - Maple Ridge (win)
+  organization_id: 23
+  location_id: 110
+  comments: ''
+  created_at: '2014-12-31 22:21:30.170156'
+  updated_at: '2014-12-31 22:21:30.170156'
+events_352:
+  id: 467
+  name: Mon - Maple Ridge (win)
+  organization_id: 23
+  location_id: 110
+  comments: 19 yrs+
+  created_at: '2014-12-31 22:22:30.740979'
+  updated_at: '2014-12-31 22:22:30.740979'
+events_353:
+  id: 468
+  name: Wed - Maple Ridge (win)
+  organization_id: 23
+  location_id: 110
+  comments: 19 yrs+
+  created_at: '2014-12-31 22:22:51.551402'
+  updated_at: '2014-12-31 22:22:51.551402'
+events_354:
+  id: 469
+  name: Wed - Maple Ridge (win)
+  organization_id: 23
+  location_id: 110
+  comments: 16 yrs+
+  created_at: '2014-12-31 22:23:19.881344'
+  updated_at: '2014-12-31 22:23:19.881344'
+events_355:
+  id: 470
+  name: Mon - Maple Ridge (win)
+  organization_id: 23
+  location_id: 110
+  comments: 16 yrs+
+  created_at: '2014-12-31 22:23:33.708602'
+  updated_at: '2014-12-31 22:23:33.708602'
+events_356:
+  id: 471
+  name: Tues - Maple Ridge (win)
+  organization_id: 23
+  location_id: 110
+  comments: 13 yrs+
+  created_at: '2014-12-31 22:24:24.815143'
+  updated_at: '2014-12-31 22:24:24.815143'
+events_357:
+  id: 472
+  name: Tues - Mission (Win)
+  organization_id: 32
+  location_id: 130
+  comments: Men's Drop-in (18yrs+)
+  created_at: '2014-12-31 22:43:39.562777'
+  updated_at: '2014-12-31 22:43:39.562777'
+events_358:
+  id: 473
+  name: Fri - Mission (Win)
+  organization_id: 32
+  location_id: 130
+  comments: Men's Drop-in (18yrs+)
+  created_at: '2014-12-31 22:44:23.499043'
+  updated_at: '2014-12-31 22:44:23.499043'
+events_359:
+  id: 475
+  name: Wed - Mission (Win)
+  organization_id: 32
+  location_id: 130
+  comments: ''
+  created_at: '2014-12-31 22:51:38.585976'
+  updated_at: '2014-12-31 22:51:38.585976'
+events_360:
+  id: 478
+  name: Wed - Drop in Hockey - North Rink (Win)
+  organization_id: 32
+  location_id: 130
+  comments: "¥ CSA approved helmets are recommended.\r\n¥ Strollers are permitted
+    provided children are belted in a five point harness.\r\n¥ Hockey sticks or pucks
+    are not permitted during public skates.\r\n¥ Wear the supplied wristband and make
+    sure it is visible.\r\n¥ Report all injuries, accidents and concerns to Skate
+    Patrol.\r\n¥ All skaters must adhere to the Mission Leisure Centre code of conduct. "
+  created_at: '2015-01-01 23:59:49.919806'
+  updated_at: '2015-01-01 23:59:49.919806'
+events_361:
+  id: 479
+  name: Mon - Youth Drop in Hockey for 13-18 yo  North rink(Win)
+  organization_id: 32
+  location_id: 130
+  comments: "¥ CSA approved helmets are recommended.\r\n¥ Strollers are permitted
+    provided children are belted in a five point harness.\r\n¥ Hockey sticks or pucks
+    are not permitted during public skates.\r\n¥ Wear the supplied wristband and make
+    sure it is visible.\r\n¥ Report all injuries, accidents and concerns to Skate
+    Patrol.\r\n¥ All skaters must adhere to the Mission Leisure Centre code of conduct. "
+  created_at: '2015-01-02 00:01:38.494428'
+  updated_at: '2015-01-02 00:01:38.494428'
+events_362:
+  id: 481
+  name: Thur - Women's Drop in Hockey South rink (Win)
+  organization_id: 32
+  location_id: 130
+  comments: "¥ CSA approved helmets are recommended.\r\n¥ Strollers are permitted
+    provided children are belted in a five point harness.\r\n¥ Hockey sticks or pucks
+    are not permitted during public skates.\r\n¥ Wear the supplied wristband and make
+    sure it is visible.\r\n¥ Report all injuries, accidents and concerns to Skate
+    Patrol.\r\n¥ All skaters must adhere to the Mission Leisure Centre code of conduct. "
+  created_at: '2015-01-02 00:07:49.296154'
+  updated_at: '2015-01-02 00:07:49.296154'
+events_363:
+  id: 482
+  name: Fri - Drop in Hockey North rink (Win)
+  organization_id: 32
+  location_id: 130
+  comments: "¥ CSA approved helmets are recommended.\r\n¥ Strollers are permitted
+    provided children are belted in a five point harness.\r\n¥ Hockey sticks or pucks
+    are not permitted during public skates.\r\n¥ Wear the supplied wristband and make
+    sure it is visible.\r\n¥ Report all injuries, accidents and concerns to Skate
+    Patrol.\r\n¥ All skaters must adhere to the Mission Leisure Centre code of conduct. "
+  created_at: '2015-01-02 00:08:45.931108'
+  updated_at: '2015-01-02 00:08:45.931108'
+events_364:
+  id: 483
+  name: Mon - Adult Hockey (Win)
+  organization_id: 25
+  location_id: 120
+  comments: ''
+  created_at: '2015-01-02 00:54:31.252272'
+  updated_at: '2015-01-02 00:54:31.252272'
+events_365:
+  id: 484
+  name: Tue - Adult Hockey (Win)
+  organization_id: 25
+  location_id: 120
+  comments: ''
+  created_at: '2015-01-02 00:54:57.126779'
+  updated_at: '2015-01-02 00:54:57.126779'
+events_366:
+  id: 485
+  name: Wed - Adult Hockey (Win)
+  organization_id: 25
+  location_id: 120
+  comments: ''
+  created_at: '2015-01-02 00:55:05.094824'
+  updated_at: '2015-01-02 00:55:05.094824'
+events_367:
+  id: 486
+  name: Fri - Adult Hockey (Win)
+  organization_id: 25
+  location_id: 120
+  comments: ''
+  created_at: '2015-01-02 00:55:14.372879'
+  updated_at: '2015-01-02 00:55:14.372879'
+events_368:
+  id: 487
+  name: Mon - Adult Hockey Dropin ( Win )
+  organization_id: 9
+  location_id: 131
+  comments: Get a great workout with a casual game of hockey. Full hockey equipment
+    and a CSA-approved helmet with face mask or visor and hockey gloves are strongly
+    recommended. Games are not supervised and no-check rules apply. Goalies take part
+    for free. You must sign a waiver before playing. Phone-in reservations are available
+    9am on the day of the program. Must arrive by 11:25am at Bill Copeland to claim
+    your spot.
+  created_at: '2015-01-02 01:06:04.199372'
+  updated_at: '2015-01-02 01:06:04.199372'
+events_369:
+  id: 488
+  name: Wed - Adult Hockey Dropin ( Win )
+  organization_id: 9
+  location_id: 131
+  comments: Get a great workout with a casual game of hockey. Full hockey equipment
+    and a CSA-approved helmet with face mask or visor and hockey gloves are strongly
+    recommended. Games are not supervised and no-check rules apply. Goalies take part
+    for free. You must sign a waiver before playing. Phone-in reservations are available
+    9am on the day of the program. Must arrive by 11:25am at Bill Copeland to claim
+    your spot.
+  created_at: '2015-01-02 01:06:40.029095'
+  updated_at: '2015-01-02 01:06:40.029095'
+events_370:
+  id: 489
+  name: Fri - Adult Hockey Dropin ( Win )
+  organization_id: 9
+  location_id: 131
+  comments: Get a great workout with a casual game of hockey. Full hockey equipment
+    and a CSA-approved helmet with face mask or visor and hockey gloves are strongly
+    recommended. Games are not supervised and no-check rules apply. Goalies take part
+    for free. You must sign a waiver before playing. Phone-in reservations are available
+    9am on the day of the program. Must arrive by 11:25am at Bill Copeland to claim
+    your spot.
+  created_at: '2015-01-02 01:06:53.388702'
+  updated_at: '2015-01-02 01:06:53.388702'
+events_371:
+  id: 490
+  name: Mon - Masters Casual Hockey Drop in (Win)
+  organization_id: 9
+  location_id: 132
+  comments: Come out and get a great workout with a casual game of hockey. Full hockey
+    equipment and a CSA-approved helmet with face mask or visor and hockey gloves
+    are strongly recommended. Games are not supervised and no-check rules apply. Goalies
+    take part for free. You must sign a waiver before playing. Phone-in reservations
+    are available 9am on the day of the program. Must arrive by 10:40am to claim your
+    spot.
+  created_at: '2015-01-02 01:12:22.014182'
+  updated_at: '2015-01-02 01:12:22.014182'
+events_372:
+  id: 491
+  name: Thur - Masters Casual Hockey Drop in (Win)
+  organization_id: 9
+  location_id: 132
+  comments: Come out and get a great workout with a casual game of hockey. Full hockey
+    equipment and a CSA-approved helmet with face mask or visor and hockey gloves
+    are strongly recommended. Games are not supervised and no-check rules apply. Goalies
+    take part for free. You must sign a waiver before playing. Phone-in reservations
+    are available 9am on the day of the program. Must arrive by 10:40am to claim your
+    spot.
+  created_at: '2015-01-02 01:12:44.439614'
+  updated_at: '2015-01-02 01:12:44.439614'
+events_373:
+  id: 493
+  name: Sun - Trout (Win)
+  organization_id: 5
+  location_id: 38
+  comments: ''
+  created_at: '2015-01-04 23:07:58.387622'
+  updated_at: '2015-01-04 23:07:58.387622'
+events_374:
+  id: 497
+  name: Tue - Britannia (Win)
+  organization_id: 5
+  location_id: 35
+  comments: Ages 11 to 18 Drop-in
+  created_at: '2015-01-06 00:50:14.690263'
+  updated_at: '2015-01-06 00:50:14.690263'
+events_375:
+  id: 498
+  name: Thu - Britannia (Win)
+  organization_id: 5
+  location_id: 35
+  comments: Women's indoor Soccer
+  created_at: '2015-01-06 00:51:15.545873'
+  updated_at: '2015-01-06 00:51:15.545873'
+events_376:
+  id: 499
+  name: Mon - Champlain (Win)
+  organization_id: 5
+  location_id: 40
+  comments: ''
+  created_at: '2015-01-06 01:02:20.882629'
+  updated_at: '2015-01-06 01:02:20.882629'
+events_377:
+  id: 500
+  name: Mon - Coal Harbour (Win)
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2015-01-06 01:03:22.695027'
+  updated_at: '2015-01-06 01:03:22.695027'
+events_378:
+  id: 501
+  name: Thu - Coal Harbour (Win)
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2015-01-06 01:04:22.478495'
+  updated_at: '2015-01-06 01:04:22.478495'
+events_379:
+  id: 502
+  name: Sun - Coal Harbour (Win)
+  organization_id: 5
+  location_id: 29
+  comments: ''
+  created_at: '2015-01-06 01:05:09.687235'
+  updated_at: '2015-01-06 01:05:09.687235'
+events_380:
+  id: 503
+  name: Mon - Creekside (Win)
+  organization_id: 5
+  location_id: 9
+  comments: Ages 16 and up
+  created_at: '2015-01-06 01:13:07.146296'
+  updated_at: '2015-01-06 01:13:07.146296'
+events_381:
+  id: 504
+  name: Tues - Creekside (Win)
+  organization_id: 5
+  location_id: 9
+  comments: Ages 19 and up
+  created_at: '2015-01-06 01:14:19.385492'
+  updated_at: '2015-01-06 01:14:19.385492'
+events_382:
+  id: 506
+  name: Thu Noon - Creekside (Win)
+  organization_id: 5
+  location_id: 9
+  comments: Ages 19 and up
+  created_at: '2015-01-06 01:15:53.231049'
+  updated_at: '2015-01-06 01:15:53.231049'
+events_383:
+  id: 507
+  name: Thu - Creekside (Win)
+  organization_id: 5
+  location_id: 9
+  comments: Ages 16 and up
+  created_at: '2015-01-06 01:16:31.011829'
+  updated_at: '2015-01-06 01:16:31.011829'
+events_384:
+  id: 508
+  name: Sat - Creekside (Win)
+  organization_id: 5
+  location_id: 9
+  comments: Ages 16 and up
+  created_at: '2015-01-06 01:17:26.096356'
+  updated_at: '2015-01-06 01:17:26.096356'
+events_385:
+  id: 509
+  name: Fri - Dunbar (Win)
+  organization_id: 5
+  location_id: 42
+  comments: Master's Co-Ed (35+ yrs)
+  created_at: '2015-01-06 01:19:56.175435'
+  updated_at: '2015-01-06 01:19:56.175435'
+events_386:
+  id: 510
+  name: Thu - False Creek (Win)
+  organization_id: 5
+  location_id: 44
+  comments: Age 18 and up
+  created_at: '2015-01-06 01:21:12.159056'
+  updated_at: '2015-01-06 01:21:12.159056'
+events_387:
+  id: 511
+  name: Mon - Hastings (Win)
+  organization_id: 5
+  location_id: 46
+  comments: Age 19 and up
+  created_at: '2015-01-06 01:26:27.323819'
+  updated_at: '2015-01-06 01:26:27.323819'
+events_388:
+  id: 512
+  name: Mon - Kitsilano (Win)
+  organization_id: 5
+  location_id: 50
+  comments: Master's Co-Ed (30+ yrs)
+  created_at: '2015-01-06 01:31:01.922507'
+  updated_at: '2015-01-06 01:31:01.922507'
+events_389:
+  id: 513
+  name: Mon - Kitsilano (Win)
+  organization_id: 5
+  location_id: 50
+  comments: Age 18 and up
+  created_at: '2015-01-06 01:32:16.468254'
+  updated_at: '2015-01-06 01:32:16.468254'
+events_390:
+  id: 516
+  name: Sat - Kitsilano (Win)
+  organization_id: 5
+  location_id: 50
+  comments: Women's Indoor (16+ yrs)
+  created_at: '2015-01-06 01:40:31.675931'
+  updated_at: '2015-01-06 01:40:31.675931'
+events_391:
+  id: 517
+  name: Tues - Mount Pleasant (Win)
+  organization_id: 5
+  location_id: 53
+  comments: Age 16 and up
+  created_at: '2015-01-06 01:43:41.701073'
+  updated_at: '2015-01-06 01:43:41.701073'
+events_392:
+  id: 518
+  name: Tues - Mount Pleasant (Spring)
+  organization_id: 5
+  location_id: 53
+  comments: Age 16 and up
+  created_at: '2015-01-06 01:44:38.178735'
+  updated_at: '2015-01-06 01:44:38.178735'
+events_393:
+  id: 519
+  name: Tues - Roundhouse (Win)
+  organization_id: 5
+  location_id: 33
+  comments: Age 19 and up
+  created_at: '2015-01-06 01:47:34.787142'
+  updated_at: '2015-01-06 01:47:34.787142'
+events_394:
+  id: 520
+  name: Thu - Roundhouse (Win)
+  organization_id: 5
+  location_id: 33
+  comments: Age 19 and up
+  created_at: '2015-01-06 01:49:03.220920'
+  updated_at: '2015-01-06 01:49:03.220920'
+events_395:
+  id: 521
+  name: Sun - Roundhouse (Win)
+  organization_id: 5
+  location_id: 33
+  comments: Age 19 and up
+  created_at: '2015-01-06 01:49:56.784926'
+  updated_at: '2015-01-06 01:49:56.784926'
+events_396:
+  id: 522
+  name: Tues - Thunderbird (Win)
+  organization_id: 5
+  location_id: 58
+  comments: Age 18 and up
+  created_at: '2015-01-06 01:51:51.118655'
+  updated_at: '2015-01-06 01:51:51.118655'
+events_397:
+  id: 523
+  name: Wed - Trout Lake (Win)
+  organization_id: 5
+  location_id: 38
+  comments: Age 17 and up
+  created_at: '2015-01-06 01:53:19.836240'
+  updated_at: '2015-01-06 01:53:19.836240'
+events_398:
+  id: 524
+  name: Mon - West End (Win)
+  organization_id: 5
+  location_id: 59
+  comments: Age 18 and up
+  created_at: '2015-01-06 01:54:29.734837'
+  updated_at: '2015-01-06 01:54:29.734837'
+events_399:
+  id: 525
+  name: Tues - West Point (Win)
+  organization_id: 5
+  location_id: 60
+  comments: Age 19 and up
+  created_at: '2015-01-06 01:56:01.593042'
+  updated_at: '2015-01-06 01:56:01.593042'
+events_400:
+  id: 545
+  name: Mon - South Surrey (Win) Youth
+  organization_id: 10
+  location_id: 88
+  comments: Youth Dropin
+  created_at: '2015-01-08 20:47:37.441524'
+  updated_at: '2015-01-08 20:47:37.441524'
+events_401:
+  id: 546
+  name: Sat - Guildford (Win) Bball
+  organization_id: 10
+  location_id: 71
+  comments: ''
+  created_at: '2015-01-08 21:39:27.780926'
+  updated_at: '2015-01-08 21:39:27.780926'
+events_402:
+  id: 547
+  name: Fri - Guildford (Win) Bball Youth
+  organization_id: 10
+  location_id: 71
+  comments: Youth Drop-in
+  created_at: '2015-01-08 21:40:34.596396'
+  updated_at: '2015-01-08 21:40:34.596396'
+events_403:
+  id: 548
+  name: Sun - Guildford (Win) Bball Youth
+  organization_id: 10
+  location_id: 71
+  comments: Youth Drop-in
+  created_at: '2015-01-08 21:41:09.316897'
+  updated_at: '2015-01-08 21:41:09.316897'
+events_404:
+  id: 549
+  name: Sun - Newton (Win) Hockey
+  organization_id: 10
+  location_id: 124
+  comments: Floor Hockey
+  created_at: '2015-01-08 21:58:11.047129'
+  updated_at: '2015-01-08 23:10:02.493531'
+events_405:
+  id: 550
+  name: Thu - Fraser (Win) Vball
+  organization_id: 10
+  location_id: 93
+  comments: ''
+  created_at: '2015-01-08 22:00:56.736512'
+  updated_at: '2015-01-08 22:00:56.736512'
+events_406:
+  id: 551
+  name: Thu - Cloverdale (Win) Hockey
+  organization_id: 10
+  location_id: 134
+  comments: Recreational Hockey (19+ yrs)
+  created_at: '2015-01-08 22:35:55.703623'
+  updated_at: '2015-01-08 22:35:55.703623'
+events_407:
+  id: 553
+  name: Mon - North Surrey (Win) Hockey
+  organization_id: 10
+  location_id: 133
+  comments: Recreational Hockey (19+ yrs)
+  created_at: '2015-01-08 22:51:29.013272'
+  updated_at: '2015-01-08 22:51:29.013272'
+events_408:
+  id: 554
+  name: Mon - Surrey Sports (Win) Hockey
+  organization_id: 10
+  location_id: 92
+  comments: Recreational Hockey (19+ yrs)
+  created_at: '2015-01-08 22:52:22.317401'
+  updated_at: '2015-01-08 22:52:22.317401'
+events_409:
+  id: 555
+  name: Wed - Surrey Sports (Win) Hockey
+  organization_id: 10
+  location_id: 92
+  comments: Recreational Hockey (19+ yrs)
+  created_at: '2015-01-08 22:52:39.678930'
+  updated_at: '2015-01-08 22:52:39.678930'
+events_410:
+  id: 556
+  name: Sun - Surrey Sports (Win) Hockey
+  organization_id: 10
+  location_id: 92
+  comments: "Recreational Hockey (19+ yrs).\r\nCancelled on Jan.18, Feb.8, Mar.8"
+  created_at: '2015-01-08 22:53:33.502650'
+  updated_at: '2015-01-08 23:08:01.893254'
+events_411:
+  id: 557
+  name: Wed - South Surrey (Win) Hockey
+  organization_id: 10
+  location_id: 136
+  comments: Recreational Hockey (19+ yrs)
+  created_at: '2015-01-08 22:54:20.205932'
+  updated_at: '2015-01-08 22:54:20.205932'
+events_412:
+  id: 558
+  name: Fri - South Surrey (Win) Hockey
+  organization_id: 10
+  location_id: 136
+  comments: "Recreational Hockey (19+ yrs). \r\nCancelled Feb.20"
+  created_at: '2015-01-08 22:55:01.348146'
+  updated_at: '2015-01-08 22:55:01.348146'
+events_413:
+  id: 559
+  name: Fri - Cloverdale (Win) Hockey
+  organization_id: 10
+  location_id: 134
+  comments: 'Youth Hockey (13 to 18 yrs). '
+  created_at: '2015-01-08 22:56:31.726828'
+  updated_at: '2015-01-08 22:56:31.726828'
+events_414:
+  id: 560
+  name: Tues - Surrey Sports (Win) Hockey
+  organization_id: 10
+  location_id: 92
+  comments: 'Senior Recreational Hockey (55+ yrs). '
+  created_at: '2015-01-08 22:58:40.883425'
+  updated_at: '2015-01-08 22:58:40.883425'
+events_415:
+  id: 561
+  name: Thu - Surrey Sports (Win) Hockey
+  organization_id: 10
+  location_id: 92
+  comments: 'Senior Recreational Hockey (55+ yrs). '
+  created_at: '2015-01-08 22:59:03.368199'
+  updated_at: '2015-01-08 22:59:03.368199'
+events_416:
+  id: 562
+  name: Fri - North Surrey (Win) Hockey
+  organization_id: 10
+  location_id: 133
+  comments: Recreational Hockey (19+ yrs).
+  created_at: '2015-01-08 23:03:47.019379'
+  updated_at: '2015-01-08 23:03:47.019379'
+events_417:
+  id: 563
+  name: Mon - Bonsor (Win) Vball
+  organization_id: 9
+  location_id: 6
+  comments: Adult Drop-in (19+ yrs)
+  created_at: '2015-01-09 01:34:35.801141'
+  updated_at: '2015-01-09 01:34:35.801141'
+events_418:
+  id: 564
+  name: Tues - Bonsor (Win) Bball
+  organization_id: 9
+  location_id: 6
+  comments: Adult Drop-in (19+ yrs)
+  created_at: '2015-01-09 01:35:07.596926'
+  updated_at: '2015-01-09 01:35:07.596926'
+events_419:
+  id: 565
+  name: Wed - Bonsor (Win) Soccer
+  organization_id: 9
+  location_id: 6
+  comments: Adult Drop-in (19+ yrs)
+  created_at: '2015-01-09 01:35:44.961788'
+  updated_at: '2015-01-09 01:35:44.961788'
+events_420:
+  id: 566
+  name: Fri - Bonsor (Win) Bball
+  organization_id: 9
+  location_id: 6
+  comments: ''
+  created_at: '2015-01-09 01:36:46.991137'
+  updated_at: '2015-01-09 01:36:46.991137'
+events_421:
+  id: 568
+  name: Fri - Bonsor (Win) Vball
+  organization_id: 9
+  location_id: 6
+  comments: Adult Drop-in (19+ yrs)
+  created_at: '2015-01-09 01:37:58.147033'
+  updated_at: '2015-01-09 01:37:58.147033'
+events_422:
+  id: 569
+  name: Sat - Bonsor (Win) Bball
+  organization_id: 9
+  location_id: 6
+  comments: ''
+  created_at: '2015-01-09 01:38:46.823487'
+  updated_at: '2015-01-09 01:38:46.823487'
+events_423:
+  id: 570
+  name: Sun - Bonsor (Win) Bball
+  organization_id: 9
+  location_id: 6
+  comments: Adult Drop-in (19+ yrs)
+  created_at: '2015-01-09 01:39:28.474806'
+  updated_at: '2015-01-09 01:39:28.474806'
+events_424:
+  id: 571
+  name: Mon - Cameron (Win) Soccer
+  organization_id: 9
+  location_id: 76
+  comments: Adult Drop-in (18+ yrs).
+  created_at: '2015-01-09 01:41:18.300499'
+  updated_at: '2015-01-09 01:41:18.300499'
+events_425:
+  id: 572
+  name: Wed - Cameron (Win) Soccer
+  organization_id: 9
+  location_id: 76
+  comments: Adult Drop-in (18+ yrs).
+  created_at: '2015-01-09 01:41:58.160095'
+  updated_at: '2015-01-09 01:41:58.160095'
+events_426:
+  id: 573
+  name: Sun - Cameron (Win) Soccer
+  organization_id: 9
+  location_id: 76
+  comments: 16+ yrs
+  created_at: '2015-01-09 01:42:35.671834'
+  updated_at: '2015-01-09 01:42:35.671834'
+events_427:
+  id: 574
+  name: Wed - Cameron (Win) Bball
+  organization_id: 9
+  location_id: 76
+  comments: Adult Drop-in (18+ yrs)
+  created_at: '2015-01-09 01:43:24.393164'
+  updated_at: '2015-01-09 01:43:24.393164'
+events_428:
+  id: 575
+  name: Fri 1 - Cameron (Win) Bball
+  organization_id: 9
+  location_id: 76
+  comments: 13+ yrs
+  created_at: '2015-01-09 01:44:14.627565'
+  updated_at: '2015-01-09 01:44:14.627565'
+events_429:
+  id: 576
+  name: Fri 2 - Cameron (Win) Bball
+  organization_id: 9
+  location_id: 76
+  comments: 16+ yrs
+  created_at: '2015-01-09 01:44:34.390101'
+  updated_at: '2015-01-09 01:44:34.390101'
+events_430:
+  id: 577
+  name: Fri 3 - Cameron (Win) Bball
+  organization_id: 9
+  location_id: 76
+  comments: 18+ yrs
+  created_at: '2015-01-09 01:45:15.546485'
+  updated_at: '2015-01-09 01:45:15.546485'
+events_431:
+  id: 578
+  name: Sat 1 - Cameron (Win) Bball
+  organization_id: 9
+  location_id: 76
+  comments: 16+ yrs
+  created_at: '2015-01-09 01:45:47.350021'
+  updated_at: '2015-01-09 01:45:47.350021'
+events_432:
+  id: 579
+  name: Sat 2 - Cameron (Win) Bball
+  organization_id: 9
+  location_id: 76
+  comments: 13+ yrs
+  created_at: '2015-01-09 01:46:06.496526'
+  updated_at: '2015-01-09 01:46:06.496526'
+events_433:
+  id: 580
+  name: Sun - Cameron (Win) Bball
+  organization_id: 9
+  location_id: 76
+  comments: 13+ yrs
+  created_at: '2015-01-09 01:46:41.006348'
+  updated_at: '2015-01-09 01:46:41.006348'
+events_434:
+  id: 581
+  name: Mon - Edmonds (Win) Soccer
+  organization_id: 9
+  location_id: 36
+  comments: 18+ yrs
+  created_at: '2015-01-09 01:47:46.222565'
+  updated_at: '2015-01-09 01:47:46.222565'
+events_435:
+  id: 582
+  name: Mon - Edmonds (Win) Bball
+  organization_id: 9
+  location_id: 36
+  comments: 18+ yrs
+  created_at: '2015-01-09 01:48:44.609568'
+  updated_at: '2015-01-09 01:48:44.609568'
+events_436:
+  id: 583
+  name: Wed - Edmonds (Win) Bball
+  organization_id: 9
+  location_id: 36
+  comments: 18+ yrs
+  created_at: '2015-01-09 01:49:12.851427'
+  updated_at: '2015-01-09 01:49:12.851427'
+events_437:
+  id: 584
+  name: Sat - Edmonds (Win) Bball
+  organization_id: 9
+  location_id: 36
+  comments: 18+ yrs
+  created_at: '2015-01-09 01:50:03.561093'
+  updated_at: '2015-01-09 01:50:03.561093'
+events_438:
+  id: 585
+  name: Sun - Edmonds (Win) Bball
+  organization_id: 9
+  location_id: 36
+  comments: 18+ yrs
+  created_at: '2015-01-09 01:50:36.091998'
+  updated_at: '2015-01-09 01:50:36.091998'
+events_439:
+  id: 586
+  name: Tues - Edmonds (Win) Vball
+  organization_id: 9
+  location_id: 36
+  comments: 18+ yrs
+  created_at: '2015-01-09 01:51:14.643920'
+  updated_at: '2015-01-09 01:51:14.643920'
+events_440:
+  id: 587
+  name: Thu - Edmonds (Win) Vball
+  organization_id: 9
+  location_id: 36
+  comments: 18+ yrs
+  created_at: '2015-01-09 01:51:29.471054'
+  updated_at: '2015-01-09 01:51:29.471054'
+events_441:
+  id: 588
+  name: Thu - Cloverdale (Win) Vball
+  organization_id: 10
+  location_id: 134
+  comments: ''
+  created_at: '2015-01-09 01:57:00.071611'
+  updated_at: '2015-01-09 01:57:00.071611'

@@ -1,13 +1,20 @@
 <h1><%= @sport_param.capitalize %> Dropins </h1>
+
 <%= link_to 'Create a new dropin', new_dropin_path, class: 'btn btn-success' %> &nbsp;&nbsp;&nbsp;
-<%= link_to 'Volleyball', {:sport => 'volleyball' }, class:'btn btn-default' %>
-<%= link_to 'Soccer', {:sport => 'soccer'} , class:'btn btn-default' %>
-<%= link_to 'Hockey', {:sport => 'hockey'} , class:'btn btn-default' %>
-<%= link_to 'Dragonboat', {:sport => 'dragonboat'} , class:'btn btn-default' %>
-<%= link_to 'Basketball', {:sport => 'basketball'} , class:'btn btn-default' %>
+<%= link_to 'Volleyball', params.merge({:sport => 'volleyball' }), class:'btn btn-default' %>
+<%= link_to 'Soccer', params.merge({:sport => 'soccer'}) , class:'btn btn-default' %>
+<%= link_to 'Hockey', params.merge({:sport => 'hockey'}) , class:'btn btn-default' %>
+<%= link_to 'Basketball', params.merge({:sport => 'basketball'}) , class:'btn btn-default' %>
+
+
+<%= link_to 'Show All', params.merge(:show_all => 'true'), class:'btn btn-default pull-right' %>
+<%= link_to 'Show Only Active (Default)', params.merge(:show_all => 'false'), class:'btn btn-default pull-right' %>
+
+
+<%= button_to "Refresh Inactive Dropins", {:action => "refresh_inactive_dropins", remote: true}, { :class => "btn btn-default pull-right" } %>
 
 <%#= link_to 'Import Dropins', import_dropins_path, class:'btn btn-warning' %><%#<small>(experimeental)</small>%>
-<%#= link_to 'Show Only Active', params.merge(:active => 'true'), class:'btn btn-default pull-right' %>
+
 <br>
 <br>
 <%= render 'dropins_grid' %>

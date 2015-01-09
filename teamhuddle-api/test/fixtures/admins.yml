@@ -6,27 +6,27 @@ admins_001:
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
-  sign_in_count: 4
-  current_sign_in_at: '2014-12-02 05:38:07.088456'
-  last_sign_in_at: '2014-12-02 05:38:04.890596'
-  current_sign_in_ip: 142.232.168.86
+  sign_in_count: 9
+  current_sign_in_at: '2014-12-29 00:28:03.832672'
+  last_sign_in_at: '2014-12-17 01:42:09.143978'
+  current_sign_in_ip: 154.20.106.141
   last_sign_in_ip: 154.20.106.141
   created_at: '2014-11-13 04:45:29.425221'
-  updated_at: '2014-12-02 05:38:07.089280'
+  updated_at: '2014-12-29 00:28:03.833995'
 admins_002:
   id: 4
   email: marc@teamhuddle.ca
   encrypted_password: "$2a$10$cBTzPc57bLnVYN8bEzlDHeHwjyZVGH8ifTFDPiuQDb9NIDll9powa"
   reset_password_token: 
   reset_password_sent_at: 
-  remember_created_at: '2014-11-14 02:19:39.140784'
-  sign_in_count: 1
-  current_sign_in_at: '2014-11-14 02:19:39.148001'
-  last_sign_in_at: '2014-11-14 02:19:39.148001'
-  current_sign_in_ip: 24.114.25.20
-  last_sign_in_ip: 24.114.25.20
+  remember_created_at: '2014-12-22 19:26:18.761409'
+  sign_in_count: 10
+  current_sign_in_at: '2015-01-08 18:48:35.290682'
+  last_sign_in_at: '2015-01-06 17:55:06.597887'
+  current_sign_in_ip: 209.52.68.9
+  last_sign_in_ip: 209.52.68.9
   created_at: '2014-11-13 04:46:41.700899'
-  updated_at: '2014-11-14 02:19:39.149081'
+  updated_at: '2015-01-08 18:48:35.291574'
 admins_003:
   id: 5
   email: zamina@teamhuddle.ca
@@ -61,11 +61,39 @@ admins_005:
   encrypted_password: "$2a$10$Vz0QQIZYaeg/Jgux1Sl42eJy.JlfE8QPQ0QEfMWSyRkg65z4.KFrm"
   reset_password_token: 
   reset_password_sent_at: 
-  remember_created_at: '2014-12-02 22:31:56.616071'
-  sign_in_count: 16
-  current_sign_in_at: '2014-12-05 09:07:26.354245'
-  last_sign_in_at: '2014-12-02 22:31:56.622513'
-  current_sign_in_ip: 96.49.70.255
-  last_sign_in_ip: 199.60.19.194
+  remember_created_at: '2015-01-04 22:31:55.639383'
+  sign_in_count: 34
+  current_sign_in_at: '2015-01-07 16:39:59.455428'
+  last_sign_in_at: '2015-01-04 22:31:55.647513'
+  current_sign_in_ip: 199.60.19.194
+  last_sign_in_ip: 154.20.106.141
   created_at: '2014-11-13 04:49:21.947904'
-  updated_at: '2014-12-05 09:07:26.356152'
+  updated_at: '2015-01-07 16:39:59.456336'
+admins_006:
+  id: 8
+  email: danny@teamhuddle.ca
+  encrypted_password: "$2a$10$VyOUcSr7j91dfu9rv1vaoOetmjmK.GJPVDNZkTyCnJ/hNNVtP94OO"
+  reset_password_token: 
+  reset_password_sent_at: 
+  remember_created_at: '2015-01-01 23:13:03.327128'
+  sign_in_count: 14
+  current_sign_in_at: '2015-01-08 03:55:37.945868'
+  last_sign_in_at: '2015-01-08 01:13:45.494469'
+  current_sign_in_ip: 75.156.40.79
+  last_sign_in_ip: 75.156.40.79
+  created_at: '2014-12-15 00:06:09.545999'
+  updated_at: '2015-01-08 03:55:37.946687'
+admins_007:
+  id: 9
+  email: danny@tran.com
+  encrypted_password: "$2a$10$H1Xgwtur9VpoD8PA3yzBH.NH/MLj1f0bVqEwmmLbRGl1Bvdc7Sboq"
+  reset_password_token: 
+  reset_password_sent_at: 
+  remember_created_at: 
+  sign_in_count: 1
+  current_sign_in_at: '2014-12-15 03:42:18.120377'
+  last_sign_in_at: '2014-12-15 03:42:18.120377'
+  current_sign_in_ip: 216.232.100.77
+  last_sign_in_ip: 216.232.100.77
+  created_at: '2014-12-15 03:42:18.111841'
+  updated_at: '2014-12-15 03:42:18.120917'

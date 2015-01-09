@@ -152,7 +152,6 @@
 }
 
 .dropdown-menu {
-
     ul {
         li {
             a {
@@ -160,7 +159,6 @@
                 
             }
         }
-        
     }
 }
 
@@ -169,8 +167,13 @@
 }
 
 .dropdown {
-  padding-right: 30px;
   border-top: none;
+}
+
+.navbar-right{
+  .right-side {
+    padding-right: 30px;
+  }
 }
 
 
@@ -184,6 +187,7 @@
 }
 
 body {
+  height: 100%;
   /*padding-top: 80px; */
   background: #eaeaea; /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -216,8 +220,32 @@ body {
 
 }
 
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+.footer, .push {
+  //    position: fixed;
+  background-color: #000;
+  height: 4em;
+  width: 100%;
+  padding: 0px;
+  margin-top: 20px;
+  border-top: 2px solid #777;
+
+  .footer-content{
+    span {
+      color: white;
+    }
+
+  }
+}
+
 .header-outer {
-    padding: 20px 80px 30px;
+    padding: 20px 80px 5px;
     
     @media (max-width: 822px) {
         padding: 20px 20px 30px
@@ -246,6 +274,7 @@ body {
 
 }
 
+<<<<<<< HEAD
 .footer {
 /*    position: fixed;
     bottom: 0;*/
@@ -261,7 +290,6 @@ body {
 
 
 .addthis_horizontal_follow_toolbox {
-    margin-top: -2px;
     padding-right: 10px;
 }
 
@@ -307,6 +335,10 @@ li {
         padding-left: 0;
         padding-right: 0;
     }
+
+    .marker-row-selected{
+      background-color: $selected-dropin;
+    }
 }
 
 // ========== IMAGE STYLES ===========
@@ -322,7 +354,6 @@ li {
             text-align: center;
 
             .icon1 {
-                margin-top: 50px;
                 min-width: 250px;
                 max-width: 250px;
                 height: 250px;
@@ -403,7 +434,7 @@ li {
     margin-right: 5px;
 }
 
-.btn-success {
+.btn-success, .btn-default {
     background-color: $light-green;
     border: 1px solid #000;
     border-radius: 0px !important;
@@ -417,17 +448,27 @@ li {
     }
 }
 
-.btn-info {
-    background-color: $light-blue;
-    border: 1px solid #000;
-    border-radius: 0px !important;
-    margin-top: 10px;
-
-    &:hover {
-        background-color: $dark-blue;
-        border: 1px solid #000;
-    }  
+.btn-default {
+  background-color: $light-blue;
 }
+
+.btn-info {
+  background-color: $light-blue;
+  border: 1px solid #000;
+  border-radius: 0px !important;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: $dark-blue;
+    border: 1px solid #000;
+  }
+}
+
+.disclaimer{
+  margin-top: 1em;
+  text-align: center;
+}
+
 
 
 /*// ========== PADDING & MARGINS ===========

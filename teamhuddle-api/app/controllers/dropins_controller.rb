@@ -7,11 +7,16 @@ class DropinsController < ApplicationController
     #default to volleyball right now
     @sport_param = "volleyball"
     @sport_param = params[:sport] if params[:sport].present?
-    
+
+    @show_all = params[:show_all] == "true"
+
+    @conditions = {:type => "dropin", :sport_id => @sport_param, :deleted_at => nil}
+    @conditions[:is_active] = true unless @show_all
+
     # This is for the admin page -> see index.erb
     @dropins_grid = initialize_grid(SportEvent,
-      :joins => [:event, :location, :organization],
-      :conditions => {:type => "dropin", :sport_id => @sport_param, :deleted_at => nil},
+      :include => [:event, :location, :organization],
+      :conditions => @conditions,
       :enable_export_to_csv => true,
       :csv_field_separator => ';',
       :csv_file_name => 'dropins',
@@ -21,15 +26,17 @@ class DropinsController < ApplicationController
     export_grid_if_requested('dropins' => 'dropins_grid') do
       # usual render or redirect code executed if the request is not a CSV export request
     end
-
-    #active = false
-    #active = params[:active] if params[:active].present?
-    #dropin.schedule.occurring_between?(Time.now, Time.new('2100'))
-    
   end
   
   def show
     @dropin = SportEvent.includes(:event, :location, :organization).find(params[:id])
+
+    begin
+      @created_by_admin = Admin.find(@dropin.admin_id)
+    rescue ActiveRecord::RecordNotFound
+      # wut
+    end
+
   end
 
   def create
@@ -56,14 +63,16 @@ class DropinsController < ApplicationController
       params[:sport_event][:comments],
       temp_event,
       'dropin',
-      false)
+      false,
+      current_admin.id
+    )
     
     if @dropin[:errors].present?
       render json: { error: @dropin[:errors] }, :status => :unprocessable_entity
     else
       respond_to do |format|
         format.json { render json: @dropin }
-        format.html { redirect_to action: 'index' }
+        format.html { redirect_to dropin_path(@dropin[:sport_event]) }
       end
     end
   end
@@ -85,18 +94,78 @@ class DropinsController < ApplicationController
     @dropin = SportEvent.includes(:event).find(params[:id])
   end
 
+  def renew
+    @dropin = SportEvent.includes(:event).find(params[:id])
+  end
+
+  def duplicate
+    # get the start date and end date NOTE: adds time as well to startime
+    start_date = Time.new(params[:start_date][:year], params[:start_date][:month], params[:start_date][:day],
+                          params[:start_time][:hour], params[:start_time][:minute])
+    end_date = Time.new(params[:end_date][:year], params[:end_date][:month], params[:end_date][:day])
+
+    # create a new schedule setting the duration
+    schedule = Schedule.new(start_date, :end_time => start_date.change(hour: params[:end_time][:hour], min: params[:end_time][:minute])) do |s|
+      # add weekly recurrence ruling based on the day of the week selected
+      s.add_recurrence_rule(Rule.weekly.day(params[:day].intern).until(end_date))
+    end
+
+    temp_event = SportEvent.new(dropin_params)
+    temp_event.sport_id = params[:sport_event][:sport]
+    temp_event.skill_level = params[:skill_level]
+    temp_event.schedule = schedule
+
+    @dropin = SportEventWrapper.new(params[:sport_event][:name],
+                                    params[:sport_event][:location],
+                                    params[:sport_event][:organization],
+                                    params[:sport_event][:comments],
+                                    temp_event,
+                                    'dropin',
+                                    false,
+                                    current_admin.id
+    )
+
+    if @dropin[:errors].present?
+      render json: { error: @dropin[:errors] }, :status => :unprocessable_entity
+    else
+      respond_to do |format|
+        format.json { render json: @dropin }
+        format.html { redirect_to dropin_path(@dropin[:sport_event]) }
+      end
+    end
+  end
+
   def update
     @dropin = SportEvent.find(params[:id])
     @event = Event.find(@dropin.event_id)
 
-    if @event.update(:location_id => params[:sport_event][:location],
-                     :organization_id => params[:sport_event][:organization],
-                     :comments => params[:sport_event][:comments]) && @dropin.update(dropin_params)
+    @event.attributes = {
+        :location_id => params[:sport_event][:location],
+        :organization_id => params[:sport_event][:organization],
+        :comments => params[:sport_event][:comments]
+    }
+
+    @dropin.attributes = dropin_params
+
+    if @event.valid? && @dropin.valid?
+      @event.save
+      @dropin.save
       redirect_to dropin_path(@dropin)
     else
       render json: { error: @event.errors }, :status => :unprocessable_entity
     end
+  end
 
+  def refresh_inactive_dropins
+    @active_dropins = SportEvent.where(type: "dropin", is_active: true).all
+
+    @active_dropins.each do |dropin|
+      unless dropin.check_active
+        dropin.update(is_active: false)
+      end
+    end
+
+    redirect_to dropins_path
   end
   
   def import

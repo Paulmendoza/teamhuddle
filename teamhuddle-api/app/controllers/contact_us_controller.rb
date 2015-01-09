@@ -1,12 +1,8 @@
 class ContactUsController < ApplicationController
+  before_action :authenticate_admin!, :except => [:create]
 
   def index
-    if admin_signed_in?
-      @forms = ContactUs.all
-    else
-      redirect_to :new_admin_session
-    end
-
+    @forms = ContactUs.all
   end
 
   def create

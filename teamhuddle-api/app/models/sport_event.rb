@@ -3,8 +3,11 @@ class SportEvent < ActiveRecord::Base
   after_initialize :init
   acts_as_paranoid
 
+  attr_readonly :active
+
   belongs_to :event, :dependent => :delete
   belongs_to :sport
+  belongs_to :admin
   has_many :archived_sport_events
   has_many :sport_event_instances, :dependent => :delete_all
   has_one :location, :through => :event
@@ -51,6 +54,10 @@ class SportEvent < ActiveRecord::Base
 
   def organization
     self.event.organization
+  end
+
+  def check_active
+    return self.sport_event_instances.active.any?
   end
 
   # end

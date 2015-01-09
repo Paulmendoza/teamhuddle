@@ -6,5 +6,6 @@
 //= require ngmap
 //= require angular-gridster
 //= require adminApp
-
+//= require highcharts
+//= require highcharts-ng
 

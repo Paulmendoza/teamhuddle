@@ -1,45 +1,52 @@
-<h1>Welcome to Teamhuddle Admin <small>...heavily under construction</small></h1>
-<hr>
-<% if @sport_events.length != 22 %>
-<h2><label class="label label-danger">THERE ARE MORE DROPINS THAN FIXTURES!</label></h2>
-<h2><label class="label label-danger">DEVS DON'T LOAD FIXTURES, MAYBE MARC IS ADDING THINGS</label></h2>
-<% end %>
-<h2>What's new?</h2>
-<ul>
-  <h4>Lots of Client Changes</h4>  
-  <h4>Ability to sign in and out</h4>
-  <h4>So far, <%= @users.count  %> people have signed up.</h4>
-</ul>
+<div ng-controller="welcome">
 
-<h2>Currently Functional:</h2>
-<ul>
-  <li><%= link_to 'Organizations', organizations_path %></li>
-  <li><%= link_to 'Locations', locations_path %></li>
-  <li><%= link_to 'Dropins', dropins_path %></li>
-</ul>
+  <h1>Welcome back, <%= @admin_name %>
+  </h1>
+  <hr>
+  <% if @sport_events.length != 22 %>
+      <h2><label class="label label-danger">DEVS JUST DON'T LOAD FIXTURES</label></h2>
+  <% end %>
 
-<h2>Notes</h2>
-<ul>
-  <li>This portion of the webapp will only act as an admin interface</li>
-  <li>It will be used to interact with database and to supplement the Angular.js client</li>
-</ul>
-<br>
-<h4>List of people signed up</h4>
+  <highchart id="sport-events-entered" config="chartConfig"></highchart>
 
-<div>
-<table class="table table-bordered">
-    <thead>         
-    <tr>
+  <h2>What's new?</h2>
+  <ul>
+    <h4>Lots of Client Changes</h4>
+    <h4>Ability to sign in and out</h4>
+    <h4>So far, <%= @users.count %> people have signed up.</h4>
+  </ul>
+
+
+  <h2>Currently Functional:</h2>
+  <ul>
+    <li><%= link_to 'Organizations', organizations_path %></li>
+    <li><%= link_to 'Locations', locations_path %></li>
+    <li><%= link_to 'Dropins', dropins_path %></li>
+  </ul>
+
+  <h2>Notes</h2>
+  <ul>
+    <li>This portion of the webapp will only act as an admin interface</li>
+    <li>It will be used to interact with database and to supplement the Angular.js client</li>
+  </ul>
+  <br>
+  <h4>List of people signed up</h4>
+
+  <div>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
         <td>Email</td>
         <td>Submission Date</td>
-    </tr>
-    </thead>
-    <% @users.each do |user| %>
-    <tr>
-        <td><%= user.email %></td>
-        <td><%= user.created_at.localtime %></td>
-    </tr>
-    <% end %>
-</table>
+      </tr>
+      </thead>
+      <% @users.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= user.created_at.localtime %></td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+
 </div>
-  

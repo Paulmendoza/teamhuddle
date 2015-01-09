@@ -1,57 +1,84 @@
-<h1><%=  @dropin.name %></h1>
+<h1><%= @dropin.name %></h1>
+
+<!-- show this if the dropin is expired -->
+<% if !@dropin.check_active %>
+    <small class="label label-warning">EXPIRED</small>
+<% end %>
 
 <table class="table">
-    <tr>
-        <td><b>Sport</b></td>
-        <td><%= @dropin.sport_id %></td>    
-    </tr>
-    <tr>
-        <td><b>Skill Level</b></td>
-        <td><%= @dropin.skill_level %></td>    
-    </tr>
-    <tr>
-        <td><b>Location</b></td>
-        <td><%= @dropin.location.name %></td>    
-    </tr>
-    <tr>
-        <td><b>Organization</b></td>
-        <td><%= @dropin.organization.name %></td>    
-    </tr>
-    <tr>
-        <td><b>Source</b></td>
-        <td><a href="<%= @dropin.source %>" target="_blank"><%= @dropin.source %></a></td>
-    </tr>
-    <tr>
-        <td><b>Price per one</b></td>
-        <td><%= number_to_currency(@dropin.price_per_one, :unit => "$") %></td>    
-    </tr>
-    <tr>
-        <td><b>Price per group</b></td>
-        <td><%= number_to_currency(@dropin.price_per_group, :unit => "$") %></td>    
-    </tr>
-    <tr>
-        <td><b>Schedule</b></td>
-        <td><%= @dropin.schedule.to_s %></td>    
-    </tr>
-    <tr>
-        <td><b>Start Date</b></td>
-        <td><%= @dropin.schedule.start_time.strftime('%-d-%b-%y') %></td>    
-    </tr>
-    <tr>
-        <td><b>End Date</b></td>
-        <td><%= @dropin.schedule.last.strftime('%-d-%b-%y') %></td>    
-    </tr>
-    <tr>
-        <td><b># of Sessions</b></td>
-        <td><%= @dropin.schedule.all_occurrences.count %></td>    
-    </tr>
-    <tr>
-        <td><b>Time</b></td>
-        <td><%= @dropin.schedule.start_time.strftime('%l:%M%P') %> - <%= @dropin.schedule.end_time.strftime('%l:%M%P') %></td>    
-    </tr>
-    <tr>
-        <td><b>Action</b></td>
-        <td><%= link_to "DELETE", dropin_path(@dropin.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>    
-      </tr>
 
-  </table>
+  <tr>
+    <td><b>Sport Event ID</b></td>
+    <td><%= @dropin.id %></td>
+  </tr>
+  <tr>
+    <td><b>Created by</b></td>
+    <% if @created_by_admin.present? %>
+        <td> <%= @created_by_admin.email %></td>
+        <% else %>
+        <td> N/A</td>
+    <% end %>
+  </tr>
+  <tr>
+    <td><b>Sport</b></td>
+    <td><%= @dropin.sport_id %></td>
+  </tr>
+  <tr>
+    <td><b>Skill Level</b></td>
+    <td><%= @dropin.skill_level %></td>
+  </tr>
+  <tr>
+    <td><b>Location</b></td>
+    <td><%= @dropin.location.name %></td>
+  </tr>
+  <tr>
+    <td><b>Organization</b></td>
+    <td><%= @dropin.organization.name %></td>
+  </tr>
+  <tr>
+    <td><b>Source</b></td>
+    <td><a href="<%= @dropin.source %>" target="_blank"><%= @dropin.source %></a></td>
+  </tr>
+  <tr>
+    <td><b>Price per one</b></td>
+    <td><%= number_to_currency(@dropin.price_per_one, :unit => "$") %></td>
+  </tr>
+  <tr>
+    <td><b>Price per group</b></td>
+    <td><%= number_to_currency(@dropin.price_per_group, :unit => "$") %></td>
+  </tr>
+  <tr>
+    <td><b>Schedule</b></td>
+    <td><%= @dropin.schedule.to_s %></td>
+  </tr>
+  <tr>
+    <td><b>Start Date</b></td>
+    <td><%= @dropin.schedule.start_time.strftime('%-d-%b-%y') %></td>
+  </tr>
+  <tr>
+    <td><b>End Date</b></td>
+    <td><%= @dropin.schedule.last.strftime('%-d-%b-%y') %></td>
+  </tr>
+  <tr>
+    <td><b># of Sessions</b></td>
+    <td><%= @dropin.schedule.all_occurrences.count %></td>
+  </tr>
+  <tr>
+    <td><b>Time</b></td>
+    <td><%= @dropin.schedule.start_time.strftime('%l:%M%P') %>
+      - <%= @dropin.schedule.end_time.strftime('%l:%M%P') %></td>
+  </tr>
+  <tr>
+    <td><b>Comments</b></td>
+    <td><%= @dropin.event.comments %></td>
+  </tr>
+  <tr>
+    <td><b>Action</b></td>
+    <td>
+      <%= link_to "RENEW", renew_dropin_path(@dropin.id), class: 'btn btn-info' %>
+      <%= link_to "EDIT", edit_dropin_path(@dropin.id), class: 'btn btn-warning' %>
+      <%= link_to "DELETE", dropin_path(@dropin.id), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
+    </td>
+  </tr>
+
+</table>

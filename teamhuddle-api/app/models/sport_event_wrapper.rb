@@ -6,7 +6,8 @@ class SportEventWrapper
       comments,
       sport_event,
       type,
-      suppress_sport_event_instances)
+      suppress_sport_event_instances,
+      admin_id)
     
     @current_dropin = {}
     
@@ -21,7 +22,8 @@ class SportEventWrapper
       @current_dropin[:sport_event].event_id = @current_dropin[:event].id
       @current_dropin[:sport_event].type = type
       @current_dropin[:sport_event].spots_filled = -1
-      @current_dropin[:sport_event].gender = 'n/a'           
+      @current_dropin[:sport_event].gender = 'n/a'
+      @current_dropin[:sport_event].admin_id = admin_id
       
       if @current_dropin[:sport_event].save
         # once dropin is saved, generate sport event instances
@@ -39,13 +41,14 @@ class SportEventWrapper
           unless dropin_instance.save
             @current_dropin[:errors] = dropin_instance.errors
             dropin_instance.destroy
+            @current_dropin[:sport_event].really_destroy!
+            @current_dropin[:event].destroy
             return @current_dropin
           end
           
           sport_event_instances.push(dropin_instance)
         end
-        
-        
+
         # only add it if you really want it
         if not suppress_sport_event_instances
           @current_dropin[:sport_event_instances] = sport_event_instances
@@ -54,7 +57,7 @@ class SportEventWrapper
         
       else
         @current_dropin[:errors] = @current_dropin[:sport_event].errors
-        @current_dropin[:sport_event].destroy
+        @current_dropin[:event].destroy
         return @current_dropin
       end
     else

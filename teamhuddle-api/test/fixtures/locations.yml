@@ -1,72 +1,67 @@
 ---
 locations_001:
   id: 6
-  address: |-
-    6550 Bonsor Ave
-    Burnaby, BC V5H 2G8
+  address: 6550 Bonsor AveBurnaby, BC V5H 2G8
   lat: 49.224338
   long: -122.99672
   name: Bonsor Recreation Centre
   created_at: '2014-07-24 04:52:53.309703'
-  updated_at: '2014-10-05 23:33:41.007419'
+  updated_at: '2014-12-09 02:48:43.675114'
+  phone: "(604) 297-4597"
 locations_002:
   id: 9
-  address: |-
-    1 Athletes Way
-    Vancouver, BC V5Y 0B1
+  address: 1 Athletes WayVancouver, BC V5Y 0B1
   lat: 49.27158
   long: -123.10563
   name: Creekside Community Centre
   created_at: '2014-07-25 01:45:50.582887'
-  updated_at: '2014-10-05 23:32:44.806648'
+  updated_at: '2014-12-09 02:48:49.095969'
+  phone: "(604) 257-3050"
 locations_003:
   id: 27
-  address: 
+  address: ''
   lat: 49.260228
   long: -123.243906
   name: Robert F. Osborne Centre (UBC)
   created_at: '2014-07-28 20:53:59.025998'
-  updated_at: '2014-07-28 20:53:59.025998'
+  updated_at: '2014-12-09 02:07:40.496814'
+  phone: ''
 locations_004:
   id: 28
-  address: |-
-    6111 River Rd
-    Richmond, BC V7C 0A2
+  address: 6111 River Rd. Richmond, BC V7C 0A2
   lat: 49.174819
   long: -123.151905
   name: Richmond Olympic Oval
   created_at: '2014-07-28 20:57:46.858029'
-  updated_at: '2014-10-05 23:32:56.933560'
+  updated_at: '2014-12-09 02:48:54.529298'
+  phone: "(604) 296-1400"
 locations_005:
   id: 29
-  address: |-
-    480 Broughton St
-    Vancouver, BC V6G 3H4
+  address: 480 Broughton StVancouver, BC V6G 3H4
   lat: 49.290287
   long: -123.125423
   name: Coal Harbour Community Centre
   created_at: '2014-07-28 20:58:39.305029'
-  updated_at: '2014-07-28 20:58:39.305029'
+  updated_at: '2014-12-09 02:48:59.025535'
+  phone: "(604) 718-8222"
 locations_006:
   id: 33
-  address: |-
-    181 Roundhouse Mews
-    Vancouver, BC V6Z 2W3
+  address: 181 Roundhouse MewsVancouver, BC V6Z 2W3
   lat: 49.273653
   long: -123.121425
   name: Roundhouse Community Center
   created_at: '2014-08-03 05:00:39.319585'
-  updated_at: '2014-08-03 05:00:39.319585'
+  updated_at: '2014-12-09 02:49:03.886878'
+  phone: "(604) 713-1800"
 locations_007:
   id: 34
-  address: |-
-    700 Willingdon Ave
-    Burnaby, BC V5G 3H2
+  address: 700 Willingdon AveBurnaby, BC V5G 3H2
   lat: 49.248615
   long: -123.001042
   name: British Columbia Institute of Technology SAC
   created_at: '2014-08-03 05:04:30.751822'
-  updated_at: '2014-10-05 22:03:08.229824'
+  updated_at: '2014-12-09 02:49:08.623836'
+  phone: "(604) 432-8612"
 locations_008:
   id: 35
   address: 1661 Napier StVancouver, BC V5L 4X4
@@ -74,7 +69,8 @@ locations_008:
   long: -123.071301
   name: Britannia Community Center
   created_at: '2014-10-05 23:24:25.025110'
-  updated_at: '2014-12-02 00:16:55.411033'
+  updated_at: '2014-12-09 02:49:14.969020'
+  phone: "(604) 718-5800"
 locations_009:
   id: 36
   address: 7433 Edmonds StBurnaby, BC V3N 1B2
@@ -82,247 +78,224 @@ locations_009:
   long: -122.947658
   name: Edmonds Community Centre
   created_at: '2014-10-05 23:32:17.623619'
-  updated_at: '2014-11-27 21:58:35.377836'
+  updated_at: '2014-12-09 02:49:19.578689'
+  phone: "(604) 297-4838"
 locations_010:
   id: 37
-  address: |-
-    12800 Cambie Rd
-    Richmond, BC V6V 0A9
+  address: 12800 Cambie RdRichmond, BC V6V 0A9
   lat: 49.189109
   long: -123.078512
   name: Cambie Community Centre
   created_at: '2014-10-05 23:35:59.819483'
-  updated_at: '2014-10-05 23:35:59.819483'
+  updated_at: '2014-12-09 02:49:26.203791'
+  phone: "(604) 233-8399"
 locations_011:
   id: 38
-  address: |-
-    3360 Victoria Dr
-    Vancouver, BC V5N 4M4
+  address: 3360 Victoria DrVancouver, BC V5N 4M4
   lat: 49.255734
   long: -123.065289
   name: Trout Lake Community Centre
   created_at: '2014-10-05 23:40:41.941781'
-  updated_at: '2014-10-05 23:40:41.941781'
+  updated_at: '2014-12-09 02:49:31.727243'
+  phone: "(604) 257-6955"
 locations_012:
   id: 39
-  address: |-
-    401 Main St
-    Vancouver, BC V6A 2T7
+  address: 401 Main StVancouver, BC V6A 2T7
   lat: 49.281594
   long: -123.099514
   name: Carnegie Community Centre
   created_at: '2014-10-05 23:53:47.425427'
-  updated_at: '2014-10-05 23:53:47.425427'
+  updated_at: '2014-12-09 02:49:37.094138'
+  phone: "(604) 665-2220"
 locations_013:
   id: 40
-  address: |-
-    3350 Maquinna Dr
-    Vancouver, BC V5S 4C6
+  address: 3350 Maquinna DrVancouver, BC V5S 4C6
   lat: 49.215158
   long: -123.031987
   name: Champlain Heights Community Centre
   created_at: '2014-10-05 23:55:34.492061'
-  updated_at: '2014-10-05 23:55:34.492061'
+  updated_at: '2014-12-09 02:49:43.937776'
+  phone: "(604) 718-6575"
 locations_014:
   id: 41
-  address: |-
-    801 W 22nd Ave
-    Vancouver, BC V5Z 1Z8
+  address: 801 W 22nd AveVancouver, BC V5Z 1Z8
   lat: 49.252022
   long: -123.122195
   name: Douglas Park Community Centre
   created_at: '2014-10-05 23:56:47.175572'
-  updated_at: '2014-10-05 23:56:47.175572'
+  updated_at: '2014-12-09 02:49:50.080432'
+  phone: "(604) 257-8130"
 locations_015:
   id: 42
-  address: |-
-    4747 Dunbar Street
-    Vancouver, BC V6S 2H2
+  address: 4747 Dunbar StreetVancouver, BC V6S 2H2
   lat: 49.244248
   long: -123.186031
   name: Dunbar Community Centre
   created_at: '2014-10-05 23:57:57.547398'
-  updated_at: '2014-10-05 23:57:57.547398'
+  updated_at: '2014-12-09 02:49:55.303841'
+  phone: "(604) 222-6060"
 locations_016:
   id: 43
-  address: |-
-    320 Alexander St
-    Vancouver, BC V6A 1C3
+  address: 320 Alexander StVancouver, BC V6A 1C3
   lat: 49.284394
   long: -123.096703
   name: Evelyne Saller Centre
   created_at: '2014-10-05 23:58:40.416079'
-  updated_at: '2014-10-05 23:58:40.416079'
+  updated_at: '2014-12-09 02:50:00.966786'
+  phone: "(604) 665-3075"
 locations_017:
   id: 44
-  address: |-
-    1318 Cartwright St
-    Vancouver, BC V6H 3R8
+  address: 1318 Cartwright StVancouver, BC V6H 3R8
   lat: 49.284828
   long: -123.096596
   name: False Creek Community Centre
   created_at: '2014-10-06 00:00:47.824925'
-  updated_at: '2014-10-06 00:00:47.824925'
+  updated_at: '2014-12-09 02:50:05.764969'
+  phone: "(604) 257-8195"
 locations_018:
   id: 45
-  address: |-
-    609 Helmcken St
-    Vancouver, BC V6B 5R1
+  address: 609 Helmcken StVancouver, BC V6B 5R1
   lat: 49.278025
   long: -123.123482
   name: The Gathering Place
   created_at: '2014-10-06 00:01:53.180894'
-  updated_at: '2014-10-06 00:01:53.180894'
+  updated_at: '2014-12-09 02:50:13.216349'
+  phone: "(604) 665-2391"
 locations_019:
   id: 46
-  address: |-
-    3096 Hastings St E
-    Vancouver, BC V5K 2A3
+  address: 3096 Hastings St EVancouver, BC V5K 2A3
   lat: 49.28326
   long: -123.038661
   name: Hastings Community Centre
   created_at: '2014-10-06 00:06:06.888831'
-  updated_at: '2014-10-06 00:06:06.888831'
+  updated_at: '2014-12-09 02:50:17.517077'
+  phone: "(604) 718-6222"
 locations_020:
   id: 47
-  address: |-
-    4575 Clancy Loranger Way
-    Vancouver, BC V5Y 2M4
+  address: 4575 Clancy Loranger WayVancouver, BC V5Y 2M4
   lat: 49.24719
   long: -123.104948
   name: Hillcrest Community Centre
   created_at: '2014-10-06 00:06:33.059405'
-  updated_at: '2014-10-06 00:07:04.900490'
+  updated_at: '2014-12-09 02:50:22.087549'
+  phone: "(604) 257-8680"
 locations_021:
   id: 48
-  address: |-
-    5175 Dumfries Street
-    Vancouver, BC V5P 3A2
+  address: 5175 Dumfries StreetVancouver, BC V5P 3A2
   lat: 49.238378
   long: -123.074215
   name: Kensington Community Centre
   created_at: '2014-10-06 00:07:54.186882'
-  updated_at: '2014-10-06 00:07:54.186882'
+  updated_at: '2014-12-09 02:50:28.567770'
+  phone: "(604) 718-6200"
 locations_022:
   id: 49
-  address: |-
-    5851 West Blvd
-    Vancouver, BC V6M 3W9
+  address: 5851 West BlvdVancouver, BC V6M 3W9
   lat: 49.233517
   long: -123.156355
   name: Kerrisdale Community Centre
   created_at: '2014-10-06 00:08:48.684540'
-  updated_at: '2014-10-06 00:13:50.404673'
+  updated_at: '2014-12-09 02:50:35.847392'
+  phone: "(604) 257-8100"
 locations_023:
   id: 50
-  address: |-
-    2690 Larch St
-    Vancouver, BC V6K 4K9
+  address: 2690 Larch StVancouver, BC V6K 4K9
   lat: 49.26212
   long: -123.162084
   name: Kitsilano Community Centre
   created_at: '2014-10-06 00:09:34.627974'
-  updated_at: '2014-10-06 00:09:34.627974'
+  updated_at: '2014-12-09 02:50:42.626530'
+  phone: "(604) 257-6980"
 locations_024:
   id: 51
-  address: |-
-    6260 Killarney St
-    Vancouver, BC V5S 2X7
+  address: 6260 Killarney StVancouver, BC V5S 2X7
   lat: 49.227043
   long: -123.043488
   name: Killarney Community Centre
   created_at: '2014-10-06 00:10:44.714116'
-  updated_at: '2014-10-06 00:10:44.714116'
+  updated_at: '2014-12-09 02:50:51.775096'
+  phone: "(604) 718-8200"
 locations_025:
   id: 52
-  address: |-
-    990 W 59 Ave
-    Vancouver, BC V6P 1X9
+  address: 990 W 59 AveVancouver, BC V6P 1X9
   lat: 49.217443
   long: -123.12801
   name: Marpole Oakridge Community Centre
   created_at: '2014-10-06 00:11:58.420505'
-  updated_at: '2014-10-06 00:11:58.420505'
+  updated_at: '2014-12-09 02:51:00.112561'
+  phone: "(604) 257-8180"
 locations_026:
   id: 53
-  address: |-
-    1 Kingway
-    Vancouver, BC V5T 3H7
+  address: 1 KingwayVancouver, BC V5T 3H7
   lat: 49.264245
   long: -123.100182
   name: Mount Pleasant Community Centre
   created_at: '2014-10-06 00:13:31.601728'
-  updated_at: '2014-10-06 00:13:31.601728'
+  updated_at: '2014-12-09 02:51:16.057339'
+  phone: "(604) 713-1888"
 locations_027:
   id: 54
-  address: |-
-    920 East Hastings Street
-    Vancouver, BC V6A 3T1
+  address: 920 East Hastings StreetVancouver, BC V6A 3T1
   lat: 49.281258
   long: -123.083056
   name: Ray Cam Co-Operative Centre
   created_at: '2014-10-06 00:14:44.808308'
-  updated_at: '2014-10-06 00:14:44.808308'
+  updated_at: '2014-12-09 02:51:35.253422'
+  phone: "(604) 257-6949"
 locations_028:
   id: 55
-  address: |-
-    2929 E 22nd Ave
-    Vancouver, BC V5M 2Y3
+  address: 2929 E 22nd AveVancouver, BC V5M 2Y3
   lat: 49.251224
   long: -123.042737
   name: Renfrew Community Centre
   created_at: '2014-10-06 00:15:41.596599'
-  updated_at: '2014-10-06 00:15:41.596599'
+  updated_at: '2014-12-09 02:51:43.885434'
+  phone: "(604) 257-8388"
 locations_029:
   id: 56
-  address: |-
-    601 Keefer St
-    Vancouver, BC V6A 3V8
+  address: 601 Keefer StVancouver, BC V6A 3V8
   lat: 49.279831
   long: -123.091532
   name: Strathcona Community Centre
   created_at: '2014-10-06 00:16:26.470370'
-  updated_at: '2014-10-06 00:16:26.470370'
+  updated_at: '2014-12-09 02:51:51.349149'
+  phone: "(604) 713-1838"
 locations_030:
   id: 57
-  address: |-
-    6810 Main St
-    Vancouver, BC V5X 0A1
+  address: 6810 Main StVancouver, BC V5X 0A1
   lat: 49.22623
   long: -123.100974
   name: Sunset Community Centre
   created_at: '2014-10-06 00:17:28.259297'
-  updated_at: '2014-10-06 00:17:28.259297'
+  updated_at: '2014-12-09 02:51:58.253767'
+  phone: "(604) 718-6505"
 locations_031:
   id: 58
-  address: |-
-    2311 Cassiar St
-    Vancouver, BC V5M 3X3
+  address: 2311 Cassiar StVancouver, BC V5M 3X3
   lat: 49.264066
   long: -123.031193
   name: Thunderbird Community Centre
   created_at: '2014-10-06 00:18:38.778117'
-  updated_at: '2014-10-06 00:18:38.778117'
+  updated_at: '2014-12-09 02:52:05.812239'
+  phone: "(604) 713-1818"
 locations_032:
   id: 59
-  address: |-
-    870 Denman St
-    Vancouver, BC V6G 2L8
+  address: 870 Denman StVancouver, BC V6G 2L8
   lat: 49.290776
   long: -123.136464
   name: West End Community Centre
   created_at: '2014-10-06 00:19:46.565042'
-  updated_at: '2014-10-06 00:19:46.565042'
+  updated_at: '2014-12-09 02:52:14.343243'
+  phone: "(604) 257-8333"
 locations_033:
   id: 60
-  address: |-
-    4397 W 2nd Ave
-    Vancouver, BC V6R 1K4
+  address: 4397 W 2nd AveVancouver, BC V6R 1K4
   lat: 49.271893
   long: -123.203948
   name: West Point Grey Community Centre
   created_at: '2014-10-06 00:21:05.267983'
-  updated_at: '2014-10-06 00:21:05.267983'
+  updated_at: '2014-12-09 02:52:22.279407'
+  phone: "(604) 257-8140"
 locations_034:
   id: 71
   address: 15105 105 Avenue Surrey, BC V3R 7G8
@@ -330,7 +303,8 @@ locations_034:
   long: -122.802558
   name: Guildford Recreation Centre
   created_at: '2014-11-27 21:54:05.129922'
-  updated_at: '2014-11-27 21:56:04.737631'
+  updated_at: '2014-12-09 02:52:29.389173'
+  phone: "(604) 502-6360"
 locations_035:
   id: 72
   address: 1379 Laurier Ave Port Coquitlam, BC V3B 2B9
@@ -338,7 +312,8 @@ locations_035:
   long: -122.75105
   name: Hyde Creek Recreation Centre
   created_at: '2014-11-27 21:55:38.361263'
-  updated_at: '2014-11-27 21:55:38.361263'
+  updated_at: '2014-12-09 02:52:36.924867'
+  phone: "(604) 927-7946"
 locations_036:
   id: 73
   address: St. Andrews & East 23rd Ave, North Vancouver
@@ -346,7 +321,8 @@ locations_036:
   long: -123.065916
   name: McDougall Recreation Centre
   created_at: '2014-11-27 21:57:56.370999'
-  updated_at: '2014-11-27 21:57:56.370999'
+  updated_at: '2014-12-09 02:52:44.058401'
+  phone: "(604) 987-7529"
 locations_037:
   id: 74
   address: 7888 200 St Langley, BC V2Y 3J4
@@ -354,7 +330,8 @@ locations_037:
   long: -122.6662
   name: Langley Events Centre
   created_at: '2014-11-27 21:59:20.629858'
-  updated_at: '2014-11-27 21:59:20.629858'
+  updated_at: '2014-12-09 02:52:52.811677'
+  phone: "(604) 882-8800"
 locations_038:
   id: 75
   address: 8880 Williams Rd Richmond, BC V7A 1G6
@@ -362,23 +339,26 @@ locations_038:
   long: -123.127701
   name: 'South Arms Community Centre '
   created_at: '2014-11-27 22:00:30.801209'
-  updated_at: '2014-11-27 22:00:30.801209'
+  updated_at: '2014-12-09 02:53:00.197294'
+  phone: "(604) 718-8060"
 locations_039:
   id: 76
-  address: "\t9523 Cameron St, Burnaby, BC V3J 1L6"
+  address: 9523 Cameron St, Burnaby, BC V3J 1L6
   lat: 49.253479
   long: -122.899427
   name: Cameron Recreation Centre
   created_at: '2014-12-01 02:37:07.121233'
-  updated_at: '2014-12-01 02:37:07.121233'
+  updated_at: '2014-12-09 02:53:06.801625'
+  phone: "(604) 297-4456"
 locations_040:
   id: 77
-  address: 6066 Thunderbird Blvd
+  address: 6066 Thunderbird Boulevard, Vancouver, BC V6T 1Z3
   lat: 49.2607645
   long: -123.2421803
   name: Doug Mitchell Thunderbird Sports Centre
   created_at: '2014-12-02 05:47:16.124733'
-  updated_at: '2014-12-02 05:47:16.124733'
+  updated_at: '2014-12-09 02:51:26.505634'
+  phone: "(604) 822-6121"
 locations_041:
   id: 78
   address: 3705 Rupert Street, Vancouver, BC V5M 3W2, Canada
@@ -387,6 +367,7 @@ locations_041:
   name: Akos' House
   created_at: '2014-12-02 22:31:36.891173'
   updated_at: '2014-12-02 22:31:36.891173'
+  phone: 
 locations_042:
   id: 79
   address: Mickey McDougall Gym, 23rd Street East, North Vancouver, BC V7L 4R4, Canada
@@ -394,15 +375,17 @@ locations_042:
   long: -123.06722760000002
   name: Mickey McDougall Gym
   created_at: '2014-12-04 20:49:19.392065'
-  updated_at: '2014-12-04 20:49:19.392065'
+  updated_at: '2014-12-09 02:53:13.467255'
+  phone: "(604) 987-7529"
 locations_043:
   id: 80
-  address: Delbrook Community Recreation Centre, North Vancouver, BC V7N 2L3, Canada
+  address: Delbrook Community Recreation Centre, North Vancouver, BC V7N 2L3, Canad
   lat: 49.3371095
   long: -123.0864671
   name: Dellbrook Community Recreation
   created_at: '2014-12-04 21:04:01.733995'
-  updated_at: '2014-12-04 21:04:01.733995'
+  updated_at: '2014-12-09 02:53:21.051524'
+  phone: "(604) 987-7529"
 locations_044:
   id: 81
   address: 123 East 23rd Street North Vancouver, BC V7L 3E2
@@ -410,7 +393,8 @@ locations_044:
   long: -123.071503
   name: Harry Jerome Community Recreation Centre
   created_at: '2014-12-04 21:06:08.372696'
-  updated_at: '2014-12-04 21:06:08.372696'
+  updated_at: '2014-12-09 02:53:28.284064'
+  phone: "(604) 987-7529"
 locations_045:
   id: 82
   address: 145 West 1st Street North Vancouver, BC V7M 3N8
@@ -418,7 +402,8 @@ locations_045:
   long: -123.080728
   name: John Braithwaite Community Centre
   created_at: '2014-12-04 23:12:54.893091'
-  updated_at: '2014-12-04 23:12:54.893091'
+  updated_at: '2014-12-09 02:53:35.166116'
+  phone: "(604) 982-8300"
 locations_046:
   id: 83
   address: Karen Magnussen Wave Pool, 2300 Kirkstone Road, North Vancouver, BC V7J
@@ -427,7 +412,8 @@ locations_046:
   long: -123.04593090000003
   name: Karen Magnussen Community Recreation Centre
   created_at: '2014-12-04 23:13:21.408803'
-  updated_at: '2014-12-04 23:13:50.128233'
+  updated_at: '2014-12-09 02:53:42.010923'
+  phone: "(604) 987-7529"
 locations_047:
   id: 84
   address: Lynn Valley Community Recreation Centre, Frederick Road, North Vancouver,
@@ -436,16 +422,17 @@ locations_047:
   long: -123.03770800000001
   name: Lynn Valley Community Recreation Centre
   created_at: '2014-12-04 23:14:42.218488'
-  updated_at: '2014-12-04 23:14:42.218488'
+  updated_at: '2014-12-09 02:53:49.343046'
+  phone: "(604) 987-7529"
 locations_048:
   id: 85
-  address: North Shore Neighbourhood House, 1230 West 20 Street, North Vancouver,
-    BC V7P 2B9, Canada
+  address: 225 east 2nd street, North Vancouver, BC V7L 1C4
   lat: 49.3276787
   long: -123.10847439999998
   name: North Shore Neighbourhood House
   created_at: '2014-12-04 23:16:14.016779'
-  updated_at: '2014-12-04 23:16:14.016779'
+  updated_at: '2014-12-09 02:53:56.990509'
+  phone: "(604) 987-8138"
 locations_049:
   id: 86
   address: 3625 Banff Court North Vancouver, BC V7H 2Z8
@@ -453,7 +440,8 @@ locations_049:
   long: -122.968819
   name: Parkgate Community Centre
   created_at: '2014-12-04 23:17:21.069387'
-  updated_at: '2014-12-04 23:17:21.069387'
+  updated_at: '2014-12-09 02:54:03.261273'
+  phone: "(604) 983-6350"
 locations_050:
   id: 87
   address: 100 block East 23rd Street North Vancouver, BC V7N 2L3
@@ -461,4 +449,446 @@ locations_050:
   long: -123.068986
   name: Memorial Community Recreation Centre
   created_at: '2014-12-04 23:43:28.507519'
-  updated_at: '2014-12-04 23:43:28.507519'
+  updated_at: '2014-12-09 02:54:09.498171'
+  phone: "(604) 987-7529"
+locations_051:
+  id: 88
+  address: South Surrey Recreation Centre, 14601 20 Avenue, Surrey, BC V4A 8P7, Canada
+  lat: 49.03994609999999
+  long: -122.81862860000001
+  name: South Surrey Recreation Centre
+  created_at: '2014-12-10 02:11:06.094402'
+  updated_at: '2014-12-10 02:11:06.094402'
+  phone: "(604) 592-6970"
+locations_052:
+  id: 89
+  address: 6188 - 176th Street, Surrey BC
+  lat: 49.1154203
+  long: -122.73429779999998
+  name: Cloverdale Recreation Centre
+  created_at: '2014-12-10 02:11:53.159954'
+  updated_at: '2014-12-10 18:39:15.891282'
+  phone: "(604) 598-7960"
+locations_053:
+  id: 90
+  address: 13458 - 107A Avenue Surrey, BC V3T 0G4
+  lat: 49.19706
+  long: -122.848275
+  name: Chuck Bailey Recreation
+  created_at: '2014-12-10 02:14:47.390629'
+  updated_at: '2014-12-10 02:14:47.390629'
+  phone: "(604) 598-5898"
+locations_054:
+  id: 91
+  address: 15996 - 84 Avenue Surrey, BC V4N 0W1
+  lat: 49.155235
+  long: -122.778562
+  name: Fleetwood Community Centre
+  created_at: '2014-12-10 02:17:29.860699'
+  updated_at: '2014-12-10 02:17:29.860699'
+  phone: "(604) 501-5030"
+locations_055:
+  id: 92
+  address: '16555 Fraser Highway #100 Surrey, BC V4N 0E9'
+  lat: 49.15305739999999
+  long: -122.76438840000003
+  name: Surrey Sport & Leisure Complex
+  created_at: '2014-12-10 02:18:13.878264'
+  updated_at: '2014-12-10 18:39:50.399858'
+  phone: "(604) 501-5950"
+locations_056:
+  id: 93
+  address: 10588 – 160 Street, Surrey, BC V4N 0A1
+  lat: 49.1950467
+  long: -122.7775651
+  name: Fraser Heights Recreation Centre
+  created_at: '2014-12-10 02:19:03.392613'
+  updated_at: '2014-12-10 19:15:05.142589'
+  phone: "(604) 592-6920"
+locations_057:
+  id: 94
+  address: 5288 Joyce St, Vancouver, BC V5R 6C9
+  lat: 49.237101
+  long: -123.032289
+  name: Collingwood Neighbourhood House
+  created_at: '2014-12-10 19:35:24.941816'
+  updated_at: '2014-12-10 19:35:24.941816'
+  phone: "(604) 435-0323"
+locations_058:
+  id: 95
+  address: 2150 Wilson Avenue Port Coquitlam, BC V3C 6J5
+  lat: 49.259998
+  long: -122.776625
+  name: Port Coquitlam Recreation Complex
+  created_at: '2014-12-10 22:24:52.740978'
+  updated_at: '2014-12-16 00:29:23.529695'
+  phone: "(604) 927-7970 "
+locations_059:
+  id: 96
+  address: 5140 Smith Drive, Richmond, BC V6V 2W5
+  lat: 49.176339
+  long: -122.965472
+  name: 'Hamilton Community Centre '
+  created_at: '2014-12-15 21:34:56.713246'
+  updated_at: '2014-12-15 21:34:56.713246'
+  phone: "(604) 718-8055"
+locations_060:
+  id: 97
+  address: 7140 Miller Road  Richmond B.C. V7B 1L4
+  lat: 49.192354
+  long: -123.144521
+  name: Sea Island Community Centre
+  created_at: '2014-12-15 21:39:12.567893'
+  updated_at: '2015-01-01 20:50:18.136907'
+  phone: "(604) 718-8000"
+locations_061:
+  id: 98
+  address: '4111 Moncton Street, Richmond B.C., V7E 3A8 '
+  lat: 49.125486
+  long: -123.178697
+  name: Steveston Community Centre
+  created_at: '2014-12-15 21:40:56.004024'
+  updated_at: '2015-01-07 17:58:22.787843'
+  phone: "(604) 718-8080"
+locations_062:
+  id: 99
+  address: '5151 Granville Avenue  Richmond, B.C. V7C 1E6 '
+  lat: 49.163509
+  long: -123.165412
+  name: Thompson Community Centre
+  created_at: '2014-12-15 21:42:10.928041'
+  updated_at: '2014-12-16 00:28:28.521785'
+  phone: "(604) 718-8422 "
+locations_063:
+  id: 100
+  address: 9180 No. 1 Rd, Richmond, BC V7E 6L5, Canada
+  lat: 49.14625230000001
+  long: -123.178367
+  name: West Richmond Community Centre
+  created_at: '2014-12-15 21:42:50.158197'
+  updated_at: '2015-01-01 20:49:32.962439'
+  phone: "(604) 718-8400 "
+locations_064:
+  id: 101
+  address: 7551 Minoru Gate  Richmond, British Columbia V6Y 1R8 Canada
+  lat: 49.16529
+  long: -123.143022
+  name: Minoru Arena
+  created_at: '2014-12-15 21:45:31.567787'
+  updated_at: '2014-12-15 21:45:31.567787'
+  phone: "(604) 276-4000"
+locations_065:
+  id: 102
+  address: 14140 Triangle Road Richmond, British Columbia V6W 1B1 Canada
+  lat: 49.13668
+  long: -123.066262
+  name: 'Richmond Ice Centre '
+  created_at: '2014-12-15 21:53:10.525186'
+  updated_at: '2014-12-15 21:53:10.525186'
+  phone: "(604) 448-5366"
+locations_066:
+  id: 103
+  address: 1260 Pinetree Way Coquitlam, B.C. V3B 7Z4
+  lat: 49.289586
+  long: -122.791797
+  name: Pinetree Community Centre
+  created_at: '2014-12-15 22:51:36.000401'
+  updated_at: '2014-12-16 00:28:44.387819'
+  phone: "(604) 927-6960"
+locations_067:
+  id: 104
+  address: 630 Poirier Street, Coquitlam, BC V3J 6B1, Canada
+  lat: 49.255024
+  long: -122.846481
+  name: Poirier Sport & Leisure Complex
+  created_at: '2014-12-15 23:00:48.217810'
+  updated_at: '2014-12-16 00:28:51.974317'
+  phone: "(604) 927-6027"
+locations_068:
+  id: 105
+  address: 624 Poirier Street Coquitlam, BC V3J 6B1
+  lat: 49.255256
+  long: -122.847852
+  name: Dogwood Pavilion
+  created_at: '2014-12-15 23:41:20.782537'
+  updated_at: '2014-12-16 00:29:08.407300'
+  phone: "(604) 927-6098"
+locations_069:
+  id: 106
+  address: 1200 Glen Pine Court Coquitlam, B.C. V3B 2P7
+  lat: 49.283385
+  long: -122.794522
+  name: Glen Pine Pavilion
+  created_at: '2014-12-15 23:42:43.935438'
+  updated_at: '2014-12-16 00:29:00.010377'
+  phone: "(604) 927-6940"
+locations_070:
+  id: 107
+  address: 570 Poirier Street Coquitlam, BC V3J 6B1
+  lat: 49.252918
+  long: -122.847008
+  name: Centennial Activity Centre
+  created_at: '2014-12-15 23:43:59.987364'
+  updated_at: '2014-12-16 00:28:19.349236'
+  phone: "(604) 933-6143"
+locations_071:
+  id: 108
+  address: 1450 Parkway Boulevard, Coquitlam, BC V3E 3L2, Canada
+  lat: 49.2954155
+  long: -122.806428
+  name: Summit Community Centre
+  created_at: '2014-12-15 23:50:55.931629'
+  updated_at: '2015-01-01 20:49:09.802172'
+  phone: "(604) 927-6960"
+locations_072:
+  id: 109
+  address: 300 Ioco Road, Port Moody, BC V3H 5M9, Canada
+  lat: 49.283624
+  long: -122.831974
+  name: Port Moody Recreation Complex
+  created_at: '2014-12-16 00:16:44.714450'
+  updated_at: '2015-01-01 20:48:47.817384'
+  phone: "(604) 469-4556"
+locations_073:
+  id: 110
+  address: 11925 Haney Place, Maple Ridge, BC V2X 6G2, Canada
+  lat: 49.2189701
+  long: -122.599498
+  name: Maple Ridge Leisure Centre
+  created_at: '2014-12-16 00:26:47.940570'
+  updated_at: '2015-01-01 20:46:24.956340'
+  phone: "(604) 465-2452"
+locations_074:
+  id: 111
+  address: 12027 Harris Road, Pitt Meadows, BC V3Y 2B5, Canada
+  lat: 49.2207532
+  long: -122.691492
+  name: Pitt Meadows Family Recreation Centre
+  created_at: '2014-12-16 00:30:24.387774'
+  updated_at: '2015-01-01 20:47:24.292190'
+  phone: "(604) 465-2452"
+locations_075:
+  id: 112
+  address: 11435 Bonson Rd Pitt Meadows, BC V3Y 2S3
+  lat: 49.210306
+  long: -122.681125
+  name: Pitt Meadows Arena
+  created_at: '2014-12-16 00:32:32.380135'
+  updated_at: '2014-12-16 00:32:32.380135'
+  phone: "(604) 460-1531"
+locations_076:
+  id: 113
+  address: 23588 105 Ave Maple Ridge, BC V2W 1B8
+  lat: 49.194462
+  long: -122.566505
+  name: Planet Ice-Total Sports Entertainment
+  created_at: '2014-12-16 00:34:57.959387'
+  updated_at: '2014-12-16 00:34:57.959387'
+  phone: "(604) 467-2883"
+locations_077:
+  id: 114
+  address: 2300 Rocket Way Coquitlam, BC V3K 6Z2
+  lat: 49.232168
+  long: -122.827859
+  name: Planet Ice Coquitlam
+  created_at: '2014-12-16 00:35:47.375181'
+  updated_at: '2014-12-16 00:35:47.375181'
+  phone: "(604) 941-9911"
+locations_078:
+  id: 115
+  address: '65 East 6th Avenue New Westminster, BC  '
+  lat: 49.222043
+  long: -122.906418
+  name: Centennial Community Centre
+  created_at: '2014-12-16 00:53:45.490969'
+  updated_at: '2014-12-16 00:53:45.490969'
+  phone: "(604) 777-5100"
+locations_079:
+  id: 116
+  address: '65 East 6th Avenue New Westminster, BC '
+  lat: 49.22162
+  long: -122.906438
+  name: Centennial Community Centre, New West
+  created_at: '2014-12-22 02:14:36.610389'
+  updated_at: '2014-12-22 02:14:36.610389'
+  phone: "(604) 777-5100"
+locations_080:
+  id: 117
+  address: 600 Eighth Street New Westminster, BC  V3M 3S2
+  lat: 49.214724
+  long: -122.903369
+  name: Queen's Park Arenex
+  created_at: '2014-12-22 02:17:35.823340'
+  updated_at: '2014-12-22 02:17:35.823340'
+  phone: "(604) 777-5121"
+locations_081:
+  id: 118
+  address: 920 Ewen Avenue New Westminster, BC  V3M 5C8
+  lat: 49.186472
+  long: -122.943645
+  name: Queensborough Community Centre
+  created_at: '2014-12-22 02:19:58.762263'
+  updated_at: '2014-12-22 02:19:58.762263'
+  phone: "(604) 525-7388"
+locations_082:
+  id: 119
+  address: 701 8 Avenue, New Westminster, BC ‎
+  lat: 49.216013
+  long: -122.926029
+  name: Moody Park Arena
+  created_at: '2014-12-22 02:22:45.693541'
+  updated_at: '2014-12-22 02:22:45.693541'
+  phone: "(604) 525-5301"
+locations_083:
+  id: 120
+  address: '220-238 First St New Westminster, BC V3L '
+  lat: 49.215495
+  long: -122.906803
+  name: Queen's Park Arena
+  created_at: '2014-12-22 02:25:18.725881'
+  updated_at: '2014-12-22 02:25:18.725881'
+  phone: "(604) 777-5111"
+locations_084:
+  id: 121
+  address: 3600 Townline Rd.
+  lat: 49.068968
+  long: -122.358446
+  name: Centre Ice
+  created_at: '2014-12-30 02:34:55.281807'
+  updated_at: '2014-12-31 00:27:14.958935'
+  phone: "(604) 504-7565"
+locations_085:
+  id: 122
+  address: 2499 McMillan Road, Abbotsford, BC V2S 7S5, Canada
+  lat: 49.048104
+  long: -122.26275269999996
+  name: Abbotsford Recreation Centre
+  created_at: '2014-12-30 21:42:09.665885'
+  updated_at: '2015-01-08 20:01:29.648222'
+  phone: "(604) 854-8785"
+locations_086:
+  id: 123
+  address: 3106 Clearbrook Road, Abbotsford, BC V2T 4B9
+  lat: 49.0584932
+  long: -122.33535689999997
+  name: Matsqui Recreation Centre
+  created_at: '2014-12-30 21:43:36.743435'
+  updated_at: '2015-01-08 20:01:08.040091'
+  phone: "(604) 855-0500"
+locations_087:
+  id: 124
+  address: 13730 72 Ave, Surrey, BC V3W 2P4
+  lat: 49.133711
+  long: -122.842126
+  name: Newton Recreation Centre
+  created_at: '2014-12-30 23:04:04.118075'
+  updated_at: '2014-12-30 23:04:04.118075'
+  phone: "(604) 501-5540"
+locations_088:
+  id: 125
+  address: 12870 72 Avenue, Surrey, BC V3W 2M9
+  lat: 49.134241
+  long: -122.86619
+  name: Princess Margaret Secondary School
+  created_at: '2014-12-30 23:26:40.812237'
+  updated_at: '2014-12-30 23:26:40.812237'
+  phone: "(604) 501-5540"
+locations_089:
+  id: 126
+  address: 5700 Langley Bypass, Langley, BC V2Y 2P3, Canada
+  lat: 49.1069893
+  long: -122.64289869999999
+  name: Langley Twin Rinks
+  created_at: '2014-12-30 23:36:29.238142'
+  updated_at: '2014-12-31 00:25:57.723303'
+  phone: "(604) 532-8946"
+locations_090:
+  id: 127
+  address: 6501 Sprott Street, Burnaby, BC V5B 3B8, Canada
+  lat: 49.2500023
+  long: -122.97067500000003
+  name: Burnaby 8 Rinks
+  created_at: '2014-12-31 00:12:02.817509'
+  updated_at: '2014-12-31 00:27:03.264315'
+  phone: "(604) 291-0626"
+locations_091:
+  id: 128
+  address: 20699 42 Avenue, Langley, BC V3A 2G5, Canada
+  lat: 49.0770326
+  long: -122.64984240000001
+  name: George Preston Recreation Centre
+  created_at: '2014-12-31 01:48:43.012119'
+  updated_at: '2014-12-31 01:48:43.012119'
+  phone: '6045301323'
+locations_092:
+  id: 129
+  address: 2882 272 Street, Aldergrove, BC V4W 3J9, Canada
+  lat: 49.05480679999999
+  long: -122.47065959999998
+  name: Aldergrove Community Arena
+  created_at: '2014-12-31 02:06:58.773388'
+  updated_at: '2014-12-31 02:06:58.773388'
+  phone: '6045301323'
+locations_093:
+  id: 130
+  address: 7650 Grand Street, Mission, BC V2V 3T3
+  lat: 49.141386
+  long: -122.307012
+  name: Mission Liesure Centre
+  created_at: '2014-12-31 22:39:08.529867'
+  updated_at: '2014-12-31 22:39:08.529867'
+  phone: "(604) 820-5350"
+locations_094:
+  id: 131
+  address: 3676 Kensington Avenue, Burnaby, BC V5B 4Z6, Canada
+  lat: 49.253344
+  long: -122.96645699999999
+  name: Bill Copeland Sports Centre
+  created_at: '2015-01-02 01:01:02.935222'
+  updated_at: '2015-01-02 01:01:02.935222'
+  phone: '6042974521'
+locations_095:
+  id: 132
+  address: 3676 Kensington Avenue, Burnaby, BC V5B 4Z6, Canada
+  lat: 49.253344
+  long: -122.96645699999999
+  name: Burnaby Lake Arena
+  created_at: '2015-01-02 01:09:37.092163'
+  updated_at: '2015-01-02 01:09:37.092163'
+  phone: '6042974521'
+locations_096:
+  id: 133
+  address: 10275 City Parkway, Surrey, BC V3T, Canada
+  lat: 49.1878557
+  long: -122.84774920000001
+  name: North Surrey Recreation Centre
+  created_at: '2015-01-07 02:31:54.565585'
+  updated_at: '2015-01-08 22:10:17.932704'
+  phone: "(604) 502-6300"
+locations_097:
+  id: 134
+  address: 6090 176 Street, Surrey, BC V3S, Canada
+  lat: 49.113243
+  long: -122.73416299999997
+  name: Cloverdale Arena
+  created_at: '2015-01-08 22:11:28.982033'
+  updated_at: '2015-01-08 22:11:28.982033'
+  phone: "(604) 502-6410"
+locations_098:
+  id: 135
+  address: 7120 136B Street, Surrey, BC V3W, Canada
+  lat: 49.1320171
+  long: -122.84279600000002
+  name: Newton Arena
+  created_at: '2015-01-08 22:12:06.017652'
+  updated_at: '2015-01-08 22:12:06.017652'
+  phone: "(604) 501-5044"
+locations_099:
+  id: 136
+  address: 2199 148 Street, Surrey, BC V4A 8L5, Canada
+  lat: 49.0414724
+  long: -122.8160924
+  name: South Surrey Arena
+  created_at: '2015-01-08 22:12:34.462078'
+  updated_at: '2015-01-08 22:12:34.462078'
+  phone: "(604) 502-6200"

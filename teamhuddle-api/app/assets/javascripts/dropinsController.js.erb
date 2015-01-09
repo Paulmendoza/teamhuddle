@@ -1,8 +1,19 @@
 var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonboat'];
 
-app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropins', function ($scope, $filter, $location, $compile, Dropins) {
+app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropins', 'Admins', function ($scope, $filter, $location, $compile, Dropins, Admins) {
     // set my own orderBy filter directive
     var orderBy = $filter('orderBy');
+
+    $scope.admin_signed_in = false;
+
+    Admins.signed_in().then(
+        function (signed_in) {
+            $scope.admin_signed_in = signed_in;
+        },
+        function (signed_in) {
+            $scope.admin_signed_in = false;
+        }
+    );
 
     $scope.loadingDropins = false;
 
@@ -62,7 +73,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
     //watch to see if the location changes and then set the sport accordingly
     $scope.$on('$locationChangeSuccess', function (event) {
         if (sportRoutes.indexOf($location.path()) >= 0) {
-            ga('send', 'pageview', $location.path()); // add google analytics to the "router"
+            ga('send', 'pageview', '/dropin-finder' + $location.path()); // add google analytics to the "router"
             $scope.sport = $location.path().replace("/", "");
             $scope.refreshDropins();
         }
@@ -126,6 +137,25 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
                 $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
             }
         }, 250);
+    };
+
+    $scope.toggleTo = function (dropinId) {
+        //keep InfoWindow Open, just switch dropins and scroll to it
+        if ($scope.markerWrappers.currentlyOpen !== null) {
+            if($(window).width() <= 992) {
+                $scope.mapMobileToggle = false;
+                window.setTimeout(function () {
+                    $scope.markerWrappers[$scope.markerWrappers.currentlyOpen].infoWindow.toggle();
+                    $scope.markerWrappers[dropinId].infoWindow.toggle();
+                }, 250)
+            }
+            else {
+                $scope.markerWrappers[$scope.markerWrappers.currentlyOpen].infoWindow.toggle();
+                $scope.markerWrappers[dropinId].infoWindow.toggle();
+            }
+
+
+        }
     };
 
     // function which orders by predicate
@@ -203,6 +233,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
     //  marker(Object)                      : the google maps marker objecct
     //  infoWindow(Object)                  : the google maps info window object
     //  infoWindow.toggle(function(bool))   : function to toggle an info window
+
     function MarkerWrapper(dropin) {
         this.isOpen = false;
 
@@ -249,18 +280,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
                 that.infoWindow.open($scope.map, that.marker);
                 that.isOpen = true;
 
-                // scroll to logic here
-                var scrollPos = $('#dropin-' + dropin.id).offset().top;
-
-                // if the element would fall into the height of the window
-                // minus some buffer then just scroll to the top
-                if (scrollPos < window.innerHeight - 150) {
-                    $('body').animate({scrollTop: 0}, 'fast');
-                }
-                // otherwise scroll to the element minus a buffer so it will always show on screen
-                else {
-                    $('body').animate({scrollTop: scrollPos - 175}, 'fast');
-                }
+                scrollToDropin(dropin);
             }
 
             if (!$scope.$$phase) {
@@ -270,42 +290,44 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
 
     }
 
+    function scrollToDropin(dropin) {
+        // scroll to logic here
+        var scrollPos = $('#dropin-' + dropin.id).offset().top;
+
+        // if the element would fall into the height of the window
+        // minus some buffer then just scroll to the top
+        if (scrollPos < window.innerHeight - 150) {
+            $('body').animate({scrollTop: 0}, 'fast');
+        }
+        // otherwise scroll to the element minus a buffer so it will always show on screen
+        else {
+            $('body').animate({scrollTop: scrollPos - 175}, 'fast');
+        }
+    }
+
+
     //dynamically generates compiled html content for infowindows
     function generateInfoWindowHtmlContent(dropins) {
         var templateDropin = dropins[0];
+
+        var bMultipleDropins = dropins.length > 1;
         var  htmlContent = "<div class='info-window'>" +
-                "<h5>" + templateDropin.location.name + "</h5>" +
-                "<p>" + templateDropin.location.address + "</p>" +
-                "<p>" + templateDropin.phone + "</p>";
+            "<h5>" + templateDropin.location.name + "</h5>" +
+            "<p>" + templateDropin.location.address + "</p>" +
+            "<p>" + templateDropin.phone + "</p>" +
+            "<table>"
+        dropins.forEach(function(thisDropin) {
+            htmlContent += "<tr ng-click='toggleTo(" + thisDropin.id + ")'" +
+                            "ng-class='{ &#39;marker-row-selected&#39; : "
+                            + thisDropin.id + " === " + $scope.markerWrappers.currentlyOpen + " && " +  bMultipleDropins + "}'>" +
+                            "<td>" + $filter('date')(thisDropin.datetime_start, 'EEEE') + "</td>" +
+                           "<td>&nbsp;&nbsp;" + $filter('date')(thisDropin.datetime_start, 'h:mm a') + " - " + $filter('date')(thisDropin.datetime_end, 'h:mm a') + "</td>" +
+                           "<td ng-click='toggleTo(" + thisDropin.id + ")'>&nbsp;&nbsp;More Info</td>"  +
+            "</tr>";
+        });
 
-        if (dropins.length === 1) {
-            htmlContent += "<div class='hidden-xs hidden-sm'>" + //hide extra stuff on mobile, instead show a button to go to the list
-                    "<div class='col-md-7 col-sm-7'>" +
-                    "<p><b>Day:</b> " + $filter('date')(templateDropin.datetime_start, 'EEEE') + " </p>" +
-                    "<p><b>Skill:</b> " + templateDropin.sport_event.skill_level + "</p>" +
-                    "</div>" +
-                    "<div class='col-md-5 col-sm-5'>" +
-                    "<p><b>Price:</b> " + $filter('currency')(templateDropin.sport_event.price_per_one) + "</p>" +
-                    "<p><b>Time:</b> " + $filter('date')(templateDropin.datetime_start, 'h:mm a') + " - " + $filter('date')(templateDropin.datetime_end, 'h:mm a') + "</p>" +
-                    "</div>" +
-                    "<br><br><br><br><br>" +
-                    "</div>" +
-                    "<div class='hidden-lg hidden-md'>" +
-                    "<button class='btn' ng-click='switchToList()'>more info</button>" +
-                    "<br><br><br>" +
-                    "</div>";
-        }
-        else if (dropins.length > 1){
-            htmlContent += "<table>"
-            dropins.forEach(function(thisDropin) {
-                htmlContent += "<tr><td>" + $filter('date')(thisDropin.datetime_start, 'EEEE') + "</td>" +
-                               "<td>&nbsp;&nbsp;" + $filter('date')(thisDropin.datetime_start, 'h:mm a') + " - " + $filter('date')(thisDropin.datetime_end, 'h:mm a') + "</td>" +
-                               //"<td>&nbsp;&nbsp;See more</td>"  +
-                "</tr>";
-            });
+        htmlContent += "</table>" + "<br><br>";
 
-            htmlContent += "</table>" + "<br>";
-        }
         htmlContent += "</div>";
         var compiled = $compile(htmlContent)($scope);
         return compiled[0];
@@ -319,6 +341,17 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
             }
         });
         return tempDropins;
+    }
+
+    function getDropinById(dropinId){
+        var tempDropin;
+        $scope.dropins.forEach(function (dropin) {
+            if (dropin.id === dropinId) {
+                tempDropin = dropin;
+            }
+        });
+
+        return tempDropin;
     }
 
     // get the path for each map marker asset

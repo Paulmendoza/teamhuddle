@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="app">
   <head>
-    <title>teamhuddle</title>
-    
+    <title><%= yield(:title) %></title>
     <%= stylesheet_link_tag  'application',
                              'static_pages',
                              'http://fonts.googleapis.com/css?family=Jura:400,600',
@@ -11,12 +10,15 @@
                              media: 'all',
                              'data-turbolinks-track' => true%>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="shortcut icon" type="image/png" href="favicon.ico.png">
+    <meta name="description" content="A platform connecting your community through sports. Find the sports you love playing with the players you love playing with!">
+
+    <%= favicon_link_tag 'favicon.ico' %>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     
     <%= csrf_meta_tags %>
   </head>
   <body>
+  <div class="wrapper">
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53af382b4ee31991" async="async"></script>
 
@@ -33,46 +35,39 @@
       <a class="navbar-brand logotext" href="/"><%= image_tag 'logo-compressed.png', class: "logonav center-block", alt: 'teamhuddle_logo'%></a>
     </div>
 
-    
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <ul class="nav navbar-nav navbar-right" role="menu">
-        <li class="navlinks"><%= link_to "about", controller: :index, action: :about %></li>
-        <li class="navlinks"><%= link_to "contact", controller: :index, action: :contact %></li>
-        <li class="navlinks"><%= link_to "landing page", controller: :index, action: :landing %></li>
-        <li class="navlinks dropdown">
-        <a href="#" class="dropdown-toggle" class="dropdown" data-toggle="dropdown" role="button" aria-expanded="false">sports</a>
-          <ul class="dropdown-menu" role="menu">
-            <li><%= link_to "volleyball", "/#/volleyball" %></li>
-            <li><%= link_to "hockey", "/#/hockey" %></li>
-            <li><%= link_to "basketball", "/#/basketball" %></li>
-            <li><%= link_to "soccer", "/#/soccer" %></li>
-            <li><%= link_to "dragonboat", "/#/dragonboat" %></li>
-          </ul>
+        <li class="navlinks">
+          <%= link_to "drop-in finder", controller: :index, action: :dropin_finder %>
+          <!--<a class="dropdown-toggle" class="dropdown" data-toggle="dropdown" role="button" aria-expanded="false">dropin finder</a>-->
+          <!--<ul class="dropdown-menu" role="menu">-->
+            <!--<li><%#= link_to "volleyball", "/dropin-finder#/volleyball" %></li>-->
+            <!--<li><%#= link_to "hockey", "/dropin-finder#/hockey" %></li>-->
+            <!--<li><%#= link_to "basketball", "/dropin-finder#/basketball" %></li>-->
+            <!--<li><%#= link_to "soccer", "/dropin-finder#/soccer" %></li>-->
+          <!--</ul>-->
         </li>
+        <li class="navlinks"><%= link_to "about", controller: :index, action: :about %></li>
+        <li class="navlinks right-side"><%= link_to "contact", controller: :index, action: :contact %></li>
       </ul>
     </div>
 
     </nav>
 
-        <%= yield %>
+    <%= yield %>
+    <div id="footer" class="footer">
+      <div class="footer-content text-center"><span>&copy; Teamhuddle Athletics Inc.</span></div>
+
+
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <!--<div class="addthis_horizontal_follow_toolbox pull-right addthis"></div>-->
+    </div>
+  </div>
 
   <%= javascript_include_tag 'base_client_application' %>
-    
-  <!-- Go to www.addthis.com/dashboard to customize your tools -->
-  <script>
-  
-    // Fix mobile floating toolbar when input is focused
-    if(/iPhone|iPod|Android|iPad/.test(window.navigator.platform)){
 
-    $(document)
-      .on('focus', 'textarea,input,select', function(e) {
-        $('.footer').css('position', 'absolute');
-      })
-      .on('blur', 'textarea,input,select', function(e) {
-        $('.footer').css('position', '');
-      });
-    }
+  <script>
     //Google Analytics
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
     { (i[r].q=i[r].q||[]).push(arguments)}
@@ -81,7 +76,6 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-56771767-1', 'auto');
     ga('send', 'pageview');
-
   </script>
 
   </body>
