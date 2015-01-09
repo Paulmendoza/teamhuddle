@@ -185,35 +185,21 @@
     }
 
     img {
-    	width: 250px;
-    	height: 250px;
+    	//width: 250px;
+    	max-height: 300px;
     	border: 1px solid #000;
     }
 
     h4 {
     	margin-top: 0;
+    	font-weight: bold ;
     }
 
-/*    .teammember {
-    	height: 1200px;
-    	cursor: pointer;
+    .tm {
+    	clear: both;
+		padding: 30px 0px;
+		border-bottom: 1px solid #ddd;
     }
-*/
-	.showme{ 
-		display: none;
-		 -webkit-transition: padding 2s;
-
-	}
-	.showbio:hover .showme{
-		display : block;
-		transition: opacity 0.2s 1s ease;
-		-webkit-transition: border-radius 2s;
-
-	}
-
-	.hidden {
-     display:none;
-	}
 }
 
 
