@@ -364,6 +364,11 @@ li {
 .default-sport_logos-outer {
     padding: 0px 40px 50px;
 
+    @media (max-width: 510px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .default-sport-logos-inner {
 
         .default-icon-outer {
