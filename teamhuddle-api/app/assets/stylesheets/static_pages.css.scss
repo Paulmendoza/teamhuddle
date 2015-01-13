@@ -24,6 +24,15 @@
 		color: $dark-red;
 	}
 
+	.slogan {
+		font-family: "Raleway", sans-serif;
+		font-size: 23px;
+	}
+
+	.intro {
+		font-family: "Raleway", sans-serif;
+		font-size: 33px;
+	}
 
 	.header-outer {
 		background-color: transparent;
@@ -95,6 +104,17 @@
 
 	.sport_logos-outer {
 		padding: 50px 40px 100px;
+		clear: both;
+    	position: relative;
+
+    	@media (max-width: 510px) {
+    		padding-left: 0;
+    		padding-right: 0;
+    	}
+
+    	h1 {
+    		margin-bottom: 0;
+    	}
 
 		.sport-logos-inner {
 
@@ -117,6 +137,10 @@
 		    		height: 250px;
 		    		background: image-url('icons_sprite.png') -253px 0px;
 					display: inline-block;
+
+					@media (max-width: 583px) {
+						margin-bottom: -50px;
+					}
 				}
 				.icon3 {
 					min-width: 250px;
@@ -179,35 +203,31 @@
     }
 
     img {
-    	width: 250px;
-    	height: 250px;
+    	//width: 250px;
+    	max-height: 300px;
     	border: 1px solid #000;
     }
 
     h4 {
     	margin-top: 0;
+    	font-weight: bold ;
     }
 
-/*    .teammember {
-    	height: 1200px;
-    	cursor: pointer;
+    .tm {
+    	clear: both;
+		padding: 30px 0px;
+		border-bottom: 1px solid #ddd;
+
+		&:first-of-type {
+			border-top: 1px solid #ddd;
+
+		}
+
+		&:last-of-type {
+			border: 0;
+
+		}
     }
-*/
-	.showme{ 
-		display: none;
-		 -webkit-transition: padding 2s;
-
-	}
-	.showbio:hover .showme{
-		display : block;
-		transition: opacity 0.2s 1s ease;
-		-webkit-transition: border-radius 2s;
-
-	}
-
-	.hidden {
-     display:none;
-	}
 }
 
 
@@ -255,6 +275,11 @@
 
 	.panel-success {
 		color: $light-green;
+	}
+
+	.footer {
+	    min-height: 300px;
+
 	}
 
 	@media (max-width: 1199px) {
