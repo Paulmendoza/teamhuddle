@@ -1,4 +1,8 @@
 <%= grid(@dropins_grid) do |g|
+  g.column name: 'ID', attribute: 'id' do |dropin|
+    dropin.id
+  end
+
   g.column name: 'Name', attribute: 'name', model: 'Event' do |dropin|
     link_to dropin.name, dropin_path(dropin.id)
   end
