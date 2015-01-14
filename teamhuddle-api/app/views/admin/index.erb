@@ -1,12 +1,9 @@
 <div ng-controller="welcome">
 
-  <h1>Welcome back, <%= @admin_name %>
-  </h1>
+  <h1>Welcome back, <%= @admin_name %></h1>
   <hr>
-  <% if @sport_events.length != 22 %>
-      <h2><label class="label label-danger">DEVS JUST DON'T LOAD FIXTURES</label></h2>
-  <% end %>
 
+  <h3>We're live people!</h3>
   <highchart id="sport-events-entered" config="chartConfig"></highchart>
 
   <h2>What's new?</h2>
