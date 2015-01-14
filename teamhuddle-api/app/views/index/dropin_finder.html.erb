@@ -106,14 +106,13 @@
               <div class="col-md-2 col-xs-4">
                 <br>
                 <dt>Day</dt><dl>{{dropin.datetime_start | date:'EEEE'}}</dl>
-                <dt>Price</dt><dl>{{dropin.sport_event.price_per_one | currency }}</dl>                
+                <dt>Price</dt><dl>{{dropin.sport_event.price_per_one | currency | empty_to_na }}</dl>
               </div>
               <div class="col-md-2 col-xs-4">
                 <br>
                 <dt>Skill Level</dt><dl>{{dropin.sport_event.skill_level}}</dl>
                 <dt>Spots Available</dt>
-                <dl ng-if="dropin.sport_event.spots !== null">{{ dropin.sport_events.spots }}</dl>
-                <dl ng-if="dropin.sport_event.spots === null">N/A</dl>
+                <dl>{{ dropin.sport_events.spots | empty_to_na }}</dl>
               </div>
               <div class="col-md-4 col-xs-4">
                 <br>

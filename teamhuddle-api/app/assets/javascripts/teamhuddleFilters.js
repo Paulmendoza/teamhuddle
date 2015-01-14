@@ -30,3 +30,20 @@ app.filter('skill_level', function () {
         return retn;
     };
 });
+
+String.prototype.isEmpty = function() {
+    return (this.length === 0 || !this.trim());
+};
+
+app.filter('empty_to_na', function () {
+    return function (string) {
+        if(string === null || string === undefined || string.isEmpty()) {
+            return 'N/A';
+        } else {
+            return string;
+        }
+
+    };
+});
+
+
