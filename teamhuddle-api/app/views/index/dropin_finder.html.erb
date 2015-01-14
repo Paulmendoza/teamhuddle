@@ -92,7 +92,7 @@
                 <button class="btn-info" ng-click="$event.stopPropagation(); switchToMap()">show on map</button>
             </div>
 
-            <a ng-if="admin_signed_in" href="/admin/dropins/{{dropin.sport_event.id}}" ng-click="$event.stopPropagation()">View Admin Page for Dropin</a>
+            <a ng-if="admin_signed_in" href="/admin/dropins/{{dropin.sport_event.id}}" ng-click="$event.stopPropagation()" target="_blank">View Admin Page for Dropin</a>
 
             <!-- show this if it's not selected -->
             <div ng-hide="isSelected(dropin.id)">
@@ -118,7 +118,7 @@
                 <br>
                 <dt>Time</dt><dl>{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</dl>
                 <dt>Schedule Until</dt><dl>{{dropin.sport_event.schedule_until | date:'MMM d'}}</dl>
-                <dt ng-show="dropin.sport_event.source !== null">Source</dt><dl><a href="{{dropin.sport_event.source}}" ng-click="$event.stopPropagation()">{{dropin.sport_event.source}}</a></dl>
+                <dt ng-show="dropin.sport_event.source !== null">Source</dt><dl><a href="{{dropin.sport_event.source}}" ng-click="$event.stopPropagation()" target="_blank">{{dropin.sport_event.source}}</a></dl>
               </div>
             </div>
             
