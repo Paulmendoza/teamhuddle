@@ -27,15 +27,15 @@ class SportEventWrapper
       
       if @current_dropin[:sport_event].save
         # once dropin is saved, generate sport event instances
-        duration = @current_dropin[:sport_event].schedule.end_time - @current_dropin[:sport_event].schedule.start_time
+
         
         sport_event_instances = Array.new
         
         @current_dropin[:sport_event].schedule.each_occurrence do |i|
           dropin_instance = SportEventInstance.new
           dropin_instance.sport_event_id = @current_dropin[:sport_event].id
-          dropin_instance.datetime_start = i
-          dropin_instance.datetime_end = i + duration
+          dropin_instance.datetime_start = i.start_time.getlocal
+          dropin_instance.datetime_end = i.end_time.getlocal
           dropin_instance.event_id = @current_dropin[:event].id
           
           unless dropin_instance.save
