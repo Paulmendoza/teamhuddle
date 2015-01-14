@@ -486,6 +486,17 @@ li {
   }
 }
 
+.btn-danger {
+    background: $dark-green;
+    border: 1px solid $dark-green;
+    border-radius: 0;
+
+    &:hover {
+        background: $light-green;
+        border: 1px solid $light-green;
+    }
+}
+
 .disclaimer{
   margin-top: 1em;
   text-align: center;
