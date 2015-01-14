@@ -15,6 +15,8 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
         }
     );
 
+    $scope.failedRetrieve = false;
+
     $scope.loadingDropins = false;
 
     $scope.mapMobileToggle = false;
@@ -105,7 +107,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
                 },
                 function (reason) {
                     $scope.loadingDropins = false;
-                    alert('Failed: ' + reason);
+                    $scope.failedRetrieve = true;
                 });
     };
 

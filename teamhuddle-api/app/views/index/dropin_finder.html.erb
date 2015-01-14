@@ -74,6 +74,12 @@
           <%= image_tag("loading.gif", alt: "loading") %>
         </div>
         <br>
+
+        <div ng-if="failedRetrieve" class="panel panel-warning">
+          <!-- This is only shown if we had an error retrieving the dropins -->
+          <div class="panel-title text-center">Sorry, we could not retrieve the dropins at this time. Please try again later.</div>
+        </div>
+
         <div class="row clearfix dropin-repeat"
              ng-class="{selected: markerWrappers.currentlyOpen === dropin.id}"  
              ng-repeat="dropin in dropins" 
