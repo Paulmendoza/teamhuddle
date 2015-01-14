@@ -246,7 +246,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
         // the content for the infoWindow is set to blank to be generate at toggle-time
         this.infoWindow = new google.maps.InfoWindow({
             content: "",
-            maxwidth: 200
+            maxwidth: 100
         });
 
         // redecleration needed to set up listener correctly
@@ -321,9 +321,8 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
                             "ng-class='{ &#39;marker-row-selected&#39; : "
                             + thisDropin.id + " === " + $scope.markerWrappers.currentlyOpen + " && " +  bMultipleDropins + "}'>" +
                             "<td>" + $filter('date')(thisDropin.datetime_start, 'EEEE') + "</td>" +
-                           "<td>&nbsp;&nbsp;" + $filter('date')(thisDropin.datetime_start, 'h:mm a') + " - " + $filter('date')(thisDropin.datetime_end, 'h:mm a') + "</td>" +
-                           "<td ng-click='toggleTo(" + thisDropin.id + ")'>&nbsp;&nbsp;More Info</td>"  +
-            "</tr>";
+                           "<td>&nbsp;&nbsp;" + $filter('date')(thisDropin.datetime_start, 'h:mm a') + " - " + $filter('date')(thisDropin.datetime_end, 'h:mm a') + "</td>"
+                            "</tr>";
         });
 
         htmlContent += "</table>" + "<br><br>";
