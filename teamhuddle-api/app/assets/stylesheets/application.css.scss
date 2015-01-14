@@ -246,7 +246,6 @@ body {
     span {
       color: white;
     }
-
   }
 }
 
@@ -485,6 +484,17 @@ li {
     background-color: $dark-blue;
     border: 1px solid #000;
   }
+}
+
+.btn-danger {
+    background: $dark-green;
+    border: 1px solid $dark-green;
+    border-radius: 0;
+
+    &:hover {
+        background: $light-green;
+        border: 1px solid $light-green;
+    }
 }
 
 .disclaimer{
