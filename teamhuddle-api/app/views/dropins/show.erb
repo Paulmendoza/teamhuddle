@@ -20,6 +20,14 @@
     <% end %>
   </tr>
   <tr>
+    <td><b>Updated At</b></td>
+    <td><%= @dropin.created_at.getlocal %></td>
+  </tr>
+  <tr>
+    <td><b>Created At</b></td>
+    <td><%= @dropin.updated_at.getlocal %></td>
+  </tr>
+  <tr>
     <td><b>Sport</b></td>
     <td><%= @dropin.sport_id %></td>
   </tr>
