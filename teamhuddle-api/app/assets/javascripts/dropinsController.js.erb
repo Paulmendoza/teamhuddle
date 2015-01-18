@@ -115,7 +115,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
         // set a minor timeout to fix load issues
         window.setTimeout(function () {
             google.maps.event.trigger($scope.map, 'resize');
-        }, 100);
+        }, 400);
     };
 
     $scope.switchToMap = function () {
