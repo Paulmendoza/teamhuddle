@@ -45,7 +45,7 @@
   <section ng-show="sport !== 'no-sport'">
     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak ng-class="{'map-mobile-toggle': !mapMobileToggle}" ng-view>
       <map center="Vancouver, Canada" zoom="10" init-event="loadMap" geo-fallback-center="Vancouver, Canada"></map>
-      <button class="btn-info hidden-md hidden-lg col-sm-12 col-xs-12" ng-click="switchToList()">show list</button>
+      <button class="btn-info hidden-md hidden-lg col-sm-12 col-xs-12" id="map-to-list-button" ng-click="switchToList()">show list</button>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak ng-class="{'map-mobile-toggle': mapMobileToggle}">
