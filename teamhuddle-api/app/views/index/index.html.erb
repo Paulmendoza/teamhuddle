@@ -1,6 +1,6 @@
 <% content_for :title, "Teamhuddle | A platform connecting your community through sports" %>
 
-<div class="container-fluid padding-top-70" ng-controller="landing-page" ng-cloak>
+<div class="container-fluid padding-top-70" ng-app="BaseApp"  ng-cloak>
 
   <div class="landing-page">
 
@@ -17,7 +17,7 @@
     </section>
     <section class="mailer-outer">
       <div class="mailer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="mailer-inner text-center">
+        <div class="mailer-inner text-center" ng-controller="landing-page">
           <hr>
           <h4>Submit your e-mail below to receive front of the line access to our beta</h4>
           <br>
@@ -117,5 +117,5 @@
   <!--     <div class="footer">
         <div class="addthis_horizontal_follow_toolbox pull-right addthis"></div>
       </div> -->
-  <%= javascript_include_tag 'angular_client_application' %>
+  <%= javascript_include_tag 'base_angular_app' %>
 </div>

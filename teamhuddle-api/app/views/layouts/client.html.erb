@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
   <head>
     <title><%= yield(:title) %></title>
     <%= stylesheet_link_tag  'application',
@@ -74,7 +74,7 @@
         ga('create', 'UA-56771767-1', 'auto');
         ga('send', 'pageview');
     </script>
-    <%= javascript_include_tag 'base_client_application' %>
+    <%= javascript_include_tag 'base_app' %>
 
   </body>
 </html>

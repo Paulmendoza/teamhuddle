@@ -1,4 +1,4 @@
-app.controller('landing-page', ['$scope', '$http', function ($scope, $http) {
+BaseApp.controller('landing-page', ['$scope', '$http', function ($scope, $http) {
     $scope.submitted = false;
 
     $scope.success = false;
