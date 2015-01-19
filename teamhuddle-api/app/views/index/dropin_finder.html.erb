@@ -1,4 +1,4 @@
-<% content_for :title, "Teamhuddle | dropin Finder" %>
+<% content_for :title, "Teamhuddle | Dropin Finder" %>
 
 <div class="container" ng-controller="dropins">
 
@@ -107,7 +107,9 @@
             <h4 ng-class="{bolded: isSelected(dropin.id)}">{{dropin.location.name}}</h4>
 
             <div ng-show="isSelected(dropin.id)" class="dropin-info">
-              <span>{{dropin.location.address}}</span><br>
+              <span>
+                <a href="http://maps.google.com/?q={{dropin.location.address}}" ng-click="$event.stopPropagation()" target="map">{{dropin.location.address}}</a>
+              </span><br>
               <span>{{dropin.phone}}</span><br>
               <email>{{dropin.organization.email}}</email>
             </div>
