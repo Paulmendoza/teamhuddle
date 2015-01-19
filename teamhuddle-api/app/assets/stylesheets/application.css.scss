@@ -700,11 +700,12 @@ li {
 
  #sticky-toolbox {
    position: fixed;
-   width: 50%;
+   width: 52%;
    z-index: 1;
    background-color: #ffffff;
    border-bottom: 1px solid #777777;
    padding-bottom: 20px;
+   padding-right:20px;
  }
   map {
     position: fixed;
