@@ -99,6 +99,7 @@ class DropinsController < ApplicationController
     @event = Event.find(@dropin.event_id)
 
     @event.attributes = {
+        :name => params[:sport_event][:name],
         :location_id => params[:sport_event][:location],
         :organization_id => params[:sport_event][:organization],
         :comments => params[:sport_event][:comments]
