@@ -1,6 +1,6 @@
 <%= grid(@locations_grid) do |g|
   g.column name: 'Name', attribute: 'name' do |location|
-    location.name
+    link_to location.name, location
   end
 
   g.column name: 'Address', attribute: 'address' do |location|

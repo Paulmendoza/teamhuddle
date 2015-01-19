@@ -1,4 +1,29 @@
-<h3><%= @organization.name %></h3>
-<span>Phone: <%= @organization.phone %></span> <br/>
-<span>Email: <%= @organization.email %></span>
+<h2><%= @organization.name %></h2>
+
+<table class="table">
+
+  <tr>
+    <td><b>Name</b></td>
+    <td><%= @organization.name %></td>
+  </tr>
+
+  <tr>
+    <td><b>Phone</b></td>
+    <td><%= @organization.phone %></td>
+  </tr>
+
+  <tr>
+    <td><b>Email</b></td>
+    <td><%= @organization.email %></td>
+  </tr>
+
+  <tr>
+    <td><b>Action</b></td>
+    <td>
+      <%= link_to "EDIT", edit_organization_path(@organization), class: 'btn btn-warning' %>
+      <%= link_to "DELETE", organization_path(@organization), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
+    </td>
+  </tr>
+
+</table>
 

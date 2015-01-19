@@ -1,4 +1,32 @@
-<h3><%= @location.name %></h3>
-<span>Latitude: <%= @location.lat %></span> <br/>
-<span>Longtitude: <%= @location.long %></span>
+<h2><%= @location.name %></h2>
+
+<table class="table">
+  <tr>
+    <td><b>Address</b></td>
+    <td><a href="http://maps.google.com/?q=<%= @location.address %>" target="_blank"><%= @location.address %></a></td>
+  </tr>
+
+  <tr>
+    <td><b>Phone</b></td>
+    <td><%= @location.phone %></td>
+  </tr>
+
+  <tr>
+    <td><b>Latitude</b></td>
+    <td><%= @location.lat %></td>
+  </tr>
+
+  <tr>
+    <td><b>Longitude</b></td>
+    <td><%= @location.long %></td>
+  </tr>
+
+  <tr>
+    <td><b>Action</b></td>
+    <td>
+      <%= link_to "EDIT", edit_location_path(@location), class: 'btn btn-warning' %>
+      <%= link_to "DELETE", location_path(@location), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
+    </td>
+  </tr>
+</table>
 

@@ -1,6 +1,6 @@
 <%= grid(@organizations_grid) do |g|
   g.column name: 'Name', attribute: 'name' do |organization|
-    organization.name
+    link_to organization.name, organization
   end
 
   g.column name: 'Email', attribute: 'email' do |organization|
