@@ -1,4 +1,6 @@
-app.animation('.animateSlide', function () {
+var BaseApp = angular.module('BaseApp',['ngAnimate']);
+
+BaseApp.animation('.animateSlide', function () {
     return {
         addClass: function (element, className, done) {
             jQuery(element).slideUp(done);

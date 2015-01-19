@@ -1,6 +1,6 @@
 // FILTERS
 // filter based on a certain weekday
-app.filter('weekday', ['$filter', function ($filter) {
+DropinFinder.filter('weekday', ['$filter', function ($filter) {
     return function (sport_events, day) {
         var retn = [];
 
@@ -16,7 +16,7 @@ app.filter('weekday', ['$filter', function ($filter) {
 }]);
 
 // filter based on skill level
-app.filter('skill_level', function () {
+DropinFinder.filter('skill_level', function () {
     return function (sport_events, skill) {
         var retn = [];
 
@@ -35,7 +35,7 @@ String.prototype.isEmpty = function() {
     return (this.length === 0 || !this.trim());
 };
 
-app.filter('empty_to_na', function () {
+DropinFinder.filter('empty_to_na', function () {
     return function (string) {
         if(string === null || string === undefined || string.isEmpty()) {
             return 'N/A';

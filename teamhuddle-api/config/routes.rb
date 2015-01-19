@@ -44,7 +44,7 @@ Rails.application.routes.draw do
     get 'admin_stats' => 'admin#admin_stats'
     get 'admin_signed_in' => 'admin#admin_signed_in'
   end
-  
+
   # aliases of sport_event
   scope :api, defaults: { format: 'json' } do
     scope :v1 do
