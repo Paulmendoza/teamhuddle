@@ -223,7 +223,14 @@ body {
   // background-image: radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #EAEAEA 100%);
 
 }
-
+#welcome-section{
+  background: image-url('huddle-1.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 628px;
+}
 .wrapper {
   min-height: 100%;
   height: auto !important;
@@ -592,6 +599,9 @@ li {
   }
   #sticky-toolbox {
     margin-top:71px;
+  }
+  #welcome-section{
+    height: 771px;
   }
 }
 

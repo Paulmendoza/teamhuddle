@@ -3,7 +3,7 @@
 <div class="container-fluid padding-top-70" ng-app="BaseApp"  ng-cloak>
 
   <div class="landing-page">
-
+<div id="welcome-section">
     <section class="header-outer col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="header">
         <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo' %>
@@ -18,7 +18,6 @@
     <section class="mailer-outer">
       <div class="mailer col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="mailer-inner text-center" ng-controller="landing-page">
-          <hr>
           <h4>Submit your e-mail below to receive front of the line access to our beta</h4>
           <br>
 
@@ -26,6 +25,7 @@
             <input type="email" ng-model="email" class="form-control"/>
             <input value="submit" type="submit" class="btn btn-info"/>
           </form>
+          <!--END-->
           <br>
 
           <!-- Show this div while waiting for a response from the server -->
@@ -46,7 +46,7 @@
         </div>
       </div>
     </section>
-
+</div>
     <section class="feature-outer">
       <div class="feature col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h1 class="text-center">teamhuddle features</h1><br>
