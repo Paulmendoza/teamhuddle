@@ -1,15 +1,15 @@
-<% content_for :title, "Teamhuddle | Drop-in Finder" %>
+<% content_for :title, "Teamhuddle | dropin Finder" %>
 
 <div class="container" ng-controller="dropins">
 
   <section class="header-outer">
     <div class="header text-center" ng-show="sport === 'no-sport'">
-      <h1>teamhuddle drop-in finder</h1>
+      <h1>dropin finder</h1>
       <hr>
       <h3 class="slogan">Find the sports you love playing and the players you love playing with!</h3>
       <h5 class="intro">
         Looking to play your favourite sport or hoping to try something new? Use the
-        <span class="inline-title">Drop-In Finder</span> to find volleyball, basketball, hockey and soccer drop-in
+        <span class="inline-title">Dropin Finder</span> to find volleyball, basketball, hockey and soccer dropin
         events in your community.
       </h5>
     </div>
@@ -82,7 +82,7 @@
         </div>
       </div>
 
-      <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">drop-in {{sport | lowercase }} events</h2>
+      <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
 
       <div class="dropin_results">
         <div class="text-center" ng-show="loadingDropins">
