@@ -150,10 +150,7 @@
               <dl>{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</dl>
               <dt>Schedule Until</dt>
               <dl>{{dropin.sport_event.schedule_until | date:'MMM d'}}</dl>
-              <dt ng-show="dropin.sport_event.source !== null">Source</dt>
-              <dl>
-                <a href="{{dropin.sport_event.source}}" ng-click="$event.stopPropagation()" target="_blank">{{dropin.sport_event.source}}</a>
-              </dl>
+              <dl ng-show="dropin.sport_event.source !== null"><a href="{{dropin.sport_event.source}}" ng-click="$event.stopPropagation()" target="_blank">Source Website</a></dl>
             </div>
           </div>
 
