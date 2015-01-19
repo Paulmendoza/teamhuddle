@@ -152,9 +152,7 @@
     }
   }
 }
-#dropin_results2{
-  padding-top:170px;
-}
+
 .dropdown-menu {
   ul {
     li {
@@ -271,13 +269,15 @@ body {
   }
 
   .header {
-
     h3 {
       color: $dark-blue;
     }
 
   }
+}
 
+.dropin-header {
+  padding-top: 80px;
 }
 
 .slogan {
@@ -590,7 +590,7 @@ li {
     bottom: 0;
     height: 8vh
   }
-  #stickyToolbox{
+  #sticky-toolbox {
     margin-top:71px;
   }
 }
@@ -600,7 +600,6 @@ li {
   /*************************
   THREE COLUMN LAYOUT
   *************************/
-
   #first {
     width: 30%;
   }
@@ -663,13 +662,10 @@ li {
   .dropin_results {
     font-size: 12px;
   }
-  #dropin_results2{
-    padding-top:0;
-  }
-  #stickyToolbox{
+
+  #sticky-toolbox {
     margin-top:71px;
   }
-
 }
 
 @media screen and (min-width: 992px) {
@@ -701,11 +697,14 @@ li {
     padding-left: 0px;
     padding-right: 15px;
   }
- #stickyToolbox{
+
+ #sticky-toolbox {
    position: fixed;
    width: 50%;
    z-index: 1;
    background-color: #ffffff;
+   border-bottom: 1px solid #777777;
+   padding-bottom: 20px;
  }
   map {
     position: fixed;
@@ -717,6 +716,7 @@ li {
 
     width: 47%;
     border-right: 1px solid #777;
+    padding-bottom: 20px;
   }
 
   .sport_name {
@@ -737,6 +737,10 @@ li {
     margin-top: 10px;
     margin-left: -20px;
   }
+
+  #dropin_results2{
+    padding-top: 185px;
+  }
 }
 
 @media (min-width: 1199px) {
@@ -745,6 +749,10 @@ li {
     margin-left: 5%;
     margin-top: -50px;
     padding-bottom: 0px;
+  }
+
+  #dropin_results2{
+    padding-top:140px;
   }
 }
 
