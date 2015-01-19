@@ -295,8 +295,8 @@ body {
 }
 
 .footer {
-  /*    position: fixed;
-      bottom: 0;*/
+  position: relative;
+  bottom: 0;
   background-color: #000;
   height: 50px;
   width: 100%;
