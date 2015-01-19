@@ -30,7 +30,7 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
   #config.assets.precompile << /(^[^_\/]|\/[^_])[^\/]*$/
-  config.assets.precompile = ['base_client_application.js',
+  config.assets.precompile = ['base_app.js',
                               'angular_client_application.js',
                               'admin.js',
                               '*.png',
@@ -69,7 +69,7 @@ Rails.application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets.
-  # base_client_application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
+  # base_app.js, application.css, and all non-JS/CSS in app/assets folder are already added.
   # config.assets.precompile += %w( search.js )
 
   # Ignore bad email addresses and do not raise email delivery errors.

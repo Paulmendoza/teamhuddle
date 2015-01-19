@@ -1,4 +1,4 @@
-app.controller('contact', ['$scope', '$http', function ($scope, $http) {
+BaseApp.controller('contact', ['$scope', '$http', function ($scope, $http) {
     $scope.submitted = false;
 
     $scope.success = false;

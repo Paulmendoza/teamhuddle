@@ -1,2 +1,2 @@
-//= require jquery.js
+//= require jquery
 //= require bootstrap-sprockets

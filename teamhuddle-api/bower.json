@@ -6,6 +6,7 @@
             "angular-resource": "1.3.2",
             "angular-animate": "1.3.2",
             "angular-gridster": "latest",
+            "angular-route": "1.3.2",
             "ngmap": "1.1.5",
             "jquery-ui": "latest",
             "highcharts-ng": "0.0.7",

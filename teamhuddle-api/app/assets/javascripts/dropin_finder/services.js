@@ -30,7 +30,7 @@ Date.prototype.addDays = function(days) {
 };
 
 // the dropins service that is expandable with new functions easily
-app.service('Dropins', ['$http', '$q', function ($http, $q) {
+DropinFinder.service('Dropins', ['$http', '$q', function ($http, $q) {
 
     var baseUrl = '/api/v1/api_dropins.json?';
 
@@ -62,7 +62,7 @@ app.service('Dropins', ['$http', '$q', function ($http, $q) {
     };
 }]);
 
-app.service('Admins', ['$http', '$q', function ($http, $q) {
+DropinFinder.service('Admins', ['$http', '$q', function ($http, $q) {
     this.signed_in = function(){
         var deferred = $q.defer();
 

@@ -1,7 +1,7 @@
 <% content_for :title, "Teamhuddle | Dropin Finder" %>
 
-<div class="container" ng-controller="dropins">
-
+<div class="container" ng-app="DropinFinder" >
+  <div ng-controller="dropins">
   <section class="header-outer">
     <div class="header text-center" ng-show="sport === 'no-sport'">
       <h1>dropin finder</h1>
@@ -43,7 +43,7 @@
   </section>
 
   <section ng-show="sport !== 'no-sport'">
-    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak ng-class="{'map-mobile-toggle': !mapMobileToggle}" ng-view>
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 left-wrapper" ng-cloak ng-class="{'map-mobile-toggle': !mapMobileToggle}" >
       <map center="Vancouver, Canada" zoom="10" init-event="loadMap" geo-fallback-center="Vancouver, Canada"></map>
       <button class="btn-info hidden-md hidden-lg col-sm-12 col-xs-12" id="map-to-list-button" ng-click="switchToList()">show list</button>
     </div>
@@ -166,7 +166,7 @@
       </div>
     </div>
   </section>
-</div>
+
 
 
 <style>
@@ -175,5 +175,8 @@
     }
 </style>
 
-<%= javascript_include_tag 'angular_client_application', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag '//maps.googleapis.com/maps/api/js?key=AIzaSyDwIy4KU0bhEV5R3yV5hAqAcL_TIjlrY0o' %>
+    <%= javascript_include_tag 'dropin_finder_app', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag '//maps.googleapis.com/maps/api/js?key=AIzaSyDwIy4KU0bhEV5R3yV5hAqAcL_TIjlrY0o' %>
+
+    </div>
+</div>

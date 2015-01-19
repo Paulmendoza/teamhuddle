@@ -1,6 +1,6 @@
 var sportRoutes = ['/volleyball', '/hockey', '/basketball', '/soccer', '/dragonboat'];
 
-app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropins', 'Admins', function ($scope, $filter, $location, $compile, Dropins, Admins) {
+DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropins', 'Admins', function ($scope, $filter, $location, $compile, Dropins, Admins) {
     // set my own orderBy filter directive
     var orderBy = $filter('orderBy');
 
@@ -58,7 +58,7 @@ app.controller('dropins', ['$scope', '$filter', '$location', '$compile', 'Dropin
             console.log("Deleting marker: " + oldDropin.id);
         });
 
-        // add new MarkerWrappers
+                // add new MarkerWrappers
         $scope.dropins.forEach(function (dropin) {
             if (typeof ($scope.markerWrappers[dropin.id]) === 'undefined') {
                 $scope.markerWrappers[dropin.id] = new MarkerWrapper(dropin);
