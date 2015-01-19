@@ -6,7 +6,6 @@ class Organization < ActiveRecord::Base
   has_many :events
 
   validates :name, :presence => true, :uniqueness => true
-  validates :email, :uniqueness => true, :allow_nil => true
   validates :location_id, :inclusion => { :in => Location.pluck(:id),
     :message => "not a valid location" }, :allow_nil => true
 
