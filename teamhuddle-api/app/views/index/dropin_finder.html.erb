@@ -50,7 +50,9 @@
 
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak ng-class="{'map-mobile-toggle': mapMobileToggle}">
       <br>
-
+      <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
+      <br>
+      <br>
       <div class="dropinfilters_row">
         <button class="btn btn-default hidden-lg hidden-md col-sm-12 col-xs-12" ng-click="switchToMap()">show map
         </button>
@@ -82,9 +84,8 @@
         </div>
       </div>
 
-      <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
 
-      <div class="dropin_results">
+      <div class=dropin_results">
         <div class="text-center" ng-show="loadingDropins">
           <%= image_tag("loading.gif", alt: "loading") %>
         </div>
