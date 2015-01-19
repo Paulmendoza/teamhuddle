@@ -16,7 +16,6 @@
 [ng-cloak] {
   display: none !important;
 }
-
 /*// ========== NAVIGATION STYLES ===========
 */
 .navbar {
@@ -151,7 +150,9 @@
     }
   }
 }
-
+#dropin_results2{
+  padding-top:50px;
+}
 .dropdown-menu {
   ul {
     li {
@@ -247,7 +248,7 @@ body {
 }
 
 .header-outer {
-  padding: 0px 80px 5px;
+  padding: 10px 80px 5px;
 
   .slogan {
     font-family: "Raleway", sans-serif;
@@ -264,7 +265,7 @@ body {
   }
 
   @media (max-width: 822px) {
-    padding: 0px 20px
+    padding: 0px 5px 0px
   }
 
   .header {
@@ -572,7 +573,9 @@ li {
   .dropin_results {
     font-size: 12px;
   }
-
+  #dropin_results2 {
+    padding-top:170px;
+  }
   #map-to-list-button{
     position: fixed;
     left: 0;
@@ -707,7 +710,6 @@ li {
     margin-top: 10px;
     margin-left: -20px;
   }
-
 }
 
 @media (min-width: 1199px) {
