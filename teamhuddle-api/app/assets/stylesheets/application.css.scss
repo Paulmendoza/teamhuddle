@@ -247,7 +247,7 @@ body {
 }
 
 .header-outer {
-  padding: 20px 80px 5px;
+  padding: 0px 80px 5px;
 
   .slogan {
     font-family: "Raleway", sans-serif;
@@ -264,7 +264,7 @@ body {
   }
 
   @media (max-width: 822px) {
-    padding: 20px 20px 30px
+    padding: 0px 20px
   }
 
   .header {
@@ -311,10 +311,6 @@ body {
 li {
   text-decoration: none;
   display: inline-block;
-}
-
-.sport_name {
-  margin-top: 70px;
 }
 
 .dropin-repeat {
@@ -552,7 +548,6 @@ li {
   }
 
   .sport_name {
-    margin-top: 110px;
     font-size: 1.48em;
   }
 
@@ -682,7 +677,7 @@ li {
   .right-wrapper {
     position: absolute !important;
     right: 0px !important;
-    top: 100px !important;
+    top: 50px !important;
   }
 
   map {
@@ -695,7 +690,6 @@ li {
   }
 
   .sport_name {
-    margin-top: 70px;
   }
 
   .dropinfilters_row {
