@@ -35,7 +35,7 @@
     background-color: transparent;
 
     .header {
-      padding: 0px 40px;
+      padding: 20px 40px;
 
       h3 {
         color: $dark-blue;
@@ -44,7 +44,7 @@
 
     @media (max-width: 750px) {
       .header {
-        padding: 0px;
+        padding: 20px 40px;
       }
     }
   }

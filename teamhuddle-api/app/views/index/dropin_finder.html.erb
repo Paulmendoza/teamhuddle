@@ -49,42 +49,42 @@
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right-wrapper" ng-cloak ng-class="{'map-mobile-toggle': mapMobileToggle}">
-      <br>
-      <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
-      <br>
-      <br>
-      <div class="dropinfilters_row">
-        <button class="btn btn-default hidden-lg hidden-md col-sm-12 col-xs-12" ng-click="switchToMap()">show map
-        </button>
-        <button class="btn btn-success col-lg-3 col-md-6 col-sm-6 col-xs-6" ng-click="resetFilters()">reset filters
-        </button>
-        <%= link_to "more sports", "#/", class: "btn btn-info col-lg-3 col-md-6 col-sm-6 col-xs-6" %>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-          <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="setFilters()">
-            <option value="" disabled selected>Day</option>
-            <option value="All">All</option>
-            <option value="Monday">Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-            <option value="Sunday">Sunday</option>
-          </select>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-          <select class="form-control dropin_filter2" ng-model="skillLevelSelect" ng-change="setFilters()">
-            <option value="" disabled selected>Skill Level</option>
-            <option value="All">All</option>
-            <option value="Recreational">Recreational</option>
-            <option value="Beginner">Beginner</option>
-            <option value="Intermediate">Intermediate</option>
-            <option value="Advanced">Advanced</option>
-          </select>
+      <div class="row" id="stickyToolbox">
+        <br>
+        <h2 class="text-center sport_name" ng-if="sport !== 'no-sport'">dropin {{sport | lowercase }} events</h2>
+        <br>
+        <br>
+        <div class="dropinfilters_row">
+          <button class="btn btn-default hidden-lg hidden-md col-sm-12 col-xs-12" ng-click="switchToMap()">show map
+          </button>
+          <button class="btn btn-success col-lg-3 col-md-6 col-sm-6 col-xs-6" ng-click="resetFilters()">reset filters
+          </button>
+          <%= link_to "more sports", "#/", class: "btn btn-info col-lg-3 col-md-6 col-sm-6 col-xs-6" %>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="setFilters()">
+              <option value="" disabled selected>Day</option>
+              <option value="All">All</option>
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <select class="form-control dropin_filter2" ng-model="skillLevelSelect" ng-change="setFilters()">
+              <option value="" disabled selected>Skill Level</option>
+              <option value="All">All</option>
+              <option value="Recreational">Recreational</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </div>
         </div>
       </div>
-
-
       <div class=dropin_results" id="dropin_results2">
         <div class="text-center" ng-show="loadingDropins">
           <%= image_tag("loading.gif", alt: "loading") %>
