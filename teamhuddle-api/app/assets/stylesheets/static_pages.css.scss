@@ -201,8 +201,6 @@
 .about-us {
 
   .about-us-text {
-    border-right: 1px solid #000;
-
     @media (max-width: 1199px) {
       border: none;
     }
@@ -259,10 +257,6 @@
   li {
     padding: 5px 0px;
     display: block;
-  }
-
-  .socialmedia-full {
-    border-left: 1px solid #000;
   }
 
   .socialmedia {
