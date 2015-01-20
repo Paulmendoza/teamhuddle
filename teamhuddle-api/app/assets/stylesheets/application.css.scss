@@ -189,9 +189,7 @@
   padding-left: 0;
   padding-right: 0;
 }
-
 body {
-  height: 100%;
   /*padding-top: 80px; */
   background: #eaeaea; /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -235,16 +233,15 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -4em;
+  margin: 0 auto;
 }
 
 .footer, .push {
-  //    position: fixed;
   background-color: #000;
   height: 4em;
   width: 100%;
   padding: 0px;
-  margin-top: 20px;
+  margin-top: 40px;
   border-top: 2px solid #777;
 
   .footer-content {
@@ -302,8 +299,6 @@ body {
 }
 
 .footer {
-  position: relative;
-  bottom: 0;
   background-color: #000;
   height: 50px;
   width: 100%;
@@ -683,7 +678,6 @@ li {
   /*************************
   FOUR COLUMN LAYOUT
   *************************/
-
   #first {
     width: 21.14%;
   }
