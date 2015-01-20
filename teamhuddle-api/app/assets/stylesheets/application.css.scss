@@ -253,6 +253,9 @@ body {
 
 .header-outer {
   padding: 10px 80px 5px;
+  background-color: rgba(255,255,255,.4s);
+  position: relative;
+  height: 100%;
 
   .slogan {
     font-family: "Raleway", sans-serif;
@@ -270,8 +273,8 @@ body {
 
   @media (max-width: 822px) {
     padding: 0px 5px 0px
-  }
 
+  }
   .header {
     padding-top: 70px;
     h3 {

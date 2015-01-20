@@ -3,50 +3,51 @@
 <div class="container-fluid padding-top-70" ng-app="BaseApp"  ng-cloak>
 
   <div class="landing-page">
-<div id="welcome-section">
-    <section class="header-outer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <div class="header">
-        <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo' %>
-        <div class="text-center">
-          <h1>teamhuddle</h1>
-          <h4 class="intro">A platform connecting your community through sports</h4>
+    <div id="welcome-section">
+      <section class="header-outer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="header">
+          <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo' %>
+          <div class="text-center">
+            <h1>teamhuddle</h1>
+            <h4 class="intro">A platform connecting your community through sports</h4>
 
-          <h3 class="slogan">Find the sports you love playing and the players you love playing with!</h3>
+            <h3 class="slogan">Find the sports you love playing and the players you love playing with!</h3>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="mailer-outer">
-      <div class="mailer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="mailer-inner text-center" ng-controller="landing-page">
-          <h4>Submit your e-mail below to receive front of the line access to our beta</h4>
-          <br>
+        <div class="mailer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="mailer-inner text-center" ng-controller="landing-page">
+            <h4>Submit your e-mail below to receive front of the line access to our beta</h4>
+            <br>
 
-          <form ng-submit="submit()" ng-class="{ animateSlide: success && submitted && !processing }"> <!--ng-hide="success && submitted && !processing" -->
-            <input type="email" ng-model="email" class="form-control"/>
-            <input value="submit" type="submit" class="btn btn-info"/>
-          </form>
-          <!--END-->
-          <br>
+            <form ng-submit="submit()" ng-class="{ animateSlide: success && submitted && !processing }"> <!--ng-hide="success && submitted && !processing" -->
+              <input type="email" ng-model="email" class="form-control"/>
+              <input value="submit" type="submit" class="btn btn-info"/>
+            </form>
+            <!--END-->
+            <br>
 
-          <!-- Show this div while waiting for a response from the server -->
-          <div class="text-center" ng-show="processing">
-            <%= image_tag("loading.gif", alt: "loading") %>
+            <!-- Show this div while waiting for a response from the server -->
+            <div class="text-center" ng-show="processing">
+              <%= image_tag("loading.gif", alt: "loading") %>
+            </div>
+
+            <!-- Show this div on success -->
+            <div class="panel panel-success" ng-if="success && submitted && !processing">
+              <p>Thanks for signing up, {{user.email}}!</p>
+            </div>
+
+            <!-- Show this div if there was an error -->
+            <div class="panel panel-warn" ng-if="!success && submitted && !processing">
+              <p>There was an error processing your request. Sorry!</p>
+            </div>
+
           </div>
-
-          <!-- Show this div on success -->
-          <div class="panel panel-success" ng-if="success && submitted && !processing">
-            <p>Thanks for signing up, {{user.email}}!</p>
-          </div>
-
-          <!-- Show this div if there was an error -->
-          <div class="panel panel-warn" ng-if="!success && submitted && !processing">
-            <p>There was an error processing your request. Sorry!</p>
-          </div>
-
         </div>
-      </div>
-    </section>
-</div>
+      </section>
+      <section class="mailer-outer">
+
+      </section>
+    </div>
     <section class="feature-outer">
       <div class="feature col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h1 class="text-center">teamhuddle features</h1><br>
