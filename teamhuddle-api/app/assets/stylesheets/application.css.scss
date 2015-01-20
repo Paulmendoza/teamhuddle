@@ -222,7 +222,7 @@ body {
 
 }
 #welcome-section{
-  background: image-url('huddle-1.png') no-repeat center center fixed;
+  background: image-url('huddle-3.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -253,7 +253,7 @@ body {
 
 .header-outer {
   padding: 10px 80px 5px;
-  background-color: rgba(255,255,255,.4s);
+//  background-color: rgba(255,255,255,.4s);
   position: relative;
   height: 100%;
 
@@ -450,17 +450,21 @@ li {
 /*// ========== BUTTON STYLES ===========
 */
 .btn {
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 1px;
+  padding: 10px 40px;
+  color:whitesmoke;
+  border:none;
 }
 
 .glyphicon {
   margin-right: 5px;
 }
-
+#try-it-now{
+  width:162px;
+}
 .btn-success, .btn-default {
   background-color: $light-green;
-  border: 1px solid #000;
   border-radius: 0px !important;
   margin-top: 10px;
   margin-right: 5px;
@@ -468,7 +472,6 @@ li {
 
   &:hover {
     background-color: $dark-green;
-    border: 1px solid #000;
   }
 }
 
@@ -478,19 +481,17 @@ li {
 
 .btn-info {
   background-color: $light-blue;
-  border: 1px solid #000;
   border-radius: 0px !important;
   margin-top: 10px;
 
   &:hover {
     background-color: $dark-blue;
-    border: 1px solid #000;
   }
 }
 
 .btn-danger {
   background: $dark-green;
-  border: 1px solid $dark-green;
+//  border: 1px solid $dark-green;
   border-radius: 0;
 
   &:hover {
