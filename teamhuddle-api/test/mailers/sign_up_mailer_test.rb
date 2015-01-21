@@ -9,4 +9,12 @@ class SignUpMailerTest < ActionMailer::TestCase
     assert_match "Hi", mail.body.encoded
   end
 
+  test "contact_us_notify" do
+    mail = SignUpMailer.contact_us_notify
+    assert_equal "Sign up", mail.subject
+    assert_equal ["to@example.org"], mail.to
+    assert_equal ["from@example.com"], mail.from
+    assert_match "Hi", mail.body.encoded
+  end
+
 end

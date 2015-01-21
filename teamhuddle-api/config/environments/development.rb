@@ -1,14 +1,16 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "teamhuddle.ca" }
+  config.action_mailer.default_url_options = { host: "locahost:3000" }
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = false
   config.action_mailer.smtp_settings = {
-      address: "s113.panelboxmanager.com",
-      port: 25,
+      address: "securemail.webnames.ca",
+      port: "587",
       domain: "teamhuddle.ca",
-      authentication: "plain",
-      user_name: "teamhud",
-      password: $p0rt1234
+      authentication: :login,
+      user_name: "no-reply@teamhuddle.ca",
+      password: "u!1;$yi4&]#C",
+      tls: true
   }
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -23,9 +25,6 @@ Rails.application.configure do
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
-
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
