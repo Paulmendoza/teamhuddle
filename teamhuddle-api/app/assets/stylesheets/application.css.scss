@@ -339,7 +339,12 @@ font-size:17px;
   overflow:hidden;
   clear: both;
 }
-
+.footer-icons{
+  a{
+    filter: grayscale(100%);
+    margin-right:5px;
+  }
+}
 .fixfixed .footer {
 }
 
