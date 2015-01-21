@@ -47,30 +47,37 @@
         padding: 20px 40px;
       }
       .header h4{
-        font-size: 20px;
+        font-size: 23px;
+      }
+    }
+    @media (max-width: 450px) {
+      .header{
+        padding: 20px 20px;
       }
       .header h4{
-        font-size: 17px;
+        font-size: 18px;
+      }
+      .header h3{
+        font-size: 14px
       }
     }
   }
 
-  .mailer-outer {
-    background-color: #fff;
-    min-height: 1px;
 
-    .mailer {
-      min-height: 200px;
-    }
 
     .mailer-inner {
       input[type="email"] {
-        width: 50%;
+        width: 80%;
         margin: 0 auto;
+      }
+      @media (max-width: 450px) {
+        h4{
+          font-size: 15px;
+        }
       }
     }
 
-  }
+
 
   .center-block {
     a {
