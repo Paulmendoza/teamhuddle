@@ -221,6 +221,15 @@ body {
   // background-image: radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #EAEAEA 100%);
 
 }
+#credit{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 10px;
+  font-family: "Raleway", sans-serif;
+  color: rgba(100,100,100, .9);
+  font-weight: 100;
+}
 #welcome-section{
   background: image-url('huddle-3.png') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -600,7 +609,7 @@ li {
     margin-top:71px;
   }
   #welcome-section{
-    height: 771px;
+    height: 600px;
   }
 }
 
