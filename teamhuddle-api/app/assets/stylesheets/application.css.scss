@@ -312,7 +312,22 @@ body {
   padding-bottom: 80px;
 
 }
-
+#comment-id{
+  min-height:100px;
+}
+#dropin-finder{
+  h1{
+    font-size:40px;
+  }
+  h3{
+    font-size:20px;
+    font-weight:300;
+  }
+  h5{
+font-size:17px;
+    font-weight:100;
+  }
+}
 .footer {
   background-color: #000;
   height: 50px;
