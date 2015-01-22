@@ -7,7 +7,11 @@ class ContactUsController < ApplicationController
 
   def create
     @form = ContactUs.new(contact_us_params)
+
+    SignUpMailer.contact_us_notify(@form).deliver
+
     @form.save
+
     render json: @form
   end
 

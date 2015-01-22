@@ -91,4 +91,20 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Configuration for the mailer
+  # This can go up in the repo because it's private and this is just a throwaway email account basically
+  config.action_mailer.default_url_options = { host: "teamhuddle.ca" }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+      address: "securemail.webnames.ca",
+      port: "587",
+      domain: "teamhuddle.ca",
+      authentication: :login,
+      user_name: "no-reply@teamhuddle.ca",
+      password: "u!1;$yi4&]#C",
+      tls: true
+  }
 end

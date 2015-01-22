@@ -297,14 +297,21 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$compile'
         // scroll to logic here
         var scrollPos = $('#dropin-' + dropin.id).offset().top;
 
+        var headerBuffer = 310;
+
+        // resize the value in case we have a smaller screen
+        if(window.innerWidth < 1200){
+            headerBuffer = 365
+        }
+
         // if the element would fall into the height of the window
         // minus some buffer then just scroll to the top
-        if (scrollPos < window.innerHeight - 150) {
+        if ((scrollPos < window.innerHeight - 150 ) && window.innerWidth > 992) {
             $('body').animate({scrollTop: 0}, 'fast');
         }
         // otherwise scroll to the element minus a buffer so it will always show on screen
         else {
-            $('body').animate({scrollTop: scrollPos - 175}, 'fast');
+            $('body').animate({scrollTop: scrollPos - headerBuffer}, 'fast');
         }
     }
 
