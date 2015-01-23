@@ -1,5 +1,7 @@
 <% content_for :title, "Teamhuddle | Dropin Finder" %>
 
+
+
 <div class="container" ng-app="DropinFinder" >
   <div ng-controller="dropins">
   <section class="header-outer" id="dropin-finder">
@@ -12,6 +14,7 @@
         and click on an icon to find volleyball, basketball, hockey and soccer dropins in your community.
       </h5>
     </div>
+    <div ng-view></div>
   </section>
 
   <section class="default-sport_logos-outer" ng-if="sport === 'no-sport'">
