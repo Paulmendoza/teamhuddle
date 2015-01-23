@@ -221,6 +221,17 @@ body {
   // background-image: radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #EAEAEA 100%);
 
 }
+#dropin-selected{
+  position:relative;
+}
+#dropin-selected{
+  .chevron {
+    position: absolute;
+    top: 24px;
+    right: 5px;
+  }
+}
+
 #contact-us-reply{
   border: none;
 }
