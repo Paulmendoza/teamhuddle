@@ -223,11 +223,13 @@ body {
 }
 .dropin-selected{
   position:relative;
+  min-height: 65px;
 }
 .dropin-selected{
   .chevron {
+    height:100%;
     position: absolute;
-    top: 24px;
+    top: 40%;
     right: 5px;
   }
 }
