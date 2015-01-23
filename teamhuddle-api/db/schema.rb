@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150109042103) do
+ActiveRecord::Schema.define(version: 20150123051651) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(version: 20150109042103) do
     t.integer  "sport_event_id"
     t.integer  "datetime_start"
     t.integer  "datetime_end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "beta_testers", force: true do |t|
+    t.string   "name"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -118,12 +125,5 @@ ActiveRecord::Schema.define(version: 20150109042103) do
   end
 
   add_index "sports", ["sport"], name: "index_sports_on_sport", unique: true
-
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
 end

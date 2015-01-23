@@ -9,7 +9,7 @@ BaseApp.controller('landing-page', ['$scope', '$http', function ($scope, $http) 
         $scope.submitted = true;
         $scope.processing = true;
 
-        $http.post('users', {user: {email: $scope.email}}).
+        $http.post('beta_testers', {beta_tester: {email: $scope.email}}).
             success(function (data, status, headers, config) {
                 $scope.success = true;
                 $scope.processing = false;

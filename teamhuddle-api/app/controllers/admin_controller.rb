@@ -4,7 +4,7 @@ class AdminController < ApplicationController
   def index
     @admin_name = current_admin.email.gsub("@teamhuddle.ca", "").capitalize
 
-    @users = User.all.order(created_at: :desc)
+    @beta_testers = BetaTester.all.order(created_at: :desc)
     
     @sport_events = SportEvent.all.where(deleted_at: nil)
   end
