@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'admin' => 'admin#index'
   
   post 'contact_us' => 'contact_us#create'
-  post 'users' => 'users#create'
+  post 'beta_testers' => 'beta_testers#create'
 
   # basic routes
   get 'contact' => 'index#contact'

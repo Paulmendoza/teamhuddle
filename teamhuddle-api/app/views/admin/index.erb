@@ -10,7 +10,7 @@
   <ul>
     <h4>Lots of Client Changes</h4>
     <h4>Ability to sign in and out</h4>
-    <h4>So far, <%= @users.count %> people have signed up.</h4>
+    <h4>So far, <%= @beta_testers.count %> people have signed up.</h4>
   </ul>
 
 
@@ -37,7 +37,7 @@
         <td>Submission Date</td>
       </tr>
       </thead>
-      <% @users.each do |user| %>
+      <% @beta_testers.each do |user| %>
           <tr>
             <td><%= user.email %></td>
             <td><%= user.created_at.localtime %></td>
