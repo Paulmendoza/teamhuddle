@@ -126,7 +126,7 @@
               Admin Page for Dropin</a>
 
             <!-- show this if it's not selected -->
-            <div ng-hide="isSelected(dropin.id)" id="dropin-selected">
+            <div ng-hide="isSelected(dropin.id)" class="dropin-selected">
               <p class="col-md-2 col-xs-4">{{dropin.datetime_start | date:'EEEE'}}</p>
 
               <p class="col-md-2 col-xs-4">{{dropin.sport_event.skill_level}}</p>
@@ -136,7 +136,7 @@
             </div>
 
             <!-- show this if it is selected -->
-            <div ng-show="isSelected(dropin.id)" id="dropin-selected">
+            <div ng-show="isSelected(dropin.id)" class="dropin-selected">
               <div class="col-md-2 col-xs-4">
                 <br>
                 <dt>Day</dt>
