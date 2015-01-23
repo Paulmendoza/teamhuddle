@@ -377,9 +377,6 @@ li {
   .bolded {
     font-weight: bold;
   }
-  .dropin-info {
-    padding-bottom: 15px;
-  }
   background-color: white;
 
 }
@@ -642,6 +639,9 @@ li {
   margin-right: 20px;
 }
 
+.margin-bottom-10{
+  margin-bottom: 10px;
+}
 .margin-bottom-30 {
   margin-bottom: 30px;
 }
@@ -649,7 +649,11 @@ li {
 .margin-bottom-100 {
   margin-bottom: 100px;
 }
-
+.event-item:hover {
+  .glyphicon {
+    color: #69F0AE;
+  }
+}
 // ========== MEDIA QUERIES ===========
 
 @media (min-width: 0px) and (max-width: 767px) {
