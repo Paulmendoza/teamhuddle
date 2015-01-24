@@ -40,7 +40,6 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$compile'
     // array that will have all the dropin objects
     $scope.dropins = [];
 
-
     /**** DROPIN EVENTS/WATCHERS: ****/
     /*******************************************/
 
@@ -73,17 +72,9 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$compile'
     });
 
     //watch to see if the location changes and then set the sport accordingly
-    $scope.$on('$locationChangeSuccess', function (event) {
-        if (sportRoutes.indexOf($location.path()) >= 0) {
-            ga('send', 'pageview', '/dropin-finder' + $location.path()); // add google analytics to the "router"
-            $scope.sport = $location.path().replace("/", "");
-            $scope.refreshDropins();
-        }
-        else {
-            $scope.sport = 'no-sport';
-            $scope.dropins = [];
-        }
-    });
+//    $scope.$on('$locationChangeSuccess', function (event) {
+//
+//    });
 
 
     /**** DROPIN CONTROLLER FUNCTIONS: ****/
@@ -110,6 +101,16 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$compile'
                     $scope.failedRetrieve = true;
                 });
     };
+
+    if (sportRoutes.indexOf($location.path()) >= 0) {
+        ga('send', 'pageview', '/dropin-finder' + $location.path()); // add google analytics to the "router"
+        $scope.sport = $location.path().replace("/", "");
+        $scope.refreshDropins();
+    }
+    else {
+        $scope.sport = 'no-sport';
+        $scope.dropins = [];
+    }
 
     $scope.resizeMap = function () {
         // set a minor timeout to fix load issues
