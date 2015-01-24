@@ -10,7 +10,8 @@
             "ngmap": "1.1.5",
             "jquery-ui": "latest",
             "highcharts-ng": "0.0.7",
-            "highcharts": "latest"
+            "highcharts": "latest",
+            "angular-route-segment": "latest"
         }
     },
     "vendor": {

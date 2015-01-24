@@ -2,6 +2,7 @@
 //= require angular-resource
 //= require angular-animate
 //= require angular-route
+//= require angular-route-segment
 //= require ngmap
 //= require angular-rails-templates
 

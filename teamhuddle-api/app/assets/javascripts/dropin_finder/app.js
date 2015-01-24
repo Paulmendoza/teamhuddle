@@ -1,35 +1,19 @@
-var DropinFinder = angular.module('DropinFinder', ['ngResource', 'ngMap', 'ngAnimate', 'templates', 'ngRoute']);
+var DropinFinder = angular.module('DropinFinder', ['ngResource', 'ngMap', 'ngAnimate', 'templates', 'ngRoute', 'route-segment', 'view-segment']);
 
-DropinFinder.config(['$routeProvider', '$locationProvider',
-    function($routeProvider, $locationProvider) {
-        $routeProvider.
-            when('/', {
+DropinFinder.config(['$routeSegmentProvider',
+    function($routeSegmentProvider) {
+        $routeSegmentProvider.
+            when('/', 'dropin_icons').
+            when('/:sport', 'dropin_finder').
+
+            segment('dropin_icons', {
+                default: true,
                 templateUrl: 'dropin_icons.html'
             }).
-            when('/volleyball', {
+            segment('dropin_finder', {
                 templateUrl: 'dropin_map_list.html',
-                controller: 'dropins'
-            }).
-            when('/basketball', {
-                templateUrl: 'dropin_map_list.html',
-                controller: 'dropins'
-            }).
-            when('/hockey', {
-                templateUrl: 'dropin_map_list.html',
-                controller: 'dropins'
-            }).
-            when('/soccer', {
-                templateUrl: 'dropin_map_list.html',
-                controller: 'dropins'
-            }).
-            when('/test-route', {
-                templateUrl: 'test.html',
-                controller: 'test'
+                controller: 'dropins',
+                dependencies: ['sport']
             });
 
-        //$locationProvider.html5Mode(true);
-        //{
-        //    enabled: true,
-        //    requireBase: false
-        //});
     }]);
