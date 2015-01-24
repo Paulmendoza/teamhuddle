@@ -81,11 +81,11 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             }
         });
 
-        //watch to see if the location changes and then set the sport accordingly
-//    $scope.$on('$locationChangeSuccess', function (event) {
-//
-//    });
-
+        // watch to see if the location changes and then set the sport accordingly
+        // this is needed because the filters could change
+        $scope.$on('$locationChangeSuccess', function (event) {
+            $scope.refreshDropins();
+        });
 
         /**** DROPIN CONTROLLER FUNCTIONS: ****/
         /**************************************/
