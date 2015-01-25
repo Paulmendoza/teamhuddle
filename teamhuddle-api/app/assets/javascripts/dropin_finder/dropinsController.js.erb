@@ -195,17 +195,17 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
         // sets the filter arguments in the URL
         $scope.setFilters = function () {
-            if ($scope.weekdaySelect !== 'All') {
-                $location.search('day', $scope.weekdaySelect);
+            if (this.weekdaySelect !== 'All') {
+                $location.search('day', this.weekdaySelect);
             }
-            else if ($scope.weekdaySelect === 'All') {
+            else if (this.weekdaySelect === 'All') {
                 $location.search('day', null);
             }
 
-            if ($scope.skillLevelSelect !== 'All') {
-                $location.search('skill', $scope.skillLevelSelect);
+            if (this.skillLevelSelect !== 'All') {
+                $location.search('skill', this.skillLevelSelect);
             }
-            else if ($scope.skillLevelSelect === 'All') {
+            else if (this.skillLevelSelect === 'All') {
                 $location.search('skill', null);
             }
         };
