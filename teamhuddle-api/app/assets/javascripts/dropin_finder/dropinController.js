@@ -13,7 +13,6 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams', functio
     if($scope.markerWrappers.currentlyOpen === null || $scope.markerWrappers.currentlyOpen !== $routeParams.dropin_id){
 
         if($scope.markerWrappers[$routeParams.dropin_id] !== undefined){
-            debugger
             $scope.dropinWrapper = $scope.markerWrappers[$routeParams.dropin_id];
             $scope.dropin = $scope.getDropinById(parseInt($routeParams.dropin_id));
 
