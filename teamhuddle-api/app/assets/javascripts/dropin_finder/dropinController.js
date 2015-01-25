@@ -13,26 +13,33 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams', functio
     if($scope.markerWrappers.currentlyOpen === null || $scope.markerWrappers.currentlyOpen !== $routeParams.dropin_id){
 
         if($scope.markerWrappers[$routeParams.dropin_id] !== undefined){
-            $scope.currentScope.dropinWrapper = $scope.markerWrappers[$routeParams.dropin_id];
-            $scope.currentScope.dropinWrapper.infoWindow.toggle();
-            $scope.currentScope.dropin = $scope.getDropinById($routeParams.dropin_id);
+            debugger
+            $scope.dropinWrapper = $scope.markerWrappers[$routeParams.dropin_id];
+            $scope.dropin = $scope.getDropinById(parseInt($routeParams.dropin_id));
+
+            $scope.dropinWrapper.infoWindow.toggle();
         }
         else{
             $scope.fetchDropin($routeParams.dropin_id);
         }
 
     }
-    $scope.test = 'test string';
 
     $scope.$on('dropinsUpdated', function($scope){
 
         if($scope.targetScope.markerWrappers[$routeParams.dropin_id] !== undefined && $scope.targetScope.markerWrappers.currentlyOpen !== $routeParams.dropin_id){
             $scope.currentScope.dropinWrapper = $scope.targetScope.markerWrappers[$routeParams.dropin_id];
-            $scope.currentScope.dropinWrapper.infoWindow.toggle();
             $scope.currentScope.dropin = $scope.targetScope.getDropinById(parseInt($routeParams.dropin_id));
-            debugger
+
+            $scope.currentScope.dropinWrapper.infoWindow.toggle();
         }
         // this is what happens once its loaded
+    });
+
+    //
+    $scope.$on('loadDropin', function ($scope, dropinId){
+        $scope.currentScope.dropinWrapper = $scope.targetScope.markerWrappers[dropinId];
+        $scope.currentScope.dropin = $scope.targetScope.getDropinById(dropinId);
     });
 
 }]);

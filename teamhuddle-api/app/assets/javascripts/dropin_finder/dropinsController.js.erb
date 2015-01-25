@@ -1,7 +1,7 @@
 var allowedSports = ['volleyball', 'hockey', 'basketball', 'soccer'];
 
-DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routeParams', '$compile', 'Dropins', 'Admins',
-    function ($scope, $filter, $location, $routeParams, $compile, Dropins, Admins) {
+DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routeParams','$routeSegment', '$compile', 'Dropins', 'Admins',
+    function ($scope, $filter, $location, $routeParams, $routeSegment, $compile, Dropins, Admins) {
         $scope.sport = $routeParams.sport;
 
         if (allowedSports.indexOf($scope.sport) < 0) {
@@ -225,6 +225,7 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             $scope.skillLevelSelect = undefined;
             $location.search('day', null);
             $location.search('skill', null);
+            $scope.refreshDropins();
         };
 
         // function to remove an item from the list TODO, GET RID OF THIS EVENTUALLY
@@ -261,6 +262,8 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
         function MarkerWrapper(dropin) {
             this.isOpen = false;
+
+            this.dropinId = dropin.id;
 
             this.marker = new google.maps.Marker({
                 map: $scope.map,
@@ -306,7 +309,17 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                     that.infoWindow.open($scope.map, that.marker);
                     that.isOpen = true;
 
-                    scrollToDropin(dropin);
+                    // switch on toggle
+                    if($routeSegment.startsWith('dropin_finder.dropin_view')) {
+                        var dropinURL = $routeSegment.getSegmentUrl('dropin_finder.dropin_view', {sport: $scope.sport, dropin_id: that.dropinId})
+
+                        $location.path(dropinURL);
+
+                        $scope.$broadcast('loadDropin', that.dropinId);
+                    } else {
+                        scrollToDropin(dropin);
+                    }
+
                 }
 
                 if (!$scope.$$phase) {
