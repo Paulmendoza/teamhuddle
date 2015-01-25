@@ -5,6 +5,7 @@ DropinFinder.config(['$routeSegmentProvider',
         $routeSegmentProvider.
             when('/', 'dropin_icons').
             when('/:sport', 'dropin_finder').
+            when('/:sport/dropin/:dropin_id', 'dropin_finder.dropin_view').
 
             segment('dropin_icons', {
                 templateUrl: 'dropin_icons.html'
@@ -15,10 +16,13 @@ DropinFinder.config(['$routeSegmentProvider',
                 dependencies: ['sport']
             }).
             within().
-            segment('list', {
+            segment('dropin_list', {
                 default: true,
-                templateUrl: "dropin_list.html",
-                transclude: true
+                templateUrl: "dropin_list.html"
+            }).
+            segment('dropin_view', {
+                templateUrl: "dropin_view.html",
+                controller: 'dropin'
             }).
             up();
 

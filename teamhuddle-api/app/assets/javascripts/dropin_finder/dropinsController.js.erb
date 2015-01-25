@@ -79,12 +79,17 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             if (typeof ($scope.markerWrappers[$scope.markerWrappers.currentlyOpen]) === 'undefined') {
                 $scope.markerWrappers.currentlyOpen = null;
             }
+
+            $scope.$broadcast('dropinsUpdated');
         });
 
         // watch to see if the location changes and then set the sport accordingly
         // this is needed because the filters could change
         $scope.$on('$locationChangeSuccess', function (event) {
-            $scope.refreshDropins();
+            var params = $location.search();
+            if(params['day'] !== undefined || params['skill'] !== undefined){
+                $scope.refreshDropins();
+            }
         });
 
         /**** DROPIN CONTROLLER FUNCTIONS: ****/
@@ -111,6 +116,10 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                         $scope.failedRetrieve = true;
                     });
         };
+
+        $scope.fetchDropin = function(dropin_id){
+
+        }
 
         $scope.refreshDropins();
 
@@ -230,6 +239,17 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             $scope.sport = 'no-sport';
         };
 
+        $scope.getDropinById = function getDropinById(dropinId) {
+            var tempDropin;
+            $scope.dropins.forEach(function (dropin) {
+                if (dropin.id === dropinId) {
+                    tempDropin = dropin;
+                }
+            });
+
+            return tempDropin;
+        }
+
         /**** INNER CLASS: ****/
         /***********************/
         // definition of the marker object that is linked to each dropin event
@@ -298,6 +318,10 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
         function scrollToDropin(dropin) {
             // scroll to logic here
+            if($('#dropin-' + dropin.id).length < 1){
+                return;
+            }
+
             var scrollPos = $('#dropin-' + dropin.id).offset().top;
 
             var headerBuffer = 310;
@@ -353,17 +377,6 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                 }
             });
             return tempDropins;
-        }
-
-        function getDropinById(dropinId) {
-            var tempDropin;
-            $scope.dropins.forEach(function (dropin) {
-                if (dropin.id === dropinId) {
-                    tempDropin = dropin;
-                }
-            });
-
-            return tempDropin;
         }
 
         // get the path for each map marker asset
