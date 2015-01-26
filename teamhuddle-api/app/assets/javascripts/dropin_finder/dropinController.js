@@ -17,6 +17,7 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams', functio
             $scope.dropin = $scope.getDropinById(parseInt($routeParams.dropin_id));
 
             $scope.dropinWrapper.infoWindow.toggle();
+            $scope.dropinWrapper.infoWindow.toggle();
         }
         else{
             $scope.fetchDropin($routeParams.dropin_id);

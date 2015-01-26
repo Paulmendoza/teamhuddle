@@ -378,7 +378,7 @@ li {
     margin-bottom: 10px;
   }
   a {
-    color: blue !important;
+    color: $dark-blue !important;
   }
   hr {
     margin-top: 0px;
@@ -406,6 +406,12 @@ li {
 
   .marker-row-selected {
     background-color: $selected-dropin;
+  }
+}
+
+.dropin-view {
+  a {
+    color: $dark-blue !important;
   }
 }
 

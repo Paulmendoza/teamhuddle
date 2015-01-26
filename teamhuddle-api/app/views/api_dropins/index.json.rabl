@@ -26,7 +26,7 @@ child :sport_event do
 end
 
 child :event do
-  attributes :name
+  attributes :name, :comments
 end
 
 child :location do

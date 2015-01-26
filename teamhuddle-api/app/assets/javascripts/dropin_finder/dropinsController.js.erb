@@ -92,6 +92,16 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             }
         });
 
+        $scope.backToList = function(){
+            window.setTimeout(function () {
+                if ($scope.markerWrappers.currentlyOpen !== null) {
+                    var currentlyOpen = $scope.markerWrappers.currentlyOpen;
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                }
+            }, 250);
+        };
+
         /**** DROPIN CONTROLLER FUNCTIONS: ****/
         /**************************************/
 
@@ -209,6 +219,7 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             }
             else if (this.weekdaySelect === 'All') {
                 $location.search('day', null);
+                $scope.refreshDropins();
             }
 
             if (this.skillLevelSelect !== 'All') {
@@ -216,6 +227,7 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             }
             else if (this.skillLevelSelect === 'All') {
                 $location.search('skill', null);
+                $scope.refreshDropins();
             }
         };
 
