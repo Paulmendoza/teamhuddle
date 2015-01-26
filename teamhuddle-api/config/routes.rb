@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'contact_us/new'
 
+  devise_for :users, :controllers => { registrations: 'users/registrations', sessions: 'users/sessions' }
   devise_for :admins, :controllers => { :registrations => :registrations }
   as :admin do
     get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'
