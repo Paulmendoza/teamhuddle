@@ -1,0 +1,22 @@
+<%= grid(@contact_us_grid) do |g|
+  g.column name: 'First Name', attribute: 'first_name' do |contact_us|
+    contact_us.first_name
+  end
+
+  g.column name: 'Last Name', attribute: 'last_name' do |contact_us|
+    contact_us.last_name
+  end
+
+  g.column name: 'Email', attribute: 'email' do |contact_us|
+    contact_us.email
+  end
+
+  g.column name: 'Comments', attribute: 'comments' do |contact_us|
+    contact_us.comments
+  end
+
+  g.column name: 'Date', attribute: 'created_at' do |contact_us|
+    contact_us.created_at.localtime
+  end
+
+end -%>
