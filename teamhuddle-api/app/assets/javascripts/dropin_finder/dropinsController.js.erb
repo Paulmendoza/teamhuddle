@@ -6,6 +6,7 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
         if (allowedSports.indexOf($scope.sport) < 0) {
             $location.path('/')
+            return;
         }
         else{
             ga('send', 'pageview', '/dropin-finder' + $location.path()); // add google analytics to the "router"
