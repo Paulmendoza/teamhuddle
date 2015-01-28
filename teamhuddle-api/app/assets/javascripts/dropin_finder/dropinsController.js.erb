@@ -323,7 +323,7 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$compile'
         var bMultipleDropins = dropins.length > 1;
         var  htmlContent = "<div class='info-window'>" +
             "<h5>" + templateDropin.location.name + "</h5>" +
-            "<p>" + templateDropin.location.address + "</p>" +
+            "<p><a href='http://maps.google.com/?q=" + templateDropin.location.address + "' target='map'>" + templateDropin.location.address + "</a></p>" +
             "<p>" + templateDropin.phone + "</p>" +
             "<table>"
         dropins.forEach(function(thisDropin) {
