@@ -80,7 +80,7 @@
             <p class="col-md-2 col-xs-4">{{dropin.sport_event.skill_level}}</p>
 
             <p class="col-md-4 col-xs-4">{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</p>
-            <a href="dropin-finder#/{{dropin.sport_event.sport_id}}/dropin/{{dropin.id}}"><div class="pull-right glyphicon glyphicon-chevron-right chevron" aria-hidden="true" ng-show="!isSelected(dropin.id)"></div></a>
+            <a href="dropin-finder#/{{dropin.sport_event.sport_id}}/dropin/{{dropin.id}}" ng-click="$event.stopPropagation()"><div class="pull-right glyphicon glyphicon-chevron-right chevron" aria-hidden="true" ng-show="!isSelected(dropin.id)"></div></a>
         </div>
 
         <!-- show this if it is selected -->
@@ -107,7 +107,7 @@
                 <dl>{{dropin.sport_event.schedule_until | date:'MMM d'}}</dl>
                 <dl ng-show="dropin.sport_event.source !== null"><a href="{{dropin.sport_event.source}}" ng-click="$event.stopPropagation()" target="_blank">Source Website</a></dl>
             </div>
-            <a href="dropin-finder#/{{dropin.sport_event.sport_id}}/dropin/{{dropin.id}}"><div class="pull-right glyphicon glyphicon-chevron-right chevron" ng-show="isSelected(dropin.id)"></div></a>
+            <a href="dropin-finder#/{{dropin.sport_event.sport_id}}/dropin/{{dropin.id}}" ng-click="$event.stopPropagation()"><div class="pull-right glyphicon glyphicon-chevron-right chevron" ng-show="isSelected(dropin.id)"></div></a>
         </div>
 
     </div>

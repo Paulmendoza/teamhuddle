@@ -9,20 +9,15 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams', functio
 
     $scope.dropin = {};
     $scope.dropinWrapper = {};
-    // if there is nothing open fetch dropin and open it
-    if($scope.markerWrappers.currentlyOpen === null || $scope.markerWrappers.currentlyOpen !== $routeParams.dropin_id){
+    // if we don't have this dropin
+    if($scope.markerWrappers[$routeParams.dropin_id]) {
+        $scope.dropinWrapper = $scope.markerWrappers[$routeParams.dropin_id];
+        $scope.dropin = $scope.getDropinById(parseInt($routeParams.dropin_id));
 
-        if($scope.markerWrappers[$routeParams.dropin_id] !== undefined){
-            $scope.dropinWrapper = $scope.markerWrappers[$routeParams.dropin_id];
-            $scope.dropin = $scope.getDropinById(parseInt($routeParams.dropin_id));
-
-            $scope.dropinWrapper.infoWindow.toggle();
-            $scope.dropinWrapper.infoWindow.toggle();
-        }
-        else{
-            $scope.fetchDropin($routeParams.dropin_id);
-        }
-
+        $scope.dropinWrapper.infoWindow.toggle(true);
+    } else {
+        // TODO write this
+        //$scope.fetchDropin($routeParams.dropin_id);
     }
 
     $scope.$on('dropinsUpdated', function($scope){
