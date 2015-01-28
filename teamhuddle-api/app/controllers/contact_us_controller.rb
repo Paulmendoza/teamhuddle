@@ -2,6 +2,9 @@ class ContactUsController < ApplicationController
   before_action :authenticate_admin!, :except => [:create]
 
   def index
+    @contact_us_grid = initialize_grid(ContactUs,
+                                       order:           'created_at',
+                                       order_direction: 'desc')
     @forms = ContactUs.all
   end
 

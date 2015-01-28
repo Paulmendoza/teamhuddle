@@ -404,6 +404,10 @@ li {
     padding-right: 0;
   }
 
+  a {
+    color: $dark-blue !important;
+  }
+
   .marker-row-selected {
     background-color: $selected-dropin;
   }
