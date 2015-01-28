@@ -307,11 +307,11 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$compile'
         // if the element would fall into the height of the window
         // minus some buffer then just scroll to the top
         if ((scrollPos < window.innerHeight - 150 ) && window.innerWidth > 992) {
-            $('html,body').animate({scrollTop: 0}, 'fast');
+            $('html,body').animate({scrollTop: 0}, 750);
         }
         // otherwise scroll to the element minus a buffer so it will always show on screen
         else {
-            $('html,body').animate({scrollTop: scrollPos - headerBuffer}, 'fast');
+            $('html,body').animate({scrollTop: scrollPos - headerBuffer}, 750);
         }
     }
 
