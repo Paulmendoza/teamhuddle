@@ -1,8 +1,30 @@
 Rails.application.routes.draw do
 
-  get 'contact_us/new'
+  #class RegistrationsController < Devise::RegistrationsController
+  #      def update
+  #         # do something different here
+  #      end
+  #
+  #      def deactivate
+  #        # not a standard action
+  #        # deactivate code here
+  #      end
+  #    end
+  #
+  # In order to get Devise to recognize the deactivate action, your devise_scope entry should look like this:
+  #
+  #     devise_scope :owner do
+  #       post "deactivate", to: "registrations#deactivate", as: "deactivate_registration"
+  #     end
 
-  devise_for :users, :controllers => { registrations: 'users/registrations', sessions: 'users/sessions' }
+  devise_for :users,
+             :module => "users",
+             :format => false
+
+  devise_scope :user do
+    post "/logout" => "users/sessions#destroy", :as => :destroy_user_session_post
+  end
+
   devise_for :admins, :controllers => { :registrations => :registrations }
   as :admin do
     get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'
