@@ -21,12 +21,11 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams', functio
     }
 
     $scope.$on('dropinsUpdated', function($scope){
-
-        if($scope.targetScope.markerWrappers[$routeParams.dropin_id] !== undefined && $scope.targetScope.markerWrappers.currentlyOpen !== $routeParams.dropin_id){
+        if($scope.targetScope.markerWrappers[parseInt($routeParams.dropin_id)] !== undefined && $scope.targetScope.markerWrappers.currentlyOpen !== $routeParams.dropin_id){
             $scope.currentScope.dropinWrapper = $scope.targetScope.markerWrappers[$routeParams.dropin_id];
             $scope.currentScope.dropin = $scope.targetScope.getDropinById(parseInt($routeParams.dropin_id));
 
-            $scope.currentScope.dropinWrapper.infoWindow.toggle();
+            $scope.currentScope.dropinWrapper.infoWindow.toggle(true);
         }
         // this is what happens once its loaded
     });
