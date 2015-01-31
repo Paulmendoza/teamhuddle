@@ -230,7 +230,12 @@ body {
     height:100%;
     position: absolute;
     top: 40%;
-    right: 5px;
+    right: 10px;
+  }
+  @media (max-width: 500px) {
+    .chevron {
+      right: -5px;
+    }
   }
 }
 
