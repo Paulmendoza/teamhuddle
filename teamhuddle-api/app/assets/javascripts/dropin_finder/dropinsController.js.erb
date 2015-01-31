@@ -348,7 +348,6 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                     $scope.$apply();
                 }
             };
-
         }
 
         function calculateDistanceForDropins(){
@@ -361,7 +360,7 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                     dropin.distanceFromUser = (dropin.actualDistanceFromUser / 1000).toFixed(1).toString() + " km";
                 });
 
-                $scope.dropins = orderBy($scope.dropins, 'actualDistanceFromUser', false);
+                $scope.dropins = orderBy($scope.dropins, ['actualDistanceFromUser', 'datetime_start'], false);
 
             }
         }
@@ -444,13 +443,13 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
                     calculateDistanceForDropins();
                 }, function () {
-                    alert("Couldn't get your location, yo");
+                    //alert("Couldn't get your location, yo");
                     //handleNoGeolocation(true);
                 });
             } else {
                 // Browser doesn't support Geolocation
                 //handleNoGeolocation(false);
-                alert("Doesn't support geolocation");
+                //alert("Doesn't support geolocation");
             }
         }
 
