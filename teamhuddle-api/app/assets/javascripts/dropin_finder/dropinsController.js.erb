@@ -15,6 +15,8 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
         // set my own orderBy filter directive
         var orderBy = $filter('orderBy');
 
+        $scope.currentPosition = null;
+
         $scope.admin_signed_in = false;
 
         Admins.signed_in().then(
@@ -31,6 +33,9 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
         $scope.loadingDropins = false;
 
         $scope.mapMobileToggle = false;
+
+        $scope.hasLocation = false;
+        $scope.hasDropins = false;
 
         // for displaying all list items as verbose or non verbose format
         $scope.format = 'items';
@@ -57,22 +62,16 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
         // watches dropins and makes sure markers are in sync
         $scope.$watchCollection('dropins', function (newValues, oldValues) {
 
-            console.log("Old length = " + oldValues.length);
-            console.log("New length = " + newValues.length);
-
             // delete the old MarkerWrappers
             oldValues.forEach(function (oldDropin) {
                 $scope.markerWrappers[oldDropin.id]['marker'].setMap(null);
                 delete $scope.markerWrappers[oldDropin.id];
-
-                console.log("Deleting marker: " + oldDropin.id);
             });
 
             // add new MarkerWrappers
             $scope.dropins.forEach(function (dropin) {
                 if (typeof ($scope.markerWrappers[dropin.id]) === 'undefined') {
                     $scope.markerWrappers[dropin.id] = new MarkerWrapper(dropin);
-                    console.log("Adding marker: " + dropin.id);
                 }
             });
 
@@ -83,6 +82,11 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
             $scope.$broadcast('dropinsUpdated');
         });
+
+        $scope.$watch('currentPosition', function(){
+
+        });
+
 
         // watch to see if the location changes and then set the sport accordingly
         // this is needed because the filters could change
@@ -116,11 +120,14 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
                         $scope.resizeMap();
 
-                        $scope.applyFilters();
+                        $scope.applyFilters(); //actually removes dropins
 
                         $scope.format = 'table';
 
                         $scope.loadingDropins = false;
+
+                        $scope.hasDropins = true;
+                        calculateDistanceForDropins();
                     },
                     function (reason) {
                         $scope.loadingDropins = false;
@@ -133,6 +140,8 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
         }
 
         $scope.refreshDropins();
+
+        getUserLocation();
 
         $scope.resizeMap = function () {
             // set a minor timeout to fix load issues
@@ -342,6 +351,21 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
         }
 
+        function calculateDistanceForDropins(){
+            if($scope.hasLocation && $scope.hasDropins){
+                angular.forEach($scope.dropins, function(dropin){
+                    dropin.actualDistanceFromUser =
+                            google.maps.geometry.spherical.computeDistanceBetween($scope.currentPosition,
+                                    new google.maps.LatLng(dropin.location.lat, dropin.location.long));
+
+                    dropin.distanceFromUser = (dropin.actualDistanceFromUser / 1000).toFixed(1).toString() + " km";
+                });
+
+                $scope.dropins = orderBy($scope.dropins, 'actualDistanceFromUser', false);
+
+            }
+        }
+
         function scrollToDropin(dropin) {
             // scroll to logic here
             if($('#dropin-' + dropin.id).length < 1){
@@ -404,6 +428,32 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             });
             return tempDropins;
         }
+
+        function getUserLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    $scope.currentPosition = new google.maps.LatLng(position.coords.latitude,
+                            position.coords.longitude);
+
+                    // todo remove this after debugging
+                    var marker = new google.maps.Marker({
+                        map: $scope.map,
+                        position: $scope.currentPosition
+                    });
+                    $scope.hasLocation = true;
+
+                    calculateDistanceForDropins();
+                }, function () {
+                    alert("Couldn't get your location, yo");
+                    //handleNoGeolocation(true);
+                });
+            } else {
+                // Browser doesn't support Geolocation
+                //handleNoGeolocation(false);
+                alert("Doesn't support geolocation");
+            }
+        }
+
 
         // get the path for each map marker asset
         function getMapMarkerPath(sport) {

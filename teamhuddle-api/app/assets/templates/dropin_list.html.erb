@@ -56,7 +56,7 @@
          ng-attr-id="{{ 'dropin-' + dropin.id }}">
         <hr>
         <div class="col-md-4 col-xs-12">
-            <h4 ng-class="{bolded: isSelected(dropin.id)}">{{dropin.location.name}}</h4>
+            <h4 ng-class="{bolded: isSelected(dropin.id)}">{{dropin.location.name}} <small>{{ dropin.distanceFromUser }}</small></h4>
         </div>
         <div class="col-xs-12 hidden-lg hidden-md" ng-if="isSelected(dropin.id)">
             <button class="btn-info" ng-click="$event.stopPropagation(); switchToMap()">show on map</button>
