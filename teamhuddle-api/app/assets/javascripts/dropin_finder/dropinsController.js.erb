@@ -37,6 +37,8 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
         $scope.hasLocation = false;
         $scope.hasDropins = false;
 
+        $scope.userLocationEnabled = true;
+
         // for displaying all list items as verbose or non verbose format
         $scope.format = 'items';
 
@@ -437,17 +439,25 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                     // todo remove this after debugging
                     var marker = new google.maps.Marker({
                         map: $scope.map,
+                        icon: "<%= asset_path("person-marker.png") %>",
                         position: $scope.currentPosition
                     });
                     $scope.hasLocation = true;
 
                     calculateDistanceForDropins();
                 }, function () {
+                    //if you can't get the location, pan the map to middle of Vancouver
+                    $scope.userLocationEnabled = false;
+                    window.setTimeout(function () {
+                        $scope.map.panTo(new google.maps.LatLng(49.266491,  -123.078252));
+                    }, 2500);
+
                     //alert("Couldn't get your location, yo");
                     //handleNoGeolocation(true);
                 });
             } else {
                 // Browser doesn't support Geolocation
+                $scope.map.setCenter(new google.maps.LatLng(49.266491,  -123.078252));
                 //handleNoGeolocation(false);
                 //alert("Doesn't support geolocation");
             }

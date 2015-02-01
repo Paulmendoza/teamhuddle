@@ -1,5 +1,7 @@
 <div class="row" id="sticky-toolbox">
     <br>
+    <!-- Only show this portion if the user doesn't have location tracking enabled in their browser -->
+    <div class="panel panel-warning text-center" ng-if="!userLocationEnabled">Please let us access your location so we can show the distance to dropins</div>
     <h2 class="text-center sport_name">dropin {{sport | lowercase }} events</h2>
     <br>
     <br>
