@@ -5,6 +5,8 @@ BaseApp.controller('landing-page', ['$scope', '$http', function ($scope, $http) 
 
     $scope.processing = false;
 
+    $scope.errorMessage = "";
+
     $scope.submit = function () {
         $scope.submitted = true;
         $scope.processing = true;
@@ -19,6 +21,11 @@ BaseApp.controller('landing-page', ['$scope', '$http', function ($scope, $http) 
                 ga('send', 'event', 'newsletter-sign-up', 'email-submit', 'beta-newsletter-signup', 1);
             }).
             error(function (data, status, headers, config) {
+                if(status === 422 && data.errors){
+                    if(data.errors.email.indexOf("has already been taken") > -1){
+                        $scope.errorMessage = "We already have your email in our database! Thanks!"
+                    }
+                }
                 $scope.success = false;
                 $scope.processing = false;
                 $scope.user = data;
