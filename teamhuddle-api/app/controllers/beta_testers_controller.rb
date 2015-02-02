@@ -13,7 +13,7 @@ class BetaTestersController < ApplicationController
       #SignUpMailer.welcome(@beta_tester).deliver
 			render json: @beta_tester
 		else
-			render json: @beta_tester
+			render json: { :errors => @beta_tester.errors }, :status => 422
 		end
 	end
 

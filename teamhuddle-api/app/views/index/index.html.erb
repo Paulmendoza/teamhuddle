@@ -37,8 +37,13 @@
             </div>
 
             <!-- Show this div if there was an error -->
-            <div class="panel panel-warn" ng-if="!success && submitted && !processing">
+            <div class="panel panel-warn" ng-if="!success && submitted && !processing && errorMessage === ''">
               <p>There was an error processing your request. Sorry!</p>
+            </div>
+
+            <!-- Show this div if there was an error, but we have a specific message for it -->
+            <div class="panel panel-warning" ng-if="!success && submitted && !processing && errorMessage !== ''">
+              <p>{{errorMessage}}</p>
             </div>
 
           </div>
