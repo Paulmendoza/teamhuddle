@@ -20,7 +20,7 @@
             <hr>
         <span id="dropin-event-info">{{dropin.datetime_start| date: 'EEEE'}} @
             {{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}
-            <br>{{dropin.sport_event.skill_level}} {{dropin.sport_event.type}} {{dropin.sport_event.sport_id}}
+            <br>{{dropin.sport_event.skill_level}} {{dropin.sport_event.type | capitalize }} {{dropin.sport_event.sport_id | capitalize}}
         </span>
             <br>
             <hr>
