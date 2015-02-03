@@ -904,8 +904,30 @@ li {
 @media (min-width: 1199px) {
 
   .dropin-view{
+    hr{
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
     #dropin-event-info{
       font-size: 35px;
+      font-weight: 100;
+    }
+    .drop-finder-minheaders{
+      margin: 0;
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: 20px;
+      font-weight: 300;
+    }
+    .dropin-event-div{
+      margin: 0;
+      padding: 0;
+    }
+    .drop-finder-minpara{
+      margin: 0;
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: 15px;
       font-weight: 100;
     }
   }

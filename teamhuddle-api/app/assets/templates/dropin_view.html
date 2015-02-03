@@ -6,58 +6,38 @@
 
     <div ng-show="dropin.location.name !== undefined" class="dropin-view">
         <div class="col-md-12">
-        <h1>{{dropin.event.name}}</h1>
+            <h1>{{dropin.event.name}}</h1>
 
-        <h2>{{dropin.location.name}} <small> {{dropin.distanceFromUser}}</small></h2>
+            <h2>{{dropin.location.name}} <small> {{dropin.distanceFromUser}}</small></h2>
         <span>
             <a href="http://maps.google.com/?q={{dropin.location.address}}" target="map">{{dropin.location.address}}</a>
         </span>
-        <br>
-        <span>{{dropin.phone}}</span>
-        <br>
-        <span>{{dropin.organization.email}}</span>
-        <br>
+            <br>
+            <span>{{dropin.phone}}</span>
+            <br>
+            <span>{{dropin.organization.email}}</span>
+            <br>
             <hr>
         <span id="dropin-event-info">{{dropin.datetime_start| date: 'EEEE'}} @
             {{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}
-            <br>{{dropin.sport_event.skill_level}} {{dropin.sport_event.type}} {{dropin.sport_event.sport_id}}</span>
+            <br>{{dropin.sport_event.skill_level}} {{dropin.sport_event.type}} {{dropin.sport_event.sport_id}}
+        </span>
             <br>
             <hr>
-            <span id="dropin-event-schedule">
-                <dt>Schedule Until</dt>
-                {{dropin.sport_event.schedule_until | date:'MMM d'}}
-                <dt>Spots Available</dt>
-            <dl>{{ dropin.sport_events.spots | empty_to_na }}</dl>
-            </span>
-        <!--<div class="col-md-2 col-xs-4">-->
-            <!--<br>-->
-            <!--<dt>Day</dt>-->
-            <!--<dl>{{dropin.datetime_start | date:'EEEE'}}</dl>-->
-            <!--<dt>Price</dt>-->
-            <!--<dl>{{dropin.sport_event.price_per_one | currency | empty_to_na }}</dl>-->
-        <!--</div>-->
-        <!--<div class="col-md-2 col-xs-4">-->
-            <!--<br>-->
-            <!--<dt>Skill Level</dt>-->
-            <!--<dl>{{dropin.sport_event.skill_level}}</dl>-->
-            <!--<dt>Spots Available</dt>-->
-            <!--<dl>{{ dropin.sport_events.spots | empty_to_na }}</dl>-->
-        <!--</div>-->
-        <!--<div class="col-md-4 col-xs-4">-->
-            <!--<br>-->
-            <!--<dt>Time</dt>-->
-            <!--<dl>{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</dl>-->
-            <!--<dt>Schedule Until</dt>-->
-            <!--<dl>{{dropin.sport_event.schedule_until | date:'MMM d'}}</dl>-->
-            <!--<dl ng-show="dropin.sport_event.source !== null">-->
-                <!--<a href="{{dropin.sport_event.source}}" ng-click="$event.stopPropagation()" target="_blank">Source-->
-                    <!--Website</a>-->
-            <!--</dl>-->
-        <!--</div>-->
-        </div>
-        <div class="col-md-12" ng-hide="!dropin.event.comments">
-            <dt>Notes</dt>
-            <dl>{{dropin.event.comments}}</dl>
+            <div class="dropin-event-div col-sm-6">
+                <h3 class="drop-finder-minheaders">Schedule Until</h3>
+                <h5 class="drop-finder-minpara">{{dropin.sport_event.schedule_until | date:'MMM d'}}</h5>
+            </div>
+            <div class="dropin-event-div col-sm-6">
+                <h3 class="drop-finder-minheaders">Spots Available</h3>
+                <h5 class="drop-finder-minpara">{{ dropin.sport_events.spots | empty_to_na }}</h5>
+            </div>
+            <div class="dropin-event-div col-md-12" ng-hide="!dropin.event.comments">
+                <br>
+                <hr>
+                <h3 class="drop-finder-minheaders">Notes</h3>
+                <h5 class="drop-finder-minpara">{{dropin.event.comments}}</h5>
+            </div>
         </div>
     </div>
 </div>
