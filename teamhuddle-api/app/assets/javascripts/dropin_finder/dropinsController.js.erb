@@ -382,49 +382,26 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                 headerBuffer = 365
             }
 
-//            var Container = function(){
-//                this.top = "";
-//                this.left = "";
-//                this.width= "";
-//                this.height="";
-//                this.setTop = function(top){
-//                    this.top = top;
-//                }
-//                this.setLeft = function(left){
-//                    this.left=left;
-//                }
-//                this.setWidth = function(width){
-//                    this.width = width;
-//                }
-//                this.setHeight = function(height){
-//                    this.height = height;
-//                }
-//            }
-//            var newContainer = new Container();
-//            newContainer.setTop(215);
-//            newContainer.setLeft($('.right-wrapper').offset().left);
-//            newContainer.setWidth((window.innerWidth - newContainer.left));
-//            newContainer.setHeight(window.innerHeight - 215);
-//
-//            console.log('top: ' + newContainer.top);
-//            console.log('left: ' + newContainer.left);
-//            console.log('width: ' + newContainer.width);
-//            console.log('height: ' + newContainer.height);
-//
-//            console.log('X:' + event.pageX);
-//            console.log('Y:' + event.pageY);
 
-            // if the element would fall into the height of the window
-            // minus some buffer then just scroll to the top
-            if ((scrollPos < window.innerHeight - 150 ) && window.innerWidth > 992) {
-                $('html,body').animate({scrollTop: 0}, 750);
-            }
-            // otherwise scroll to the element minus a buffer so it will always show on screen
-            else {
-                $('html,body').animate({scrollTop: scrollPos - headerBuffer}, 750);
+                var docViewTop = $(window).scrollTop();
+                var docViewBottom = docViewTop + $(window).height();
+                var elemTop = $('#dropin-' + dropin.id).offset().top;
+                var elemBottom = elemTop + $('#dropin-' + dropin.id).height();
+
+
+            if(!((elemBottom <= docViewBottom) && (elemTop >= docViewTop)))
+            {
+                // if the element would fall into the height of the window
+                // minus some buffer then just scroll to the top
+                if ((scrollPos < window.innerHeight - 150 ) && window.innerWidth > 992) {
+                    $('html,body').animate({scrollTop: 0}, 750);
+                }
+                // otherwise scroll to the element minus a buffer so it will always show on screen
+                else {
+                    $('html,body').animate({scrollTop: scrollPos - headerBuffer}, 750);
+                }
             }
         }
-
 
         //dynamically generates compiled html content for infowindows
         function generateInfoWindowHtmlContent(dropins) {
