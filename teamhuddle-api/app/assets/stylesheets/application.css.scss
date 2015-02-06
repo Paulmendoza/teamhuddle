@@ -232,6 +232,12 @@ body {
     top: 40%;
     right: 10px;
   }
+  #chevron-link{
+    position:absolute;
+    right:0;
+    height:80px;
+    width:100px;
+  }
   @media (max-width: 500px) {
     .chevron {
       right: -5px;

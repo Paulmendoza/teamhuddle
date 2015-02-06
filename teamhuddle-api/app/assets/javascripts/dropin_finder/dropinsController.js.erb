@@ -382,17 +382,26 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                 headerBuffer = 365
             }
 
-            // if the element would fall into the height of the window
-            // minus some buffer then just scroll to the top
-            if ((scrollPos < window.innerHeight - 150 ) && window.innerWidth > 992) {
-                $('html,body').animate({scrollTop: 0}, 750);
-            }
-            // otherwise scroll to the element minus a buffer so it will always show on screen
-            else {
-                $('html,body').animate({scrollTop: scrollPos - headerBuffer}, 750);
+
+                var docViewTop = $(window).scrollTop();
+                var docViewBottom = docViewTop + $(window).height();
+                var elemTop = $('#dropin-' + dropin.id).offset().top;
+                var elemBottom = elemTop + $('#dropin-' + dropin.id).height();
+
+
+            if(!((elemBottom <= docViewBottom) && (elemTop >= docViewTop)))
+            {
+                // if the element would fall into the height of the window
+                // minus some buffer then just scroll to the top
+                if ((scrollPos < window.innerHeight - 150 ) && window.innerWidth > 992) {
+                    $('html,body').animate({scrollTop: 0}, 750);
+                }
+                // otherwise scroll to the element minus a buffer so it will always show on screen
+                else {
+                    $('html,body').animate({scrollTop: scrollPos - headerBuffer}, 750);
+                }
             }
         }
-
 
         //dynamically generates compiled html content for infowindows
         function generateInfoWindowHtmlContent(dropins) {
