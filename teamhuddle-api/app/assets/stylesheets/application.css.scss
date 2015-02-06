@@ -402,7 +402,11 @@ li {
     font-weight: bold;
   }
   background-color: white;
-
+  @media(max-width: 500px){
+    h4{
+      font-size: 18px;
+    }
+  }
 }
 
 .selected {
@@ -716,6 +720,15 @@ li {
   .right-wrapper {
     margin-top: 20px;
     margin-bottom: 35px;
+    h1{
+      font-size: 24px;
+    }
+    h2{
+      font-size: 18px;
+    }
+    #dropin-event-info{
+      font-size: 18px;
+    }
   }
 
   .sport_name {
