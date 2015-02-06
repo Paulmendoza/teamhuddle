@@ -25,6 +25,9 @@ BaseApp.controller('landing-page', ['$scope', '$http', function ($scope, $http) 
                     if(data.errors.email.indexOf("has already been taken") > -1){
                         $scope.errorMessage = "We already have your email in our database! Thanks!"
                     }
+                    else if(data.errors.email.indexOf("can't be blank") > -1){
+                        $scope.errorMessage = "You have to enter an email!"
+                    }
                 }
                 $scope.success = false;
                 $scope.processing = false;
