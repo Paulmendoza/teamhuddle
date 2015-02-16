@@ -2,54 +2,70 @@
 //COMMENT OUT:  enable  logging 
 //console.log = function() {}
 
-
-
-function getStartOfTheWeek(d) {
-    d = new Date(d);
-    var day = d.getDay();
-    var diff = d.getDate() - day + (day === 0 ? -6 : 1); // adjust when day is sunday
-    d.setHours(0);
-    d.setMinutes(0);
-    d.setSeconds(0);
-    return new Date(d.setDate(diff));
-}
-
-function getEndOfTheWeek(d) {
-    d = new Date(d);
-    var day = d.getDay();
-    var diff = d.getDate() - day + (day === 0 ? 0 : 7); // adjust when day is sunday
-    d.setHours(23);
-    d.setMinutes(59);
-    d.setSeconds(59);
-    return new Date(d.setDate(diff));
-}
-
 Date.prototype.addDays = function(days) {
     this.setDate(this.getDate() + days);
     return this;
 };
 
+function getNextDay(dayOfWeek) {
+    var date = new Date();
+    date.setDate(date.getDate() + (dayOfWeek + 7 - date.getDay()) % 7);
+    return date;
+}
+
+function getDayFromString(stringDay){
+    var weekday = {};
+    weekday["Sunday"]=  0;
+    weekday["Monday"] = 1;
+    weekday["Tuesday"] = 2;
+    weekday["Wednesday"] = 3;
+    weekday["Thursday"] = 4;
+    weekday["Friday"] = 5;
+    weekday["Saturday"] = 6;
+
+    return weekday[stringDay];
+}
+
+function getNextDayFromString(stringDay){
+    var date = getNextDay(getDayFromString(stringDay));
+    date.setHours(0);
+    date.setMinutes(0);
+    date.setSeconds(0);
+    return date;
+}
+
+
 // the dropins service that is expandable with new functions easily
 DropinFinder.service('Dropins', ['$http', '$q', function ($http, $q) {
 
-    var baseUrl = '/api/v1/api_dropins.json?';
+    var baseUrl = '/api/v1/api_dropins.json';
 
-    var dateFrom = new Date(Date.now());
-
-    baseUrl += 'from=' + dateFrom.toISOString();
-    baseUrl += '&to=' + dateFrom.addDays(7).toISOString();
-    
     // default get (gets events for the week)
     this.get = function () {
-        return this.fetch(baseUrl);
+        return fetch(baseUrl);
     };
 
-    this.getBySport = function (sport) {
-        var url = baseUrl + '&sport=' + sport;
-        return this.fetch(url);
+    this.GetBySportWithFilters = function (sport, filters) {
+        var url = baseUrl + '?sport=' + sport;
+
+        var dateFrom = new Date(Date.now());
+
+        if(filters['day']){
+            url += buildUrlForNextDay(filters['day']);
+        }
+        else{
+            url += '&from=' + dateFrom.toISOString();
+            url += '&to=' + dateFrom.addDays(7).toISOString();
+        }
+
+        if(filters['skill']){
+            url += '&skill_level=' + filters['skill'];
+        }
+
+        return fetch(url);
     };
 
-    this.fetch = function (builtUrl) {
+    function fetch(builtUrl) {
         var deferred = $q.defer();
 
         $http.get(builtUrl).success(function (data) {
@@ -60,6 +76,19 @@ DropinFinder.service('Dropins', ['$http', '$q', function ($http, $q) {
 
         return deferred.promise;
     };
+
+    function buildUrlForNextDay(dayString){
+        var nextDay = getNextDayFromString(dayString);
+
+        var url = "&from=" + nextDay.toISOString();
+
+        nextDay.setHours(23);
+        nextDay.setMinutes(59);
+        nextDay.setSeconds(59);
+        url += "&to=" + nextDay.toISOString();
+
+        return url;
+    }
 }]);
 
 DropinFinder.service('Admins', ['$http', '$q', function ($http, $q) {

@@ -11,11 +11,14 @@ class ApiDropinsController < ApplicationController
     #default to volleyball right now
     @sport = String.new("volleyball")
     @sport = params[:sport] if params[:sport].present?
+
+    sport_event_filter_hash = { type: "dropin", sport_id: @sport, deleted_at: nil }
+    sport_event_filter_hash[:skill_level] = params[:skill_level] if params[:skill_level].present?
     
     # This is for the API -> see index.json.rabl
     @sport_event_instances = SportEventInstance.includes(:event, :location, :sport_event, :organization)
                                                .between(from, to)
-                                               .where( sport_events: { type: "dropin", sport_id: @sport, deleted_at: nil })
+                                               .where( sport_events: sport_event_filter_hash)
     
   end
 end
