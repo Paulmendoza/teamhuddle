@@ -20,7 +20,12 @@ gem 'rabl'
 # Also add either `oj` or `yajl-ruby` as the JSON parser
 gem 'oj'
 
+# Users and admins
 gem 'devise'
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'contact_us/new'
+  # devise_for :users,
+  #            :module => "users",
+  #            :format => false
+  #
+  # devise_scope :user do
+  #   post "/logout" => "users/sessions#destroy", :as => :destroy_user_session_post
+  # end
 
   devise_for :admins, :controllers => { :registrations => :registrations }
   as :admin do

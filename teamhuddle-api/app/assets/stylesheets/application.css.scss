@@ -232,6 +232,12 @@ body {
     top: 40%;
     right: 10px;
   }
+  #chevron-link{
+    position:absolute;
+    right:0;
+    height:80px;
+    width:100px;
+  }
   @media (max-width: 500px) {
     .chevron {
       right: -5px;
@@ -383,7 +389,7 @@ li {
     margin-bottom: 10px;
   }
   a {
-    color: blue !important;
+    color: $dark-blue !important;
   }
   hr {
     margin-top: 0px;
@@ -396,7 +402,11 @@ li {
     font-weight: bold;
   }
   background-color: white;
-
+  @media(max-width: 500px){
+    h4{
+      font-size: 18px;
+    }
+  }
 }
 
 .selected {
@@ -415,6 +425,12 @@ li {
 
   .marker-row-selected {
     background-color: $selected-dropin;
+  }
+}
+
+.dropin-view {
+  a {
+    color: $dark-blue !important;
   }
 }
 
@@ -702,7 +718,28 @@ li {
   }
 
   .right-wrapper {
+    margin-top: 20px;
     margin-bottom: 35px;
+    h1{
+      font-size: 24px;
+    }
+    h2{
+      font-size: 18px;
+    }
+    #dropin-event-info{
+      font-size: 18px;
+    }
+    #dropin-view-btn{
+      z-index: 9999;
+      margin: 0;
+      margin-bottom: 25px;
+      padding: 0;
+    }
+    #show-on-map{
+      width: 115px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
 
   .sport_name {
@@ -744,6 +781,32 @@ li {
   }
   #welcome-section{
     height: 600px;
+  }
+  hr{
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  #dropin-event-info{
+    font-size: 20px;
+    font-weight: 100;
+  }
+  .drop-finder-minheaders{
+    margin: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .dropin-event-div{
+    margin: 0;
+    padding: 0;
+  }
+  .drop-finder-minpara{
+    margin: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 12px;
+    font-weight: 100;
   }
 }
 
@@ -790,7 +853,14 @@ li {
   }
 
   .right-wrapper {
+    margin-top: 30px;
     margin-bottom: 35px;
+    #dropin-view-btn{
+      z-index: 9999;
+      margin: 0;
+      margin-bottom: 35px;
+      padding: 0;
+    }
   }
 
   .dropinfilters_row {
@@ -817,6 +887,32 @@ li {
 
   #sticky-toolbox {
     margin-top:71px;
+  }
+  hr{
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  #dropin-event-info{
+    font-size: 35px;
+    font-weight: 100;
+  }
+  .drop-finder-minheaders{
+    margin: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .dropin-event-div{
+    margin: 0;
+    padding: 0;
+  }
+  .drop-finder-minpara{
+    margin: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 15px;
+    font-weight: 100;
   }
 }
 
@@ -893,9 +989,64 @@ li {
   #dropin_results2{
     padding-top: 185px;
   }
+  hr{
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  #dropin-event-info{
+    font-size: 32px;
+    font-weight: 100;
+  }
+  .drop-finder-minheaders{
+    margin: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .dropin-event-div{
+    margin: 0;
+    padding: 0;
+  }
+  .drop-finder-minpara{
+    margin: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 15px;
+    font-weight: 100;
+  }
 }
 
 @media (min-width: 1199px) {
+
+  .dropin-view{
+    hr{
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    #dropin-event-info{
+      font-size: 35px;
+      font-weight: 100;
+    }
+    .drop-finder-minheaders{
+      margin: 0;
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: 20px;
+      font-weight: 300;
+    }
+    .dropin-event-div{
+      margin: 0;
+      padding: 0;
+    }
+    .drop-finder-minpara{
+      margin: 0;
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: 15px;
+      font-weight: 100;
+    }
+  }
 
   .dropinfilters_row {
     margin-left: 5%;
