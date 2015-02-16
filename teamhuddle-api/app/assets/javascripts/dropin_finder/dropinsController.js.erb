@@ -464,7 +464,6 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                     $scope.currentPosition = new google.maps.LatLng(position.coords.latitude,
                             position.coords.longitude);
 
-                    // todo remove this after debugging
                     var marker = new google.maps.Marker({
                         map: $scope.map,
                         icon: "<%= asset_path("person-marker.png") %>",
