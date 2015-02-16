@@ -9,31 +9,45 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams', functio
 
     $scope.dropin = {};
     $scope.dropinWrapper = {};
+
+    $scope.dropinFetchFailed = false;
+    $scope.dropinFetchFailed = "";
+
     // if we don't have this dropin
-    if($scope.markerWrappers[$routeParams.dropin_id]) {
-        $scope.dropinWrapper = $scope.markerWrappers[$routeParams.dropin_id];
-        $scope.dropin = $scope.getDropinById(parseInt($routeParams.dropin_id));
+    $scope.dropin = $scope.getDropinBySportEventId(parseInt($routeParams.dropin_id));
+
+    if($scope.dropin !== undefined) {
+        $scope.dropinWrapper = $scope.markerWrappers[$scope.dropin.id];
 
         $scope.dropinWrapper.infoWindow.toggle(true);
-    } else {
-        // TODO write this
-        //$scope.fetchDropin($routeParams.dropin_id);
+    } else if($scope.loadedOnce){
+        $scope.fetchDropin($routeParams.dropin_id)
     }
 
     $scope.$on('dropinsUpdated', function($scope){
-        if($scope.targetScope.markerWrappers[parseInt($routeParams.dropin_id)] !== undefined && $scope.targetScope.markerWrappers.currentlyOpen !== $routeParams.dropin_id){
-            $scope.currentScope.dropinWrapper = $scope.targetScope.markerWrappers[$routeParams.dropin_id];
-            $scope.currentScope.dropin = $scope.targetScope.getDropinById(parseInt($routeParams.dropin_id));
+        $scope.currentScope.dropin = $scope.targetScope.getDropinBySportEventId(parseInt($routeParams.dropin_id));
+        if($scope.currentScope.dropin &&
+            $scope.targetScope.markerWrappers[$scope.currentScope.dropin.id] &&
+            $scope.targetScope.markerWrappers.currentlyOpen !== $scope.currentScope.dropin.id){
+
+            $scope.currentScope.dropinWrapper = $scope.targetScope.markerWrappers[$scope.currentScope.dropin.id];
 
             $scope.currentScope.dropinWrapper.infoWindow.toggle(true);
+        } else {
+            $scope.targetScope.fetchDropin($routeParams.dropin_id);
         }
         // this is what happens once its loaded
     });
 
+    $scope.$on('dropinFetchFailed', function($scope, reason){
+        $scope.currentScope.dropinFetchFailed = true;
+        $scope.currentScope.dropinFetchFailedReason = reason;
+    });
+
     //
-    $scope.$on('loadDropin', function ($scope, dropinId){
-        $scope.currentScope.dropinWrapper = $scope.targetScope.markerWrappers[dropinId];
-        $scope.currentScope.dropin = $scope.targetScope.getDropinById(dropinId);
+    $scope.$on('loadDropin', function ($scope, sportEventId){
+        $scope.currentScope.dropin = $scope.targetScope.getDropinBySportEventId(sportEventId);
+        $scope.currentScope.dropinWrapper = $scope.targetScope.markerWrappers[$scope.currentScope.dropin.sport_event.id];
     });
 
 }]);

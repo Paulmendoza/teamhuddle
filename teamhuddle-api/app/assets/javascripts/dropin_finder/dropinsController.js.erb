@@ -30,6 +30,8 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
         $scope.failedRetrieve = false;
 
+        $scope.loadedOnce = false;
+
         $scope.loadingDropins = false;
 
         $scope.mapMobileToggle = false;
@@ -60,30 +62,6 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
         /**** DROPIN EVENTS/WATCHERS: ****/
         /*******************************************/
-
-        // watches dropins and makes sure markers are in sync
-        $scope.$watchCollection('dropins', function (newValues, oldValues) {
-
-            // delete the old MarkerWrappers
-            oldValues.forEach(function (oldDropin) {
-                $scope.markerWrappers[oldDropin.id]['marker'].setMap(null);
-                delete $scope.markerWrappers[oldDropin.id];
-            });
-
-            // add new MarkerWrappers
-            $scope.dropins.forEach(function (dropin) {
-                if (typeof ($scope.markerWrappers[dropin.id]) === 'undefined') {
-                    $scope.markerWrappers[dropin.id] = new MarkerWrapper(dropin);
-                }
-            });
-
-            // if the currently open id is no longer contained in the wrappers then obviously set it to null, as it can't be open
-            if (typeof ($scope.markerWrappers[$scope.markerWrappers.currentlyOpen]) === 'undefined') {
-                $scope.markerWrappers.currentlyOpen = null;
-            }
-
-            $scope.$broadcast('dropinsUpdated');
-        });
 
         // watch to see if the location changes and then set the sport accordingly
         // this is needed because the filters could change
@@ -117,6 +95,8 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                     function (dropins) {
                         $scope.dropins = orderBy(dropins, $scope.predicate, false);
 
+                        reloadMarkerWrappers();
+
                         $scope.resizeMap();
 
                         $scope.format = 'table';
@@ -125,6 +105,10 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
                         $scope.hasDropins = true;
                         calculateDistanceForDropins();
+
+                        $scope.loadedOnce = true;
+
+                        $scope.$broadcast('dropinsUpdated');
                     },
                     function (reason) {
                         $scope.loadingDropins = false;
@@ -132,8 +116,18 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                     });
         };
 
-        $scope.fetchDropin = function(dropin_id){
-
+        $scope.fetchDropin = function(sportEventId){
+            Dropins.GetBySportEventId(sportEventId).then(
+                    function(dropin){
+                        $scope.dropins.push(dropin)
+                        calculateDistanceForDropins();
+                        $scope.markerWrappers[dropin.id] = new MarkerWrapper(dropin);
+                        $scope.$broadcast('dropinsUpdated');
+                    },
+                    function(reason){
+                        $scope.$broadcast('dropinFetchFailed', reason);
+                    }
+            )
         }
 
         $scope.refreshDropins();
@@ -262,10 +256,21 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             $scope.sport = 'no-sport';
         };
 
-        $scope.getDropinById = function getDropinById(dropinId) {
+        $scope.getDropinById = function(dropinId) {
             var tempDropin;
             $scope.dropins.forEach(function (dropin) {
                 if (dropin.id === dropinId) {
+                    tempDropin = dropin;
+                }
+            });
+
+            return tempDropin;
+        }
+
+        $scope.getDropinBySportEventId = function(sportEventId) {
+            var tempDropin;
+            $scope.dropins.forEach(function (dropin) {
+                if (dropin.sport_event.id === sportEventId) {
                     tempDropin = dropin;
                 }
             });
@@ -333,11 +338,11 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
                     // switch on toggle
                     if($routeSegment.startsWith('dropin_finder.dropin_view')) {
-                        var dropinURL = $routeSegment.getSegmentUrl('dropin_finder.dropin_view', {sport: $scope.sport, dropin_id: that.dropinId})
+                        var dropinURL = $routeSegment.getSegmentUrl('dropin_finder.dropin_view', {sport: $scope.sport, dropin_id: dropin.sport_event.id})
 
                         $location.path(dropinURL);
 
-                        $scope.$broadcast('loadDropin', that.dropinId);
+                        $scope.$broadcast('loadDropin', dropin.sport_event.id);
                     } else {
                         scrollToDropin(dropin);
                     }
@@ -348,6 +353,20 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                     $scope.$apply();
                 }
             };
+        }
+
+        function reloadMarkerWrappers(){
+            for (var property in $scope.markerWrappers) {
+                if ($scope.markerWrappers.hasOwnProperty(property) && property !== "currentlyOpen") {
+                    $scope.markerWrappers[property].marker.setMap(null);
+                    $scope.markerWrappers[property] = null;
+                    delete $scope.markerWrappers[property];
+                }
+            }
+            $scope.markerWrappers.currentlyOpen = null;
+            $scope.dropins.forEach(function (dropin) {
+                $scope.markerWrappers[dropin.id] = new MarkerWrapper(dropin);
+            });
         }
 
         function calculateDistanceForDropins(){
@@ -415,7 +434,8 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                 "ng-class='{ &#39;marker-row-selected&#39; : "
                 + thisDropin.id + " === " + $scope.markerWrappers.currentlyOpen + " && " + bMultipleDropins + "}'>" +
                 "<td>" + $filter('date')(thisDropin.datetime_start, 'EEEE') + "</td>" +
-                "<td>&nbsp;&nbsp;" + $filter('date')(thisDropin.datetime_start, 'h:mm a') + " - " + $filter('date')(thisDropin.datetime_end, 'h:mm a') + "</td>"
+                "<td>&nbsp;&nbsp;" + $filter('date')(thisDropin.datetime_start, 'h:mm a') + " - " + $filter('date')(thisDropin.datetime_end, 'h:mm a') + "</td>" +
+                "<td ng-show='" + thisDropin.expired + "'>EXPIRED</td>" +
                 "</tr>";
             });
 

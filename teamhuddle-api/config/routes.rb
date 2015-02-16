@@ -54,7 +54,8 @@ Rails.application.routes.draw do
   # aliases of sport_event
   scope :api, defaults: { format: 'json' } do
     scope :v1 do
-      resources :api_dropins, only: [:index]
+      get '/api_dropins' => 'api_dropins#index'
+      get '/api_dropins/sport_event/:id' => 'api_dropins#show'
     end
   end
 

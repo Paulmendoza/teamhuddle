@@ -65,6 +65,11 @@ DropinFinder.service('Dropins', ['$http', '$q', function ($http, $q) {
         return fetch(url);
     };
 
+    this.GetBySportEventId = function(sportEventId){
+        var url = '/api/v1/api_dropins/sport_event/' + sportEventId + '.json';
+        return fetchSingle(url);
+    }
+
     function fetch(builtUrl) {
         var deferred = $q.defer();
 
@@ -72,6 +77,22 @@ DropinFinder.service('Dropins', ['$http', '$q', function ($http, $q) {
             deferred.resolve(data.dropins);
         }).error(function (data) {
             deferred.reject(data.dropins);
+        });
+
+        return deferred.promise;
+    };
+
+    function fetchSingle(builtUrl) {
+        var deferred = $q.defer();
+
+        $http.get(builtUrl).success(function (data) {
+            deferred.resolve(data[0]);
+        }).error(function (data, status) {
+            var reason = "An error occurred, please try again."
+            if(status === 404){
+                reason = "This dropin was not found."
+            }
+            deferred.reject(reason);
         });
 
         return deferred.promise;

@@ -21,4 +21,27 @@ class ApiDropinsController < ApplicationController
                                                .where( sport_events: sport_event_filter_hash)
     
   end
+
+
+  def show
+    # Gets the closest upcoming SportEventInstance by SportEvent id
+    @sport_event_instance = SportEventInstance.includes(:event, :location, :sport_event, :organization)
+                                              .where(sport_events: {id: params[:id]})
+                                              .where("datetime_start > ?", DateTime.now)
+                                              .order(datetime_start: :asc)
+                                              .take(1)
+
+    # If we couldn't find it, try and find the last instance of an expired one
+    unless @sport_event_instance.present?
+      @sport_event_instance = SportEventInstance.includes(:event, :location, :sport_event, :organization)
+                                  .where(sport_events: {id: params[:id]})
+                                  .order(datetime_start: :desc)
+                                  .take(1)
+    end
+
+    unless @sport_event_instance.present?
+      render json: { :errors => "not found" }, :status => 404
+    end
+
+  end
 end

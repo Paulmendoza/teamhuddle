@@ -10,9 +10,13 @@
             <a class="btn col-xs-12 btn-info" id="show-on-map" ng-click="$event.stopPropagation(); switchToMap()">show on map</a>
         </div>
     </div>
+
+    <h1 class="padding-top-50" ng-if="dropinFetchFailed">{{dropinFetchFailedReason}}</h1>
+
     <div ng-show="dropin.location.name !== undefined" class="dropin-view">
         <div class="col-md-12">
             <h1>{{dropin.location.name}} <small> {{dropin.distanceFromUser}}</small></h1>
+            <span ng-show="dropin.expired" class="label label-warning">EXPIRED</span><br>
         <span>
             <a href="http://maps.google.com/?q={{dropin.location.address}}" target="map">{{dropin.location.address}}</a>
         </span>

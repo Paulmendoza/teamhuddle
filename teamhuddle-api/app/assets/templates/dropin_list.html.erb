@@ -71,7 +71,7 @@
       <p class="col-md-2 col-xs-4">{{dropin.sport_event.skill_level}}</p>
 
       <p class="col-md-4 col-xs-4">{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</p>
-      <a id="chevron-link" href="/dropin-finder#/{{dropin.sport_event.sport_id}}/dropin/{{dropin.id}}" ng-click="$event.stopPropagation()">
+      <a id="chevron-link" href="/dropin-finder#/{{dropin.sport_event.sport_id}}/dropin/{{dropin.sport_event.id}}" ng-click="$event.stopPropagation()">
         <div class="pull-right glyphicon glyphicon-chevron-right chevron" aria-hidden="true"></div>
       </a>
     </div>
