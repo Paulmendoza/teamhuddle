@@ -6,7 +6,6 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams', functio
     // -- problem can occur if we do not have that dropin in our list of dropins
     // -- MORE COMMON: fetch that extra dropin instance and it it to list?
     // -- LESS COMMON: then we , and check if it's the correct sport, if it's not the correct sport then change the url
-
     $scope.dropin = {};
     $scope.dropinWrapper = {};
 

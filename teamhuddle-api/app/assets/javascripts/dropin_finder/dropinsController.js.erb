@@ -70,6 +70,8 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             if(params['day'] !== undefined || params['skill'] !== undefined){
                 $scope.refreshDropins();
             }
+
+            ga('send', 'pageview', '/dropin-finder' + $location.path()); // add google analytics to the "router"
         });
 
         $scope.backToList = function(){
