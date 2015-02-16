@@ -294,7 +294,7 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
             this.marker = new google.maps.Marker({
                 map: $scope.map,
-                icon: getMapMarkerPath($scope.sport),
+                icon: getMapMarkerPath(dropin.sport_event.sport_id),
                 position: new google.maps.LatLng(dropin.location.lat, dropin.location.long)
             });
 
