@@ -1,13 +1,15 @@
 <div class="padding-top-50">
     <div class="col-xs-12" id="dropin-view-btn">
-        <div class="col-xs-6 col-sm-3">
+        <div class="col-xs-5 col-sm-3">
             <a ng-click="backToList()" href="/dropin-finder#/{{dropin.sport_event.sport_id}}" class="btn btn-default">
-                <div class="glyphicon glyphicon-chevron-left" aria-hidden="true"></div>
+                <div class="glyphicon glyphicon-chevron-left hidden-xs" aria-hidden="true"></div>
                 back to list
             </a>
         </div>
-        <div class="col-xs-6 col-sm-3 hidden-lg hidden-md" ng-if="isSelected(dropin.id)">
-            <a class="btn col-xs-12 btn-info" id="show-on-map" ng-click="$event.stopPropagation(); switchToMap()">show on map</a>
+        <div class="col-xs-5 col-xs-offset-1 col-sm-3 hidden-lg hidden-md" ng-if="isSelected(dropin.id)">
+            <a class="btn col-xs-12 btn-info" id="show-on-map" ng-click="$event.stopPropagation(); switchToMap()">
+                show on map
+            </a>
         </div>
     </div>
 
