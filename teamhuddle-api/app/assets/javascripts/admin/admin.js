@@ -5,8 +5,8 @@
 //= require angular
 //= require ngmap
 //= require angular-gridster
-//= require admin/adminApp
 //= require highcharts
 //= require highcharts-ng
-//=
+//= require admin/adminApp
+//= require_tree .
 

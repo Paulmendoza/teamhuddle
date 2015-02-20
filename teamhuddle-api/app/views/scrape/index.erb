@@ -1,0 +1,29 @@
+<div ng-controller="scrape">
+<h1>Importer</h1>
+<p>
+    <i>Note:</i> Currently, this will not import anything, but it does pull <b>live</b> data from the city of Vancouver sites.
+</p>
+
+<form >
+  <button ng-click="getData()">Get some data</button>
+  <h3 ng-show="loadingData">LOADING DATA PLEASE WAIT</h3>
+</form>
+  <h3>Check it out. I'm gonna show you five of these</h3>
+  <table class="table">
+      <tr>
+          <th>Title</th>
+          <th>Ages</th>
+          <th>Status</th>
+          <th>Price</th>
+          <th>Description</th>
+      </tr>
+        <tr ng-repeat="dropin in dropins">
+            <td>{{dropin.fields_hash.Title}}</td>
+            <td>{{dropin.fields_hash.Ages}}</td>
+            <td>{{dropin.fields_hash.Status}}</td>
+            <td>{{dropin.fields_hash.Price}}</td>
+            <td>{{dropin.fields_hash.Description}}</td>
+        </tr>
+
+  </table>
+</div>

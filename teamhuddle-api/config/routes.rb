@@ -40,12 +40,16 @@ Rails.application.routes.draw do
       end
 
       collection do
-        get 'import'
-        post 'scrape'
+        get 'scrape' => 'scrape#index'
         post 'duplicate'
         post 'refresh_inactive_dropins'
       end
     end
+
+    scope :scrape do
+      get 'get-data' => "scrape#get_data"
+    end
+
     get 'contact_us' => 'contact_us#index'
     get 'admin_stats' => 'admin#admin_stats'
     get 'admin_signed_in' => 'admin#admin_signed_in'
