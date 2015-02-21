@@ -7,7 +7,7 @@ class ScrapeController < ApplicationController
   end
 
   def get_data
-    cookie_template = get_cookie_template_cached
+    cookie_template = VancouverUtil.get_cookie_template
 
     category_all_ids = get_volleyball_category_cached
 
@@ -43,15 +43,4 @@ class ScrapeController < ApplicationController
     return category_all_ids
   end
 
-  private
-  def get_cookie_template_cached
-    cookie_template = Rails.cache.read("vancouver_scraper_cookie_template")
-
-    if cookie_template.nil?
-      cookie_template = VancouverUtil.get_cookie_template()
-      Rails.cache.write("vancouver_scraper_cookie_template", cookie_template)
-    end
-
-    return cookie_template
-  end
 end
