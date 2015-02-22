@@ -1,4 +1,4 @@
-<div ng-controller="scrape">
+<div ng-app="scrapeApp" ng-controller="scrape">
   <h1>Importer</h1>
 
   <p>
@@ -6,29 +6,53 @@
     sites.
   </p>
 
-  <form>
-    <button ng-click="getData()">Get some data</button>
-    <h3 ng-show="loadingData" ng-cloak>LOADING DATA PLEASE WAIT</h3>
-  </form>
-  <h3>Check it out. I'm gonna show you five of these</h3>
-  <table class="table" ng-show="dropins.length > 0" ng-cloak>
-    <tr>
-      <th>Title</th>
-      <th>Ages</th>
-      <th>Status</th>
-      <th>Price</th>
-      <th>Description</th>
-      <th>Schedule</th>
-      <th>Link to event</th>
-    </tr>
-    <tr ng-repeat="dropin in dropins" ng-cloak>
-      <td>{{dropin.fields_hash.Title}}</td>
-      <td>{{dropin.fields_hash.Ages}}</td>
-      <td>{{dropin.fields_hash.Status}}</td>
-      <td>{{dropin.fields_hash.Price}}</td>
-      <td>{{dropin.fields_hash.Description}}</td>
-      <td>{{dropin.fields_hash.ScheduleString}}</td>
-      <td><a href="{{dropin.url}}" target="_blank">{{dropin.url}}</a></td>
-    </tr>
-  </table>
+  <h1 ng-show="sport === 'none-selected'">Step 1: Select a Sport</h1>
+
+  <h1 ng-hide="sport === 'none-selected'" ng-cloak>Step 2: Preload {{sport | uppercase}} Dropins to Parse</h1>
+
+  <div ng-show="sport === 'none-selected'">
+    <button class="btn btn-default" ng-click="selectSport('volleyball')">Volleyball</button>
+    <button class="btn btn-default" ng-click="selectSport('iceHockey')" disabled>Ice Hockey</button>
+    <button class="btn btn-default" ng-click="selectSport('soccer')">Soccer</button>
+    <button class="btn btn-default" ng-click="selectSport('basketball')">Basketball</button>
+    <button class="btn btn-default" ng-click="selectSport('dodgeball')">Dodgeball</button>
+  </div>
+
+  <div id="step-2" ng-show="sport !== 'none-selected'" ng-cloak>
+
+    <h3 ng-show="loadingData">Preparing parser. Please wait...</h3>
+    <div ng-hide="loadingData">
+    <button class="btn btn-info" ng-click="resetSport()">Choose a different sport</button>
+    <button class="btn btn-warning" ng-click="getData()">Get some data</button>
+
+    <h3 ng-hide="dropins.length > 0">Fabulous! We are ready to parse {{currentIds.length}} dropins.</h3>
+      <div ng-show="isParsing">
+        <p>Currently parsing {{progress.loaded}}/{{progress.total}}</p>
+      </div>
+    <table class="table" ng-show="dropins.length > 0 && !isParsing" ng-cloak>
+      <tr>
+        <th>Title</th>
+        <th>Ages</th>
+        <th>Status</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Schedule</th>
+        <th>Link to event</th>
+      </tr>
+      <tr ng-repeat="dropin in dropins" ng-cloak>
+        <td>{{dropin.fields_hash.Title}}</td>
+        <td>{{dropin.fields_hash.Ages}}</td>
+        <td>{{dropin.fields_hash.Status}}</td>
+        <td>{{dropin.fields_hash.Price}}</td>
+        <td>{{dropin.fields_hash.Description}}</td>
+        <td>{{dropin.fields_hash.ScheduleString}}</td>
+        <td><a href="{{dropin.url}}" target="_blank">{{dropin.url}}</a></td>
+      </tr>
+    </table>
+  </div>
+
+  </div>
+
 </div>
+
+<%= javascript_include_tag 'scrape/scrape.js' %>

@@ -47,7 +47,10 @@ Rails.application.routes.draw do
     end
 
     scope :scrape do
-      get 'get-data' => "scrape#get_data"
+      get 'get-data' => 'scrape#get_data'
+      get 'get-ids-by-category/:id' => 'scrape#get_ids_by_category'
+
+      post 'get-dropins-by-ids' => 'scrape#get_dropins_by_ids'
     end
 
     get 'contact_us' => 'contact_us#index'
