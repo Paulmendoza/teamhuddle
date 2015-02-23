@@ -434,6 +434,23 @@ li {
     color: $dark-blue !important;
   }
 }
+#preloader-wrapper{
+  z-index: 1001;
+  height: 100vh;
+  width: 50%;
+  background: white;
+  position: fixed;
+  text-align: center;
+  #preloader-inner{
+    h3{
+      margin-top: 35vh;
+      font-weight: 200;
+    }
+    img{
+      margin-top: 20px;
+    }
+  }
+}
 
 // ========== IMAGE STYLES ===========
 .default-sport_logos-outer {
@@ -811,6 +828,22 @@ li {
     font-size: 12px;
     font-weight: 100;
   }
+  #preloader-wrapper{
+    background: transparent;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    #preloader-inner{
+      h3{
+        margin-top: 10vh;
+        font-weight: 200;
+      }
+      img{
+        margin-top: 20px;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -918,6 +951,22 @@ li {
     font-size: 15px;
     font-weight: 100;
   }
+  #preloader-wrapper{
+    background: transparent;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    #preloader-inner{
+      h3{
+        margin-top: 10vh;
+        font-weight: 200;
+      }
+      img{
+        margin-top: 20px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -953,7 +1002,7 @@ li {
  #sticky-toolbox {
    position: fixed;
    width: 52%;
-   z-index: 1;
+   z-index: 1002;
    background-color: #ffffff;
    border-bottom: 1px solid #777777;
    padding-bottom: 20px;

@@ -38,10 +38,17 @@
   </div>
   <br>
 </div>
-<div class="dropin_results" id="dropin_results2">
-  <div class="text-center" ng-show="loadingDropins">
+<div id="preloader-wrapper" ng-show="loadingDropins">
+  <div id="preloader-inner">
+    <h3>Loading Dropins...</h3>
+    </br>
     <%= image_tag("loading.gif", alt: "loading") %>
   </div>
+</div>
+<div class="dropin_results" id="dropin_results2">
+  <!--<div class="text-center" ng-show="loadingDropins">-->
+    <!--<%= image_tag("loading.gif", alt: "loading") %>-->
+  <!--</div>-->
   <br>
 
   <div ng-if="failedRetrieve" class="panel panel-warning">
@@ -51,7 +58,7 @@
     </div>
   </div>
 
-  <div class="row clearfix dropin-repeat event-item"
+  <div class="row clearfix dropin-repeat event-item" ng-hide="loadingDropins"
        ng-class="{selected: markerWrappers.currentlyOpen === dropin.id}"
        ng-repeat="dropin in dropins"
        ng-click="markerWrappers[dropin.id].infoWindow.toggle(); centerDropin(dropin)"
