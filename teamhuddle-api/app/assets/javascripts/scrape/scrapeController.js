@@ -18,6 +18,8 @@ ScrapeApp.controller('scrape', ['$scope', 'ScrapeService',  function ($scope, Sc
 
     $scope.isParsing = false;
 
+    $scope.isDoneParsing = false;
+
     $scope.selectSport = function(sport){
         $scope.sport = sport;
 
@@ -37,26 +39,25 @@ ScrapeApp.controller('scrape', ['$scope', 'ScrapeService',  function ($scope, Sc
         $scope.sport = 'none-selected';
         $scope.currentIds = [];
         $scope.dropins = [];
+        $scope.progress.total = 0;
+        $scope.progress.loaded = 0;
+        $scope.isDoneParsing = false;
     };
 
     $scope.getData = function(){
         $scope.isParsing = true;
+        $scope.progress.total = $scope.currentIds.length;
         ScrapeService.GetDropinsFromIdsChunked($scope.currentIds).then(function(data){
-
-            for(var i = 0; i < data.length; i++){
-                angular.forEach(data[i].scrape, function(dropin){
-                    $scope.dropins.push(dropin);
-                });
-            }
             $scope.isParsing = false;
+            $scope.isDoneParsing = true;
         });
     };
 
-    $scope.$on('Dropins.ChunkLoaded', function(event, progress){
-        $scope.progress = progress;
-    })
+    $scope.$on('Dropins.ChunkLoaded', function(event, payload){
+        $scope.progress = payload.progress;
 
-    $scope.$on('Dropins.TotalChunks', function(event, totalChunks){
-        $scope.progress.total = totalChunks;
-    })
+        angular.forEach(payload.chunk.scrape, function(dropin){
+            $scope.dropins.push(dropin);
+        });
+    });
 }]);

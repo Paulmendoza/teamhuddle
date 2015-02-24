@@ -20,36 +20,46 @@
 
   <div id="step-2" ng-show="sport !== 'none-selected'" ng-cloak>
 
-    <h3 ng-show="loadingData">Preparing parser. Please wait...</h3>
-    <div ng-hide="loadingData">
-    <button class="btn btn-info" ng-click="resetSport()">Choose a different sport</button>
-    <button class="btn btn-warning" ng-click="getData()">Get some data</button>
+    <div ng-show="loadingData">
+      <h3 class="justify-center">Preparing parser. Please wait...</h3>
+      <%= image_tag 'loading.gif', alt: 'loading', class: 'justify-center' %>
+    </div>
 
-    <h3 ng-hide="dropins.length > 0">Fabulous! We are ready to parse {{currentIds.length}} dropins.</h3>
+    <div ng-hide="loadingData">
+
+      <h3 ng-hide="isDoneParsing || isParsing">Fabulous! We are ready to parse {{currentIds.length}} dropins.</h3>
+
+      <button class="btn btn-info" ng-click="resetSport()">Choose a different sport</button>
+      <button class="btn btn-warning" ng-click="getData()" ng-hide="isDoneParsing">Parse all {{currentIds.length}} {{sport}} dropins</button>
+
       <div ng-show="isParsing">
-        <p>Currently parsing {{progress.loaded}}/{{progress.total}}</p>
+        <p>Currently parsing <b>{{progress.loaded}}/{{progress.total}}</b></p>
       </div>
-    <table class="table" ng-show="dropins.length > 0 && !isParsing" ng-cloak>
-      <tr>
-        <th>Title</th>
-        <th>Ages</th>
-        <th>Status</th>
-        <th>Price</th>
-        <th>Description</th>
-        <th>Schedule</th>
-        <th>Link to event</th>
-      </tr>
-      <tr ng-repeat="dropin in dropins" ng-cloak>
-        <td>{{dropin.fields_hash.Title}}</td>
-        <td>{{dropin.fields_hash.Ages}}</td>
-        <td>{{dropin.fields_hash.Status}}</td>
-        <td>{{dropin.fields_hash.Price}}</td>
-        <td>{{dropin.fields_hash.Description}}</td>
-        <td>{{dropin.fields_hash.ScheduleString}}</td>
-        <td><a href="{{dropin.url}}" target="_blank">{{dropin.url}}</a></td>
-      </tr>
-    </table>
-  </div>
+      <table class="table" ng-show="dropins.length > 0" ng-cloak>
+        <tr>
+          <th>Title</th>
+          <th>Ages</th>
+          <th>Status</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Schedule</th>
+          <th>Link to event</th>
+        </tr>
+        <tr ng-repeat="dropin in dropins" ng-cloak>
+          <td>{{dropin.fields_hash.Title}}</td>
+          <td>{{dropin.fields_hash.Ages}}</td>
+          <td>{{dropin.fields_hash.Status}}</td>
+          <td>{{dropin.fields_hash.Price}}</td>
+          <td>{{dropin.fields_hash.Description}}</td>
+          <td>{{dropin.fields_hash.ScheduleString}}</td>
+          <td><a href="{{dropin.url}}" target="_blank">{{dropin.url}}</a></td>
+        </tr>
+      </table>
+      <div ng-show="isParsing">
+        <%= image_tag 'loading.gif', alt: 'loading', class: 'justify-center' %>
+        <h3 class="justify-center">Hang tight, we're still parsing! {{progress.loaded}}/{{progress.total}}</h3>
+      </div>
+    </div>
 
   </div>
 

@@ -9,28 +9,8 @@ class ScrapeController < ApplicationController
 
   end
 
-  def get_data
-    cookie_template = VancouverUtil.get_cookie_template
-
-    category_all_ids = get_volleyball_category_cached
-
-    dropins = Array.new
-
-    category_all_ids.first(5).each do |id|
-      dropin = VancouverEvent.new(id, cookie_template, VancouverScraper::DEFAULT_EVENT_URL, :should_parse_location => true)
-      dropin.parse
-      dropin_schedule = dropin.parse_schedule
-      dropin.fields_hash["Schedule"] = dropin_schedule.all_occurrences
-      dropin.fields_hash["ScheduleString"] = dropin_schedule.to_s
-
-      dropins.push(dropin)
-    end
-
-    render json: dropins
-  end
-
   def get_dropins_by_ids
-    cookie_template = VancouverUtil.get_cookie_template
+    cookie_template = get_cookie_session_cached.cookie
 
     dropin_ids = params['dropinIds']
 
@@ -55,16 +35,25 @@ class ScrapeController < ApplicationController
   end
 
   private
-  def get_volleyball_category_cached
-    category_all_ids = Rails.cache.read("vancouver_volleyball_category")
+  def get_cookie_session_cached
+    cookie = Rails.cache.read("vancouver_scraper_cookie")
 
-    if category_all_ids.nil?
-      category = VancouverCategory.new(186, VancouverUtil.get_cookie_template)
-      category_all_ids = category.all_ids
-      Rails.cache.write("vancouver_volleyball_category", category_all_ids)
+    if cookie.nil? || !cookie.is_a?(CachedCookie) || cookie.dt_cached < DateTime.now.advance(minutes: -30)
+      cookie = CachedCookie.new(VancouverUtil.get_cookie_template)
+      Rails.cache.write("vancouver_scraper_cookie", cookie)
     end
 
-    return category_all_ids
+    return cookie
+  end
+
+  class CachedCookie
+    attr_accessor(:cookie)
+    attr_accessor(:dt_cached)
+
+    def initialize(cookie)
+      self.cookie = cookie
+      self.dt_cached = DateTime.now
+    end
   end
 
 end

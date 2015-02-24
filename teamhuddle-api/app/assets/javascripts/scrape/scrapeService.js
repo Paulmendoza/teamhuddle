@@ -15,7 +15,7 @@ ScrapeApp.service('ScrapeService', ['$http', '$q', '$rootScope', function($http,
     this.GetDropinsFromIdsChunked = function(allIds){
         // First, we chunk the initial array of ids into more manageable chunks
         var i,j;
-        var iChunkSize = 5;
+        var iChunkSize = 2;
         var chunkedArrays = [];
 
         for (i = 0,j = allIds.length; i < j; i += iChunkSize) {
@@ -29,12 +29,17 @@ ScrapeApp.service('ScrapeService', ['$http', '$q', '$rootScope', function($http,
         for(i = 0; i < chunkedArrays.length; i++){
             httpPosts.push($http.post('/admin/scrape/get-dropins-by-ids', { dropinIds: chunkedArrays[i]}).then(function(resp){
                 resolvedCount++;
-                $rootScope.$broadcast('Dropins.ChunkLoaded', {total: httpPosts.length, loaded: resolvedCount});
+                var payload = { progress:
+                    {
+                        total: allIds.length,
+                        loaded: resolvedCount * iChunkSize
+                    },
+                    chunk: resp.data
+                }
+                $rootScope.$broadcast('Dropins.ChunkLoaded', payload);
                 return resp.data;
             }));
         }
-
-        $rootScope.$broadcast('Dropins.TotalChunks', httpPosts.length);
 
         return $q.all(httpPosts)
     }
