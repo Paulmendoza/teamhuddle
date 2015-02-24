@@ -8,12 +8,12 @@
   <div class="dropinfilters_row">
     <button class="btn btn-default hidden-lg hidden-md col-sm-12 col-xs-12 text-center" ng-click="switchToMap()">show map
     </button>
-    <button class="btn btn-success col-lg-3 col-md-6 col-sm-6 col-xs-6 text-center" ng-click="resetFilters()">reset filters
+    <button class="btn btn-success col-lg-3 col-md-6 col-sm-6 col-xs-6 text-center" ng-click="resetFilters()" ng-disabled="loadingDropins">reset filters
     </button>
     <a href="#/" class="btn btn-info col-lg-3 col-md-6 col-sm-6 col-xs-6" >more sports</a>
 
     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-      <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="setFilters()">
+      <select class="form-control dropin_filter1" ng-model="weekdaySelect" ng-change="setFilters()" ng-disabled="loadingDropins">
         <option value="" disabled selected>Day</option>
         <option value="All">All</option>
         <option value="Monday">Monday</option>
@@ -26,7 +26,7 @@
       </select>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-      <select class="form-control dropin_filter2" ng-model="skillLevelSelect" ng-change="setFilters()">
+      <select class="form-control dropin_filter2" ng-model="skillLevelSelect" ng-change="setFilters()" ng-disabled="loadingDropins">
         <option value="" disabled selected>Skill Level</option>
         <option value="All">All</option>
         <option value="Recreational">Recreational</option>
@@ -38,10 +38,17 @@
   </div>
   <br>
 </div>
-<div class="dropin_results" id="dropin_results2">
-  <div class="text-center" ng-show="loadingDropins">
+<div id="preloader-wrapper" ng-show="loadingDropins">
+  <div id="preloader-inner">
+    <h3>Loading Dropins...</h3>
+    </br>
     <%= image_tag("loading.gif", alt: "loading") %>
   </div>
+</div>
+<div class="dropin_results" id="dropin_results2">
+  <!--<div class="text-center" ng-show="loadingDropins">-->
+    <!--<%= image_tag("loading.gif", alt: "loading") %>-->
+  <!--</div>-->
   <br>
 
   <div ng-if="failedRetrieve" class="panel panel-warning">
@@ -51,7 +58,7 @@
     </div>
   </div>
 
-  <div class="row clearfix dropin-repeat event-item"
+  <div class="row clearfix dropin-repeat event-item" ng-hide="loadingDropins"
        ng-class="{selected: markerWrappers.currentlyOpen === dropin.id}"
        ng-repeat="dropin in dropins"
        ng-click="markerWrappers[dropin.id].infoWindow.toggle(); centerDropin(dropin)"
