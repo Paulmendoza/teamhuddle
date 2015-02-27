@@ -36,12 +36,13 @@
   </div>
   <br>
 </div>
-<div class="dropin-results">
-  <div class="text-center" ng-show="loadingDropins">
+<div class="curtain text-center col s6 valign-wrapper" ng-show="loadingDropins">
+  <div clas="valign">
+    <h1>Loading Dropins..</h1>
     <%= image_tag("loading.gif", alt: "loading") %>
   </div>
-  <br>
-
+</div>
+<div class="dropin-results" ng-hide="loadingDropins">
   <div ng-if="failedRetrieve" class="panel panel-warning">
     <!-- This is only shown if we had an error retrieving the dropins -->
     <div class="panel-title text-center">Sorry, we could not retrieve the dropins at this time. Please try again

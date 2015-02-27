@@ -15,16 +15,12 @@ window.addEventListener("scroll", function() {
     if (window.scrollY > 200) {
         if(faded){
             faded = false;
-            //$("nav").fadeTo(200, 1.0, "swing", function () {
-            //});
             $("nav").css("background-color", "white");
         }
     }
     else {
         if(!faded){
             faded = true;
-            //$( "nav" ).fadeTo( 200 , 0.2, "swing", function() {
-            //});
             $("nav").css("background-color", "transparent");
         }
 

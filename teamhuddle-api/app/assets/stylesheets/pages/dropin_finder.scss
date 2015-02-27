@@ -40,6 +40,18 @@
         display:block;
       }
     }
+    .curtain{
+      position:fixed;
+      height:100vh;
+      background-color: white;
+      z-index:96;
+      h1{
+        font-weight: 200;
+      }
+    }
+    .dropin-results{
+      z-index:95
+    }
   }
 }
 
