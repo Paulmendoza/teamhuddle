@@ -80,8 +80,10 @@ nav {
     }
     form {
       color: #455a64;
+      height: 100px;
       .input-field{
         width: 30px;
+        height:30px
       }
       .input-field label.active {
         font-size: 1.3rem;
@@ -96,6 +98,7 @@ nav {
         position: absolute;
         top: -1.2rem;
         left: 1.2rem;
+        height: 30px;
         font-size: 1.1rem;
         cursor: text;
         -webkit-transition: 0.2s ease-out;
