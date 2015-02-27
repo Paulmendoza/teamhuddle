@@ -220,6 +220,7 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
         // sets the filter arguments in the URL
         $scope.setFilters = function () {
+            console.log("HERE");
             if (this.weekdaySelect !== 'All') {
                 $location.search('day', this.weekdaySelect);
             }
@@ -399,12 +400,13 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             if (window.innerWidth < 1200) {
                 headerBuffer = 365
             }
+            $(".dropin-repeat").css('background-color', 'white');
+            $("#dropin-"+dropin.id).css('background-color','#e3f2fd');
 
-
-                var docViewTop = $(window).scrollTop();
-                var docViewBottom = docViewTop + $(window).height();
-                var elemTop = $('#dropin-' + dropin.id).offset().top;
-                var elemBottom = elemTop + $('#dropin-' + dropin.id).height();
+            var docViewTop = $(window).scrollTop() + 300;
+            var docViewBottom = docViewTop + $(window).height();
+            var elemTop = $('#dropin-' + dropin.id).offset().top;
+            var elemBottom = elemTop + $('#dropin-' + dropin.id).height();
 
 
             if(!((elemBottom <= docViewBottom) && (elemTop >= docViewTop)))
@@ -524,4 +526,5 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 //            }
 //        };
     }]);
+
 

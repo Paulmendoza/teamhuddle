@@ -12,7 +12,8 @@
             "highcharts-ng": "0.0.7",
             "highcharts": "latest",
             "angular-route-segment": "latest",
-            "angular-inview": "latest"
+            "angular-inview": "latest",
+            "materialize": "latest"
         }
     },
     "vendor": {

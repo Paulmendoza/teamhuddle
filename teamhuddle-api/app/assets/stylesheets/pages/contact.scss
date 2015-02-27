@@ -1,0 +1,42 @@
+@import "variables";
+
+// ========== CONTACT US US PAGE ===========
+
+.contact-us {
+  margin-top: 120px;
+  .contact-us-text {
+    max-height: 300px;
+  }
+  ul {
+    padding: 0 !important;
+  }
+  li {
+    padding: 5px 0px;
+    display: block;
+  }
+  .socialmedia {
+    max-height: 35px;
+  }
+  .footer {
+    min-height: 300px;
+  }
+  label{
+    font-size: 1.6em;
+    font-weight: 100;
+  }
+  input{
+    font-size: 1.4em;
+  }
+  .socialmedia-full {
+    @media (max-width: 1199px) {
+      border: 0;
+    }
+    @media (max-width: 768px) {
+      border: 0;
+      ul li {
+        float: left;
+        padding-right: 5px;
+      }
+    }
+  }
+}

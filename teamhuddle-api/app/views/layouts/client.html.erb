@@ -1,90 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= yield(:title) %></title>
-    <%= stylesheet_link_tag  'application',
-                             'static_pages',
-                             'http://fonts.googleapis.com/css?family=Jura:400,600',
-                             'http://fonts.googleapis.com/css?family=Raleway:400,300',
-                             'typography',
-                             media: 'all',
-                             'data-turbolinks-track' => true%>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="description" content="Connecting you with your sports community. Find the sports you love playing with the players you love playing with!">
+<head>
+  <title><%= yield(:title) %></title>
+  <%= stylesheet_link_tag  'application',
+                           'static_pages',
+                           'http://fonts.googleapis.com/css?family=Jura:400,600',
+                           'http://fonts.googleapis.com/css?family=Raleway:400,300',
+                           'typography',
+                           media: 'all',
+                           'data-turbolinks-track' => true%>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="description" content="Connecting you with your sports community. Find the sports you love playing with the players you love playing with!">
 
-    <%= favicon_link_tag 'favicon.ico' %>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <div class="wrapper">
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53af382b4ee31991" async="async"></script>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <nav class="navbar navbar-default navbar-static-top default-nav" role="navigation">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="wrapper">
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53af382b4ee31991" async="async"></script>
 
+  <nav role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header default-nav">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand logotext" href="/"><%= image_tag 'logo-compressed.png', class: "logonav center-block", alt: 'teamhuddle_logo'%></a>
-    </div>
+    <!--<div>-->
+    <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">-->
+    <!--<span class="sr-only">Toggle navigation</span>-->
+    <!--<span class="icon-bar"></span>-->
+    <!--<span class="icon-bar"></span>-->
+    <!--<span class="icon-bar"></span>-->
+    <!--</button>-->
+    <!--<a href="/"><%= image_tag 'logo-compressed.png', class: "logonav center-block", alt: 'teamhuddle_logo'%></a>-->
+    <!--</div>-->
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse default-nav" id="navbar-collapse">
-      <ul class="nav navbar-nav navbar-right" role="menu">
-        <li class="navlinks">
-          <%= link_to "dropin finder", controller: '/index', action: :dropin_finder %>
-          <!--<a class="dropdown-toggle" class="dropdown" data-toggle="dropdown" role="button" aria-expanded="false">dropin finder</a>-->
-          <!--<ul class="dropdown-menu" role="menu">-->
-            <!--<li><%#= link_to "volleyball", "/dropin-finder#/volleyball" %></li>-->
-            <!--<li><%#= link_to "hockey", "/dropin-finder#/hockey" %></li>-->
-            <!--<li><%#= link_to "basketball", "/dropin-finder#/basketball" %></li>-->
-            <!--<li><%#= link_to "soccer", "/dropin-finder#/soccer" %></li>-->
-          <!--</ul>-->
-        </li>
-        <li class="navlinks"><%= link_to "about", controller: '/index', action: :about %></li>
-        <li class="navlinks right-side"><%= link_to "contact", controller: '/index', action: :contact %></li>
-        <!--<li class="navlinks">-->
-          <!--<%# if user_signed_in? %>-->
-              <!--<a href="#" class="dropdown-toggle" class="dropdown" data-toggle="dropdown" role="button" aria-expanded="false"><%#= current_user.first_name.strip %> <%#= current_user.last_name.strip %></a>-->
-              <!--<ul class="dropdown-menu" role="menu">-->
-                <!--<li><%#= link_to "profile", "#" %></li>-->
-                <!--<li><%#= link_to "logout", destroy_user_session_path, :method => :delete %></li>-->
-              <!--</ul>-->
-          <!--<%# else %>-->
-              <!--<%#= link_to "login", new_user_session_path %>-->
-          <!--<%# end %>-->
-        <!--</li>-->
-      </ul>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">
+        <div class="row text-center">
+          <%= image_tag 'logo-compressed.png', alt: 'teamhuddle_logo'%>
+          <br>
+          <p class="col s12">teamhuddle</p>
+        </div>
+      </a>
+      <form class="right hide-on-med-and-down margin-right-5 margin-top-3" role="login">
+        <div class="row">
+          <button class="btn col s2 waves-effect waves-light blue lighten-1" type="submit" name="action">Facebook</button>
+          <button class="col s2 btn waves-effect waves-light blue lighten-1" type="submit" name="action">Google+</button>
+          <div class="input-field col s3">
+            <input id="username" type="text" class="validate">
+            <label for="username">Username</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+          <button class="col s2 btn waves-effect waves-light blue lighten-1" type="submit" name="action">Login</button>
+        </div>
+      </form>
+      <!--<ul class="right hide-on-med-and-down" role="menu">-->
+      <!--<li><%= link_to "dropin finder", controller: '/index', action: :dropin_finder %></li>-->
+      <!--<li><%= link_to "about", controller: '/index', action: :about %></li>-->
+      <!--<li><%= link_to "contact", controller: '/index', action: :contact %></li>-->
+      <!--&lt;!&ndash;<li class="navlinks">&ndash;&gt;-->
+      <!--&lt;!&ndash;<%# if user_signed_in? %>&ndash;&gt;-->
+      <!--&lt;!&ndash;<a href="#" class="dropdown-toggle" class="dropdown" data-toggle="dropdown" role="button" aria-expanded="false"><%#= current_user.first_name.strip %> <%#= current_user.last_name.strip %></a>&ndash;&gt;-->
+      <!--&lt;!&ndash;<ul class="dropdown-menu" role="menu">&ndash;&gt;-->
+      <!--&lt;!&ndash;<li><%#= link_to "profile", "#" %></li>&ndash;&gt;-->
+      <!--&lt;!&ndash;<li><%#= link_to "logout", destroy_user_session_path, :method => :delete %></li>&ndash;&gt;-->
+      <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+      <!--&lt;!&ndash;<%# else %>&ndash;&gt;-->
+      <!--&lt;!&ndash;<%#= link_to "login", new_user_session_path %>&ndash;&gt;-->
+      <!--&lt;!&ndash;<%# end %>&ndash;&gt;-->
+      <!--&lt;!&ndash;</li>&ndash;&gt;-->
+      <!--</ul>-->
     </div>
 
-    </nav>
-
+  </nav>
+  <div class="content">
     <%= yield %>
-      <div class="footer">
-        <div class="footer-content"><span><h5 id="copyright">&copy; Teamhuddle Athletics Inc.</h5></span></div>
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <div class="addthis_horizontal_follow_toolbox pull-right addthis footer-icons"></div>
-      </div>
-    </div>
+  </div>
+  <div class="footer text-center">
+    <div class="footer-content"><span><h5 id="copyright" class="margin-top-none">&copy; Teamhuddle Athletics Inc.</h5></span></div>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_horizontal_follow_toolbox pull-right addthis footer-icons"></div>
+  </div>
+</div>
 
-    <script>
-        //Google Analytics
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
-        { (i[r].q=i[r].q||[]).push(arguments)}
-                ,i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-56771767-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <%= javascript_include_tag 'base_app' %>
+<script>
+    //Google Analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+    { (i[r].q=i[r].q||[]).push(arguments)}
+            ,i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-56771767-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<%= javascript_include_tag 'base_app' %>
 
-  </body>
+</body>
 </html>
