@@ -1,16 +1,16 @@
-<div class="row col s6 z-depth-2" id="filter">
+<div class="row col s12 m6 z-depth-2" id="filter">
   <br>
   <!-- Only show this portion if the user doesn't have location tracking enabled in their browser -->
   <div class="panel panel-warning text-center" ng-if="!userLocationEnabled">Please let us access your location so we can show the distance to dropins</div>
   <h2 class="text-center sport_name">dropin {{sport | lowercase }} events</h2>
   <br>
-  <div class="dropinfilters_row">
+  <div>
     <div class="text-center margin-bottom-1">
       <a class="waves-effect waves-light btn blue hide-on-med-and-up" ng-click="switchToMap()">Show Map</a>
       <a class="waves-effect waves-light btn blue" ng-click="resetFilters()">Reset Filters</a>
       <a class="waves-effect waves-light btn blue" href="/#">More Sports</a>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <div class="col s6">
       <select class="form-control" ng-model="weekdaySelect" ng-change="setFilters()">
         <option value="" disabled selected>Day</option>
         <option value="All">All</option>
@@ -23,7 +23,7 @@
         <option value="Sunday">Sunday</option>
       </select>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <div class="col s6">
       <select class="form-control" ng-model="skillLevelSelect" ng-change="setFilters()">
         <option value="" disabled selected>Skill Level</option>
         <option value="All">All</option>
@@ -36,7 +36,7 @@
   </div>
   <br>
 </div>
-<div class="curtain text-center col s6 valign-wrapper" ng-show="loadingDropins">
+<div class="curtain text-center col s12 m6 valign-wrapper" ng-show="loadingDropins">
   <div clas="valign">
     <h1>Loading Dropins..</h1>
     <%= image_tag("loading.gif", alt: "loading") %>

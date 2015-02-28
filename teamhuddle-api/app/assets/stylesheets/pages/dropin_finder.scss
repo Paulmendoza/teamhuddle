@@ -5,6 +5,14 @@
   margin-top: 100px;
   padding-left: 0;
   padding-right: 0;
+  .map-mobile-toggle{
+    display: none !important;
+  }
+  #empty-space{
+    @media(max-width: 600px){
+      display: none !important;
+    }
+  }
   #left-wrapper{
     padding-left: 0;
     padding-right: 0;
@@ -12,11 +20,20 @@
     map{
       height:calc(100vh - 100px);
     }
+    @media(max-width: 600px){
+
+    }
+    .btn{
+      position: absolute;
+      z-index: 9999;
+      top: 20px;
+      right: 20px;
+      height: 40px;
+    }
   }
   #right-wrapper{
     padding-right: 0;
     padding-left: 0;
-
     #filter{
       position: fixed;
       background-color: white;
@@ -24,7 +41,7 @@
       padding-bottom: 30px;
     }
     .dropin-repeat-wrapper{
-      padding-top: 200px;
+      padding-top: 213px;
     }
     .dropin-repeat{
       min-height: 80px;
