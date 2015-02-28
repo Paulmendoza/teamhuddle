@@ -25,6 +25,7 @@
 .wrapper{
   min-height: 100%;
   position:relative;
+  padding-bottom: 150px;
 }
 //============ CONTENT ============
 .content{
@@ -144,6 +145,16 @@ nav {
             background-color: rgba(19,149,218,.3);
           }
         }
+      }
+    }
+    #mobile-demo{
+      height: 100%
+    }
+    .mdi-navigation-menu{
+      font-size: 50px;
+      color: $light-orange;
+      &:hover{
+        color: $light-blue;
       }
     }
   }

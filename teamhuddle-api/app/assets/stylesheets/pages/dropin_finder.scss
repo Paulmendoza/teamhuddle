@@ -69,6 +69,28 @@
     font-size: 1.4em;
     font-weight: 100;
   }
+  @media(max-width: 992px){
+    h3{
+      font-size: 1.2em;
+    }
+    h5{
+      font-size: 1.3em;
+    }
+    h1{
+      font-size: 2.5em;
+    }
+  }
+  @media(max-width: 600px){
+    h3{
+
+    }
+    h5{
+
+    }
+    h1{
+
+    }
+  }
   .icon-outer {
     max-width: 1200px;
     margin: 0 auto;

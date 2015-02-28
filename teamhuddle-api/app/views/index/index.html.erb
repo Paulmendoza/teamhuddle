@@ -3,7 +3,45 @@
 <div ng-app="BaseApp"  ng-cloak>
 
   <div class="landing-page row parallax-window" data-parallax="scroll" data-image-src="<%= asset_path 'blackfish-huddle-1-white.png' %>">
-    <div class="scrolling-content col s7">
+    <div class="login card col s12 m12 l5">
+      <div class="col card-content s12">
+        <span class="text-center">
+          <h2>Find games. Find players. Find your passion</h2>
+          <h3>What's on your athletic resume</h3>
+        </span>
+        <div class="left-section col s6">
+          <h1>Sign Up</h1>
+          <form class="col s12">
+            <div class="input-field col s12 m8 offset-m2 l12">
+              <input id="fullname" type="text" class="validate">
+              <label for="fullname">Full Name</label>
+            </div>
+            <div class="input-field col s12 m8 offset-m2 l12">
+              <input id="username2" type="text" class="validate">
+              <label for="username2">Username</label>
+            </div>
+            <div class="input-field col s12 m8 offset-m2 l12">
+              <input id="password2" type="password" class="validate">
+              <label for="password2">Password</label>
+            </div>
+            <button class="btn waves-effect waves-light blue lighten-1 col s12 m4 offset-m4" type="submit" name="action">Create
+              <i class="mdi-content-send right"></i>
+            </button>
+          </form>
+        </div>
+        <div class="right-section col s6 text-center">
+          <h1>Signup with Facebook or Google+</h1>
+          <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">Facebook
+            <i class="mdi-content-send right"></i>
+          </button>
+          <hr>
+          <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">Google
+            <i class="mdi-content-send right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="scrolling-content col s12 m12 l7">
       <section class="section-1">
         <div class="header">
           <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo' %>
@@ -20,11 +58,11 @@
       <section class="section-2">
         <h1 class="text-center">teamhuddle features</h1><br>
         <div class="col s12">
-          <div class="col s4 center">
+          <div class="col s12 m4 center">
             <%= image_tag 'feature-maps.png', class: "center-block img-responsive z-depth-1", alt: 'Maps Feature' %>
             <%= link_to 'try it now', {controller: :index, action: :dropin_finder}, {:class => "btn btn-success margin-top-3", :id => "try-it-now"} %>
           </div>
-          <div class="col s8">
+          <div class="col s12 m8">
             <h2 class="text-center margin-top-none">dropin finder</h2>
             <p>Not sure when and where your closest dropin is? We’ve got you covered! Our map and listings help you find
               dropins around your neighborhood for volleyball, basketball, hockey, soccer and more. Browse by day and
@@ -33,10 +71,10 @@
           </div>
         </div>
         <div class="col s12 margin-top-5">
-          <div class="col s4">
+          <div class="col s12 m4">
             <%= image_tag 'feature-users.png', class: "center-block img-responsive z-depth-1", alt: 'Maps Feature' %>
           </div>
-          <div class="col s8">
+          <div class="col s12 m8">
             <h2 class="text-center margin-top-none">check in</h2>
 
             <p>Plan ahead to make your next dropin worthwhile. Know which ones are popular, or which ones have space for
@@ -46,10 +84,10 @@
           </div>
         </div>
         <div class="col s12 margin-top-5">
-          <div class="col s4">
+          <div class="col s12 m4">
             <%= image_tag 'feature-finder.png', class: "center-block img-responsive", alt: 'Maps Feature' %>
           </div>
-          <div class="col s8">
+          <div class="col s12 m8">
             <h2 class="text-center margin-top-none">find a player</h2>
             <p>Tired of paying penalties for lack of players? Never be short-benched again! “Find a Player” helps you
               choose the players you need. Find a sub for your league or familiar faces to do dropins with! Need a team
@@ -85,44 +123,6 @@
     </div>
     <section class="glass">
     </section>
-    <div class="login card col s5">
-      <div class="col card-content s12">
-        <span class="text-center">
-          <h2>Find games. Find players. Find your passion</h2>
-          <h3>What's on your athletic resume</h3>
-        </span>
-        <div class="left-section col s6">
-          <h1 class="margin-left-2">Sign Up</h1>
-          <form class="col s12">
-            <div class="input-field col s12">
-              <input id="fullname" type="text" class="validate">
-              <label for="fullname">Full Name</label>
-            </div>
-            <div class="input-field col s12">
-              <input id="username2" type="text" class="validate">
-              <label for="username2">Username</label>
-            </div>
-            <div class="input-field col s12">
-              <input id="password2" type="password" class="validate">
-              <label for="password2">Password</label>
-            </div>
-            <button class="right btn waves-effect waves-light blue lighten-1" type="submit" name="action">Create
-              <i class="mdi-content-send right"></i>
-            </button>
-          </form>
-        </div>
-        <div class="right-section col s6 text-center">
-          <h1>Signup with Facebook or Google+</h1>
-          <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">Facebook
-            <i class="mdi-content-send right"></i>
-          </button>
-          <hr>
-          <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">Google
-            <i class="mdi-content-send right"></i>
-          </button>
-        </div>
-      </div>
-    </div>
   </div>
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
 
