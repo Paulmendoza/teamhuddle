@@ -6,7 +6,9 @@
   padding-left: 0;
   padding-right: 0;
   .map-mobile-toggle{
-    display: none !important;
+    @media(max-width:600px){
+      display: none !important;
+    }
   }
   #empty-space{
     @media(max-width: 600px){
@@ -39,6 +41,18 @@
       background-color: white;
       z-index: 97;
       padding-bottom: 30px;
+      @media(max-width: 600px){
+        h2{
+          font-size: 1.4em;
+          margin-top: 5px;
+          margin-bottom: 0;
+        }
+        .btn{
+          font-weight: 100;
+          font-size: 1em;
+        }
+        padding-bottom:5px;
+      }
     }
     .dropin-repeat-wrapper{
       padding-top: 213px;
@@ -69,6 +83,20 @@
     }
     .dropin-results{
     }
+    .chevron-link{
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+//============= Dropin View =============
+#dropin-view{
+  h1{
+    font-size: 2em;
+  }
+  h3{
+    font-size: 1.7em;
+    font-weight: 200;
   }
 }
 

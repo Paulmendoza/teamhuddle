@@ -1,20 +1,20 @@
-<div>
-    <div>
-        <div>
-            <a ng-click="backToList()" href="/dropin-finder#/{{dropin.sport_event.sport_id}}" class="btn">
+<div id="dropin-view">
+    <div class="col s12 margin-top-4 text-center margin-bottom-3">
+        <div class="col s6">
+            <a ng-click="backToList()" href="/dropin-finder#/{{dropin.sport_event.sport_id}}" class="btn waves-effect waves-light">
                 <div class="glyphicon glyphicon-chevron-left hidden-xs" aria-hidden="true"></div>
                 back to list
             </a>
         </div>
-        <div class="hidden-lg hidden-md" ng-if="isSelected(dropin.id)">
-            <a class="btn" id="show-on-map" ng-click="$event.stopPropagation(); switchToMap()">
+        <div class="col s6 hidden-lg hidden-md" ng-if="isSelected(dropin.id)">
+            <a class="btn waves-effect waves-light" id="show-on-map" ng-click="$event.stopPropagation(); switchToMap()">
                 show on map
             </a>
         </div>
     </div>
     <h1 ng-if="dropinFetchFailed">{{dropinFetchFailedReason}}</h1>
 
-    <div ng-show="dropin.location.name !== undefined">
+    <div ng-show="dropin.location.name !== undefined" class="container">
         <div>
             <h1>{{dropin.location.name}} <small> {{dropin.distanceFromUser}}</small></h1>
             <span ng-show="dropin.expired" class="label label-warning">EXPIRED</span><br>
@@ -27,10 +27,10 @@
             <span>{{dropin.organization.email}}</span>
             <br>
             <hr>
-        <span>{{dropin.datetime_start| date: 'EEEE'}} @
+        <h3>{{dropin.datetime_start| date: 'EEEE'}} @
             {{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}
             <br>{{dropin.sport_event.skill_level}} {{dropin.sport_event.type | capitalize }} {{dropin.sport_event.sport_id | capitalize}}
-        </span>
+        </h3>
             <br>
             <hr>
             <div>
