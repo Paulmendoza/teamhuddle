@@ -16,6 +16,7 @@
   #right-wrapper{
     padding-right: 0;
     padding-left: 0;
+
     #filter{
       position: fixed;
       background-color: white;
@@ -50,7 +51,6 @@
       }
     }
     .dropin-results{
-      z-index:95
     }
   }
 }
