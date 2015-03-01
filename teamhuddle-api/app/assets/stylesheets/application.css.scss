@@ -33,14 +33,14 @@
 }
 //========== NAVIGATION STYLES ===========
 nav {
-  min-height: 100px;
+  min-height: 80px;
   background-color: transparent;
   transition: background-color .7s;
   z-index:9999;
   position: fixed;
   top: 0;
   .nav-wrapper {
-    min-height: 100px;
+    min-height: 80px;
     a{
       text-decoration: none;
       &:focus{
@@ -69,9 +69,9 @@ nav {
       }
     }
     ul{
-      height: 100px;
+      height: 80px;
       li{
-        height: 100px;
+        height: 80px;
         a {
           color: #455a64;
           font-size: 1em;

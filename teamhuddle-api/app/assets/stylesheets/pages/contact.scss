@@ -9,9 +9,10 @@
   }
   ul {
     padding: 0 !important;
+    display: inline-flex;
   }
   li {
-    padding: 5px 0px;
+    padding: 5px 5px;
     display: block;
   }
   .socialmedia {
@@ -22,7 +23,10 @@
   }
   label{
     font-size: 1.6em;
-    font-weight: 100;
+    font-weight: 300;
+    @media(max-width: 600px){
+      font-size: 1em;
+    }
   }
   input{
     font-size: 1.4em;

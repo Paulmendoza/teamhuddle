@@ -24,7 +24,7 @@
               <input id="password2" type="password" class="validate">
               <label for="password2">Password</label>
             </div>
-            <button class="btn waves-effect waves-light blue lighten-1 col s12 m4 offset-m4" type="submit" name="action">Create
+            <button class="btn waves-effect waves-light blue lighten-1 col s12 m8 offset-m2" type="submit" name="action">Create
               <i class="mdi-content-send right"></i>
             </button>
           </form>
@@ -57,10 +57,10 @@
       </section>
       <section class="section-2">
         <h1 class="text-center">teamhuddle features</h1><br>
-        <div class="col s12">
+        <div class="card card-content col s12">
           <div class="col s12 m4 center">
             <%= image_tag 'feature-maps.png', class: "center-block img-responsive z-depth-1", alt: 'Maps Feature' %>
-            <%= link_to 'try it now', {controller: :index, action: :dropin_finder}, {:class => "btn btn-success margin-top-3", :id => "try-it-now"} %>
+            <%= link_to 'try it now', {controller: :index, action: :dropin_finder}, {:class => "btn waves-effect waves-light white-text margin-top-3", :id => "try-it-now"} %>
           </div>
           <div class="col s12 m8">
             <h2 class="text-center margin-top-none">dropin finder</h2>
@@ -70,7 +70,7 @@
               active!</p>
           </div>
         </div>
-        <div class="col s12 margin-top-5">
+        <div class="card card-content col s12 margin-top-5">
           <div class="col s12 m4">
             <%= image_tag 'feature-users.png', class: "center-block img-responsive z-depth-1", alt: 'Maps Feature' %>
           </div>
@@ -83,7 +83,7 @@
             <br>
           </div>
         </div>
-        <div class="col s12 margin-top-5">
+        <div class="card card-content col s12 margin-top-5">
           <div class="col s12 m4">
             <%= image_tag 'feature-finder.png', class: "center-block img-responsive", alt: 'Maps Feature' %>
           </div>
