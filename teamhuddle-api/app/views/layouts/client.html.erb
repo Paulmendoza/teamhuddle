@@ -3,17 +3,17 @@
 <head>
   <title><%= yield(:title) %></title>
   <%= stylesheet_link_tag  'application',
-                           'static_pages',
-                           'http://fonts.googleapis.com/css?family=Jura:400,600',
-                           'http://fonts.googleapis.com/css?family=Raleway:400,300',
+                           '//fonts.googleapis.com/css?family=Jura:400,600',
+                           '//fonts.googleapis.com/css?family=Raleway:400,300',
+                           '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css',
                            'typography',
                            media: 'all',
                            'data-turbolinks-track' => true%>
+
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="description" content="Connecting you with your sports community. Find the sports you love playing with the players you love playing with!">
 
   <%= favicon_link_tag 'favicon.ico' %>
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
   <%= csrf_meta_tags %>
 </head>
