@@ -125,3 +125,17 @@ DropinFinder.service('Admins', ['$http', '$q', function ($http, $q) {
         return deferred.promise
     }
 }]);
+
+DropinFinder.service('Users', ['$http', '$q', function ($http, $q) {
+    this.signed_in = function(){
+        var deferred = $q.defer();
+
+        $http.get('/users/is_signed_in.json')
+            .success(function (data) {
+                deferred.resolve(data.signed_in);
+            }).error(function (data) {
+                deferred.reject(data.signed_in);
+            });
+        return deferred.promise
+    }
+}]);

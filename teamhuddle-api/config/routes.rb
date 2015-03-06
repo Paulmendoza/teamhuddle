@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     post "/logout" => "users/sessions#destroy", :as => :destroy_user_session_post
     get "/profile" => "users/profiles#profile", :as => :user_profile
     get "/player/:id" => "users/profiles#player", :as => :player_profile
+
+    get "/users/is_signed_in" => "users/sessions#is_signed_in"
   end
 
   devise_for :admins, :controllers => { :registrations => :registrations }
@@ -61,6 +63,8 @@ Rails.application.routes.draw do
       get '/api_dropins/sport_event/:id' => 'api_dropins#show'
     end
   end
+
+  resources :reviews, :only => [:index, :create, :show]
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

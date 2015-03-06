@@ -7,6 +7,7 @@
 //= require angular-rails-templates
 
 //= require_tree ../templates
+//= require_tree ./reviews
 
 //= require dropin_finder/app.js
 //= require dropin_finder/services.js

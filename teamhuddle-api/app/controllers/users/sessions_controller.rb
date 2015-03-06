@@ -23,4 +23,17 @@ class Users::SessionsController < Devise::SessionsController
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.for(:sign_in) << :attribute
   # end
+
+  def is_signed_in
+    @response_hash = Hash.new
+
+    if user_signed_in?
+      @response_hash = {signed_in: true, user_id: current_user.id}
+    else
+      @response_hash = {signed_in: false, user_id: nil}
+    end
+
+    render json: @response_hash
+
+  end
 end

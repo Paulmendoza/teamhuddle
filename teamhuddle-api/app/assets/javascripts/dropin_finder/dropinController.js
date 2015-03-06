@@ -1,4 +1,4 @@
-DropinFinder.controller('dropin', ['$scope','$location', '$routeParams', function ($scope, $location, $routeParams) {
+DropinFinder.controller('dropin', ['$scope','$location', '$routeParams','ReviewsService', function ($scope, $location, $routeParams, ReviewsService) {
 
     // Use Case 1: Go to volleyball, view event
 
@@ -8,6 +8,8 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams', functio
     // -- LESS COMMON: then we , and check if it's the correct sport, if it's not the correct sport then change the url
     $scope.dropin = {};
     $scope.dropinWrapper = {};
+
+    $scope.reviews = [];
 
     $scope.dropinFetchFailed = false;
     $scope.dropinFetchFailed = "";
@@ -36,6 +38,14 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams', functio
             $scope.targetScope.fetchDropin($routeParams.dropin_id);
         }
         // this is what happens once its loaded
+    });
+
+    $scope.$watch('dropin', function(){
+        if($scope.dropin){
+            ReviewsService.GetReviewsForDropin($scope.dropin.sport_event.id).then(function(resp){
+                $scope.reviews = resp.data.reviews;
+            })
+        }
     });
 
     $scope.$on('dropinFetchFailed', function($scope, reason){

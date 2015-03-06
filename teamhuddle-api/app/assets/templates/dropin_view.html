@@ -49,4 +49,13 @@
             </div>
         </div>
     </div>
+
+    <div class="padding-top-50">
+        <h1>Reviews from users</h1>
+        <table class="table">
+            <player-review review="review" ng-repeat="review in reviews"></player-review>
+        </table>
+    </div>
+
+    <new-review sport-event-id="dropin.sport_event.id" user-id="userId"></new-review>
 </div>

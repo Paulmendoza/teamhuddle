@@ -1,4 +1,4 @@
-var DropinFinder = angular.module('DropinFinder', ['ngResource', 'ngMap', 'ngAnimate', 'templates', 'ngRoute', 'route-segment', 'view-segment']);
+var DropinFinder = angular.module('DropinFinder', ['Reviews','ngResource', 'ngMap', 'ngAnimate', 'templates', 'ngRoute', 'route-segment', 'view-segment']);
 
 DropinFinder.config(['$routeSegmentProvider',
     function ($routeSegmentProvider) {
