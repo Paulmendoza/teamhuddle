@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
-  # devise_for :users,
-  #            :module => "users",
-  #            :format => false
-  #
-  # devise_scope :user do
-  #   post "/logout" => "users/sessions#destroy", :as => :destroy_user_session_post
-  # end
+  # These are the routes for users
+  devise_for :users,
+             :module => "users",
+             :format => false
+
+  devise_scope :user do
+    post "/logout" => "users/sessions#destroy", :as => :destroy_user_session_post
+    get "/profile" => "users/profiles#profile", :as => :user_profile
+    get "/player/:id" => "users/profiles#player", :as => :player_profile
+  end
 
   devise_for :admins, :controllers => { :registrations => :registrations }
   as :admin do
