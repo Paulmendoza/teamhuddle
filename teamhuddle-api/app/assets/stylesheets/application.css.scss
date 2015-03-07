@@ -39,8 +39,15 @@ nav {
   z-index:9999;
   position: fixed;
   top: 0;
+  @media(max-width: 600px){
+    min-height: 60px;
+    .nav-wrapper{
+      min-height: 60px;
+    }
+  }
   .nav-wrapper {
     min-height: 80px;
+
     a{
       text-decoration: none;
       &:focus{
@@ -53,6 +60,9 @@ nav {
     .brand-logo {
       div{
         margin-left: 50px;
+        @media (max-width: 600px) {
+          margin-left:  0;
+        }
       }
       img {
         height: 50px;

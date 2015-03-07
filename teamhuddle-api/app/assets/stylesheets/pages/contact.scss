@@ -7,6 +7,13 @@
   .contact-us-text {
     max-height: 300px;
   }
+  .card{
+    background-color: rgba(255,255,255,.85);
+    @media(max-width: 600px){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
   ul {
     padding: 0 !important;
     display: inline-flex;
@@ -37,7 +44,6 @@
     }
   }
   @media(max-width: 600px){
-
   }
   .socialmedia-full {
     @media (max-width: 1199px) {

@@ -1,12 +1,12 @@
 <div id="dropin-view">
-    <div class="col s12 margin-top-4 text-center margin-bottom-3">
+    <div class="row margin-top-2 text-center">
         <div class="col s6">
             <a ng-click="backToList()" href="/dropin-finder#/{{dropin.sport_event.sport_id}}" class="btn waves-effect waves-light">
                 <div class="glyphicon glyphicon-chevron-left hidden-xs" aria-hidden="true"></div>
                 back to list
             </a>
         </div>
-        <div class="col s6 hidden-lg hidden-md" ng-if="isSelected(dropin.id)">
+        <div class="col s6 hidden-lg hidden-md hidden-sm" ng-if="isSelected(dropin.id)">
             <a class="btn waves-effect waves-light" id="show-on-map" ng-click="$event.stopPropagation(); switchToMap()">
                 show on map
             </a>
@@ -14,38 +14,77 @@
     </div>
     <h1 ng-if="dropinFetchFailed">{{dropinFetchFailedReason}}</h1>
 
-    <div ng-show="dropin.location.name !== undefined" class="container">
-        <div>
-            <h1>{{dropin.location.name}} <small> {{dropin.distanceFromUser}}</small></h1>
-            <span ng-show="dropin.expired" class="label label-warning">EXPIRED</span><br>
-        <span>
-            <a href="http://maps.google.com/?q={{dropin.location.address}}" target="map">{{dropin.location.address}}</a>
-        </span>
-            <br>
-            <span>{{dropin.phone}}</span>
-            <br>
-            <span>{{dropin.organization.email}}</span>
-            <br>
-            <hr>
-        <h3>{{dropin.datetime_start| date: 'EEEE'}} @
-            {{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}
-            <br>{{dropin.sport_event.skill_level}} {{dropin.sport_event.type | capitalize }} {{dropin.sport_event.sport_id | capitalize}}
-        </h3>
-            <br>
-            <hr>
-            <div>
-                <h3>Schedule Until</h3>
-                <h5>{{dropin.sport_event.schedule_until | date:'MMM d'}}</h5>
+    <div ng-show="dropin.location.name !== undefined" class="row">
+        <div class="col s12 inner-dropin-view">
+            <div class="row col 12">
+                <div class="row col s12">
+                    <h1>{{dropin.location.name}} <small> {{dropin.distanceFromUser}}</small></h1>
+                </div>
             </div>
-            <div>
-                <h3>Spots Available</h3>
-                <h5>{{ dropin.sport_events.spots | empty_to_na }}</h5>
+            <span ng-show="dropin.expired" class="label label-warning">EXPIRED</span>
+            <div class="row col s12">
+                <div class="col s6">
+                    <div class="card card-content col s12">
+                <span>
+                    <a href="http://maps.google.com/?q={{dropin.location.address}}" target="map">{{dropin.location.address}}</a>
+                </span>
+                        <br>
+                        <span>{{dropin.phone}}</span>
+                        <br>
+                        <span>{{dropin.organization.email}}</span>
+                        <br>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="card card-content col s12">
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
             </div>
-            <div ng-hide="!dropin.event.comments">
-                <br>
-                <hr>
-                <h3>Notes</h3>
-                <h5>{{dropin.event.comments}}</h5>
+            <div class="row col s12">
+                <div class="col s6">
+                    <div class="card card-content col s12">
+                        <h3>{{dropin.datetime_start| date: 'EEEE'}} @
+                            {{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}
+                            <br>{{dropin.sport_event.skill_level}} {{dropin.sport_event.type | capitalize }} {{dropin.sport_event.sport_id | capitalize}}
+                        </h3>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="card card-content col s12">
+                        <h3>Spots Available</h3>
+                        <h5>{{ dropin.sport_events.spots | empty_to_na }}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row col s12">
+                <div class="col s6">
+                    <div class="card card-content col s12">
+                        <h3>Schedule Until</h3>
+                        <h5>{{dropin.sport_event.schedule_until | date:'MMM d'}}</h5>
+                    </div>
+                </div>
+                <div class="col s6" ng-hide="!dropin.event.comments">
+                    <div class="card card-content col s12">
+                        <h3>Notes</h3>
+                        <h5>{{dropin.event.comments}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row reviews-wrapper">
+        <div class="col s12">
+            <div class="col s12">
+                <div class="row col s12">
+                    <div class="card card-content col s12">
+                        Ratings coming soon..
+                    </div>
+                </div>
             </div>
         </div>
     </div>

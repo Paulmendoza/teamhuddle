@@ -1,63 +1,67 @@
 <% content_for :title, "Teamhuddle | About Us" %>
 
 <div class="container padding-top-70 about-us">
-  <div class="about-us-text col-lg-6">
+  <div class="card card-content">
+    <div class="about-us-text col-lg-6">
 
-    <h1>about us</h1>
+      <h1>about us</h1>
 
-    <p>
-      Teamhuddle is a community based solution aimed to bring the world of
-      athletics closer together. Play a sport with familiar faces or meet someone
-      new. We want to give you a platform to help connect you to people who share
-      the same athletic interest. This social initiative allows you to find the
-      sports you love playing and the players you love playing with.
-    </p>
+      <p>
+        Teamhuddle is a community based solution aimed to bring the world of
+        athletics closer together. Play a sport with familiar faces or meet someone
+        new. We want to give you a platform to help connect you to people who share
+        the same athletic interest. This social initiative allows you to find the
+        sports you love playing and the players you love playing with.
+      </p>
+    </div>
+
+    <div class="mission-text col-lg-6">
+      <h1>our mission</h1>
+
+      <p>
+        Connect and unite our community through recreational, amateur and
+        professional athletics. Use teamhuddle to express your thoughts on your
+        sporting community, share personal experiences, and recommend sporting
+        opportunities to anyone and everyone you know. We aim to empower, inspire
+        and motivate through athletics.
+      </p>
+    </div>
   </div>
-
-  <div class="mission-text col-lg-6">
-    <h1>our mission</h1>
-
-    <p>
-      Connect and unite our community through recreational, amateur and
-      professional athletics. Use teamhuddle to express your thoughts on your
-      sporting community, share personal experiences, and recommend sporting
-      opportunities to anyone and everyone you know. We aim to empower, inspire
-      and motivate through athletics.
-    </p>
-  </div>
-
   <br><br><br>
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <h1>meet the team</h1>
 
     <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <br>
-        <%= image_tag("profile_placeholder_green.png", class: "img-responsive") %>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <h2>Marc Eje</h2>
-        <h5><i>Co-Founder / Community Development</i></h5>
-        <h4>Something not likely worth bragging about:</h4>
-        <p>I look like a dolphin when I swim.</p>
+      <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12 card card-content">
 
-        <h4>Athletic Goal by end of 2015:</h4>
-        <p>Swim the 50m Freestyle in 25 seconds.</p>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <br>
+          <%= image_tag("profile_placeholder_green.png", class: "img-responsive") %>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <h2>Marc Eje</h2>
+          <h5><i>Co-Founder / Community Development</i></h5>
+          <h4>Something not likely worth bragging about:</h4>
+          <p>I look like a dolphin when I swim.</p>
 
-        <h4>Favourite Sport(s):</h4>
-        <p>Swimming, tennis, volleyball, bowling.</p>
+          <h4>Athletic Goal by end of 2015:</h4>
+          <p>Swim the 50m Freestyle in 25 seconds.</p>
+
+          <h4>Favourite Sport(s):</h4>
+          <p>Swimming, tennis, volleyball, bowling.</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <br>
+          <h4>Reason for joining teamhuddle:</h4>
+          <p>To share the info I had to others that may need them. I got tired of people constantly asking me where to
+            play, when to play, who to play with????</p>
+          <h4>Inspiration and motivation:</h4>
+          <p>Each individual in an endless pool of knowledge and resources, why not share that with the rest of the world.
+            Divided we are weak but united we are strong.</p>
+        </div>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <br>
-        <h4>Reason for joining teamhuddle:</h4>
-        <p>To share the info I had to others that may need them. I got tired of people constantly asking me where to
-          play, when to play, who to play with????</p>
-        <h4>Inspiration and motivation:</h4>
-        <p>Each individual in an endless pool of knowledge and resources, why not share that with the rest of the world.
-          Divided we are weak but united we are strong.</p>
-      </div>
-      <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12 card card-content">
         <div class="hide-on-med-and-up col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <br>
           <%= image_tag("profile_placeholder_blue.png", class: "img-responsive") %>
@@ -94,7 +98,7 @@
         </div>
       </div>
 
-      <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12 card card-content">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <br>
           <%= image_tag("profile_placeholder_red.png", class: "img-responsive") %>
@@ -121,7 +125,7 @@
         </div>
       </div>
 
-      <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12 card card-content">
         <div class="hide-on-med-and-up col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <br>
           <%= image_tag("profile_placeholder_orange.png", class: "img-responsive") %>
@@ -156,7 +160,7 @@
         </div>
       </div>
 
-      <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12 card card-content">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <br>
           <%= image_tag("profile_placeholder_green.png", class: "img-responsive") %>
@@ -192,7 +196,7 @@
         </div>
       </div>
 
-      <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12 card card-content">
         <div class="hide-on-med-and-up col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <br>
           <%= image_tag("profile_placeholder_blue.png", class: "img-responsive") %>
@@ -231,7 +235,7 @@
         </div>
       </div>
 
-      <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="tm col-lg-12 col-md-12 col-sm-12 col-xs-12 card card-content">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <br>
           <%= image_tag("profile_placeholder_red.png", class: "img-responsive") %>
@@ -265,8 +269,9 @@
       </div>
     </div>
   </div>
-  <style>
-      nav{
-          background-color: white;
-      }
-  </style>
+</div>
+<style>
+    nav{
+        background-color: white;
+    }
+</style>
