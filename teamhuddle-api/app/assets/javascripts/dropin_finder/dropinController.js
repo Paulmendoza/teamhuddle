@@ -14,6 +14,8 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams','Reviews
     $scope.dropinFetchFailed = false;
     $scope.dropinFetchFailed = "";
 
+    $scope.currentUser = currentUser;
+
     // if we don't have this dropin
     $scope.dropin = $scope.getDropinBySportEventId(parseInt($routeParams.dropin_id));
 
@@ -41,12 +43,16 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams','Reviews
     });
 
     $scope.$watch('dropin', function(){
+        $scope.refreshReviews();
+    });
+
+    $scope.refreshReviews = function(){
         if($scope.dropin){
             ReviewsService.GetReviewsForDropin($scope.dropin.sport_event.id).then(function(resp){
                 $scope.reviews = resp.data.reviews;
             })
         }
-    });
+    }
 
     $scope.$on('dropinFetchFailed', function($scope, reason){
         $scope.currentScope.dropinFetchFailed = true;
@@ -58,5 +64,9 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams','Reviews
         $scope.currentScope.dropin = $scope.targetScope.getDropinBySportEventId(sportEventId);
         $scope.currentScope.dropinWrapper = $scope.targetScope.markerWrappers[$scope.currentScope.dropin.sport_event.id];
     });
+
+    $scope.$on('ReviewSubmitted', function(){
+        $scope.refreshReviews();
+    })
 
 }]);

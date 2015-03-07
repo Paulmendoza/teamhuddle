@@ -222,6 +222,29 @@ body {
   // background-image: radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #EAEAEA 100%);
 
 }
+
+.rating{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  li {
+    padding: 1px;
+    color: #a9a9a9;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    list-style-type: none;
+    display: inline-block;
+    &.filled {
+      color: #fd0; //#21568b
+    }
+  }
+
+  .clickable{
+    cursor: pointer;
+  }
+}
+
 .dropin-selected{
   position:relative;
   min-height: 65px;

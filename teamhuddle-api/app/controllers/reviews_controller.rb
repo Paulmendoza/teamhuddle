@@ -1,8 +1,8 @@
 class ReviewsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :show
 
   def show
-    @reviews = Review.includes(:user).where(sport_event_id: params[:id]).order(:created_at)
+    @reviews = Review.includes(:user).where(sport_event_id: params[:id]).order(created_at: :asc)
   end
 
   def create

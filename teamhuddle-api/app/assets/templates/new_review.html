@@ -1,10 +1,10 @@
 <div>
     <h1>Write a review</h1>
     <form ng-submit="submitReview()">
-        <label for="rating">Rating</label></br>
-        <input id="rating" type="number" min="1" max="5" ng-model="rating"></br>
+        <label>Your Rating</label></br>
+        <star-rating-edit rating-value="rating" max="5"></star-rating-edit><br>
 
-        <label for="review">Review</label></br>
+        <label for="review">Your Review</label></br>
 
         <textarea id="review" ng-model="review" rows="4" cols="50"></textarea>
         <button class="button" type="submit">Submit</button>
