@@ -33,20 +33,20 @@
 }
 //========== NAVIGATION STYLES ===========
 nav {
-  min-height: 80px;
+  min-height: 64px;
   background-color: transparent;
   transition: background-color .7s;
   z-index:9999;
   position: fixed;
   top: 0;
   @media(max-width: 600px){
-    min-height: 60px;
+    min-height: 64px;
     .nav-wrapper{
-      min-height: 60px;
+      min-height: 64px
     }
   }
   .nav-wrapper {
-    min-height: 80px;
+    min-height: 64px;
 
     a{
       text-decoration: none;
@@ -65,8 +65,8 @@ nav {
         }
       }
       img {
-        height: 50px;
-        width: 50px;
+        height: 30px;
+        width: 30px;
       }
       p{
         position: relative;
@@ -79,9 +79,9 @@ nav {
       }
     }
     ul{
-      height: 80px;
+      height: 64px;
       li{
-        height: 80px;
+        height: 64px;
         a {
           color: #455a64;
           font-size: 1em;
@@ -141,8 +141,8 @@ nav {
         transition: 0.3s; }
       ul{
         a{
-          height: 100px;
-          line-height: 100px;
+          height: 64px;
+          line-height: 64px;
         }
         li{
           &:nth-child(1n+1):hover{
@@ -161,7 +161,7 @@ nav {
       height: 100%
     }
     .mdi-navigation-menu{
-      font-size: 50px;
+      font-size: 35px;
       color: $light-orange;
       &:hover{
         color: $light-blue;
@@ -177,4 +177,8 @@ nav {
   bottom:0;
   left:0;
   background:white;
+  @media(max-width:600px){
+    .footer-icons{
+    }
+  }
 }

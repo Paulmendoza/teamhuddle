@@ -1,12 +1,12 @@
 <div id="dropin-view">
-    <div class="row margin-top-2 text-center">
+    <div class="row margin-top-2" id="button-list">
         <div class="col s6">
             <a ng-click="backToList()" href="/dropin-finder#/{{dropin.sport_event.sport_id}}" class="btn waves-effect waves-light">
                 <div class="glyphicon glyphicon-chevron-left hidden-xs" aria-hidden="true"></div>
                 back to list
             </a>
         </div>
-        <div class="col s6 hidden-lg hidden-md hidden-sm" ng-if="isSelected(dropin.id)">
+        <div class="col s6 button-list hidden-lg hidden-md hidden-sm" ng-if="isSelected(dropin.id)">
             <a class="btn waves-effect waves-light" id="show-on-map" ng-click="$event.stopPropagation(); switchToMap()">
                 show on map
             </a>
@@ -23,7 +23,7 @@
             </div>
             <span ng-show="dropin.expired" class="label label-warning">EXPIRED</span>
             <div class="row col s12">
-                <div class="col s6">
+                <div class="col s12 m6">
                     <div class="card card-content col s12">
                 <span>
                     <a href="http://maps.google.com/?q={{dropin.location.address}}" target="map">{{dropin.location.address}}</a>
@@ -35,7 +35,7 @@
                         <br>
                     </div>
                 </div>
-                <div class="col s6">
+                <div class="col s12 m6">
                     <div class="card card-content col s12">
 
                         <br>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="row col s12">
-                <div class="col s6">
+                <div class="col s12 m6">
                     <div class="card card-content col s12">
                         <h3>{{dropin.datetime_start| date: 'EEEE'}} @
                             {{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}
@@ -54,7 +54,7 @@
                         </h3>
                     </div>
                 </div>
-                <div class="col s6">
+                <div class="col s12 m6">
                     <div class="card card-content col s12">
                         <h3>Spots Available</h3>
                         <h5>{{ dropin.sport_events.spots | empty_to_na }}</h5>
@@ -62,13 +62,13 @@
                 </div>
             </div>
             <div class="row col s12">
-                <div class="col s6">
+                <div class="col s12 m6">
                     <div class="card card-content col s12">
                         <h3>Schedule Until</h3>
                         <h5>{{dropin.sport_event.schedule_until | date:'MMM d'}}</h5>
                     </div>
                 </div>
-                <div class="col s6" ng-hide="!dropin.event.comments">
+                <div class="col s12 m6" ng-hide="!dropin.event.comments">
                     <div class="card card-content col s12">
                         <h3>Notes</h3>
                         <h5>{{dropin.event.comments}}</h5>
@@ -93,5 +93,8 @@
 <style>
     nav{
         background-color: white;
+    }
+    .parallax-window {
+    background-color: white;
     }
 </style>

@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag  'application',
                            '//fonts.googleapis.com/css?family=Jura:400,600',
                            '//fonts.googleapis.com/css?family=Raleway:400,300',
+                           '//fonts.googleapis.com/css?family=Roboto',
                            '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css',
                            'typography',
                            media: 'all',
@@ -41,7 +42,7 @@
           <%= image_tag 'logo-compressed.png', alt: 'teamhuddle_logo'%>
         </div>
       </a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse margin-top-1 margin-left-3"><i class="mdi-navigation-menu"></i></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse margin-left-3"><i class="mdi-navigation-menu"></i></a>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="/dropin-finder">Dropin Finder</a></li>
         <li><a href="/about">About</a></li>
@@ -94,10 +95,18 @@
   <div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path 'blackfish-huddle-1-white.png' %>">
     <%= yield %>
   </div>
-  <div class="footer text-center v">
-    <div class="footer-content"><span><h5 id="copyright" class="margin-top-none">&copy; Teamhuddle Athletics Inc.</h5></span></div>
+  <div class="footer text-center">
+    <div class="footer-content">
+      <span>
+        <h5 id="copyright" class="margin-top-none">
+          &copy; Teamhuddle Athletics Inc.
+        </h5>
+      </span>
+    </div>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="addthis_horizontal_follow_toolbox pull-right margin-right-5 addthis footer-icons"></div>
+    <div class="valign-wrapper">
+      <div class="valign addthis_horizontal_follow_toolbox addthis footer-icons"></div>
+    </div>
   </div>
 </div>
 

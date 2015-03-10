@@ -3,7 +3,7 @@
 // ========== CONTACT US US PAGE ===========
 
 .contact-us {
-  margin-top: 120px;
+  margin-top: 104px;
   .contact-us-text {
     max-height: 300px;
   }
@@ -29,10 +29,15 @@
     min-height: 300px;
   }
   label{
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 300;
     @media(max-width: 600px){
       font-size: 1em;
+    }
+  }
+  form{
+    .control-label{
+      text-align: left;
     }
   }
   input{
