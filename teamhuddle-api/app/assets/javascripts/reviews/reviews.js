@@ -27,7 +27,12 @@ Reviews.directive('newReview', ['ReviewsService', function(ReviewService){
                     review: $scope.review
                 }).then(function(resp){
                     $rootScope.$broadcast('ReviewSubmitted', resp.data);
-                    // todo handle this somehow
+
+                    // Todo: handle validation errors (see review.rb for model)
+
+                    // Reset properties
+                    $scope.rating = -1;
+                    $scope.review = "";
                 })
             }
         }
