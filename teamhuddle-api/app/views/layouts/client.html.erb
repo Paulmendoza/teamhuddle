@@ -20,8 +20,8 @@
 <body>
 <div class="wrapper">
   <script>
-      var currentUser = <%= current_user.to_json.html_safe %>
-      var currentAdmin = <%= current_admin.to_json.html_safe %>
+      var currentUser = <%= current_user.to_json(only: [:id, :first_name, :last_name]).html_safe %>
+      var currentAdmin = <%= current_admin.to_json(only: :id).html_safe %>
   </script>
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53af382b4ee31991" async="async"></script>

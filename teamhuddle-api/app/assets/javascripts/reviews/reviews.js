@@ -21,9 +21,7 @@ Reviews.directive('newReview', ['ReviewsService', function(ReviewService){
         controller: function($scope, $rootScope){
             $scope.rating = -1;
             $scope.submitReview = function(){
-                $scope.userId = !!currentUser ? currentUser.id : null;
                 ReviewService.CreateReview({
-                    user_id: $scope.userId,
                     sport_event_id: $scope.sportEventId,
                     rating: $scope.rating,
                     review: $scope.review

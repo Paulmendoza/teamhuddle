@@ -8,6 +8,9 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
 
+    # Save the id from the current user not from the JSON
+    @review.user_id = current_user.id
+
     if @review.save
       render json: {review: @review, success: true}
     else
@@ -18,6 +21,6 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.permit(:user_id, :sport_event_id, :rating, :review)
+    params.permit(:sport_event_id, :rating, :review)
   end
 end

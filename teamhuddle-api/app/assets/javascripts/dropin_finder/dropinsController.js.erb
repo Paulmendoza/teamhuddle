@@ -1,7 +1,7 @@
 var allowedSports = ['volleyball', 'hockey', 'basketball', 'soccer'];
 
-DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routeParams','$routeSegment', '$compile', 'Dropins', 'Admins', 'Users',
-    function ($scope, $filter, $location, $routeParams, $routeSegment, $compile, Dropins, Admins, Users) {
+DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routeParams','$routeSegment', '$compile', 'Dropins',
+    function ($scope, $filter, $location, $routeParams, $routeSegment, $compile, Dropins) {
         $scope.sport = $routeParams.sport;
 
         if (allowedSports.indexOf($scope.sport) < 0) {
