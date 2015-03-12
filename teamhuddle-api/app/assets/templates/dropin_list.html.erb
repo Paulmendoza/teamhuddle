@@ -8,7 +8,7 @@
     <div class="text-center margin-bottom-1">
       <a class="waves-effect waves-light btn blue hide-on-med-and-up" ng-click="switchToMap()">Show Map</a>
       <a class="waves-effect waves-light btn blue" ng-click="resetFilters()">Reset Filters</a>
-      <a class="waves-effect waves-light btn blue" href="/#">More Sports</a>
+      <a class="waves-effect waves-light btn blue" href="/dropin-finder">More Sports</a>
     </div>
     <div class="col s6">
       <select class="form-control" ng-model="weekdaySelect" ng-change="setFilters()">
@@ -43,7 +43,7 @@
   </div>
 </div>
 <div class="dropin-results" ng-hide="loadingDropins">
-  <div ng-if="failedRetrieve" class="panel panel-warning">
+  <div ng-if="failedRetrieve">
     <!-- This is only shown if we had an error retrieving the dropins -->
     <div class="panel-title text-center">Sorry, we could not retrieve the dropins at this time. Please try again
       later.
@@ -86,6 +86,12 @@
         background-color: white;
     }
     .parallax-window {
+        background-color: white;
+    }
+    .parallax-mirror{
+        display:none;
+    }
+    .wrapper {
         background-color: white;
     }
 </style>

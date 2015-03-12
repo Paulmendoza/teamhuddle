@@ -25,28 +25,34 @@
 .wrapper{
   min-height: 100%;
   position:relative;
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 }
 //============ CONTENT ============
 .content{
   padding-bottom:40px;   /* Height of the footer element */
 }
+.nav-buffer{
+  height: $nav-height;
+  background-color: transparent;
+
+}
 //========== NAVIGATION STYLES ===========
 nav {
-  min-height: 64px;
+  height: $nav-height;
   background-color: transparent;
   transition: background-color .7s;
   z-index:9999;
   position: fixed;
   top: 0;
+  line-height: $nav-height;
   @media(max-width: 600px){
-    min-height: 64px;
+    min-height: $nav-height;
     .nav-wrapper{
-      min-height: 64px
+      min-height: $nav-height
     }
   }
   .nav-wrapper {
-    min-height: 64px;
+    min-height: $nav-height;
 
     a{
       text-decoration: none;
@@ -60,6 +66,7 @@ nav {
     .brand-logo {
       div{
         margin-left: 50px;
+        line-height: 45px;
         @media (max-width: 600px) {
           margin-left:  0;
         }
@@ -79,19 +86,19 @@ nav {
       }
     }
     ul{
-      height: 64px;
+      height: $nav-height;
       li{
-        height: 64px;
+        height: $nav-height;
         a {
           color: #455a64;
-          font-size: 1em;
+          font-size: 1.3em;
           text-decoration: none;
         }
       }
     }
     form {
       color: #455a64;
-      height: 100px;
+      height: $nav-height;
       .input-field{
         width: 30px;
         height:30px
@@ -141,8 +148,8 @@ nav {
         transition: 0.3s; }
       ul{
         a{
-          height: 64px;
-          line-height: 64px;
+          height: $nav-height;
+          line-height: $nav-height;
         }
         li{
           &:nth-child(1n+1):hover{
@@ -161,6 +168,8 @@ nav {
       height: 100%
     }
     .mdi-navigation-menu{
+      line-height: $nav-height;
+      height: $nav-height;
       font-size: 35px;
       color: $light-orange;
       &:hover{
@@ -172,11 +181,15 @@ nav {
 //============Footer=============
 .footer{
   width:100%;
-  height:80px;
+  height:50px;
   position:absolute;
   bottom:0;
   left:0;
   background:white;
+  padding : 0px 5px 0px 5px;
+  span {
+    vertical-align: middle;
+  }
   @media(max-width:600px){
     .footer-icons{
     }

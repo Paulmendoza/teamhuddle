@@ -93,19 +93,22 @@
 
   </nav>
   <div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path 'blackfish-huddle-1-white.png' %>">
+    <div class="nav-buffer col s12"></div>
     <%= yield %>
   </div>
-  <div class="footer text-center">
-    <div class="footer-content">
+  <div class="footer text-center row">
+    <div class="col s6">
       <span>
-        <h5 id="copyright" class="margin-top-none">
-          &copy; Teamhuddle Athletics Inc.
-        </h5>
+          <h5 class="margin-none left">
+            &copy; Teamhuddle Athletics Inc.
+          </h5>
       </span>
     </div>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="valign-wrapper">
-      <div class="valign addthis_horizontal_follow_toolbox addthis footer-icons"></div>
+    <div class="white col s6 ">
+      <span>
+        <div class="addthis_horizontal_follow_toolbox addthis footer-icons right"></div>
+      </span>
     </div>
   </div>
 </div>

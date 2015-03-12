@@ -79,7 +79,7 @@
     position: fixed;
     right: 0;
     z-index:99;
-    margin-top: 100px;
+    margin-top: 50px;
     h1{
       font-family: 'Roboto';
       font-weight: 100;
@@ -157,67 +157,61 @@
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  div{
-    margin: 5px;
+  .sport_logo {
+    border: none;
   }
   .icon1 {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 248px;
+    max-width: 248px;
     height: 250px;
     background: image-url('icons_sprite.png') 0 0;
     display: inline-block;
-    border: 1px solid #000;
   }
   .icon2 {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 249px;
+    max-width: 249px;
     height: 250px;
     background: image-url('icons_sprite.png') -253px 0px;
     display: inline-block;
-    border: 1px solid #000;
   }
   .icon3 {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 249px;
+    max-width: 249px;
     height: 250px;
     background: image-url('icons_sprite.png') -505px 0px;
     display: inline-block;
-    border: 1px solid #000;
   }
   .icon4 {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 249px;
+    max-width: 249px;
     height: 250px;
     background: image-url('icons_sprite.png') -757px 0px;
     display: inline-block;
-    border: 1px solid #000;
   }
   .icon5 {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 249px;
+    max-width: 249px;
     height: 250px;
-    background: image-url('icons_sprite.png') -1010px 0px;
+    background: image-url('icons_sprite.png') -1009px 0px;
     display: inline-block;
-    border: 1px solid #000;
   }
   .icon6 {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 249px;
+    max-width: 249px;
     height: 250px;
-    background: image-url('icons_sprite.png') -1262px 0px;
+    background: image-url('icons_sprite.png') -1261px 0px;
     display: inline-block;
-    border: 1px solid #000;
   }
   .icon7 {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 249px;
+    max-width: 249px;
     height: 250px;
     background: image-url('icons_sprite.png') -1513px 0px;
     display: inline-block;
   }
   .icon8 {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 249px;
+    max-width: 249px;
     height: 250px;
     background: image-url('icons_sprite.png') -1766px 0px;
     display: inline-block;
