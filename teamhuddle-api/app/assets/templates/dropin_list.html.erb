@@ -5,10 +5,10 @@
   <h2 class="text-center sport_name">dropin {{sport | lowercase }} events</h2>
   <br>
   <div>
-    <div class="text-center margin-bottom-1">
-      <a class="waves-effect waves-light btn blue hide-on-med-and-up" ng-click="switchToMap()">Show Map</a>
-      <a class="waves-effect waves-light btn blue" ng-click="resetFilters()">Reset Filters</a>
-      <a class="waves-effect waves-light btn blue" href="/dropin-finder">More Sports</a>
+    <div class="text-center margin-bottom-1 col s12">
+      <a class="waves-effect waves-light btn blue hide-on-med-and-up col s4 blue-button" ng-click="switchToMap()">Show Map</a>
+      <a class="waves-effect waves-light btn blue col m6 s4 blue-button" ng-click="resetFilters()">Reset Filters</a>
+      <a class="waves-effect waves-light btn blue col m6 s4 blue-button" href="/dropin-finder">More Sports</a>
     </div>
     <div class="col s6">
       <select class="form-control" ng-model="weekdaySelect" ng-change="setFilters()">

@@ -3,8 +3,16 @@
 
 .about-us {
   .about-us-text {
-    @media (max-width: 1199px) {
+    padding-left: 40px !important;
+    @media (max-width: 600px) {
       border: none;
+      padding: 5px !important;
+    }
+  }
+  .mission-text{
+    padding-right: 40px !important;
+    @media(max-width: 600px){
+      padding: 5px;
     }
   }
   img {
@@ -33,9 +41,9 @@
       padding: 0px 5px 5px 5px;
     }
   }
-    @media (max-width: 600px) {
-      padding: 64px 0px 0px 0px;
-    }
+  @media (max-width: 600px) {
+    padding: 0 !important;
+  }
   .card{
     background-color: rgba(255,255,255,.85);
   }

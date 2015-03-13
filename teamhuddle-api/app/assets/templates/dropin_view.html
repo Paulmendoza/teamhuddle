@@ -1,15 +1,17 @@
 <div id="dropin-view">
-    <div class="row margin-top-2" id="button-list">
-        <div class="col s6">
-            <a ng-click="backToList()" href="/dropin-finder#/{{dropin.sport_event.sport_id}}" class="btn waves-effect waves-light">
-                <div class="glyphicon glyphicon-chevron-left hidden-xs" aria-hidden="true"></div>
-                back to list
-            </a>
-        </div>
-        <div class="col s6 button-list hidden-lg hidden-md hidden-sm" ng-if="isSelected(dropin.id)">
-            <a class="btn waves-effect waves-light" id="show-on-map" ng-click="$event.stopPropagation(); switchToMap()">
-                show on map
-            </a>
+    <div class="row margin-top-2 col s12" id="button-list">
+        <div class="col s12">
+            <div class="col s6">
+                <a ng-click="backToList()" href="/dropin-finder#/{{dropin.sport_event.sport_id}}" class="btn waves-effect waves-light">
+                    <div class="glyphicon glyphicon-chevron-left hidden-xs" aria-hidden="true"></div>
+                    back to list
+                </a>
+            </div>
+            <div class="col s6 button-list hidden-lg hidden-md hidden-sm" ng-if="isSelected(dropin.id)">
+                <a class="btn waves-effect waves-light" id="show-on-map" ng-click="$event.stopPropagation(); switchToMap()">
+                    show on map
+                </a>
+            </div>
         </div>
     </div>
     <h1 ng-if="dropinFetchFailed">{{dropinFetchFailedReason}}</h1>
@@ -95,6 +97,6 @@
         background-color: white;
     }
     .parallax-window {
-    background-color: white;
+        background-color: white;
     }
 </style>

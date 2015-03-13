@@ -2,7 +2,7 @@
 <html>
 <head>
   <title><%= yield(:title) %></title>
-  <%= stylesheet_link_tag  'application',
+  <%= stylesheet_link_tag  'app',
                            '//fonts.googleapis.com/css?family=Jura:400,600',
                            '//fonts.googleapis.com/css?family=Raleway:400,300',
                            '//fonts.googleapis.com/css?family=Roboto',
@@ -105,9 +105,12 @@
       </span>
     </div>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="white col s6 ">
-      <span>
-        <div class="addthis_horizontal_follow_toolbox addthis footer-icons right"></div>
+    <div class="col s6 ">
+      <span class="right">
+        <!--<div class="addthis_horizontal_follow_toolbox addthis footer-icons right"></div>-->
+          <a href="http://www.facebook.com/teamhuddle">Facebook</a> |
+          <a href="http://www.twitter.com/tmhuddle">Twitter</a> |
+          <a href="http://www.instagr.am/tmhuddle">Instagram</a>
       </span>
     </div>
   </div>

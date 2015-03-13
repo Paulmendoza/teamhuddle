@@ -9,10 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  */
-//= require materialize
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "variables";
+@import "static.css";
 @import "pages/landing_page";
 @import "pages/contact";
 @import "pages/dropin_finder";
@@ -190,8 +190,13 @@ nav {
   span {
     vertical-align: middle;
   }
-  @media(max-width:600px){
-    .footer-icons{
+  a{
+    color: #686868;
+    text-decoration: none;
+    &:hover{
+      color: $light-blue;
     }
+  }
+  @media(max-width:600px){
   }
 }
