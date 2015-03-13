@@ -22,5 +22,5 @@
 <p>
   <%= label_tag(:time, "Time") %><br>
   <%= select_time(@dropin.try(:schedule) == nil ? Time.now.change(hour: 19, min: 0) : @dropin.schedule.first, prefix: :start_time) %>
-  - <%= select_time(@dropin.try(:schedule) == nil ? Time.now.change(hour: 22, min: 0) : @dropin.schedule.end_time, prefix: :start_time) %>
+  - <%= select_time(@dropin.try(:schedule) == nil ? Time.now.change(hour: 22, min: 0) : @dropin.schedule.end_time, prefix: :end_time) %>
 </p>

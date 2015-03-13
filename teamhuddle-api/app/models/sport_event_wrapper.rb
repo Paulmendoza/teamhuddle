@@ -24,6 +24,7 @@ class SportEventWrapper
       @current_dropin[:sport_event].spots_filled = -1
       @current_dropin[:sport_event].gender = 'n/a'
       @current_dropin[:sport_event].admin_id = admin_id
+      @current_dropin[:sport_event].dt_expiry = @current_dropin[:sport_event].schedule.last
       
       if @current_dropin[:sport_event].save
         # once dropin is saved, generate sport event instances

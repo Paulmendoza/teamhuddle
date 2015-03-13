@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <td>
+      <h2>Sport Events Expiring Within 2 Weeks!</h2>
+      <p><b>Description</b>: checks for dropins that have expired within the past week and ones that are expiring in the next two weeks</p>
+      <p>Note: Negative means it has expired</p>
+      <table>
+        <tr>
+          <td><b>Name</b></td>
+          <td><b>Sport</b></td>
+          <td><b>Expiry</b></td>
+          <td><b>Expiring In</b></td>
+        </tr>
+        <hr>
+        <% @sport_events.each do |se| %>
+            <tr>
+              <td><%= link_to se.name, dropin_path(se.id), target: :blank %></td>
+              <td><%= se.sport_id %></td>
+              <td><%= se.dt_expiry.localtime %></td>
+              <td><%= ((se.dt_expiry - DateTime.now) / 1.days).round.to_s %> days</td>
+            </tr>
+        <% end %>
+      </table>
+
+    </td>
+  </tr>
+</table>

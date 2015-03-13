@@ -10,7 +10,10 @@ set :output, "/home/deploy/teamhuddle-web/teamhuddle-api/log/cron_log.log"
 every :day, at: "2:30 am" do
   # command "/usr/bin/some_great_command"
   runner "SportEvent.update_inactive_dropins"
-  # rake "some:great:rake:task"
+end
+
+every :day, at: "9:00 am" do
+  rake "email:notify_admin:expiring_dropins"
 end
 
 # every 2.hours do
