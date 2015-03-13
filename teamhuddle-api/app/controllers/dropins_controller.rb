@@ -163,13 +163,7 @@ class DropinsController < ApplicationController
   end
 
   def refresh_inactive_dropins
-    @active_dropins = SportEvent.where(type: "dropin", is_active: true).all
-
-    @active_dropins.each do |dropin|
-      unless dropin.check_active
-        dropin.update(is_active: false)
-      end
-    end
+    SportEvent.update_inactive_dropins
 
     redirect_to dropins_path
   end

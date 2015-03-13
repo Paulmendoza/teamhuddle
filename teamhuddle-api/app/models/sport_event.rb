@@ -60,6 +60,16 @@ class SportEvent < ActiveRecord::Base
     return self.sport_event_instances.active.any?
   end
 
+  def self.update_inactive_dropins
+    active_dropins = SportEvent.where(type: "dropin", is_active: true).all
+
+    active_dropins.each do |dropin|
+      unless dropin.check_active
+        dropin.update(is_active: false)
+      end
+    end
+  end
+
   # end
 
   private

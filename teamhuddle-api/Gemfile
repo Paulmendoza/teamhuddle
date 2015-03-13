@@ -79,3 +79,5 @@ gem "roadie", "~> 2.4.0"
 gem "wice_grid", '~> 3.4.10'
 # WiceGrid needs it
 gem "coffee-rails"
+
+gem "whenever"
