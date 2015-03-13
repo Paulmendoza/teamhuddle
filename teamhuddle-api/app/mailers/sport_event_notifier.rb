@@ -1,5 +1,5 @@
 class SportEventNotifier < ActionMailer::Base
-  default from: "noreply@teamhudde.com"
+  default from: "noreply@teamhudde.ca"
   layout 'base_email'
 
   def sport_events_expiring_soon
