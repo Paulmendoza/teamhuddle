@@ -7,7 +7,7 @@
 #
 set :output, "/home/deploy/teamhuddle-web/teamhuddle-api/log/cron_log.log"
 
-every :daily, at: "2:30 am" do
+every :day, at: "2:30 am" do
   # command "/usr/bin/some_great_command"
   runner "SportEvent.update_inactive_dropins"
   # rake "some:great:rake:task"
