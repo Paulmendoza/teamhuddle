@@ -5,7 +5,7 @@
 
 # Example:
 #
-set :output, "/cron_log/cron_log.log"
+set :output, "/home/deploy/teamhuddle-web/teamhuddle-api/log/cron_log.log"
 
 every 5.minutes do
   # command "/usr/bin/some_great_command"
