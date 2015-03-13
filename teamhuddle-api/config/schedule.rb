@@ -8,9 +8,9 @@
 set :output, "/cron_log/cron_log.log"
 
 every 5.minutes do
-  command "/usr/bin/some_great_command"
+  # command "/usr/bin/some_great_command"
   runner "SportEvent.update_inactive_dropins"
-  rake "some:great:rake:task"
+  # rake "some:great:rake:task"
 end
 
 # every 2.hours do
