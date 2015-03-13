@@ -1,7 +1,7 @@
 @import "variables";
 
 //=========== Dropin Finder ============
-#dropinfinder{
+.dropinfinder{
   padding-left: 0;
   padding-right: 0;
   background-color: white;
@@ -18,10 +18,11 @@
       display: none !important;
     }
   }
-  #left-wrapper{
+  .left-wrapper{
     padding-left: 0;
     padding-right: 0;
     position:fixed;
+    z-index:1000;
     .marker-row-selected{
       background-color: #E8E8E8;
     }
@@ -42,10 +43,10 @@
       height: 30px;
     }
   }
-  #right-wrapper{
+  .right-wrapper{
     padding-right: 0;
     padding-left: 0;
-    #filter{
+    .filter{
       position: fixed;
       top: $nav-height;
       background-color: white;
@@ -110,15 +111,15 @@
   }
 }
 //============= Dropin View =============
-#dropin-view{
+.dropin-view{
   .wrapper{
     padding: 0;
   }
   height: calc(100vh - #{$nav-height});
-  #right-wrapper{
+  .right-wrapper{
     height: 100vh;
   }
-  #button-list{
+  .button-list{
     a {
       width: 100%;
       background-color: transparent;
@@ -147,7 +148,7 @@
 }
 
 //============ dropinfinder-icon============
-#dropinfinder-icon{
+.dropinfinder-icon{
   h3{
     font-weight: 200;
     font-size: 2em;
