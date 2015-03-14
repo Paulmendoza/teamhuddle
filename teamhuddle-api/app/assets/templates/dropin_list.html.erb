@@ -36,6 +36,13 @@
       </select>
     </div>
   </div>
+  <div>
+    <form ng-submit="setCurrentLocation()">
+        <label for="location-filter">Location</label>
+        <input id="location-filter" type="text" ng-model="currentPosition.addressFilter">
+        <button class="btn btn-info" type="submit">Apply</button>
+    </form>
+  </div>
   <br>
 </div>
 <div id="preloader-wrapper" ng-show="loadingDropins">

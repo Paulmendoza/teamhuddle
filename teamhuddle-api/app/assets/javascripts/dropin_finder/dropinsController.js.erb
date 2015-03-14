@@ -8,9 +8,10 @@ DropinFinder.controller('dropins', [
     '$routeParams',
     '$routeSegment',
     '$compile',
+    'GeoCoder',
     'DropinsService',
     'DropinsDataModel',
-    function ($scope, $filter, $location, $timeout, $routeParams, $routeSegment, $compile, DropinsService, DropinsDataModel) {
+    function ($scope, $filter, $location, $timeout, $routeParams, $routeSegment, $compile, GeoCoder, DropinsService, DropinsDataModel) {
         if (allowedSports.indexOf($routeParams.sport) < 0) {
             $location.path('/')
             return;
@@ -29,8 +30,10 @@ DropinFinder.controller('dropins', [
         var hasDropins = false;
         var hasLocation = false;
 
+        var userMarker = {};
+
         $scope.sport = $routeParams.sport;
-        $scope.currentPosition = null;
+        $scope.currentPosition = {};
 
         // Main dropins array. This is what we ng-repeat on
         $scope.dropins = [];
@@ -54,6 +57,8 @@ DropinFinder.controller('dropins', [
         // Resets the filter arguments in the URL
         $scope.resetFilters = resetFilters;
         $scope.resetSport = resetSport;
+        // Sets the users location using GeoCoding API from the input box
+        $scope.setCurrentLocation = setCurrentLocation;
 
         /**** DROPIN EVENTS/WATCHERS: ****/
         /*******************************************/
@@ -190,7 +195,7 @@ DropinFinder.controller('dropins', [
             if ($scope.hasLocation && $scope.hasDropins) {
                 angular.forEach(vm.dropins, function (dropin) {
                     dropin.actualDistanceFromUser =
-                            google.maps.geometry.spherical.computeDistanceBetween($scope.currentPosition,
+                            google.maps.geometry.spherical.computeDistanceBetween($scope.currentPosition.latLng,
                                     new google.maps.LatLng(dropin.location.lat, dropin.location.long));
 
                     dropin.distanceFromUser = (dropin.actualDistanceFromUser / 1000).toFixed(1).toString() + " km";
@@ -232,18 +237,16 @@ DropinFinder.controller('dropins', [
                 navigator.geolocation.getCurrentPosition(function (position) {
                     hasLocation = true;
 
-                    $scope.currentPosition = new google.maps.LatLng(position.coords.latitude,
+                    $scope.currentPosition.latLng = new google.maps.LatLng(position.coords.latitude,
                             position.coords.longitude);
 
-                    var marker = new google.maps.Marker({
-                        map: $scope.map,
-                        icon: "<%= asset_path("person-marker.png") %>",
-                        position: $scope.currentPosition
-                    });
+                    createOrSetUserMarker();
 
                     if(hasDropins){
-                        DropinsDataModel.CalculateDistanceForDropins($scope.currentPosition);
+                        DropinsDataModel.CalculateDistanceForDropins($scope.currentPosition.latLng);
+                        $scope.dropins = $filter('orderBy')($scope.dropins, ['actualDistanceFromUser', 'datetime_start'], false)
                     }
+                    $scope.$apply();
 
                 }, function () {
                     //if you can't get the location, pan the map to middle of Vancouver
@@ -260,6 +263,19 @@ DropinFinder.controller('dropins', [
                 $scope.map.setCenter(new google.maps.LatLng(49.266491, -123.078252));
                 //handleNoGeolocation(false);
                 //alert("Doesn't support geolocation");
+            }
+        }
+
+        function createOrSetUserMarker(){
+            if(userMarker.position){
+                userMarker.setPosition($scope.currentPosition.latLng);
+                $scope.map.panTo($scope.currentPosition.latLng);
+            } else {
+                userMarker = new google.maps.Marker({
+                    map: $scope.map,
+                    icon: "<%= asset_path("person-marker.png") %>",
+                    position: $scope.currentPosition.latLng
+                });
             }
         }
 
@@ -338,7 +354,7 @@ DropinFinder.controller('dropins', [
                         hasDropins = true;
 
                         if(hasLocation){
-                            DropinsDataModel.CalculateDistanceForDropins($scope.currentPosition);
+                            DropinsDataModel.CalculateDistanceForDropins($scope.currentPosition.latLng);
                         }
 
                         $scope.dropins = DropinsDataModel.dropins;
@@ -450,5 +466,31 @@ DropinFinder.controller('dropins', [
             $location.path('/');
             $scope.sport = 'no-sport';
         };
+
+        function setCurrentLocation(){
+            if($scope.currentPosition.addressFilter && $scope.currentPosition.addressFilter !== ""){
+                GeoCoder.geocode({address: $scope.currentPosition.addressFilter}).then(function (results) {
+                    // attempt to reorder results to put closest first
+                    if($scope.currentPosition.latLng){
+                        angular.forEach(results, function(result){
+                            result.distanceFromCurrent = google.maps.geometry.spherical.computeDistanceBetween($scope.currentPosition.latLng,
+                                    new google.maps.LatLng(result.geometry.location.k, result.geometry.location.D));
+                        });
+
+                        results = $filter('orderBy')(results, 'distanceFromCurrent', false)
+                    }
+
+                    $scope.currentPosition.addressFilter = results[0].formatted_address;
+                    $scope.currentPosition.latLng = new google.maps.LatLng(results[0].geometry.location.k, results[0].geometry.location.D);
+                    DropinsDataModel.CalculateDistanceForDropins($scope.currentPosition.latLng);
+
+                    createOrSetUserMarker();
+
+                    $scope.dropins = $filter('orderBy')($scope.dropins, ['actualDistanceFromUser', 'datetime_start'], false);
+                });
+            }else{
+                getUserLocation();
+            }
+        }
     }]);
 
