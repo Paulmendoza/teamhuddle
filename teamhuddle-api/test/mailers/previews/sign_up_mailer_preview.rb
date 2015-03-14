@@ -6,4 +6,12 @@ class SignUpMailerPreview < ActionMailer::Preview
     SignUpMailer.sign_up
   end
 
+  def contact_us
+    @contact_us = ContactUs.first
+
+    SignUpMailer.contact_us_notify(@contact_us)
+  end
+
+
+
 end

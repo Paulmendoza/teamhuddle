@@ -15,7 +15,7 @@ class SignUpMailer < ActionMailer::Base
   def contact_us_notify(contact_us_form)
     @contact_us_form = contact_us_form
 
-    mail to: "contact@teamhuddle.ca",
+    mail to: Rails.env.production? ? "contact@teamhuddle.ca" : "akos_sebestyen@hotmail.com",
          subject: "Teamhuddle Feedback from #{contact_us_form.first_name} #{contact_us_form.last_name}",
          from: contact_us_form.email
   end

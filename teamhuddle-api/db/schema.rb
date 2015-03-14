@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150306064938) do
+ActiveRecord::Schema.define(version: 20150313063651) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -132,6 +132,7 @@ ActiveRecord::Schema.define(version: 20150306064938) do
     t.datetime "deleted_at"
     t.integer  "admin_id"
     t.boolean  "is_active",       default: true, null: false
+    t.datetime "dt_expiry",                      null: false
   end
 
   add_index "sport_events", ["admin_id"], name: "index_sport_events_on_admin_id"
