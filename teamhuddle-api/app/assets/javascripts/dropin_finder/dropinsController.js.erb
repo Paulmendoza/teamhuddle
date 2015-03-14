@@ -1,275 +1,76 @@
 var allowedSports = ['volleyball', 'hockey', 'basketball', 'soccer'];
 
-DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routeParams','$routeSegment', '$compile', 'Dropins',
-    function ($scope, $filter, $location, $routeParams, $routeSegment, $compile, Dropins) {
-        $scope.sport = $routeParams.sport;
-
-        if (allowedSports.indexOf($scope.sport) < 0) {
+DropinFinder.controller('dropins', [
+    '$scope',
+    '$filter',
+    '$location',
+    '$timeout',
+    '$routeParams',
+    '$routeSegment',
+    '$compile',
+    'DropinsService',
+    'DropinsDataModel',
+    function ($scope, $filter, $location, $timeout, $routeParams, $routeSegment, $compile, DropinsService, DropinsDataModel) {
+        if (allowedSports.indexOf($routeParams.sport) < 0) {
             $location.path('/')
             return;
         }
-        else{
-            ga('send', 'pageview', '/dropin-finder' + $location.path()); // add google analytics to the "router"
-        }
 
-        // set my own orderBy filter directive
-        var orderBy = $filter('orderBy');
+        //Booleans
+        $scope.failedRetrieve = false;
+        $scope.loadedOnce = false;
+        $scope.loadingDropins = false;
+        $scope.mapMobileToggle = false;
+        $scope.userLocationEnabled = true;
+        $scope.admin_signed_in = !!currentAdmin;
+        $scope.isSelected = function (dropin_id) {
+            $scope.markerWrappers.currentlyOpen === dropin_id;
+        };
+        var hasDropins = false;
+        var hasLocation = false;
 
+        $scope.sport = $routeParams.sport;
         $scope.currentPosition = null;
 
-        $scope.admin_signed_in = !!currentAdmin;
-
-        $scope.failedRetrieve = false;
-
-        $scope.loadedOnce = false;
-
-        $scope.loadingDropins = false;
-
-        $scope.mapMobileToggle = false;
-
-        $scope.hasLocation = false;
-        $scope.hasDropins = false;
-
-        $scope.userLocationEnabled = true;
-
-        // for displaying all list items as verbose or non verbose format
-        $scope.format = 'items';
-
-        $scope.isSelected = function (dropin_id) {
-            return $scope.format === 'items' || $scope.markerWrappers.currentlyOpen === dropin_id;
-        };
-
-        // a dictionary to hold all of the MarkerWrapper objects
-        $scope.markerWrappers = {};
-
-        // this will hold the id of the marker that is currently open
-        $scope.markerWrappers.currentlyOpen = null;
-
-        // initialize the predicate that sorting will be done through
-        $scope.predicate = 'datetime_start';
-
-        // array that will have all the dropin objects
+        // Main dropins array. This is what we ng-repeat on
         $scope.dropins = [];
+        // Dictionary to hold all of the MarkerWrapper objects
+        $scope.markerWrappers = { currentlyOpen: null};
+
+        /**** FUNCTIONS: ****/
+        // use a deferred promise from the Dropins service to populate the scope
+        $scope.refreshDropins = refreshDropins;
+        $scope.backToList = backToList;
+        $scope.fetchDropin = fetchDropin;
+        $scope.resizeMap = resizeMap;
+        $scope.switchToMap = switchToMap;
+        $scope.switchToList = switchToList;
+        // Toggles to Dropin but leaves it open
+        $scope.toggleTo = toggleTo;
+        // Set the maps center to the dropin location
+        $scope.centerDropin = centerDropin;
+        // Sets the filter arguments in the URL
+        $scope.setFilters = setFilters;
+        // Resets the filter arguments in the URL
+        $scope.resetFilters = resetFilters;
+        $scope.resetSport = resetSport;
 
         /**** DROPIN EVENTS/WATCHERS: ****/
         /*******************************************/
-
         // watch to see if the location changes and then set the sport accordingly
         // this is needed because the filters could change
         $scope.$on('$locationChangeSuccess', function (event) {
             var params = $location.search();
-            if(params['day'] !== undefined || params['skill'] !== undefined){
+            if (params['day'] !== undefined || params['skill'] !== undefined) {
                 $scope.refreshDropins();
             }
 
             ga('send', 'pageview', '/dropin-finder' + $location.path()); // add google analytics to the "router"
         });
 
-        $scope.backToList = function(){
-            window.setTimeout(function () {
-                if ($scope.markerWrappers.currentlyOpen !== null) {
-                    var currentlyOpen = $scope.markerWrappers.currentlyOpen;
-                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
-                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
-                }
-            }, 250);
-        };
-
-        /**** DROPIN CONTROLLER FUNCTIONS: ****/
-        /**************************************/
-
-        // use a deferred promise from the Dropins service to populate the scope
-        $scope.refreshDropins = function () {
-            $scope.$emit("loadMap");
-            $scope.loadingDropins = true;
-
-            var filters = getAndHandleFilters();
-            Dropins.GetBySportWithFilters($scope.sport, filters).then(
-                    function (dropins) {
-                        $scope.dropins = orderBy(dropins, $scope.predicate, false);
-
-                        reloadMarkerWrappers();
-
-                        $scope.resizeMap();
-
-                        $scope.format = 'table';
-
-                        $scope.loadingDropins = false;
-
-                        $scope.hasDropins = true;
-                        calculateDistanceForDropins();
-
-                        $scope.loadedOnce = true;
-
-                        $scope.$broadcast('dropinsUpdated');
-                    },
-                    function (reason) {
-                        $scope.loadingDropins = false;
-                        $scope.failedRetrieve = true;
-                    });
-        };
-
-        $scope.fetchDropin = function(sportEventId){
-            Dropins.GetBySportEventId(sportEventId).then(
-                    function(dropin){
-                        $scope.dropins.push(dropin)
-                        calculateDistanceForDropins();
-                        $scope.markerWrappers[dropin.id] = new MarkerWrapper(dropin);
-                        $scope.$broadcast('dropinsUpdated');
-                    },
-                    function(reason){
-                        $scope.$broadcast('dropinFetchFailed', reason);
-                    }
-            )
-        }
-
+        /** INIT **/
         $scope.refreshDropins();
-
         getUserLocation();
-
-        $scope.resizeMap = function () {
-            // set a minor timeout to fix load issues
-            window.setTimeout(function () {
-                google.maps.event.trigger($scope.map, 'resize');
-            }, 350);
-        };
-
-        $scope.switchToMap = function () {
-            $scope.mapMobileToggle = !$scope.mapMobileToggle;
-            $scope.resizeMap();
-            window.setTimeout(function () {
-                if ($scope.markerWrappers.currentlyOpen !== null) {
-                    var currentlyOpen = $scope.markerWrappers.currentlyOpen;
-                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
-                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
-                }
-            }, 500);
-        };
-
-        $scope.switchToList = function () {
-            $scope.mapMobileToggle = !$scope.mapMobileToggle;
-            window.setTimeout(function () {
-                if ($scope.markerWrappers.currentlyOpen !== null) {
-                    var currentlyOpen = $scope.markerWrappers.currentlyOpen;
-                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
-                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
-                }
-            }, 250);
-        };
-
-        $scope.toggleTo = function (dropinId) {
-            //keep InfoWindow Open, just switch dropins and scroll to it
-            if ($scope.markerWrappers.currentlyOpen !== null) {
-                if ($(window).width() <= 992) {
-                    $scope.mapMobileToggle = false;
-                    window.setTimeout(function () {
-                        $scope.markerWrappers[$scope.markerWrappers.currentlyOpen].infoWindow.toggle();
-                        $scope.markerWrappers[dropinId].infoWindow.toggle();
-                    }, 250)
-                }
-                else {
-                    $scope.markerWrappers[$scope.markerWrappers.currentlyOpen].infoWindow.toggle();
-                    $scope.markerWrappers[dropinId].infoWindow.toggle();
-                }
-
-
-            }
-        };
-
-        // function which orders by predicate
-        $scope.order = function (predicate, reverse) {
-            $scope.dropins = orderBy($scope.dropins, predicate, reverse);
-        };
-
-        // set the maps center to the dropin location
-        $scope.centerDropin = function (dropin) {
-            $scope.map.panTo(new google.maps.LatLng(dropin.location.lat, dropin.location.long));
-            $scope.map.setZoom(11);
-        };
-
-        function getAndHandleFilters(){
-            var currentFilterDictionary = {};
-
-            // apply each filter if 'All' isn't selected
-            if (typeof $location.search()['day'] !== 'undefined') {
-                currentFilterDictionary['day'] = $location.search()['day'];
-                $scope.weekdaySelect = $location.search()['day'];
-            }
-            else {
-                $scope.weekdaySelect = undefined;
-            }
-            if (typeof $location.search()['skill'] !== 'undefined') {
-                currentFilterDictionary['skill'] = $location.search()['skill'];
-                $scope.skillLevelSelect = $location.search()['skill'];
-            }
-            else {
-                $scope.skillLevelSelect = undefined
-            }
-
-            return currentFilterDictionary;
-        }
-
-        // sets the filter arguments in the URL
-        $scope.setFilters = function () {
-            if (this.weekdaySelect !== 'All') {
-                $location.search('day', this.weekdaySelect);
-            }
-            else if (this.weekdaySelect === 'All') {
-                $location.search('day', null);
-                $scope.refreshDropins();
-            }
-
-            if (this.skillLevelSelect !== 'All') {
-                $location.search('skill', this.skillLevelSelect);
-            }
-            else if (this.skillLevelSelect === 'All') {
-                $location.search('skill', null);
-                $scope.refreshDropins();
-            }
-        };
-
-        // resets the filter arguments in the URL
-        $scope.resetFilters = function () {
-            $scope.weekdaySelect = undefined;
-            $scope.skillLevelSelect = undefined;
-            $location.search('day', null);
-            $location.search('skill', null);
-            $scope.refreshDropins();
-        };
-
-        // function to remove an item from the list TODO, GET RID OF THIS EVENTUALLY
-        $scope.remove = function (item) {
-            var index = $scope.dropins.indexOf(item);
-            $scope.dropins.splice(index, 1);
-        };
-
-        // function to reset the sport
-        $scope.resetSport = function () {
-            $location.path('/');
-            $scope.sport = 'no-sport';
-        };
-
-        $scope.getDropinById = function(dropinId) {
-            var tempDropin;
-            $scope.dropins.forEach(function (dropin) {
-                if (dropin.id === dropinId) {
-                    tempDropin = dropin;
-                }
-            });
-
-            return tempDropin;
-        }
-
-        $scope.getDropinBySportEventId = function(sportEventId) {
-            var tempDropin;
-            $scope.dropins.forEach(function (dropin) {
-                if (dropin.sport_event.id === sportEventId) {
-                    tempDropin = dropin;
-                }
-            });
-
-            return tempDropin;
-        }
 
         /**** INNER CLASS: ****/
         /***********************/
@@ -279,7 +80,6 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
         //  marker(Object)                      : the google maps marker objecct
         //  infoWindow(Object)                  : the google maps info window object
         //  infoWindow.toggle(function(bool))   : function to toggle an info window
-
         function MarkerWrapper(dropin) {
             this.isOpen = false;
 
@@ -322,7 +122,7 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                         $scope.markerWrappers[$scope.markerWrappers.currentlyOpen].isOpen = false;
                         $scope.markerWrappers[$scope.markerWrappers.currentlyOpen].infoWindow.close();
                     }
-                    var dropinsAtMarker = getDropinsForLocation(dropin.location.id);
+                    var dropinsAtMarker = DropinsDataModel.GetDropinsForLocation(dropin.location.id);
 
                     $scope.markerWrappers.currentlyOpen = dropin.id;
                     that.infoWindow.content = generateInfoWindowHtmlContent(dropinsAtMarker);
@@ -348,7 +148,31 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             };
         }
 
-        function reloadMarkerWrappers(){
+
+        /** PRIVATE FUNCTIONS **/
+        function getAndHandleFilters() {
+            var currentFilterDictionary = {};
+
+            // apply each filter if 'All' isn't selected
+            if (typeof $location.search()['day'] !== 'undefined') {
+                currentFilterDictionary['day'] = $location.search()['day'];
+                $scope.weekdaySelect = $location.search()['day'];
+            }
+            else {
+                $scope.weekdaySelect = undefined;
+            }
+            if (typeof $location.search()['skill'] !== 'undefined') {
+                currentFilterDictionary['skill'] = $location.search()['skill'];
+                $scope.skillLevelSelect = $location.search()['skill'];
+            }
+            else {
+                $scope.skillLevelSelect = undefined
+            }
+
+            return currentFilterDictionary;
+        };
+
+        function reloadMarkerWrappers() {
             for (var property in $scope.markerWrappers) {
                 if ($scope.markerWrappers.hasOwnProperty(property) && property !== "currentlyOpen") {
                     $scope.markerWrappers[property].marker.setMap(null);
@@ -362,9 +186,9 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             });
         }
 
-        function calculateDistanceForDropins(){
-            if($scope.hasLocation && $scope.hasDropins){
-                angular.forEach($scope.dropins, function(dropin){
+        function calculateDistanceForDropins() {
+            if ($scope.hasLocation && $scope.hasDropins) {
+                angular.forEach(vm.dropins, function (dropin) {
                     dropin.actualDistanceFromUser =
                             google.maps.geometry.spherical.computeDistanceBetween($scope.currentPosition,
                                     new google.maps.LatLng(dropin.location.lat, dropin.location.long));
@@ -372,43 +196,7 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                     dropin.distanceFromUser = (dropin.actualDistanceFromUser / 1000).toFixed(1).toString() + " km";
                 });
 
-                $scope.dropins = orderBy($scope.dropins, ['actualDistanceFromUser', 'datetime_start'], false);
-            }
-        }
-
-        function scrollToDropin(dropin) {
-            // scroll to logic here
-            if($('#dropin-' + dropin.id).length < 1){
-                return;
-            }
-
-            var scrollPos = $('#dropin-' + dropin.id).offset().top;
-
-            var headerBuffer = 310;
-
-            // resize the value in case we have a smaller screen
-            if (window.innerWidth < 1200) {
-                headerBuffer = 365
-            }
-
-
-                var docViewTop = $(window).scrollTop();
-                var docViewBottom = docViewTop + $(window).height();
-                var elemTop = $('#dropin-' + dropin.id).offset().top;
-                var elemBottom = elemTop + $('#dropin-' + dropin.id).height();
-
-
-            if(!((elemBottom <= docViewBottom) && (elemTop >= docViewTop)))
-            {
-                // if the element would fall into the height of the window
-                // minus some buffer then just scroll to the top
-                if ((scrollPos < window.innerHeight - 150 ) && window.innerWidth > 992) {
-                    $('html,body').animate({scrollTop: 0}, 750);
-                }
-                // otherwise scroll to the element minus a buffer so it will always show on screen
-                else {
-                    $('html,body').animate({scrollTop: scrollPos - headerBuffer}, 750);
-                }
+                vm.dropins = orderBy(vm.dropins, ['actualDistanceFromUser', 'datetime_start'], false);
             }
         }
 
@@ -439,19 +227,11 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
             return compiled[0];
         }
 
-        function getDropinsForLocation(location_id) {
-            var tempDropins = [];
-            $scope.dropins.forEach(function (dropin) {
-                if (dropin.location.id === location_id) {
-                    tempDropins.push(dropin);
-                }
-            });
-            return tempDropins;
-        }
-
         function getUserLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
+                    hasLocation = true;
+
                     $scope.currentPosition = new google.maps.LatLng(position.coords.latitude,
                             position.coords.longitude);
 
@@ -460,14 +240,16 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                         icon: "<%= asset_path("person-marker.png") %>",
                         position: $scope.currentPosition
                     });
-                    $scope.hasLocation = true;
 
-                    calculateDistanceForDropins();
+                    if(hasDropins){
+                        DropinsDataModel.CalculateDistanceForDropins($scope.currentPosition);
+                    }
+
                 }, function () {
                     //if you can't get the location, pan the map to middle of Vancouver
                     $scope.userLocationEnabled = false;
-                    window.setTimeout(function () {
-                        $scope.map.panTo(new google.maps.LatLng(49.266491,  -123.078252));
+                    $timeout(function () {
+                        $scope.map.panTo(new google.maps.LatLng(49.266491, -123.078252));
                     }, 2500);
 
                     //alert("Couldn't get your location, yo");
@@ -475,12 +257,11 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
                 });
             } else {
                 // Browser doesn't support Geolocation
-                $scope.map.setCenter(new google.maps.LatLng(49.266491,  -123.078252));
+                $scope.map.setCenter(new google.maps.LatLng(49.266491, -123.078252));
                 //handleNoGeolocation(false);
                 //alert("Doesn't support geolocation");
             }
         }
-
 
         // get the path for each map marker asset
         function getMapMarkerPath(sport) {
@@ -499,20 +280,175 @@ DropinFinder.controller('dropins', ['$scope', '$filter', '$location', '$routePar
 
         }
 
-        // UNUSED HELPER METHOD, COULD BE USERFUL LATER
-//        $scope.getSkillSortOrder = function (dropin) {
-//            switch (dropin.sport_event.skill_level) {
-//                case 'Recreational':
-//                    return 1;
-//                case 'Beginner':
-//                    return 2;
-//                case 'Intermediate':
-//                    return 3;
-//                case 'Advanced':
-//                    return 4;
-//                default:
-//                    return 0;
-//            }
-//        };
+        function scrollToDropin(dropin) {
+            // scroll to logic here
+            if ($('#dropin-' + dropin.id).length < 1) {
+                return;
+            }
+
+            var scrollPos = $('#dropin-' + dropin.id).offset().top;
+
+            var headerBuffer = 310;
+
+            // resize the value in case we have a smaller screen
+            if (window.innerWidth < 1200) {
+                headerBuffer = 365
+            }
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+            var elemTop = $('#dropin-' + dropin.id).offset().top;
+            var elemBottom = elemTop + $('#dropin-' + dropin.id).height();
+
+
+            if (!((elemBottom <= docViewBottom) && (elemTop >= docViewTop))) {
+                // if the element would fall into the height of the window
+                // minus some buffer then just scroll to the top
+                if ((scrollPos < window.innerHeight - 150 ) && window.innerWidth > 992) {
+                    $('html,body').animate({scrollTop: 0}, 750);
+                }
+                // otherwise scroll to the element minus a buffer so it will always show on screen
+                else {
+                    $('html,body').animate({scrollTop: scrollPos - headerBuffer}, 750);
+                }
+            }
+        }
+
+        /** SCOPE FUNCTION BACKERS **/
+        function backToList() {
+            $timeout(function () {
+                if ($scope.markerWrappers.currentlyOpen !== null) {
+                    var currentlyOpen = $scope.markerWrappers.currentlyOpen;
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                }
+            }, 250);
+        };
+
+        function refreshDropins() {
+            $scope.$emit("loadMap");
+            $scope.loadingDropins = true;
+
+            var filters = getAndHandleFilters();
+
+            DropinsDataModel.RefreshDropins($scope.sport, filters).then(
+                    function (dropins) {
+                        $scope.loadingDropins = false;
+                        $scope.loadedOnce = true;
+
+                        hasDropins = true;
+
+                        if(hasLocation){
+                            DropinsDataModel.CalculateDistanceForDropins($scope.currentPosition);
+                        }
+
+                        $scope.dropins = DropinsDataModel.dropins;
+
+                        reloadMarkerWrappers();
+
+                        $scope.resizeMap();
+                        $scope.$broadcast('dropinsUpdated');
+                    },
+                    function (reason) {
+                        $scope.loadingDropins = false;
+                        $scope.failedRetrieve = true;
+                    });
+        };
+
+        function fetchDropin(sportEventId) {
+            DropinsService.GetBySportEventId(sportEventId).then(
+                    function (dropin) {
+                        $scope.dropins.push(dropin)
+                        calculateDistanceForDropins();
+                        $scope.markerWrappers[dropin.id] = new MarkerWrapper(dropin);
+                        $scope.$broadcast('dropinsUpdated');
+                    },
+                    function (reason) {
+                        $scope.$broadcast('dropinFetchFailed', reason);
+                    }
+            )
+        };
+
+        function resizeMap() {
+            // set a minor timeout to fix load issues
+            $timeout(function () {
+                google.maps.event.trigger($scope.map, 'resize');
+            }, 350);
+        };
+
+        function switchToMap() {
+            $scope.mapMobileToggle = !$scope.mapMobileToggle;
+            $scope.resizeMap();
+            $timeout(function () {
+                if ($scope.markerWrappers.currentlyOpen !== null) {
+                    var currentlyOpen = $scope.markerWrappers.currentlyOpen;
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                }
+            }, 500);
+        };
+
+        function switchToList() {
+            $scope.mapMobileToggle = !$scope.mapMobileToggle;
+            $timeout(function () {
+                if ($scope.markerWrappers.currentlyOpen !== null) {
+                    var currentlyOpen = $scope.markerWrappers.currentlyOpen;
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                    $scope.markerWrappers[currentlyOpen].infoWindow.toggle();
+                }
+            }, 250);
+        };
+
+        function toggleTo(dropinId) {
+            //keep InfoWindow Open, just switch dropins and scroll to it
+            if ($scope.markerWrappers.currentlyOpen !== null) {
+                if ($(window).width() <= 992) {
+                    $scope.mapMobileToggle = false;
+                    $timeout(function () {
+                        $scope.markerWrappers[$scope.markerWrappers.currentlyOpen].infoWindow.toggle();
+                        $scope.markerWrappers[dropinId].infoWindow.toggle();
+                    }, 250)
+                }
+                else {
+                    $scope.markerWrappers[$scope.markerWrappers.currentlyOpen].infoWindow.toggle();
+                    $scope.markerWrappers[dropinId].infoWindow.toggle();
+                }
+            }
+        };
+
+        function centerDropin(dropin) {
+            $scope.map.panTo(new google.maps.LatLng(dropin.location.lat, dropin.location.long));
+            $scope.map.setZoom(11);
+        };
+
+        function setFilters() {
+            if (this.weekdaySelect !== 'All') {
+                $location.search('day', this.weekdaySelect);
+            }
+            else if (this.weekdaySelect === 'All') {
+                $location.search('day', null);
+                $scope.refreshDropins();
+            }
+
+            if (this.skillLevelSelect !== 'All') {
+                $location.search('skill', this.skillLevelSelect);
+            }
+            else if (this.skillLevelSelect === 'All') {
+                $location.search('skill', null);
+                $scope.refreshDropins();
+            }
+        };
+
+        function resetFilters() {
+            $scope.weekdaySelect = undefined;
+            $scope.skillLevelSelect = undefined;
+            $location.search('day', null);
+            $location.search('skill', null);
+            $scope.refreshDropins();
+        };
+
+        function resetSport() {
+            $location.path('/');
+            $scope.sport = 'no-sport';
+        };
     }]);
 

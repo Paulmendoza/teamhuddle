@@ -1,0 +1,64 @@
+angular.module('DropinFinder')
+        .factory('DropinsDataModel', ['$q', '$filter', 'DropinsService', function ($q, $filter, DropinsService) {
+            var vm = this;
+
+            vm.dropins = [];
+
+            vm.RefreshDropins = refreshDropins;
+            vm.GetDropinsForLocation = getDropinsForLocation;
+            vm.GetDropinBySportEventId = getDropinBySportEventId;
+            vm.CalculateDistanceForDropins = calculateDistanceForDropins;
+
+            function refreshDropins(sport, filters, currentPosition){
+                var deferred = $q.defer();
+
+                DropinsService.GetBySportWithFilters(sport, filters).then(
+                        function(dropins){
+                            vm.dropins = $filter('orderBy')(dropins, 'datetime_start', false);
+
+                            if(currentPosition){
+                                vm.CalculateDistanceForDropins
+                            }
+
+                            deferred.resolve(true);
+                        },
+                        function(reason){
+                            deferred.reject(reason);
+                        }
+                )
+                return deferred.promise;
+            }
+            function getDropinsForLocation(locationId){
+                var tempDropins = [];
+                vm.dropins.forEach(function (dropin) {
+                    if (dropin.location.id === locationId) {
+                        tempDropins.push(dropin);
+                    }
+                });
+                return tempDropins;
+            }
+            function getDropinBySportEventId(sportEventId){
+                var tempDropin;
+                vm.dropins.forEach(function (dropin) {
+                    if (dropin.sport_event.id === sportEventId) {
+                        tempDropin = dropin;
+                    }
+                });
+
+                return tempDropin;
+            }
+            function calculateDistanceForDropins(currentPosition){
+                angular.forEach(vm.dropins, function (dropin) {
+                    dropin.actualDistanceFromUser =
+                            google.maps.geometry.spherical.computeDistanceBetween(currentPosition,
+                                    new google.maps.LatLng(dropin.location.lat, dropin.location.long));
+
+                    dropin.distanceFromUser = (dropin.actualDistanceFromUser / 1000).toFixed(1).toString() + " km";
+                });
+
+                vm.dropins = $filter('orderBy')(vm.dropins, ['actualDistanceFromUser', 'datetime_start'], false);
+            }
+
+            return vm;
+
+        }]);

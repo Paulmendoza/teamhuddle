@@ -1,4 +1,4 @@
-DropinFinder.controller('dropin', ['$scope','$location', '$routeParams','ReviewsService', function ($scope, $location, $routeParams, ReviewsService) {
+DropinFinder.controller('dropin', ['$scope','$location', '$routeParams','ReviewsService','DropinsDataModel', function ($scope, $location, $routeParams, ReviewsService, DropinsDataModel) {
 
     // Use Case 1: Go to volleyball, view event
 
@@ -17,7 +17,7 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams','Reviews
     $scope.currentUser = currentUser;
 
     // if we don't have this dropin
-    $scope.dropin = $scope.getDropinBySportEventId(parseInt($routeParams.dropin_id));
+    $scope.dropin = DropinsDataModel.GetDropinBySportEventId(parseInt($routeParams.dropin_id));
 
     if($scope.dropin !== undefined) {
         $scope.dropinWrapper = $scope.markerWrappers[$scope.dropin.id];
@@ -28,7 +28,7 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams','Reviews
     }
 
     $scope.$on('dropinsUpdated', function($scope){
-        $scope.currentScope.dropin = $scope.targetScope.getDropinBySportEventId(parseInt($routeParams.dropin_id));
+        $scope.currentScope.dropin = DropinsDataModel.GetDropinBySportEventId(parseInt($routeParams.dropin_id));
         if($scope.currentScope.dropin &&
             $scope.targetScope.markerWrappers[$scope.currentScope.dropin.id] &&
             $scope.targetScope.markerWrappers.currentlyOpen !== $scope.currentScope.dropin.id){
@@ -59,9 +59,8 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams','Reviews
         $scope.currentScope.dropinFetchFailedReason = reason;
     });
 
-    //
     $scope.$on('loadDropin', function ($scope, sportEventId){
-        $scope.currentScope.dropin = $scope.targetScope.getDropinBySportEventId(sportEventId);
+        $scope.currentScope.dropin = DropinsDataModel.GetDropinBySportEventId(sportEventId);
         $scope.currentScope.dropinWrapper = $scope.targetScope.markerWrappers[$scope.currentScope.dropin.sport_event.id];
     });
 

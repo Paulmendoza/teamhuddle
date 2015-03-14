@@ -1,6 +1,4 @@
-//COMMENT IN:   disable logging
-//COMMENT OUT:  enable  logging 
-//console.log = function() {}
+
 
 Date.prototype.addDays = function(days) {
     this.setDate(this.getDate() + days);
@@ -36,7 +34,7 @@ function getNextDayFromString(stringDay){
 
 
 // the dropins service that is expandable with new functions easily
-DropinFinder.service('Dropins', ['$http', '$q', function ($http, $q) {
+DropinFinder.service('DropinsService', ['$http', '$q', function ($http, $q) {
 
     var baseUrl = '/api/v1/api_dropins.json';
 
