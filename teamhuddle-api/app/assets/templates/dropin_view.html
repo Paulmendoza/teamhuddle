@@ -26,7 +26,7 @@
             <span ng-show="dropin.expired" class="label label-warning">EXPIRED</span>
             <div class="row col s12">
                 <div class="col s12 m6">
-                    <div class="card card-content col s12">
+                    <div class=" col s12">
                 <span>
                     <a href="http://maps.google.com/?q={{dropin.location.address}}" target="map">{{dropin.location.address}}</a>
                 </span>
@@ -38,8 +38,7 @@
                     </div>
                 </div>
                 <div class="col s12 m6">
-                    <div class="card card-content col s12">
-
+                    <div class=" col s12">
                         <br>
                         <br>
                         <br>
@@ -48,30 +47,32 @@
                 </div>
             </div>
             <div class="row col s12">
-                <div class="col s12 m6">
-                    <div class="card card-content col s12">
+                <hr class="margin-top-1 margin-bottom-1">
+                <div class="col s12 m8">
+                    <div class=" col s12">
                         <h3>{{dropin.datetime_start| date: 'EEEE'}} @
                             {{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}
                             <br>{{dropin.sport_event.skill_level}} {{dropin.sport_event.type | capitalize }} {{dropin.sport_event.sport_id | capitalize}}
                         </h3>
                     </div>
                 </div>
-                <div class="col s12 m6">
-                    <div class="card card-content col s12">
+                <div class="col s12 m4">
+                    <div class=" col s12">
                         <h3>Spots Available</h3>
                         <h5>{{ dropin.sport_events.spots | empty_to_na }}</h5>
                     </div>
                 </div>
             </div>
             <div class="row col s12">
+                <hr class="margin-top-1 margin-bottom-1">
                 <div class="col s12 m6">
-                    <div class="card card-content col s12">
+                    <div class=" col s12">
                         <h3>Schedule Until</h3>
                         <h5>{{dropin.sport_event.schedule_until | date:'MMM d'}}</h5>
                     </div>
                 </div>
                 <div class="col s12 m6" ng-hide="!dropin.event.comments">
-                    <div class="card card-content col s12">
+                    <div class=" col s12">
                         <h3>Notes</h3>
                         <h5>{{dropin.event.comments}}</h5>
                     </div>
@@ -83,7 +84,7 @@
         <div class="col s12">
             <div class="col s12">
                 <div class="row col s12">
-                    <div class="card card-content col s12">
+                    <div class=" col s12">
                         Ratings coming soon..
                     </div>
                 </div>
@@ -98,5 +99,8 @@
     }
     .parallax-window {
         background-color: white;
+    }
+    .wrapper{
+        padding-bottom: 0 !important;
     }
 </style>
