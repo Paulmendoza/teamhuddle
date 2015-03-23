@@ -162,18 +162,6 @@ class DropinsController < ApplicationController
     end
   end
 
-  def refresh_inactive_dropins
-    @active_dropins = SportEvent.where(type: "dropin", is_active: true).all
-
-    @active_dropins.each do |dropin|
-      unless dropin.check_active
-        dropin.update(is_active: false)
-      end
-    end
-
-    redirect_to dropins_path
-  end
-  
   def import
   end
   
@@ -186,8 +174,7 @@ class DropinsController < ApplicationController
     
     @events = []
     
-    days_of_the_week = ['monday', 'tuesday', 'wednesday', 
-      'thursday', 'friday', 'saturday', 'sunday']
+    days_of_the_week = %w(monday tuesday wednesday thursday friday saturday sunday)
 
     # loop through each community center
     response['results'].each do |rec_center|  

@@ -47,6 +47,7 @@ GEM
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
+    chronic (0.10.2)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -199,6 +200,8 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
+    whenever (0.9.4)
+      chronic (>= 0.6.3)
     wice_grid (3.4.10)
       coffee-rails
       kaminari (>= 0.13.0)
@@ -235,4 +238,5 @@ DEPENDENCIES
   therubyracer
   tzinfo-data
   uglifier
+  whenever
   wice_grid (~> 3.4.10)

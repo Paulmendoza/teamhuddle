@@ -1,4 +1,6 @@
-<div ng-controller="welcome">
+<% content_for :additional_javascript, javascript_include_tag("admin/adminAngular") %>
+
+<div ng-app="app" ng-controller="welcome">
 
   <h1>Welcome back, <%= @admin_name %></h1>
   <hr>
@@ -47,3 +49,4 @@
   </div>
 
 </div>
+
