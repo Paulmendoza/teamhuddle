@@ -31,6 +31,7 @@
         <!-- Show this div if there was an error -->
         <div class="panel panel-warn" ng-if="!success && submitted && !processing">
           <p>There was an error processing your request. Sorry!</p>
+          <span ng-repeat="(key, value) in data">{{key}} - {{value[0]}}<br></span>
         </div>
         <form class="form-horizontal contact-us-form" ng-submit="submit()" ng-hide="success && submitted && !processing">
           <div class="form-group">
@@ -97,31 +98,31 @@
       </p>
     </div>
   </div>
-<style>
-  /*.footer {*/
+  <style>
+      /*.footer {*/
       /*position: absolute;*/
       /*min height: 100vh;*/
-  /*}*/
-  @media (min-width: 510px) {
-      .footer {
-          bottom: .1px;
+      /*}*/
+      @media (min-width: 510px) {
+          .footer {
+              bottom: .1px;
+          }
       }
-  }
-  @media(min-width:420px) {
-      .container {
-          height: 850px;
+
+      @media (min-width: 420px) {
+          .container {
+              height: 850px;
+          }
       }
-  }
-  @media(min-height:930px) {
-    .footer{
-        position:absolute;
-    }
-  }
+
+      @media (min-height: 930px) {
+          .footer {
+              position: absolute;
+          }
+      }
 
 
-
-
-</style>
+  </style>
 
 </div>
 
