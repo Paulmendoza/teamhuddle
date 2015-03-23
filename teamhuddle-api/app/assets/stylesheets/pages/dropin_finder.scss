@@ -83,6 +83,7 @@
       }
       .glyphicon{
         display:block;
+        line-height: 44px;
       }
     }
     .curtain{
@@ -97,9 +98,12 @@
     }
     .dropin-results{
     }
-    .chevron-link{
-      position: absolute;
-      right: 0;
+    .chevron{
+      height: 44px;
+      a {
+        position: relative;
+        right: 0;
+      }
     }
   }
 }
