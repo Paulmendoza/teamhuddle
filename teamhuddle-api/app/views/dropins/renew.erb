@@ -4,12 +4,18 @@
 
     <p>
       <%= f.label :name %><br>
-      <%= f.text_field :name %>
+      <% if @is_renewal && @dropin.try(:event).present? %>
+          <span><%= @dropin.event.name %></span>
+      <% else %>
+          <%= f.text_field :name %>
+      <% end %>
     </p>
 
     <%= render :partial => 'location_form', :locals => { :f => f } %>
     <%= render :partial => 'schedule_form', :locals => { :f => f } %>
     <%= render :partial => 'optional_form', :locals => { :f => f } %>
+
+    <%= f.number_field :event_id, hidden: true %>
 
     <p>
       <%= f.submit %>

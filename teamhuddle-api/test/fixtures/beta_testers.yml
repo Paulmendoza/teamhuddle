@@ -1,103 +1,151 @@
 ---
-users_001:
+beta_testers_001:
   id: 17
   name: 
   email: akos_sebestyen@hotmail.com
   created_at: '2014-11-13 04:40:11.145270'
   updated_at: '2014-11-13 04:40:11.145270'
-users_002:
+beta_testers_002:
   id: 18
   name: 
   email: marc@eje.ca
   created_at: '2014-11-13 07:49:54.344954'
   updated_at: '2014-11-13 07:49:54.344954'
-users_003:
+beta_testers_003:
   id: 20
   name: 
   email: test@testingingthetest.tester
   created_at: '2014-11-26 04:17:59.116394'
   updated_at: '2014-11-26 04:17:59.116394'
-users_004:
+beta_testers_004:
   id: 21
   name: 
   email: coolname@cool.awesome
   created_at: '2014-11-29 05:54:22.068870'
   updated_at: '2014-11-29 05:54:22.068870'
-users_005:
+beta_testers_005:
   id: 22
   name: 
   email: iliketosignup@signup.com
   created_at: '2014-11-29 21:12:10.421147'
   updated_at: '2014-11-29 21:12:10.421147'
-users_006:
+beta_testers_006:
   id: 23
   name: 
   email: d@a
   created_at: '2014-11-30 05:45:13.750263'
   updated_at: '2014-11-30 05:45:13.750263'
-users_007:
+beta_testers_007:
   id: 24
   name: 
   email: christina.ferguson001@gmail.com
   created_at: '2014-12-06 06:25:27.387754'
   updated_at: '2014-12-06 06:25:27.387754'
-users_008:
+beta_testers_008:
   id: 25
   name: 
   email: akos@akos.com
   created_at: '2014-12-07 01:07:44.272012'
   updated_at: '2014-12-07 01:07:44.272012'
-users_009:
+beta_testers_009:
   id: 26
   name: 
   email: hayleymwong@gmail.com
   created_at: '2014-12-07 06:21:28.596030'
   updated_at: '2014-12-07 06:21:28.596030'
-users_010:
+beta_testers_010:
   id: 27
   name: 
   email: marc@markymarc.ca
   created_at: '2014-12-08 00:02:13.689532'
   updated_at: '2014-12-08 00:02:13.689532'
-users_011:
+beta_testers_011:
   id: 28
   name: 
   email: reypmendoza@shaw.ca
   created_at: '2014-12-15 14:20:40.723025'
   updated_at: '2014-12-15 14:20:40.723025'
-users_012:
+beta_testers_012:
   id: 29
   name: 
   email: okay@okay.com
   created_at: '2014-12-16 08:06:57.860660'
   updated_at: '2014-12-16 08:06:57.860660'
-users_013:
+beta_testers_013:
   id: 30
   name: 
   email: email@email.com
   created_at: '2014-12-21 20:55:06.415600'
   updated_at: '2014-12-21 20:55:06.415600'
-users_014:
+beta_testers_014:
   id: 31
   name: 
   email: akos@akos.com
   created_at: '2014-12-21 23:11:15.976151'
   updated_at: '2014-12-21 23:11:15.976151'
-users_015:
+beta_testers_015:
   id: 32
   name: 
   email: akos@akos.com
   created_at: '2014-12-21 23:12:18.154697'
   updated_at: '2014-12-21 23:12:18.154697'
-users_016:
+beta_testers_016:
   id: 33
   name: 
   email: wntest2014-12-29-1659asebestyen@webnames.ca
   created_at: '2014-12-30 00:59:15.604070'
   updated_at: '2014-12-30 00:59:15.604070'
-users_017:
+beta_testers_017:
   id: 34
   name: 
   email: akos@akos.com
   created_at: '2015-01-06 08:30:55.927335'
   updated_at: '2015-01-06 08:30:55.927335'
+beta_testers_018:
+  id: 35
+  name: 
+  email: akos@akso
+  created_at: '2015-01-19 07:53:02.787577'
+  updated_at: '2015-01-19 07:53:02.787577'
+beta_testers_019:
+  id: 36
+  name: 
+  email: akos@asko.com
+  created_at: '2015-01-19 07:53:56.319439'
+  updated_at: '2015-01-19 07:53:56.319439'
+beta_testers_020:
+  id: 37
+  name: 
+  email: akos@akos.com
+  created_at: '2015-01-20 07:50:15.704180'
+  updated_at: '2015-01-20 07:50:15.704180'
+beta_testers_021:
+  id: 38
+  name: 
+  email: something@something.com
+  created_at: '2015-01-20 07:50:28.464681'
+  updated_at: '2015-01-20 07:50:28.464681'
+beta_testers_022:
+  id: 39
+  name: 
+  email: akos@akos.com
+  created_at: '2015-01-23 05:21:46.505789'
+  updated_at: '2015-01-23 05:21:46.505789'
+beta_testers_023:
+  id: 40
+  name: 
+  email: asjkld@jlkasd
+  created_at: '2015-02-02 06:27:04.511190'
+  updated_at: '2015-02-02 06:27:04.511190'
+beta_testers_024:
+  id: 41
+  name: 
+  email: akos@teamhuddle.ca
+  created_at: '2015-02-02 06:27:21.114253'
+  updated_at: '2015-02-02 06:27:21.114253'
+beta_testers_025:
+  id: 42
+  name: 
+  email: akos@asdjaklsjdklas
+  created_at: '2015-02-02 06:46:12.498391'
+  updated_at: '2015-02-02 06:46:12.498391'
