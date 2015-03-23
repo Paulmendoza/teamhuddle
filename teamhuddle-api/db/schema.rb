@@ -95,15 +95,6 @@ ActiveRecord::Schema.define(version: 20150313063651) do
     t.string   "website"
   end
 
-  create_table "reviews", force: true do |t|
-    t.integer  "rating"
-    t.text     "review"
-    t.integer  "user_id"
-    t.integer  "sport_event_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "sport_event_instances", force: true do |t|
     t.integer  "sport_event_id"
     t.datetime "created_at"
@@ -161,9 +152,6 @@ ActiveRecord::Schema.define(version: 20150313063651) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "image_url"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

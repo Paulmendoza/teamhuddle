@@ -67,7 +67,7 @@
       </div>
       <!-- show this if it's not selected -->
       <p class="col s4 valign">{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</p>
-      <a class="chevron-link" href="/dropin-finder#/{{dropin.sport_event.sport_id}}/dropin/{{dropin.sport_event.id}}" ng-click="$event.stopPropagation()">
+      <a class="chevron-link" href="/dropin-finder#/{{dropin.sport_event.sport_id}}/{{dropin.sport_event.id}}" ng-click="$event.stopPropagation()">
         <div class="pull-right glyphicon glyphicon-chevron-right margin-right-2 padding-top-3" aria-hidden="true"></div>
       </a>
     </div>
