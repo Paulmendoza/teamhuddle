@@ -3,49 +3,49 @@
 <div ng-app="BaseApp"  ng-cloak>
 
   <div class="landing-page row ">
-    <div class="login-wrapper col s12 m12 l5">
-      <div class="login card col s12 m12 l3">
-        <div class="col card-content s12">
-        <span class="text-center">
-          <h2>Find games. Find players. Find your passion</h2>
-          <h3>What's on your athletic resume</h3>
-        </span>
-          <div class="left-section col s12">
-            <h1>Sign Up</h1>
-            <form class="col s12">
-              <div class="input-field col s12 m8 offset-m2 l12">
-                <input id="fullname" type="text" class="validate">
-                <label for="fullname">Full Name</label>
-              </div>
-              <div class="input-field col s12 m8 offset-m2 l12">
-                <input id="username2" type="text" class="validate">
-                <label for="username2">Username</label>
-              </div>
-              <div class="input-field col s12 m8 offset-m2 l12">
-                <input id="password2" type="password" class="validate">
-                <label for="password2">Password</label>
-              </div>
-              <button class="btn waves-effect waves-light col s12 m10  blue-button offset-m1" type="submit" name="action">Create Profile
-                <i class="mdi-content-send right"></i>
-              </button>
-            </form>
-          </div>
-          <div class="right-section col s12 text-center">
-            <h5>Signup with Facebook or Google+</h5>
-            <button class="btn waves-effect waves-light col s12 m10 blue-button offset-m1" type="submit" name="action">Facebook
-              <i class="mdi-content-send right"></i>
-            </button>
-            <br>
-            <br>
-            <hr>
-            <button class="btn waves-effect waves-light col s12 m10 blue-button offset-m1" type="submit" name="action">Google
-              <i class="mdi-content-send right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="scrolling-content col s12 m12 l9">
+    <!--<div class="login-wrapper col s12 m12 l5">-->
+      <!--<div class="login card col s12 m12 l3">-->
+        <!--<div class="col card-content s12">-->
+        <!--<span class="text-center">-->
+          <!--<h2>Find games. Find players. Find your passion</h2>-->
+          <!--<h3>What's on your athletic resume</h3>-->
+        <!--</span>-->
+          <!--<div class="left-section col s12">-->
+            <!--<h1>Sign Up</h1>-->
+            <!--<form class="col s12">-->
+              <!--<div class="input-field col s12 m8 offset-m2 l12">-->
+                <!--<input id="fullname" type="text" class="validate">-->
+                <!--<label for="fullname">Full Name</label>-->
+              <!--</div>-->
+              <!--<div class="input-field col s12 m8 offset-m2 l12">-->
+                <!--<input id="username2" type="text" class="validate">-->
+                <!--<label for="username2">Username</label>-->
+              <!--</div>-->
+              <!--<div class="input-field col s12 m8 offset-m2 l12">-->
+                <!--<input id="password2" type="password" class="validate">-->
+                <!--<label for="password2">Password</label>-->
+              <!--</div>-->
+              <!--<button class="btn waves-effect waves-light col s12 m10  blue-button offset-m1" type="submit" name="action">Create Profile-->
+                <!--<i class="mdi-content-send right"></i>-->
+              <!--</button>-->
+            <!--</form>-->
+          <!--</div>-->
+          <!--<div class="right-section col s12 text-center">-->
+            <!--<h5>Signup with Facebook or Google+</h5>-->
+            <!--<button class="btn waves-effect waves-light col s12 m10 blue-button offset-m1" type="submit" name="action">Facebook-->
+              <!--<i class="mdi-content-send right"></i>-->
+            <!--</button>-->
+            <!--<br>-->
+            <!--<br>-->
+            <!--<hr>-->
+            <!--<button class="btn waves-effect waves-light col s12 m10 blue-button offset-m1" type="submit" name="action">Google-->
+              <!--<i class="mdi-content-send right"></i>-->
+            <!--</button>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <div class="scrolling-content col s12 m12 l12">
       <section class="section-1">
         <div class="header">
           <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo' %>
@@ -61,19 +61,6 @@
       </section>
       <section class="section-2 col s12 m10 offset-m1">
         <h1 class="text-center">teamhuddle features</h1><br>
-        <div class="card card-content col s12">
-          <div class="col s12 m4 center">
-            <%= image_tag 'feature-maps.png', class: "center-block img-responsive z-depth-2", alt: 'Maps Feature' %>
-            <%= link_to 'try it now', {controller: :index, action: :dropin_finder}, {:class => "btn waves-effect waves-light white-text margin-top-3 col s12 btn-try-it-now"} %>
-          </div>
-          <div class="col s12 m8 padding-left-2 padding-right-2">
-            <h2 class="text-center margin-top-none">dropin finder</h2>
-            <p>Not sure when and where your closest dropin is? We’ve got you covered! Our map and listings help you find
-              dropins around your neighborhood for volleyball, basketball, hockey, soccer and more. Browse by day and
-              skill level to find out what, where and when you want to play. We’re making it easier for you to keep
-              active!</p>
-          </div>
-        </div>
         <div class="card card-content col s12 margin-top-5">
           <div class="col s12 m4">
             <%= image_tag 'feature-users.png', class: "center-block img-responsive z-depth-2", alt: 'Maps Feature' %>
@@ -98,32 +85,21 @@
               to play on? Update your athletic profile (COMING SOON) and show what you have to offer!</p><br>
           </div>
         </div>
-      </section>
-      <section class="section-3 col s12">
-        <h1 class="text-center margin-top-5">dropin finder</h1>
-        <p class="text-center">Click on a sport to get started</p>
-        <div>
-          <div class="icon-outer">
-            <a href="dropin-finder/#volleyball">
-              <div class="sport_logo z-depth-5 icon2"></div>
-            </a>
-            <a href="dropin-finder#basketball">
-              <div class="sport_logo z-depth-5 icon1"></div>
-            </a>
-            <a href="dropin-finder#hockey">
-              <div class="sport_logo z-depth-5 icon3"></div>
-            </a>
-            <a href="dropin-finder#soccer">
-              <div class="sport_logo z-depth-5 icon4"></div>
-            </a>
-
-            <div class="sport_logo z-depth-5 icon5"></div>
-            <div class="sport_logo z-depth-5 icon6"></div>
-            <div class="sport_logo z-depth-5 icon7"></div>
-            <div class="sport_logo z-depth-5 icon8"></div>
+        <div class="card card-content col s12">
+          <div class="col s12 m4 center">
+            <%= image_tag 'feature-maps.png', class: "center-block img-responsive z-depth-2", alt: 'Maps Feature' %>
+            <%= link_to 'try it now', {controller: :index, action: :dropin_finder}, {:class => "btn waves-effect waves-light white-text margin-top-3 col s12 btn-try-it-now"} %>
+          </div>
+          <div class="col s12 m8 padding-left-2 padding-right-2">
+            <h2 class="text-center margin-top-none">dropin finder</h2>
+            <p>Not sure when and where your closest dropin is? We’ve got you covered! Our map and listings help you find
+              dropins around your neighborhood for volleyball, basketball, hockey, soccer and more. Browse by day and
+              skill level to find out what, where and when you want to play. We’re making it easier for you to keep
+              active!</p>
           </div>
         </div>
       </section>
+
     </div>
     <section class="glass">
     </section>
