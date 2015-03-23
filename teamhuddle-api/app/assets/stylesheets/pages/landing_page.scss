@@ -49,21 +49,23 @@
       font-size: 1.3em;
     }
     .btn-try-it-now{
-      line-height: 34px;
-      background-color: $light-green;
+      line-height: 50px;
+      height: 50px;
+      background-color: $light-orange;
     }
     .card{
       background-color: rgba(255,255,255, .85);
       padding-top: 20px;
       padding-bottom: 20px;
       &:nth-child(1n+1){
-        border-bottom: solid 2px $light-green;
+        border-bottom: solid 2px $light-orange;
       }
       &:nth-child(2n+2){
         border-bottom: solid 2px $light-blue;
       }
       &:nth-child(3n+3){
-        border-bottom: solid 2px $light-orange;
+        border-bottom: solid 2px $light-green;
+
       }
     }
   }

@@ -85,10 +85,10 @@
               to play on? Update your athletic profile (COMING SOON) and show what you have to offer!</p><br>
           </div>
         </div>
-        <div class="card card-content col s12">
+        <div class="card card-content col s12 margin-top-5">
           <div class="col s12 m4 center">
             <%= image_tag 'feature-maps.png', class: "center-block img-responsive z-depth-2", alt: 'Maps Feature' %>
-            <%= link_to 'try it now', {controller: :index, action: :dropin_finder}, {:class => "btn waves-effect waves-light white-text margin-top-3 col s12 btn-try-it-now"} %>
+            <%= link_to 'try it now', {controller: :index, action: :dropin_finder}, {:class => "btn waves-effect waves-light white-text margin-top-3 col s12 btn-try-it-now hide-on-small-and-down"} %>
           </div>
           <div class="col s12 m8 padding-left-2 padding-right-2">
             <h2 class="text-center margin-top-none">dropin finder</h2>
@@ -96,6 +96,9 @@
               dropins around your neighborhood for volleyball, basketball, hockey, soccer and more. Browse by day and
               skill level to find out what, where and when you want to play. We’re making it easier for you to keep
               active!</p>
+          </div>
+          <div class="hide-on-med-and-up col s12">
+            <%= link_to 'try it now', {controller: :index, action: :dropin_finder}, {:class => "btn waves-effect waves-light white-text margin-top-3 col s12 btn-try-it-now"} %>
           </div>
         </div>
       </section>
