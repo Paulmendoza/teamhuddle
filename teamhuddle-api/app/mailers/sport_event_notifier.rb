@@ -12,6 +12,8 @@ class SportEventNotifier < ActionMailer::Base
                                             WHERE se.dt_expiry > ? AND se.dt_expiry < ?
                                             ORDER BY dt_expiry ASC', Date.today - 3.weeks, Date.today + 2.weeks])
 
+    puts "#{@sport_events.count} sport events found"
+
     mail to: Rails.env.production? ? "eje.marc.daniel@gmail.com" : "akos_sebestyen@hotmail.com",
          cc: "akos_sebestyen@hotmail.com",
          subject: "#{@sport_events.count} Dropins Expiring Soon"
