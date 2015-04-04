@@ -12,6 +12,10 @@
     <td><%= @dropin.id %></td>
   </tr>
   <tr>
+    <td><b>Event ID</b></td>
+    <td><%= @dropin.event.id %></td>
+  </tr>
+  <tr>
     <td><b>Created by</b></td>
     <% if @created_by_admin.present? %>
         <td> <%= @created_by_admin.email %></td>
@@ -65,7 +69,7 @@
   </tr>
   <tr>
     <td><b>End Date</b></td>
-    <td><%= @dropin.schedule.last.strftime('%-d-%b-%y') %></td>
+    <td><%= @dropin.dt_expiry.strftime('%-d-%b-%y') %></td>
   </tr>
   <tr>
     <td><b># of Sessions</b></td>

@@ -40,6 +40,7 @@ Rails.application.routes.draw do
       end
 
       collection do
+        get 'renewals'
         get 'scrape' => 'scrape#index'
         post 'duplicate'
         post 'refresh_inactive_dropins'
