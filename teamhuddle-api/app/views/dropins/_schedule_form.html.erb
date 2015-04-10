@@ -6,7 +6,7 @@
                                            ['Thursday', 'thursday'],
                                            ['Friday', 'friday'],
                                            ['Saturday', 'saturday'],
-                                           ['Sunday', 'sunday']])) %>
+                                           ['Sunday', 'sunday']], @dropin.try(:schedule).first.start_time.strftime('%A').downcase)) %>
 </p>
 
 <p>

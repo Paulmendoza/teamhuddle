@@ -4,11 +4,7 @@
 
     <p>
       <%= f.label :name %><br>
-      <% if @is_renewal && @dropin.try(:event).present? %>
-          <span><%= @dropin.event.name %></span>
-      <% else %>
-          <%= f.text_field :name %>
-      <% end %>
+      <%= f.text_field :name %>
     </p>
 
     <%= render :partial => 'location_form', :locals => { :f => f } %>
