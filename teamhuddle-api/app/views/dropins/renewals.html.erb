@@ -4,6 +4,7 @@
 <table class="table">
 <tr>
   <td><b>Name</b></td>
+  <td><b>Location</b></td>
   <td><b>Sport</b></td>
   <td><b>Expiry</b></td>
   <td><b>Expiring In</b></td>
@@ -12,6 +13,7 @@
 <% @sport_events.each do |se| %>
     <tr>
       <td><%= link_to se.name, renew_dropin_path(se), target: :blank %></td>
+      <td><%= se.location.name %></td>
       <td><%= se.sport_id %></td>
       <td><%= se.dt_expiry.localtime %></td>
       <td><%= ((se.dt_expiry - DateTime.now) / 1.days).round.to_s %> days</td>
