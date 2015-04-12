@@ -1,0 +1,78 @@
+---
+users_001:
+  id: 1
+  email: akos@teamhuddle.ca
+  encrypted_password: $2a$10$wTW4GRXHsP.tt336X2KhzONU7Hzo6xrTVhmf61wNKrhfZCINEPqWe
+  reset_password_token: 
+  reset_password_sent_at: 
+  remember_created_at: 
+  sign_in_count: 9
+  current_sign_in_at: '2015-03-06 03:12:49.302430'
+  last_sign_in_at: '2015-03-06 03:09:09.204867'
+  current_sign_in_ip: 127.0.0.1
+  last_sign_in_ip: 127.0.0.1
+  created_at: '2015-01-28 07:05:04.221242'
+  updated_at: '2015-03-06 03:12:54.049453'
+  first_name: |
+    Akos
+  last_name: Sebestyen
+  provider: 
+  uid: 
+  image_url: 
+users_002:
+  id: 2
+  email: jon@teamhuddle.ca
+  encrypted_password: $2a$10$OCqVy1guXvS95zeroKl0mu6IoPZOKAkYQNyWksxCzzzT1kUS1TJ7G
+  reset_password_token: 
+  reset_password_sent_at: 
+  remember_created_at: 
+  sign_in_count: 2
+  current_sign_in_at: '2015-01-28 07:36:03.259653'
+  last_sign_in_at: '2015-01-28 07:17:43.049545'
+  current_sign_in_ip: 127.0.0.1
+  last_sign_in_ip: 127.0.0.1
+  created_at: '2015-01-28 07:17:43.034390'
+  updated_at: '2015-01-28 07:38:22.031648'
+  first_name: Jon
+  last_name: Something
+  provider: 
+  uid: 
+  image_url: 
+users_003:
+  id: 3
+  email: marc@teamhuddle.ca
+  encrypted_password: $2a$10$IV0I0ombfppvvhIjMPLgAu/cMjHTkvmuuxjrgK.udhbeG14iQWGb2
+  reset_password_token: 
+  reset_password_sent_at: 
+  remember_created_at: 
+  sign_in_count: 3
+  current_sign_in_at: '2015-01-30 02:26:17.020272'
+  last_sign_in_at: '2015-01-28 07:49:53.773008'
+  current_sign_in_ip: 127.0.0.1
+  last_sign_in_ip: 127.0.0.1
+  created_at: '2015-01-28 07:38:42.597776'
+  updated_at: '2015-01-30 02:26:44.344002'
+  first_name: Marc
+  last_name: Eje
+  provider: 
+  uid: 
+  image_url: 
+users_004:
+  id: 8
+  email: akos_sebestyen@hotmail.com
+  encrypted_password: $2a$10$0CEZljPM/fG7MiN.uzFtH.PL52VkbA2pQ953WqFqgayG16w1DlIEq
+  reset_password_token: 
+  reset_password_sent_at: 
+  remember_created_at: 
+  sign_in_count: 7
+  current_sign_in_at: '2015-03-14 04:26:30.503053'
+  last_sign_in_at: '2015-03-12 01:06:47.361224'
+  current_sign_in_ip: 127.0.0.1
+  last_sign_in_ip: 127.0.0.1
+  created_at: '2015-03-06 03:13:30.754265'
+  updated_at: '2015-03-14 04:26:30.505140'
+  first_name: Akos
+  last_name: Sebestyen
+  provider: facebook
+  uid: '10152602735006237'
+  image_url: http://graph.facebook.com/10152602735006237/picture

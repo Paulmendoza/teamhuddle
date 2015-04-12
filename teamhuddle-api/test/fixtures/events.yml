@@ -252,7 +252,7 @@ events_032:
   name: Mon - Champlain (Winter)
   organization_id: 5
   location_id: 40
-  comments: "$49 the whole season"
+  comments: $49 the whole season
   created_at: '2014-12-02 01:11:53.771448'
   updated_at: '2014-12-02 01:11:53.771448'
 events_033:
@@ -425,12 +425,12 @@ events_053:
   updated_at: '2014-12-04 19:01:27.950703'
 events_054:
   id: 135
-  name: Fri - Brit (Win)
+  name: Fri - Brit (Winona)
   organization_id: 5
   location_id: 35
   comments: ''
   created_at: '2014-12-04 19:03:01.939746'
-  updated_at: '2014-12-04 19:03:01.939746'
+  updated_at: '2015-01-19 06:02:20.521223'
 events_055:
   id: 136
   name: Tue - Brit (Win)
@@ -3676,3 +3676,27 @@ events_441:
   comments: ''
   created_at: '2015-01-09 01:57:00.071611'
   updated_at: '2015-01-09 01:57:00.071611'
+events_442:
+  id: 589
+  name: TEST vball
+  organization_id: 11
+  location_id: 122
+  comments: ''
+  created_at: '2015-01-14 01:31:42.301804'
+  updated_at: '2015-01-14 01:31:42.301804'
+events_443:
+  id: 590
+  name: Test vbaasdasd
+  organization_id: 11
+  location_id: 122
+  comments: ''
+  created_at: '2015-01-14 01:39:19.322410'
+  updated_at: '2015-01-14 01:39:19.322410'
+events_444:
+  id: 591
+  name: ''
+  organization_id: 11
+  location_id: 122
+  comments: ''
+  created_at: '2015-03-13 07:25:04.372065'
+  updated_at: '2015-03-13 07:25:04.372065'

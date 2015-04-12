@@ -11,6 +11,8 @@
     <%= render :partial => 'schedule_form', :locals => { :f => f } %>
     <%= render :partial => 'optional_form', :locals => { :f => f } %>
 
+    <%= f.number_field :event_id, hidden: true %>
+
     <p>
       <%= f.submit %>
     </p>

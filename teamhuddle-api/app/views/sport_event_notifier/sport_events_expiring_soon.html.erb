@@ -14,7 +14,7 @@
         <hr>
         <% @sport_events.each do |se| %>
             <tr>
-              <td><%= link_to se.name, dropin_path(se.id), target: :blank %></td>
+              <td><a href="http://www.teamhuddle.ca/admin/dropins/<%= se.id%>" target="_blank"><%= se.name %></a></td>
               <td><%= se.sport_id %></td>
               <td><%= se.dt_expiry.localtime %></td>
               <td><%= ((se.dt_expiry - DateTime.now) / 1.days).round.to_s %> days</td>

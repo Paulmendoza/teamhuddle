@@ -5,7 +5,7 @@ class SportEvent < ActiveRecord::Base
 
   attr_readonly :active
 
-  belongs_to :event, :dependent => :delete
+  belongs_to :event
   belongs_to :sport
   belongs_to :admin
   has_many :archived_sport_events
