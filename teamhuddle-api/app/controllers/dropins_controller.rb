@@ -140,6 +140,9 @@ class DropinsController < ApplicationController
 
     previous_event = Event.find(params[:sport_event][:event_id])
 
+    previous_event.name = params['sport_event']['name']
+    previous_event.save
+
     temp_sport_event = SportEvent.new(dropin_params)
     temp_sport_event.sport_id = params[:sport_event][:sport]
     temp_sport_event.skill_level = params[:skill_level]
@@ -169,7 +172,7 @@ class DropinsController < ApplicationController
                                                                                 ORDER BY dt_expiry DESC
                                                                                 LIMIT 1)
                                             WHERE se.dt_expiry > ? AND se.dt_expiry < ?
-                                            ORDER BY dt_expiry ASC', Date.today - 1.weeks, Date.today + 2.weeks])
+                                            ORDER BY dt_expiry ASC', Date.today - 3.weeks, Date.today + 2.weeks])
   end
 
   def scrape
