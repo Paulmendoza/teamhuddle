@@ -48,6 +48,8 @@ Rails.application.routes.draw do
         get 'renewals'
         get 'scrape' => 'scrape#index'
         post 'duplicate'
+        post 'duplicate-many'
+        post 'bulk-renew'
         post 'refresh_inactive_dropins'
       end
     end

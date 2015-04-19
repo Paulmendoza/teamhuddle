@@ -2,13 +2,12 @@
 # To change this template file, choose Tools | Templates
 # and open the template in the editor.
 
-Rails.application.config.assets.precompile += %w( application.css )
-Rails.application.config.assets.precompile += %w( style.css )
+Rails.application.config.assets.precompile += %w( app.css )
+Rails.application.config.assets.precompile += %w( admin_style.css )
 Rails.application.config.assets.precompile += %w( admin/admin.js )
 Rails.application.config.assets.precompile += %w( admin/adminAngular.js )
 Rails.application.config.assets.precompile += %w( animate.css )
 Rails.application.config.assets.precompile += %w( typography.css )
-Rails.application.config.assets.precompile += %w( static_pages.css )
 
 Rails.application.config.assets.precompile += %w( base_app.js )
 Rails.application.config.assets.precompile += %w( base_angular_app.js )

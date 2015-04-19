@@ -1,51 +1,82 @@
-<div class="padding-top-50">
-    <div class="col-xs-12" id="dropin-view-btn">
-        <div class="col-xs-5 col-sm-3">
-            <a ng-click="backToList()" href="/dropin-finder#/{{dropin.sport_event.sport_id}}" class="btn btn-default">
-                <div class="glyphicon glyphicon-chevron-left hidden-xs" aria-hidden="true"></div>
-                back to list
-            </a>
-        </div>
-        <div class="col-xs-5 col-xs-offset-1 col-sm-3 hidden-lg hidden-md" ng-if="isSelected(dropin.id)">
-            <a class="btn col-xs-12 btn-info" id="show-on-map" ng-click="$event.stopPropagation(); switchToMap()">
-                show on map
-            </a>
+<div class="dropin-view">
+    <div class="row margin-top-2 col s12 button-list">
+        <div class="col s12">
+            <div class="col s6">
+                <a ng-click="backToList()" href="/dropin-finder#/{{dropin.sport_event.sport_id}}" class="btn waves-effect waves-light">
+                    <div class="glyphicon glyphicon-chevron-left hidden-xs" aria-hidden="true"></div>
+                    back to list
+                </a>
+            </div>
+            <div class="col s6 button-list hidden-lg hidden-md hidden-sm" ng-if="isSelected(dropin.id)">
+                <a class="btn waves-effect waves-light" id="show-on-map" ng-click="$event.stopPropagation(); switchToMap()">
+                    show on map
+                </a>
+            </div>
         </div>
     </div>
-    <h1 class="padding-top-50" ng-if="dropinFetchFailed">{{dropinFetchFailedReason}}</h1>
+    <h1 ng-if="dropinFetchFailed">{{dropinFetchFailedReason}}</h1>
 
-    <div ng-show="dropin.location.name !== undefined" class="dropin-view">
-        <div class="col-md-12">
-            <h1>{{dropin.location.name}} <small> {{dropin.distanceFromUser}}</small></h1>
-            <span ng-show="dropin.expired" class="label label-warning">EXPIRED</span><br>
-        <span>
-            <a href="http://maps.google.com/?q={{dropin.location.address}}" target="map">{{dropin.location.address}}</a>
-        </span>
-            <br>
-            <span>{{dropin.phone}}</span>
-            <br>
-            <span>{{dropin.organization.email}}</span>
-            <br>
-            <hr>
-        <span id="dropin-event-info">{{dropin.datetime_start| date: 'EEEE'}} @
-            {{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}
-            <br>{{dropin.sport_event.skill_level}} {{dropin.sport_event.type | capitalize }} {{dropin.sport_event.sport_id | capitalize}}
-        </span>
-            <br>
-            <hr>
-            <div class="dropin-event-div col-xs-6">
-                <h3 class="drop-finder-minheaders">Schedule Until</h3>
-                <h5 class="drop-finder-minpara">{{dropin.sport_event.schedule_until | date:'MMM d'}}</h5>
+    <div ng-show="dropin.location.name !== undefined" class="row">
+        <div class="col s12 inner-dropin-view">
+            <div class="row col 12">
+                <div class="row col s12">
+                    <h1>{{dropin.location.name}} <small> {{dropin.distanceFromUser}}</small></h1>
+                </div>
             </div>
-            <div class="dropin-event-div col-xs-6">
-                <h3 class="drop-finder-minheaders">Spots Available</h3>
-                <h5 class="drop-finder-minpara">{{ dropin.sport_events.spots | empty_to_na }}</h5>
+            <span ng-show="dropin.expired" class="label label-warning">EXPIRED</span>
+            <div class="row col s12">
+                <div class="col s12 m6">
+                    <div class=" col s12">
+                <span>
+                    <a href="http://maps.google.com/?q={{dropin.location.address}}" target="map">{{dropin.location.address}}</a>
+                </span>
+                        <br>
+                        <span>{{dropin.phone}}</span>
+                        <br>
+                        <span>{{dropin.organization.email}}</span>
+                        <br>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class=" col s12">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
             </div>
-            <div class="dropin-event-div col-xs-12" ng-hide="!dropin.event.comments">
-                <br>
-                <hr>
-                <h3 class="drop-finder-minheaders">Notes</h3>
-                <h5 class="drop-finder-minpara">{{dropin.event.comments}}</h5>
+            <div class="row col s12">
+                <hr class="margin-top-1 margin-bottom-1">
+                <div class="col s12 m8">
+                    <div class=" col s12">
+                        <h3>{{dropin.datetime_start| date: 'EEEE'}} @
+                            {{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}
+                            <br>{{dropin.sport_event.skill_level}} {{dropin.sport_event.type | capitalize }} {{dropin.sport_event.sport_id | capitalize}}
+                        </h3>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class=" col s12">
+                        <h3>Spots Available</h3>
+                        <h5>{{ dropin.sport_events.spots | empty_to_na }}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row col s12">
+                <hr class="margin-top-1 margin-bottom-1">
+                <div class="col s12 m6">
+                    <div class=" col s12">
+                        <h3>Schedule Until</h3>
+                        <h5>{{dropin.sport_event.schedule_until | date:'MMM d'}}</h5>
+                    </div>
+                </div>
+                <div class="col s12 m6" ng-hide="!dropin.event.comments">
+                    <div class=" col s12">
+                        <h3>Notes</h3>
+                        <h5>{{dropin.event.comments}}</h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

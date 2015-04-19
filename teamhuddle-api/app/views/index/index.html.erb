@@ -1,125 +1,106 @@
 <% content_for :title, "Teamhuddle | Connecting you with your sports community" %>
 
-<div class="container-fluid padding-top-70" ng-app="BaseApp"  ng-cloak>
+<div ng-app="BaseApp"  ng-cloak>
 
-  <div class="landing-page">
-    <div id="welcome-section">
-      <section class="header-outer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <div class="landing-page row ">
+    <!--<div class="login-wrapper col s12 m12 l5">-->
+      <!--<div class="login card col s12 m12 l3">-->
+        <!--<div class="col card-content s12">-->
+        <!--<span class="text-center">-->
+          <!--<h2>Find games. Find players. Find your passion</h2>-->
+          <!--<h3>What's on your athletic resume</h3>-->
+        <!--</span>-->
+          <!--<div class="left-section col s12">-->
+            <!--<h1>Sign Up</h1>-->
+            <!--<form class="col s12">-->
+              <!--<div class="input-field col s12 m8 offset-m2 l12">-->
+                <!--<input id="fullname" type="text" class="validate">-->
+                <!--<label for="fullname">Full Name</label>-->
+              <!--</div>-->
+              <!--<div class="input-field col s12 m8 offset-m2 l12">-->
+                <!--<input id="username2" type="text" class="validate">-->
+                <!--<label for="username2">Username</label>-->
+              <!--</div>-->
+              <!--<div class="input-field col s12 m8 offset-m2 l12">-->
+                <!--<input id="password2" type="password" class="validate">-->
+                <!--<label for="password2">Password</label>-->
+              <!--</div>-->
+              <!--<button class="btn waves-effect waves-light col s12 m10  blue-button offset-m1" type="submit" name="action">Create Profile-->
+                <!--<i class="mdi-content-send right"></i>-->
+              <!--</button>-->
+            <!--</form>-->
+          <!--</div>-->
+          <!--<div class="right-section col s12 text-center">-->
+            <!--<h5>Signup with Facebook or Google+</h5>-->
+            <!--<button class="btn waves-effect waves-light col s12 m10 blue-button offset-m1" type="submit" name="action">Facebook-->
+              <!--<i class="mdi-content-send right"></i>-->
+            <!--</button>-->
+            <!--<br>-->
+            <!--<br>-->
+            <!--<hr>-->
+            <!--<button class="btn waves-effect waves-light col s12 m10 blue-button offset-m1" type="submit" name="action">Google-->
+              <!--<i class="mdi-content-send right"></i>-->
+            <!--</button>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <div class="scrolling-content col s12 m12 l12">
+      <section class="section-1">
         <div class="header">
           <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo' %>
-          <div class="text-center">
+          <div class="text-center col s10 offset-s1">
             <h1>teamhuddle</h1>
-            <h4 class="intro">Connecting you with your sports community</h4>
+            <h4>Connecting you with your sports community</h4>
 
-            <h3 class="slogan">Find the sports you love playing and the players you love playing with!</h3>
+            <h3>Find the sports you love playing and the players you love playing with!</h3>
           </div>
         </div>
-        <div class="mailer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <div class="mailer-inner text-center col-sm-6 col-xs-12 col-sm-offset-3" ng-controller="landing-page">
-            <h4>Submit your e-mail below to receive front of the line access to our beta</h4>
-            <br>
 
-            <form ng-submit="submit()" ng-class="{ animateSlide: success && submitted && !processing }"> <!--ng-hide="success && submitted && !processing" -->
-              <input type="email" ng-model="email" class="form-control"/>
-              <input value="submit" type="submit" class="btn btn-info"/>
-            </form>
-            <!--END-->
-            <br>
-
-            <!-- Show this div while waiting for a response from the server -->
-            <div class="text-center" ng-show="processing">
-              <%= image_tag("loading.gif", alt: "loading") %>
-            </div>
-
-            <!-- Show this div on success -->
-            <div class="panel panel-success" ng-if="success && submitted && !processing">
-              <p>Thanks for signing up, {{user.email}}!</p>
-            </div>
-
-            <!-- Show this div if there was an error -->
-            <div class="panel panel-warn" ng-if="!success && submitted && !processing && errorMessage === ''">
-              <p>There was an error processing your request. Sorry!</p>
-            </div>
-
-            <!-- Show this div if there was an error, but we have a specific message for it -->
-            <div class="panel panel-warning" ng-if="!success && submitted && !processing && errorMessage !== ''">
-              <p>{{errorMessage}}</p>
-            </div>
-
-          </div>
-        </div>
-        <p id="credit">Justin Ho Photography</p>
-
+        <p class="col s12 credits">Justin Ho Photography</p>
       </section>
-      <!--<section class="mailer-outer">-->
-
-      <!--</section>-->
-    </div>
-    <section class="feature-outer">
-      <div class="feature col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <section class="section-2 col s12 m10 offset-m1">
         <h1 class="text-center">teamhuddle features</h1><br>
+        <div class="card card-content col s12 margin-top-5">
+          <div class="col s12 m4">
+            <%= image_tag 'feature-users.png', class: "center-block img-responsive z-depth-2", alt: 'Maps Feature' %>
+          </div>
+          <div class="col s12 m8 padding-left-2 padding-right-2">
+            <h2 class="text-center margin-top-none">check in</h2>
 
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center-block">
-          <%= image_tag 'feature-maps.png', class: "center-block img-responsive", alt: 'Maps Feature' %>
-          <h2 class="text-center feature1">dropin finder</h2>
-
-          <p>Not sure when and where your closest dropin is? We’ve got you covered! Our map and listings help you find
-            dropins around your neighborhood for volleyball, basketball, hockey, soccer and more. Browse by day and
-            skill level to find out what, where and when you want to play. We’re making it easier for you to keep
-            active!</p>
-          <%= link_to 'try it now', {controller: :index, action: :dropin_finder}, {:class => "btn btn-success", :id => "try-it-now"} %>
+            <p>Plan ahead to make your next dropin worthwhile. Know which ones are popular, or which ones have space for
+              you and your group. Whether you’re an athlete perfecting his/her craft, or social butterfly who enjoys
+              seeing and meeting new players, the check in and comments will give you more insight on the dropin. </p>
+            <br>
+          </div>
         </div>
+        <div class="card card-content col s12 margin-top-5">
+          <div class="col s12 m4">
+            <%= image_tag 'feature-finder.png', class: "center-block img-responsive z-depth-2", alt: 'Maps Feature' %>
+          </div>
+          <div class="col s12 m8 padding-left-2 padding-right-2">
+            <h2 class="text-center margin-top-none">find a player</h2>
+            <p>“Find a Player” helps you choose the players you are missing. Find subs for your league or familiar
+              faces to play in dropins with! Update your athletic profile and start playing!</p><br>
+          </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center-block">
-          <%= image_tag 'feature-users.png', class: "center-block img-responsive", alt: 'Maps Feature' %>
-          <h2 class="text-center feature3">check in</h2>
-
-          <p>Plan ahead to make your next dropin worthwhile. Know which ones are popular, or which ones have space for
-            you and your group. Whether you’re an athlete perfecting his/her craft, or social butterfly who enjoys
-            seeing and meeting new players, the check in and comments will give you more insight on the dropin. </p>
-          <br>
         </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 center-block">
-          <%= image_tag 'feature-finder.png', class: "center-block img-responsive", alt: 'Maps Feature' %>
-          <h2 class="text-center feature2">find a player</h2>
-
-          <p>Tired of paying penalties for lack of players? Never be short-benched again! “Find a Player” helps you
-            choose the players you need. Find a sub for your league or familiar faces to do dropins with! Need a team
-            to play on? Update your athletic profile (COMING SOON) and show what you have to offer!</p><br>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="sport_logos-outer">
-      <h1 class="text-center">dropin finder</h1>
-
-      <section class="default-sport_logos-outer">
-        <div class="default-sport-logos-inner">
-          <div class="default-icon-outer">
-            <a href="dropin-finder/#volleyball">
-              <div class="sport_logo icon2"></div>
-            </a>
-            <a href="dropin-finder#basketball">
-              <div class="sport_logo icon1"></div>
-            </a>
-            <a href="dropin-finder#hockey">
-              <div class="sport_logo icon3"></div>
-            </a>
-            <a href="dropin-finder#soccer">
-              <div class="sport_logo icon4"></div>
-            </a>
-
-            <div class="sport_logo icon5"></div>
-            <div class="sport_logo icon6"></div>
-            <div class="sport_logo icon7"></div>
-            <div class="sport_logo icon8"></div>
+        <div class="card card-content col s12 margin-top-5">
+          <div class="col s12 m4 center">
+            <%= image_tag 'feature-maps.png', class: "center-block img-responsive z-depth-2", alt: 'Maps Feature' %>
+          </div>
+          <div class="col s12 m8 padding-left-2 padding-right-2">
+            <h2 class="text-center margin-top-none">dropin finder</h2>
+            <p>Our map and listings help you find dropins around your neighborhood.
+              Browse by day and skill level to find out what, where and when you want to play. </p>
+            <%= link_to 'try it now', {controller: :index, action: :dropin_finder}, {:class => "btn waves-effect waves-light white-text margin-top-3 col s12 btn-try-it-now"} %>
           </div>
         </div>
       </section>
-    </section>
 
+    </div>
+    <section class="glass">
+    </section>
   </div>
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
 

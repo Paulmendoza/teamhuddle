@@ -126,6 +126,12 @@ class DropinsController < ApplicationController
     @dropin = SportEvent.includes(:event).find(params[:id])
   end
 
+  def bulk_renew
+    arr_ids = params.keys.select {|x| x.to_s.match('dropin-')}.map {|x| x.sub('dropin-','').to_i}
+
+    @sport_events = SportEvent.includes(:event).find(arr_ids)
+  end
+
   def duplicate
     # get the start date and end date NOTE: adds time as well to startime
     start_date = Time.new(params[:start_date][:year], params[:start_date][:month], params[:start_date][:day],
@@ -163,6 +169,48 @@ class DropinsController < ApplicationController
     end
   end
 
+  def duplicate_many
+    # Get the dates
+    start_date = Time.new(params[:start_date][:year], params[:start_date][:month], params[:start_date][:day])
+    end_date = Time.new(params[:end_date][:year], params[:end_date][:month], params[:end_date][:day])
+
+    @dropins = []
+
+    SportEvent.includes(:event).find(params['dropin_ids'].keys[0].split(',').map {|x| x.to_i}).each do |se|
+
+      temp_start_date = start_date.change(hour: se.schedule.first.hour, min: se.schedule.first.min)
+
+      # create a new schedule setting the duration
+      schedule = Schedule.new(temp_start_date,
+                              :end_time => temp_start_date.change(hour: se.schedule.end_time.hour, min: se.schedule.end_time.min)) do |s|
+                #add weekly recurrence ruling based on the day of the week selected
+                s.add_recurrence_rule(Rule.weekly.day(temp_start_date.strftime('%A').downcase.intern).until(end_date))
+      end
+
+      previous_event = se.event
+
+      temp_sport_event = se.dup
+      temp_sport_event.schedule = schedule
+
+      dropin = SportEventWrapper.renew(previous_event,
+                                        temp_sport_event,
+                                        'dropin',
+                                        current_admin.id)
+
+      @dropins.push(dropin)
+
+    end
+
+    error_dropins = @dropins.select {|x| x[:errors].present? }
+
+    if error_dropins.count > 0
+      render json: error_dropins.map {|x| { name: x[:event].name, error: x[:errors] }}
+    else
+      redirect_to renewals_dropins_path
+    end
+
+  end
+
   def renewals
 
     @sport_events = SportEvent.find_by_sql(['SELECT se.* FROM events AS e
@@ -172,7 +220,7 @@ class DropinsController < ApplicationController
                                                                                 ORDER BY dt_expiry DESC
                                                                                 LIMIT 1)
                                             WHERE se.dt_expiry > ? AND se.dt_expiry < ?
-                                            ORDER BY dt_expiry ASC', Date.today - 3.weeks, Date.today + 2.weeks])
+                                            ORDER BY dt_expiry ASC', Date.today - 6.weeks, Date.today + 2.weeks])
   end
 
   def scrape
