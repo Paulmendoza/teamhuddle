@@ -8,10 +8,9 @@
 
 //= require_tree ../templates
 
-//= require dropin_finder/app.js
-//= require dropin_finder/services.js
-//= require dropin_finder/filters.js
-//= require dropin_finder/directives.js
-//= require dropin_finder/dropinsController
-//= require dropin_finder/dropinController
+//= require dropin_finder/dropinFinder.app.js
+//= require dropin_finder/dropinFinder.services.js
+//= require dropin_finder/dropinFinder.filters.js
+//= require dropin_finder/dropinFinder.dropins.controller.js.erb
+//= require dropin_finder/dropinFinder.dropin.controller.js
 

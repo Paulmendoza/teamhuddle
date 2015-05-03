@@ -10,6 +10,7 @@ Rails.application.config.assets.precompile += %w( animate.css )
 Rails.application.config.assets.precompile += %w( typography.css )
 
 Rails.application.config.assets.precompile += %w( base_app.js )
+Rails.application.config.assets.precompile += %w( app.js )
 Rails.application.config.assets.precompile += %w( base_angular_app.js )
 Rails.application.config.assets.precompile += %w( dropin_finder_app.js )
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="TeamHuddle">
 <head>
   <title><%= yield(:title) %></title>
   <%= stylesheet_link_tag  'app',
@@ -127,6 +127,7 @@
     ga('send', 'pageview');
 </script>
 <%= javascript_include_tag 'base_app' %>
+<%= javascript_include_tag 'app' %>
 
 </body>
 </html>
