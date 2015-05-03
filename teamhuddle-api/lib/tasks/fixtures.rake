@@ -8,7 +8,7 @@ namespace :db do
     task :dump => :environment do 
       sql = "SELECT * FROM %s" 
       skip_tables = ["schema_migrations"] 
-      ActiveRecord::Base.establish_connection(:development) 
+      ActiveRecord::Base.establish_connection(:production)
       (ActiveRecord::Base.connection.tables - skip_tables).each do |table_name| 
       #("users").each do |table_name| 
         i = "000" 
