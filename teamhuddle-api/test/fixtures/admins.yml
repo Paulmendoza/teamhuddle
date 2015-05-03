@@ -76,13 +76,13 @@ admins_006:
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: '2015-04-24 23:51:47.271691'
-  sign_in_count: '74'
-  current_sign_in_at: '2015-04-29 17:33:18.334321'
-  last_sign_in_at: '2015-04-29 17:24:25.424089'
-  current_sign_in_ip: 199.60.19.194
-  last_sign_in_ip: 72.143.229.21
+  sign_in_count: '75'
+  current_sign_in_at: '2015-05-03 23:31:24.592943'
+  last_sign_in_at: '2015-04-29 17:33:18.334321'
+  current_sign_in_ip: 24.244.23.24
+  last_sign_in_ip: 199.60.19.194
   created_at: '2014-11-13 04:49:21.947904'
-  updated_at: '2015-04-29 17:33:18.342224'
+  updated_at: '2015-05-03 23:31:24.599061'
 admins_007:
   id: '8'
   email: danny@teamhuddle.ca
