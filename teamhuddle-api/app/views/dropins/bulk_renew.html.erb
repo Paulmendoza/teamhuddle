@@ -1,0 +1,28 @@
+<h1>Bulk Renew</h1>
+<h3>Following dropins: </h3>
+<ul>
+<% @sport_events.each do |se| %>
+    <li><%=se.event.name %></li>
+<% end %>
+</ul>
+
+<p>Note: the first dropins information from the list is populating this form</p>
+<%= form_for @dropin = @sport_events[0], method: :post, url: duplicate_many_dropins_url do |f| %>
+
+    <p>
+      <%= label_tag(:date, "Start Date") %><br>
+      <%= select_date(@dropin.try(:schedule) == nil ? Date.today : @dropin.schedule.start_date, prefix: :start_date) %>
+    </p>
+
+    <p>
+      <%= label_tag(:date, "End Date") %><br>
+      <%= select_date(@dropin.try(:schedule) == nil ? Date.today : @dropin.schedule.last, prefix: :end_date) %>
+    </p>
+
+    <%= text_field(:dropin_ids, @sport_events.map {|x| x.id}.join(','), hidden: :true) %>
+
+    <p>
+      <%= f.submit %>
+    </p>
+
+<% end %>

@@ -10,7 +10,7 @@ class SportEventNotifier < ActionMailer::Base
                                                                                 ORDER BY dt_expiry DESC
                                                                                 LIMIT 1)
                                             WHERE se.dt_expiry > ? AND se.dt_expiry < ?
-                                            ORDER BY dt_expiry ASC', Date.today - 3.weeks, Date.today + 2.weeks])
+                                            ORDER BY dt_expiry ASC', Date.today - 6.weeks, Date.today + 2.weeks])
 
     puts "#{@sport_events.count} sport events found"
 

@@ -66,7 +66,6 @@ class SportEventWrapper
         dropin_instance.sport_event_id = current_dropin[:sport_event].id
         dropin_instance.datetime_start = i.start_time.getlocal
         dropin_instance.datetime_end = i.end_time.getlocal
-        dropin_instance.event_id = current_dropin[:event].id
 
         unless dropin_instance.save
           current_dropin[:errors] = dropin_instance.errors
