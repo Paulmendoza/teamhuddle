@@ -23,7 +23,7 @@ DropinFinder.controller('dropins', [
         $scope.loadingDropins = false;
         $scope.mapMobileToggle = false;
         $scope.userLocationEnabled = true;
-        $scope.admin_signed_in = !!currentAdmin;
+        $scope.admin_signed_in = false;//!!currentAdmin;
         $scope.isSelected = function (dropin_id) {
             $scope.markerWrappers.currentlyOpen === dropin_id;
         };

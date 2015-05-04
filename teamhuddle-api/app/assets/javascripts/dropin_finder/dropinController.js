@@ -14,7 +14,7 @@ DropinFinder.controller('dropin', ['$scope','$location', '$routeParams','Reviews
     $scope.dropinFetchFailed = false;
     $scope.dropinFetchFailed = "";
 
-    $scope.currentUser = currentUser;
+    //$scope.currentUser = currentUser;
 
     // if we don't have this dropin
     $scope.dropin = DropinsDataModel.GetDropinBySportEventId(parseInt($routeParams.dropin_id));
