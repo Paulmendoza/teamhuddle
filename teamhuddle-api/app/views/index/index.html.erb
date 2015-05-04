@@ -1,61 +1,20 @@
-<% content_for :title, "Teamhuddle | Connecting you with your sports community" %>
-<div ng-cloak>
-  <div class="landing-page row ">
-    <div class="scrolling-content col s12 m12 l12">
-      <section class="section-1">
-        <div class="header">
-          <%= image_tag 'logo-compressed.png', class: "logo center-block", alt: 'teamhuddle_logo' %>
-          <div class="text-center col s10 offset-s1">
-            <h1>teamhuddle</h1>
-            <h4>Connecting you with your sports community</h4>
-
-            <h3>Find the sports you love playing and the players you love playing with!</h3>
-          </div>
-        </div>
-
-        <p class="col s12 credits">Justin Ho Photography</p>
-      </section>
-      <section class="section-2 col s12 m10 offset-m1">
-        <h1 class="text-center">teamhuddle features</h1><br>
-        <div class="card card-content col s12 margin-top-5">
-          <div class="col s12 m4">
-            <%= image_tag 'feature-users.png', class: "center-block img-responsive z-depth-2", alt: 'Maps Feature' %>
-          </div>
-          <div class="col s12 m8 padding-left-2 padding-right-2">
-            <h2 class="text-center margin-top-none">check in</h2>
-
-            <p>Plan ahead to make your next dropin worthwhile. Know which ones are popular, or which ones have space for
-              you and your group. Whether you’re an athlete perfecting his/her craft, or social butterfly who enjoys
-              seeing and meeting new players, the check in and comments will give you more insight on the dropin. </p>
-            <br>
-          </div>
-        </div>
-        <div class="card card-content col s12 margin-top-5">
-          <div class="col s12 m4">
-            <%= image_tag 'feature-finder.png', class: "center-block img-responsive z-depth-2", alt: 'Maps Feature' %>
-          </div>
-          <div class="col s12 m8 padding-left-2 padding-right-2">
-            <h2 class="text-center margin-top-none">find a player</h2>
-            <p>“Find a Player” helps you choose the players you are missing. Find subs for your league or familiar
-              faces to play in dropins with! Update your athletic profile and start playing!</p><br>
-          </div>
-
-        </div>
-        <div class="card card-content col s12 margin-top-5">
-          <div class="col s12 m4 center">
-            <%= image_tag 'feature-maps.png', class: "center-block img-responsive z-depth-2", alt: 'Maps Feature' %>
-          </div>
-          <div class="col s12 m8 padding-left-2 padding-right-2">
-            <h2 class="text-center margin-top-none">dropin finder</h2>
-            <p>Our map and listings help you find dropins around your neighborhood.
-              Browse by day and skill level to find out what, where and when you want to play. </p>
-            <%= link_to 'try it now', {controller: :index, action: :dropin_finder}, {:class => "btn waves-effect waves-light white-text margin-top-3 col s12 btn-try-it-now"} %>
-          </div>
-        </div>
-      </section>
-
-    </div>
-    <section class="glass">
-    </section>
+<nav ui-view="nav"></nav>
+<div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path 'huddle-3.png' %>">
+  <div class="nav-buffer col s12"></div>
+  <div ui-view="main"></div>
+</div>
+<div class="footer text-center row">
+  <div class="col s6">
+    <span>
+        <h5 class="margin-none left">&copy; Teamhuddle Athletics Inc.</h5>
+    </span>
+  </div>
+  
+  <div class="col s6">
+    <span class="right">
+        <a href="http://www.facebook.com/teamhuddle">Facebook</a> |
+        <a href="http://www.twitter.com/tmhuddle">Twitter</a> |
+        <a href="http://www.instagr.am/tmhuddle">Instagram</a>
+    </span>
   </div>
 </div>

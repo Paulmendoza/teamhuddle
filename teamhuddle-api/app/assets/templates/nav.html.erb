@@ -1,0 +1,25 @@
+
+<div class="nav-wrapper">
+  <a ui-sref="home.index" class="brand-logo">
+    <div class="row text-center">
+      <%= image_tag 'logo-compressed.png', alt: 'teamhuddle_logo'%>
+    </div>
+  </a>
+  <a href="#" data-activates="mobile-demo" class="button-collapse margin-left-3"><i class="mdi-navigation-menu"></i></a>
+  <ul class="side-nav" id="mobile-demo">
+    <li><a ui-sref="home.dropin">Dropin Finder</a></li>
+    <li><a ui-sref="home.about">About</a></li>
+    <li><a ui-sref="home.contact">Contact</a></li>
+  </ul>
+  <form class="right hide-on-med-and-down margin-right-5" role="login">
+    <div class="row">
+      <div class="col s12">
+        <ul class="right hide-on-med-and-down">
+          <li><a ui-sref="home.dropin">Dropin Finder</a></li>
+          <li><a ui-sref="home.about">About</a></li>
+          <li><a ui-sref="home.contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </form>
+</div>

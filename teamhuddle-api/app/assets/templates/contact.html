@@ -1,0 +1,105 @@
+<div class="container">
+  <br>
+
+  <div class="contact-us margin-top-3">
+
+    <div class="row card card-content">
+
+      <section class="contact-us-text row">
+        <div class="col m8 offset-m2 row">
+          <div class="col m5">
+            <h1>contact us</h1>
+          </div>
+        </div>
+        <div class="col m8 offset-m2">
+        <p>Teamhuddle has a complete open door policy! We are always looking for suggestions, and are also expanding our
+          internal team. At this time, we are on the hunt for community ambassadors that understand the value of
+          physical activity and the importance of a strong social media presence. </p>
+
+        <p>Feedback from our network is also very
+          important to us, so we'd love to chat. Please don't hesitate to send us an email below.</p>
+        </div>
+      </section>
+      <div class="form-wrapper col m8 offset-m2" ng-cloak>
+        <!-- Show this div while waiting for a response from the server -->
+        <div ng-if="processing">
+          <p>please wait..</p>
+        </div>
+        <!-- Show this div on success -->
+        <div class="panel panel-success" ng-if="contact.success && contact.submitted && !contact.processing">
+          <p>You'll hear from us soon, {{contact.data.first_name}} {{contact.data.last_name}}!</p>
+        </div>
+
+        <!-- Show this div if there was an error -->
+        <div class="panel panel-warn" ng-if="!contact.success && contact.submitted && !contact.processing">
+          <p>There was an error processing your request. Sorry!</p>
+        </div>
+        <form class="form-horizontal contact-us-form" ng-submit="contact.submit()" ng-hide="contact.success && contact.submitted && !contact.processing">
+          <div class="form-group">
+            <label for="firstName" class="col s12 m2 control-label">First name</label>
+
+            <div class="col s12 m10">
+              <input type="text" class="form-control" id="firstName" placeholder="" ng-model="contact.form_data.first_name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="lastName" class="col s12 m2 control-label">Last name</label>
+
+            <div class="col s12 m10">
+              <input type="text" class="form-control" id="lastName" placeholder="" ng-model="contact.form_data.last_name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col s12 m2 control-label">Email</label>
+
+            <div class="col s12 m10">
+              <input type="text" class="form-control" id="email" placeholder="" ng-model="contact.form_data.email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comments" class="col s12 m2 control-label">Comments</label>
+
+            <div class="col s12 m10">
+              <textarea class="form-control" id="comment-id" ng-model="contact.form_data.comments"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col s12 m10 offset-m2">
+              <button type="submit" class="btn waves-effect waves-light blue pull-right col s12 blue-button">Send</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="padding-top-50 padding-bottom-70 col s10 offset-s1 m8 offset-m2 text-center margin-top-3">
+        <p class="disclaimer">
+          The information on Teamhuddle is gathered from various organizations,
+          therefore we can not guarantee complete accuracy. We encourage you to phone
+          ahead when attending dropins. If the information is incorrect, please feel
+          free to inform us and we will update our data shortly.
+        </p>
+      </div>
+    </div>
+  </div>
+  <style>
+      @media (min-width: 510px) {
+          .footer {
+              bottom: .1px;
+          }
+      }
+      @media(min-width:420px) {
+          .container {
+              height: 850px;
+          }
+      }
+      @media(min-height:930px) {
+          .footer{
+              position:absolute;
+          }
+      }
+      nav{
+          background-color: white;
+      }
+  </style>
+
+</div>
