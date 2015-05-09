@@ -1,0 +1,37 @@
+//============Buttons============
+.blue-button{
+  @extend .waves-effect;
+  @extend .waves-light;
+  @extend .btn;
+  background-color: $light-blue;
+  border: 1px solid $light-blue;
+  color:  #ffffff;
+  &:hover {
+    background-color: $dark-blue;
+  }
+
+}
+.green-button{
+  background-color: transparent;
+  border: 1px solid $light-green;
+  color: $light-green;
+  &:hover{
+    color:$dark-green;
+  }
+}
+.orange-button{
+  background-color: transparent;
+  border: 1px solid $light-orange;
+  color : $light-orange;
+  &:hover{
+    color:$dark-orange;
+  }
+}
+.red-button{
+  background-color: transparent;
+  border: 1px solid $light-red;
+  color: $light-red;
+  &:hover{
+    color:$dark-red;
+  }
+}

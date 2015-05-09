@@ -159,40 +159,6 @@ nav {
   }
 }
 
-//============Buttons============
-.blue-button{
-  background-color: transparent !important;
-  border: 1px solid $light-blue !important;
-  color:  $light-blue !important;
-  &:hover{
-    color:$dark-blue !important;
-  }
-}
-.green-button{
-  background-color: transparent !important;
-  border: 1px solid $light-green !important;
-  color: $light-green !important;
-  &:hover{
-    color:$dark-green !important;
-  }
-}
-.orange-button{
-  background-color: transparent !important;
-  border: 1px solid $light-orange !important;
-  color : $light-orange !important;
-  &:hover{
-    color:$dark-orange !important;
-  }
-}
-.red-button{
-  background-color: transparent !important;
-  border: 1px solid $light-red !important;
-  color: $light-red !important;
-  &:hover{
-    color:$dark-red !important;
-  }
-}
-
 //============Footer=============
 .footer{
   width:100%;

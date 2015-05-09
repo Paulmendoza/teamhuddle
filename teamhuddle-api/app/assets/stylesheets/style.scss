@@ -9,11 +9,12 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  */
-//= require materialize
+@import "materialize";
 @import "variables";
 @import "typography";
-@import "application";
-@import "pages/landing_page";
-@import "pages/contact";
-@import "pages/dropin_finder";
-@import "pages/about";
+@import "buttons";
+@import "common";
+@import "pages/_landing_page";
+@import "pages/_contact";
+@import "pages/_dropin_finder";
+@import "pages/_about";
