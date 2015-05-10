@@ -1,14 +1,14 @@
-<div class="row col s12 m6 z-depth-2" id="filter">
+<div class="row col s12 m6 filter">
   <br>
   <!-- Only show this portion if the user doesn't have location tracking enabled in their browser -->
   <div class="panel panel-warning text-center" ng-if="!userLocationEnabled">Please let us access your location so we can show the distance to dropins</div>
   <h2 class="text-center sport_name">dropin {{sport | lowercase }} events</h2>
   <br>
   <div>
-    <div class="text-center margin-bottom-1">
-      <a class="waves-effect waves-light btn blue hide-on-med-and-up" ng-click="switchToMap()">Show Map</a>
-      <a class="waves-effect waves-light btn blue" ng-click="resetFilters()">Reset Filters</a>
-      <a class="waves-effect waves-light btn blue" href="/#">More Sports</a>
+    <div class="text-center margin-bottom-1 col s12">
+      <a class="waves-effect waves-light btn blue hide-on-med-and-up col s4 blue-button" ng-click="switchToMap()">Show Map</a>
+      <a class="waves-effect waves-light btn blue col m6 s4 blue-button" ng-click="resetFilters()">Reset Filters</a>
+      <a class="waves-effect waves-light btn blue col m6 s4 blue-button" href="#/">More Sports</a>
     </div>
     <div class="col s6">
       <select class="form-control" ng-model="weekdaySelect" ng-change="setFilters()">
@@ -37,45 +37,47 @@
   <br>
 </div>
 <div class="curtain text-center col s12 m6 valign-wrapper" ng-show="loadingDropins">
-  <div clas="valign">
+  <div class="valign">
     <h1>Loading Dropins..</h1>
     <%= image_tag("loading.gif", alt: "loading") %>
   </div>
 </div>
 <div class="dropin-results" ng-hide="loadingDropins">
-  <div ng-if="failedRetrieve" class="panel panel-warning">
+  <div ng-if="failedRetrieve">
     <!-- This is only shown if we had an error retrieving the dropins -->
     <div class="panel-title text-center">Sorry, we could not retrieve the dropins at this time. Please try again
       later.
     </div>
   </div>
   <div class="dropin-repeat-wrapper">
-    <div class="row clearfix dropin-repeat"
+    <div class="row clearfix dropin-repeat valign-wrapper"
          ng-class="{selected: markerWrappers.currentlyOpen === dropin.id}"
          ng-repeat="dropin in dropins"
          ng-click="markerWrappers[dropin.id].infoWindow.toggle(); centerDropin(dropin)"
          ng-attr-id="{{ 'dropin-' + dropin.id }}">
-      <div class="col-md-4 col-xs-12">
+      <div class="col s3 valign">
         <h4 ng-class="{bolded: isSelected(dropin.id)}">{{dropin.location.name}} <small>{{ dropin.distanceFromUser }}</small></h4>
       </div>
 
       <a ng-if="admin_signed_in" href="/admin/dropins/{{dropin.sport_event.id}}" ng-click="$event.stopPropagation()" target="_blank">View
         Admin Page for Dropin</a>
-
+      <div class="col s5">
+        <p class="col s12 offset-s2 m6 valign">{{dropin.datetime_start | date:'EEEE'}}</p>
+        <p class="col s12 offset-s2 m6 valign">{{dropin.sport_event.skill_level}}</p>
+      </div>
       <!-- show this if it's not selected -->
-      <p class="col-md-2 col-xs-4">{{dropin.datetime_start | date:'EEEE'}}</p>
-
-      <p class="col-md-2 col-xs-4">{{dropin.sport_event.skill_level}}</p>
-      <p class="col-md-4 col-xs-4">{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</p>
-      <a class="chevron-link" href="/dropin-finder#/{{dropin.sport_event.sport_id}}/dropin/{{dropin.sport_event.id}}" ng-click="$event.stopPropagation()">
-        <div class="pull-right glyphicon glyphicon-chevron-right margin-right-2 padding-top-3" aria-hidden="true"></div>
-      </a>
+      <p class="col s4 valign">{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</p>
+      <span class="chevron">
+          <a href="/dropin-finder#/{{dropin.sport_event.sport_id}}/{{dropin.sport_event.id}}" ng-click="$event.stopPropagation()">
+            <div class="pull-right glyphicon glyphicon-chevron-right margin-right-2 " aria-hidden="true"></div>
+          </a>
+      </span>
     </div>
   </div>
 
 </div>
 </div>
-<div>
+<div class="center margin-top-3">
   <p><i>
     Schedules are subject to change. Please phone facilities for confirmation.
   </i></p>
@@ -83,6 +85,15 @@
 <!--REFACTOR-->
 <style>
     nav{
+        background-color: white;
+    }
+    .parallax-window {
+        background-color: white;
+    }
+    .parallax-mirror{
+        display:none;
+    }
+    .wrapper {
         background-color: white;
     }
 </style>

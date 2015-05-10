@@ -16,14 +16,22 @@
 <p>
   <%= f.label :organization %>
   <br>
-  <%= f.select(:organization, options_from_collection_for_select(Organization.all.order(:name), :id, :name, @dropin.try(:organization).try(:id))) %>
-  <small>Organization not on the list? <%= link_to 'Add it here', new_organization_path %> (Note: Form will reset)
-  </small>
+  <% if @is_renewal && @dropin.try(:event).present? %>
+      <span><%= @dropin.event.organization.name %></span>
+  <% else %>
+      <%= f.select(:organization, options_from_collection_for_select(Organization.all.order(:name), :id, :name, @dropin.try(:organization).try(:id))) %>
+      <small>Organization not on the list? <%= link_to 'Add it here', new_organization_path %> (Note: Form will reset)
+      </small>
+  <% end %>
 </p>
 
 <p>
   <%= f.label :location %>
   <br>
-  <%= f.select(:location, options_from_collection_for_select(Location.all.order(:name), :id, :name, @dropin.try(:location).try(:id))) %>
-  <small>Location not on the list? <%= link_to 'Add it here', new_location_path %> (Note: Form will reset)</small>
+  <% if @is_renewal && @dropin.try(:event).present? %>
+      <span><%= @dropin.event.location.name %></span>
+  <% else %>
+      <%= f.select(:location, options_from_collection_for_select(Location.all.order(:name), :id, :name, @dropin.try(:location).try(:id))) %>
+      <small>Location not on the list? <%= link_to 'Add it here', new_location_path %> (Note: Form will reset)</small>
+  <% end %>
 </p>

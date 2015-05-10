@@ -1,46 +1,54 @@
 @import "variables";
 
 //=========== Dropin Finder ============
-#dropinfinder{
-  margin-top: 80px;
+.dropinfinder{
   padding-left: 0;
   padding-right: 0;
+  background-color: white;
   .map-mobile-toggle{
     @media(max-width:600px){
       display: none !important;
     }
   }
-  #empty-space{
-    @media(max-width: 600px){
-      display: none !important;
-    }
-  }
-  #left-wrapper{
+  .left-wrapper{
     padding-left: 0;
     padding-right: 0;
     position:fixed;
+    z-index:1000;
+    .marker-row-selected{
+      background-color: #E8E8E8;
+    }
     map{
-      height:calc(100vh - 100px);
+      height:calc(100vh - #{$nav-height});
+      @media(max-width: 600px){
+        height: calc(100vh - 50px);
+      }
     }
     @media(max-width: 600px){
-
     }
     .btn{
       position: absolute;
       z-index: 9999;
-      top: 20px;
-      right: 20px;
-      height: 40px;
+      bottom: 0;
+      left:0;
+      right:0;
+      height: 30px;
     }
   }
-  #right-wrapper{
+  .right-wrapper{
     padding-right: 0;
     padding-left: 0;
-    #filter{
+    .filter{
       position: fixed;
+      top: $nav-height;
       background-color: white;
       z-index: 97;
       padding-bottom: 30px;
+      border-bottom: 1px #BDBDBD solid;
+      padding-left: 20px !important;
+      a{
+        line-height: 36px;
+      }
       @media(max-width: 600px){
         h2{
           font-size: 1.4em;
@@ -49,13 +57,18 @@
         }
         .btn{
           font-weight: 100;
-          font-size: 1em;
+          font-size: .8em;
         }
         padding-bottom:5px;
       }
     }
     .dropin-repeat-wrapper{
       padding-top: 213px;
+      background-color: #FAFAFA;
+      padding-left: 15px;
+      @media(max-width: 600px) {
+        padding-top: 152px;
+      }
     }
     .dropin-repeat{
       min-height: 80px;
@@ -70,12 +83,14 @@
       }
       .glyphicon{
         display:block;
+        line-height: 44px;
       }
     }
     .curtain{
       position:fixed;
+      top: $nav-height;
       height:100vh;
-      background-color: white;
+      background-color: #FAFAFA;
       z-index:96;
       h1{
         font-weight: 200;
@@ -83,28 +98,51 @@
     }
     .dropin-results{
     }
-    .chevron-link{
-      position: absolute;
-      right: 0;
+    .chevron{
+      height: 44px;
+      a {
+        position: relative;
+        right: 0;
+      }
     }
   }
 }
 //============= Dropin View =============
-#dropin-view{
+.dropin-view{
+  height: calc(100vh - #{$nav-height});
+  .right-wrapper{
+    height: 100vh;
+  }
+  .button-list{
+    a {
+      width: 100%;
+      background-color: transparent;
+      color: black;
+      border-color: lightgreen;
+    }
+  }
+  p{
+    margin-bottom: 0;
+  }
   h1{
     font-size: 2em;
   }
   h3{
-    font-size: 1.7em;
-    font-weight: 200;
+    font-size: 1.2em;
+    font-weight: 900;
+  }
+  .inner-dropin-view{
+    a{
+      color: $dark-blue;
+    }
+  }
+  .card{
+    z-index: 100;
   }
 }
 
 //============ dropinfinder-icon============
-#dropinfinder-icon{
-  .card{
-    margin-top: 115px;
-  }
+.dropinfinder-icon{
   h3{
     font-weight: 200;
     font-size: 2em;
@@ -113,6 +151,17 @@
   h5{
     font-size: 1.4em;
     font-weight: 100;
+  }
+  .card{
+    max-width: 1004px;
+    margin-left: auto;
+    margin-right: auto;
+    @media(max-width: 1200px){
+      max-width: 750px;
+    }
+    @media(max-width: 600px){
+      max-width: 504px;
+    }
   }
   @media(max-width: 992px){
     h3{
@@ -140,65 +189,61 @@
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-
+    .sport_logo {
+      border: none;
+    }
     .icon1 {
-      min-width: 250px;
-      max-width: 250px;
+      min-width: 248px;
+      max-width: 248px;
       height: 250px;
       background: image-url('icons_sprite.png') 0 0;
       display: inline-block;
-      border: 1px solid #000;
     }
     .icon2 {
-      min-width: 250px;
-      max-width: 250px;
+      min-width: 249px;
+      max-width: 249px;
       height: 250px;
       background: image-url('icons_sprite.png') -253px 0px;
       display: inline-block;
-      border: 1px solid #000;
     }
     .icon3 {
-      min-width: 250px;
-      max-width: 250px;
+      min-width: 249px;
+      max-width: 249px;
       height: 250px;
       background: image-url('icons_sprite.png') -505px 0px;
       display: inline-block;
-      border: 1px solid #000;
     }
     .icon4 {
-      min-width: 250px;
-      max-width: 250px;
+      min-width: 249px;
+      max-width: 249px;
       height: 250px;
       background: image-url('icons_sprite.png') -757px 0px;
       display: inline-block;
-      border: 1px solid #000;
     }
     .icon5 {
-      min-width: 250px;
-      max-width: 250px;
+      min-width: 249px;
+      max-width: 249px;
       height: 250px;
-      background: image-url('icons_sprite.png') -1010px 0px;
+      background: image-url('icons_sprite.png') -1009px 0px;
       display: inline-block;
-      border: 1px solid #000;
     }
     .icon6 {
-      min-width: 250px;
-      max-width: 250px;
+      min-width: 249px;
+      max-width: 249px;
       height: 250px;
-      background: image-url('icons_sprite.png') -1262px 0px;
+      background: image-url('icons_sprite.png') -1261px 0px;
       display: inline-block;
-      border: 1px solid #000;
     }
     .icon7 {
-      min-width: 250px;
-      max-width: 250px;
+      min-width: 249px;
+      max-width: 249px;
       height: 250px;
       background: image-url('icons_sprite.png') -1513px 0px;
       display: inline-block;
     }
     .icon8 {
-      min-width: 250px;
-      max-width: 250px;
+      min-width: 249px;
+      max-width: 249px;
       height: 250px;
       background: image-url('icons_sprite.png') -1766px 0px;
       display: inline-block;

@@ -6,21 +6,21 @@
                                            ['Thursday', 'thursday'],
                                            ['Friday', 'friday'],
                                            ['Saturday', 'saturday'],
-                                           ['Sunday', 'sunday']])) %>
+                                           ['Sunday', 'sunday']], @dropin.present? ? @dropin.schedule.first.start_time.strftime('%A').downcase : nil)) %>
 </p>
 
 <p>
   <%= label_tag(:date, "Start Date") %><br>
-  <%= select_date Date.today, prefix: :start_date %>
+  <%= select_date(@dropin.try(:schedule) == nil ? Date.today : @dropin.schedule.start_date, prefix: :start_date) %>
 </p>
 
 <p>
   <%= label_tag(:date, "End Date") %><br>
-  <%= select_date Date.today, prefix: :end_date %>
+  <%= select_date(@dropin.try(:schedule) == nil ? Date.today : @dropin.schedule.last, prefix: :end_date) %>
 </p>
 
 <p>
   <%= label_tag(:time, "Time") %><br>
-  <%= select_time Time.now.change(hour: 19, min: 0), prefix: :start_time %>
-  - <%= select_time Time.now.change(hour: 22, min: 0), prefix: :end_time %>
+  <%= select_time(@dropin.try(:schedule) == nil ? Time.now.change(hour: 19, min: 0) : @dropin.schedule.first, prefix: :start_time) %>
+  - <%= select_time(@dropin.try(:schedule) == nil ? Time.now.change(hour: 22, min: 0) : @dropin.schedule.end_time, prefix: :end_time) %>
 </p>

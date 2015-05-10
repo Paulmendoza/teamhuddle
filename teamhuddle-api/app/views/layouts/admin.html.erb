@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
 <head>
   <title>Teamhuddle Admin</title>
   <%= stylesheet_link_tag "admin_style" %>
@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="container">
-  <div id="wrapper" class="panel panel-default">
+  <div class="wrapper panel panel-default">
     <ul class="nav nav-pills">
       <% if admin_signed_in? %>
           <li><a href="/admin">Home</a></li>
@@ -25,6 +25,7 @@
   </div>
 </div>
 <%= javascript_include_tag "admin/admin" %>
+<%= yield(:additional_javascript) %>
 <script>
     //Google Analytics
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()

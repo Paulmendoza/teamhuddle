@@ -15,19 +15,19 @@ class DropinsController < ApplicationController
 
     # This is for the admin page -> see index.erb
     @dropins_grid = initialize_grid(SportEvent,
-      :include => [:event, :location, :organization],
-      :conditions => @conditions,
-      :enable_export_to_csv => true,
-      :csv_field_separator => ';',
-      :csv_file_name => 'dropins',
-      :name => 'dropins'
+                                    :include => [:event, :location, :organization],
+                                    :conditions => @conditions,
+                                    :enable_export_to_csv => true,
+                                    :csv_field_separator => ';',
+                                    :csv_file_name => 'dropins',
+                                    :name => 'dropins'
     )
 
     export_grid_if_requested('dropins' => 'dropins_grid') do
       # usual render or redirect code executed if the request is not a CSV export request
     end
   end
-  
+
   def show
     @dropin = SportEvent.includes(:event, :location, :organization).find(params[:id])
 
@@ -42,33 +42,32 @@ class DropinsController < ApplicationController
   def create
 
     # get the start date and end date NOTE: adds time as well to startime
-    start_date = Time.new(params[:start_date][:year], params[:start_date][:month], params[:start_date][:day], 
-      params[:start_time][:hour], params[:start_time][:minute])
+    start_date = Time.new(params[:start_date][:year], params[:start_date][:month], params[:start_date][:day],
+                          params[:start_time][:hour], params[:start_time][:minute])
     end_date = Time.new(params[:end_date][:year], params[:end_date][:month], params[:end_date][:day])
-      
+
     # create a new schedule setting the duration
     schedule = Schedule.new(start_date, :end_time => start_date.change(hour: params[:end_time][:hour], min: params[:end_time][:minute])) do |s|
       # add weekly recurrence ruling based on the day of the week selected
       s.add_recurrence_rule(Rule.weekly.day(params[:day].intern).until(end_date))
     end
-    
+
     temp_event = SportEvent.new(dropin_params)
     temp_event.sport_id = params[:sport_event][:sport]
     temp_event.skill_level = params[:skill_level]
     temp_event.schedule = schedule
-    
+
     @dropin = SportEventWrapper.new(params[:sport_event][:name],
-      params[:sport_event][:location],
-      params[:sport_event][:organization],
-      params[:sport_event][:comments],
-      temp_event,
-      'dropin',
-      false,
-      current_admin.id
+                                    params[:sport_event][:location],
+                                    params[:sport_event][:organization],
+                                    params[:sport_event][:comments],
+                                    temp_event,
+                                    'dropin',
+                                    current_admin.id
     )
-    
+
     if @dropin[:errors].present?
-      render json: { error: @dropin[:errors] }, :status => :unprocessable_entity
+      render json: {error: @dropin[:errors]}, :status => :unprocessable_entity
     else
       respond_to do |format|
         format.json { render json: @dropin }
@@ -76,16 +75,16 @@ class DropinsController < ApplicationController
       end
     end
   end
-  
+
   def destroy
     SportEvent.find(params[:id]).destroy
     respond_to do |format|
-      format.html { redirect_to :action => 'index'}
+      format.html { redirect_to :action => 'index' }
       format.json { render :nothing => true, status => :no_conent }
       format.xml { render :nothing => true, status => :no_conent }
     end
   end
-  
+
   def new
     @locations = Location.all
   end
@@ -117,12 +116,20 @@ class DropinsController < ApplicationController
       @dropin.save
       redirect_to dropin_path(@dropin)
     else
-      render json: { error: @event.errors }, :status => :unprocessable_entity
+      render json: {error: @event.errors}, :status => :unprocessable_entity
     end
   end
 
   def renew
+    @is_renewal = true
+
     @dropin = SportEvent.includes(:event).find(params[:id])
+  end
+
+  def bulk_renew
+    arr_ids = params.keys.select {|x| x.to_s.match('dropin-')}.map {|x| x.sub('dropin-','').to_i}
+
+    @sport_events = SportEvent.includes(:event).find(arr_ids)
   end
 
   def duplicate
@@ -137,23 +144,23 @@ class DropinsController < ApplicationController
       s.add_recurrence_rule(Rule.weekly.day(params[:day].intern).until(end_date))
     end
 
-    temp_event = SportEvent.new(dropin_params)
-    temp_event.sport_id = params[:sport_event][:sport]
-    temp_event.skill_level = params[:skill_level]
-    temp_event.schedule = schedule
+    previous_event = Event.find(params[:sport_event][:event_id])
 
-    @dropin = SportEventWrapper.new(params[:sport_event][:name],
-                                    params[:sport_event][:location],
-                                    params[:sport_event][:organization],
-                                    params[:sport_event][:comments],
-                                    temp_event,
-                                    'dropin',
-                                    false,
-                                    current_admin.id
-    )
+    previous_event.name = params['sport_event']['name']
+    previous_event.save
+
+    temp_sport_event = SportEvent.new(dropin_params)
+    temp_sport_event.sport_id = params[:sport_event][:sport]
+    temp_sport_event.skill_level = params[:skill_level]
+    temp_sport_event.schedule = schedule
+
+    @dropin = SportEventWrapper.renew(previous_event,
+                                      temp_sport_event,
+                                      'dropin',
+                                      current_admin.id)
 
     if @dropin[:errors].present?
-      render json: { error: @dropin[:errors] }, :status => :unprocessable_entity
+      render json: {error: @dropin[:errors]}, :status => :unprocessable_entity
     else
       respond_to do |format|
         format.json { render json: @dropin }
@@ -162,115 +169,153 @@ class DropinsController < ApplicationController
     end
   end
 
-  def refresh_inactive_dropins
-    @active_dropins = SportEvent.where(type: "dropin", is_active: true).all
+  def duplicate_many
+    # Get the dates
+    start_date = Time.new(params[:start_date][:year], params[:start_date][:month], params[:start_date][:day])
+    end_date = Time.new(params[:end_date][:year], params[:end_date][:month], params[:end_date][:day])
 
-    @active_dropins.each do |dropin|
-      unless dropin.check_active
-        dropin.update(is_active: false)
+    @dropins = []
+
+    SportEvent.includes(:event).find(params['dropin_ids'].keys[0].split(',').map {|x| x.to_i}).each do |se|
+
+      temp_start_date = start_date.change(hour: se.schedule.first.hour, min: se.schedule.first.min)
+
+      # create a new schedule setting the duration
+      schedule = Schedule.new(temp_start_date,
+                              :end_time => temp_start_date.change(hour: se.schedule.end_time.hour, min: se.schedule.end_time.min)) do |s|
+                #add weekly recurrence ruling based on the day of the week selected
+                s.add_recurrence_rule(Rule.weekly.day(temp_start_date.strftime('%A').downcase.intern).until(end_date))
       end
+
+      previous_event = se.event
+
+      temp_sport_event = se.dup
+      temp_sport_event.schedule = schedule
+
+      dropin = SportEventWrapper.renew(previous_event,
+                                        temp_sport_event,
+                                        'dropin',
+                                        current_admin.id)
+
+      @dropins.push(dropin)
+
     end
 
-    redirect_to dropins_path
+    error_dropins = @dropins.select {|x| x[:errors].present? }
+
+    if error_dropins.count > 0
+      render json: error_dropins.map {|x| { name: x[:event].name, error: x[:errors] }}
+    else
+      redirect_to renewals_dropins_path
+    end
+
   end
-  
-  def import
+
+  def renewals
+
+    @sport_events = SportEvent.find_by_sql(['SELECT se.* FROM events AS e
+                                            JOIN sport_events AS se ON se.id = (SELECT id
+                                                                                FROM sport_events
+                                                                                WHERE sport_events.event_id = e.id
+                                                                                ORDER BY dt_expiry DESC
+                                                                                LIMIT 1)
+                                            WHERE se.dt_expiry > ? AND se.dt_expiry < ?
+                                            ORDER BY dt_expiry ASC', Date.today - 6.weeks, Date.today + 2.weeks])
   end
-  
+
   def scrape
     # get a response from the API
     response = RestClient.get params[:api_url]
-    
+
     # turn the JSON response into a hash
     response = JSON.parse(response)
-    
+
     @events = []
-    
-    days_of_the_week = ['monday', 'tuesday', 'wednesday', 
-      'thursday', 'friday', 'saturday', 'sunday']
+
+    days_of_the_week = %w(monday tuesday wednesday thursday friday saturday sunday)
 
     # loop through each community center
-    response['results'].each do |rec_center|  
-      
+    response['results'].each do |rec_center|
+
       # see if there is anything per day
-      days_of_the_week.each do | day |
-        
+      days_of_the_week.each do |day|
+
         if rec_center[day].present?
-          
+
           # sometimes it's just a single event otherwise an array
           if rec_center[day].is_a?(String)
             @events.push(parse_event(rec_center[day], day, rec_center['rec_center_name'], rec_center['schedule_until']))
           else
-            rec_center[day].each do | event |
+            rec_center[day].each do |event|
               @events.push(parse_event(event, day, rec_center['rec_center_name'], rec_center['schedule_until']))
             end
           end
-          
+
         end
       end
     end
-    
+
     # go through all parse events and try and create dropins from them
-    
+
     @tentative_events = Array.new
-    
+
     @events.each do |event|
       temp_dropin = create_dropin_from_scrape_object(event)
-      
+
       @tentative_events.push(temp_dropin)
-      
-      
+
+
     end
     respond_to do |format|
       format.html { render json: @tentative_events }
       format.json { render json: @tentative_events }
     end
-    
+
   end
-  
+
   private
   def parse_event(event, day, location, schedule_until)
-    
+
     @parsed_event = {}
-    
+
     time_capture = /(\d{1,2}:\d{2}[ap]m)–(\d{1,2}:\d{2}[ap]m)/.match(event)
-    
+
     @parsed_event[:name] = event
     @parsed_event[:day] = day
     @parsed_event[:start_time] = time_capture[1]
     @parsed_event[:end_time] = time_capture[2]
     @parsed_event[:location] = location
     @parsed_event[:until] = schedule_until
-    
+
     return @parsed_event
   end
-  
+
   private
   def create_dropin_from_scrape_object(event)
     days_of_the_week = {
-      'monday' => :monday,
-      'tuesday' => :tuesday,
-      'wednesday' => :wednesday,
-      'thursday' => :thursday,
-      'friday' => :friday,
-      'saturday' => :saturday,
-      'sunday' => :sunday
+        'monday' => :monday,
+        'tuesday' => :tuesday,
+        'wednesday' => :wednesday,
+        'thursday' => :thursday,
+        'friday' => :friday,
+        'saturday' => :saturday,
+        'sunday' => :sunday
     }
-    
+
     start_time = Time.parse(event[:start_time])
     end_time = Time.parse(event[:end_time])
-    
+
     # get the start date and end date NOTE: adds time as well to startime
     # hardcoded right now. TODO change this
-    start_datetime = Time.new(2014, 6, 31, start_time.hour, start_time.min) 
+    start_datetime = Time.new(2014, 6, 31, start_time.hour, start_time.min)
     end_date = Time.new(2014, 12, 31)
-      
+
     # create a new schedule setting the duration
     schedule = Schedule.new(start_datetime, :end_time => start_datetime.change(hour: end_time.hour, min: end_time.min)) do |s|
       # add weekly recurrence ruling based on the day of the week selected
       s.add_recurrence_rule(Rule.weekly.day(days_of_the_week[event[:day]]).until(end_date))
     end
-    
+
     # dropin = SportEventWrapper.new((0..16).to_a.map{|a| rand(16).to_s(16)}.join, #random name for now
     #   9, # harcode everything to Creekside. TODO: change this to dynamic lookup
     #   5, # hardcoded to Vancouver board right now. TODO: change to dynamic lookup
@@ -280,15 +325,15 @@ class DropinsController < ApplicationController
     #   0,
     #   schedule,
     #   true)
-    
+
     return dropin
-    
+
   end
 
   private
   def dropin_params
     params.require(:sport_event).permit(:skill_level, :price_per_one, :price_per_group,
-      :spots, :notes, :format, :source)
+                                        :spots, :notes, :format, :source)
   end
 
   private

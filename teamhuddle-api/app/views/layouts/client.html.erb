@@ -2,9 +2,10 @@
 <html>
 <head>
   <title><%= yield(:title) %></title>
-  <%= stylesheet_link_tag  'application',
+  <%= stylesheet_link_tag  'app',
                            '//fonts.googleapis.com/css?family=Jura:400,600',
                            '//fonts.googleapis.com/css?family=Raleway:400,300',
+                           '//fonts.googleapis.com/css?family=Roboto',
                            '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css',
                            'typography',
                            media: 'all',
@@ -19,9 +20,6 @@
 </head>
 <body>
 <div class="wrapper">
-  <!-- Go to www.addthis.com/dashboard to customize your tools -->
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53af382b4ee31991" async="async"></script>
-
   <nav role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <!--<div>-->
@@ -41,7 +39,7 @@
           <%= image_tag 'logo-compressed.png', alt: 'teamhuddle_logo'%>
         </div>
       </a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse margin-top-1 margin-left-3"><i class="mdi-navigation-menu"></i></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse margin-left-3"><i class="mdi-navigation-menu"></i></a>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="/dropin-finder">Dropin Finder</a></li>
         <li><a href="/about">About</a></li>
@@ -57,18 +55,18 @@
             </ul>
           </div>
           <!--<div class="col s3">-->
-            <!--<div class="input-field col s12">-->
-              <!--<input id="username" type="text" class="validate">-->
-              <!--<label for="username">Username</label>-->
-            <!--</div>-->
-            <!--<div class="input-field col s12">-->
-              <!--<input id="password" type="password" class="validate">-->
-              <!--<label for="password">Password</label>-->
-            <!--</div>-->
+          <!--<div class="input-field col s12">-->
+          <!--<input id="username" type="text" class="validate">-->
+          <!--<label for="username">Username</label>-->
+          <!--</div>-->
+          <!--<div class="input-field col s12">-->
+          <!--<input id="password" type="password" class="validate">-->
+          <!--<label for="password">Password</label>-->
+          <!--</div>-->
           <!--</div>-->
           <!--<div class="col s3 margin-top-1">-->
-            <!--<button class="col s12 btn waves-effect waves-light blue" type="submit" name="action">Login</button>-->
-            <!--<button class="col s12 btn waves-effect waves-light" type="submit" name="action">Facebook</button>-->
+          <!--<button class="col s12 btn waves-effect waves-light blue" type="submit" name="action">Login</button>-->
+          <!--<button class="col s12 btn waves-effect waves-light" type="submit" name="action">Facebook</button>-->
           <!--</div>-->
         </div>
       </form>
@@ -91,12 +89,25 @@
     </div>
 
   </nav>
-
-  <%= yield %>
-  <div class="footer text-center v">
-    <div class="footer-content"><span><h5 id="copyright" class="margin-top-none">&copy; Teamhuddle Athletics Inc.</h5></span></div>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="addthis_horizontal_follow_toolbox pull-right margin-right-5 addthis footer-icons"></div>
+  <div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path 'huddle-3.png' %>">
+    <div class="nav-buffer col s12"></div>
+    <%= yield %>
+  </div>
+  <div class="footer text-center row">
+    <div class="col s6">
+      <span>
+          <h5 class="margin-none left">
+            &copy; Teamhuddle Athletics Inc.
+          </h5>
+      </span>
+    </div>
+    <div class="col s6 ">
+      <span class="right">
+          <a href="http://www.facebook.com/teamhuddle">Facebook</a> |
+          <a href="http://www.twitter.com/tmhuddle">Twitter</a> |
+          <a href="http://www.instagr.am/tmhuddle">Instagram</a>
+      </span>
+    </div>
   </div>
 </div>
 

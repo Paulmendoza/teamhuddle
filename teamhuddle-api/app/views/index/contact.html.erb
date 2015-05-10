@@ -3,31 +3,31 @@
 <div class="container" ng-app="BaseApp">
   <br>
 
-  <div class="contact-us">
+  <div class="contact-us margin-top-3">
 
-    <div ng-controller="contact" class="row">
+    <div ng-controller="contact" class="row card card-content">
 
       <section class="contact-us-text row">
         <div class="col m8 offset-m2 row">
           <div class="col m5">
             <h1>contact us</h1>
           </div>
-          <div class="margin-top-2">
-            <ul>
-              <li>
-                <%= link_to(image_tag("facebook.png", alt: "facebook", class: "socialmedia center-block"), "http://www.facebook.com",) %>
-              </li>
-              <li>
-                <%= link_to(image_tag("twitter.png", alt: "twitter", class: "socialmedia center-block"), "https://twitter.com/tmhuddle",) %>
-              </li>
-              <li>
-                <%= link_to(image_tag("youtube.png", alt: "youtube", class: "socialmedia center-block"), "",) %>
-              </li>
-              <li>
-                <%= link_to(image_tag("instagram.png", alt: "instagram", class: "socialmedia center-block"), "http://instagram.com/tmhuddle",) %>
-              </li>
-            </ul>
-          </div>
+          <!--<div class="margin-top-1 right">-->
+            <!--<ul>-->
+              <!--<li>-->
+                <!--<%= link_to(image_tag("facebook.png", alt: "facebook", class: "socialmedia center-block"), "http://www.facebook.com",) %>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<%= link_to(image_tag("twitter.png", alt: "twitter", class: "socialmedia center-block"), "https://twitter.com/tmhuddle",) %>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<%= link_to(image_tag("youtube.png", alt: "youtube", class: "socialmedia center-block"), "",) %>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<%= link_to(image_tag("instagram.png", alt: "instagram", class: "socialmedia center-block"), "http://instagram.com/tmhuddle",) %>-->
+              <!--</li>-->
+            <!--</ul>-->
+          <!--</div>-->
         </div>
         <div class="col m8 offset-m2">
         <p>Teamhuddle has a complete open door policy! We are always looking for suggestions, and are also expanding our
@@ -44,7 +44,7 @@
           <p>please wait..</p>
         </div>
         <!-- Show this div on success -->
-        <div class="panel panel-success" id="contact-us-reply" ng-if="success && submitted && !processing">
+        <div class="panel panel-success" ng-if="success && submitted && !processing">
           <p>You'll hear from us soon, {{data.first_name}} {{data.last_name}}!</p>
         </div>
 
@@ -54,57 +54,52 @@
         </div>
         <form class="form-horizontal contact-us-form" ng-submit="submit()" ng-hide="success && submitted && !processing">
           <div class="form-group">
-            <label for="firstName" class="col s3 control-label">First name</label>
+            <label for="firstName" class="col s12 m2 control-label">First name</label>
 
-            <div class="col s9">
+            <div class="col s12 m10">
               <input type="text" class="form-control" id="firstName" placeholder="" ng-model="form_data.first_name">
             </div>
           </div>
           <div class="form-group">
-            <label for="lastName" class="col s3 control-label">Last name</label>
+            <label for="lastName" class="col s12 m2 control-label">Last name</label>
 
-            <div class="col s9">
+            <div class="col s12 m10">
               <input type="text" class="form-control" id="lastName" placeholder="" ng-model="form_data.last_name">
             </div>
           </div>
           <div class="form-group">
-            <label for="email" class="col s3 control-label">Email</label>
+            <label for="email" class="col s12 m2 control-label">Email</label>
 
-            <div class="col s9">
+            <div class="col s12 m10">
               <input type="text" class="form-control" id="email" placeholder="" ng-model="form_data.email">
             </div>
           </div>
           <div class="form-group">
-            <label for="comments" class="col s3 control-label">Comments</label>
+            <label for="comments" class="col s12 m2 control-label">Comments</label>
 
-            <div class="col s9">
+            <div class="col s12 m10">
               <textarea class="form-control" id="comment-id" ng-model="form_data.comments"></textarea>
             </div>
           </div>
 
           <div class="form-group">
-            <div class="col offset-s2 s9">
-              <button type="submit" class="btn waves-effect waves-light blue pull-right">Send</button>
+            <div class="col s12 m10 offset-m2">
+              <button type="submit" class="btn waves-effect waves-light blue pull-right col s12 blue-button">Send</button>
             </div>
           </div>
         </form>
       </div>
-    </div>
-
-    <div class="padding-top-50 padding-bottom-70 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-      <p class="disclaimer">
-        The information on Teamhuddle is gathered from various organizations,
-        therefore we can not guarantee complete accuracy. We encourage you to phone
-        ahead when attending dropins. If the information is incorrect, please feel
-        free to inform us and we will update our data shortly.
-      </p>
+      <div class="padding-top-50 padding-bottom-70 col s10 offset-s1 m8 offset-m2 text-center margin-top-3">
+        <p class="disclaimer">
+          The information on Teamhuddle is gathered from various organizations,
+          therefore we can not guarantee complete accuracy. We encourage you to phone
+          ahead when attending dropins. If the information is incorrect, please feel
+          free to inform us and we will update our data shortly.
+        </p>
+      </div>
     </div>
   </div>
   <style>
-      /*.footer {*/
-      /*position: absolute;*/
-      /*min height: 100vh;*/
-      /*}*/
       @media (min-width: 510px) {
           .footer {
               bottom: .1px;
@@ -123,9 +118,6 @@
       nav{
           background-color: white;
       }
-
-
-
   </style>
 
 </div>

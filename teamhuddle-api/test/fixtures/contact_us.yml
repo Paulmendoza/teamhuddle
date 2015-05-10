@@ -1,151 +1,279 @@
 ---
 contact_us_001:
-  id: 1
-  first_name: Akos
-  last_name: Sebestyen
-  email: akos@akos.com
-  comments: I especially like the new contact us form! It's so cool!
-  created_at: '2014-12-06 20:18:16.336461'
-  updated_at: '2014-12-06 20:18:16.336461'
+  id: '18'
+  first_name: Vanessa
+  last_name: Liu
+  email: vwl24@sfu.ca
+  comments: "Hello Team!\nI have accumulated a small list of critiques I thought I
+    would share, to possibly make your website a more enjoyable experience for the
+    users.\n\n- contact images can be smaller, and the colour can be less vibrant
+    (large images and bright colours tend to distract my eyes from the more important
+    information)\n- It would be nice if there is an option to filter the Dropin finder
+    by price \n- The bottom right corner (social media) icons are fairly large and
+    the spacing is fairly tight (it \"feels\" a little cluttered)\n- Loving the interactivity
+    of the homepage and added gifs!\n\nHopefully my feedback helps,\nKeep up the great
+    work! :)"
+  created_at: '2015-01-20 21:04:27.72421'
+  updated_at: '2015-01-20 21:04:27.72421'
 contact_us_002:
-  id: 2
-  first_name: Marc
-  last_name: Marc
-  email: marc@teamhuddle.ca
-  comments: Well hello teamhuddle, Please give me the names of your handsome co-founders
-    :)
-  created_at: '2014-12-06 20:34:13.991946'
-  updated_at: '2014-12-06 20:34:13.991946'
+  id: '19'
+  first_name: abdul
+  last_name: kulan
+  email: abdulkalan@hotmail,com
+  comments: Hey man its great and it would be better with a player profile and if
+    him/her could upload videos of them playing then it could later on advance into
+    a recruiting page as well
+  created_at: '2015-01-21 02:12:32.276993'
+  updated_at: '2015-01-21 02:12:32.276993'
 contact_us_003:
-  id: 3
-  first_name: Daniel
-  last_name: Daniel
-  email: eje.marc.daniel@gmail.com
-  comments: Loving the new look of this, although there might be too much space above
-    this
-  created_at: '2014-12-06 20:35:42.205183'
-  updated_at: '2014-12-06 20:35:42.205183'
+  id: '20'
+  first_name: Stanley
+  last_name: Farmer
+  email: stantran1229@gmail.com
+  comments: Thank You Danny Tran
+  created_at: '2015-01-21 06:17:41.997523'
+  updated_at: '2015-01-21 06:17:41.997523'
 contact_us_004:
-  id: 4
-  first_name: John
-  last_name: Doe
-  email: test@testing.com
-  comments: Where can I find a dropin where i can hit on as many single men and women
-  created_at: '2014-12-06 20:37:25.147379'
-  updated_at: '2014-12-06 20:37:25.147379'
+  id: '21'
+  first_name: Eric
+  last_name: Zamora
+  email: eric.l.zamora@gmail.com
+  comments: "Great site guys!  I like the choice of images used, and how the home
+    page scrolls.  Seems like it's pretty user friendly when finding different sports
+    to participate in.  \n\nI would use more colour on the home page.  When I think
+    of sports enthusiasts, I think energetic, competitive, vibrant, and community
+    driven, and I didn't get that complete feel when arriving at the page.  If the
+    main banner image was in colour, that would really pop.  So I would keep the black
+    and white to a minimum.  Otherwise, great layout and easy to use!"
+  created_at: '2015-01-21 19:51:59.298667'
+  updated_at: '2015-01-21 19:51:59.298667'
 contact_us_005:
-  id: 5
-  first_name: Mary
-  last_name: Jane
-  email: test@moretesting.com
-  comments: Who is Name/200x280 in your team? I've got you about the team page bookmarked
-    because of him/her
-  created_at: '2014-12-06 20:39:04.775474'
-  updated_at: '2014-12-06 20:39:04.775474'
+  id: '22'
+  first_name: Rowell
+  last_name: Galang
+  email: Flowerbox123@hotmail.com
+  comments: 'Hey Bro Marc. Sweet page bro I hardly know what any other #INC member
+    does for their profession. Glad you reached out because it wouldve taken forever
+    for me to. Glad to have met you through the church and will be looking forward
+    for when we meet in the court. #GodBless and #PTL.'
+  created_at: '2015-01-21 21:45:55.701475'
+  updated_at: '2015-01-21 21:45:55.701475'
 contact_us_006:
-  id: 6
-  first_name: Mr
-  last_name: Keener
-  email: Keener@testing.com
-  comments: I'd like to see how much info you all can handle... Blah blah...Teamhuddle
-    has a complete open door policy! We are always looking for suggestions, and are
-    also expanding our internal team. At this time, we are on the hunt for community
-    ambassadors that understand the value of physical activity and the importance
-    of a strong social media presence.Feedback from our network is also very important
-    to us, so we'd love to chat. Please don't hesitate to send us an email below....blah
-    blah blah.....Teamhuddle has a complete open door policy! We are always looking
-    for suggestions, and are also expanding our internal team. At this time, we are
-    on the hunt for community ambassadors that understand the value of physical activity
-    and the importance of a strong social media presence.Feedback from our network
-    is also very important to us, so we'd love to chat. Please don't hesitate to send
-    us an email below....long as complaint... blah blah  blah....Teamhuddle has a
-    complete open door policy! We are always looking for suggestions, and are also
-    expanding our internal team. At this time, we are on the hunt for community ambassadors
-    that understand the value of physical activity and the importance of a strong
-    social media presence.Feedback from our network is also very important to us,
-    so we'd love to chat. Please don't hesitate to send us an email below.
-  created_at: '2014-12-06 20:40:40.869820'
-  updated_at: '2014-12-06 20:40:40.869820'
+  id: '24'
+  first_name: test
+  last_name: test
+  email: test@test.com
+  comments: test
+  created_at: '2015-01-21 22:19:02.720525'
+  updated_at: '2015-01-21 22:19:02.720525'
 contact_us_007:
-  id: 7
+  id: '25'
   first_name: Marc
-  last_name: mr
-  email: marc@teamhuddle.ca
-  comments: Test test test. Checking if my comments using mobile works.
-  created_at: '2014-12-06 20:49:39.057518'
-  updated_at: '2014-12-06 20:49:39.057518'
+  last_name: Eje
+  email: eje.marc.daniel@gmail.com
+  comments: You guys are sooooo awesome!!!!
+  created_at: '2015-01-21 22:29:51.683758'
+  updated_at: '2015-01-21 22:29:51.683758'
 contact_us_008:
-  id: 8
-  first_name: Hairy
-  last_name: Potter
-  email: hedwigforever@hogwarts.co.uk
-  comments: I just wish you had quidditch dropins. I am truly passionate about quidditch
-    and I have been looking for a place to play every since I was a child. Even though
-    my parents thought I was a muggle muggle muggle muggle muggle muggle muggle muggle
-    muggle muggle muggle muggle muggle muggle muggle muggle muggle muggle muggle muggle
-  created_at: '2014-12-06 21:04:26.278430'
-  updated_at: '2014-12-06 21:04:26.278430'
+  id: '26'
+  first_name: Adhil
+  last_name: 
+  email: thatsadeel@gmail.com
+  comments: "• Change the slogan to 'Connecting Your Sports Community'. It's to the
+    point and make it bigger.\n• Only have the sports that will be available. Take
+    out the 'Coming Soon' boxes for now and just let people know more sports will
+    be added.\n• Social sharing would work better on top nav.\n• The features part
+    with 3 boxes should be on the top. Make it easy for users. \n• Is this a paid
+    drop service? If not, FREE would be a good word to use somewhere."
+  created_at: '2015-01-22 06:22:25.201655'
+  updated_at: '2015-01-22 06:22:25.201655'
 contact_us_009:
-  id: 9
-  first_name: Akos
-  last_name: Sebestyen
-  email: Akos@akos.com
-  comments: Jdjdjdn
-  created_at: '2014-12-07 05:28:13.134715'
-  updated_at: '2014-12-07 05:28:13.134715'
+  id: '27'
+  first_name: Falisha
+  last_name: 
+  email: Falisha01@hotmail.com
+  comments: Hi, I'd like to say that I really like how the website is simple and concise
+    however some suggestions for improvements would be to make the website more interactive.
+    By more interactive I mean more engaging, possibly having a live feed of the games
+    playing that day, YouTube videos relating to your website or a rotating banner
+    that features a different sport each week. It'll keep the audience more interested
+    and engaged creating more traffic on your page. Just my personal opinion!
+  created_at: '2015-01-22 22:42:37.780457'
+  updated_at: '2015-01-22 22:42:37.780457'
 contact_us_010:
-  id: 10
-  first_name: Marc
-  last_name: Marc
-  email: Marc@marc.com
-  comments: Marc
-  created_at: '2014-12-08 01:06:01.185101'
-  updated_at: '2014-12-08 01:06:01.185101'
+  id: '28'
+  first_name: Raj
+  last_name: H
+  email: r.tranced@gmail.com
+  comments: "Hey J,\n\nSo the drop-in finder is very cool and a bit laggy when clicking
+    and for the map to find your location but nothing too annoying however, if there
+    are multiple people trying to utilize it, I feel it may get laggier and freeze.\n\nFor
+    the sports itself, it would be nice to see \"ball\" hockey, if it is within the
+    hockey tab in general, it would be nice to see it as a separate label so people
+    know the drop-in is either ice or floor.\n\nFor obvious reasons, the more sports
+    the better, especially the not so known sports because people may want to play
+    \"floor ball\" but don't know what it is and this would give them the opportunity
+    to check it out (hence the forums to bring up other sports)\n\nA forum page would
+    also be pretty good where people can say drop-ins that are not on the list and
+    discuss if times change etc. It gives people the freedom to discuss the sports
+    and form a community :) \n\nAll and all, this idea is cool, keep it up!"
+  created_at: '2015-01-23 04:21:00.823424'
+  updated_at: '2015-01-23 04:21:00.823424'
 contact_us_011:
-  id: 11
-  first_name: aKOS
-  last_name: SEBESTYEN
-  email: akos@akos.com
-  comments: askdl;aksl;das
-  created_at: '2014-12-08 06:00:52.413575'
-  updated_at: '2014-12-08 06:00:52.413575'
+  id: '29'
+  first_name: Raj
+  last_name: H
+  email: r.tranced@gmail.com
+  comments: |-
+    Hey,
+
+    I forgot to mention that some drop-ins have a "first time free" policy, so it would be cool to mention that so when people are looking they know that they can go to those specific drop-ins and try the sport out!
+
+    Also the interface is really nice, well done!
+  created_at: '2015-01-23 04:28:35.699699'
+  updated_at: '2015-01-23 04:28:35.699699'
 contact_us_012:
-  id: 12
-  first_name: Akos
-  last_name: Sebestyen
-  email: kaosko@sdasd
-  comments: asdasdasd
-  created_at: '2014-12-08 22:36:58.781405'
-  updated_at: '2014-12-08 22:36:58.781405'
+  id: '30'
+  first_name: M
+  last_name: L
+  email: Test@test.com
+  comments: |-
+    YouTube icons in contacts page doesn't work
+    No YouTube icon in bottom footer where other social media icons are
+    When submitting with no name or email it just says error processing instead of indicating why it didn't work (ie.  No name no email error)
+  created_at: '2015-01-26 04:50:31.831867'
+  updated_at: '2015-01-26 04:50:31.831867'
 contact_us_013:
-  id: 13
-  first_name: Ambs
-  last_name: Chan
-  email: ambrose@webnames.ca
-  comments: Plz add snowboarding dropins
-  created_at: '2014-12-09 17:40:42.583099'
-  updated_at: '2014-12-09 17:40:42.583099'
+  id: '31'
+  first_name: Caitlin
+  last_name: Leong
+  email: caitlinleong24@gmail.com
+  comments: "Hey!\n\nSome feedback I have are to:\n- have an option where people can
+    filter regions (so like I only want to see Burnaby drop-ins)\n- include drop-in
+    fees of places \n\nI'm also using a mac OS, and all the links and format work!"
+  created_at: '2015-01-26 23:24:32.913727'
+  updated_at: '2015-01-26 23:24:32.913727'
 contact_us_014:
-  id: 14
-  first_name: Akos
-  last_name: Sebestyen
-  email: akos@akoszx.com
-  comments: I like to authenticate
-  created_at: '2014-12-10 02:47:09.294686'
-  updated_at: '2014-12-10 02:47:09.294686'
+  id: '32'
+  first_name: Larry
+  last_name: Sit
+  email: lsit@live.ca
+  comments: Android
+  created_at: '2015-01-27 05:02:18.487574'
+  updated_at: '2015-01-27 05:02:18.487574'
 contact_us_015:
-  id: 15
-  first_name: I fixed
-  last_name: This
-  email: bug@bug
-  comments: askd;lak;
-  created_at: '2014-12-10 23:10:05.494179'
-  updated_at: '2014-12-10 23:10:05.494179'
+  id: '33'
+  first_name: Lauren
+  last_name: Mew
+  email: Lamew@sfu.ca
+  comments: Used iPhone. Super cute app :D good job.
+  created_at: '2015-01-27 05:52:08.130743'
+  updated_at: '2015-01-27 05:52:08.130743'
 contact_us_016:
-  id: 16
-  first_name: Paul
-  last_name: M
-  email: Paul@gmaul.com
-  comments: Where's lacrosse guys? Thats Canada's official sport.
-  created_at: '2015-01-04 03:54:25.483534'
-  updated_at: '2015-01-04 03:54:25.483534'
+  id: '34'
+  first_name: Natasha
+  last_name: Jung
+  email: natasha.c.jung@gmail.com
+  comments: "Hi Jonny\nSome comments: \nWatch out for spelling errors (ie: \"Centre\"
+    vs \"Center\" - it should be the first one)\nSite seems to be responsive in Chrome,
+    so good job\nMap function seems to be working well \n\"about\" section: put yourself
+    at the top with Marc, then have everyone else follow in alphabetical order - photos
+    of you guys playing sports instead of normal headshots would be fun. \nhyperlinks
+    to your social accounts should open in a new window\ntried to submimt my email
+    to get access to beta - didnt work. should it? \nhomepage: photo looks great.
+    very clear and easy to understand. i would bring your social links up to the top
+    of the page. eventually will you have some sort of social feed? not sure what
+    your plans are for creating that 'community' online. check out what hockey community
+    does. \n\nHappy to provide more feedback if you like! \nNJ"
+  created_at: '2015-01-29 06:42:09.214748'
+  updated_at: '2015-01-29 06:42:09.214748'
+contact_us_017:
+  id: '35'
+  first_name: Florence
+  last_name: Yee
+  email: kwanyee8@gmail.com
+  comments: How do I know if spots are available on a team?
+  created_at: '2015-01-31 03:09:29.303167'
+  updated_at: '2015-01-31 03:09:29.303167'
+contact_us_018:
+  id: '36'
+  first_name: Rosa
+  last_name: Nguyen
+  email: rosamnguyen@gmail.com
+  comments: |-
+    Hi guys,
+    This looks promising! A good feature to have is to allow users to create their own events, invite others, as well as get updated on news articles related to their interests
+  created_at: '2015-02-01 09:32:46.135658'
+  updated_at: '2015-02-01 09:32:46.135658'
+contact_us_019:
+  id: '37'
+  first_name: Jon
+  last_name: yee
+  email: Jonathan.yee88@gmail.com
+  comments: Test
+  created_at: '2015-02-01 21:57:51.808103'
+  updated_at: '2015-02-01 21:57:51.808103'
+contact_us_020:
+  id: '38'
+  first_name: Danica
+  last_name: Jayme
+  email: djayme@sfu.ca
+  comments: |-
+    Hello!  I'm looking through the website, and is there any way you can search for drop-ins just by day, or just by area..and not by sport? Say you're interested in playing ANY sport, but you're only available on Mondays, would it be possible to look up all drop-ins available just on that day instead of going through every sport individually? Is it also possible to sort the drop ins by time as well? This can make it easier to narrow down search options.
+
+    thanks!
+  created_at: '2015-02-02 02:29:32.915473'
+  updated_at: '2015-02-02 02:29:32.915473'
+contact_us_021:
+  id: '39'
+  first_name: Blake
+  last_name: Holmes
+  email: info@proving-grounds.ca
+  comments: "ADVENTURERS WANTED\nThe Proving Grounds Martial Arts Centre\nThe Proving
+    Grounds in the business of adventures. We’re a facility for thrill-seekers and
+    martial arts enthusiasts that provides space for classes and drop in training,
+    sells the best gear we can find, and hosts a sport of our invention: Melee Combat
+    Games.      \nMartial Arts Classes and Drop-in Training\nThe Proving Grounds hosts
+    kenjutsu, long sword, and long sword and shield classes. All of our classes focus
+    on strong defence and full-contact, unarmoured sparring.  Our store is always
+    open for drop-in training, whatever style you practise.  \nThe Store\nThe Proving
+    Grounds is Vancouver’s number one supplier of padded weapons and accessories from
+    Calimacil and Epic Armoury, and that’s because we are the only supplier!  While
+    these weapons are made for LARP we’ve found that many of them make great sparring
+    weapons for martial artists or anyone who just wants to go at with giant axes.
+    \ \nMelee Combat Games \nMelee Combat Games (MCG for short) is the newest action-packed
+    activity in Vancouver! Take your standard game of paintball, but replace the guns
+    with foam-padded melee weapons. We play classic game variants like capture the
+    flag and team deathmatch, but at MCG you're forced to get right up in their face
+    to take them out. With swords, shields, axes, bows and arrows you'll fight to
+    claim victory and glory!\nCall ahead to book an MCG party at your location.  \n\nGet
+    your adventure started!"
+  created_at: '2015-02-02 21:35:36.545279'
+  updated_at: '2015-02-02 21:35:36.545279'
+contact_us_022:
+  id: '40'
+  first_name: Larry
+  last_name: K.
+  email: aasdf@sagfasdf.ca
+  comments: The font on the website headlines is so ugly.
+  created_at: '2015-02-02 22:24:35.754779'
+  updated_at: '2015-02-02 22:24:35.754779'
+contact_us_023:
+  id: '41'
+  first_name: Brooke
+  last_name: Mandin
+  email: blmandin@sfu.ca
+  comments: Awesome site!
+  created_at: '2015-02-04 21:44:24.657135'
+  updated_at: '2015-02-04 21:44:24.657135'
+contact_us_024:
+  id: '42'
+  first_name: Christina
+  last_name: Liu
+  email: christinajyliu@gmail.com
+  comments: I think this is a really great tool to connecting people who play and
+    love the same sports.  The website is very professional and I haven't had any
+    problems navigating through it.  I can't wait for the check-in function to work
+    :D
+  created_at: '2015-02-05 08:06:18.296595'
+  updated_at: '2015-02-05 08:06:18.296595'

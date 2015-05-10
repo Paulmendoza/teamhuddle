@@ -1,0 +1,25 @@
+---
+reviews_001:
+  id: 30
+  rating: 5
+  review: This was amazing
+  user_id: 8
+  sport_event_id: 127
+  created_at: '2015-03-12 01:26:13.996528'
+  updated_at: '2015-03-12 01:26:13.996528'
+reviews_002:
+  id: 31
+  rating: 5
+  review: Reviewed!
+  user_id: 8
+  sport_event_id: 236
+  created_at: '2015-03-12 01:38:52.313854'
+  updated_at: '2015-03-12 01:38:52.313854'
+reviews_003:
+  id: 32
+  rating: 5
+  review: This was the best dropin
+  user_id: 8
+  sport_event_id: 101
+  created_at: '2015-03-14 06:42:05.279654'
+  updated_at: '2015-03-14 06:42:05.279654'

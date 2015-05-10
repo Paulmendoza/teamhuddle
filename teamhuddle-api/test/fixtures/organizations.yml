@@ -1,76 +1,36 @@
 ---
 organizations_001:
-  id: 1
-  name: Bonsor
-  location_id: 
-  user_id: 
-  phone: '6048881234'
-  email: bonsor@bonsor.ca
-  created_at: '2014-07-24 06:05:50.839084'
-  updated_at: '2014-07-24 06:05:50.839084'
-  website: 
-organizations_002:
-  id: 2
-  name: UrbanRec
-  location_id: 
-  user_id: 
-  phone: '7789993211'
-  email: urban@urbanrec.ca
-  created_at: '2014-07-28 22:13:30.027362'
-  updated_at: '2014-08-02 18:41:42.811498'
-  website: 
-organizations_003:
-  id: 4
-  name: BCIT
-  location_id: 
-  user_id: 
-  phone: '6041213234'
-  email: BCIT@bcit.com
-  created_at: '2014-08-02 17:10:39.122993'
-  updated_at: '2014-08-02 17:10:39.122993'
-  website: 
-organizations_004:
-  id: 5
-  name: Vancouver, City of
-  location_id: 
-  user_id: 
-  phone: 604-873-7000
-  email: vancouver@vancouver.ca
-  created_at: '2014-08-02 17:12:19.017706'
-  updated_at: '2014-12-09 23:17:15.103430'
-  website: http://www.vancouver.ca
-organizations_005:
-  id: 6
+  id: '6'
   name: VolleyballBC
   location_id: 
   user_id: 
-  phone: "(604) 291-2007"
+  phone: (604) 291-2007
   email: contact@volleyballbc.ca
   created_at: '2014-10-06 00:24:03.951532'
   updated_at: '2014-12-09 23:16:49.759903'
   website: http://www.volleyballbc.org/
-organizations_006:
-  id: 9
+organizations_002:
+  id: '9'
   name: Burnaby, City of
   location_id: 
   user_id: 
-  phone: "(604) 294-7450"
+  phone: (604) 294-7450
   email: prcs@burnaby.ca
   created_at: '2014-11-14 02:22:04.878874'
   updated_at: '2014-12-09 23:15:38.382422'
   website: http://www.burnaby.ca/Home.html
-organizations_007:
-  id: 10
+organizations_003:
+  id: '10'
   name: Surrey, City of
   location_id: 
   user_id: 
-  phone: "(604) 591-4011"
+  phone: (604) 591-4011
   email: parksrecculture@surrey.ca
   created_at: '2014-11-14 02:24:00.023808'
   updated_at: '2014-12-09 23:12:13.389576'
   website: http://www.surrey.ca/
-organizations_008:
-  id: 11
+organizations_004:
+  id: '11'
   name: 6Pack Indoor Beach
   location_id: 
   user_id: 
@@ -79,108 +39,98 @@ organizations_008:
   created_at: '2014-11-14 02:26:20.513359'
   updated_at: '2014-12-09 23:10:26.476108'
   website: http://6packbeach.com/
-organizations_009:
-  id: 16
-  name: UBC Recreation
-  location_id: 
-  user_id: 
-  phone: 604 822 6121
-  email: ice.rink@ubc.ca
-  created_at: '2014-12-02 05:45:22.648530'
-  updated_at: '2014-12-02 05:45:22.648530'
-  website: 
-organizations_010:
-  id: 17
+organizations_005:
+  id: '17'
   name: North Vancouver Recreation & Culture
   location_id: 
   user_id: 
-  phone: "(604) 987-7529"
+  phone: (604) 987-7529
   email: ''
   created_at: '2014-12-04 20:47:41.163061'
   updated_at: '2014-12-09 23:09:49.059558'
   website: http://www.northvanrec.com/
-organizations_011:
-  id: 18
+organizations_006:
+  id: '18'
   name: Collingwood Neighbourhood House
   location_id: 
   user_id: 
-  phone: "(604) 435-0323"
+  phone: (604) 435-0323
   email: info@cnh.bc.ca
   created_at: '2014-12-10 19:33:56.278926'
   updated_at: '2014-12-12 19:55:24.480719'
   website: http://www.cnh.bc.ca
-organizations_012:
-  id: 19
+organizations_007:
+  id: '19'
   name: Port Coquitlam Parks and Recreation
   location_id: 
   user_id: 
-  phone: "(604) 927-7900"
+  phone: (604) 927-7900
   email: parksrec@portcoquitlam.ca
   created_at: '2014-12-10 22:22:11.125011'
   updated_at: '2014-12-10 22:22:11.125011'
   website: http://www.portcoquitlam.ca/Recreation_and_Culture.htm
-organizations_013:
-  id: 20
+organizations_008:
+  id: '20'
   name: Richmond, City of
   location_id: 
   user_id: 
-  phone: "(604)-276-4300"
+  phone: (604)-276-4300
   email: community@richmond.ca
   created_at: '2014-12-15 21:22:13.043767'
   updated_at: '2014-12-15 21:22:13.043767'
   website: http://www.richmond.ca/parksrec/overview.htm
-organizations_014:
-  id: 21
+organizations_009:
+  id: '21'
   name: Coquitlam, City of
   location_id: 
   user_id: 
-  phone: "(604)-927-4386"
+  phone: (604)-927-4386
   email: info@coquitlam.ca
   created_at: '2014-12-15 22:43:06.786809'
   updated_at: '2014-12-15 22:43:06.786809'
   website: http://www.coquitlam.ca/parks-recreation-and-culture/sport-and-recreation/overview.aspx
-organizations_015:
-  id: 22
+organizations_010:
+  id: '22'
   name: Port Moody, City of
   location_id: 
   user_id: 
-  phone: "(604)-469-4556"
+  phone: (604)-469-4556
   email: registration.support@portmoody.ca
   created_at: '2014-12-16 00:19:26.085236'
   updated_at: '2014-12-16 00:19:26.085236'
   website: http://www.portmoody.ca/index.aspx?page=143
-organizations_016:
-  id: 23
+organizations_011:
+  id: '23'
   name: Pitt Meadows and Maple Ridge Recreation
   location_id: 
   user_id: 
-  phone: "(604)-467-7346"
+  phone: (604)-467-7346
   email: parksandleisure@mapleridge.ca
   created_at: '2014-12-16 00:24:17.913021'
   updated_at: '2014-12-31 21:52:09.826989'
   website: http://mrpmparksandleisure.ca/
-organizations_017:
-  id: 24
+organizations_012:
+  id: '24'
   name: Delta, City of
   location_id: 
   user_id: 
-  phone: "(604) 952-3000"
+  phone: (604) 952-3000
   email: park-rec@delta.ca
   created_at: '2014-12-16 00:45:59.206415'
   updated_at: '2014-12-16 00:45:59.206415'
   website: http://www.delta.ca/parks-recreation/overview
-organizations_018:
-  id: 25
+organizations_013:
+  id: '25'
   name: New Westminster, City of
   location_id: 
   user_id: 
-  phone: "(604) 527 -4567"
+  phone: (604) 527 -4567
   email: info@nw.ca
   created_at: '2014-12-16 00:48:06.043031'
   updated_at: '2014-12-16 00:48:06.043031'
   website: http://www.newwestpcr.ca/recreation.php
-organizations_019:
-  id: 26
+organizations_014:
+  id: '26'
   name: Kitsilano Community Centre
   location_id: 
   user_id: 
@@ -189,63 +139,123 @@ organizations_019:
   created_at: '2014-12-16 06:21:23.836332'
   updated_at: '2014-12-17 16:39:32.454154'
   website: http://kitscc.com/contact
-organizations_020:
-  id: 27
-  name: Center Ice Arenas
-  location_id: 
-  user_id: 
-  phone: '6045047565'
-  email: noEmail@noEmail.ca
-  created_at: '2014-12-30 02:33:04.166303'
-  updated_at: '2014-12-30 02:33:04.166303'
-  website: www.centerice.ca
-organizations_021:
-  id: 28
+organizations_015:
+  id: '28'
   name: Chuck Bailey Recreation Centre
   location_id: 
   user_id: 
-  phone: " (604) 598-5898"
+  phone: ' (604) 598-5898'
   email: webteam@surrey.ca
   created_at: '2014-12-30 19:26:58.913909'
   updated_at: '2014-12-30 19:26:58.913909'
   website: http://www.surrey.ca/culture-recreation/5985.aspx
-organizations_022:
-  id: 29
-  name: Abbotsford, City of
-  location_id: 
-  user_id: 
-  phone: "(604) 853-2281"
-  email: noEmail@noEmail.com
-  created_at: '2014-12-30 21:40:17.933098'
-  updated_at: '2015-01-08 19:59:20.398983'
-  website: http://www.abbotsford.ca/leisure/recreation/
-organizations_023:
-  id: 30
-  name: Canlan Ice Sports
-  location_id: 
-  user_id: 
-  phone: 604 736 9152
-  email: noEmail2@noEmail.ca
-  created_at: '2014-12-30 23:33:57.832162'
-  updated_at: '2014-12-30 23:33:57.832162'
-  website: http://www.icesports.com/
-organizations_024:
-  id: 31
-  name: Township of Langley
-  location_id: 
-  user_id: 
-  phone: '6045343211'
-  email: info@tol.ca
-  created_at: '2014-12-31 01:47:45.194116'
-  updated_at: '2014-12-31 01:47:45.194116'
-  website: http://www.tol.ca/
-organizations_025:
-  id: 32
+organizations_016:
+  id: '32'
   name: District of Mission
   location_id: 
   user_id: 
-  phone: "(604) 820-5350"
+  phone: (604) 820-5350
   email: leisureservices@mission.ca
   created_at: '2014-12-31 22:35:02.498015'
   updated_at: '2014-12-31 22:35:02.498015'
   website: http://www.mission.ca/municipal-hall/departments/parks-recreation-culture/leisure-centre/
+organizations_017:
+  id: '27'
+  name: Center Ice Arenas
+  location_id: 
+  user_id: 
+  phone: (604) 504-7565
+  email: info@Centerice.ca
+  created_at: '2014-12-30 02:33:04.166303'
+  updated_at: '2015-01-10 00:52:01.083491'
+  website: www.centerice.ca
+organizations_018:
+  id: '31'
+  name: 'Langley, Township of '
+  location_id: 
+  user_id: 
+  phone: (604) 534-3211
+  email: info@tol.ca
+  created_at: '2014-12-31 01:47:45.194116'
+  updated_at: '2015-01-10 00:52:58.813878'
+  website: http://www.tol.ca/
+organizations_019:
+  id: '1'
+  name: Bonsor
+  location_id: 
+  user_id: 
+  phone: '6048881234'
+  email: ''
+  created_at: '2014-07-24 06:05:50.839084'
+  updated_at: '2015-01-19 10:07:10.393109'
+  website: ''
+organizations_020:
+  id: '4'
+  name: BCIT
+  location_id: 
+  user_id: 
+  phone: '6041213234'
+  email: ''
+  created_at: '2014-08-02 17:10:39.122993'
+  updated_at: '2015-01-19 10:07:27.087838'
+  website: ''
+organizations_021:
+  id: '2'
+  name: UrbanRec
+  location_id: 
+  user_id: 
+  phone: '7789993211'
+  email: ''
+  created_at: '2014-07-28 22:13:30.027362'
+  updated_at: '2015-01-19 10:07:52.853513'
+  website: ''
+organizations_022:
+  id: '5'
+  name: Vancouver, City of
+  location_id: 
+  user_id: 
+  phone: (604) 873-7000
+  email: ''
+  created_at: '2014-08-02 17:12:19.017706'
+  updated_at: '2015-01-19 10:08:08.917088'
+  website: ''
+organizations_023:
+  id: '30'
+  name: Canlan Ice Sports
+  location_id: 
+  user_id: 
+  phone: (604) 736-9152
+  email: ''
+  created_at: '2014-12-30 23:33:57.832162'
+  updated_at: '2015-01-19 10:08:18.570862'
+  website: http://www.icesports.com/
+organizations_024:
+  id: '29'
+  name: Abbotsford, City of
+  location_id: 
+  user_id: 
+  phone: (604) 853-2281
+  email: ''
+  created_at: '2014-12-30 21:40:17.933098'
+  updated_at: '2015-01-19 10:09:49.891053'
+  website: http://www.abbotsford.ca/leisure/recreation/
+organizations_025:
+  id: '33'
+  name: Simon Fraser University
+  location_id: 
+  user_id: 
+  phone: (778) 782-4142
+  email: rec@sfu.ca
+  created_at: '2015-01-28 00:04:29.426947'
+  updated_at: '2015-01-28 00:04:29.426947'
+  website: http://www.sfu.ca/students/recreation/
+organizations_026:
+  id: '16'
+  name: University of British Columbia
+  location_id: 
+  user_id: 
+  phone: '(604) 822-6000 '
+  email: operations@rec.ubc.ca
+  created_at: '2014-12-02 05:45:22.64853'
+  updated_at: '2015-01-28 01:54:03.212365'
+  website: http://www.recreation.ubc.ca/

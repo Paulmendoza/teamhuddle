@@ -2,15 +2,21 @@
 // ========== ABOUT US PAGE ===========
 
 .about-us {
-  margin-top: 120px;
   .about-us-text {
-    @media (max-width: 1199px) {
+    padding-left: 40px !important;
+    @media (max-width: 600px) {
       border: none;
+      padding: 5px !important;
+    }
+  }
+  .mission-text{
+    padding-right: 40px !important;
+    @media(max-width: 600px){
+      padding: 5px;
     }
   }
   img {
     max-height: 300px;
-    border: 1px solid #000;
   }
   h1{
     font-size:30px;
@@ -22,17 +28,23 @@
   }
   .tm {
     clear: both;
-    padding: 30px 0px;
+    padding: 30px 20px;
     border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
     &:first-of-type {
       border-top: 1px solid #ddd;
     }
     &:last-of-type {
       border: 0;
     }
-  }
-    @media (max-width: 600px) {
-      margin: 100px 0 0 0;
-      padding: 0;
+    @media(max-width: 600px){
+      padding: 0px 5px 5px 5px;
     }
+  }
+  @media (max-width: 600px) {
+    padding: 0 !important;
+  }
+  .card{
+    background-color: rgba(255,255,255,.85);
+  }
 }

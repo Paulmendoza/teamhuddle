@@ -9,10 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  */
-//= require materialize
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "variables";
+@import "static.css";
 @import "pages/landing_page";
 @import "pages/contact";
 @import "pages/dropin_finder";
@@ -25,22 +25,35 @@
 .wrapper{
   min-height: 100%;
   position:relative;
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 }
 //============ CONTENT ============
 .content{
   padding-bottom:40px;   /* Height of the footer element */
 }
+.nav-buffer{
+  height: $nav-height;
+  background-color: transparent;
+
+}
 //========== NAVIGATION STYLES ===========
 nav {
-  min-height: 80px;
+  height: $nav-height;
   background-color: transparent;
   transition: background-color .7s;
   z-index:9999;
   position: fixed;
   top: 0;
+  line-height: $nav-height;
+  @media(max-width: 600px){
+    min-height: $nav-height;
+    .nav-wrapper{
+      min-height: $nav-height
+    }
+  }
   .nav-wrapper {
-    min-height: 80px;
+    min-height: $nav-height;
+
     a{
       text-decoration: none;
       &:focus{
@@ -53,10 +66,14 @@ nav {
     .brand-logo {
       div{
         margin-left: 50px;
+        line-height: 45px;
+        @media (max-width: 600px) {
+          margin-left:  0;
+        }
       }
       img {
-        height: 50px;
-        width: 50px;
+        height: 30px;
+        width: 30px;
       }
       p{
         position: relative;
@@ -69,19 +86,19 @@ nav {
       }
     }
     ul{
-      height: 80px;
+      height: $nav-height;
       li{
-        height: 80px;
+        height: $nav-height;
         a {
           color: #455a64;
-          font-size: 1em;
+          font-size: 1.3em;
           text-decoration: none;
         }
       }
     }
     form {
       color: #455a64;
-      height: 100px;
+      height: $nav-height;
       .input-field{
         width: 30px;
         height:30px
@@ -131,8 +148,8 @@ nav {
         transition: 0.3s; }
       ul{
         a{
-          height: 100px;
-          line-height: 100px;
+          height: $nav-height;
+          line-height: $nav-height;
         }
         li{
           &:nth-child(1n+1):hover{
@@ -151,7 +168,9 @@ nav {
       height: 100%
     }
     .mdi-navigation-menu{
-      font-size: 50px;
+      line-height: $nav-height;
+      height: $nav-height;
+      font-size: 35px;
       color: $light-orange;
       &:hover{
         color: $light-blue;
@@ -162,9 +181,22 @@ nav {
 //============Footer=============
 .footer{
   width:100%;
-  height:80px;
+  height:50px;
   position:absolute;
   bottom:0;
   left:0;
   background:white;
+  padding : 0px 5px 0px 5px;
+  span {
+    vertical-align: middle;
+  }
+  a{
+    color: #686868;
+    text-decoration: none;
+    &:hover{
+      color: $light-blue;
+    }
+  }
+  @media(max-width:600px){
+  }
 }

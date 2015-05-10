@@ -3,9 +3,15 @@
 // ========== CONTACT US US PAGE ===========
 
 .contact-us {
-  margin-top: 120px;
   .contact-us-text {
     max-height: 300px;
+  }
+  .card{
+    background-color: rgba(255,255,255,.85);
+    @media(max-width: 600px){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
   ul {
     padding: 0 !important;
@@ -22,10 +28,15 @@
     min-height: 300px;
   }
   label{
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 300;
     @media(max-width: 600px){
       font-size: 1em;
+    }
+  }
+  form{
+    .control-label{
+      text-align: left;
     }
   }
   input{
@@ -37,7 +48,6 @@
     }
   }
   @media(max-width: 600px){
-
   }
   .socialmedia-full {
     @media (max-width: 1199px) {

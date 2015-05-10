@@ -5,7 +5,7 @@ class SportEvent < ActiveRecord::Base
 
   attr_readonly :active
 
-  belongs_to :event, :dependent => :delete
+  belongs_to :event
   belongs_to :sport
   belongs_to :admin
   has_many :archived_sport_events
@@ -58,6 +58,18 @@ class SportEvent < ActiveRecord::Base
 
   def check_active
     return self.sport_event_instances.active.any?
+  end
+
+  def self.update_inactive_dropins
+    active_dropins = SportEvent.where(type: "dropin", is_active: true).all
+
+    puts "Updating inactive dropins"
+    active_dropins.each do |dropin|
+      unless dropin.check_active
+        puts dropin.id
+        dropin.update(is_active: false)
+      end
+    end
   end
 
   # end
