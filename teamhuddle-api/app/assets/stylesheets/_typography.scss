@@ -19,16 +19,6 @@ h3, h4, h5, h6, p, select, textarea {
 input, button {
   font-family: "Raleway", sans-serif;
 }
-//
-//a {
-//  font-family: 'Jura', sans-serif;
-//  color: #fff !important;
-//
-//  &:hover {
-//    text-decoration: none;
-//    color: #fff;
-//  }
-//}
 
 .inline-title {
   font-family: 'Jura', sans-serif;
@@ -52,13 +42,9 @@ li {
   color: #EAEAEA;
 }
 
-
-.static_pages {
-  h3, p {
-    font-family: 'Raleway', sans-serif;
-  }
+.logo-font{
+  font-family: 'Jura', sans-serif;
 }
-
 
 .navbar-inverse .navbar-nav > li > a {
   color: #EAEAEA;
@@ -68,7 +54,7 @@ li {
   background-color: #000;
 }
 
-.dropdown-menu>li>a {
+.dropdown-menu > li > a {
   color: #fff !important;
   background-color: #000;
 
@@ -80,30 +66,30 @@ li {
 
 @media (max-width: 767px) {
   .navbar-inverse .navbar-nav > li > a {
-  color: #EAEAEA;
-}
+    color: #EAEAEA;
+  }
 
-.navlinks.dropdown.open {
-  
-  background-color: #ff3900;
-}
+  .navlinks.dropdown.open {
 
-.dropdown-menu {
-  background-color: #ff3900;
-
-  ul {
     background-color: #ff3900;
   }
-}
-.dropdown-menu>li>a {
-  color: #fff !important;
-  background-color: #ff3900;
 
-  &:hover {
-    color: #fff !important;
-    background-color: #ff3900 !important;
+  .dropdown-menu {
+    background-color: #ff3900;
+
+    ul {
+      background-color: #ff3900;
+    }
   }
-}
+  .dropdown-menu > li > a {
+    color: #fff !important;
+    background-color: #ff3900;
+
+    &:hover {
+      color: #fff !important;
+      background-color: #ff3900 !important;
+    }
+  }
 
 }
 

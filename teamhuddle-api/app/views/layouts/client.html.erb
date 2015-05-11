@@ -2,14 +2,11 @@
 <html>
 <head>
   <title><%= yield(:title) %></title>
-  <%= stylesheet_link_tag  'app',
+  <%= stylesheet_link_tag  'style',
                            '//fonts.googleapis.com/css?family=Jura:400,600',
                            '//fonts.googleapis.com/css?family=Raleway:400,300',
                            '//fonts.googleapis.com/css?family=Roboto',
-                           '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css',
-                           'typography',
-                           media: 'all',
-                           'data-turbolinks-track' => true%>
+                           media: 'all'%>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="description" content="Connecting you with your sports community. Find the sports you love playing with the players you love playing with!">
@@ -21,22 +18,12 @@
 <body>
 <div class="wrapper">
   <nav role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <!--<div>-->
-    <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">-->
-    <!--<span class="sr-only">Toggle navigation</span>-->
-    <!--<span class="icon-bar"></span>-->
-    <!--<span class="icon-bar"></span>-->
-    <!--<span class="icon-bar"></span>-->
-    <!--</button>-->
-    <!--<a href="/"><%= image_tag 'logo-compressed.png', class: "logonav center-block", alt: 'teamhuddle_logo'%></a>-->
-    <!--</div>-->
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="nav-wrapper">
       <a href="/" class="brand-logo">
         <div class="row text-center">
-          <%= image_tag 'logo-compressed.png', alt: 'teamhuddle_logo'%>
+          <%= image_tag 'logo-compressed.png', alt: 'teamhuddle_logo'%><span class="logo-font">teamhuddle</span>
         </div>
       </a>
       <a href="#" data-activates="mobile-demo" class="button-collapse margin-left-3"><i class="mdi-navigation-menu"></i></a>
@@ -73,38 +60,8 @@
                 </li>
             </ul>
           </div>
-          <!--<div class="col s3">-->
-          <!--<div class="input-field col s12">-->
-          <!--<input id="username" type="text" class="validate">-->
-          <!--<label for="username">Username</label>-->
-          <!--</div>-->
-          <!--<div class="input-field col s12">-->
-          <!--<input id="password" type="password" class="validate">-->
-          <!--<label for="password">Password</label>-->
-          <!--</div>-->
-          <!--</div>-->
-          <!--<div class="col s3 margin-top-1">-->
-          <!--<button class="col s12 btn waves-effect waves-light blue" type="submit" name="action">Login</button>-->
-          <!--<button class="col s12 btn waves-effect waves-light" type="submit" name="action">Facebook</button>-->
-          <!--</div>-->
         </div>
       </form>
-      <!--<ul class="right hide-on-med-and-down" role="menu">-->
-      <!--<li><%= link_to "dropin finder", controller: '/index', action: :dropin_finder %></li>-->
-      <!--<li><%= link_to "about", controller: '/index', action: :about %></li>-->
-      <!--<li><%= link_to "contact", controller: '/index', action: :contact %></li>-->
-      <!--&lt;!&ndash;<li class="navlinks">&ndash;&gt;-->
-      <!--&lt;!&ndash;<%# if user_signed_in? %>&ndash;&gt;-->
-      <!--&lt;!&ndash;<a href="#" class="dropdown-toggle" class="dropdown" data-toggle="dropdown" role="button" aria-expanded="false"><%#= current_user.first_name.strip %> <%#= current_user.last_name.strip %></a>&ndash;&gt;-->
-      <!--&lt;!&ndash;<ul class="dropdown-menu" role="menu">&ndash;&gt;-->
-      <!--&lt;!&ndash;<li><%#= link_to "profile", "#" %></li>&ndash;&gt;-->
-      <!--&lt;!&ndash;<li><%#= link_to "logout", destroy_user_session_path, :method => :delete %></li>&ndash;&gt;-->
-      <!--&lt;!&ndash;</ul>&ndash;&gt;-->
-      <!--&lt;!&ndash;<%# else %>&ndash;&gt;-->
-      <!--&lt;!&ndash;<%#= link_to "login", new_user_session_path %>&ndash;&gt;-->
-      <!--&lt;!&ndash;<%# end %>&ndash;&gt;-->
-      <!--&lt;!&ndash;</li>&ndash;&gt;-->
-      <!--</ul>-->
     </div>
 
   </nav>

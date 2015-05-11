@@ -1,6 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprockets
-//= require 'materialize'
+//= require materialize-sprockets
 //= require base/parallax.min
 //= require base/loader
