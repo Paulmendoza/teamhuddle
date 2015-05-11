@@ -3,6 +3,7 @@
 # and open the template in the editor.
 
 Rails.application.config.assets.precompile += %w( style.css )
+Rails.application.config.assets.precompile += %w( app.css )
 Rails.application.config.assets.precompile += %w( admin_style.css )
 Rails.application.config.assets.precompile += %w( admin/admin.js )
 Rails.application.config.assets.precompile += %w( admin/adminAngular.js )

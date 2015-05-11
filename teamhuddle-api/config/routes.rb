@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  get '/' => 'app#index', constraints: {subdomain: 'app'}
   root 'index#index'
 
   # Example of regular route:
@@ -35,6 +36,7 @@ Rails.application.routes.draw do
   get 'contact' => 'index#contact'
   get 'about' => 'index#about'
   get 'dropin-finder' => 'index#dropin_finder'
+
   
   scope :admin do
     resources :locations

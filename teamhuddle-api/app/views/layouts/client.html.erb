@@ -8,6 +8,8 @@
                            '//fonts.googleapis.com/css?family=Roboto',
                            media: 'all'%>
 
+  <%= yield(:header_styles) %>
+
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="description" content="Connecting you with your sports community. Find the sports you love playing with the players you love playing with!">
 
@@ -65,10 +67,7 @@
     </div>
 
   </nav>
-  <div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path 'huddle-3.png' %>">
-    <div class="nav-buffer col s12"></div>
-    <%= yield %>
-  </div>
+  <%= yield %>
   <div class="footer text-center row">
     <div class="col s6">
       <span>
