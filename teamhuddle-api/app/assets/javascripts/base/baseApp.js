@@ -10,18 +10,3 @@ BaseApp.animation('.animateSlide', function () {
         }
     }
 });
-var faded = true;
-window.addEventListener("scroll", function() {
-    if (window.scrollY > 100) {
-        if(faded){
-            faded = false;
-            $("nav").css("background-color", "white");
-        }
-    }
-    else {
-        if(!faded){
-            faded = true;
-            $("nav").css("background-color", "transparent");
-        }
-    }
-},false);

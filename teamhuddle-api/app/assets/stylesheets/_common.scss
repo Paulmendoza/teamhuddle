@@ -9,12 +9,7 @@
 }
 //============ CONTENT ============
 .content{
-  padding-bottom:40px;   /* Height of the footer element */
-}
-.nav-buffer{
-  height: $nav-height;
-  background-color: transparent;
-
+  padding-bottom:40px;
 }
 //========== NAVIGATION STYLES ===========
 nav {
@@ -157,7 +152,6 @@ nav {
     }
   }
 }
-
 //============Generic Content============
 .content{
   margin-top:50px;

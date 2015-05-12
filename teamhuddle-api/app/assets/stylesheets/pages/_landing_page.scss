@@ -1,5 +1,4 @@
 @import "variables";
-
 // ========== LANDING PAGE ===========
 .row{
   padding: 0;
@@ -66,7 +65,6 @@
       position: relative;
       vertical-align: middle;
     }
-
     .line:after {
       content: "";
       width: 10px;
@@ -76,9 +74,6 @@
       position: absolute;
       top: -6px;
       right: 0;
-    }
-    @media(max-width:992px){
-
     }
     @media(max-width: 748px){
       min-height: 700px;
@@ -217,144 +212,6 @@
     @media(max-width: 992px){
       position: relative;
       top: 0;
-    }
-  }
-}
-.icon-outer {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-  .sport_logo {
-    border: none;
-  }
-  .icon1 {
-    min-width: 248px;
-    max-width: 248px;
-    height: 250px;
-    background: image-url('icons_sprite.png') 0 0;
-    display: inline-block;
-  }
-  .icon2 {
-    min-width: 249px;
-    max-width: 249px;
-    height: 250px;
-    background: image-url('icons_sprite.png') -253px 0px;
-    display: inline-block;
-  }
-  .icon3 {
-    min-width: 249px;
-    max-width: 249px;
-    height: 250px;
-    background: image-url('icons_sprite.png') -505px 0px;
-    display: inline-block;
-  }
-  .icon4 {
-    min-width: 249px;
-    max-width: 249px;
-    height: 250px;
-    background: image-url('icons_sprite.png') -757px 0px;
-    display: inline-block;
-  }
-  .icon5 {
-    min-width: 249px;
-    max-width: 249px;
-    height: 250px;
-    background: image-url('icons_sprite.png') -1009px 0px;
-    display: inline-block;
-  }
-  .icon6 {
-    min-width: 249px;
-    max-width: 249px;
-    height: 250px;
-    background: image-url('icons_sprite.png') -1261px 0px;
-    display: inline-block;
-  }
-  .icon7 {
-    min-width: 249px;
-    max-width: 249px;
-    height: 250px;
-    background: image-url('icons_sprite.png') -1513px 0px;
-    display: inline-block;
-  }
-  .icon8 {
-    min-width: 249px;
-    max-width: 249px;
-    height: 250px;
-    background: image-url('icons_sprite.png') -1766px 0px;
-    display: inline-block;
-  }
-  @media (max-width: 500px) {
-    .icon1 {
-      max-width: 124px;
-      background: image-url('icons_sprite.png') 0px 0px no-repeat;
-      background-size: cover;
-      min-width: 123px;
-      height: 125px;
-      border: none;
-      display: inline-block;
-    }
-    .icon2 {
-      min-width: 123px;
-      max-width: 123px;
-      height: 125px;
-      border: none;
-      background: image-url('icons_sprite.png') -125px 0px no-repeat;
-      background-size: cover;
-      display: inline-block;
-    }
-    .icon3 {
-      min-width: 123px;
-      max-width: 123px;
-      height: 125px;
-      background: image-url('icons_sprite.png') -252px 0px no-repeat;
-      border: none;
-      background-size: cover;
-      display: inline-block;
-    }
-    .icon4 {
-      min-width: 123px;
-      max-width: 123px;
-      height: 125px;
-      background: image-url('icons_sprite.png') -378px 0px no-repeat;
-      border: none;
-      background-size: cover;
-      display: inline-block;
-    }
-    .icon5 {
-      min-width: 123px;
-      max-width: 123px;
-      height: 125px;
-      background: image-url('icons_sprite.png') -502px 0px no-repeat;
-      border: none;
-      background-size: cover;
-      display: inline-block;
-    }
-    .icon6 {
-      min-width: 123px;
-      max-width: 123px;
-      height: 125px;
-      background: image-url('icons_sprite.png') -628px 0px no-repeat;
-      border: none;
-      background-size: cover;
-      display: inline-block;
-    }
-    .icon7 {
-      min-width: 123px;
-      max-width: 123px;
-      height: 125px;
-      background: image-url('icons_sprite.png') -753px 0px no-repeat;
-      border: none;
-      background-size: cover;
-      display: inline-block;
-    }
-    .icon8 {
-      min-width: 123px;
-      max-width: 123px;
-      height: 125px;
-      background: image-url('icons_sprite.png') -878px 0px no-repeat;
-      border: none;
-      background-size: cover;
-      display: inline-block;
     }
   }
 }
