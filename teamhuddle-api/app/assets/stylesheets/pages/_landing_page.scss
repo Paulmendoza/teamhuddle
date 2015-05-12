@@ -6,77 +6,134 @@
   margin: 0;
 }
 .landing-page {
-  padding-bottom: 80px;
   .section-1{
-    margin-top: 180px;
-    min-height: calc(75vh - 180px);
-    h1{
-      font-style: $font-family-title;
-      font-weight: 100;
-      font-size: 5em;
+    @extend .center-align;
+    background-image: image-url("NewByMichaela/New_LandingBanner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    min-height: 335px;
+    div{
+      @extend .col, .s10, .offset-s1
     }
-    h3{
-      font-weight: 100;
-      font-size: 2em;
+    p{
+      font-size: 1.5em;
+      font-family: 'Raleway', sans-serif;;
+      font-weight: 200;
+      position:relative;
+      top: 50px;
+      letter-spacing: 2px;
+      color: white;
     }
-    h4{
+    a{
+      @extend .waves-effect, .waves-light, .btn, .blue-button;
+      position:relative;
+      top: 50px;
+      font-size: 1em;
       font-weight: 100;
-      font-size: 2.3em;
+      text-transform: lowercase;
     }
     @media(max-width:992px){
 
     }
     @media(max-width: 600px){
-      margin-top: 90px;
-      h1{
-        font-size: 3em;
-      }
-      h4{
-        font-size: 1.5em;
-      }
-      h3{
-        font-size: 1.3em;
-      }
     }
   }
   .section-2{
-    min-height: 100vh;
-    h1{
-      font-weight: 200;
+    @extend .center;
+    min-height: 400px;
+    height: 50vh;
+    div{
+      height: 170px;
+      width: 170px;
+      display: inline-block;
+      position: relative;
+      top: 5%;
+      transform: translateY(50%);
     }
     p{
-      font-weight: 200;
-      font-size: 1.3em;
+      font-size:.9em;
     }
-    .btn-try-it-now{
-      line-height: 80px;
-      height: 80px;
-      background-color: $light-orange;
+    h5{
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 600;
+      text-space: 2px;
     }
-    .card{
-      background-color: rgba(255,255,255, .85);
-      padding-top: 20px;
-      padding-bottom: 20px;
-      &:nth-child(1n+1){
-        border-bottom: solid 2px $light-orange;
-      }
-      &:nth-child(2n+2){
-        border-bottom: solid 2px $light-blue;
-      }
-      &:nth-child(3n+3){
-        border-bottom: solid 2px $light-green;
+    .line {
+      border-top: 1px solid $reading-text;
+      width: 15%;
+      position: relative;
+      vertical-align: middle;
+    }
 
-      }
+    .line:after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: #30353b;
+      border-radius: 5px;
+      position: absolute;
+      top: -6px;
+      right: 0;
+    }
+    @media(max-width:992px){
+
+    }
+    @media(max-width: 600px){
     }
   }
   .section-3{
-    h1{
-      font-weight: 200;
+    @extend .row, .col ,.s12;
+    padding-right:0;
+    padding-left: 0;
+    div{
+      padding-right:0;
+      padding-left: 0;
+      height: 428px;
+      text-align:center;
+      @extend .col, .s4;
+      h5{
+        margin-top:0px;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 600;
+        text-space: 2px;
+      }
+      p{
+        font-size:.9em;
+      }
+      &:nth-child(1){
+        background-image: image-url("NewByMichaela/New_BGImage-greenDROPINS.png");
+        background-size: cover;
+      }
+      &:nth-child(2){
+        background-image: image-url("NewByMichaela/New_BGImage-orangeCHECKIN.png");
+        background-size: cover;
+      }
+      &:nth-child(3){
+        background-image: image-url("NewByMichaela/New_BGImage-blueFINDPLAYER.png");
+        background-size: cover;
+      }
+      img{
+        margin-top: 100px;
+      }
     }
-    p{
-      font-size: 2em;
-      font-weight: 100;
-      color: #343434;
+    @media(max-width:992px){
+
+    }
+    @media(max-width: 600px){
+    }
+  }
+  .section-4{
+    @extend .center-align;
+    min-height: 200px;
+    a{
+      @extend .waves-effect ,.waves-light ,.btn, .blue-button;
+      position:relative;
+      bottom:-100px;
+      font-weight:100;
+      text-transform: lowercase;
     }
   }
   .login{
@@ -138,15 +195,6 @@
       position: relative;
       top: 0;
     }
-  }
-  .glass{
-    filter: blur(5px);
-    min-height: 60vh;
-    background-color: white;
-    position: fixed;
-    right: 0;
-    z-index:98;
-    margin-top: 140px;
   }
   .credits{
     position: fixed;
