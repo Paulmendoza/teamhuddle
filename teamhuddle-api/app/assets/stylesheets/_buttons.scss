@@ -1,8 +1,11 @@
 //============Buttons============
+.generic-button{
+  @extend .btn, .waves-effect, .waves-light;
+  height: 30px;
+  line-height: 30px;
+}
 .blue-button{
-  @extend .waves-effect;
-  @extend .waves-light;
-  @extend .btn;
+  @extend .generic-button;
   background-color: $light-blue;
   border: 1px solid $light-blue;
   color:  #ffffff;
@@ -12,26 +15,38 @@
 
 }
 .green-button{
-  background-color: transparent;
+  @extend .generic-button;
+  background-color: $light-green;
   border: 1px solid $light-green;
-  color: $light-green;
+  color: #ffffff;
   &:hover{
-    color:$dark-green;
+    background-color:$dark-green;
   }
 }
 .orange-button{
-  background-color: transparent;
+  @extend .generic-button;
+  background-color: $light-orange;
   border: 1px solid $light-orange;
-  color : $light-orange;
+  color : #ffffff;
   &:hover{
-    color:$dark-orange;
+    background-color:$dark-orange;
   }
 }
 .red-button{
-  background-color: transparent;
+  @extend .generic-button;
+  background-color: $light-red;
   border: 1px solid $light-red;
-  color: $light-red;
+  color: #ffffff;
   &:hover{
-    color:$dark-red;
+    background-color:$dark-red;
+  }
+}
+.grey-button{
+  @extend .generic-button;
+  background-color: #696969;
+  border: 1px solid #696969;
+  color : #ffffff;
+  &:hover{
+    background-color: #696969;
   }
 }

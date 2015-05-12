@@ -42,17 +42,17 @@
   .section-2{
     @extend .center;
     min-height: 400px;
-    height: 50vh;
     div{
       height: 170px;
       width: 170px;
       display: inline-block;
       position: relative;
       top: 5%;
-      transform: translateY(50%);
+      transform: translateY(80%);
     }
     p{
       font-size:.9em;
+      font-weight: 100;
     }
     h5{
       text-transform: uppercase;
@@ -80,7 +80,14 @@
     @media(max-width:992px){
 
     }
-    @media(max-width: 600px){
+    @media(max-width: 748px){
+      min-height: 700px;
+      div{
+        clear: both;
+      }
+      .line{
+        display: none;
+      }
     }
   }
   .section-3{
@@ -92,7 +99,7 @@
       padding-left: 0;
       height: 428px;
       text-align:center;
-      @extend .col, .s4;
+      @extend .col, .s12, .m4;
       h5{
         margin-top:0px;
         text-transform: uppercase;
@@ -103,17 +110,30 @@
       p{
         font-size:.9em;
       }
+      a {
+        font-weight: 100;
+        text-transform: lowercase !important;
+      }
       &:nth-child(1){
         background-image: image-url("NewByMichaela/New_BGImage-greenDROPINS.png");
         background-size: cover;
+        a{
+          @extend .blue-button;
+        }
       }
       &:nth-child(2){
         background-image: image-url("NewByMichaela/New_BGImage-orangeCHECKIN.png");
         background-size: cover;
+        a{
+          @extend .grey-button;
+        }
       }
       &:nth-child(3){
         background-image: image-url("NewByMichaela/New_BGImage-blueFINDPLAYER.png");
         background-size: cover;
+        a{
+          @extend .grey-button;
+        }
       }
       img{
         margin-top: 100px;
@@ -122,7 +142,10 @@
     @media(max-width:992px){
 
     }
-    @media(max-width: 600px){
+    @media(max-width: 748px){
+      div{
+        clear: both;
+      }
     }
   }
   .section-4{
@@ -194,16 +217,6 @@
     @media(max-width: 992px){
       position: relative;
       top: 0;
-    }
-  }
-  .credits{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    text-align: right;
-    font-weight: 100;
-    @media (max-width: 600px) {
-      position: absolute;
     }
   }
 }
