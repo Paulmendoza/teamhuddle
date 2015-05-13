@@ -41,13 +41,16 @@
   .right-wrapper{
     padding: 0;
     margin-left:50%;
+    @media(max-width: 600px){
+      margin-left: 0;
+    }
     .filter{
       position: fixed;
       top: $nav-height;
       background-color: white;
       z-index: 97;
       border-bottom: 1px #BDBDBD solid;
-      padding-left: 20px !important;
+      width: auto;
       a{
         @extend .waves-light, .waves-effect, .btn , .blue-button;
         line-height: 36px;
@@ -78,7 +81,7 @@
       background-color: #FAFAFA;
       padding-left: 15px;
       @media(max-width: 600px) {
-        padding-top: 152px;
+        padding-top: 160px;
       }
       h4{
         font-size: 1em;
