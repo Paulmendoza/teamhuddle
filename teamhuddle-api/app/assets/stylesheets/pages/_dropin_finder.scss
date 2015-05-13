@@ -2,8 +2,9 @@
 
 //=========== Dropin Finder ============
 .dropinfinder{
-  padding-left: 0;
-  padding-right: 0;
+  @extend .col, .s12;
+  padding:0;
+  margin: 0;
   background-color: white;
   .map-mobile-toggle{
     @media(max-width:600px){
@@ -11,9 +12,11 @@
     }
   }
   .left-wrapper{
-    padding-left: 0;
-    padding-right: 0;
+    @extend .col , .s12, .m6;
     position:fixed;
+    left:0;
+    padding:0 !important;
+    margin: 0 !important;
     z-index:1000;
     .marker-row-selected{
       background-color: #E8E8E8;
@@ -36,18 +39,26 @@
     }
   }
   .right-wrapper{
-    padding-right: 0;
-    padding-left: 0;
+    padding: 0;
+    margin-left:50%;
     .filter{
       position: fixed;
       top: $nav-height;
       background-color: white;
       z-index: 97;
-      padding-bottom: 30px;
       border-bottom: 1px #BDBDBD solid;
       padding-left: 20px !important;
       a{
+        @extend .waves-light, .waves-effect, .btn , .blue-button;
         line-height: 36px;
+      }
+      select{
+        display: block;
+      }
+      h2{
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
       }
       @media(max-width: 600px){
         h2{
@@ -69,6 +80,10 @@
       @media(max-width: 600px) {
         padding-top: 152px;
       }
+      h4{
+        font-size: 1em;
+        font-weight: 500;
+      }
     }
     .dropin-repeat{
       min-height: 80px;
@@ -84,6 +99,8 @@
       .glyphicon{
         display:block;
         line-height: 44px;
+        font-size: 2em;
+        margin-right: 5px;
       }
     }
     .curtain{
@@ -143,13 +160,17 @@
 
 //============ dropinfinder-icon============
 .dropinfinder-icon{
+  text-align: center;
+  section{
+    @extend .col, .m10, .offset-m1;
+  }
   h3{
     font-weight: 200;
     font-size: 2em;
     color: $light-blue;
   }
   h5{
-    font-size: 1.4em;
+    font-size: 1em;
     font-weight: 100;
   }
   .card{
@@ -168,10 +189,10 @@
       font-size: 1.2em;
     }
     h5{
-      font-size: 1.3em;
+      font-size: .9em;
     }
     h1{
-      font-size: 2.5em;
+      font-size: 2em;
     }
   }
   @media(max-width: 600px){

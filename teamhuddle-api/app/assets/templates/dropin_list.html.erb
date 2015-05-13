@@ -5,11 +5,9 @@
   <h2 class="text-center sport_name">dropin {{sport | lowercase }} events</h2>
   <br>
   <div>
-    <div class="text-center margin-bottom-1 col s12">
-      <a class="hide-on-med-and-up col s4 blue-button" ng-click="switchToMap()">Show Map</a>
-      <a class="col m6 s4 blue-button" ng-click="resetFilters()">Reset Filters</a>
-      <a class="col m6 s4 blue-button" href="#/">More Sports</a>
-    </div>
+    <a class="hide-on-med-and-up col s4 m6 blue-button" ng-click="switchToMap()">Show Map</a>
+    <a class="col s6" ng-click="resetFilters()">Reset Filters</a>
+    <a class="col s6" href="#/">More Sports</a>
     <div class="col s6">
       <select class="form-control" ng-model="weekdaySelect" ng-change="setFilters()">
         <option value="" disabled selected>Day</option>
@@ -69,7 +67,7 @@
       <p class="col s4 valign">{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</p>
       <span class="chevron">
           <a href="/dropin-finder#/{{dropin.sport_event.sport_id}}/{{dropin.sport_event.id}}" ng-click="$event.stopPropagation()">
-            <div class="pull-right glyphicon glyphicon-chevron-right margin-right-2 " aria-hidden="true"></div>
+            <i class="pull-right glyphicon mdi-hardware-keyboard-arrow-right" aria-hidden="true"></i>
           </a>
       </span>
     </div>
@@ -82,18 +80,3 @@
     Schedules are subject to change. Please phone facilities for confirmation.
   </i></p>
 </div>
-<!--REFACTOR-->
-<style>
-    nav{
-        background-color: white;
-    }
-    .parallax-window {
-        background-color: white;
-    }
-    .parallax-mirror{
-        display:none;
-    }
-    .wrapper {
-        background-color: white;
-    }
-</style>

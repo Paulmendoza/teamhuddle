@@ -1,10 +1,10 @@
 @import "variables";
 // ========== LANDING PAGE ===========
-.row{
-  padding: 0;
-  margin: 0;
-}
 .landing-page {
+  .row{
+    padding: 0;
+    margin: 0;
+  }
   .section-1{
     @extend .center-align;
     background-image: image-url("NewByMichaela/New_LandingBanner.png");
@@ -12,9 +12,6 @@
     background-size: cover;
     height: 50vh;
     min-height: 335px;
-    div{
-      @extend .col, .s10, .offset-s1
-    }
     p{
       font-size: 1.5em;
       font-family: 'Raleway', sans-serif;;
@@ -86,7 +83,6 @@
     }
   }
   .section-3{
-    @extend .row, .col ,.s12;
     padding-right:0;
     padding-left: 0;
     div{
@@ -94,7 +90,6 @@
       padding-left: 0;
       height: 428px;
       text-align:center;
-      @extend .col, .s12, .m4;
       h5{
         margin-top:0px;
         text-transform: uppercase;

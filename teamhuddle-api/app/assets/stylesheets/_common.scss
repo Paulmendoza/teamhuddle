@@ -158,7 +158,6 @@ nav {
 }
 //============Footer=============
 .footer{
-  @extend .row, .center-align;
   width:100%;
   height:50px;
   position:relative !important;
@@ -198,7 +197,5 @@ nav {
     &:hover{
       color: $light-blue;
     }
-  }
-  @media(max-width:600px){
   }
 }
