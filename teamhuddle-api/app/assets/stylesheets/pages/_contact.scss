@@ -3,62 +3,23 @@
 // ========== CONTACT US US PAGE ===========
 
 .contact-us {
-  .contact-us-text {
-    max-height: 300px;
-  }
-  .card{
-    background-color: rgba(255,255,255,.85);
-    @media(max-width: 600px){
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-  ul {
-    padding: 0 !important;
-    display: inline-flex;
-  }
-  li {
-    padding: 5px 5px;
-    display: block;
-  }
-  .socialmedia {
-    max-height: 35px;
-  }
-  .footer {
-    min-height: 300px;
-  }
-  label{
-    font-size: 1.4em;
-    font-weight: 300;
-    @media(max-width: 600px){
-      font-size: 1em;
-    }
-  }
-  form{
-    .control-label{
-      text-align: left;
-    }
-  }
-  input{
-    font-size: 1.4em;
-  }
-  @media(max-width: 992px){
-    .contact-us-text {
-      max-height: 400px;
-    }
-  }
-  @media(max-width: 600px){
-  }
-  .socialmedia-full {
-    @media (max-width: 1199px) {
-      border: 0;
-    }
-    @media (max-width: 768px) {
-      border: 0;
-      ul li {
-        float: left;
-        padding-right: 5px;
+  .banner {
+    background-image: image-url("NewByMichaela/New_LandingBanner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    min-height: 335px;
+    h1{
+      top: 50px;
+      position: relative;
+      color: white;
+      letter-spacing: 5px;
+      @media (max-width: 700px) {
+        font-size: 2em;
       }
     }
+  }
+  .contact-inner{
+    @extend .container, .col, .m10, .s12, .offset-m1;
   }
 }

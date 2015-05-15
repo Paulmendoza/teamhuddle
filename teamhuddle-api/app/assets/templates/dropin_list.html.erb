@@ -5,13 +5,11 @@
   <h2 class="text-center sport_name">dropin {{sport | lowercase }} events</h2>
   <br>
   <div>
-    <div class="text-center margin-bottom-1 col s12">
-      <a class="hide-on-med-and-up col s4 blue-button" ng-click="switchToMap()">Show Map</a>
-      <a class="col m6 s4 blue-button" ng-click="resetFilters()">Reset Filters</a>
-      <a class="col m6 s4 blue-button" href="#/">More Sports</a>
-    </div>
+    <a class="hide-on-med-and-up col s4 m6 blue-button" ng-click="switchToMap()">map</a>
+    <div class="col s4 m6"><a class="col s12 m10 offset-m1" ng-click="resetFilters()">reset</a></div>
+    <div class="col s4 m6"><a class="col s12 m10 offset-m1" href="#/">sports</a></div>
     <div class="col s6">
-      <select class="form-control" ng-model="weekdaySelect" ng-change="setFilters()">
+      <select class="form-control col s10 offset-s1" ng-model="weekdaySelect" ng-change="setFilters()">
         <option value="" disabled selected>Day</option>
         <option value="All">All</option>
         <option value="Monday">Monday</option>
@@ -24,7 +22,7 @@
       </select>
     </div>
     <div class="col s6">
-      <select class="form-control" ng-model="skillLevelSelect" ng-change="setFilters()">
+      <select class="form-control col s10 offset-s1" ng-model="skillLevelSelect" ng-change="setFilters()">
         <option value="" disabled selected>Skill Level</option>
         <option value="All">All</option>
         <option value="Recreational">Recreational</option>
@@ -34,17 +32,10 @@
       </select>
     </div>
   </div>
-  <div>
-    <form ng-submit="setCurrentLocation()">
-        <label for="location-filter">Location</label>
-        <input id="location-filter" type="text" ng-model="currentPosition.addressFilter">
-        <button class="btn btn-info" type="submit">Apply</button>
-    </form>
-  </div>
   <br>
 </div>
-<div class="curtain text-center col s12 m6 valign-wrapper" ng-show="loadingDropins">
-  <div class="valign">
+<div class="curtain col s12 m6 valign-wrapper" ng-show="loadingDropins">
+  <div class="valign col s10 offset-s1">
     <h1>Loading Dropins..</h1>
     <%= image_tag("loading.gif", alt: "loading") %>
   </div>
@@ -57,26 +48,23 @@
     </div>
   </div>
   <div class="dropin-repeat-wrapper">
-    <div class="row clearfix dropin-repeat valign-wrapper"
+    <div class="row dropin-repeat"
          ng-class="{selected: markerWrappers.currentlyOpen === dropin.id}"
          ng-repeat="dropin in dropins"
          ng-click="markerWrappers[dropin.id].infoWindow.toggle(); centerDropin(dropin)"
          ng-attr-id="{{ 'dropin-' + dropin.id }}">
-      <div class="col s3 valign">
-        <h4 ng-class="{bolded: isSelected(dropin.id)}">{{dropin.location.name}} <small>{{ dropin.distanceFromUser }}</small></h4>
-      </div>
-
       <a ng-if="admin_signed_in" href="/admin/dropins/{{dropin.sport_event.id}}" ng-click="$event.stopPropagation()" target="_blank">View
         Admin Page for Dropin</a>
-      <div class="col s5">
-        <p class="col s12 offset-s2 m6 valign">{{dropin.datetime_start | date:'EEEE'}}</p>
-        <p class="col s12 offset-s2 m6 valign">{{dropin.sport_event.skill_level}}</p>
+      <div class="col s11">
+        <h4 class="col s12" ng-class="{bolded: isSelected(dropin.id)}">{{dropin.location.name}} <small>{{ dropin.distanceFromUser }}</small></h4>
+        <p class="col s4">{{dropin.datetime_start | date:'EEEE'}}</p>
+        <p class="col s4">{{dropin.sport_event.skill_level}}</p>
+        <p class="col s4">{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</p>
       </div>
       <!-- show this if it's not selected -->
-      <p class="col s4 valign">{{dropin.datetime_start | date:'h:mm a'}} - {{dropin.datetime_end | date:'h:mm a'}}</p>
-      <span class="chevron">
+      <span class="chevron col s1 valign-wrapper">
           <a href="/dropin-finder#/{{dropin.sport_event.sport_id}}/{{dropin.sport_event.id}}" ng-click="$event.stopPropagation()">
-            <div class="pull-right glyphicon glyphicon-chevron-right margin-right-2 " aria-hidden="true"></div>
+            <i class="pull-right valign glyphicon mdi-hardware-keyboard-arrow-right" aria-hidden="true"></i>
           </a>
       </span>
     </div>
@@ -89,18 +77,3 @@
     Schedules are subject to change. Please phone facilities for confirmation.
   </i></p>
 </div>
-<!--REFACTOR-->
-<style>
-    nav{
-        background-color: white;
-    }
-    .parallax-window {
-        background-color: white;
-    }
-    .parallax-mirror{
-        display:none;
-    }
-    .wrapper {
-        background-color: white;
-    }
-</style>

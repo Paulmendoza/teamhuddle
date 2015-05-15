@@ -1,16 +1,9 @@
-<section class="dropinfinder col s12 margin-padding-none">
-    <div class="col s12 m6 z-depth-1 left-wrapper" ng-cloak ng-class="{'map-mobile-toggle': !mapMobileToggle}" >
+<section class="dropinfinder">
+    <div class="left-wrapper" ng-cloak ng-class="{'map-mobile-toggle': !mapMobileToggle}" >
         <map zoom="10"></map>
         <a class="waves-effect waves-light btn hidden-md hidden-lg blue" ng-click="switchToList()">show info</a>
     </div>
-    <div class="col m6" class="empty-space">&nbsp</div>
-    <div class="col s12 m6 right-wrapper" ng-cloak ng-class="{'map-mobile-toggle': mapMobileToggle}">
+    <div class="right-wrapper" ng-cloak ng-class="{'map-mobile-toggle': mapMobileToggle}">
         <div app-view-segment="1"></div>
     </div>
 </section>
-<!--REFACTOR-->
-<style>
-    nav{
-        background-color: white;
-    }
-</style>

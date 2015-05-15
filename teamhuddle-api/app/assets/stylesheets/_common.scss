@@ -3,18 +3,14 @@
 }
 //========== WRAPPER ===========
 .wrapper{
-  min-height: 100%;
+  height: 100%;
+  min-height: calc(100vh - 100px);
   position:relative;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 }
 //============ CONTENT ============
 .content{
-  padding-bottom:40px;   /* Height of the footer element */
-}
-.nav-buffer{
-  height: $nav-height;
-  background-color: transparent;
-
+  padding-bottom:40px;
 }
 //========== NAVIGATION STYLES ===========
 nav {
@@ -25,6 +21,8 @@ nav {
   position: fixed;
   top: 0;
   line-height: $nav-height;
+  box-shadow: none;
+  border-bottom: 1px #d3d3d3;
   @media(max-width: 600px){
     min-height: $nav-height;
     .nav-wrapper{
@@ -33,7 +31,6 @@ nav {
   }
   .nav-wrapper {
     min-height: $nav-height;
-
     a{
       text-decoration: none;
       &:focus{
@@ -44,25 +41,23 @@ nav {
       }
     }
     .brand-logo {
-      div{
-        margin-left: 50px;
-        line-height: 45px;
-        @media (max-width: 600px) {
-          margin-left:  0;
-        }
+      @extend .valign;
+      margin-left: 50px;
+      line-height: 50px;
+      color: $reading-text;
+      font-size: 1.3em;
+      @media (max-width: 600px) {
+        margin-left:  0;
       }
       img {
         height: 30px;
         width: 30px;
+        vertical-align: middle !important;
+        margin-right: 20px;
       }
-      p{
-        position: relative;
-        top:-20px;
-        padding: 0;
-        margin: 0;
-        color: #455a64;
-        font-weight: 200;
-        font-family: $font-family-title;
+      .web-inner-nav{
+        @extend .col, .s12;
+        padding-right : 0px;
       }
     }
     ul{
@@ -70,14 +65,14 @@ nav {
       li{
         height: $nav-height;
         a {
-          color: #455a64;
-          font-size: 1.3em;
+          color: $reading-text;
+          font-size: 1em;
           text-decoration: none;
         }
       }
     }
     form {
-      color: #455a64;
+      color: $reading-text;
       height: $nav-height;
       .input-field{
         width: 30px;
@@ -158,26 +153,50 @@ nav {
     }
   }
 }
-
+//============Generic Content============
+.content{
+  margin-top:50px;
+}
 //============Footer=============
 .footer{
   width:100%;
   height:50px;
-  position:absolute;
-  bottom:0;
+  position:relative !important;
+  bottom:0 !important;
   left:0;
-  background:white;
+  background:black;
   padding : 0px 5px 0px 5px;
-  span {
-    vertical-align: middle;
+  overflow: hidden;
+  h5{
+    color: white;
+    font-weight: 100;
+    font-size: .7em;
+    margin-left: 10px;
+  }
+  .right{
+    max-height: 50px;
   }
   a{
-    color: #686868;
+    display:inline-block;
+    margin-top: 12px;
+    height:40px;
+    width: 40px;
     text-decoration: none;
+    &:nth-child(1){
+      background-image: image-url("NewByMichaela/New_Facebook.png");
+      background-repeat: no-repeat;
+    }
+    &:nth-child(2){
+      background-image: image-url("NewByMichaela/New_Twitter.png");
+      background-repeat: no-repeat;
+    }
+    &:nth-child(3){
+      background-image: image-url("NewByMichaela/New_Instagram.png");
+      background-repeat: no-repeat;
+      margin-right:10px;
+    }
     &:hover{
       color: $light-blue;
     }
-  }
-  @media(max-width:600px){
   }
 }
