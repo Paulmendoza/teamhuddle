@@ -19,7 +19,13 @@
       }
     }
   }
+  .official-form{
+    @extend .col, .s12, .m6;
+  }
+  .information{
+    @extend .col, .s12, .m6;
+  }
   .contact-inner{
-    @extend .container, .col, .m10, .s12, .offset-m1;
+    @extend .container, .row, .col, .m10, .s12, .offset-m1;
   }
 }

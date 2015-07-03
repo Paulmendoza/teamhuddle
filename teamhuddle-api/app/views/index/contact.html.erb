@@ -3,19 +3,19 @@
 <div ng-app="BaseApp">
   <div class="contact-us">
     <section class="banner center-align">
-      <h1>contact us</h1>
     </section>
+    <div class="contact-inner">
+        <h1>contact us</h1>
+    </div>
     <div class="contact-inner" ng-controller="contact">
-      <section class="information">
-        <div>
-          <p>Teamhuddle has a complete open door policy! We are always looking for suggestions, and are also expanding our
-            internal team. At this time, we are on the hunt for community ambassadors that understand the value of
-            physical activity and the importance of a strong social media presence. </p>
+      <div class="information">
+        <p>Teamhuddle has a complete open door policy! We are always looking for suggestions, and are also expanding our
+          internal team. At this time, we are on the hunt for community ambassadors that understand the value of
+          physical activity and the importance of a strong social media presence. </p>
 
-          <p>Feedback from our network is also very
-            important to us, so we'd love to chat. Please don't hesitate to send us an email below.</p>
-        </div>
-      </section>
+        <p>Feedback from our network is also very
+          important to us, so we'd love to chat. Please don't hesitate to send us an email below.</p>
+      </div>
       <div class="official-form" ng-cloak>
         <!-- Show this div while waiting for a response from the server -->
         <div ng-if="processing">
@@ -48,7 +48,7 @@
             <textarea id="comment-id" class="form-control materialize-textarea" ng-model="form_data.comments"></textarea>
           </div>
           <div class="form-group">
-            <button type="submit" class="btn waves-effect waves-light blue pull-right col s12 blue-button">Send</button>
+            <button type="submit" class="right col m4 blue-button">Send</button>
           </div>
         </form>
       </div>
