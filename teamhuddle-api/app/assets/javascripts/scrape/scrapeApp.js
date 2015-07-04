@@ -8,7 +8,7 @@ ScrapeApp.config(['$routeSegmentProvider',
             //when('/:sport/dropin/:dropin_id', 'dropin_finder.dropin_view').
             //
             //segment('dropin_icons', {
-            //    templateUrl: 'dropin_icons.html'
+            //    templateUrl: 'dropin_icons.html.erb'
             //}).
             //segment('dropin_finder', {
             //    templateUrl: 'dropin_map_list.html',

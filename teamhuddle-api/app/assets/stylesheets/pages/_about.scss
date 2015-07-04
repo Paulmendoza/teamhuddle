@@ -20,6 +20,7 @@
       font-size: 1.7em;
       @media (max-width: 700px) {
         font-size: 1.2em;
+        top: 70px;
       }
     }
   }
@@ -41,7 +42,7 @@
     @extend .row;
     text-align: center;
     .teammate {
-      @extend .col, .s12, .m4;
+      @extend .col, .s12, .m6 , .l4;
       margin-bottom:5px;
       h5{
         font-size: 1em;
@@ -89,9 +90,9 @@
       bottom: 5px;
     }
     img {
-      max-height: 400px;
-      @media (max-width: 1024px) {
-        max-height:150px;
+      max-height: 350px;
+      @media screen {
+        max-height: 250px;
       }
     }
   }
