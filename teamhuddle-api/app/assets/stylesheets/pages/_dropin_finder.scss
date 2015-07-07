@@ -247,6 +247,9 @@
       top: -6px;
       right: 0;
     }
+    img{
+      height: 60px;
+    }
     @media(max-width: 748px){
       min-height: 700px;
       div{
@@ -298,6 +301,9 @@
     .sport_logo {
       border: none;
       margin: 0 20px 0 20px;
+      @media (max-width:500px) {
+        margin : 0px;
+      }
     }
     .icon1 {
       min-width: 248px;

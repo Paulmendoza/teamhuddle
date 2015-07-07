@@ -4,16 +4,19 @@
 
 .contact-us {
   .banner {
-    background-image: image-url("NewByMichaela/New_LandingBanner.png");
+    background-image: image-url("NewByMichaela/New_BGImage-Soccer.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;
     min-height: 335px;
-    h1{
+  }
+  .contact-inner {
+    @extend .container, .row, .col, .m10, .s12, .offset-m1;
+    p{
       top: 50px;
       position: relative;
-      color: white;
       letter-spacing: 5px;
+      font-size: 3em;
       @media (max-width: 700px) {
         font-size: 2em;
       }
@@ -25,7 +28,7 @@
   .information{
     @extend .col, .s12, .m6;
   }
-  .contact-inner{
+  .contact-outer{
     @extend .container, .row, .col, .m10, .s12, .offset-m1;
   }
 }
